@@ -164,7 +164,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
         <div className="aspect-square rounded-xl overflow-hidden bg-gray-50 shadow-inner border border-gray-100 relative">
           {item.image_file && !imgError ? (
             <img 
-              src={`images/${item.image_file}`} 
+              src={`/airlang/images/${item.image_file}`} 
               alt={item.term_zh} 
               className="w-full h-full object-cover"
               loading="lazy"

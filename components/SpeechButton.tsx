@@ -127,6 +127,14 @@ const handleSpeak = (e: React.MouseEvent) => {
       nativeVoice = voices.find(v => v.name === 'Google 한국어') ||
                     voices.find(v => v.name.includes('Microsoft Heami'));
     }
+    else if (lang.startsWith('de')) {
+      // --- ADDED: German ---
+      // 'Google Deutsch' is standard on Chrome/Android.
+      // 'Microsoft Hedda' (Female) and 'Stefan' (Male) are standard on Windows.
+      nativeVoice = voices.find(v => v.name === 'Google Deutsch') ||
+                    voices.find(v => v.name.includes('Microsoft Hedda')) ||
+                    voices.find(v => v.name.includes('Microsoft Stefan'));
+    }
     
     // --- 2. 通用備案 (General Fallback) ---
     // 如果上面的特定優質聲音都沒找到 (nativeVoice 還是 null)，

@@ -174,7 +174,7 @@ export const englishData: AppData = {
       "id": "verbs",
       "name": "動詞",
       "items": [
-        { "id": "v-01", "term_zh": "是", "term_target": "be (am/are/is)", "pronunciation": ["/bi/"], "example": {"sentence": "I am happy.", "translation": "我很快樂。"}, "usage_note": "連結主詞和狀態。", "image_file": "be.png" },
+        { "id": "v-01", "term_zh": "是", "term_target": "be/am/are/is", "pronunciation": ["/bi/ /ɪt/ /ɪt/ /ɪt/"], "example": {"sentence": "I am happy.", "translation": "我很快樂。"}, "usage_note": "連結主詞和狀態。", "image_file": "be.png" },
         { "id": "v-02", "term_zh": "有（擁有）", "term_target": "have", "pronunciation": ["/hæv/"], "example": {"sentence": "I have money.", "translation": "我有錢。"}, "usage_note": "擁有。", "image_file": "have.png" },
         { "id": "v-03", "term_zh": "去", "term_target": "go", "pronunciation": ["/goʊ/"], "example": {"sentence": "Go home.", "translation": "回家。"}, "usage_note": "離開去某處。", "image_file": "go.png" },
         { "id": "v-04", "term_zh": "做", "term_target": "do", "pronunciation": ["/du/"], "example": {"sentence": "Do homework.", "translation": "做功課。"}, "usage_note": "執行動作。", "image_file": "do.png" },
