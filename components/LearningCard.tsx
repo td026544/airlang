@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LearningItem } from '../types';
 import SpeechButton from './SpeechButton';
-import { Info } from 'lucide-react';
+import { Info, CornerDownRight } from 'lucide-react';
 
 interface LearningCardProps {
   item: LearningItem;
@@ -14,39 +14,17 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
 
   const isJapanese = language === 'ja-JP';
 
-  // Split term_target if it contains slash separators (handling spaces around slash)
-  const terms = item.term_target.split(/\s*\/\s*/);
-  
-  // Prepare pronunciations by splitting them to match terms
-  let mainPronunciations: string[] = [];
-  let subPronunciations: string[] = [];
+  // Helper: TTS 文字處理
+  const formatTextForSpeech = (text: string) => {
+    return text.replace(/\//g, ', '); 
+  };
 
-  if (isJapanese) {
-    // Japanese: Split Kana and Romaji by slash
-    mainPronunciations = item.pronunciation[0].split(/\s*\/\s*/);
-    if (item.pronunciation[1]) {
-      subPronunciations = item.pronunciation[1].split(/\s*\/\s*/);
-    }
-  } else {
-    // Vietnamese: Extract IPA parts enclosed in slashes /.../
-    const ipaString = item.pronunciation[0];
-    const matches = ipaString.match(/\/.*?\//g);
-    
-    if (matches && matches.length === terms.length) {
-        mainPronunciations = matches;
-    } else {
-        // Fallback: use the whole string for the first item if we can't map 1:1
-        mainPronunciations = [ipaString];
-    }
-  }
-
-  // Fallback Avatar Generator
+  // Fallback Avatar Logic
   const getFallbackAvatar = () => {
-    // Use the first character of the target term (or term_zh if target is empty)
-    const char = (item.term_target || item.term_zh || '?').charAt(0).toUpperCase();
+    // 優先抓取第一個單字的第一個字母，如果沒有則抓取中文
+    const firstTerm = item.related_terms[0]?.term_target;
+    const char = (firstTerm || item.term_zh || '?').charAt(0).toUpperCase();
     
-    // Generate a consistent pastel color based on the character code to make it look nice
-    // Using HSL for good color distribution
     const hue = (char.charCodeAt(0) * 137.508) % 360; 
     const backgroundColor = `hsl(${hue}, 70%, 90%)`;
     const textColor = `hsl(${hue}, 60%, 35%)`;
@@ -67,70 +45,81 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
       {/* Content Side (Left) */}
       <div className="flex-1 flex flex-col justify-between min-w-0">
         <div>
-          {/* Terms & Pronunciations List - Vertical Layout */}
-          <div className="flex flex-col gap-y-3 mb-3 items-start">
-            {terms.map((term, index) => {
-               const mainPron = mainPronunciations[index] || (index === 0 && mainPronunciations.length === 1 ? mainPronunciations[0] : null);
-               const subPron = subPronunciations[index] || (index === 0 && subPronunciations.length === 1 ? subPronunciations[0] : null);
+          {/* 標題區：中文解釋 */}
+          <div className="mb-3 pb-2 border-b border-gray-100">
+            <h4 className="text-lg font-bold text-gray-800 leading-snug">
+              {item.term_zh}
+            </h4>
+          </div>
 
-               return (
-                  <div key={index} className="flex flex-col">
-                    <div className="flex items-center gap-2">
-                        <h3 className="text-xl font-bold text-emerald-600 leading-tight">
-                        {term}
-                        </h3>
-                        {/* 
-                          Fix: For Japanese, use the Kana pronunciation (mainPron) for speech 
-                          instead of the term (Kanji) to avoid robotic or incorrect readings.
-                        */}
-                        <SpeechButton 
-                          text={isJapanese && mainPron ? mainPron : term} 
-                          lang={language} 
-                          size={20} 
-                        />
-                    </div>
-                    
-                    {(mainPron || subPron) && (
-                        <div className="flex flex-col mt-0.5 ml-0.5">
-                            {isJapanese ? (
-                                <>
-                                {mainPron && <span className="text-sm font-medium text-gray-700">{mainPron}</span>}
-                                {subPron && <span className="text-xs text-gray-400 font-mono">{subPron}</span>}
-                                </>
-                            ) : (
-                                mainPron && <span className="text-sm text-gray-500 font-medium font-mono">{mainPron}</span>
-                            )}
-                        </div>
-                    )}
+          {/* 列表區：遍歷所有相關單字 */}
+          <div className="flex flex-col gap-y-4 mb-3 items-start">
+            {item.related_terms.map((termItem, index) => {
+              const mainPron = termItem.pronunciation[0];
+              const subPron = termItem.pronunciation[1];
+
+              return (
+                <div key={index} className="flex flex-col border-b border-gray-50 last:border-0 pb-2 last:pb-0 w-full">
+                  
+                  {/* 1. Target Word & Speech */}
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-emerald-600 leading-tight break-words">
+                      {termItem.term_target}
+                    </h3>
+                    <SpeechButton 
+                      text={isJapanese && mainPron ? mainPron : formatTextForSpeech(termItem.term_target)} 
+                      lang={language} 
+                      size={20} 
+                    />
                   </div>
-               );
+                  
+                  {/* 2. Pronunciation */}
+                  {(mainPron || subPron) && (
+                    <div className="flex flex-col mt-0.5 ml-0.5 mb-1">
+                      {isJapanese ? (
+                        <>
+                          {mainPron && <span className="text-sm font-medium text-gray-700">{mainPron}</span>}
+                          {subPron && <span className="text-xs text-gray-400 font-mono">{subPron}</span>}
+                        </>
+                      ) : (
+                        mainPron && <span className="text-sm text-gray-500 font-medium font-mono">{mainPron}</span>
+                      )}
+                    </div>
+                  )}
+
+                  {/* 3. Specific Note (個別註釋) */}
+                  {termItem.specific_note && (
+                    <div className="flex items-start gap-1.5 mt-1 ml-0.5 text-xs text-amber-600 bg-amber-50 px-2 py-1 rounded w-fit">
+                      <CornerDownRight size={12} className="mt-0.5 shrink-0" />
+                      <span>{termItem.specific_note}</span>
+                    </div>
+                  )}
+                </div>
+              );
             })}
           </div>
           
-          {/* Definition (Chinese) & Usage Note Toggle */}
-          <div className="flex items-center gap-2 mb-2 flex-wrap">
-            <h4 className="text-base font-bold text-[#1F2937]">{item.term_zh}</h4>
-            
-            {item.usage_note && (
-              <button 
+          {/* Global Usage Note (整體用法) */}
+          {item.usage_note && (
+            <div className="flex items-center gap-2 mb-2">
+               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowNote(!showNote);
                 }}
                 className={`
-                  p-1 rounded-full transition-all duration-200
+                  flex items-center gap-1.5 px-2 py-1 rounded-full transition-all duration-200 text-xs font-medium border
                   ${showNote 
-                    ? 'bg-orange-100 text-orange-600' 
-                    : 'text-gray-300 hover:text-orange-500 hover:bg-orange-50'
+                    ? 'bg-orange-100 text-orange-600 border-orange-200' 
+                    : 'bg-white text-gray-400 border-gray-200 hover:text-orange-500 hover:border-orange-300'
                   }
                 `}
-                aria-label="Show usage note"
-                title="用法提示"
               >
-                <Info size={16} />
+                <Info size={14} />
+                <span>整體用法</span>
               </button>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Expanded Usage Note */}
           {showNote && item.usage_note && (
@@ -140,13 +129,13 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
           )}
 
           {/* Example Sentence Section */}
-          <div className="bg-gray-50 rounded-lg p-2.5 border border-gray-100">
+          <div className="bg-gray-50 rounded-lg p-2.5 border border-gray-100 mt-auto">
             <div className="flex items-start justify-between gap-3">
               <p className="text-sm text-gray-600 italic leading-relaxed">
                 "{item.example.sentence}"
               </p>
               <SpeechButton 
-                text={item.example.sentence} 
+                text={formatTextForSpeech(item.example.sentence)} 
                 lang={language} 
                 size={16} 
                 className="shrink-0 mt-0.5 opacity-70 hover:opacity-100 text-gray-400 hover:text-emerald-500"
@@ -159,7 +148,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
         </div>
       </div>
 
-      {/* Image Side (Right) - Aligned to top (start) */}
+      {/* Image Side (Right) */}
       <div className="w-24 sm:w-32 shrink-0 self-start pt-1">
         <div className="aspect-square rounded-xl overflow-hidden bg-gray-50 shadow-inner border border-gray-100 relative">
           {item.image_file && !imgError ? (
@@ -175,7 +164,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' })
           )}
         </div>
       </div>
-
     </div>
   );
 };

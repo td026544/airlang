@@ -3,13 +3,21 @@ export interface Example {
   translation: string;
 }
 
+export interface RelatedTerm {
+  term_target: string; // 單字保留在這裡面
+  pronunciation: string[];
+  specific_note?: string;
+}
+
 export interface LearningItem {
   id: string;
   term_zh: string;
-  term_target: string;
-  pronunciation: string[];
+  
+  // ✅ 統一使用這個陣列儲存所有單字
+  related_terms: RelatedTerm[]; 
+
   example: Example;
-  usage_note: string;
+  usage_note?: string;
   image_file: string;
 }
 
