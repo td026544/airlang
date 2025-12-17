@@ -86,82 +86,98 @@ const SpeechButton: React.FC<SpeechButtonProps> = ({
   //   window.speechSynthesis.speak(utterance);
   // };
 const handleSpeak = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent card click
-    
-    if (!isSupported) return;
+  e.stopPropagation(); // Prevent card click
 
-    window.speechSynthesis.cancel();
+  if (!isSupported) return;
 
-    // Pre-process text for better pronunciation
-    let textToSpeak = text;
-    if (lang === 'vi-VN') {
-      textToSpeak = textToSpeak.replace(/\//g, ',');
-    }
+  window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    utterance.lang = lang; // 這是第一層預設：告訴瀏覽器這是什麼語言
-    utterance.rate = 1.0;
-    
-    let nativeVoice = null;
-    const voices = window.speechSynthesis.getVoices();
+  // Pre-process text for better pronunciation (保留您的越南文處理)
+  let textToSpeak = text;
+  if (lang === 'en-US') {
+    textToSpeak = textToSpeak.replace(/\//g, ',');
+  }
 
-    // --- 1. 針對特定語言尋找高品質聲音 (High Quality Strategy) ---
-    if (lang === 'vi-VN') {
-      nativeVoice = voices.find(v => v.name === 'Google Tiếng Việt') ||
-                    voices.find(v => v.name.includes('Microsoft HoaiMy')) || 
-                    voices.find(v => v.name.includes('Microsoft NamMinh')) ||
-                    voices.find(v => v.name.includes('Linh')); // 移除這裡的通用查找，放到後面
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
+  utterance.lang = lang; 
+  utterance.rate = 1.0;
 
-    } else if (lang === 'ja-JP') {
-      nativeVoice =  voices.find(v => (v.lang === 'ja-JP' || v.lang === 'ja') && v.name.includes('Google'));
+  const voices = window.speechSynthesis.getVoices();
+  let nativeVoice = null;
 
-    } else if (lang.startsWith('es')) { 
-      nativeVoice = voices.find(v => v.name.includes('Google') && v.lang.startsWith('es')) ||
-                    voices.find(v => v.name.includes('Microsoft') && v.lang.startsWith('es'));
-
-    } else if (lang.startsWith('th')) {
-      nativeVoice = voices.find(v => v.name === 'Google ไทย') ||
-                    voices.find(v => v.name.includes('Microsoft Premwadee'));
-
-    } else if (lang === 'ko-KR') {
-      nativeVoice = voices.find(v => v.name === 'Google 한국어') ||
-                    voices.find(v => v.name.includes('Microsoft Heami'));
-    }
-    else if (lang.startsWith('de')) {
-      // --- ADDED: German ---
-      // 'Google Deutsch' is standard on Chrome/Android.
-      // 'Microsoft Hedda' (Female) and 'Stefan' (Male) are standard on Windows.
-      nativeVoice = voices.find(v => v.name === 'Google Deutsch') ||
-                    voices.find(v => v.name.includes('Microsoft Hedda')) ||
-                    voices.find(v => v.name.includes('Microsoft Stefan'));
-    }
-    
-    // --- 2. 通用備案 (General Fallback) ---
-    // 如果上面的特定優質聲音都沒找到 (nativeVoice 還是 null)，
-    // 這裡會嘗試找 "任何" 符合該語言代碼的聲音。
-    if (!nativeVoice) {
-      nativeVoice = voices.find(v => v.lang === lang) || 
-                    voices.find(v => v.lang.startsWith(lang.split('-')[0])); // 例如找不到 es-MX 就找任何 es 開頭的
-    }
-
-    // --- 3. 套用聲音 ---
-    if (nativeVoice) {
-      // 情況 A: 找到了適合的聲音 (不論是優質還是通用)
-      utterance.voice = nativeVoice;
-      utterance.lang = nativeVoice.lang; // 同步語言設定以防口音問題
-    } else {
-      // 情況 B: 真的完全找不到該語言的聲音 (nativeVoice == null)
-      // 不做任何事，保持 utterance.voice 為 undefined。
-      // 瀏覽器會根據最上面設定的 `utterance.lang` 自動使用系統預設發音。
-      console.warn(`No voice found for ${lang}, using system default.`);
-    }
-
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
-
-    window.speechSynthesis.speak(utterance);
+  // --- 1. 定義各語言的聲音優先順序清單 (Configuration) ---
+  // 這裡完全依照您提供的 JSON 順序排列
+  const voicePreferences: Record<string, string[]> = {
+    'ja-JP': ['Google 日本語', 'Hattori', 'O-Ren', 'Reed'],
+    'vi-VN': ['Linh', 'Google Tiếng Việt', 'Microsoft HoaiMy', 'Microsoft NamMinh'],
+    // 西班牙語系整合：無論是 es-ES 或 es-MX，都嘗試依照此順序抓取
+    'es':    ['Mónica', 'Paulina', 'Google español', 'Google español de Estados Unidos'],
+    'de-DE': ['Google Deutsch', 'Helena', 'Anna', 'Martin'],
+    'th-TH': ['Kanya', 'Google ไทย', 'Microsoft Premwadee'],
+    'ko-KR': ['Google 한국의', 'Google 한국어', 'Yuna', 'Eddy'], // 加了 '한국어' 以防萬一
+    // 法語系整合
+    'fr':    ['Google français', 'Thomas', 'Jacques', 'Marie', 'Reed'],
+    'ru-RU': ['Google русский', 'Milena'],
+    'id-ID': ['Google Bahasa Indonesia', 'Damayanti'],
+    'it-IT': ['Google italiano', 'Alice'],
+    // 葡萄牙語系整合
+    'pt':    ['Google português do Brasil', 'Joana']
   };
+
+  // --- 2. 策略選擇邏輯 (Selection Logic) ---
+
+  // A. 取得該語言的優先清單
+  // 優先找完全符合的 key (如 'ja-JP')，找不到則找通用 key (如 'es', 'fr')
+  const baseLang = lang.split('-')[0];
+  const preferenceList = voicePreferences[lang] || voicePreferences[baseLang];
+
+  // B. 依照清單順序尋找聲音
+  if (preferenceList) {
+    for (const nameKey of preferenceList) {
+      // 尋找名稱包含 key 的聲音 (例如 name 包含 "Hattori")
+      // 並且確保語言代碼大致相符 (避免抓到同名但不同語系的聲音)
+      const found = voices.find(v => 
+        v.name.toLowerCase().includes(nameKey.toLowerCase()) && 
+        v.lang.startsWith(baseLang)
+      );
+
+      if (found) {
+        nativeVoice = found;
+        break; // 找到了就跳出迴圈，因為這是最高優先級
+      }
+    }
+  }
+
+  // --- 3. 兜底備案 (General Fallback) ---
+  // 如果上面的清單都沒找到，或該語言不在清單中，使用原本的通用邏輯
+  if (!nativeVoice) {
+     // 嘗試找 Google 或 Microsoft 的通用聲音 (品質通常較好)
+     nativeVoice = voices.find(v => v.lang === lang && (v.name.includes('Google') || v.name.includes('Microsoft'))) ||
+                   voices.find(v => v.lang.startsWith(baseLang) && (v.name.includes('Google') || v.name.includes('Microsoft')));
+  }
+
+  // 最後一層：只要語言代碼對就好
+  if (!nativeVoice) {
+    nativeVoice = voices.find(v => v.lang === lang) || 
+                  voices.find(v => v.lang.startsWith(baseLang));
+  }
+
+  // --- 4. 套用聲音 ---
+  if (nativeVoice) {
+    utterance.voice = nativeVoice;
+    // 重要：某些瀏覽器若 lang 與 voice.lang 不一致會導致沈默或錯誤，這裡同步一下
+    utterance.lang = nativeVoice.lang; 
+    console.log(`Using voice: ${nativeVoice.name} (${nativeVoice.lang})`);
+  } else {
+    console.warn(`No voice found for ${lang}, using system default.`);
+  }
+
+  utterance.onstart = () => setIsSpeaking(true);
+  utterance.onend = () => setIsSpeaking(false);
+  utterance.onerror = () => setIsSpeaking(false);
+
+  window.speechSynthesis.speak(utterance);
+};
 
   if (!isSupported) {
     return (

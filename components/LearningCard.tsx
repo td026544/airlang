@@ -5,13 +5,12 @@ import { Info, CornerDownRight } from 'lucide-react';
 
 interface LearningCardProps {
   item: LearningItem;
-  language?: string;
+  language: string;
 }
 
-const LearningCard: React.FC<LearningCardProps> = ({ item, language = 'vi-VN' }) => {
+const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
   const [showNote, setShowNote] = useState(false);
   const [imgError, setImgError] = useState(false);
-
   const isJapanese = language === 'ja-JP';
 
   // Helper: TTS 文字處理
