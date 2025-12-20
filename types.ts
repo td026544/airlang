@@ -16,7 +16,9 @@ export interface LearningItem {
   // ✅ 統一使用這個陣列儲存所有單字
   related_terms: RelatedTerm[]; 
 
-  example: Example;
+  // ✅ 修改處：將 example 改為 examples 陣列
+  examples: Example[]; 
+  
   usage_note?: string;
   image_file: string;
 }
