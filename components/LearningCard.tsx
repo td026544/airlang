@@ -20,7 +20,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
 
   // Fallback Avatar Logic
   const getFallbackAvatar = () => {
-    // 優先抓取第一個單字的第一個字母，如果沒有則抓取中文
     const firstTerm = item.related_terms[0]?.term_target;
     const char = (firstTerm || item.term_zh || '?').charAt(0).toUpperCase();
     
@@ -51,7 +50,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
             </h4>
           </div>
 
-          {/* 列表區：遍歷所有相關單字 */}
+          {/* 列表區 */}
           <div className="flex flex-col gap-y-4 mb-3 items-start">
             {item.related_terms.map((termItem, index) => {
               const mainPron = termItem.pronunciation[0];
@@ -59,8 +58,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
 
               return (
                 <div key={index} className="flex flex-col border-b border-gray-50 last:border-0 pb-2 last:pb-0 w-full">
-                  
-                  {/* 1. Target Word & Speech */}
                   <div className="flex items-center gap-2">
                     <h3 className="text-xl font-bold text-emerald-600 leading-tight break-words">
                       {termItem.term_target}
@@ -72,7 +69,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
                     />
                   </div>
                   
-                  {/* 2. Pronunciation */}
                   {(mainPron || subPron) && (
                     <div className="flex flex-col mt-0.5 ml-0.5 mb-1">
                       {isJapanese ? (
@@ -86,7 +82,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
                     </div>
                   )}
 
-                  {/* 3. Specific Note (個別註釋) */}
                   {termItem.specific_note && (
                     <div className="flex items-start gap-1.5 mt-1 ml-0.5 text-xs text-amber-600 bg-amber-50 px-2 py-1 rounded w-fit">
                       <CornerDownRight size={12} className="mt-0.5 shrink-0" />
@@ -98,7 +93,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
             })}
           </div>
           
-          {/* Global Usage Note (整體用法) */}
+          {/* Usage Note */}
           {item.usage_note && (
             <div className="flex items-center gap-2 mb-2">
                <button 
@@ -120,14 +115,13 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
             </div>
           )}
 
-          {/* Expanded Usage Note */}
           {showNote && item.usage_note && (
             <div className="mb-3 p-3 bg-orange-50/80 rounded-xl border border-orange-100 text-sm text-gray-700 leading-relaxed animate-in fade-in slide-in-from-top-1">
               {item.usage_note}
             </div>
           )}
 
-          {/* Example Sentence Section */}
+          {/* Example Sentence */}
           <div className="bg-gray-50 rounded-lg p-2.5 border border-gray-100 mt-auto">
             <div className="flex items-start justify-between gap-3">
               <p className="text-sm text-gray-600 italic leading-relaxed">
@@ -152,7 +146,11 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language}) => {
         <div className="aspect-square rounded-xl overflow-hidden bg-gray-50 shadow-inner border border-gray-100 relative">
           {item.image_file && !imgError ? (
             <img 
-              src={`/airlang/images/${item.image_file}`} 
+              // ↓↓↓ 修改重點 ↓↓↓
+              // 邏輯：先移除 .png (如果有的話)，然後統一加上 .webp
+              // 1. 如果是 "hello" -> replace 沒變 -> "hello.webp"
+              // 2. 如果是 "hello.png" -> replace 變成 "hello" -> "hello.webp"
+              src={`/airlang/images/${item.image_file.replace('.png', '')}.webp`} 
               alt={item.term_zh} 
               className="w-full h-full object-cover"
               loading="lazy"

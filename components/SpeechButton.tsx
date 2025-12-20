@@ -34,57 +34,6 @@ const SpeechButton: React.FC<SpeechButtonProps> = ({
     }
   }, []);
 
-  // const handleSpeak = (e: React.MouseEvent) => {
-  //   e.stopPropagation(); // Prevent card click
-    
-  //   if (!isSupported) return;
-
-  //   window.speechSynthesis.cancel();
-
-  //   // Pre-process text for better pronunciation
-  //   let textToSpeak = text;
-  //   if (lang === 'vi-VN') {
-  //     // Replace slashes with commas for natural pauses instead of "slash"
-  //     textToSpeak = textToSpeak.replace(/\//g, ',');
-  //   }
-
-  //   const utterance = new SpeechSynthesisUtterance(textToSpeak);
-  //   utterance.lang = lang;
-    
-  //   // Set rate to 1.0 for natural sound. 
-  //   // Slower speeds (0.8/0.9) often cause robotic artifacts in many TTS engines (especially Japanese).
-  //   utterance.rate = 1.0;
-    
-  //   let nativeVoice = null;
-  //   const voices = window.speechSynthesis.getVoices();
-
-  //   if (lang === 'vi-VN') {
-  //     // Prioritize high-quality voices for Vietnamese
-  //     nativeVoice = voices.find(v => v.name === 'Google Tiếng Việt') ||
-  //                   voices.find(v => v.name.includes('Microsoft HoaiMy')) || 
-  //                   voices.find(v => v.name.includes('Microsoft NamMinh')) ||
-  //                   voices.find(v => v.name.includes('Linh')) || 
-  //                   voices.find(v => v.lang === 'vi-VN') ||
-  //                   voices.find(v => v.lang.includes('vi'));
-  //   } else if (lang === 'ja-JP') {
-  //     // Prioritize female voices for Japanese
-  //     // Kyoko/O-Ren (Apple), Haruka/Ayumi (Microsoft), Google (Usually female)
-  //     nativeVoice =  voices.find(v => (v.lang === 'ja-JP' || v.lang === 'ja') && v.name.includes('Google')) || 
-  //                voices.find(v => v.lang.includes('ja') || v.lang.includes('JP'));
-  //   }
-    
-  //   if (nativeVoice) {
-  //     utterance.voice = nativeVoice;
-  //     // Explicitly set the utterance lang to match the voice to avoid accent issues
-  //     utterance.lang = nativeVoice.lang;
-  //   }
-
-  //   utterance.onstart = () => setIsSpeaking(true);
-  //   utterance.onend = () => setIsSpeaking(false);
-  //   utterance.onerror = () => setIsSpeaking(false);
-
-  //   window.speechSynthesis.speak(utterance);
-  // };
 const handleSpeak = (e: React.MouseEvent) => {
   e.stopPropagation(); // Prevent card click
 
@@ -92,7 +41,6 @@ const handleSpeak = (e: React.MouseEvent) => {
 
   window.speechSynthesis.cancel();
 
-  // Pre-process text for better pronunciation (保留您的越南文處理)
   let textToSpeak = text;
   if (lang === 'en-US') {
     textToSpeak = textToSpeak.replace(/\//g, ',');
@@ -108,7 +56,7 @@ const handleSpeak = (e: React.MouseEvent) => {
   // --- 1. 定義各語言的聲音優先順序清單 (Configuration) ---
   // 這裡完全依照您提供的 JSON 順序排列
   const voicePreferences: Record<string, string[]> = {
-    'ja-JP': ['Google 日本語', 'Hattori', 'O-Ren', 'Reed'],
+    'ja-JP': ['Google 日本語', 'Hattori', 'O-Ren', 'kyoko','Reed'],
     'vi-VN': ['Linh', 'Google Tiếng Việt', 'Microsoft HoaiMy', 'Microsoft NamMinh'],
     // 西班牙語系整合：無論是 es-ES 或 es-MX，都嘗試依照此順序抓取
     'es':    ['Mónica', 'Paulina', 'Google español', 'Google español de Estados Unidos'],
