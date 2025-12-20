@@ -13,177 +13,512 @@ export const thaiData: AppData =
       "id": "greetings",
       "name": "常用句",
       "items": [
+{
+      "id": "greet-001",
+      "term_zh": "是的",
+      "related_terms": [
         {
-          "id": "greet-001",
-          "term_zh": "你好",
-          "related_terms": [
-            { "term_target": "สวัสดี", "pronunciation": ["Sawatdee"], "specific_note": "通用" },
-            { "term_target": "หวัดดี", "pronunciation": ["Watdee"], "specific_note": "口語/熟人" }
-          ],
-          "example": { "sentence": "สวัสดีครับ / ค่ะ", "translation": "你好。" },
-          "usage_note": "男生尾音加 Kráp，女生加 Khâ。",
-          "image_file": "hello.png"
+          "term_target": "ใช่ครับ",
+          "pronunciation": ["Chai Kráp"],
+          "specific_note": "男生用"
         },
         {
-          "id": "greet-002",
-          "term_zh": "再見",
-          "related_terms": [
-            { "term_target": "ลาก่อน", "pronunciation": ["La gon"], "specific_note": "正式/長時間" },
-            { "term_target": "แล้วเจอกัน", "pronunciation": ["Laeo joe kan"], "specific_note": "待會見" }
-          ],
-          "example": { "sentence": "ลาก่อนครับ", "translation": "再見了。" },
-          "usage_note": "口語常直接說 Bye Bye。",
-          "image_file": "goodbye.png"
-        },
-        {
-          "id": "greet-003",
-          "term_zh": "謝謝你",
-          "related_terms": [
-            { "term_target": "ขอบคุณ", "pronunciation": ["Khop khun"], "specific_note": "通用" },
-            { "term_target": "ขอบใจ", "pronunciation": ["Khop jai"], "specific_note": "對晚輩/平輩" }
-          ],
-          "example": { "sentence": "ขอบคุณมากครับ", "translation": "非常謝謝你。" },
-          "usage_note": "加上 Mak (非常) 表示非常感謝。",
-          "image_file": "thank_you.png"
-        },
-        {
-          "id": "greet-004",
-          "term_zh": "對不起",
-          "related_terms": [
-            { "term_target": "ขอโทษ", "pronunciation": ["Kho thot"], "specific_note": "道歉/藉過" }
-          ],
-          "example": { "sentence": "ขอโทษครับ", "translation": "對不起。" },
-          "usage_note": "萬用詞，道歉或引起注意都可用。",
-          "image_file": "sorry.png"
-        },
-        {
-          "id": "greet-005",
-          "term_zh": "早安",
-          "related_terms": [
-            { "term_target": "สวัสดีตอนเช้า", "pronunciation": ["Sawatdee ton chao"], "specific_note": "早安" },
-            { "term_target": "อรุณสวัสดิ์", "pronunciation": ["Arun sawat"], "specific_note": "正式/書面" }
-          ],
-          "example": { "sentence": "สวัสดีตอนเช้าครับ", "translation": "早安。" },
-          "usage_note": "口語常只說 Sawatdee。",
-          "image_file": "good_morning.png"
-        },
-        {
-          "id": "greet-006",
-          "term_zh": "請問...",
-          "related_terms": [
-            { "term_target": "ขอถามหน่อย", "pronunciation": ["Kho tham noi"], "specific_note": "請問一下" },
-            { "term_target": "รบกวนหน่อย", "pronunciation": ["Rop kuan noi"], "specific_note": "麻煩一下" }
-          ],
-          "example": { "sentence": "ขอถามหน่อยครับ ห้องน้ำอยู่ที่ไหน", "translation": "請問一下，廁所在哪裡？" },
-          "usage_note": "發問前使用。",
-          "image_file": "excuse_me.png"
-        },
-        {
-          "id": "greet-007",
-          "term_zh": "借過",
-          "related_terms": [
-            { "term_target": "ขอทางหน่อย", "pronunciation": ["Kho thang noi"], "specific_note": "借個路" },
-            { "term_target": "ขอโทษครับ/ค่ะ", "pronunciation": ["Kho thot kráp/khâ"], "specific_note": "不好意思" }
-          ],
-          "example": { "sentence": "ขอทางหน่อยครับ", "translation": "借過一下。" },
-          "usage_note": "人多擁擠時使用。",
-          "image_file": "excuse_me_pass.png"
-        },
-        {
-          "id": "greet-008",
-          "term_zh": "我不懂",
-          "related_terms": [
-            { "term_target": "ไม่เข้าใจ", "pronunciation": ["Mai khao jai"], "specific_note": "不明白" },
-            { "term_target": "ฟังไม่ทัน", "pronunciation": ["Fang mai than"], "specific_note": "聽不懂(太快)" }
-          ],
-          "example": { "sentence": "ขอโทษครับ ผมไม่เข้าใจ", "translation": "抱歉，我不懂。" },
-          "usage_note": "Mai 是「不」，Khao jai 是「明白」。",
-          "image_file": "dont_understand.png"
-        },
-        {
-          "id": "greet-009",
-          "term_zh": "這是什麼？",
-          "related_terms": [
-            { "term_target": "นี่คืออะไร?", "pronunciation": ["Ni khue arai?"], "specific_note": "這是什麼" },
-            { "term_target": "อันนี้อะไร?", "pronunciation": ["An ni arai?"], "specific_note": "這個什麼(口語)" }
-          ],
-          "example": { "sentence": "นี่คืออะไร กินได้ไหม?", "translation": "這是什麼？能吃嗎？" },
-          "usage_note": "指著東西問。",
-          "image_file": "what_is_this.png"
-        },
-        {
-          "id": "greet-010",
-          "term_zh": "我想要這個",
-          "related_terms": [
-            { "term_target": "เอาอันนี้", "pronunciation": ["Ao an ni"], "specific_note": "我要這個" },
-            { "term_target": "อยากได้อันนี้", "pronunciation": ["Yak dai an ni"], "specific_note": "想要這個" }
-          ],
-          "example": { "sentence": "เอาอันนี้ครับ", "translation": "我要這個。" },
-          "usage_note": "Ao 是「要/拿」，購物點餐最常用。",
-          "image_file": "i_want_this.png"
-        },
-        {
-          "id": "greet-011",
-          "term_zh": "請給我...",
-          "related_terms": [
-            { "term_target": "ขอ...หน่อย", "pronunciation": ["Kho ... noi"], "specific_note": "請給..." }
-          ],
-          "example": { "sentence": "ขอน้ำหน่อยครับ", "translation": "請給我水。" },
-          "usage_note": "Kho (請求) ... Noi (一點/一下)。",
-          "image_file": "please_give_me.png"
-        },
-        {
-          "id": "greet-012",
-          "term_zh": "廁所在哪裡？",
-          "related_terms": [
-            { "term_target": "ห้องน้ำอยู่ที่ไหน?", "pronunciation": ["Hong nam yu thi nai?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "ขอโทษครับ ห้องน้ำอยู่ที่ไหน?", "translation": "不好意思，廁所在哪裡？" },
-          "usage_note": "Hong nam (水房/廁所)。",
-          "image_file": "where_bathroom.png"
-        },
-        {
-          "id": "greet-013",
-          "term_zh": "多少錢？",
-          "related_terms": [
-            { "term_target": "เท่าไหร่?", "pronunciation": ["Thao rai?"], "specific_note": "多少" },
-            { "term_target": "กี่บาท?", "pronunciation": ["Ki bat?"], "specific_note": "幾銖" }
-          ],
-          "example": { "sentence": "อันนี้เท่าไหร่?", "translation": "這個多少錢？" },
-          "usage_note": "購物用語。",
-          "image_file": "how_much.png"
-        },
-        {
-          "id": "greet-014",
-          "term_zh": "請幫我",
-          "related_terms": [
-            { "term_target": "ช่วยด้วย", "pronunciation": ["Chuai duai"], "specific_note": "救命/緊急" },
-            { "term_target": "ช่วยหน่อย", "pronunciation": ["Chuai noi"], "specific_note": "幫一下" }
-          ],
-          "example": { "sentence": "ช่วยด้วย!", "translation": "救命！" },
-          "usage_note": "一般請求幫忙用 Chuai noi。",
-          "image_file": "help_me.png"
-        },
-        {
-          "id": "greet-015",
-          "term_zh": "你可以再說一次嗎？",
-          "related_terms": [
-            { "term_target": "พูดอีกทีได้ไหม?", "pronunciation": ["Phut ik thi dai mai?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "ขอโทษครับ พูดอีกทีได้ไหม?", "translation": "抱歉，能再說一次嗎？" },
-          "usage_note": "Phut (說)，Ik thi (再一次)。",
-          "image_file": "say_again.png"
-        },
-        {
-          "id": "greet-016",
-          "term_zh": "你可以講慢一點嗎？",
-          "related_terms": [
-            { "term_target": "พูดช้าๆ หน่อยได้ไหม?", "pronunciation": ["Phut cha cha noi dai mai?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "กรุณาพูดช้าๆ หน่อย", "translation": "請講慢一點。" },
-          "usage_note": "Cha cha 是「慢慢」。",
-          "image_file": "speak_slowly.png"
+          "term_target": "ใช่ค่ะ",
+          "pronunciation": ["Chai Khâ"],
+          "specific_note": "女生用"
         }
+      ],
+      "example": {
+        "sentence": "ใช่ครับ / ใช่ค่ะ",
+        "translation": "是的。"
+      },
+      "usage_note": "單說 Kráp/Khâ 也可以表示「我在聽」或禮貌肯定的回應。",
+      "image_file": "yes.png"
+    },
+    {
+      "id": "greet-002",
+      "term_zh": "不是",
+      "related_terms": [
+        {
+          "term_target": "ไม่ใช่ครับ",
+          "pronunciation": ["Mai chai Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ไม่ใช่ค่ะ",
+          "pronunciation": ["Mai chai Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ไม่ใช่ครับ / ไม่ใช่ค่ะ",
+        "translation": "不是喔。"
+      },
+      "usage_note": "Mai 是「不」，Chai 是「是」。",
+      "image_file": "no.png"
+    },
+    {
+      "id": "greet-003",
+      "term_zh": "你好",
+      "related_terms": [
+        {
+          "term_target": "สวัสดีครับ",
+          "pronunciation": ["Sawatdee Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "สวัสดีค่ะ",
+          "pronunciation": ["Sawatdee Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "สวัสดีครับ / สวัสดีค่ะ",
+        "translation": "你好。"
+      },
+      "usage_note": "泰國全天通用 Sawatdee，不用分早晚安。",
+      "image_file": "hello.png"
+    },
+    {
+      "id": "greet-004",
+      "term_zh": "謝謝你",
+      "related_terms": [
+        {
+          "term_target": "ขอบคุณครับ",
+          "pronunciation": ["Khop khun Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ขอบคุณค่ะ",
+          "pronunciation": ["Khop khun Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ขอบคุณครับ / ขอบคุณค่ะ",
+        "translation": "謝謝你。"
+      },
+      "usage_note": "加上 Mak (非常) 表示非常感謝。",
+      "image_file": "thank_you.png"
+    },
+    {
+      "id": "greet-005",
+      "term_zh": "對不起",
+      "related_terms": [
+        {
+          "term_target": "ขอโทษครับ",
+          "pronunciation": ["Kho thot Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ขอโทษค่ะ",
+          "pronunciation": ["Kho thot Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ขอโทษครับ / ขอโทษค่ะ",
+        "translation": "對不起 / 不好意思。"
+      },
+      "usage_note": "萬用詞，道歉、藉過、引起注意都可用。",
+      "image_file": "sorry.png"
+    },
+    {
+      "id": "greet-006",
+      "term_zh": "請問...",
+      "related_terms": [
+        {
+          "term_target": "ขอถามหน่อยครับ",
+          "pronunciation": ["Kho tham noi Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ขอถามหน่อยค่ะ",
+          "pronunciation": ["Kho tham noi Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ขอถามหน่อยครับ / ขอถามหน่อยค่ะ",
+        "translation": "不好意思，請問一下。"
+      },
+      "usage_note": "發問前使用，語氣較軟。",
+      "image_file": "excuse_me.png"
+    },
+    {
+      "id": "greet-007",
+      "term_zh": "我不懂",
+      "related_terms": [
+        {
+          "term_target": "ไม่เข้าใจครับ",
+          "pronunciation": ["Mai khao jai Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ไม่เข้าใจค่ะ",
+          "pronunciation": ["Mai khao jai Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ผมไม่เข้าใจครับ (男) / ฉันไม่เข้าใจค่ะ (女)",
+        "translation": "我不懂。"
+      },
+      "usage_note": "Khao jai 是「明白」。",
+      "image_file": "dont_understand.png"
+    },
+    {
+      "id": "greet-008",
+      "term_zh": "廁所在哪裡？",
+      "related_terms": [
+        {
+          "term_target": "ห้องน้ำอยู่ที่ไหนครับ?",
+          "pronunciation": ["Hong nam yu thi nai Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ห้องน้ำอยู่ที่ไหนคะ?",
+          "pronunciation": ["Hong nam yu thi nai Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ห้องน้ำอยู่ที่ไหนครับ? / ห้องน้ำอยู่ที่ไหนคะ?",
+        "translation": "廁所在哪裡？"
+      },
+      "usage_note": "注意：女生疑問句用高音 Khá (คะ)。",
+      "image_file": "where_bathroom.png"
+    },
+    {
+      "id": "greet-009",
+      "term_zh": "借過",
+      "related_terms": [
+        {
+          "term_target": "ขอทางหน่อยครับ",
+          "pronunciation": ["Kho thang noi Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ขอทางหน่อยค่ะ",
+          "pronunciation": ["Kho thang noi Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ขอทางหน่อยครับ / ขอทางหน่อยค่ะ",
+        "translation": "借過一下。"
+      },
+      "usage_note": "人多擁擠時使用。",
+      "image_file": "excuse_me_pass.png"
+    },
+    {
+      "id": "greet-010",
+      "term_zh": "多少錢？",
+      "related_terms": [
+        {
+          "term_target": "เท่าไหร่ครับ?",
+          "pronunciation": ["Thao rai Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "เท่าไหร่คะ?",
+          "pronunciation": ["Thao rai Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "เท่าไหร่ครับ? / เท่าไหร่คะ?",
+        "translation": "多少錢？"
+      },
+      "usage_note": "夜市殺價必備，女生問句用 Khá (คะ)。",
+      "image_file": "how_much.png"
+    },
+    {
+      "id": "greet-011",
+      "term_zh": "我想要這個",
+      "related_terms": [
+        {
+          "term_target": "เอาอันนี้ครับ",
+          "pronunciation": ["Ao an ni Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "เอาอันนี้ค่ะ",
+          "pronunciation": ["Ao an ni Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "เอาอันนี้ครับ / เอาอันนี้ค่ะ",
+        "translation": "我要這個 (請給我這個)。"
+      },
+      "usage_note": "Ao 是「要/拿」，點餐購物最常用。",
+      "image_file": "i_want_this.png"
+    },
+    {
+      "id": "greet-012",
+      "term_zh": "請給我...",
+      "related_terms": [
+        {
+          "term_target": "ขอ...หน่อยครับ",
+          "pronunciation": ["Kho ... noi Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ขอ...หน่อยค่ะ",
+          "pronunciation": ["Kho ... noi Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ขอน้ำหน่อยครับ / ขอน้ำหน่อยค่ะ",
+        "translation": "請給我水。"
+      },
+      "usage_note": "Kho (請求) ... Noi (一點/一下)。",
+      "image_file": "please_give_me.png"
+    },
+    {
+      "id": "greet-013",
+      "term_zh": "這是什麼？",
+      "related_terms": [
+        {
+          "term_target": "นี่คืออะไรครับ?",
+          "pronunciation": ["Ni khue arai Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "นี่คืออะไรคะ?",
+          "pronunciation": ["Ni khue arai Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "นี่คืออะไรครับ? / นี่คืออะไรคะ?",
+        "translation": "這是什麼？"
+      },
+      "usage_note": "女生問句用高音 Khá (คะ)。",
+      "image_file": "what_is_this.png"
+    },
+    {
+      "id": "greet-014",
+      "term_zh": "請幫我",
+      "related_terms": [
+        {
+          "term_target": "ช่วยด้วยครับ",
+          "pronunciation": ["Chuai duai Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ช่วยด้วยค่ะ",
+          "pronunciation": ["Chuai duai Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ช่วยด้วยครับ! / ช่วยด้วยค่ะ!",
+        "translation": "救命！/ 請幫幫我！"
+      },
+      "usage_note": "一般請求幫忙用 Chuai noi。",
+      "image_file": "help_me.png"
+    },
+    {
+      "id": "greet-015",
+      "term_zh": "你可以再說一次嗎？",
+      "related_terms": [
+        {
+          "term_target": "พูดอีกทีได้ไหมครับ?",
+          "pronunciation": ["Phut ik thi dai mai Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "พูดอีกทีได้ไหมคะ?",
+          "pronunciation": ["Phut ik thi dai mai Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "พูดอีกทีได้ไหมครับ? / พูดอีกทีได้ไหมคะ?",
+        "translation": "能再說一次嗎？"
+      },
+      "usage_note": "Phut (說)，Ik thi (再一次)。",
+      "image_file": "say_again.png"
+    },
+    {
+      "id": "greet-016",
+      "term_zh": "你可以講慢一點嗎？",
+      "related_terms": [
+        {
+          "term_target": "พูดช้าๆ หน่อยครับ",
+          "pronunciation": ["Phut cha cha noi Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "พูดช้าๆ หน่อยค่ะ",
+          "pronunciation": ["Phut cha cha noi Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "พูดช้าๆ หน่อยครับ / พูดช้าๆ หน่อยค่ะ",
+        "translation": "請講慢一點。"
+      },
+      "usage_note": "Cha cha 是「慢慢」。",
+      "image_file": "speak_slowly.png"
+    },
+    {
+      "id": "greet-017",
+      "term_zh": "原來如此",
+      "related_terms": [
+        {
+          "term_target": "เข้าใจแล้วครับ",
+          "pronunciation": ["Khao jai laeo Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "เข้าใจแล้วค่ะ",
+          "pronunciation": ["Khao jai laeo Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "เข้าใจแล้วครับ / เข้าใจแล้วค่ะ",
+        "translation": "我懂了。"
+      },
+      "usage_note": "Laeo 表示「已經」。",
+      "image_file": "i_see.png"
+    },
+    {
+      "id": "greet-018",
+      "term_zh": "再見",
+      "related_terms": [
+        {
+          "term_target": "ลาก่อนครับ",
+          "pronunciation": ["La gon Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ลาก่อนค่ะ",
+          "pronunciation": ["La gon Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ลาก่อนครับ / ลาก่อนค่ะ",
+        "translation": "再見了。"
+      },
+      "usage_note": "口語極常說 Bye Bye (不需加語尾助詞)。",
+      "image_file": "goodbye.png"
+    },
+    {
+      "id": "greet-019",
+      "term_zh": "你好嗎",
+      "related_terms": [
+        {
+          "term_target": "สบายดีไหมครับ?",
+          "pronunciation": ["Sabai dee mai Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "สบายดีไหมคะ?",
+          "pronunciation": ["Sabai dee mai Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "สบายดีไหมครับ? / สบายดีไหมคะ?",
+        "translation": "你過得好嗎？"
+      },
+      "usage_note": "回答用 Sabai dee (很好)。",
+      "image_file": "how_are_you.png"
+    },
+    {
+      "id": "greet-020",
+      "term_zh": "真的嗎",
+      "related_terms": [
+        {
+          "term_target": "จริงเหรอครับ?",
+          "pronunciation": ["Jing ro Kráp?"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "จริงเหรอคะ?",
+          "pronunciation": ["Jing ro Khá?"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "จริงเหรอครับ? / จริงเหรอคะ?",
+        "translation": "真的嗎？"
+      },
+      "usage_note": "Jing 意思是「真」。",
+      "image_file": "really.png"
+    },
+    {
+      "id": "greet-021",
+      "term_zh": "太棒了",
+      "related_terms": [
+        {
+          "term_target": "สุดยอดครับ",
+          "pronunciation": ["Sud yod Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "สุดยอดค่ะ",
+          "pronunciation": ["Sud yod Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "สุดยอดครับ / สุดยอดค่ะ",
+        "translation": "太厲害了！"
+      },
+      "usage_note": "Sud yod 原意是「頂峰」，引申為最棒。",
+      "image_file": "awesome.png"
+    },
+    {
+      "id": "greet-022",
+      "term_zh": "很高興認識你",
+      "related_terms": [
+        {
+          "term_target": "ยินดีที่ได้รู้จักครับ",
+          "pronunciation": ["Yin dee thi dai ru jak Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "ยินดีที่ได้รู้จักค่ะ",
+          "pronunciation": ["Yin dee thi dai ru jak Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "ยินดีที่ได้รู้จักครับ / ยินดีที่ได้รู้จักค่ะ",
+        "translation": "很高興認識你。"
+      },
+      "usage_note": "初次見面的標準用語。",
+      "image_file": "nice_to_meet_you.png"
+    },
+    {
+      "id": "greet-023",
+      "term_zh": "真可惜",
+      "related_terms": [
+        {
+          "term_target": "เสียดายจังครับ",
+          "pronunciation": ["Sia dai jang Kráp"],
+          "specific_note": "男生用"
+        },
+        {
+          "term_target": "เสียดายจังค่ะ",
+          "pronunciation": ["Sia dai jang Khâ"],
+          "specific_note": "女生用"
+        }
+      ],
+      "example": {
+        "sentence": "เสียดายจังครับ / เสียดายจังค่ะ",
+        "translation": "真是太可惜了。"
+      },
+      "usage_note": "對錯失機會表示遺憾。",
+      "image_file": "too_bad.png"
+    }
       ]
     },
     {

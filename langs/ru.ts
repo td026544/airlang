@@ -12,173 +12,506 @@ export const russianData: AppData ={
       "id": "greetings",
       "name": "常用句",
       "items": [
+ {
+      "id": "greet-001",
+      "term_zh": "是的",
+      "related_terms": [
         {
-          "id": "greet-001",
-          "term_zh": "你好",
-          "related_terms": [
-            { "term_target": "Здравствуйте", "pronunciation": ["/ˈzdravstvʊjtʲɪ/"], "specific_note": "正式/通用" },
-            { "term_target": "Привет", "pronunciation": ["/prʲɪˈvʲet/"], "specific_note": "非正式/朋友" }
-          ],
-          "example": { "sentence": "Здравствуйте, как дела?", "translation": "你好，你好嗎？" },
-          "usage_note": "對長輩或陌生人務必用 Здравствуйте。",
-          "image_file": "hello.png"
-        },
-        {
-          "id": "greet-002",
-          "term_zh": "再見",
-          "related_terms": [
-            { "term_target": "До свидания", "pronunciation": ["/də svʲɪˈdanʲɪjə/"], "specific_note": "正式" },
-            { "term_target": "Пока", "pronunciation": ["/pɐˈka/"], "specific_note": "非正式" }
-          ],
-          "example": { "sentence": "До свидания, до скорого.", "translation": "再見，待會見。" },
-          "usage_note": "朋友間常用 Пока。",
-          "image_file": "goodbye.png"
-        },
-        {
-          "id": "greet-003",
-          "term_zh": "謝謝你",
-          "related_terms": [
-            { "term_target": "Спасибо", "pronunciation": ["/spɐˈsʲibə/"], "specific_note": "通用" },
-            { "term_target": "Большое спасибо", "pronunciation": ["/bɐlʲˈʂojə spɐˈsʲibə/"], "specific_note": "非常感謝" }
-          ],
-          "example": { "sentence": "Большое спасибо за помощь.", "translation": "非常謝謝你的幫忙。" },
-          "usage_note": "回應可用 Пожалуйста (不客氣)。",
-          "image_file": "thank_you.png"
-        },
-        {
-          "id": "greet-004",
-          "term_zh": "對不起",
-          "related_terms": [
-            { "term_target": "Извините", "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"], "specific_note": "正式/藉過" },
-            { "term_target": "Простите", "pronunciation": ["/prɐˈstʲitʲɪ/"], "specific_note": "原諒我" }
-          ],
-          "example": { "sentence": "Извините, я опоздал.", "translation": "對不起，我遲到了。" },
-          "usage_note": "Извините 萬用，也可用於「不好意思」。",
-          "image_file": "sorry.png"
-        },
-        {
-          "id": "greet-005",
-          "term_zh": "早安",
-          "related_terms": [
-            { "term_target": "Доброе утро", "pronunciation": ["/ˈdobrəjə ˈutrə/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Доброе утро, мама.", "translation": "早安，媽。" },
-          "usage_note": "通常用於午餐前。",
-          "image_file": "good_morning.png"
-        },
-        {
-          "id": "greet-006",
-          "term_zh": "請問...",
-          "related_terms": [
-            { "term_target": "Извините", "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"], "specific_note": "引起注意" },
-            { "term_target": "Скажите, пожалуйста", "pronunciation": ["/skɐˈʐɨtʲɪ pɐˈʐaɫstə/"], "specific_note": "請問(請告訴我)" }
-          ],
-          "example": { "sentence": "Скажите, пожалуйста, где туалет?", "translation": "請問，廁所在哪裡？" },
-          "usage_note": "問路時常用 Скажите, пожалуйста。",
-          "image_file": "excuse_me.png"
-        },
-        {
-          "id": "greet-007",
-          "term_zh": "借過",
-          "related_terms": [
-            { "term_target": "Разрешите пройти", "pronunciation": ["/rəzrʲɪˈʂɨtʲɪ prɐjˈtʲi/"], "specific_note": "允許我通過" },
-            { "term_target": "Извините", "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"], "specific_note": "通用" }
-          ],
-          "example": { "sentence": "Извините, разрешите пройти.", "translation": "不好意思，藉過一下。" },
-          "usage_note": "請求讓路。",
-          "image_file": "excuse_me_pass.png"
-        },
-        {
-          "id": "greet-008",
-          "term_zh": "我不懂",
-          "related_terms": [
-            { "term_target": "Я не понимаю", "pronunciation": ["/ja nʲɪ pənʲɪˈmaju/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Извините, я не понимаю по-русски.", "translation": "抱歉，我不懂俄文。" },
-          "usage_note": "Понимать 是「理解/懂」。",
-          "image_file": "dont_understand.png"
-        },
-        {
-          "id": "greet-009",
-          "term_zh": "這是什麼？",
-          "related_terms": [
-            { "term_target": "Что это?", "pronunciation": ["/ʃto ˈɛtə/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Что это? Это еда?", "translation": "這是什麼？是食物嗎？" },
-          "usage_note": "指著東西問。",
-          "image_file": "what_is_this.png"
-        },
-        {
-          "id": "greet-010",
-          "term_zh": "我想要這個",
-          "related_terms": [
-            { "term_target": "Я хочу это", "pronunciation": ["/ja xɐˈtɕu ˈɛtə/"], "specific_note": "直接" },
-            { "term_target": "Можно мне это", "pronunciation": ["/ˈmoʐnə mnʲe ˈɛtə/"], "specific_note": "禮貌(可以給我這個嗎)" }
-          ],
-          "example": { "sentence": "Я хочу это, пожалуйста.", "translation": "麻煩我要這個。" },
-          "usage_note": "Можно мне... 是非常道地的請求方式。",
-          "image_file": "i_want_this.png"
-        },
-        {
-          "id": "greet-011",
-          "term_zh": "請給我...",
-          "related_terms": [
-            { "term_target": "Дайте мне, пожалуйста...", "pronunciation": ["/ˈdajtʲɪ mnʲe pɐˈʐaɫstə/"], "specific_note": "正式" }
-          ],
-          "example": { "sentence": "Дайте мне воды, пожалуйста.", "translation": "請給我水。" },
-          "usage_note": "Дать (給) 的命令式 + мне (我)。",
-          "image_file": "please_give_me.png"
-        },
-        {
-          "id": "greet-012",
-          "term_zh": "廁所在哪裡？",
-          "related_terms": [
-            { "term_target": "Где туалет?", "pronunciation": ["/gdʲe tʊɐˈlʲet/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Извините, где туалет?", "translation": "不好意思，廁所在哪裡？" },
-          "usage_note": "旅遊必備。",
-          "image_file": "where_bathroom.png"
-        },
-        {
-          "id": "greet-013",
-          "term_zh": "多少錢？",
-          "related_terms": [
-            { "term_target": "Сколько стоит?", "pronunciation": ["/ˈskolʲkə ˈstoɪt/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Сколько это стоит?", "translation": "這多少錢？" },
-          "usage_note": "購物用語。",
-          "image_file": "how_much.png"
-        },
-        {
-          "id": "greet-014",
-          "term_zh": "請幫我",
-          "related_terms": [
-            { "term_target": "Помогите мне, пожалуйста", "pronunciation": ["/pəmɐˈgʲitʲɪ mnʲe pɐˈʐaɫstə/"], "specific_note": "正式" }
-          ],
-          "example": { "sentence": "Помогите мне с багажом.", "translation": "請幫我拿行李。" },
-          "usage_note": "Помочь 是「幫助」。",
-          "image_file": "help_me.png"
-        },
-        {
-          "id": "greet-015",
-          "term_zh": "你可以再說一次嗎？",
-          "related_terms": [
-            { "term_target": "Повторите, пожалуйста", "pronunciation": ["/pəftɐˈrʲitʲɪ pɐˈʐaɫstə/"], "specific_note": "正式" }
-          ],
-          "example": { "sentence": "Я не услышал, повторите, пожалуйста.", "translation": "沒聽到，能再說一次嗎？" },
-          "usage_note": "Повторить 是「重複」。",
-          "image_file": "say_again.png"
-        },
-        {
-          "id": "greet-016",
-          "term_zh": "你可以講慢一點嗎？",
-          "related_terms": [
-            { "term_target": "Говорите медленнее, пожалуйста", "pronunciation": ["/gəvɐˈrʲitʲɪ ˈmʲedlʲɪnːɪje pɐˈʐaɫstə/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Пожалуйста, говорите медленнее.", "translation": "拜託講慢一點。" },
-          "usage_note": "Медленно 意思是「慢」。",
-          "image_file": "speak_slowly.png"
+          "term_target": "Да",
+          "pronunciation": ["/da/"],
+          "specific_note": "肯定"
         }
+      ],
+      "example": {
+        "sentence": "Да, пожалуйста.",
+        "translation": "是的，麻煩了。"
+      },
+      "usage_note": "發音短促清楚。",
+      "image_file": "yes.png"
+    },
+    {
+      "id": "greet-002",
+      "term_zh": "不是",
+      "related_terms": [
+        {
+          "term_target": "Нет",
+          "pronunciation": ["/nʲet/"],
+          "specific_note": "否定"
+        }
+      ],
+      "example": {
+        "sentence": "Нет, спасибо.",
+        "translation": "不，謝謝。"
+      },
+      "usage_note": "拒絕或否認時使用。",
+      "image_file": "no.png"
+    },
+    {
+      "id": "greet-003",
+      "term_zh": "你好",
+      "related_terms": [
+        {
+          "term_target": "Здравствуйте",
+          "pronunciation": ["/ˈzdravstvʊjtʲɪ/"],
+          "specific_note": "正式/通用"
+        },
+        {
+          "term_target": "Привет",
+          "pronunciation": ["/prʲɪˈvʲet/"],
+          "specific_note": "非正式/朋友"
+        }
+      ],
+      "example": {
+        "sentence": "Здравствуйте, как дела?",
+        "translation": "你好，你好嗎？"
+      },
+      "usage_note": "對長輩或陌生人務必用 Здравствуйте (您好)。",
+      "image_file": "hello.png"
+    },
+    {
+      "id": "greet-004",
+      "term_zh": "謝謝你",
+      "related_terms": [
+        {
+          "term_target": "Спасибо",
+          "pronunciation": ["/spɐˈsʲibə/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Большое спасибо",
+          "pronunciation": ["/bɐlʲˈʂojə spɐˈsʲibə/"],
+          "specific_note": "非常感謝"
+        }
+      ],
+      "example": {
+        "sentence": "Большое спасибо за помощь.",
+        "translation": "非常謝謝你的幫忙。"
+      },
+      "usage_note": "回應可用 Пожалуйста (Pazhalusta - 不客氣)。",
+      "image_file": "thank_you.png"
+    },
+    {
+      "id": "greet-005",
+      "term_zh": "對不起",
+      "related_terms": [
+        {
+          "term_target": "Извините",
+          "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"],
+          "specific_note": "正式/通用"
+        },
+        {
+          "term_target": "Простите",
+          "pronunciation": ["/prɐˈstʲitʲɪ/"],
+          "specific_note": "請求原諒"
+        }
+      ],
+      "example": {
+        "sentence": "Извините, я опоздал.",
+        "translation": "對不起，我遲到了。"
+      },
+      "usage_note": "Извините 既是道歉，也是引起注意(不好意思)。",
+      "image_file": "sorry.png"
+    },
+    {
+      "id": "greet-006",
+      "term_zh": "請問...",
+      "related_terms": [
+        {
+          "term_target": "Скажите, пожалуйста",
+          "pronunciation": ["/skɐˈʐɨtʲɪ pɐˈʐaɫstə/"],
+          "specific_note": "請告訴我..."
+        },
+        {
+          "term_target": "Извините",
+          "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"],
+          "specific_note": "不好意思"
+        }
+      ],
+      "example": {
+        "sentence": "Скажите, пожалуйста, где метро?",
+        "translation": "請問一下，地鐵在哪裡？"
+      },
+      "usage_note": "問路時標準開場白。",
+      "image_file": "excuse_me.png"
+    },
+    {
+      "id": "greet-007",
+      "term_zh": "我不懂",
+      "related_terms": [
+        {
+          "term_target": "Я не понимаю",
+          "pronunciation": ["/ja nʲɪ pənʲɪˈmaju/"],
+          "specific_note": "我不明白"
+        }
+      ],
+      "example": {
+        "sentence": "Извините, я не понимаю по-русски.",
+        "translation": "抱歉，我不懂俄文。"
+      },
+      "usage_note": "Понимать 是「理解/懂」。",
+      "image_file": "dont_understand.png"
+    },
+    {
+      "id": "greet-008",
+      "term_zh": "廁所在哪裡？",
+      "related_terms": [
+        {
+          "term_target": "Где туалет?",
+          "pronunciation": ["/gdʲe tʊɐˈlʲet/"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "Извините, где туалет?",
+        "translation": "不好意思，廁所在哪裡？"
+      },
+      "usage_note": "旅遊必備。",
+      "image_file": "where_bathroom.png"
+    },
+    {
+      "id": "greet-009",
+      "term_zh": "借過",
+      "related_terms": [
+        {
+          "term_target": "Разрешите пройти",
+          "pronunciation": ["/rəzrʲɪˈʂɨtʲɪ prɐjˈtʲi/"],
+          "specific_note": "允許我通過"
+        },
+        {
+          "term_target": "Извините",
+          "pronunciation": ["/ɪzvʲɪˈnʲitʲɪ/"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "Извините, разрешите пройти.",
+        "translation": "不好意思，借過一下。"
+      },
+      "usage_note": "擁擠時說 Извините 通常也有效。",
+      "image_file": "excuse_me_pass.png"
+    },
+    {
+      "id": "greet-010",
+      "term_zh": "多少錢？",
+      "related_terms": [
+        {
+          "term_target": "Сколько стоит?",
+          "pronunciation": ["/ˈskolʲkə ˈstoɪt/"],
+          "specific_note": "詢價"
+        }
+      ],
+      "example": {
+        "sentence": "Сколько это стоит?",
+        "translation": "這要多少錢？"
+      },
+      "usage_note": "Стоить 是「花費/值」。",
+      "image_file": "how_much.png"
+    },
+    {
+      "id": "greet-011",
+      "term_zh": "我想要這個",
+      "related_terms": [
+        {
+          "term_target": "Можно мне это",
+          "pronunciation": ["/ˈmoʐnə mnʲe ˈɛtə/"],
+          "specific_note": "禮貌 (可以給我這個嗎)"
+        },
+        {
+          "term_target": "Я хочу это",
+          "pronunciation": ["/ja xɐˈtɕu ˈɛtə/"],
+          "specific_note": "直接 (我想要)"
+        }
+      ],
+      "example": {
+        "sentence": "Можно мне это, пожалуйста.",
+        "translation": "可以麻煩給我這個嗎。"
+      },
+      "usage_note": "用 Можно (可以) 開頭比「我想要」更禮貌道地。",
+      "image_file": "i_want_this.png"
+    },
+    {
+      "id": "greet-012",
+      "term_zh": "請給我...",
+      "related_terms": [
+        {
+          "term_target": "Дайте мне...",
+          "pronunciation": ["/ˈdajtʲɪ mnʲe/"],
+          "specific_note": "請給我 (正式)"
+        }
+      ],
+      "example": {
+        "sentence": "Дайте мне воды, пожалуйста.",
+        "translation": "請給我水。"
+      },
+      "usage_note": "Дать (給) 的命令式 + мне (我)。",
+      "image_file": "please_give_me.png"
+    },
+    {
+      "id": "greet-013",
+      "term_zh": "這是什麼？",
+      "related_terms": [
+        {
+          "term_target": "Что это?",
+          "pronunciation": ["/ʃto ˈɛtə/"],
+          "specific_note": "疑問"
+        }
+      ],
+      "example": {
+        "sentence": "Что это? Это вкусно?",
+        "translation": "這是什麼？好吃嗎？"
+      },
+      "usage_note": "指著東西問。",
+      "image_file": "what_is_this.png"
+    },
+    {
+      "id": "greet-014",
+      "term_zh": "請幫我",
+      "related_terms": [
+        {
+          "term_target": "Помогите мне",
+          "pronunciation": ["/pəmɐˈgʲitʲɪ mnʲe/"],
+          "specific_note": "請求協助"
+        },
+        {
+          "term_target": "Помогите!",
+          "pronunciation": ["/pəmɐˈgʲitʲɪ/"],
+          "specific_note": "救命 (緊急)"
+        }
+      ],
+      "example": {
+        "sentence": "Помогите мне, пожалуйста.",
+        "translation": "請幫幫我。"
+      },
+      "usage_note": "Помочь 是「幫助」。",
+      "image_file": "help_me.png"
+    },
+    {
+      "id": "greet-015",
+      "term_zh": "你可以再說一次嗎？",
+      "related_terms": [
+        {
+          "term_target": "Повторите, пожалуйста",
+          "pronunciation": ["/pəftɐˈrʲitʲɪ pɐˈʐaɫstə/"],
+          "specific_note": "正式"
+        }
+      ],
+      "example": {
+        "sentence": "Я не понял, повторите, пожалуйста.",
+        "translation": "我不懂，請再說一次。"
+      },
+      "usage_note": "Повторить 是「重複」。",
+      "image_file": "say_again.png"
+    },
+    {
+      "id": "greet-016",
+      "term_zh": "你可以講慢一點嗎？",
+      "related_terms": [
+        {
+          "term_target": "Говорите медленнее",
+          "pronunciation": ["/gəvɐˈrʲitʲɪ ˈmʲedlʲɪnːɪje/"],
+          "specific_note": "講慢一點"
+        }
+      ],
+      "example": {
+        "sentence": "Пожалуйста, говорите медленнее.",
+        "translation": "拜託講慢一點。"
+      },
+      "usage_note": "Медленно 意思是「慢」。",
+      "image_file": "speak_slowly.png"
+    },
+    {
+      "id": "greet-017",
+      "term_zh": "原來如此",
+      "related_terms": [
+        {
+          "term_target": "Понятно",
+          "pronunciation": ["/pɐˈnʲatnə/"],
+          "specific_note": "明白了"
+        },
+        {
+          "term_target": "Ясно",
+          "pronunciation": ["/ˈjasnə/"],
+          "specific_note": "清楚了"
+        }
+      ],
+      "example": {
+        "sentence": "А, понятно. Спасибо.",
+        "translation": "啊，原來如此。謝謝。"
+      },
+      "usage_note": "表示理解了某件事。",
+      "image_file": "i_see.png"
+    },
+    {
+      "id": "greet-018",
+      "term_zh": "早安",
+      "related_terms": [
+        {
+          "term_target": "Доброе утро",
+          "pronunciation": ["/ˈdobrəjə ˈutrə/"],
+          "specific_note": "上午"
+        },
+        {
+          "term_target": "Добрый день",
+          "pronunciation": ["/ˈdobrɨj dʲenʲ/"],
+          "specific_note": "日安 (白天通用)"
+        }
+      ],
+      "example": {
+        "sentence": "Доброе утро, друзья.",
+        "translation": "朋友們早安。"
+      },
+      "usage_note": "中午12點後改說 Добрый день。",
+      "image_file": "good_morning.png"
+    },
+    {
+      "id": "greet-019",
+      "term_zh": "晚上好 (晚安)",
+      "related_terms": [
+        {
+          "term_target": "Добрый вечер",
+          "pronunciation": ["/ˈdobrɨj ˈvʲetɕɪr/"],
+          "specific_note": "晚上見面"
+        },
+        {
+          "term_target": "Спокойной ночи",
+          "pronunciation": ["/spɐˈkojnəj ˈnotɕɪ/"],
+          "specific_note": "睡前/道別"
+        }
+      ],
+      "example": {
+        "sentence": "Добрый вечер, как дела?",
+        "translation": "晚上好，你好嗎？"
+      },
+      "usage_note": "晚上見面說 Добрый вечер，睡前才說 Спокойной ночи。",
+      "image_file": "good_evening.png"
+    },
+    {
+      "id": "greet-020",
+      "term_zh": "再見",
+      "related_terms": [
+        {
+          "term_target": "До свидания",
+          "pronunciation": ["/də svʲɪˈdanʲɪjə/"],
+          "specific_note": "正式"
+        },
+        {
+          "term_target": "Пока",
+          "pronunciation": ["/pɐˈka/"],
+          "specific_note": "口語 (Bye)"
+        }
+      ],
+      "example": {
+        "sentence": "До свидания, до скорого.",
+        "translation": "再見，待會見。"
+      },
+      "usage_note": "朋友間極常用 Пока。",
+      "image_file": "goodbye.png"
+    },
+    {
+      "id": "greet-021",
+      "term_zh": "你好嗎",
+      "related_terms": [
+        {
+          "term_target": "Как дела?",
+          "pronunciation": ["/kak dʲɪˈla/"],
+          "specific_note": "事情怎麼樣?"
+        }
+      ],
+      "example": {
+        "sentence": "Привет, как дела?",
+        "translation": "嗨，你好嗎？"
+      },
+      "usage_note": "回答常用 Хорошо (很好)。",
+      "image_file": "how_are_you.png"
+    },
+    {
+      "id": "greet-022",
+      "term_zh": "真的嗎",
+      "related_terms": [
+        {
+          "term_target": "Правда?",
+          "pronunciation": ["/ˈpravdə/"],
+          "specific_note": "真的?"
+        },
+        {
+          "term_target": "Серьёзно?",
+          "pronunciation": ["/sʲɪrʲˈjoznə/"],
+          "specific_note": "認真嗎?"
+        }
+      ],
+      "example": {
+        "sentence": "Правда? Я не знал.",
+        "translation": "真的嗎？我不知道耶。"
+      },
+      "usage_note": "表示驚訝或確認。",
+      "image_file": "really.png"
+    },
+    {
+      "id": "greet-023",
+      "term_zh": "太棒了",
+      "related_terms": [
+        {
+          "term_target": "Здорово",
+          "pronunciation": ["/ˈzdorəvə/"],
+          "specific_note": "太好了/健康"
+        },
+        {
+          "term_target": "Круто",
+          "pronunciation": ["/ˈkrutə/"],
+          "specific_note": "酷/炫"
+        }
+      ],
+      "example": {
+        "sentence": "Это просто здорово!",
+        "translation": "這真是太棒了！"
+      },
+      "usage_note": "Здорово 是非常正面的感嘆詞。",
+      "image_file": "awesome.png"
+    },
+    {
+      "id": "greet-024",
+      "term_zh": "很高興認識你",
+      "related_terms": [
+        {
+          "term_target": "Приятно познакомиться",
+          "pronunciation": ["/prʲɪˈjatnə pəznɐˈkomʲɪt͡sə/"],
+          "specific_note": "正式"
+        },
+        {
+          "term_target": "Очень приятно",
+          "pronunciation": ["/ˈotɕɪnʲ prʲɪˈjatnə/"],
+          "specific_note": "簡短 (很榮幸)"
+        }
+      ],
+      "example": {
+        "sentence": "Меня зовут Анна, очень приятно.",
+        "translation": "我是安娜，很高興認識你。"
+      },
+      "usage_note": "握手時常說 Очень приятно。",
+      "image_file": "nice_to_meet_you.png"
+    },
+    {
+      "id": "greet-025",
+      "term_zh": "真可惜",
+      "related_terms": [
+        {
+          "term_target": "Жаль",
+          "pronunciation": ["/ʐalʲ/"],
+          "specific_note": "遺憾"
+        },
+        {
+          "term_target": "Как жаль",
+          "pronunciation": ["/kak ʐalʲ/"],
+          "specific_note": "真可惜"
+        }
+      ],
+      "example": {
+        "sentence": "Ой, как жаль.",
+        "translation": "噢，真可惜。"
+      },
+      "usage_note": "對壞消息表示同情。",
+      "image_file": "too_bad.png"
+    }
       ]
     },
     {

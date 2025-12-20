@@ -13,177 +13,516 @@ export const germanData: AppData =
       "id": "greetings",
       "name": "常用句",
       "items": [
+{
+      "id": "greet-001",
+      "term_zh": "是的",
+      "related_terms": [
         {
-          "id": "greet-001",
-          "term_zh": "你好",
-          "related_terms": [
-            { "term_target": "Hallo", "pronunciation": ["/ˈhalo/"], "specific_note": "通用" },
-            { "term_target": "Guten Tag", "pronunciation": ["/ˌɡuːtn̩ ˈtaːk/"], "specific_note": "白天通用" }
-          ],
-          "example": { "sentence": "Hallo, wie geht's?", "translation": "你好，你好嗎？" },
-          "usage_note": "最常用的問候語。",
-          "image_file": "hello.png"
-        },
-        {
-          "id": "greet-002",
-          "term_zh": "再見",
-          "related_terms": [
-            { "term_target": "Auf Wiedersehen", "pronunciation": ["/aʊf ˈviːdɐzeːən/"], "specific_note": "正式" },
-            { "term_target": "Tschüss", "pronunciation": ["/tʃyːs/"], "specific_note": "非正式/口語" }
-          ],
-          "example": { "sentence": "Auf Wiedersehen, bis bald.", "translation": "再見，待會見。" },
-          "usage_note": "朋友間常用 Tschüss。",
-          "image_file": "goodbye.png"
-        },
-        {
-          "id": "greet-003",
-          "term_zh": "謝謝你",
-          "related_terms": [
-            { "term_target": "Danke", "pronunciation": ["/ˈdaŋkə/"], "specific_note": "通用" },
-            { "term_target": "Vielen Dank", "pronunciation": ["/ˈfiːlən daŋk/"], "specific_note": "非常感謝" }
-          ],
-          "example": { "sentence": "Vielen Dank für Ihre Hilfe.", "translation": "非常謝謝您的幫忙。" },
-          "usage_note": "回應可用 Bitte (不客氣)。",
-          "image_file": "thank_you.png"
-        },
-        {
-          "id": "greet-004",
-          "term_zh": "對不起",
-          "related_terms": [
-            { "term_target": "Entschuldigung", "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"], "specific_note": "道歉/藉過" },
-            { "term_target": "Tut mir leid", "pronunciation": ["/tuːt miːɐ̯ laɪt/"], "specific_note": "我很抱歉/遺憾" }
-          ],
-          "example": { "sentence": "Tut mir leid, ich bin zu spät.", "translation": "對不起，我遲到了。" },
-          "usage_note": "Entschuldigung 萬用，Tut mir leid 表達遺憾。",
-          "image_file": "sorry.png"
-        },
-        {
-          "id": "greet-005",
-          "term_zh": "早安",
-          "related_terms": [
-            { "term_target": "Guten Morgen", "pronunciation": ["/ˌɡuːtn̩ ˈmɔʁɡn̩/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Guten Morgen, Mama.", "translation": "早安，媽。" },
-          "usage_note": "通常用於上午10-11點前。",
-          "image_file": "good_morning.png"
-        },
-        {
-          "id": "greet-006",
-          "term_zh": "請問...",
-          "related_terms": [
-            { "term_target": "Entschuldigung", "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"], "specific_note": "引起注意" },
-            { "term_target": "Darf ich fragen...", "pronunciation": ["/daʁf ɪç ˈfʁaːɡn̩/"], "specific_note": "我可以問嗎..." }
-          ],
-          "example": { "sentence": "Entschuldigung, wo ist die Toilette?", "translation": "請問，廁所在哪裡？" },
-          "usage_note": "發問前用 Entschuldigung 很禮貌。",
-          "image_file": "excuse_me.png"
-        },
-        {
-          "id": "greet-007",
-          "term_zh": "借過",
-          "related_terms": [
-            { "term_target": "Entschuldigung", "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"], "specific_note": "通用" },
-            { "term_target": "Darf ich mal vorbei?", "pronunciation": ["/daʁf ɪç maːl foːɐ̯ˈbaɪ/"], "specific_note": "讓我過一下" }
-          ],
-          "example": { "sentence": "Entschuldigung, darf ich mal vorbei?", "translation": "不好意思，藉過一下。" },
-          "usage_note": "請求讓路。",
-          "image_file": "excuse_me_pass.png"
-        },
-        {
-          "id": "greet-008",
-          "term_zh": "我不懂",
-          "related_terms": [
-            { "term_target": "Ich verstehe nicht", "pronunciation": ["/ɪç fɛɐ̯ˈʃteːə nɪçt/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Entschuldigung, ich verstehe nicht.", "translation": "抱歉，我不懂。" },
-          "usage_note": "Verstehen 是「理解/懂」。",
-          "image_file": "dont_understand.png"
-        },
-        {
-          "id": "greet-009",
-          "term_zh": "這是什麼？",
-          "related_terms": [
-            { "term_target": "Was ist das?", "pronunciation": ["/vas ɪst das/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Was ist das? Ist das Essen?", "translation": "這是什麼？是食物嗎？" },
-          "usage_note": "Das 指這個東西(中性)。",
-          "image_file": "what_is_this.png"
-        },
-        {
-          "id": "greet-010",
-          "term_zh": "我想要這個",
-          "related_terms": [
-            { "term_target": "Ich möchte das", "pronunciation": ["/ɪç ˈmœçtə das/"], "specific_note": "想要(禮貌)" },
-            { "term_target": "Ich will das", "pronunciation": ["/ɪç vɪl das/"], "specific_note": "我要(直接)" }
-          ],
-          "example": { "sentence": "Ich möchte das, bitte.", "translation": "麻煩我要這個。" },
-          "usage_note": "Möchte 是 Mögen (喜歡) 的虛擬式，比 Will 禮貌。",
-          "image_file": "i_want_this.png"
-        },
-        {
-          "id": "greet-011",
-          "term_zh": "請給我...",
-          "related_terms": [
-            { "term_target": "Ich hätte gerne...", "pronunciation": ["/ɪç ˈhɛtə ˈɡɛʁnə/"], "specific_note": "我想要...(點餐常用)" },
-            { "term_target": "Geben Sie mir bitte...", "pronunciation": ["/ˈɡeːbn̩ ziː miːɐ̯ ˈbɪtə/"], "specific_note": "請給我..." }
-          ],
-          "example": { "sentence": "Ich hätte gerne Wasser.", "translation": "請給我水。" },
-          "usage_note": "Ich hätte gerne 是最道地的點餐用語。",
-          "image_file": "please_give_me.png"
-        },
-        {
-          "id": "greet-012",
-          "term_zh": "廁所在哪裡？",
-          "related_terms": [
-            { "term_target": "Wo ist die Toilette?", "pronunciation": ["/vo ɪst di toˈlɛtə/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Entschuldigung, wo ist die Toilette?", "translation": "不好意思，廁所在哪裡？" },
-          "usage_note": "旅遊必備。",
-          "image_file": "where_bathroom.png"
-        },
-        {
-          "id": "greet-013",
-          "term_zh": "多少錢？",
-          "related_terms": [
-            { "term_target": "Wie viel kostet das?", "pronunciation": ["/vi fiːl ˈkɔstət das/"], "specific_note": "這多少錢" },
-            { "term_target": "Was kostet das?", "pronunciation": ["/vas ˈkɔstət das/"], "specific_note": "這要多少" }
-          ],
-          "example": { "sentence": "Wie viel kostet das?", "translation": "這多少錢？" },
-          "usage_note": "Kosten 是花費。",
-          "image_file": "how_much.png"
-        },
-        {
-          "id": "greet-014",
-          "term_zh": "請幫我",
-          "related_terms": [
-            { "term_target": "Helfen Sie mir bitte", "pronunciation": ["/ˈhɛlfn̩ ziː miːɐ̯ ˈbɪtə/"], "specific_note": "正式" },
-            { "term_target": "Hilf mir bitte", "pronunciation": ["/hɪlf miːɐ̯ ˈbɪtə/"], "specific_note": "非正式" }
-          ],
-          "example": { "sentence": "Können Sie mir bitte helfen?", "translation": "能請您幫我嗎？" },
-          "usage_note": "Helfen 是「幫助」。",
-          "image_file": "help_me.png"
-        },
-        {
-          "id": "greet-015",
-          "term_zh": "你可以再說一次嗎？",
-          "related_terms": [
-            { "term_target": "Können Sie das wiederholen?", "pronunciation": ["/ˈkœnən ziː das viːdɐˈhoːlən/"], "specific_note": "正式" },
-            { "term_target": "Wie bitte?", "pronunciation": ["/viː ˈbɪtə/"], "specific_note": "蛤？(請再說一次)" }
-          ],
-          "example": { "sentence": "Wie bitte? Ich habe nicht verstanden.", "translation": "請再說一次，我沒聽懂。" },
-          "usage_note": "Wie bitte? 是最簡單常用的說法。",
-          "image_file": "say_again.png"
-        },
-        {
-          "id": "greet-016",
-          "term_zh": "你可以講慢一點嗎？",
-          "related_terms": [
-            { "term_target": "Können Sie langsamer sprechen?", "pronunciation": ["/ˈkœnən ziː ˈlaŋzamɐ ˈʃpʁɛçn̩/"], "specific_note": "正式" }
-          ],
-          "example": { "sentence": "Bitte sprechen Sie langsamer.", "translation": "拜託請講慢一點。" },
-          "usage_note": "Langsam 意思是「慢」。",
-          "image_file": "speak_slowly.png"
+          "term_target": "Ja",
+          "pronunciation": ["/jaː/"],
+          "specific_note": "肯定"
         }
+      ],
+      "example": {
+        "sentence": "Ja, bitte.",
+        "translation": "是的，麻煩了。"
+      },
+      "usage_note": "回答問題或表示同意。",
+      "image_file": "yes.png"
+    },
+    {
+      "id": "greet-002",
+      "term_zh": "不是",
+      "related_terms": [
+        {
+          "term_target": "Nein",
+          "pronunciation": ["/naɪn/"],
+          "specific_note": "否定"
+        }
+      ],
+      "example": {
+        "sentence": "Nein, danke.",
+        "translation": "不用了，謝謝。"
+      },
+      "usage_note": "拒絕或否認時使用。",
+      "image_file": "no.png"
+    },
+    {
+      "id": "greet-003",
+      "term_zh": "你好",
+      "related_terms": [
+        {
+          "term_target": "Hallo",
+          "pronunciation": ["/ˈhalo/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Guten Tag",
+          "pronunciation": ["/ˌɡuːtn̩ ˈtaːk/"],
+          "specific_note": "白天通用 (約10點-18點)"
+        }
+      ],
+      "example": {
+        "sentence": "Hallo, wie geht's?",
+        "translation": "你好，你好嗎？"
+      },
+      "usage_note": "Hallo 最常用，Guten Tag 較正式。",
+      "image_file": "hello.png"
+    },
+    {
+      "id": "greet-004",
+      "term_zh": "謝謝你",
+      "related_terms": [
+        {
+          "term_target": "Danke",
+          "pronunciation": ["/ˈdaŋkə/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Vielen Dank",
+          "pronunciation": ["/ˈfiːlən daŋk/"],
+          "specific_note": "非常感謝"
+        }
+      ],
+      "example": {
+        "sentence": "Vielen Dank für Ihre Hilfe.",
+        "translation": "非常謝謝您的幫忙。"
+      },
+      "usage_note": "回應可用 Bitte (不客氣)。",
+      "image_file": "thank_you.png"
+    },
+    {
+      "id": "greet-005",
+      "term_zh": "對不起",
+      "related_terms": [
+        {
+          "term_target": "Entschuldigung",
+          "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"],
+          "specific_note": "道歉/通用"
+        },
+        {
+          "term_target": "Es tut mir leid",
+          "pronunciation": ["/ɛs tuːt miːɐ̯ laɪt/"],
+          "specific_note": "我很抱歉 (表達遺憾)"
+        }
+      ],
+      "example": {
+        "sentence": "Es tut mir leid, ich bin zu spät.",
+        "translation": "對不起，我遲到了。"
+      },
+      "usage_note": "做錯事或表達同情時用 Tut mir leid。",
+      "image_file": "sorry.png"
+    },
+    {
+      "id": "greet-006",
+      "term_zh": "請問...",
+      "related_terms": [
+        {
+          "term_target": "Entschuldigung",
+          "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"],
+          "specific_note": "引起注意"
+        }
+      ],
+      "example": {
+        "sentence": "Entschuldigung, wo ist die Toilette?",
+        "translation": "不好意思請問，廁所在哪裡？"
+      },
+      "usage_note": "發問前用 Entschuldigung 很禮貌。",
+      "image_file": "excuse_me.png"
+    },
+    {
+      "id": "greet-007",
+      "term_zh": "我不懂",
+      "related_terms": [
+        {
+          "term_target": "Ich verstehe nicht",
+          "pronunciation": ["/ɪç fɛɐ̯ˈʃteːə nɪçt/"],
+          "specific_note": "無法理解"
+        }
+      ],
+      "example": {
+        "sentence": "Entschuldigung, ich verstehe nicht.",
+        "translation": "抱歉，我不懂。"
+      },
+      "usage_note": "Verstehen 是「理解/懂」。",
+      "image_file": "dont_understand.png"
+    },
+    {
+      "id": "greet-008",
+      "term_zh": "廁所在哪裡？",
+      "related_terms": [
+        {
+          "term_target": "Wo ist die Toilette?",
+          "pronunciation": ["/vo ɪst di toˈlɛtə/"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "Entschuldigung, wo ist die Toilette?",
+        "translation": "不好意思，廁所在哪裡？"
+      },
+      "usage_note": "旅遊必備。",
+      "image_file": "where_bathroom.png"
+    },
+    {
+      "id": "greet-009",
+      "term_zh": "借過",
+      "related_terms": [
+        {
+          "term_target": "Darf ich mal vorbei?",
+          "pronunciation": ["/daʁf ɪç maːl foːɐ̯ˈbaɪ/"],
+          "specific_note": "讓我過一下"
+        },
+        {
+          "term_target": "Entschuldigung",
+          "pronunciation": ["/ɛntˈʃʊldɪɡʊŋ/"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "Entschuldigung, darf ich mal vorbei?",
+        "translation": "不好意思，借過一下。"
+      },
+      "usage_note": "人多擁擠時使用。",
+      "image_file": "excuse_me_pass.png"
+    },
+    {
+      "id": "greet-010",
+      "term_zh": "多少錢？",
+      "related_terms": [
+        {
+          "term_target": "Wie viel kostet das?",
+          "pronunciation": ["/vi fiːl ˈkɔstət das/"],
+          "specific_note": "詢價"
+        },
+        {
+          "term_target": "Was kostet das?",
+          "pronunciation": ["/vas ˈkɔstət das/"],
+          "specific_note": "口語"
+        }
+      ],
+      "example": {
+        "sentence": "Wie viel kostet das?",
+        "translation": "這多少錢？"
+      },
+      "usage_note": "Kosten 是花費。",
+      "image_file": "how_much.png"
+    },
+    {
+      "id": "greet-011",
+      "term_zh": "我想要這個",
+      "related_terms": [
+        {
+          "term_target": "Ich möchte das",
+          "pronunciation": ["/ɪç ˈmœçtə das/"],
+          "specific_note": "想要 (禮貌)"
+        },
+        {
+          "term_target": "Das bitte",
+          "pronunciation": ["/das ˈbɪtə/"],
+          "specific_note": "這個，麻煩了 (最簡單)"
+        }
+      ],
+      "example": {
+        "sentence": "Ich möchte das, bitte.",
+        "translation": "麻煩我要這個。"
+      },
+      "usage_note": "請勿說 Ich will (我要)，那像小孩子吵鬧，用 Ich möchte。",
+      "image_file": "i_want_this.png"
+    },
+    {
+      "id": "greet-012",
+      "term_zh": "請給我...",
+      "related_terms": [
+        {
+          "term_target": "Ich hätte gerne...",
+          "pronunciation": ["/ɪç ˈhɛtə ˈɡɛʁnə/"],
+          "specific_note": "點餐萬用句"
+        },
+        {
+          "term_target": "...bitte",
+          "pronunciation": ["...ˈbɪtə/"],
+          "specific_note": "名詞+Please"
+        }
+      ],
+      "example": {
+        "sentence": "Ich hätte gerne ein Wasser.",
+        "translation": "請給我一瓶水。"
+      },
+      "usage_note": "Ich hätte gerne 是最道地的點餐用語。",
+      "image_file": "please_give_me.png"
+    },
+    {
+      "id": "greet-013",
+      "term_zh": "這是什麼？",
+      "related_terms": [
+        {
+          "term_target": "Was ist das?",
+          "pronunciation": ["/vas ɪst das/"],
+          "specific_note": "疑問"
+        }
+      ],
+      "example": {
+        "sentence": "Was ist das? Ist das lecker?",
+        "translation": "這是什麼？好吃嗎？"
+      },
+      "usage_note": "Das 指這個東西 (中性)。",
+      "image_file": "what_is_this.png"
+    },
+    {
+      "id": "greet-014",
+      "term_zh": "請幫我",
+      "related_terms": [
+        {
+          "term_target": "Können Sie mir helfen?",
+          "pronunciation": ["/ˈkœnən ziː miːɐ̯ ˈhɛlfn̩/"],
+          "specific_note": "請求協助"
+        },
+        {
+          "term_target": "Hilfe!",
+          "pronunciation": ["/ˈhɪlfə/"],
+          "specific_note": "救命 (緊急)"
+        }
+      ],
+      "example": {
+        "sentence": "Können Sie mir bitte helfen?",
+        "translation": "能請您幫我嗎？"
+      },
+      "usage_note": "Helfen 是「幫助」。",
+      "image_file": "help_me.png"
+    },
+    {
+      "id": "greet-015",
+      "term_zh": "你可以再說一次嗎？",
+      "related_terms": [
+        {
+          "term_target": "Wie bitte?",
+          "pronunciation": ["/viː ˈbɪtə/"],
+          "specific_note": "蛤/請再說一次"
+        },
+        {
+          "term_target": "Noch einmal bitte",
+          "pronunciation": ["/nɔx aɪnˈmaːl ˈbɪtə/"],
+          "specific_note": "再一次"
+        }
+      ],
+      "example": {
+        "sentence": "Wie bitte? Ich habe nicht verstanden.",
+        "translation": "請再說一次，我沒聽懂。"
+      },
+      "usage_note": "Wie bitte? 是最簡單常用的說法。",
+      "image_file": "say_again.png"
+    },
+    {
+      "id": "greet-016",
+      "term_zh": "你可以講慢一點嗎？",
+      "related_terms": [
+        {
+          "term_target": "Bitte langsamer",
+          "pronunciation": ["/ˈbɪtə ˈlaŋzamɐ/"],
+          "specific_note": "請慢一點"
+        }
+      ],
+      "example": {
+        "sentence": "Können Sie bitte langsamer sprechen?",
+        "translation": "可以請您講慢一點嗎？"
+      },
+      "usage_note": "Langsam 意思是「慢」。",
+      "image_file": "speak_slowly.png"
+    },
+    {
+      "id": "greet-017",
+      "term_zh": "原來如此",
+      "related_terms": [
+        {
+          "term_target": "Ach so",
+          "pronunciation": ["/ax zoː/"],
+          "specific_note": "恍然大悟"
+        },
+        {
+          "term_target": "Ich verstehe",
+          "pronunciation": ["/ɪç fɛɐ̯ˈʃteːə/"],
+          "specific_note": "我理解了"
+        }
+      ],
+      "example": {
+        "sentence": "Ach so! Jetzt verstehe ich.",
+        "translation": "啊，原來如此！我現在懂了。"
+      },
+      "usage_note": "Ach so 是德國人非常愛用的口語。",
+      "image_file": "i_see.png"
+    },
+    {
+      "id": "greet-018",
+      "term_zh": "早安",
+      "related_terms": [
+        {
+          "term_target": "Guten Morgen",
+          "pronunciation": ["/ˌɡuːtn̩ ˈmɔʁɡn̩/"],
+          "specific_note": "上午10點前"
+        }
+      ],
+      "example": {
+        "sentence": "Guten Morgen!",
+        "translation": "早安！"
+      },
+      "usage_note": "10點到11點後通常改說 Guten Tag。",
+      "image_file": "good_morning.png"
+    },
+    {
+      "id": "greet-019",
+      "term_zh": "晚上好 (晚安)",
+      "related_terms": [
+        {
+          "term_target": "Guten Abend",
+          "pronunciation": ["/ˌɡuːtn̩ ˈaːbn̩t/"],
+          "specific_note": "晚上見面"
+        },
+        {
+          "term_target": "Gute Nacht",
+          "pronunciation": ["/ˌɡuːtə ˈnaxt/"],
+          "specific_note": "睡前/道別"
+        }
+      ],
+      "example": {
+        "sentence": "Guten Abend, alle zusammen.",
+        "translation": "大家晚上好。"
+      },
+      "usage_note": "Guten Abend 是問候；Gute Nacht 是睡前說的。",
+      "image_file": "good_evening.png"
+    },
+    {
+      "id": "greet-020",
+      "term_zh": "再見",
+      "related_terms": [
+        {
+          "term_target": "Tschüss",
+          "pronunciation": ["/tʃyːs/"],
+          "specific_note": "口語/朋友"
+        },
+        {
+          "term_target": "Auf Wiedersehen",
+          "pronunciation": ["/aʊf ˈviːdɐzeːən/"],
+          "specific_note": "正式"
+        }
+      ],
+      "example": {
+        "sentence": "Tschüss! Bis morgen.",
+        "translation": "掰掰！明天見。"
+      },
+      "usage_note": "Tschüss 是最常用的道別。",
+      "image_file": "goodbye.png"
+    },
+    {
+      "id": "greet-021",
+      "term_zh": "你好嗎",
+      "related_terms": [
+        {
+          "term_target": "Wie geht's?",
+          "pronunciation": ["/viː ɡeːts/"],
+          "specific_note": "非正式"
+        },
+        {
+          "term_target": "Wie geht es Ihnen?",
+          "pronunciation": ["/viː ɡeːt ɛs ˈiːnən/"],
+          "specific_note": "正式(敬語)"
+        }
+      ],
+      "example": {
+        "sentence": "Hallo, wie geht's?",
+        "translation": "嗨，你好嗎？"
+      },
+      "usage_note": "回答常用 Gut, danke (很好，謝謝)。",
+      "image_file": "how_are_you.png"
+    },
+    {
+      "id": "greet-022",
+      "term_zh": "真的嗎",
+      "related_terms": [
+        {
+          "term_target": "Wirklich?",
+          "pronunciation": ["/ˈvɪʁklɪç/"],
+          "specific_note": "疑問"
+        },
+        {
+          "term_target": "Echt?",
+          "pronunciation": ["/ɛçt/"],
+          "specific_note": "口語 (真的假的?)"
+        }
+      ],
+      "example": {
+        "sentence": "Echt? Das wusste ich nicht.",
+        "translation": "真的嗎？我不知道耶。"
+      },
+      "usage_note": "Echt 是非常道地的口語。",
+      "image_file": "really.png"
+    },
+    {
+      "id": "greet-023",
+      "term_zh": "太棒了",
+      "related_terms": [
+        {
+          "term_target": "Das ist toll!",
+          "pronunciation": ["/das ɪst tɔl/"],
+          "specific_note": "讚嘆"
+        },
+        {
+          "term_target": "Super!",
+          "pronunciation": ["/ˈzuːpɐ/"],
+          "specific_note": "超級/很棒"
+        }
+      ],
+      "example": {
+        "sentence": "Wow, das ist super!",
+        "translation": "哇，那太棒了！"
+      },
+      "usage_note": "德國人很常說 Super。",
+      "image_file": "awesome.png"
+    },
+    {
+      "id": "greet-024",
+      "term_zh": "很高興認識你",
+      "related_terms": [
+        {
+          "term_target": "Freut mich",
+          "pronunciation": ["/fʁɔɪt mɪç/"],
+          "specific_note": "簡短/通用"
+        },
+        {
+          "term_target": "Schön, Sie kennenzulernen",
+          "pronunciation": ["/ʃøːn ziː ˈkɛnənˌt͡suːlɛʁnən/"],
+          "specific_note": "正式"
+        }
+      ],
+      "example": {
+        "sentence": "Freut mich, Sie kennenzulernen.",
+        "translation": "很高興認識您。"
+      },
+      "usage_note": "握手時說 Freut mich 即可。",
+      "image_file": "nice_to_meet_you.png"
+    },
+    {
+      "id": "greet-025",
+      "term_zh": "真可惜",
+      "related_terms": [
+        {
+          "term_target": "Schade",
+          "pronunciation": ["/ˈʃaːdə/"],
+          "specific_note": "遺憾"
+        },
+        {
+          "term_target": "Das ist schade",
+          "pronunciation": ["/das ɪst ˈʃaːdə/"],
+          "specific_note": "真可惜"
+        }
+      ],
+      "example": {
+        "sentence": "Oh, das ist aber schade.",
+        "translation": "噢，那真是太可惜了。"
+      },
+      "usage_note": "對壞消息表示遺憾。",
+      "image_file": "too_bad.png"
+    },
       ]
     },
     {

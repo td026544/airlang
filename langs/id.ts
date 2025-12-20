@@ -12,179 +12,511 @@ export const indonesianData: AppData ={
       "id": "greetings",
       "name": "常用句",
       "items": [
+ {
+      "id": "greet-001",
+      "term_zh": "是的",
+      "related_terms": [
         {
-          "id": "greet-001",
-          "term_zh": "你好",
-          "related_terms": [
-            { "term_target": "Halo", "pronunciation": ["/ˈhalo/"], "specific_note": "通用" },
-            { "term_target": "Apa kabar", "pronunciation": ["/ˈapa ˈkabar/"], "specific_note": "你好嗎(問候)" }
-          ],
-          "example": { "sentence": "Halo, apa kabar?", "translation": "你好，你好嗎？" },
-          "usage_note": "回答 Apa kabar 通常說 Baik (好)。",
-          "image_file": "hello.png"
+          "term_target": "Ya",
+          "pronunciation": ["/ja/"],
+          "specific_note": "肯定"
         },
         {
-          "id": "greet-002",
-          "term_zh": "再見",
-          "related_terms": [
-            { "term_target": "Selamat tinggal", "pronunciation": ["/səˈlamat ˈtiŋɡal/"], "specific_note": "對留下來的人說" },
-            { "term_target": "Selamat jalan", "pronunciation": ["/səˈlamat ˈdʒalan/"], "specific_note": "對離開的人說" },
-            { "term_target": "Dah", "pronunciation": ["/dah/"], "specific_note": "口語(Bye)" }
-          ],
-          "example": { "sentence": "Selamat jalan, sampai jumpa.", "translation": "慢走，下次見。" },
-          "usage_note": "區分留步(Tinggal)與慢走(Jalan)。",
-          "image_file": "goodbye.png"
-        },
-        {
-          "id": "greet-003",
-          "term_zh": "謝謝你",
-          "related_terms": [
-            { "term_target": "Terima kasih", "pronunciation": ["/təˈrima ˈkasih/"], "specific_note": "通用" },
-            { "term_target": "Makasih", "pronunciation": ["/maˈkasih/"], "specific_note": "口語" }
-          ],
-          "example": { "sentence": "Terima kasih banyak.", "translation": "非常謝謝你。" },
-          "usage_note": "回應可用 Sama-sama (不客氣)。",
-          "image_file": "thank_you.png"
-        },
-        {
-          "id": "greet-004",
-          "term_zh": "對不起",
-          "related_terms": [
-            { "term_target": "Maaf", "pronunciation": ["/maˈaf/"], "specific_note": "道歉/不好意思" },
-            { "term_target": "Mohon maaf", "pronunciation": ["/ˈmohon maˈaf/"], "specific_note": "正式道歉" }
-          ],
-          "example": { "sentence": "Maaf, saya terlambat.", "translation": "對不起，我遲到了。" },
-          "usage_note": "Maaf 萬用，也可用於引起注意。",
-          "image_file": "sorry.png"
-        },
-        {
-          "id": "greet-005",
-          "term_zh": "早安",
-          "related_terms": [
-            { "term_target": "Selamat pagi", "pronunciation": ["/səˈlamat ˈpaɡi/"], "specific_note": "早安(10點前)" }
-          ],
-          "example": { "sentence": "Selamat pagi, Ibu.", "translation": "早安，媽媽/女士。" },
-          "usage_note": "印尼語問候常用 Selamat + 時間。",
-          "image_file": "good_morning.png"
-        },
-        {
-          "id": "greet-006",
-          "term_zh": "請問...",
-          "related_terms": [
-            { "term_target": "Permisi", "pronunciation": ["/pərˈmisi/"], "specific_note": "引起注意/借過" },
-            { "term_target": "Maaf, numpang tanya", "pronunciation": ["/maˈaf ˈnumpaŋ ˈtaɲa/"], "specific_note": "借問一下" }
-          ],
-          "example": { "sentence": "Permisi, di mana toilet?", "translation": "請問，廁所在哪裡？" },
-          "usage_note": "Permisi 非常常用，用於各種打擾場合。",
-          "image_file": "excuse_me.png"
-        },
-        {
-          "id": "greet-007",
-          "term_zh": "借過",
-          "related_terms": [
-            { "term_target": "Permisi", "pronunciation": ["/pərˈmisi/"], "specific_note": "通用" },
-            { "term_target": "Numpang lewat", "pronunciation": ["/ˈnumpaŋ ˈlewat/"], "specific_note": "借過一下" }
-          ],
-          "example": { "sentence": "Permisi, saya mau lewat.", "translation": "借過，我要過去。" },
-          "usage_note": "請求讓路。",
-          "image_file": "excuse_me_pass.png"
-        },
-        {
-          "id": "greet-008",
-          "term_zh": "我不懂",
-          "related_terms": [
-            { "term_target": "Saya tidak mengerti", "pronunciation": ["/ˈsaja ˈtidak məˈŋərti/"], "specific_note": "不明白" },
-            { "term_target": "Saya tidak paham", "pronunciation": ["/ˈsaja ˈtidak ˈpaham/"], "specific_note": "不理解" }
-          ],
-          "example": { "sentence": "Maaf, saya tidak mengerti Bahasa Indonesia.", "translation": "抱歉，我不懂印尼語。" },
-          "usage_note": "Tidak (不) + Mengerti (懂)。",
-          "image_file": "dont_understand.png"
-        },
-        {
-          "id": "greet-009",
-          "term_zh": "這是什麼？",
-          "related_terms": [
-            { "term_target": "Apa ini?", "pronunciation": ["/ˈapa ˈini/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Apa ini? Apakah ini makanan?", "translation": "這是什麼？這是食物嗎？" },
-          "usage_note": "指著東西問。",
-          "image_file": "what_is_this.png"
-        },
-        {
-          "id": "greet-010",
-          "term_zh": "我想要這個",
-          "related_terms": [
-            { "term_target": "Saya mau ini", "pronunciation": ["/ˈsaja ˈmau ˈini/"], "specific_note": "我要這個" },
-            { "term_target": "Minta ini", "pronunciation": ["/ˈminta ˈini/"], "specific_note": "請給我這個(點餐)" }
-          ],
-          "example": { "sentence": "Saya mau ini satu.", "translation": "我要一個這個。" },
-          "usage_note": "Mau 是「想要」。",
-          "image_file": "i_want_this.png"
-        },
-        {
-          "id": "greet-011",
-          "term_zh": "請給我...",
-          "related_terms": [
-            { "term_target": "Minta...", "pronunciation": ["/ˈminta/"], "specific_note": "請求/點餐" },
-            { "term_target": "Tolong...", "pronunciation": ["/ˈtoloŋ/"], "specific_note": "幫忙/請" }
-          ],
-          "example": { "sentence": "Minta air.", "translation": "請給我水。" },
-          "usage_note": "Minta 用於索取物品，Tolong 用於請求動作。",
-          "image_file": "please_give_me.png"
-        },
-        {
-          "id": "greet-012",
-          "term_zh": "廁所在哪裡？",
-          "related_terms": [
-            { "term_target": "Di mana toilet?", "pronunciation": ["/di ˈmana ˈtoilet/"], "specific_note": "通用" },
-            { "term_target": "Di mana kamar kecil?", "pronunciation": ["/di ˈmana ˈkamar ˈkətʃil/"], "specific_note": "較正式" }
-          ],
-          "example": { "sentence": "Permisi, di mana toilet?", "translation": "請問，廁所在哪裡？" },
-          "usage_note": "WC (Wé-sé) 也很常用。",
-          "image_file": "where_bathroom.png"
-        },
-        {
-          "id": "greet-013",
-          "term_zh": "多少錢？",
-          "related_terms": [
-            { "term_target": "Berapa harganya?", "pronunciation": ["/bəˈrapa harˈɡaɲa/"], "specific_note": "價格多少" },
-            { "term_target": "Berapa?", "pronunciation": ["/bəˈrapa/"], "specific_note": "多少(簡略)" }
-          ],
-          "example": { "sentence": "Ini berapa harganya?", "translation": "這個多少錢？" },
-          "usage_note": "購物必備。",
-          "image_file": "how_much.png"
-        },
-        {
-          "id": "greet-014",
-          "term_zh": "請幫我",
-          "related_terms": [
-            { "term_target": "Tolong saya", "pronunciation": ["/ˈtoloŋ ˈsaja/"], "specific_note": "幫我" },
-            { "term_target": "Bantu saya", "pronunciation": ["/ˈbantu ˈsaja/"], "specific_note": "協助我" }
-          ],
-          "example": { "sentence": "Tolong bantu saya bawa ini.", "translation": "請幫我拿這個。" },
-          "usage_note": "Tolong 是最常用的請求詞。",
-          "image_file": "help_me.png"
-        },
-        {
-          "id": "greet-015",
-          "term_zh": "你可以再說一次嗎？",
-          "related_terms": [
-            { "term_target": "Bisa ulangi lagi?", "pronunciation": ["/ˈbisa uˈlaŋi ˈlaɡi/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Maaf, bisa ulangi lagi?", "translation": "抱歉，能再說一次嗎？" },
-          "usage_note": "Ulangi (重複) + Lagi (再)。",
-          "image_file": "say_again.png"
-        },
-        {
-          "id": "greet-016",
-          "term_zh": "你可以講慢一點嗎？",
-          "related_terms": [
-            { "term_target": "Bisa bicara pelan-pelan?", "pronunciation": ["/ˈbisa biˈtʃara pəˈlan pəˈlan/"], "specific_note": "" }
-          ],
-          "example": { "sentence": "Tolong bicara pelan-pelan.", "translation": "拜託講慢一點。" },
-          "usage_note": "Pelan-pelan 意思是「慢慢地」。",
-          "image_file": "speak_slowly.png"
+          "term_target": "Iya",
+          "pronunciation": ["/iˈja/"],
+          "specific_note": "口語 (對/沒錯)"
         }
+      ],
+      "example": {
+        "sentence": "Ya, betul.",
+        "translation": "是的，沒錯。"
+      },
+      "usage_note": "Iya 比 Ya 聽起來比較柔和、口語。",
+      "image_file": "yes.png"
+    },
+    {
+      "id": "greet-002",
+      "term_zh": "不是",
+      "related_terms": [
+        {
+          "term_target": "Tidak",
+          "pronunciation": ["/ˈtidak/"],
+          "specific_note": "否定(動作/形容)"
+        },
+        {
+          "term_target": "Bukan",
+          "pronunciation": ["/ˈbukan/"],
+          "specific_note": "否定(名詞)"
+        },
+        {
+          "term_target": "Enggak",
+          "pronunciation": ["/əŋˈɡak/"],
+          "specific_note": "口語(不)"
+        }
+      ],
+      "example": {
+        "sentence": "Tidak, terima kasih.",
+        "translation": "不了，謝謝。"
+      },
+      "usage_note": "口語常說 Enggak 或 Gak。",
+      "image_file": "no.png"
+    },
+    {
+      "id": "greet-003",
+      "term_zh": "你好",
+      "related_terms": [
+        {
+          "term_target": "Halo",
+          "pronunciation": ["/ˈhalo/"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "Halo, apa kabar?",
+        "translation": "你好，你好嗎？"
+      },
+      "usage_note": "印尼人打招呼很常用 Halo。",
+      "image_file": "hello.png"
+    },
+    {
+      "id": "greet-004",
+      "term_zh": "謝謝你",
+      "related_terms": [
+        {
+          "term_target": "Terima kasih",
+          "pronunciation": ["/təˈrima ˈkasih/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Makasih",
+          "pronunciation": ["/maˈkasih/"],
+          "specific_note": "口語"
+        }
+      ],
+      "example": {
+        "sentence": "Terima kasih banyak.",
+        "translation": "非常謝謝你。"
+      },
+      "usage_note": "回應可用 Sama-sama (不客氣)。",
+      "image_file": "thank_you.png"
+    },
+    {
+      "id": "greet-005",
+      "term_zh": "對不起",
+      "related_terms": [
+        {
+          "term_target": "Maaf",
+          "pronunciation": ["/maˈaf/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Mohon maaf",
+          "pronunciation": ["/ˈmohon maˈaf/"],
+          "specific_note": "正式/請求原諒"
+        }
+      ],
+      "example": {
+        "sentence": "Maaf, saya terlambat.",
+        "translation": "對不起，我遲到了。"
+      },
+      "usage_note": "Maaf 既是道歉也是不好意思。",
+      "image_file": "sorry.png"
+    },
+    {
+      "id": "greet-006",
+      "term_zh": "請問...",
+      "related_terms": [
+        {
+          "term_target": "Permisi",
+          "pronunciation": ["/pərˈmisi/"],
+          "specific_note": "引起注意"
+        },
+        {
+          "term_target": "Numpang tanya",
+          "pronunciation": ["/ˈnumpaŋ ˈtaɲa/"],
+          "specific_note": "借問一下"
+        }
+      ],
+      "example": {
+        "sentence": "Permisi, stasiun di mana?",
+        "translation": "不好意思請問，車站在哪？"
+      },
+      "usage_note": "發問前用 Permisi 最禮貌。",
+      "image_file": "excuse_me.png"
+    },
+    {
+      "id": "greet-007",
+      "term_zh": "我不懂",
+      "related_terms": [
+        {
+          "term_target": "Saya tidak mengerti",
+          "pronunciation": ["/ˈsaja ˈtidak məˈŋərti/"],
+          "specific_note": "不明白"
+        }
+      ],
+      "example": {
+        "sentence": "Maaf, saya tidak mengerti Bahasa Indonesia.",
+        "translation": "抱歉，我不懂印尼語。"
+      },
+      "usage_note": "Tidak (不) + Mengerti (懂)。",
+      "image_file": "dont_understand.png"
+    },
+    {
+      "id": "greet-008",
+      "term_zh": "廁所在哪裡？",
+      "related_terms": [
+        {
+          "term_target": "Di mana toilet?",
+          "pronunciation": ["/di ˈmana ˈtoilet/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Di mana kamar kecil?",
+          "pronunciation": ["/di ˈmana ˈkamar ˈkətʃil/"],
+          "specific_note": "較正式"
+        }
+      ],
+      "example": {
+        "sentence": "Permisi, di mana toilet?",
+        "translation": "請問，廁所在哪裡？"
+      },
+      "usage_note": "WC (發音 Wé-sé) 也很常用。",
+      "image_file": "where_bathroom.png"
+    },
+    {
+      "id": "greet-009",
+      "term_zh": "借過",
+      "related_terms": [
+        {
+          "term_target": "Permisi",
+          "pronunciation": ["/pərˈmisi/"],
+          "specific_note": "通用"
+        },
+        {
+          "term_target": "Numpang lewat",
+          "pronunciation": ["/ˈnumpaŋ ˈlewat/"],
+          "specific_note": "借過一下"
+        }
+      ],
+      "example": {
+        "sentence": "Permisi, saya mau lewat.",
+        "translation": "借過，我要過去。"
+      },
+      "usage_note": "通過人群時說 Permisi。",
+      "image_file": "excuse_me_pass.png"
+    },
+    {
+      "id": "greet-010",
+      "term_zh": "多少錢？",
+      "related_terms": [
+        {
+          "term_target": "Berapa harganya?",
+          "pronunciation": ["/bəˈrapa harˈɡaɲa/"],
+          "specific_note": "詢價"
+        },
+        {
+          "term_target": "Berapa ini?",
+          "pronunciation": ["/bəˈrapa ˈini/"],
+          "specific_note": "這個多少?"
+        }
+      ],
+      "example": {
+        "sentence": "Berapa harganya?",
+        "translation": "多少錢？"
+      },
+      "usage_note": "Berapa 意思是「多少」。",
+      "image_file": "how_much.png"
+    },
+    {
+      "id": "greet-011",
+      "term_zh": "我想要這個",
+      "related_terms": [
+        {
+          "term_target": "Saya mau ini",
+          "pronunciation": ["/ˈsaja ˈmau ˈini/"],
+          "specific_note": "我要這個"
+        }
+      ],
+      "example": {
+        "sentence": "Saya mau ini satu.",
+        "translation": "我要一個這個。"
+      },
+      "usage_note": "Mau 是「想要」。",
+      "image_file": "i_want_this.png"
+    },
+    {
+      "id": "greet-012",
+      "term_zh": "請給我...",
+      "related_terms": [
+        {
+          "term_target": "Minta...",
+          "pronunciation": ["/ˈminta/"],
+          "specific_note": "索取/點餐"
+        }
+      ],
+      "example": {
+        "sentence": "Minta air.",
+        "translation": "請給我水 (或我要點水)。"
+      },
+      "usage_note": "餐廳點餐常用 Minta。",
+      "image_file": "please_give_me.png"
+    },
+    {
+      "id": "greet-013",
+      "term_zh": "這是什麼？",
+      "related_terms": [
+        {
+          "term_target": "Apa ini?",
+          "pronunciation": ["/ˈapa ˈini/"],
+          "specific_note": "疑問"
+        }
+      ],
+      "example": {
+        "sentence": "Apa ini? Enak?",
+        "translation": "這是什麼？好吃嗎？"
+      },
+      "usage_note": "指著東西問。",
+      "image_file": "what_is_this.png"
+    },
+    {
+      "id": "greet-014",
+      "term_zh": "請幫我",
+      "related_terms": [
+        {
+          "term_target": "Tolong saya",
+          "pronunciation": ["/ˈtoloŋ ˈsaja/"],
+          "specific_note": "請求協助"
+        },
+        {
+          "term_target": "Bantu saya",
+          "pronunciation": ["/ˈbantu ˈsaja/"],
+          "specific_note": "幫我"
+        }
+      ],
+      "example": {
+        "sentence": "Tolong bantu saya.",
+        "translation": "請幫幫我。"
+      },
+      "usage_note": "Tolong 是請求幫忙的關鍵字。",
+      "image_file": "help_me.png"
+    },
+    {
+      "id": "greet-015",
+      "term_zh": "你可以再說一次嗎？",
+      "related_terms": [
+        {
+          "term_target": "Bisa ulangi?",
+          "pronunciation": ["/ˈbisa uˈlaŋi/"],
+          "specific_note": "能重複嗎"
+        }
+      ],
+      "example": {
+        "sentence": "Maaf, bisa ulangi lagi?",
+        "translation": "抱歉，能再說一次嗎？"
+      },
+      "usage_note": "Ulangi 是「重複」。",
+      "image_file": "say_again.png"
+    },
+    {
+      "id": "greet-016",
+      "term_zh": "你可以講慢一點嗎？",
+      "related_terms": [
+        {
+          "term_target": "Bicara pelan-pelan",
+          "pronunciation": ["/biˈtʃara pəˈlan pəˈlan/"],
+          "specific_note": "講慢一點"
+        }
+      ],
+      "example": {
+        "sentence": "Tolong bicara pelan-pelan.",
+        "translation": "拜託講慢一點。"
+      },
+      "usage_note": "Pelan-pelan 意思是「慢慢地」。",
+      "image_file": "speak_slowly.png"
+    },
+    {
+      "id": "greet-017",
+      "term_zh": "原來如此",
+      "related_terms": [
+        {
+          "term_target": "Oh, begitu",
+          "pronunciation": ["/oh bəˈɡitu/"],
+          "specific_note": "喔，是這樣"
+        },
+        {
+          "term_target": "Saya mengerti",
+          "pronunciation": ["/ˈsaja məˈŋərti/"],
+          "specific_note": "我懂了"
+        }
+      ],
+      "example": {
+        "sentence": "Oh, begitu! Saya baru tahu.",
+        "translation": "噢，原來如此！我剛知道。"
+      },
+      "usage_note": "Begitu 意思是「那樣」。",
+      "image_file": "i_see.png"
+    },
+    {
+      "id": "greet-018",
+      "term_zh": "早安",
+      "related_terms": [
+        {
+          "term_target": "Selamat pagi",
+          "pronunciation": ["/səˈlamat ˈpaɡi/"],
+          "specific_note": "早上 10-11點前"
+        }
+      ],
+      "example": {
+        "sentence": "Selamat pagi semuanya.",
+        "translation": "大家早安。"
+      },
+      "usage_note": "11點到下午3點左右說 Selamat siang (午安)。",
+      "image_file": "good_morning.png"
+    },
+    {
+      "id": "greet-019",
+      "term_zh": "晚上好 (晚安)",
+      "related_terms": [
+        {
+          "term_target": "Selamat malam",
+          "pronunciation": ["/səˈlamat ˈmalam/"],
+          "specific_note": "天黑後/睡前"
+        }
+      ],
+      "example": {
+        "sentence": "Selamat malam, sampai besok.",
+        "translation": "晚安，明天見。"
+      },
+      "usage_note": "Selamat malam 通用於晚上問候與道別。",
+      "image_file": "good_evening.png"
+    },
+    {
+      "id": "greet-020",
+      "term_zh": "再見",
+      "related_terms": [
+        {
+          "term_target": "Selamat tinggal",
+          "pronunciation": ["/səˈlamat ˈtiŋɡal/"],
+          "specific_note": "對留下來的人說"
+        },
+        {
+          "term_target": "Selamat jalan",
+          "pronunciation": ["/səˈlamat ˈdʒalan/"],
+          "specific_note": "對離開的人說"
+        },
+        {
+          "term_target": "Sampai jumpa",
+          "pronunciation": ["/ˈsampai ˈdʒumpa/"],
+          "specific_note": "下次見(通用)"
+        }
+      ],
+      "example": {
+        "sentence": "Sampai jumpa lagi.",
+        "translation": "下次見囉。"
+      },
+      "usage_note": "Sampai jumpa 是最保險通用的說法。",
+      "image_file": "goodbye.png"
+    },
+    {
+      "id": "greet-021",
+      "term_zh": "你好嗎",
+      "related_terms": [
+        {
+          "term_target": "Apa kabar?",
+          "pronunciation": ["/ˈapa ˈkabar/"],
+          "specific_note": "問候"
+        }
+      ],
+      "example": {
+        "sentence": "Halo, apa kabar?",
+        "translation": "嗨，你好嗎？"
+      },
+      "usage_note": "回答常用 Baik (好)。",
+      "image_file": "how_are_you.png"
+    },
+    {
+      "id": "greet-022",
+      "term_zh": "真的嗎",
+      "related_terms": [
+        {
+          "term_target": "Benarkah?",
+          "pronunciation": ["/bəˈnarkah/"],
+          "specific_note": "正式"
+        },
+        {
+          "term_target": "Masa?",
+          "pronunciation": ["/ˈmasa/"],
+          "specific_note": "口語 (是喔?)"
+        }
+      ],
+      "example": {
+        "sentence": "Masa? Saya tidak percaya.",
+        "translation": "真的假的？我不信。"
+      },
+      "usage_note": "Masa 是非常口語的驚訝語氣。",
+      "image_file": "really.png"
+    },
+    {
+      "id": "greet-023",
+      "term_zh": "太棒了",
+      "related_terms": [
+        {
+          "term_target": "Hebat",
+          "pronunciation": ["/ˈhebat/"],
+          "specific_note": "厲害"
+        },
+        {
+          "term_target": "Keren",
+          "pronunciation": ["/ˈkərɛn/"],
+          "specific_note": "酷/帥/棒"
+        }
+      ],
+      "example": {
+        "sentence": "Wah, hebat sekali!",
+        "translation": "哇，太厲害了！"
+      },
+      "usage_note": "Keren 常用來形容人或東西很酷。",
+      "image_file": "awesome.png"
+    },
+    {
+      "id": "greet-024",
+      "term_zh": "很高興認識你",
+      "related_terms": [
+        {
+          "term_target": "Salam kenal",
+          "pronunciation": ["/ˈsalam ˈkənal/"],
+          "specific_note": "初次見面"
+        },
+        {
+          "term_target": "Senang bertemu denganmu",
+          "pronunciation": ["/ˈsənaŋ bərˈtəmu dəˈŋanmu/"],
+          "specific_note": "很高興見到你"
+        }
+      ],
+      "example": {
+        "sentence": "Halo, salam kenal.",
+        "translation": "你好，很高興認識你。"
+      },
+      "usage_note": "Salam kenal 簡短又道地。",
+      "image_file": "nice_to_meet_you.png"
+    },
+    {
+      "id": "greet-025",
+      "term_zh": "真可惜",
+      "related_terms": [
+        {
+          "term_target": "Sayang sekali",
+          "pronunciation": ["/ˈsajaŋ səˈkali/"],
+          "specific_note": "真遺憾"
+        }
+      ],
+      "example": {
+        "sentence": "Yah, sayang sekali.",
+        "translation": "哎呀，真可惜。"
+      },
+      "usage_note": "Sayang 也可以指「親愛的」，看語境。",
+      "image_file": "too_bad.png"
+    }
       ]
     },
     {

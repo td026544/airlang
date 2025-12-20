@@ -12,176 +12,511 @@ export const koreanData: AppData ={
       "id": "greetings",
       "name": "常用句",
       "items": [
+  {
+      "id": "greet-001",
+      "term_zh": "是的",
+      "related_terms": [
         {
-          "id": "greet-001",
-          "term_zh": "你好",
-          "related_terms": [
-            { "term_target": "안녕하세요", "pronunciation": ["Annyeonghaseyo"], "specific_note": "通用/敬語" },
-            { "term_target": "안녕", "pronunciation": ["Annyeong"], "specific_note": "平輩/朋友" }
-          ],
-          "example": { "sentence": "안녕하세요, 잘 지내세요?", "translation": "你好，你好嗎？" },
-          "usage_note": "最通用的問候，任何時間都能用。",
-          "image_file": "hello.png"
+          "term_target": "네",
+          "pronunciation": ["Ne"],
+          "specific_note": "肯定/禮貌"
         },
         {
-          "id": "greet-002",
-          "term_zh": "再見",
-          "related_terms": [
-            { "term_target": "안녕히 가세요", "pronunciation": ["Annyeonghi gaseyo"], "specific_note": "對離開的人說(慢走)" },
-            { "term_target": "안녕히 계세요", "pronunciation": ["Annyeonghi gyeseyo"], "specific_note": "對留下的人說(留步)" }
-          ],
-          "example": { "sentence": "안녕히 가세요, 내일 봐요.", "translation": "慢走，明天見。" },
-          "usage_note": "韓文再見分「請慢走」和「請留步」。",
-          "image_file": "goodbye.png"
-        },
-        {
-          "id": "greet-003",
-          "term_zh": "謝謝你",
-          "related_terms": [
-            { "term_target": "감사합니다", "pronunciation": ["Gamsahamnida"], "specific_note": "正式/通用" },
-            { "term_target": "고마워요", "pronunciation": ["Gomawoyo"], "specific_note": "較親近" }
-          ],
-          "example": { "sentence": "도와주셔서 감사합니다.", "translation": "謝謝你的幫忙。" },
-          "usage_note": "Gamsahamnida 是最安全有禮貌的說法。",
-          "image_file": "thank_you.png"
-        },
-        {
-          "id": "greet-004",
-          "term_zh": "對不起",
-          "related_terms": [
-            { "term_target": "죄송합니다", "pronunciation": ["Joesonghamnida"], "specific_note": "正式/道歉" },
-            { "term_target": "미안해요", "pronunciation": ["Mianhaeyo"], "specific_note": "較親近" }
-          ],
-          "example": { "sentence": "늦어서 죄송합니다.", "translation": "抱歉我遲到了。" },
-          "usage_note": "做錯事時的道歉。",
-          "image_file": "sorry.png"
-        },
-        {
-          "id": "greet-005",
-          "term_zh": "早安",
-          "related_terms": [
-            { "term_target": "좋은 아침입니다", "pronunciation": ["Joeun achimimnida"], "specific_note": "正式" },
-            { "term_target": "좋은 아침", "pronunciation": ["Joeun achim"], "specific_note": "平輩" }
-          ],
-          "example": { "sentence": "좋은 아침!", "translation": "早安！" },
-          "usage_note": "通常直接說 Annyeonghaseyo 也可以。",
-          "image_file": "good_morning.png"
-        },
-        {
-          "id": "greet-006",
-          "term_zh": "請問...",
-          "related_terms": [
-            { "term_target": "실례합니다", "pronunciation": ["Sillyehamnida"], "specific_note": "失禮了" },
-            { "term_target": "저기요", "pronunciation": ["Jeogiyo"], "specific_note": "那個...(叫店員/路人)" }
-          ],
-          "example": { "sentence": "저기요, 화장실이 어디예요?", "translation": "不好意思，廁所在哪？" },
-          "usage_note": "Sillyehamnida 是正式的「不好意思/請問」。",
-          "image_file": "excuse_me.png"
-        },
-        {
-          "id": "greet-007",
-          "term_zh": "借過",
-          "related_terms": [
-            { "term_target": "잠시만요", "pronunciation": ["Jamsimanyo"], "specific_note": "等一下/借過" },
-            { "term_target": "지나갈게요", "pronunciation": ["Jinagalgeyo"], "specific_note": "我要過去了" }
-          ],
-          "example": { "sentence": "잠시만요, 내릴게요.", "translation": "借過，我要下車。" },
-          "usage_note": "Jamsimanyo 也可用於「請稍等」。",
-          "image_file": "excuse_me_pass.png"
-        },
-        {
-          "id": "greet-008",
-          "term_zh": "我不懂",
-          "related_terms": [
-            { "term_target": "이해가 안 돼요", "pronunciation": ["Ihaega an dwaeyo"], "specific_note": "不理解" },
-            { "term_target": "모르겠어요", "pronunciation": ["Moreugesseoyo"], "specific_note": "不知道" }
-          ],
-          "example": { "sentence": "죄송해요, 이해가 안 돼요.", "translation": "抱歉，我不懂。" },
-          "usage_note": "聽不懂可以說「Mollayo (不知道)」。",
-          "image_file": "dont_understand.png"
-        },
-        {
-          "id": "greet-009",
-          "term_zh": "這是什麼？",
-          "related_terms": [
-            { "term_target": "이게 뭐예요?", "pronunciation": ["Ige mwoyeyo?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "이게 뭐예요? 맛있어요?", "translation": "這是什麼？好吃嗎？" },
-          "usage_note": "指著東西問。",
-          "image_file": "what_is_this.png"
-        },
-        {
-          "id": "greet-010",
-          "term_zh": "我想要這個",
-          "related_terms": [
-            { "term_target": "이거 주세요", "pronunciation": ["Igeo juseyo"], "specific_note": "請給這個(購買)" },
-            { "term_target": "이거 원해요", "pronunciation": ["Igeo wonhaeyo"], "specific_note": "我想要這個(願望)" }
-          ],
-          "example": { "sentence": "이거 주세요.", "translation": "請給我這個 (購買時)。" },
-          "usage_note": "購買時用 Juseyo 最自然。",
-          "image_file": "i_want_this.png"
-        },
-        {
-          "id": "greet-011",
-          "term_zh": "請給我...",
-          "related_terms": [
-            { "term_target": "... 주세요", "pronunciation": ["... juseyo"], "specific_note": "" }
-          ],
-          "example": { "sentence": "물 좀 주세요.", "translation": "請給我一點水。" },
-          "usage_note": "名詞 + juseyo。",
-          "image_file": "please_give_me.png"
-        },
-        {
-          "id": "greet-012",
-          "term_zh": "廁所在哪裡？",
-          "related_terms": [
-            { "term_target": "화장실이 어디예요?", "pronunciation": ["Hwajangisiri eodiyeyo?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "저기요, 화장실이 어디예요?", "translation": "不好意思，請問廁所在哪？" },
-          "usage_note": "旅遊必備。",
-          "image_file": "where_bathroom.png"
-        },
-        {
-          "id": "greet-013",
-          "term_zh": "多少錢？",
-          "related_terms": [
-            { "term_target": "얼마예요?", "pronunciation": ["Eolmayeyo?"], "specific_note": "" }
-          ],
-          "example": { "sentence": "이거 얼마예요?", "translation": "這個多少錢？" },
-          "usage_note": "購物用語。",
-          "image_file": "how_much.png"
-        },
-        {
-          "id": "greet-014",
-          "term_zh": "請幫我",
-          "related_terms": [
-            { "term_target": "도와주세요", "pronunciation": ["Dowajuseyo"], "specific_note": "請求幫助" },
-            { "term_target": "살려주세요", "pronunciation": ["Sallieojuseyo"], "specific_note": "救命" }
-          ],
-          "example": { "sentence": "저 좀 도와주세요.", "translation": "請幫幫我。" },
-          "usage_note": "一般協助用 Dowajuseyo。",
-          "image_file": "help_me.png"
-        },
-        {
-          "id": "greet-015",
-          "term_zh": "你可以再說一次嗎？",
-          "related_terms": [
-            { "term_target": "다시 말해 주세요", "pronunciation": ["Dasi malhae juseyo"], "specific_note": "" }
-          ],
-          "example": { "sentence": "네? 다시 말해 주세요.", "translation": "蛤？請再說一次。" },
-          "usage_note": "Dasi (再次) + Malhae (說)。",
-          "image_file": "say_again.png"
-        },
-        {
-          "id": "greet-016",
-          "term_zh": "你可以講慢一點嗎？",
-          "related_terms": [
-            { "term_target": "천천히 말해 주세요", "pronunciation": ["Cheoncheonhi malhae juseyo"], "specific_note": "" }
-          ],
-          "example": { "sentence": "너무 빨라요, 천천히 말해 주세요.", "translation": "太快了，請講慢一點。" },
-          "usage_note": "Cheoncheonhi 是「慢慢地」。",
-          "image_file": "speak_slowly.png"
+          "term_target": "예",
+          "pronunciation": ["Ye"],
+          "specific_note": "更正式"
         }
+      ],
+      "example": {
+        "sentence": "네, 맞아요.",
+        "translation": "是的，沒錯。"
+      },
+      "usage_note": "Ne 也可以表示「我在聽」、「對」。",
+      "image_file": "yes.png"
+    },
+    {
+      "id": "greet-002",
+      "term_zh": "不是",
+      "related_terms": [
+        {
+          "term_target": "아니요",
+          "pronunciation": ["Aniyo"],
+          "specific_note": "否定"
+        },
+        {
+          "term_target": "아니",
+          "pronunciation": ["Ani"],
+          "specific_note": "平輩 (不)"
+        }
+      ],
+      "example": {
+        "sentence": "아니요, 괜찮아요.",
+        "translation": "不，沒關係。"
+      },
+      "usage_note": "禮貌否定請一定要加 yo。",
+      "image_file": "no.png"
+    },
+    {
+      "id": "greet-003",
+      "term_zh": "你好",
+      "related_terms": [
+        {
+          "term_target": "안녕하세요",
+          "pronunciation": ["Annyeonghaseyo"],
+          "specific_note": "通用/敬語"
+        },
+        {
+          "term_target": "안녕",
+          "pronunciation": ["Annyeong"],
+          "specific_note": "平輩/朋友"
+        }
+      ],
+      "example": {
+        "sentence": "안녕하세요, 잘 지내세요?",
+        "translation": "你好，你好嗎？"
+      },
+      "usage_note": "最通用的問候，早中晚皆可。",
+      "image_file": "hello.png"
+    },
+    {
+      "id": "greet-004",
+      "term_zh": "謝謝你",
+      "related_terms": [
+        {
+          "term_target": "감사합니다",
+          "pronunciation": ["Gamsahamnida"],
+          "specific_note": "正式/通用"
+        },
+        {
+          "term_target": "고마워요",
+          "pronunciation": ["Gomawoyo"],
+          "specific_note": "較親近"
+        }
+      ],
+      "example": {
+        "sentence": "도와주셔서 감사합니다.",
+        "translation": "謝謝你的幫忙。"
+      },
+      "usage_note": "Gamsahamnida 是最安全有禮貌的說法。",
+      "image_file": "thank_you.png"
+    },
+    {
+      "id": "greet-005",
+      "term_zh": "對不起",
+      "related_terms": [
+        {
+          "term_target": "죄송합니다",
+          "pronunciation": ["Joesonghamnida"],
+          "specific_note": "正式/道歉"
+        },
+        {
+          "term_target": "미안해요",
+          "pronunciation": ["Mianhaeyo"],
+          "specific_note": "較親近"
+        }
+      ],
+      "example": {
+        "sentence": "늦어서 죄송합니다.",
+        "translation": "抱歉我遲到了。"
+      },
+      "usage_note": "做錯事時使用，Joesonghamnida 最有誠意。",
+      "image_file": "sorry.png"
+    },
+    {
+      "id": "greet-006",
+      "term_zh": "請問...",
+      "related_terms": [
+        {
+          "term_target": "저기요",
+          "pronunciation": ["Jeogiyo"],
+          "specific_note": "引起注意 (那邊那位)"
+        },
+        {
+          "term_target": "실례합니다",
+          "pronunciation": ["Sillyehamnida"],
+          "specific_note": "失禮了 (正式)"
+        }
+      ],
+      "example": {
+        "sentence": "저기요, 주문할게요.",
+        "translation": "不好意思，我要點餐。"
+      },
+      "usage_note": "餐廳叫服務生或路邊問人都用 Jeogiyo。",
+      "image_file": "excuse_me.png"
+    },
+    {
+      "id": "greet-007",
+      "term_zh": "我不懂",
+      "related_terms": [
+        {
+          "term_target": "모르겠어요",
+          "pronunciation": ["Moreugesseoyo"],
+          "specific_note": "不知道/不懂"
+        },
+        {
+          "term_target": "이해가 안 돼요",
+          "pronunciation": ["Ihaega an dwaeyo"],
+          "specific_note": "無法理解"
+        }
+      ],
+      "example": {
+        "sentence": "죄송해요, 무슨 말인지 모르겠어요.",
+        "translation": "抱歉，我不知道你在說什麼。"
+      },
+      "usage_note": "聽不懂直接說 Moreugesseoyo。",
+      "image_file": "dont_understand.png"
+    },
+    {
+      "id": "greet-008",
+      "term_zh": "廁所在哪裡？",
+      "related_terms": [
+        {
+          "term_target": "화장실이 어디예요?",
+          "pronunciation": ["Hwajangsiri eodiyeyo?"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "저기요, 화장실이 어디예요?",
+        "translation": "不好意思，請問廁所在哪？"
+      },
+      "usage_note": "旅遊必備。",
+      "image_file": "where_bathroom.png"
+    },
+    {
+      "id": "greet-009",
+      "term_zh": "借過",
+      "related_terms": [
+        {
+          "term_target": "잠시만요",
+          "pronunciation": ["Jamsimanyo"],
+          "specific_note": "借過/等一下"
+        },
+        {
+          "term_target": "지나갈게요",
+          "pronunciation": ["Jinagalgeyo"],
+          "specific_note": "我要過去了"
+        }
+      ],
+      "example": {
+        "sentence": "잠시만요, 내릴게요.",
+        "translation": "借過，我要下車。"
+      },
+      "usage_note": "Jamsimanyo 原意是「請稍等」，引申為借過。",
+      "image_file": "excuse_me_pass.png"
+    },
+    {
+      "id": "greet-010",
+      "term_zh": "多少錢？",
+      "related_terms": [
+        {
+          "term_target": "얼마예요?",
+          "pronunciation": ["Eolmayeyo?"],
+          "specific_note": "詢價"
+        }
+      ],
+      "example": {
+        "sentence": "이거 얼마예요?",
+        "translation": "這個多少錢？"
+      },
+      "usage_note": "購物用語。",
+      "image_file": "how_much.png"
+    },
+    {
+      "id": "greet-011",
+      "term_zh": "我想要這個",
+      "related_terms": [
+        {
+          "term_target": "이거 주세요",
+          "pronunciation": ["Igeo juseyo"],
+          "specific_note": "請給我這個 (購買)"
+        }
+      ],
+      "example": {
+        "sentence": "이거 주세요.",
+        "translation": "我要這個 (請給我這個)。"
+      },
+      "usage_note": "Juseyo (請給我) 比 Wonhaeyo (想要) 更常用於購買。",
+      "image_file": "i_want_this.png"
+    },
+    {
+      "id": "greet-012",
+      "term_zh": "請給我...",
+      "related_terms": [
+        {
+          "term_target": "... 주세요",
+          "pronunciation": ["... juseyo"],
+          "specific_note": "索取/點餐"
+        }
+      ],
+      "example": {
+        "sentence": "물 좀 주세요.",
+        "translation": "請給我一點水。"
+      },
+      "usage_note": "名詞 + Juseyo。",
+      "image_file": "please_give_me.png"
+    },
+    {
+      "id": "greet-013",
+      "term_zh": "這是什麼？",
+      "related_terms": [
+        {
+          "term_target": "이게 뭐예요?",
+          "pronunciation": ["Ige mwoyeyo?"],
+          "specific_note": "疑問"
+        }
+      ],
+      "example": {
+        "sentence": "이게 뭐예요? 매워요?",
+        "translation": "這是什麼？會辣嗎？"
+      },
+      "usage_note": "指著東西問。",
+      "image_file": "what_is_this.png"
+    },
+    {
+      "id": "greet-014",
+      "term_zh": "請幫我",
+      "related_terms": [
+        {
+          "term_target": "도와주세요",
+          "pronunciation": ["Dowajuseyo"],
+          "specific_note": "請求幫助"
+        }
+      ],
+      "example": {
+        "sentence": "저 좀 도와주세요.",
+        "translation": "請幫幫我。"
+      },
+      "usage_note": "遇到困難時使用。",
+      "image_file": "help_me.png"
+    },
+    {
+      "id": "greet-015",
+      "term_zh": "你可以再說一次嗎？",
+      "related_terms": [
+        {
+          "term_target": "다시 말해 주세요",
+          "pronunciation": ["Dasi malhae juseyo"],
+          "specific_note": "請再說一次"
+        }
+      ],
+      "example": {
+        "sentence": "네? 다시 말해 주세요.",
+        "translation": "蛤？請再說一次。"
+      },
+      "usage_note": "Dasi (再次) + Malhae (說)。",
+      "image_file": "say_again.png"
+    },
+    {
+      "id": "greet-016",
+      "term_zh": "你可以講慢一點嗎？",
+      "related_terms": [
+        {
+          "term_target": "천천히 말해 주세요",
+          "pronunciation": ["Cheoncheonhi malhae juseyo"],
+          "specific_note": "請慢點說"
+        }
+      ],
+      "example": {
+        "sentence": "너무 빨라요, 천천히 말해 주세요.",
+        "translation": "太快了，請講慢一點。"
+      },
+      "usage_note": "Cheoncheonhi 是「慢慢地」。",
+      "image_file": "speak_slowly.png"
+    },
+    {
+      "id": "greet-017",
+      "term_zh": "原來如此",
+      "related_terms": [
+        {
+          "term_target": "그렇군요",
+          "pronunciation": ["Geureokunyo"],
+          "specific_note": "原來是這樣啊"
+        },
+        {
+          "term_target": "알겠어요",
+          "pronunciation": ["Algesseoyo"],
+          "specific_note": "我知道了"
+        }
+      ],
+      "example": {
+        "sentence": "아, 그렇군요! 이제 알겠어요.",
+        "translation": "啊，原來如此！我現在懂了。"
+      },
+      "usage_note": "表示理解或附和。",
+      "image_file": "i_see.png"
+    },
+    {
+      "id": "greet-018",
+      "term_zh": "早安",
+      "related_terms": [
+        {
+          "term_target": "좋은 아침",
+          "pronunciation": ["Joeun achim"],
+          "specific_note": "早安 (直譯)"
+        },
+        {
+          "term_target": "안녕하세요",
+          "pronunciation": ["Annyeonghaseyo"],
+          "specific_note": "通用"
+        }
+      ],
+      "example": {
+        "sentence": "좋은 아침입니다.",
+        "translation": "早安。"
+      },
+      "usage_note": "其實韓國人早上通常也說 Annyeonghaseyo。",
+      "image_file": "good_morning.png"
+    },
+    {
+      "id": "greet-019",
+      "term_zh": "晚上好 (晚安)",
+      "related_terms": [
+        {
+          "term_target": "안녕하세요",
+          "pronunciation": ["Annyeonghaseyo"],
+          "specific_note": "晚上見面 (通用)"
+        },
+        {
+          "term_target": "안녕히 주무세요",
+          "pronunciation": ["Annyeonghi jumuseyo"],
+          "specific_note": "睡前 (敬語)"
+        },
+        {
+          "term_target": "잘 자요",
+          "pronunciation": ["Jal jayo"],
+          "specific_note": "睡前 (平輩)"
+        }
+      ],
+      "example": {
+        "sentence": "안녕히 주무세요.",
+        "translation": "晚安 (請安息/睡覺)。"
+      },
+      "usage_note": "晚上見面一樣說 Annyeonghaseyo；睡前才用其他。",
+      "image_file": "good_evening.png"
+    },
+    {
+      "id": "greet-020",
+      "term_zh": "再見",
+      "related_terms": [
+        {
+          "term_target": "안녕히 가세요",
+          "pronunciation": ["Annyeonghi gaseyo"],
+          "specific_note": "對離開的人說 (慢走)"
+        },
+        {
+          "term_target": "안녕히 계세요",
+          "pronunciation": ["Annyeonghi gyeseyo"],
+          "specific_note": "對留下的人說 (留步)"
+        }
+      ],
+      "example": {
+        "sentence": "안녕히 가세요, 또 만나요.",
+        "translation": "慢走，再見。"
+      },
+      "usage_note": "如果兩個人都離開，互說 Annyeonghi gaseyo。",
+      "image_file": "goodbye.png"
+    },
+    {
+      "id": "greet-021",
+      "term_zh": "你好嗎",
+      "related_terms": [
+        {
+          "term_target": "잘 지냈어요?",
+          "pronunciation": ["Jal jinaesseoyo?"],
+          "specific_note": "過得好嗎"
+        }
+      ],
+      "example": {
+        "sentence": "오랜만이에요, 잘 지냈어요?",
+        "translation": "好久不見，過得好嗎？"
+      },
+      "usage_note": "用於許久不見的寒暄。",
+      "image_file": "how_are_you.png"
+    },
+    {
+      "id": "greet-022",
+      "term_zh": "真的嗎",
+      "related_terms": [
+        {
+          "term_target": "진짜요?",
+          "pronunciation": ["Jinjja-yo?"],
+          "specific_note": "真的嗎(禮貌)"
+        },
+        {
+          "term_target": "정말요?",
+          "pronunciation": ["Jeongmal-yo?"],
+          "specific_note": "真的嗎(正式)"
+        }
+      ],
+      "example": {
+        "sentence": "진짜요? 대박!",
+        "translation": "真的嗎？太猛了！"
+      },
+      "usage_note": "Jinjja 是最常用的口語。",
+      "image_file": "really.png"
+    },
+    {
+      "id": "greet-023",
+      "term_zh": "太棒了",
+      "related_terms": [
+        {
+          "term_target": "대박",
+          "pronunciation": ["Daebak"],
+          "specific_note": "大發/厲害"
+        },
+        {
+          "term_target": "짱",
+          "pronunciation": ["Jjang"],
+          "specific_note": "讚/第一"
+        }
+      ],
+      "example": {
+        "sentence": "와, 대박이다!",
+        "translation": "哇，太厲害了(大發)！"
+      },
+      "usage_note": "Daebak 是韓劇迷最熟悉的讚嘆詞。",
+      "image_file": "awesome.png"
+    },
+    {
+      "id": "greet-024",
+      "term_zh": "很高興認識你",
+      "related_terms": [
+        {
+          "term_target": "반갑습니다",
+          "pronunciation": ["Bangapseumnida"],
+          "specific_note": "正式"
+        },
+        {
+          "term_target": "반가워요",
+          "pronunciation": ["Bangawoyo"],
+          "specific_note": "較親近"
+        }
+      ],
+      "example": {
+        "sentence": "만나서 반갑습니다.",
+        "translation": "見到你很高興。"
+      },
+      "usage_note": "初次見面的標準用語。",
+      "image_file": "nice_to_meet_you.png"
+    },
+    {
+      "id": "greet-025",
+      "term_zh": "真可惜",
+      "related_terms": [
+        {
+          "term_target": "아쉽네요",
+          "pronunciation": ["Asipneyo"],
+          "specific_note": "可惜/捨不得"
+        }
+      ],
+      "example": {
+        "sentence": "벌써 가요? 아쉽네요.",
+        "translation": "已經要走了？真可惜/真捨不得。"
+      },
+      "usage_note": "對錯過機會或離別表示遺憾。",
+      "image_file": "too_bad.png"
+    }
       ]
     },
     {
