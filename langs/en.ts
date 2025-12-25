@@ -230,29 +230,6 @@ export const englishData: AppData = {
           image_file: "where_bathroom.png",
         },
         {
-          id: "greet-009",
-          term_zh: "借過",
-          related_terms: [
-            {
-              term_target: "Excuse me",
-              pronunciation: ["/ɪkˈskjus mi/"],
-              specific_note: "通過時",
-            },
-          ],
-          examples: [
-            {
-              sentence: "Excuse me, coming through.",
-              translation: "借過，我要過去。",
-            },
-            {
-              sentence: "Excuse me, please let me pass.",
-              translation: "不好意思，請讓我過一下。",
-            },
-          ],
-          usage_note: "請求讓路。",
-          image_file: "excuse_me_pass.png",
-        },
-        {
           id: "greet-010",
           term_zh: "多少錢？",
           related_terms: [
@@ -692,13 +669,8 @@ export const englishData: AppData = {
       items: [
         {
           id: "pro-01",
-          term_zh: "那個 / 它",
+          term_zh: "它",
           related_terms: [
-            {
-              term_target: "that",
-              pronunciation: ["/ðæt/"],
-              specific_note: "指示詞",
-            },
             {
               term_target: "it",
               pronunciation: ["/ɪt/"],
@@ -706,20 +678,13 @@ export const englishData: AppData = {
             },
           ],
           examples: [
-            {
-              sentence: "What is that over there?",
-              translation: "那邊那個是什麼？",
-            },
-            {
-              sentence: "That is a great idea.",
-              translation: "那真是個好主意。",
-            },
+       
             {
               sentence: "It is raining outside.",
               translation: "外面正在下雨。",
             },
           ],
-          usage_note: "It 指無生命或動物，That 指遠處的事物。",
+          usage_note: "It 指無生命或動物",
           image_file: "that.png",
         },
         {
@@ -916,7 +881,7 @@ export const englishData: AppData = {
         },
         {
           id: "pro-10",
-          term_zh: "那個（指示詞）",
+          term_zh: "那個",
           related_terms: [
             {
               term_target: "that",
@@ -939,7 +904,7 @@ export const englishData: AppData = {
             },
           ],
           usage_note: "遠處單數。",
-          image_file: "that_obj.png",
+          image_file: "that.png",
         },
         {
           id: "pro-11",
@@ -2136,33 +2101,6 @@ export const englishData: AppData = {
           ],
           usage_note: "開始。",
           image_file: "start.png",
-        },
-        {
-          id: "v-40",
-          term_zh: "開始",
-          related_terms: [
-            {
-              term_target: "begin",
-              pronunciation: ["/bɪˈgɪn/"],
-              specific_note: "",
-            },
-          ],
-          examples: [
-            {
-              sentence: "Begin class.",
-              translation: "開始上課。",
-            },
-            {
-              sentence: "Let the game begin.",
-              translation: "讓遊戲開始吧。",
-            },
-            {
-              sentence: "Where should I begin?",
-              translation: "我該從哪裡開始？",
-            },
-          ],
-          usage_note: "同Start。",
-          image_file: "begin.png",
         },
         {
           id: "v-41",
@@ -5878,27 +5816,27 @@ export const englishData: AppData = {
           term_zh: "廁所",
           related_terms: [
             {
-              term_target: "toilet",
+              term_target: "restroom",
               pronunciation: ["/ˈtɔɪlɪt/"],
               specific_note: "",
             },
           ],
           examples: [
             {
-              sentence: "Where is the toilet?",
+              sentence: "Where is the restroom?",
               translation: "廁所在哪？",
             },
             {
-              sentence: "Go to the toilet.",
+              sentence: "Go to the restroom.",
               translation: "去上廁所。",
             },
             {
-              sentence: "The toilet is clean.",
+              sentence: "The restroom is clean.",
               translation: "廁所很乾淨。",
             },
           ],
           usage_note: "洗手間。",
-          image_file: "toilet.png",
+          image_file: "restroom.png",
         },
         {
           id: "n-81",
@@ -5926,6 +5864,33 @@ export const englishData: AppData = {
           ],
           usage_note: "氣候。",
           image_file: "weather.png",
+        },
+        {
+          id: "n-82",
+          term_zh: "訊息",
+          related_terms: [
+            {
+              term_target: "message",
+              pronunciation: ["/ˈmɛsɪdʒ/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Send a message.",
+              translation: "傳訊息。",
+            },
+            {
+              sentence: "Leave a message.",
+              translation: "留訊息。",
+            },
+            {
+              sentence: "I got a message.",
+              translation: "我收到一則訊息。",
+            },
+          ],
+          usage_note: "信息、留言。",
+          image_file: "message.png",
         },
       ],
     },
@@ -6523,7 +6488,7 @@ export const englishData: AppData = {
             },
           ],
           usage_note: "問狀況。",
-          image_file: "how_ara_you.png",
+          image_file: "how.png",
         },
         {
           id: "q-03",
@@ -6709,6 +6674,60 @@ export const englishData: AppData = {
           ],
           usage_note: "時間長度。",
           image_file: "how_long.png",
+        },
+        {
+          id: "q-10",
+          term_zh: "幾點",
+          related_terms: [
+            {
+              term_target: "what time",
+              pronunciation: ["/hwɑt taɪm/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "What time is it?",
+              translation: "現在幾點？",
+            },
+            {
+              sentence: "What time do we meet?",
+              translation: "我們幾點見面？",
+            },
+            {
+              sentence: "What time does it start?",
+              translation: "幾點開始？",
+            },
+          ],
+          usage_note: "問具體時間。",
+          image_file: "what_time.png",
+        },
+        {
+          id: "q-11",
+          term_zh: "幾歲",
+          related_terms: [
+            {
+              term_target: "how old",
+              pronunciation: ["/haʊ oʊld/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "How old are you?",
+              translation: "你幾歲？",
+            },
+            {
+              sentence: "How old is he?",
+              translation: "他幾歲？",
+            },
+            {
+              sentence: "How old is your cat?",
+              translation: "你的貓幾歲了？",
+            },
+          ],
+          usage_note: "問年齡。",
+          image_file: "how_old.png",
         },
       ],
     },
@@ -8732,7 +8751,7 @@ export const englishData: AppData = {
             },
           ],
           usage_note: "否定動作。",
-          image_file: "i_dont_understand.png",
+          image_file: "i_dont.png",
         },
         {
           id: "g-22",

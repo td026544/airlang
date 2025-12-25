@@ -769,37 +769,32 @@ export const vietnameseData: AppData = {
       id: "pronouns",
       name: "主詞（代名詞）",
       items: [
-        {
+{
           id: "pro-01",
-          term_zh: "那個/它",
+          term_zh: "它",
           related_terms: [
-            {
-              term_target: "cái đó",
-              pronunciation: ["/kaːj˧˥ ɗɔ˧˥/"],
-              specific_note: "那個(物品)",
-            },
             {
               term_target: "nó",
               pronunciation: ["/nɔ˧˥/"],
-              specific_note: "它/他(卑稱)",
+              specific_note: "代名詞 (動物/事物/小孩)",
             },
           ],
           examples: [
             {
-              sentence: "Cái đó là gì?",
-              translation: "那是什麼？",
-            },
-            {
-              sentence: "Tôi thích cái đó.",
-              translation: "我喜歡那個。",
+              sentence: "Nó ở đâu?",
+              translation: "它在哪裡？",
             },
             {
               sentence: "Nó rất dễ thương.",
-              translation: "它(動物/小孩)很可愛。",
+              translation: "它很可愛。",
+            },
+            {
+              sentence: "Tôi không thích nó.",
+              translation: "我不喜歡它。",
             },
           ],
-          usage_note: "Cái đó 指物，Nó 指動物、小孩或關係很熟的平輩。",
-          image_file: "that.png",
+          usage_note: "專指動物或物品。口語中也可用於指小孩或很熟的平輩(他/她)。",
+          image_file: "it.png",
         },
         {
           id: "pro-02",
@@ -1059,7 +1054,7 @@ export const vietnameseData: AppData = {
         },
         {
           id: "pro-10",
-          term_zh: "那個（指示詞）",
+          term_zh: "那個",
           related_terms: [
             {
               term_target: "cái đó",
@@ -1087,7 +1082,7 @@ export const vietnameseData: AppData = {
             },
           ],
           usage_note: "Cái đó 指對方處，Cái kia 指更遠的地方。",
-          image_file: "that_obj.png",
+          image_file: "that.png",
         },
         {
           id: "pro-11",
@@ -6311,6 +6306,205 @@ export const vietnameseData: AppData = {
           ],
           usage_note: "車站月台。",
           image_file: "platform.png",
+        },
+        {
+          id: "n-76",
+          term_zh: "音樂",
+          related_terms: [
+            {
+              term_target: "âm nhạc",
+              pronunciation: ["/əm˧ ɲaːk̚˧˨ˀ/"],
+              specific_note: "口語常簡稱 nhạc",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nghe nhạc.",
+              translation: "聽音樂。",
+            },
+            {
+              sentence: "Nhạc hay.",
+              translation: "好聽的音樂。",
+            },
+            {
+              sentence: "Thích âm nhạc.",
+              translation: "喜歡音樂。",
+            },
+          ],
+          usage_note: "聽覺藝術。",
+          image_file: "music.png",
+        },
+        {
+          id: "n-77",
+          term_zh: "雨",
+          related_terms: [
+            {
+              term_target: "mưa",
+              pronunciation: ["/mɨə˧/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Trời đang mưa.",
+              translation: "正在下雨。",
+            },
+            {
+              sentence: "Mưa to.",
+              translation: "大雨。",
+            },
+            {
+              sentence: "Tạnh mưa.",
+              translation: "雨停了。",
+            },
+          ],
+          usage_note: "自然現象。",
+          image_file: "rain.png",
+        },
+        {
+          id: "n-78",
+          term_zh: "照片",
+          related_terms: [
+            {
+              term_target: "ảnh",
+              pronunciation: ["/ajŋ̟˧˩/"],
+              specific_note: "北越常用",
+            },
+            {
+              term_target: "hình",
+              pronunciation: ["/hiɲ˨˩/"],
+              specific_note: "南越常用",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chụp ảnh.",
+              translation: "拍照。",
+            },
+            {
+              sentence: "Ảnh đẹp.",
+              translation: "好看的照片。",
+            },
+            {
+              sentence: "Xem ảnh.",
+              translation: "看照片。",
+            },
+          ],
+          usage_note: "影像。",
+          image_file: "picture.png",
+        },
+        {
+          id: "n-79",
+          term_zh: "書",
+          related_terms: [
+            {
+              term_target: "sách",
+              pronunciation: ["/sajc̚˧˥/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đọc sách.",
+              translation: "看書。",
+            },
+            {
+              sentence: "Mua sách.",
+              translation: "買書。",
+            },
+            {
+              sentence: "Sách hay.",
+              translation: "好書。",
+            },
+          ],
+          usage_note: "書籍。",
+          image_file: "book.png",
+        },
+        {
+          id: "n-80",
+          term_zh: "廁所",
+          related_terms: [
+            {
+              term_target: "nhà vệ sinh",
+              pronunciation: ["/ɲaː˨˩ ve˧˨ˀ siɲ˧/"],
+              specific_note: "較禮貌",
+            },
+            {
+              term_target: "toilet",
+              pronunciation: ["/tɔj˧ lɛt̚˧˥/"],
+              specific_note: "外來語",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nhà vệ sinh ở đâu?",
+              translation: "廁所在哪裡？",
+            },
+            {
+              sentence: " đi vệ sinh.",
+              translation: "去上廁所。",
+            },
+            {
+              sentence: "Nhà vệ sinh sạch.",
+              translation: "乾淨的廁所。",
+            },
+          ],
+          usage_note: "洗手間。",
+          image_file: "restroom.png",
+        },
+        {
+          id: "n-81",
+          term_zh: "天氣",
+          related_terms: [
+            {
+              term_target: "thời tiết",
+              pronunciation: ["/tʰəːj˨˩ tiət̚˧˥/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Thời tiết đẹp.",
+              translation: "好天氣。",
+            },
+            {
+              sentence: "Thời tiết xấu.",
+              translation: "壞天氣。",
+            },
+            {
+              sentence: "Thời tiết thế nào?",
+              translation: "天氣如何？",
+            },
+          ],
+          usage_note: "氣候。",
+          image_file: "weather.png",
+        },
+        {
+          id: "n-82",
+          term_zh: "訊息",
+          related_terms: [
+            {
+              term_target: "tin nhắn",
+              pronunciation: ["/tin˧ ɲan˧˥/"],
+              specific_note: "",
+            },
+          ],
+          examples: [
+            {
+              sentence: "Gửi tin nhắn.",
+              translation: "傳訊息。",
+            },
+            {
+              sentence: "Nhận tin nhắn.",
+              translation: "收到訊息。",
+            },
+            {
+              sentence: "Đọc tin nhắn.",
+              translation: "讀訊息。",
+            },
+          ],
+          usage_note: "手機簡訊或留言。",
+          image_file: "message.png",
         },
       ],
     },

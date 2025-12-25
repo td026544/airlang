@@ -210,7 +210,7 @@ export const japaneseData: AppData = {
         },
       ],
       usage_note: "聽不懂對方說話時直接使用。",
-      image_file: "i_dont_understand.png",
+      image_file: "dont_understand.png",
     },
     {
       id: "greet-008",
@@ -246,33 +246,6 @@ export const japaneseData: AppData = {
       ],
       usage_note: "女性建議使用 Otearai (御手洗) 較優雅。",
       image_file: "where_bathroom.png",
-    },
-    {
-      id: "greet-009",
-      term_zh: "借過",
-      related_terms: [
-        {
-          term_target: "すみません",
-          pronunciation: ["すみません", "Sumimasen"],
-          specific_note: "通用",
-        },
-      ],
-      examples: [
-        {
-          sentence: "すみません、降ります。",
-          translation: "借過，我要下車。",
-        },
-        {
-          sentence: "すみません、通ります。",
-          translation: "不好意思，借過一下 (我要通過)。",
-        },
-        {
-          sentence: "ちょっとすみません。",
-          translation: "不好意思 (稍微讓路)。",
-        },
-      ],
-      usage_note: "擁擠時說 Sumimasen 人群會自然分開。",
-      image_file: "excuse_me_pass.png",
     },
     {
       id: "greet-010",
@@ -738,36 +711,41 @@ export const japaneseData: AppData = {
   id: "pronouns",
   name: "主詞（代名詞）",
   items: [
-    {
+{
       id: "pro-01",
       term_zh: "那個",
       related_terms: [
         {
           term_target: "それ",
           pronunciation: ["それ", "Sore"],
-          specific_note: "對方附近",
+          specific_note: "代名詞 (對方附近)",
         },
         {
           term_target: "あれ",
           pronunciation: ["あれ", "Are"],
-          specific_note: "遠處",
+          specific_note: "代名詞 (遠處)",
+        },
+        {
+          term_target: "その",
+          pronunciation: ["その", "Sono"],
+          specific_note: "連體詞 (接名詞)",
         },
       ],
       examples: [
         {
           sentence: "それは何ですか？",
-          translation: "那個(在你旁邊的)是什麼？",
+          translation: "那個(你手邊的)是什麼？",
+        },
+        {
+          sentence: "その服はかわいいです。",
+          translation: "那件衣服(你穿的)很可愛。",
         },
         {
           sentence: "あれを見てください。",
-          translation: "請看(遠處)那個。",
-        },
-        {
-          sentence: "それは違います。",
-          translation: "那個不對。",
+          translation: "請看那邊(遠處)那個。",
         },
       ],
-      usage_note: "Sore 指對方處，Are 指遠處。單獨使用，不接名詞。",
+      usage_note: "Sore/Are 單獨使用；Sono 後面必接名詞。Sore/Sono 指對方處，Are 指遠處。",
       image_file: "that.png",
     },
     {
@@ -995,38 +973,6 @@ export const japaneseData: AppData = {
       ],
       usage_note: "單獨指涉用 Kore，後面接名詞用 Kono (例: Kono pen)。",
       image_file: "this.png",
-    },
-    {
-      id: "pro-10",
-      term_zh: "那個（指示詞）",
-      related_terms: [
-        {
-          term_target: "それ",
-          pronunciation: ["それ", "Sore"],
-          specific_note: "代名詞",
-        },
-        {
-          term_target: "その",
-          pronunciation: ["その", "Sono"],
-          specific_note: "連體詞(+名詞)",
-        },
-      ],
-      examples: [
-        {
-          sentence: "それは何ですか？",
-          translation: "那個(你那邊的)是什麼？ (Sore)",
-        },
-        {
-          sentence: "それはいいですね。",
-          translation: "那個聽起來不錯呢。 (Sore)",
-        },
-        {
-          sentence: "その服はかわいいです。",
-          translation: "那件衣服很可愛。 (Sono + 名詞)",
-        },
-      ],
-      usage_note: "單獨指涉用 Sore，後面接名詞用 Sono。",
-      image_file: "that_obj.png",
     },
     {
       id: "pro-11",
@@ -2303,32 +2249,6 @@ export const japaneseData: AppData = {
       image_file: "start.png",
     },
     {
-      id: "v-40",
-      term_zh: "開始",
-      related_terms: [
-        {
-          term_target: "始めます",
-          pronunciation: ["はじめます", "Hajimemasu"],
-        },
-      ],
-      examples: [
-        {
-          sentence: "会議を始めます。",
-          translation: "開始會議 (人為主持)。",
-        },
-        {
-          sentence: "ダイエットを始めます。",
-          translation: "開始減肥。",
-        },
-        {
-          sentence: "ゲームを始めます。",
-          translation: "開始遊戲。",
-        },
-      ],
-      usage_note: "Begin/Start。",
-      image_file: "begin.png",
-    },
-    {
       id: "v-41",
       term_zh: "結束",
       related_terms: [
@@ -2677,6 +2597,32 @@ export const japaneseData: AppData = {
       ],
       usage_note: "歸返。",
       image_file: "go_back.png",
+    },
+    {
+      id: "v-54",
+      term_zh: "了解",
+      related_terms: [
+        {
+          term_target: "分かります",
+          pronunciation: ["わかります", "Wakarimasu"],
+        },
+      ],
+      examples: [
+        {
+          sentence: "はい、分かりました。",
+          translation: "好的，了解了。",
+        },
+        {
+          sentence: "日本語が分かりますか？",
+          translation: "你懂日文嗎？",
+        },
+        {
+          sentence: "よく分かりません。",
+          translation: "不太清楚。",
+        },
+      ],
+      usage_note: "明白、懂。",
+      image_file: "understand.png",
     },
   ],
 },
@@ -6132,6 +6078,195 @@ export const japaneseData: AppData = {
       usage_note: "車站月台。",
       image_file: "platform.png",
     },
+    {
+      id: "n-76",
+      term_zh: "音樂",
+      related_terms: [
+        {
+          term_target: "音楽",
+          pronunciation: ["おんがく", "Ongaku"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "音楽を聴きます。",
+          translation: "聽音樂。",
+        },
+        {
+          sentence: "好きな音楽。",
+          translation: "喜歡的音樂。",
+        },
+        {
+          sentence: "いい音楽ですね。",
+          translation: "很好的音樂呢。",
+        },
+      ],
+      usage_note: "聽覺藝術。",
+      image_file: "music.png",
+    },
+    {
+      id: "n-77",
+      term_zh: "雨",
+      related_terms: [
+        {
+          term_target: "雨",
+          pronunciation: ["あめ", "Ame"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "雨が降っています。",
+          translation: "正在下雨。",
+        },
+        {
+          sentence: "雨が止みました。",
+          translation: "雨停了。",
+        },
+        {
+          sentence: "激しい雨。",
+          translation: "大雨。",
+        },
+      ],
+      usage_note: "自然現象。",
+      image_file: "rain.png",
+    },
+    {
+      id: "n-78",
+      term_zh: "照片",
+      related_terms: [
+        {
+          term_target: "写真",
+          pronunciation: ["しゃしん", "Shashin"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "写真を撮ります。",
+          translation: "拍照片。",
+        },
+        {
+          sentence: "写真を見せて。",
+          translation: "讓我看照片。",
+        },
+        {
+          sentence: "一緒に写真を撮ろう。",
+          translation: "一起拍照吧。",
+        },
+      ],
+      usage_note: "影像。",
+      image_file: "picture.png",
+    },
+    {
+      id: "n-79",
+      term_zh: "書",
+      related_terms: [
+        {
+          term_target: "本",
+          pronunciation: ["ほん", "Hon"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "本を読みます。",
+          translation: "看書。",
+        },
+        {
+          sentence: "本を買いました。",
+          translation: "買了書。",
+        },
+        {
+          sentence: "面白い本。",
+          translation: "有趣的書。",
+        },
+      ],
+      usage_note: "書籍。",
+      image_file: "book.png",
+    },
+    {
+      id: "n-80",
+      term_zh: "廁所",
+      related_terms: [
+        {
+          term_target: "トイレ",
+          pronunciation: ["といれ", "Toire"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "トイレはどこですか？",
+          translation: "廁所在哪裡？",
+        },
+        {
+          sentence: "トイレに行きます。",
+          translation: "去上廁所。",
+        },
+        {
+          sentence: "きれいなトイレ。",
+          translation: "乾淨的廁所。",
+        },
+      ],
+      usage_note: "洗手間 (片假名常用語)。",
+      image_file: "restroom.png",
+    },
+    {
+      id: "n-81",
+      term_zh: "天氣",
+      related_terms: [
+        {
+          term_target: "天気",
+          pronunciation: ["てんき", "Tenki"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "いい天気ですね。",
+          translation: "好天氣呢。",
+        },
+        {
+          sentence: "明日の天気。",
+          translation: "明天的天氣。",
+        },
+        {
+          sentence: "天気予報。",
+          translation: "天氣預報。",
+        },
+      ],
+      usage_note: "氣候狀況。",
+      image_file: "weather.png",
+    },
+    {
+      id: "n-82",
+      term_zh: "訊息",
+      related_terms: [
+        {
+          term_target: "メッセージ",
+          pronunciation: ["めっせーじ", "Messeeji"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "メッセージを送る。",
+          translation: "傳訊息。",
+        },
+        {
+          sentence: "メッセージが来ました。",
+          translation: "訊息來了。",
+        },
+        {
+          sentence: "メッセージを残す。",
+          translation: "留訊息。",
+        },
+      ],
+      usage_note: "信息、留言。",
+      image_file: "message.png",
+    },
   ],
 },
 {
@@ -6956,6 +7091,65 @@ export const japaneseData: AppData = {
       ],
       usage_note: "詢問時間長度、距離或程度。",
       image_file: "how_long.png",
+    },
+    {
+      id: "q-10",
+      term_zh: "幾點",
+      related_terms: [
+        {
+          term_target: "何時",
+          pronunciation: ["なんじ", "Nanji"],
+          specific_note: "",
+        },
+      ],
+      examples: [
+        {
+          sentence: "今、何時ですか？",
+          translation: "現在幾點？",
+        },
+        {
+          sentence: "何時に会いますか？",
+          translation: "幾點見面？",
+        },
+        {
+          sentence: "何時に始まりますか？",
+          translation: "幾點開始？",
+        },
+      ],
+      usage_note: "問具體時刻。",
+      image_file: "what_time.png",
+    },
+    {
+      id: "q-11",
+      term_zh: "幾歲",
+      related_terms: [
+        {
+          term_target: "何歳",
+          pronunciation: ["なんさい", "Nansai"],
+          specific_note: "一般",
+        },
+        {
+          term_target: "おいくつ",
+          pronunciation: ["おいくつ", "Oikutsu"],
+          specific_note: "禮貌",
+        },
+      ],
+      examples: [
+        {
+          sentence: "何歳ですか？",
+          translation: "你幾歲？",
+        },
+        {
+          sentence: "彼は何歳ですか？",
+          translation: "他幾歲？",
+        },
+        {
+          sentence: "失礼ですが、おいくつですか？",
+          translation: "冒昧請問，您貴庚？(禮貌)",
+        },
+      ],
+      usage_note: "詢問年齡。對長輩或上級建議用「おいくつ」。",
+      image_file: "how_old.png",
     },
   ],
 },
@@ -9152,7 +9346,7 @@ export const japaneseData: AppData = {
         },
       ],
       usage_note: "動詞否定。",
-      image_file: "i_dont.png",
+      image_file: "dont_understand.png",
     },
     {
       id: "g-22",
