@@ -5,7 +5,14 @@ import LearningCard from './components/LearningCard';
 import { Languages, BookOpen, ChevronDown, Check } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [langCode, setLangCode] = useState<string>('en');
+  // --- 修改 1：初始化時讀取 LocalStorage ---
+  const [langCode, setLangCode] = useState<string>(() => {
+    // 檢查瀏覽器是否有儲存的語言設定
+    const savedLang = localStorage.getItem('app_language');
+    // 如果有存檔且該語言存在於資料集中，就使用它；否則預設 'en'
+    return (savedLang && datasets[savedLang]) ? savedLang : 'en';
+  });
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   
@@ -111,6 +118,9 @@ const App: React.FC = () => {
 
   const handleLanguageSelect = (code: string) => {
     setLangCode(code);
+    // --- 修改 2：切換語言時存入 LocalStorage ---
+    localStorage.setItem('app_language', code);
+    
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -188,7 +198,6 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content */}
-{/* Main Content */}
 <main className="max-w-3xl mx-auto px-4 pb-20 pt-6">
   <div className="flex flex-col gap-12">
     {appData.categories.map((category) => (
