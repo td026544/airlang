@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { LearningItem } from '../types'; 
 import SpeechButton from './SpeechButton';
 import { Info, CornerDownRight, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -37,24 +36,34 @@ interface LearningCardProps {
 // 定義彈窗的狀態介面
 interface PopoverState {
   visible: boolean;
-  text: string;       // 顯示用的文字 (例如：私)
-  speechText: string; // 發音用的文字 (例如：わたし) -> 新增這個欄位
+  text: string;       // 顯示用的文字
+  speechText: string; // 發音用的文字
   meaning: string;
   targetRect: DOMRect | null; 
 }
 
 // --- Helper: 取得正確發音字串 ---
-// 將 segments 裡的 furigana 拼起來，如果沒有 furigana 就用 text
 const getReadingFromSegments = (segments?: Segment[], fallbackText?: string): string => {
   if (!segments || segments.length === 0) return fallbackText || '';
-  return segments.map(s => s.furigana || s.text).join('');
+  
+  // 加入 (s.tail || '') 以確保單字間的空格被保留
+  return segments.map(s => (s.furigana || s.text) + (s.tail || '')).join('');
+};
+
+// --- Helper: 安全產生 WebP 圖片路徑 ---
+// LearningCard.tsx 複習
+const getWebpImagePath = (filename?: string) => {
+  if (!filename) return '';
+  const nameWithoutExt = filename.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+
+  // 這裡會自動抓到 vite.config.ts 裡的 base 設定
+  return `${import.meta.env.BASE_URL}images/${nameWithoutExt}.webp`;
 };
 
 // --- SegmentedText Component ---
 const SegmentedText: React.FC<{
   segments?: Segment[];
   fallbackText: string;
-  // 修改 callback，多接收一個 speechText
   onWordClick: (e: React.MouseEvent<HTMLSpanElement>, text: string, speechText: string, meaning: string) => void;
   textSizeClass?: string;
 }> = ({ segments, fallbackText, onWordClick, textSizeClass = "text-base" }) => {
@@ -66,7 +75,6 @@ const SegmentedText: React.FC<{
     <span className={`${textSizeClass} leading-loose break-words`}>
       {segments.map((seg, index) => {
         const isClickable = !!seg.meaning && seg.text !== fallbackText;
-        // 決定該片段的發音：如果有 furigana 就用 furigana，否則用 text
         const segmentSpeech = seg.furigana || seg.text;
         
         return (
@@ -75,7 +83,6 @@ const SegmentedText: React.FC<{
               onClick={(e) => {
                 if (isClickable) {
                   e.stopPropagation();
-                  // 傳遞：顯示文字(text), 發音文字(segmentSpeech), 解釋(meaning)
                   onWordClick(e, seg.text, segmentSpeech, seg.meaning!);
                 }
               }}
@@ -147,7 +154,6 @@ const WordPopover: React.FC<{
             <span className="font-bold text-lg text-emerald-400 leading-none">
               {state.text}
             </span>
-            {/* 這裡使用 speechText (例如：わたし) 讓發音正確 */}
             <SpeechButton 
               text={state.speechText} 
               lang={language} 
@@ -173,14 +179,13 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
   const [popover, setPopover] = useState<PopoverState>({
     visible: false,
     text: '',
-    speechText: '', // 初始化
+    speechText: '', 
     meaning: '',
     targetRect: null
   });
 
-  const isJapanese = language === 'ja-JP';
+  const isJapanese = language === 'ja-JP' || language === 'jp' || language === 'ja';
 
-  // 接收三個參數：顯示文字、發音文字、解釋
   const handleWordClick = (e: React.MouseEvent<HTMLSpanElement>, text: string, speechText: string, meaning: string) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setPopover({
@@ -256,10 +261,8 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
               <div className="flex flex-col gap-y-3 mb-3 items-start">
                 {item.related_terms.map((termItem, index) => {
                   const mainPron = termItem.pronunciation[0];
-                  const subPron = termItem.pronunciation[1];
-
-                  // --- 關鍵修正：組合出完整的發音字串 ---
-                  // 這樣「私」就會變成「わたし」，發音就正確了
+                  
+                  // 組合完整的發音字串
                   const fullReading = getReadingFromSegments(termItem.segments, termItem.term_target);
 
                   return (
@@ -273,7 +276,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
                             textSizeClass="text-xl"
                           />
                         </div>
-                        {/* 這裡傳入 fullReading (わたし) 而不是 term_target (私) */}
                         <SpeechButton
                           text={fullReading}
                           lang={language}
@@ -281,15 +283,9 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
                         />
                       </div>
 
-                      {(mainPron || subPron) && (
+                      {mainPron && (
                         <div className="flex flex-col mt-0 ml-0.5 mb-1">
-                          {isJapanese ? (
-                            <>
-                              {mainPron && <span className="text-sm text-gray-500  font-medium font-mono">{mainPron}</span>}
-                            </>
-                          ) : (
-                            mainPron && <span className="text-sm text-gray-500 font-medium font-mono">{mainPron}</span>
-                          )}
+                          <span className="text-sm text-gray-500 font-medium font-mono">{mainPron}</span>
                         </div>
                       )}
 
@@ -318,8 +314,6 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
                                 textSizeClass="text-sm"
                              />
                           </div>
-                          {/* 例句通常比較長，瀏覽器比較容易判斷上下文，所以直接傳 sentence 通常沒問題。
-                              但如果想更保險，也可以用 getReadingFromSegments 處理 */}
                           <SpeechButton
                             text={ex.sentence}
                             lang={language}
@@ -351,7 +345,8 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
             <div className="aspect-square rounded-xl overflow-hidden bg-gray-50 shadow-inner border border-gray-100 relative">
               {item.image_file && !imgError ? (
                 <img
-                  src={`/airlang/images/${item.image_file.replace('.png', '')}.webp`}
+                  // 修正：使用更安全的 helper function 來產生路徑
+                  src={getWebpImagePath(item.image_file)}
                   alt={item.term_zh}
                   className="w-full h-full object-cover"
                   loading="lazy"
