@@ -5,31 +5,74 @@ import LearningCard from './components/LearningCard';
 import { Languages, BookOpen, ChevronDown, Check } from 'lucide-react';
 
 const App: React.FC = () => {
-  // --- 修改 1：初始化時讀取 LocalStorage ---
+  // 1. 初始化語言 (維持不變)
   const [langCode, setLangCode] = useState<string>(() => {
-    // 檢查瀏覽器是否有儲存的語言設定
     const savedLang = localStorage.getItem('app_language');
-    // 如果有存檔且該語言存在於資料集中，就使用它；否則預設 'en'
     return (savedLang && datasets[savedLang]) ? savedLang : 'en';
   });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   
-  // 新增：目前所在的分類 ID
   const [activeCategoryId, setActiveCategoryId] = useState<string>('');
-  // 新增：用來鎖定滾動監聽的旗標 (當用戶點擊按鈕時，暫時不觸發 scrollspy)
   const isManualScrolling = useRef(false);
 
   const appData = datasets[langCode];
   const currentLangOption = LANGUAGE_OPTIONS.find(opt => opt.code === langCode) || LANGUAGE_OPTIONS[0];
 
-  // 初始化 activeCategoryId
+  // 初始化 activeCategoryId (僅用於顯示目前在哪個分類，不影響滾動恢復)
   useEffect(() => {
     if (appData.categories.length > 0) {
       setActiveCategoryId(appData.categories[0].id);
     }
   }, [appData]);
+
+  // --- 修改重點 1：精確恢復上次的滾動像素位置 ---
+  useEffect(() => {
+    // A. 告訴瀏覽器：不要自動恢復滾動位置，由我們手動接管 (解決手機版亂跳的關鍵)
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // B. 讀取上次的位置
+    const savedScrollPos = localStorage.getItem('scrollY_pos');
+    
+    if (savedScrollPos) {
+      const pos = parseInt(savedScrollPos, 10);
+      
+      // C. 延遲滾動：給手機一點時間渲染 DOM
+      setTimeout(() => {
+        window.scrollTo({
+          top: pos,
+          behavior: 'auto' // 初始化時用 auto 瞬間到位，不要用 smooth 慢慢滑
+        });
+      }, 300); // 300ms 通常對手機來說足夠了
+    }
+  }, []); // 空依賴陣列：只在網頁剛打開(重新整理)時執行一次
+
+
+  // --- 修改重點 2：監聽滾動並儲存位置 (加入防抖動優化) ---
+  useEffect(() => {
+    let timeoutId: number;
+
+    const handleScrollSave = () => {
+      // 清除上一次的計時器，避免頻繁寫入
+      clearTimeout(timeoutId);
+      
+      // 當使用者「停止滾動」100ms 後，才寫入 localStorage
+      // 這對手機效能非常重要
+      timeoutId = window.setTimeout(() => {
+        localStorage.setItem('scrollY_pos', window.scrollY.toString());
+      }, 100);
+    };
+
+    window.addEventListener('scroll', handleScrollSave);
+    return () => {
+      window.removeEventListener('scroll', handleScrollSave);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -41,22 +84,14 @@ const App: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-// --- Scrollspy 核心邏輯 (修復版) ---
+  // --- Scrollspy 邏輯 (維持不變，僅用於更新 Nav 狀態) ---
   useEffect(() => {
     const handleScroll = () => {
-      // 1. 如果正在手動點擊滾動，暫停自動偵測，避免跳動
       if (isManualScrolling.current) return;
 
-      // 2. 設定觸發線 (Trigger Line)
-      // 這代表「標題滑過螢幕上方多少距離」後，才算切換到下一章
-      // 建議設為 Header 高度 (約 140px) 再加一點緩衝
       const headerOffset = 180; 
-      
-      // 預設選中第一個
       let currentSectionId = appData.categories[0].id;
 
-      // 3. 觸底檢測 (由下往上修復)
-      // 如果已經滑到底部，強制選中最後一個分類 (解決最後一項內容太短無法觸發的問題)
       const scrolledToBottom = 
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
 
@@ -66,15 +101,10 @@ const App: React.FC = () => {
         return;
       }
 
-      // 4. 一般滾動偵測 (Top-Down Overwrite 策略)
-      // 原理：遍歷所有分類，只要該分類的頂部已經「滑過」觸發線 (rect.top < headerOffset)，
-      // 就暫時認定它是當前分類。因為迴圈是照順序跑的，最後一個符合條件的就會是正確答案。
       for (const cat of appData.categories) {
         const element = document.getElementById(cat.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          
-          // 如果元素的頂部位置小於觸發線，表示已經進入或經過該區塊
           if (rect.top < headerOffset) {
             currentSectionId = cat.id;
           }
@@ -84,23 +114,20 @@ const App: React.FC = () => {
       setActiveCategoryId(currentSectionId);
     };
 
-    // 加入 passive: true 優化效能
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // 立即執行一次，確保重新整理後狀態正確
-    handleScroll(); 
-
+    // 注意：這裡移除了初始執行，避免覆蓋掉我們的 scrollTo 邏輯
+    
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [appData]); // 當資料改變時重新綁定
+  }, [appData]);
 
 
   const handleScrollToCategory = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // 設定鎖定，防止滾動過程中 Nav 亂跳
       isManualScrolling.current = true;
-      setActiveCategoryId(id); // 立即更新 UI
+      setActiveCategoryId(id);
 
-      const headerOffset = 160; // 確保標題不會被 Header 擋住
+      const headerOffset = 160;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -109,7 +136,10 @@ const App: React.FC = () => {
         behavior: 'smooth'
       });
 
-      // 滾動結束後解除鎖定 (約 500ms - 1000ms 後)
+      // 點擊分類按鈕時，也算是一種滾動，需要更新儲存的位置
+      // 但因為 smooth scroll 需要時間，我們不需要這裡存，
+      // 上面的 scroll listener 會自動幫我們存最後停止的位置。
+
       setTimeout(() => {
         isManualScrolling.current = false;
       }, 800); 
@@ -118,8 +148,11 @@ const App: React.FC = () => {
 
   const handleLanguageSelect = (code: string) => {
     setLangCode(code);
-    // --- 修改 2：切換語言時存入 LocalStorage ---
     localStorage.setItem('app_language', code);
+    
+    // --- 切換語言時的重要邏輯 ---
+    // 切換語言通常內容長度不同，應該回到最上面，而不是停在幾千像素的位置
+    localStorage.setItem('scrollY_pos', '0'); 
     
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -127,9 +160,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] font-sans text-[#1F2937]">
-      {/* Header 
-          注意：這裡調整了 sticky 的結構，確保 CategoryNav 也是 sticky 的一部分
-      */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 pt-4 sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-3xl mx-auto px-4 flex items-center justify-between mb-2">
           <div className="flex items-center gap-3">
@@ -147,7 +177,6 @@ const App: React.FC = () => {
           </div>
           
           <div className="flex gap-2 items-center">
-            {/* Language Dropdown */}
             <div className="relative" ref={menuRef}>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -187,49 +216,42 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Chip Navigation - 現在是 Header 的一部分，會一起吸頂 */}
         <div className="max-w-3xl mx-auto px-4 pb-3">
            <CategoryNav 
              categories={appData.categories}
-             activeCategoryId={activeCategoryId} // 傳入目前 Active 的 ID
+             activeCategoryId={activeCategoryId}
              onSelectCategory={handleScrollToCategory}
            />
         </div>
       </header>
 
-      {/* Main Content */}
-<main className="max-w-3xl mx-auto px-4 pb-20 pt-6">
-  <div className="flex flex-col gap-12">
-    {appData.categories.map((category) => (
-      <section key={category.id} id={category.id} className="scroll-mt-40">
-        {/* 修改處：
-            移除了 "sticky top-36 md:static bg-[#F9FAFB] z-0"
-            現在標題會隨著頁面正常滾動，不會吸附在上方
-        */}
-        <div className="flex items-center gap-3 mb-6 pl-1 border-l-4 border-emerald-500 py-1">
-          <h2 className="text-2xl font-bold text-gray-800">
-            {category.name}
-          </h2>
-          <span className="text-xs font-semibold bg-gray-200 text-gray-600 px-2 py-1 rounded-full">
-            {category.items.length}
-          </span>
-        </div>
+      <main className="max-w-3xl mx-auto px-4 pb-20 pt-6">
+        <div className="flex flex-col gap-12">
+          {appData.categories.map((category) => (
+            <section key={category.id} id={category.id} className="scroll-mt-40">
+              <div className="flex items-center gap-3 mb-6 pl-1 border-l-4 border-emerald-500 py-1">
+                <h2 className="text-2xl font-bold text-gray-800">
+                  {category.name}
+                </h2>
+                <span className="text-xs font-semibold bg-gray-200 text-gray-600 px-2 py-1 rounded-full">
+                  {category.items.length}
+                </span>
+              </div>
 
-        <div className="flex flex-col gap-3">
-          {category.items.map((item) => (
-            <LearningCard 
-              key={item.id} 
-              item={item} 
-              language={appData.meta.target_language} 
-            />
+              <div className="flex flex-col gap-3">
+                {category.items.map((item) => (
+                  <LearningCard 
+                    key={item.id} 
+                    item={item} 
+                    language={appData.meta.target_language} 
+                  />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
-      </section>
-    ))}
-  </div>
-</main>
+      </main>
 
-      {/* Footer (保持不變) */}
       <footer className="bg-white border-t border-gray-100 py-8 mt-10">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="text-gray-400 text-sm mb-2">{appData.meta.description}</p>
