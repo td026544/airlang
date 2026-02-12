@@ -10,103 +10,118 @@ export const vietnameseData: AppData = {
   },
   categories: [
     {
-      id: "greetings",
-      name: "常用句 (越南語)",
+      id: "greetings_vn",
+      name: "越南語常用口語",
       items: [
         {
           id: "greet-001",
-          term_zh: "是的 / 對",
+          term_zh: "是的",
           related_terms: [
             {
               term_target: "Vâng",
               pronunciation: ["/vəŋ/"],
-              specific_note: "肯定(北部/標準)",
-              segments: [{ text: "Vâng", meaning: "是", tail: "" }],
+              specific_note: "正式且有禮貌，北越最常用。",
+              segments: [{ text: "Vâng", meaning: "是的", tail: "" }],
             },
             {
               term_target: "Dạ",
-              pronunciation: ["/za/"],
-              specific_note: "肯定(南部/敬語)",
-              segments: [{ text: "Dạ", meaning: "是", tail: "" }],
+              pronunciation: ["/za̰ʔ/"],
+              specific_note: "南越常用，或作為禮貌性的回應起手式。",
+              segments: [{ text: "Dạ", meaning: "是的/好的", tail: "" }],
             },
             {
-              term_target: "Đúng",
-              pronunciation: ["/ɗuŋ͡m/"],
-              specific_note: "正確",
-              segments: [{ text: "Đúng", meaning: "對/正確", tail: "" }],
+              term_target: "Ừ",
+              pronunciation: ["/ɨ/"],
+              specific_note: "平輩或對晚輩使用的非正式「嗯/對」。",
+              segments: [{ text: "Ừ", meaning: "嗯", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Dạ, đúng rồi.",
-              translation: "是的，沒錯。",
+              sentence: "Dạ, đúng rồi ạ.",
+              translation: "是的，沒錯喔。（非常禮貌）",
               segments: [
-                { text: "Dạ", meaning: "是 (語氣詞)", tail: ", " },
+                { text: "Dạ", meaning: "禮貌起手式", tail: ", " },
                 { text: "đúng", meaning: "對/正確", tail: " " },
-                { text: "rồi", meaning: "了 (表示狀態)", tail: "." },
+                { text: "rồi", meaning: "了", tail: " " },
+                { text: "ạ", meaning: "句尾敬語", tail: "." },
               ],
             },
             {
-              sentence: "Dạ có.",
-              translation: "有的 / 是的 (回答有或沒有時)。",
+              sentence: "Vâng, em làm ngay.",
+              translation: "好的，我馬上做。（職員對上司常用）",
               segments: [
-                { text: "Dạ", meaning: "敬語助詞", tail: " " },
-                { text: "có", meaning: "有", tail: "." },
+                { text: "Vâng", meaning: "好的", tail: ", " },
+                { text: "em", meaning: "我(弟妹輩)", tail: " " },
+                { text: "làm", meaning: "做", tail: " " },
+                { text: "ngay", meaning: "立刻", tail: "." },
               ],
             },
             {
-              sentence: "Vâng, tôi hiểu.",
-              translation: "是的，我明白了。",
+              sentence: "Ừ, mình biết rồi.",
+              translation: "嗯，我知道了。（朋友間）",
               segments: [
-                { text: "Vâng", meaning: "是", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "hiểu", meaning: "明白", tail: "." },
+                { text: "Ừ", meaning: "嗯", tail: ", " },
+                { text: "mình", meaning: "我(親近者)", tail: " " },
+                { text: "biết", meaning: "知道", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
               ],
             },
           ],
-          usage_note: "「Dạ」在句首非常常用，表示禮貌與尊敬。",
+          usage_note: "在越南，回答長輩時習慣在句首加『Dạ』，句尾加『ạ』。",
           image_file: "yes.png",
         },
         {
           id: "greet-002",
-          term_zh: "不是 / 沒有",
+          term_zh: "不是",
           related_terms: [
             {
-              term_target: "Không",
-              pronunciation: ["/xəwŋ͡m/"],
-              specific_note: "否定",
-              segments: [{ text: "Không", meaning: "不/空/無", tail: "" }],
+              term_target: "Không phải",
+              pronunciation: ["/xoŋ fa᷉ːj/"],
+              specific_note: "否定某種身分或事實。",
+              segments: [
+                { text: "Không", meaning: "不", tail: " " },
+                { text: "phải", meaning: "是/正確", tail: "" },
+              ],
+            },
+            {
+              term_target: "Chưa",
+              pronunciation: ["/cɨə/"],
+              specific_note: "尚未（用於回答還沒做某事）。",
+              segments: [{ text: "Chưa", meaning: "還沒", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Dạ không, cảm ơn.",
-              translation: "不了，謝謝 (禮貌拒絕)。",
+              sentence: "Không phải em đâu.",
+              translation: "不是我啦。（撒嬌或委婉否認）",
               segments: [
-                { text: "Dạ", meaning: "敬語", tail: " " },
-                { text: "không", meaning: "不", tail: ", " },
-                { text: "cảm ơn", meaning: "感謝", tail: "." },
+                { text: "Không phải", meaning: "不是", tail: " " },
+                { text: "em", meaning: "我(弟妹輩)", tail: " " },
+                { text: "đâu", meaning: "才不(語助詞)", tail: "." },
               ],
             },
             {
-              sentence: "Không phải đâu.",
-              translation: "不是那樣的 / 誤會了。",
+              sentence: "Tôi chưa ăn cơm.",
+              translation: "我還沒吃飯。",
               segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "phải", meaning: "是/對", tail: " " },
-                { text: "đâu", meaning: "哪裡 (加強語氣)", tail: "." },
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "chưa", meaning: "還沒", tail: " " },
+                { text: "ăn cơm", meaning: "吃飯", tail: "." },
               ],
             },
             {
-              sentence: "Không sao.",
-              translation: "沒關係 / 沒事。",
+              sentence: "Không, cảm ơn nhé.",
+              translation: "不了，謝謝喔。（禮貌拒絕路邊推銷）",
               segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "sao", meaning: "怎樣/事情", tail: "." },
+                { text: "Không", meaning: "不", tail: ", " },
+                { text: "cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "搖頭並微笑說 Không。",
+          usage_note:
+            "單純說『Không』比較生硬，針對不同問題，用『Không phải』或『Chưa』更道地。",
           image_file: "no.png",
         },
         {
@@ -115,44 +130,52 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Xin chào",
-              pronunciation: ["/sin t͡ʃaːw/"],
-              specific_note: "通用",
-              segments: [
-                { text: "Xin", meaning: "請/求", tail: " " },
-                { text: "chào", meaning: "打招呼", tail: "" },
-              ],
+              pronunciation: ["/siɲ cə̂ːw/"],
+              specific_note: "標準通用語。",
+              segments: [{ text: "Xin chào", meaning: "你好", tail: "" }],
+            },
+            {
+              term_target: "Alo",
+              pronunciation: ["/aː lo/"],
+              specific_note: "接電話專用問候語。",
+              segments: [{ text: "Alo", meaning: "喂", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Xin chào!",
-              translation: "你好！(最標準)。",
+              sentence: "Chào anh, đi đâu đấy?",
+              translation: "哥哥好，你要去哪呀？（熟人間的熱情問候）",
               segments: [
-                { text: "Xin", meaning: "請", tail: " " },
-                { text: "chào", meaning: "招呼", tail: "!" },
+                { text: "Chào", meaning: "問候", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: ", " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
               ],
             },
             {
-              sentence: "Em chào anh.",
-              translation: "哥哥好 (對年長男性的稱呼)。",
+              sentence: "Chào cả nhà nha!",
+              translation: "大家好呀！（在群組打招呼）",
               segments: [
-                { text: "Em", meaning: "弟/妹 (自稱)", tail: " " },
-                { text: "chào", meaning: "招呼", tail: " " },
-                { text: "anh", meaning: "哥 (對方)", tail: "." },
+                { text: "Chào", meaning: "問候", tail: " " },
+                { text: "cả nhà", meaning: "全家/大家", tail: " " },
+                { text: "nha", meaning: "呀(親切)", tail: "!" },
               ],
             },
             {
-              sentence: "Chào chị, khỏe không?",
-              translation: "姊姊好，你好嗎？",
+              sentence: "Alo, cho hỏi ai đấy ạ?",
+              translation: "喂，請問是哪位？",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "chị", meaning: "姊 (對方)", tail: ", " },
-                { text: "khỏe", meaning: "健康", tail: " " },
-                { text: "không", meaning: "嗎 (疑問詞)", tail: "?" },
+                { text: "Alo", meaning: "喂", tail: ", " },
+                { text: "cho hỏi", meaning: "請問", tail: " " },
+                { text: "ai", meaning: "誰", tail: " " },
+                { text: "đấy", meaning: "呢", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
               ],
             },
           ],
-          usage_note: "對長輩要說 Chào + 稱謂 (如 Chào anh/chị)。",
+          usage_note:
+            "越南人很少見面只說 Xin chào，通常會根據對方的輩分說『Chào + 稱謂』。",
           image_file: "hello.png",
         },
         {
@@ -161,44 +184,46 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Cảm ơn",
-              pronunciation: ["/kaːm ən/"],
-              specific_note: "漢語:感恩",
-              segments: [
-                { text: "Cảm", meaning: "感", tail: " " },
-                { text: "ơn", meaning: "恩", tail: "" },
-              ],
+              pronunciation: ["/kaːm ɜn/"],
+              specific_note: "發音像台語的『感恩』。",
+              segments: [{ text: "Cảm ơn", meaning: "謝謝", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Cảm ơn nhiều.",
-              translation: "非常感謝。",
+              sentence: "Cảm ơn bạn nhiều nhé!",
+              translation: "非常謝謝你喔！",
               segments: [
                 { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "nhiều", meaning: "多", tail: "." },
+                { text: "bạn", meaning: "你/朋友", tail: " " },
+                { text: "nhiều", meaning: "多", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "!" },
               ],
             },
             {
-              sentence: "Cảm ơn anh đã giúp.",
-              translation: "謝謝大哥幫忙。",
+              sentence: "Cảm ơn anh, đồ ăn ngon lắm.",
+              translation: "謝謝哥，食物很好吃。",
               segments: [
                 { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "anh", meaning: "哥", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: ", " },
+                { text: "đồ ăn", meaning: "食物", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em cảm ơn chị đã giúp.",
+              translation: "謝謝姊姊幫忙。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "chị", meaning: "姊姊", tail: " " },
                 { text: "đã", meaning: "已經", tail: " " },
                 { text: "giúp", meaning: "幫忙", tail: "." },
               ],
             },
-            {
-              sentence: "Không có chi.",
-              translation: "不客氣 (回應謝謝)。",
-              segments: [
-                { text: "Không", meaning: "沒有", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "chi", meaning: "什麼", tail: "." },
-              ],
-            },
           ],
-          usage_note: "發音類似台語的「感恩」。",
+          usage_note: "加上對方的稱謂會顯得更有誠意。",
           image_file: "thank_you.png",
         },
         {
@@ -207,103 +232,102 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Xin lỗi",
-              pronunciation: ["/sin loj/"],
-              specific_note: "道歉",
-              segments: [
-                { text: "Xin", meaning: "請", tail: " " },
-                { text: "lỗi", meaning: "錯/過失", tail: "" },
-              ],
+              pronunciation: ["/siɲ lo᷉j/"],
+              specific_note: "道歉、請求原諒。",
+              segments: [{ text: "Xin lỗi", meaning: "對不起", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Xin lỗi, tôi đến muộn.",
-              translation: "抱歉，我遲到了。",
+              sentence: "Xin lỗi, tôi không cố ý.",
+              translation: "抱歉，我不是故意的。",
               segments: [
                 { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
                 { text: "tôi", meaning: "我", tail: " " },
-                { text: "đến", meaning: "來/到", tail: " " },
-                { text: "muộn", meaning: "晚", tail: "." },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "cố ý", meaning: "故意", tail: "." },
               ],
             },
             {
-              sentence: "Thành thật xin lỗi.",
-              translation: "誠摯地道歉。",
+              sentence: "Xin lỗi chị, em nhầm.",
+              translation: "對不起姊姊，我弄錯了。",
               segments: [
-                { text: "Thành thật", meaning: "誠實/誠懇", tail: " " },
-                { text: "xin lỗi", meaning: "道歉", tail: "." },
+                { text: "Xin lỗi", meaning: "對不起", tail: " " },
+                { text: "chị", meaning: "姊姊", tail: ", " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "nhầm", meaning: "誤會/弄錯", tail: "." },
               ],
             },
             {
-              sentence: "Xin lỗi nhé!",
-              translation: "抱歉喔！(平輩/朋友間)。",
+              sentence: "Xin lỗi vì sự chậm trễ này.",
+              translation: "為這次的耽擱表示抱歉。（正式）",
               segments: [
                 { text: "Xin lỗi", meaning: "抱歉", tail: " " },
-                { text: "nhé", meaning: "喔 (語助詞)", tail: "!" },
+                { text: "vì", meaning: "因為", tail: " " },
+                { text: "sự chậm trễ", meaning: "延遲", tail: " " },
+                { text: "này", meaning: "這個", tail: "." },
               ],
             },
           ],
-          usage_note: "Lỗi 的發音有跌聲，要壓低喉嚨。",
+          usage_note: "道歉時低頭示意是越南的禮儀。",
           image_file: "sorry.png",
         },
         {
           id: "greet-006",
-          term_zh: "不好意思 (請問)",
+          term_zh: "不好意思",
           related_terms: [
             {
-              term_target: "Cho hỏi...",
-              pronunciation: ["/tʃɔ hɔj/"],
-              specific_note: "發問前",
+              term_target: "Cho hỏi",
+              pronunciation: ["/cɔ hɔ̉ːj/"],
+              specific_note: "提問前的起手式。",
+              segments: [{ text: "Cho hỏi", meaning: "請問", tail: "" }],
+            },
+            {
+              term_target: "Phiền bạn chút",
+              pronunciation: ["/fiən ba̰ːn cụt/"],
+              specific_note: "麻煩你一下。",
               segments: [
-                { text: "Cho", meaning: "給/讓", tail: " " },
-                { text: "hỏi", meaning: "問", tail: "..." },
+                { text: "Phiền", meaning: "麻煩", tail: " " },
+                { text: "bạn", meaning: "你", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Xin lỗi, cho tôi hỏi.",
-              translation: "不好意思，請問一下。",
+              sentence: "Cho hỏi, bưu điện ở đâu ạ?",
+              translation: "不好意思請問，郵局在哪裡？",
+              segments: [
+                { text: "Cho hỏi", meaning: "請問", tail: ", " },
+                { text: "bưu điện", meaning: "郵局", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Xin lỗi, cho tôi đi nhờ một chút.",
+              translation: "抱歉，借過一下。",
               segments: [
                 { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
                 { text: "cho", meaning: "讓", tail: " " },
                 { text: "tôi", meaning: "我", tail: " " },
-                { text: "hỏi", meaning: "問", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em ơi! Cho anh hỏi.",
-              translation: "服務生(弟弟/妹妹)！請問一下。",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "ơi", meaning: "喂 (呼喚詞)", tail: "! " },
-                { text: "Cho", meaning: "讓", tail: " " },
-                { text: "anh", meaning: "我(哥)", tail: " " },
-                { text: "hỏi", meaning: "問", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xin lỗi, cho tôi đi qua.",
-              translation: "不好意思，借過一下。",
-              segments: [
-                { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
-                { text: "cho", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "走", tail: " " },
-                { text: "qua", meaning: "過", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phiền bạn một chút.",
-              translation: "麻煩你一下。",
-              segments: [
-                { text: "Phiền", meaning: "麻煩/煩", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
+                { text: "đi nhờ", meaning: "借路過", tail: " " },
                 { text: "một chút", meaning: "一點點", tail: "." },
               ],
             },
+            {
+              sentence: "Phiền anh cho em xem cái này.",
+              translation: "麻煩哥哥讓我看一下這個。",
+              segments: [
+                { text: "Phiền", meaning: "麻煩", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "cho", meaning: "讓", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "." },
+              ],
+            },
           ],
-          usage_note: "餐廳叫人常用 Em ơi (對年輕店員)。",
+          usage_note: "請求陌生人幫忙時，先說『Cho hỏi』或『Phiền...』最道地。",
           image_file: "excuse_me.png",
         },
         {
@@ -312,51 +336,50 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tôi không hiểu",
-              pronunciation: ["/toj xəwŋ͡m hiəw/"],
-              specific_note: "",
+              pronunciation: ["/tôi xoŋ hiə̉ʊ/"],
+              specific_note: "理解上的不懂。",
               segments: [
                 { text: "Tôi", meaning: "我", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
-                { text: "hiểu", meaning: "懂/理解", tail: "" },
+                { text: "hiểu", meaning: "理解", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Xin lỗi, tôi không hiểu.",
-              translation: "抱歉，我不懂。",
+              sentence: "Tôi không hiểu, bạn nói lại đi.",
+              translation: "我不懂，你再說一次吧。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "hiểu", meaning: "理解", tail: ", " },
+                { text: "bạn", meaning: "你", tail: " " },
+                { text: "nói lại", meaning: "說回/再說", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Chỗ này khó hiểu quá.",
+              translation: "這裡（這部分）太難懂了。",
+              segments: [
+                { text: "Chỗ này", meaning: "這部分", tail: " " },
+                { text: "khó hiểu", meaning: "難理解", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+            {
+              sentence: "Xin lỗi, tôi không rành tiếng Việt.",
+              translation: "抱歉，我的越南語不太精通。",
               segments: [
                 { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
                 { text: "tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không biết tiếng Việt.",
-              translation: "我不會(懂)越南語。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "biết", meaning: "知道/會", tail: " " },
-                { text: "tiếng", meaning: "語言", tail: " " },
-                { text: "Việt", meaning: "越", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn nói gì? Tôi không hiểu.",
-              translation: "你說什麼？我不懂。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "? " },
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: "." },
+                { text: "không rành", meaning: "不精通", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: "." },
               ],
             },
           ],
-          usage_note: "聽不懂時，可以指著耳朵搖手。",
+          usage_note:
+            "若聽不懂對方意思，直接指著自己說『Tôi không hiểu』即可。",
           image_file: "dont_understand.png",
         },
         {
@@ -365,38 +388,28 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nhà vệ sinh ở đâu?",
-              pronunciation: ["/ɲaː ve siŋ ə ɗəw/"],
-              specific_note: "關鍵句",
+              pronunciation: ["/ɲâː vê siɲ ə mɜʊ/"],
+              specific_note: "旅遊救命句。",
               segments: [
-                { text: "Nhà", meaning: "房/屋", tail: " " },
-                { text: "vệ sinh", meaning: "衛生", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
+                { text: "Nhà vệ sinh", meaning: "廁所", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Cho hỏi, nhà vệ sinh ở đâu?",
-              translation: "請問，洗手間在哪裡？",
+              sentence: "Nhà vệ sinh ở hướng nào ạ?",
+              translation: "廁所在哪個方向呢？",
               segments: [
-                { text: "Cho hỏi", meaning: "請問", tail: ", " },
-                { text: "nhà vệ sinh", meaning: "洗手間", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Toilet ở đâu?",
-              translation: "廁所在哪？(講 Toilet 也通)。",
-              segments: [
-                { text: "Toilet", meaning: "廁所(英)", tail: " " },
+                { text: "Nhà vệ sinh", meaning: "廁所", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
+                { text: "hướng nào", meaning: "哪個方向", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
               ],
             },
             {
               sentence: "Ở đây có nhà vệ sinh không?",
-              translation: "這裡有洗手間嗎？",
+              translation: "這裡有廁所嗎？",
               segments: [
                 { text: "Ở đây", meaning: "這裡", tail: " " },
                 { text: "có", meaning: "有", tail: " " },
@@ -404,8 +417,19 @@ export const vietnameseData: AppData = {
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
+            {
+              sentence: "Bạn đi thẳng là thấy nhà vệ sinh.",
+              translation: "你直走就會看到廁所。",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "đi thẳng", meaning: "直走", tail: " " },
+                { text: "là", meaning: "就/是", tail: " " },
+                { text: "thấy", meaning: "看到", tail: " " },
+                { text: "nhà vệ sinh", meaning: "廁所", tail: "." },
+              ],
+            },
           ],
-          usage_note: "Nhà vệ sinh (家衛生) = 廁所。",
+          usage_note: "口語中也常直接用法文縮寫稱呼：WC。",
           image_file: "where_bathroom.png",
         },
         {
@@ -414,41 +438,50 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bao nhiêu tiền?",
-              pronunciation: ["/baːw ɲiəw tiən/"],
-              specific_note: "購物",
+              pronunciation: ["/baʊ ɲiəʊ tiən/"],
+              specific_note: "詢問價格常用語。",
               segments: [
                 { text: "Bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "?" },
+                { text: "tiền", meaning: "錢", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Cái này bao nhiêu tiền?",
-              translation: "這個多少錢？",
+              sentence: "Hết tất cả bao nhiêu tiền ạ?",
+              translation: "全部總共多少錢？",
               segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "Hết", meaning: "完/結束", tail: " " },
+                { text: "tất cả", meaning: "全部", tail: " " },
                 { text: "bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "?" },
+                { text: "tiền", meaning: "錢", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
               ],
             },
             {
-              sentence: "Bao nhiêu?",
-              translation: "多少？(簡短問法)。",
-              segments: [{ text: "Bao nhiêu", meaning: "多少", tail: "?" }],
+              sentence: "Bát phở này giá thế nào?",
+              translation: "這碗河粉價格多少？",
+              segments: [
+                { text: "Bát", meaning: "碗", tail: " " },
+                { text: "phở", meaning: "河粉", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "giá", meaning: "價格", tail: " " },
+                { text: "thế nào", meaning: "如何", tail: "?" },
+              ],
             },
             {
-              sentence: "Có giảm giá không?",
-              translation: "有打折嗎？(殺價必備)。",
+              sentence: "Cái này đắt quá, bớt đi!",
+              translation: "這個太貴了，便宜點吧！",
               segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "giảm", meaning: "減", tail: " " },
-                { text: "giá", meaning: "價", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "đắt quá", meaning: "太貴", tail: ", " },
+                { text: "bớt", meaning: "減去/便宜點", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
               ],
             },
           ],
-          usage_note: "市場買東西記得一定要問價錢。",
+          usage_note:
+            "在越南傳統市場，問完價錢通常還可以說『Bớt đi』（便宜點）。",
           image_file: "how_much.png",
         },
         {
@@ -457,47 +490,47 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tôi lấy cái này",
-              pronunciation: ["/toj ləj kaj naj/"],
-              specific_note: "購買確認",
+              pronunciation: ["/tôi lɜ̌j kaːj nàːj/"],
+              specific_note: "決定購買時使用。",
               segments: [
                 { text: "Tôi", meaning: "我", tail: " " },
-                { text: "lấy", meaning: "拿/取/買", tail: " " },
+                { text: "lấy", meaning: "拿", tail: " " },
                 { text: "cái này", meaning: "這個", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi lấy cái này.",
-              translation: "我要買這個。",
+              sentence: "Cho mình lấy cái này nhé.",
+              translation: "我要買這個喔。（點餐或挑選商品）",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "lấy", meaning: "拿", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "." },
+                { text: "Cho mình", meaning: "給我", tail: " " },
+                { text: "lấy", meaning: "拿/買", tail: " " },
+                { text: "cái này", meaning: "這個", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
             {
-              sentence: "Cho tôi xem cái này.",
-              translation: "給我看看這個。",
+              sentence: "Tôi chọn món này.",
+              translation: "我選這道菜。",
               segments: [
-                { text: "Cho", meaning: "給/讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "." },
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "chọn", meaning: "選擇", tail: " " },
+                { text: "món này", meaning: "這道(菜)", tail: "." },
               ],
             },
             {
-              sentence: "Tôi muốn mua cái này.",
-              translation: "我想買這個。",
+              sentence: "Lấy cho tôi hai cái này.",
+              translation: "給我拿兩個這個。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想/要", tail: " " },
-                { text: "mua", meaning: "買", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "." },
+                { text: "Lấy", meaning: "拿", tail: " " },
+                { text: "cho tôi", meaning: "給我", tail: " " },
+                { text: "hai cái", meaning: "兩個", tail: " " },
+                { text: "này", meaning: "這個", tail: "." },
               ],
             },
           ],
-          usage_note: "指著商品說這句即可。",
+          usage_note: "買東西時，用『lấy』（拿）比『muốn』（想要）更自然。",
           image_file: "i_want_this.png",
         },
         {
@@ -506,50 +539,43 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Cho tôi...",
-              pronunciation: ["/tʃɔ toj/"],
-              specific_note: "點餐/索取",
+              pronunciation: ["/cɔ tôi/"],
+              specific_note: "最常見的請求句式。",
               segments: [
                 { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: "..." },
+                { text: "tôi", meaning: "我", tail: " " },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Cho tôi một ly nước.",
-              translation: "請給我一杯水。",
+              sentence: "Cho tôi một ly cà phê sữa đá.",
+              translation: "請給我一杯冰奶咖啡。",
               segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "ly", meaning: "杯", tail: " " },
-                { text: "nước", meaning: "水", tail: "." },
+                { text: "Cho tôi", meaning: "給我", tail: " " },
+                { text: "một ly", meaning: "一杯", tail: " " },
+                { text: "cà phê sữa đá", meaning: "冰奶咖啡", tail: "." },
               ],
             },
             {
-              sentence: "Em ơi, cho anh tính tiền.",
-              translation: "服務生，買單(給我算錢)。",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "ơi", meaning: "喂", tail: ", " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "anh", meaning: "哥(我)", tail: " " },
-                { text: "tính", meaning: "算", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cho tôi cái menu.",
+              sentence: "Cho tôi xin cái menu.",
               translation: "請給我菜單。",
               segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "cái", meaning: "個(量詞)", tail: " " },
-                { text: "menu", meaning: "菜單", tail: "." },
+                { text: "Cho tôi xin", meaning: "請給我", tail: " " },
+                { text: "cái menu", meaning: "這菜單", tail: "." },
+              ],
+            },
+            {
+              sentence: "Làm ơn cho tôi thêm tương ớt.",
+              translation: "麻煩再給我加點辣椒醬。",
+              segments: [
+                { text: "Làm ơn", meaning: "麻煩/請", tail: " " },
+                { text: "cho tôi thêm", meaning: "給我加", tail: " " },
+                { text: "tương ớt", meaning: "辣椒醬", tail: "." },
               ],
             },
           ],
-          usage_note: "Cho + 人 + 東西 = 給某人某物。",
+          usage_note: "點餐時直接用『Cho tôi + 名字』即可。",
           image_file: "please_give_me.png",
         },
         {
@@ -557,50 +583,51 @@ export const vietnameseData: AppData = {
           term_zh: "這是什麼？",
           related_terms: [
             {
-              term_target: "Cái gì đây?",
-              pronunciation: ["/kaj zi ɗəj/"],
-              specific_note: "",
+              term_target: "Cái này là cái gì?",
+              pronunciation: ["/kaːj nàːj là kaːj zi/"],
+              specific_note: "詢問物品。",
               segments: [
-                { text: "Cái", meaning: "個(東西)", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
-                { text: "đây", meaning: "這", tail: "?" },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "cái gì", meaning: "什麼", tail: "?" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Đây là cái gì?",
-              translation: "這是什麼東西？",
+              sentence: "Đố bạn biết cái này là gì?",
+              translation: "考考你，知道這是什麼嗎？",
+              segments: [
+                { text: "Đố bạn", meaning: "考考你", tail: " " },
+                { text: "biết", meaning: "知道", tail: " " },
+                { text: "cái này", meaning: "這個", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Món này gọi là gì vậy ạ?",
+              translation: "請問這道菜叫什麼名字？",
+              segments: [
+                { text: "Món này", meaning: "這道菜", tail: " " },
+                { text: "gọi là", meaning: "叫做", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "vậy", meaning: "呢/啊", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Đây là tiếng Việt, phải không?",
+              translation: "這是越南語，對嗎？",
               segments: [
                 { text: "Đây", meaning: "這", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cái này tiếng Việt gọi là gì?",
-              translation: "這個越南語叫什麼？",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "tiếng Việt", meaning: "越南語", tail: " " },
-                { text: "gọi", meaning: "叫", tail: " " },
-                { text: "là", meaning: "做/是", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cái này ăn được không?",
-              translation: "這個可以吃嗎？",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "được", meaning: "行/可以", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "tiếng Việt", meaning: "越南語", tail: ", " },
+                { text: "phải không", meaning: "對不對", tail: "?" },
               ],
             },
           ],
-          usage_note: "看到新奇的食物或水果時可以用。",
+          usage_note: "詢問不認識的東西時，指著它說『Cái này là gì?』即可。",
           image_file: "what_is_this.png",
         },
         {
@@ -609,48 +636,49 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Giúp tôi với",
-              pronunciation: ["/zup toj vəj/"],
-              specific_note: "求助",
+              pronunciation: ["/zup tôi və̂j/"],
+              specific_note: "拜託幫忙我。",
               segments: [
-                { text: "Giúp", meaning: "幫忙", tail: " " },
+                { text: "Giúp", meaning: "幫助", tail: " " },
                 { text: "tôi", meaning: "我", tail: " " },
-                { text: "với", meaning: "跟/吧(語助詞)", tail: "" },
+                { text: "với", meaning: "拜託/吧", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Làm ơn giúp tôi.",
-              translation: "拜託幫幫我。",
+              sentence: "Cứu tôi với!",
+              translation: "救命啊！（最緊急的呼救）",
               segments: [
-                { text: "Làm ơn", meaning: "做恩(拜託)", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
+                { text: "Cứu", meaning: "救", tail: " " },
+                { text: "tôi", meaning: "我", tail: " " },
+                { text: "với", meaning: "吧/拜託", tail: "!" },
               ],
             },
             {
-              sentence: "Bạn giúp tôi được không?",
-              translation: "你可以幫我嗎？",
+              sentence: "Bạn giúp mình một tay nhé.",
+              translation: "你幫我個忙吧（幫我一把）。",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
                 { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "được", meaning: "行/可以", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "mình", meaning: "我", tail: " " },
+                { text: "một tay", meaning: "一手/一把", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
             {
-              sentence: "Giúp em một tay.",
-              translation: "幫我(自稱晚輩)一把。",
+              sentence: "Làm ơn giúp tôi bê cái này.",
+              translation: "麻煩幫我搬這個。",
               segments: [
-                { text: "Giúp", meaning: "幫", tail: " " },
-                { text: "em", meaning: "我(弟妹)", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "tay", meaning: "手", tail: "." },
+                { text: "Làm ơn", meaning: "麻煩/請", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "tôi", meaning: "我", tail: " " },
+                { text: "bê", meaning: "搬/扛", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "." },
               ],
             },
           ],
-          usage_note: "遇到困難或緊急狀況時使用。",
+          usage_note: "句尾加上『với』會讓語氣聽起來更有拜託、求助的感覺。",
           image_file: "help_me.png",
         },
         {
@@ -658,50 +686,49 @@ export const vietnameseData: AppData = {
           term_zh: "你可以再說一次嗎？",
           related_terms: [
             {
-              term_target: "Nhắc lại được không?",
-              pronunciation: ["/ɲak laj ɗəək xəwŋ͡m/"],
-              specific_note: "",
+              term_target: "Nói lại một lần nữa",
+              pronunciation: ["/nɔ̂j la̰ːj một lə̀n nɨ̌ə/"],
+              specific_note: "請求重複。",
               segments: [
-                { text: "Nhắc", meaning: "提/講", tail: " " },
-                { text: "lại", meaning: "重來/再", tail: " " },
-                { text: "được", meaning: "可以", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "Nói lại", meaning: "再說", tail: " " },
+                { text: "một lần nữa", meaning: "再一遍", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Xin lỗi, nói lại đi.",
-              translation: "抱歉，請再說一次。",
-              segments: [
-                { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "đi", meaning: "吧(語助詞)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn nói lại được không?",
-              translation: "你可以再說一遍嗎？",
+              sentence: "Bạn nói gì cơ?",
+              translation: "你說什麼呢？（語氣輕鬆的蛤？）",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
                 { text: "nói", meaning: "說", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "được", meaning: "可以", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "cơ", meaning: "呢(加強疑問)", tail: "?" },
               ],
             },
             {
-              sentence: "Hả? Gì cơ?",
-              translation: "蛤？什麼？(非常口語，對平輩用)。",
+              sentence: "Làm ơn nhắc lại giúp mình.",
+              translation: "麻煩請幫我重複一遍。",
               segments: [
-                { text: "Hả", meaning: "蛤", tail: "? " },
-                { text: "Gì", meaning: "什麼", tail: " " },
-                { text: "cơ", meaning: "啊(語氣詞)", tail: "?" },
+                { text: "Làm ơn", meaning: "麻煩/請", tail: " " },
+                { text: "nhắc lại", meaning: "重複/提一遍", tail: " " },
+                { text: "giúp mình", meaning: "幫我", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tôi nghe chưa rõ, anh nói lại đi.",
+              translation: "我還聽不清楚，哥哥再說一次吧。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "nghe", meaning: "聽", tail: " " },
+                { text: "chưa rõ", meaning: "還不清楚", tail: ", " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "nói lại", meaning: "再說", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
               ],
             },
           ],
-          usage_note: "沒聽清楚時很有用。",
+          usage_note: "沒聽清楚時，說『Bạn nói gì cơ?』非常有母語感。",
           image_file: "say_again.png",
         },
         {
@@ -710,47 +737,40 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nói chậm lại",
-              pronunciation: ["/nɔj tʃəm laj/"],
-              specific_note: "",
+              pronunciation: ["/nɔ̂j cə̰ːm la̰ːj/"],
+              specific_note: "請說慢點。",
               segments: [
                 { text: "Nói", meaning: "說", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "lại", meaning: "下來", tail: "" },
+                { text: "chậm lại", meaning: "慢下來", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Làm ơn nói chậm lại.",
-              translation: "拜託說慢一點。",
+              sentence: "Anh nói chậm lại một chút nhé.",
+              translation: "哥，請你講慢一點喔。",
               segments: [
-                { text: "Làm ơn", meaning: "拜託", tail: " " },
+                { text: "Anh", meaning: "哥哥", tail: " " },
                 { text: "nói", meaning: "說", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "lại", meaning: "下來", tail: "." },
+                { text: "chậm lại", meaning: "慢下來", tail: " " },
+                { text: "một chút", meaning: "一點點", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
             {
-              sentence: "Nói từ từ thôi.",
-              translation: "慢慢說就好。",
+              sentence: "Nói chậm thôi, tôi mới học.",
+              translation: "說慢點就好，我才剛學。",
               segments: [
                 { text: "Nói", meaning: "說", tail: " " },
-                { text: "từ từ", meaning: "慢慢地", tail: " " },
-                { text: "thôi", meaning: "罷了/就好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi nghe không kịp.",
-              translation: "我來不及聽 (聽不懂)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nghe", meaning: "聽", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "kịp", meaning: "及時/趕上", tail: "." },
+                { text: "chậm", meaning: "慢", tail: " " },
+                { text: "thôi", meaning: "就好/罷了", tail: ", " },
+                { text: "tôi", meaning: "我", tail: " " },
+                { text: "mới học", meaning: "剛學", tail: "." },
               ],
             },
           ],
-          usage_note: "Chậm (慢) 是關鍵字。",
+          usage_note:
+            "越南人講話通常很快，『Nói chậm lại』是初學者的必備口頭禪。",
           image_file: "speak_slowly.png",
         },
         {
@@ -759,12 +779,10 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ra là vậy",
-              pronunciation: ["/za la vəj/"],
-              specific_note: "理解",
+              pronunciation: ["/zaː là və̰ːj/"],
+              specific_note: "恍然大悟。",
               segments: [
-                { text: "Ra", meaning: "出來/原來", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "vậy", meaning: "這樣", tail: "" },
+                { text: "Ra là vậy", meaning: "原來是這樣", tail: "" },
               ],
             },
           ],
@@ -775,30 +793,21 @@ export const vietnameseData: AppData = {
               segments: [
                 { text: "À", meaning: "啊", tail: ", " },
                 { text: "tôi", meaning: "我", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: " " },
+                { text: "hiểu", meaning: "懂/理解", tail: " " },
                 { text: "rồi", meaning: "了", tail: "." },
               ],
             },
             {
-              sentence: "Thì ra là thế.",
-              translation: "原來是這樣啊。",
+              sentence: "Hóa ra là như thế.",
+              translation: "原來是這麼一回事啊。",
               segments: [
-                { text: "Thì ra", meaning: "原來/發現", tail: " " },
+                { text: "Hóa ra", meaning: "原來", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "thế", meaning: "那樣", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hiểu rồi, cảm ơn.",
-              translation: "懂了，謝謝。",
-              segments: [
-                { text: "Hiểu", meaning: "懂", tail: " " },
-                { text: "rồi", meaning: "了", tail: ", " },
-                { text: "cảm ơn", meaning: "謝謝", tail: "." },
+                { text: "như thế", meaning: "那樣", tail: "." },
               ],
             },
           ],
-          usage_note: "表示恍然大悟。",
+          usage_note: "搭配『À』的聲音會更自然。",
           image_file: "i_see.png",
         },
         {
@@ -807,90 +816,78 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Chào buổi sáng",
-              pronunciation: ["/tʃaːw buəj saːŋ/"],
-              specific_note: "",
+              pronunciation: ["/cə̂ːw buə̉j saːŋ/"],
+              specific_note: "正式早安。",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi", meaning: "時段", tail: " " },
-                { text: "sáng", meaning: "早/亮", tail: "" },
+                { text: "Chào", meaning: "問候", tail: " " },
+                { text: "buổi sáng", meaning: "早晨", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Chào buổi sáng!",
-              translation: "早安！",
+              sentence: "Sáng ra đã nóng thế này!",
+              translation: "一早出來就這麼熱！（越南常見的抱怨式開場）",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi sáng", meaning: "早上", tail: "." },
+                { text: "Sáng ra", meaning: "一早", tail: " " },
+                { text: "đã", meaning: "就已經", tail: " " },
+                { text: "nóng", meaning: "熱", tail: " " },
+                { text: "thế này", meaning: "這樣", tail: "!" },
               ],
             },
             {
-              sentence: "Chào cả nhà.",
-              translation: "大家好 (全家/全群組)。",
+              sentence: "Chúc anh ngày mới tốt lành.",
+              translation: "祝哥哥有美好的一天。",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "cả", meaning: "所有/全", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Dậy chưa?",
-              translation: "起床沒？(熟人問早)。",
-              segments: [
-                { text: "Dậy", meaning: "起床/起來", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
+                { text: "Chúc", meaning: "祝", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "ngày mới", meaning: "新的一天", tail: " " },
+                { text: "tốt lành", meaning: "美好/吉祥", tail: "." },
               ],
             },
           ],
-          usage_note: "越南人日常常只說 Xin chào 或 Chào + 名字。",
+          usage_note:
+            "越南人很少見面說 Chào buổi sáng，通常直接說 Chào anh/chị。",
           image_file: "good_morning.png",
         },
         {
           id: "greet-019",
-          term_zh: "晚上好 (晚安)",
+          term_zh: "晚安",
           related_terms: [
             {
-              term_target: "Chào buổi tối",
-              pronunciation: ["/tʃaːw buəj toj/"],
-              specific_note: "見面",
+              term_target: "Chúc ngủ ngon",
+              pronunciation: ["/cuk ŋủ ŋɔn/"],
+              specific_note: "祝好夢。",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi", meaning: "時段", tail: " " },
-                { text: "tối", meaning: "晚/暗", tail: "" },
+                { text: "Chúc", meaning: "祝", tail: " " },
+                { text: "ngủ ngon", meaning: "睡得好/睡香", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Chào buổi tối vui vẻ.",
-              translation: "祝你有個愉快的夜晚。",
+              sentence: "Ngủ ngon nhé, bạn yêu.",
+              translation: "親愛的朋友，晚安喔。",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi tối", meaning: "晚上", tail: " " },
-                { text: "vui vẻ", meaning: "開心", tail: "." },
+                { text: "Ngủ ngon", meaning: "晚安", tail: " " },
+                { text: "nhé", meaning: "喔", tail: ", " },
+                { text: "bạn yêu", meaning: "愛友/親愛的朋友", tail: "." },
               ],
             },
             {
-              sentence: "Ăn tối chưa?",
-              translation: "吃晚餐了嗎？(晚上常見問候)。",
+              sentence: "Chào buổi tối, cả nhà đã ngủ chưa?",
+              translation: "晚上好，大家睡了嗎？",
               segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "tối", meaning: "晚(餐)", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Chúc ngủ ngon.",
-              translation: "祝你睡得好 (這是睡前道別的晚安)。",
-              segments: [
-                { text: "Chúc", meaning: "祝", tail: " " },
+                { text: "Chào buổi tối", meaning: "晚上好", tail: ", " },
+                { text: "cả nhà", meaning: "全家", tail: " " },
+                { text: "đã", meaning: "已經", tail: " " },
                 { text: "ngủ", meaning: "睡", tail: " " },
-                { text: "ngon", meaning: "香/好吃", tail: "." },
+                { text: "chưa", meaning: "沒", tail: "?" },
               ],
             },
           ],
-          usage_note: "見面說 Chào buổi tối，睡覺說 Chúc ngủ ngon。",
+          usage_note:
+            "『Ngủ ngon』是睡前說的，『Chào buổi tối』是晚上見面說的。",
           image_file: "good_evening.png",
         },
         {
@@ -899,39 +896,43 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tạm biệt",
-              pronunciation: ["/tam biət/"],
-              specific_note: "暫別",
+              pronunciation: ["/ta̰ːm biə̰ːt/"],
+              specific_note: "正式告別。",
+              segments: [{ text: "Tạm biệt", meaning: "再見", tail: "" }],
+            },
+            {
+              term_target: "Gặp lại sau nhé",
+              pronunciation: ["/ɣa̰ːp la̰ːj saʊ ɲé/"],
+              specific_note: "待會見/下次見。",
               segments: [
-                { text: "Tạm", meaning: "暫時", tail: " " },
-                { text: "biệt", meaning: "別離", tail: "" },
+                { text: "Gặp lại", meaning: "再見面", tail: " " },
+                { text: "sau", meaning: "稍後/以後", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tạm biệt nhé.",
-              translation: "再見囉。",
+              sentence: "Chào nhé, mai gặp!",
+              translation: "掰啦，明天見！",
               segments: [
-                { text: "Tạm biệt", meaning: "再見", tail: " " },
-                { text: "nhé", meaning: "喔(語氣詞)", tail: "." },
+                { text: "Chào", meaning: "拜/問候", tail: " " },
+                { text: "nhé", meaning: "喔", tail: ", " },
+                { text: "mai", meaning: "明天", tail: " " },
+                { text: "gặp", meaning: "見面", tail: "!" },
               ],
             },
             {
-              sentence: "Hẹn gặp lại.",
-              translation: "後會有期 / 下次見。",
+              sentence: "Đi cẩn thận nhé!",
+              translation: "慢走喔！（回家時常用的叮嚀）",
               segments: [
-                { text: "Hẹn", meaning: "約定", tail: " " },
-                { text: "gặp", meaning: "見面", tail: " " },
-                { text: "lại", meaning: "再", tail: "." },
+                { text: "Đi", meaning: "走/去", tail: " " },
+                { text: "cẩn thận", meaning: "小心/謹慎", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "!" },
               ],
-            },
-            {
-              sentence: "Bye bye!",
-              translation: "掰掰！(年輕人常用)。",
-              segments: [{ text: "Bye bye", meaning: "掰掰", tail: "!" }],
             },
           ],
-          usage_note: "口語也常直接說 Bye。",
+          usage_note: "口語中也常直接說『Bye bye』。",
           image_file: "goodbye.png",
         },
         {
@@ -940,8 +941,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Khỏe không?",
-              pronunciation: ["/xwɛ xəwŋ͡m/"],
-              specific_note: "問健康",
+              pronunciation: ["/xwɛ̉ː xoŋ/"],
+              specific_note: "好嗎/健康嗎？",
               segments: [
                 { text: "Khỏe", meaning: "健康/好", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
@@ -950,32 +951,27 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Bạn khỏe không?",
-              translation: "你好嗎？(身體健康嗎？)",
+              sentence: "Dạo này anh thế nào?",
+              translation: "最近你（哥哥）過得怎樣？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "khỏe", meaning: "健康", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "Dạo này", meaning: "最近", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "thế nào", meaning: "如何/怎樣", tail: "?" },
               ],
             },
             {
-              sentence: "Dạo này thế nào?",
-              translation: "最近怎樣？",
+              sentence: "Vẫn khỏe, cảm ơn bạn nhé.",
+              translation: "還不錯（依舊好），謝謝你喔。",
               segments: [
-                { text: "Dạo này", meaning: "最近/這陣子", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Vẫn bình thường.",
-              translation: "還可以 / 老樣子。",
-              segments: [
-                { text: "Vẫn", meaning: "仍然", tail: " " },
-                { text: "bình thường", meaning: "平常/普通", tail: "." },
+                { text: "Vẫn", meaning: "依然", tail: " " },
+                { text: "khỏe", meaning: "健康/好", tail: ", " },
+                { text: "cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "bạn", meaning: "你", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "越南人重視健康，所以問候常用「Khỏe」(強壯/健康)。",
+          usage_note: "熟人見面比較愛問『Dạo này thế nào?』（最近怎樣？）。",
           image_file: "how_are_you.png",
         },
         {
@@ -983,43 +979,46 @@ export const vietnameseData: AppData = {
           term_zh: "真的嗎",
           related_terms: [
             {
-              term_target: "Thật hả?",
-              pronunciation: ["/tʰət ha/"],
-              specific_note: "疑問",
+              term_target: "Thật á?",
+              pronunciation: ["/tʰə̰ːt aː/"],
+              specific_note: "超驚訝的『真的假的？』。",
               segments: [
-                { text: "Thật", meaning: "真實", tail: " " },
-                { text: "hả", meaning: "蛤/啊", tail: "?" },
+                { text: "Thật", meaning: "真", tail: " " },
+                { text: "á", meaning: "啊", tail: "?" },
+              ],
+            },
+            {
+              term_target: "Thật không?",
+              pronunciation: ["/tʰə̰ːt xoŋ/"],
+              specific_note: "確認是否為事實。",
+              segments: [
+                { text: "Thật", meaning: "真", tail: " " },
+                { text: "không", meaning: "不/嗎", tail: "?" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Thật không?",
-              translation: "真的嗎？/ 真的假的？",
+              sentence: "Thật á? Không tin được!",
+              translation: "真的假的？不敢相信！",
               segments: [
                 { text: "Thật", meaning: "真", tail: " " },
-                { text: "không", meaning: "不(反問)", tail: "?" },
+                { text: "á", meaning: "啊", tail: "? " },
+                { text: "Không tin", meaning: "不相信", tail: " " },
+                { text: "được", meaning: "能", tail: "!" },
               ],
             },
             {
-              sentence: "Không tin được!",
-              translation: "難以置信！",
+              sentence: "Bạn nói thật không đấy?",
+              translation: "你是說真的嗎？",
               segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "tin", meaning: "相信", tail: " " },
-                { text: "được", meaning: "能/行", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Thiệt hả?",
-              translation: "真假？(南方口音常用 Thiệt)。",
-              segments: [
-                { text: "Thiệt", meaning: "真", tail: " " },
-                { text: "hả", meaning: "蛤", tail: "?" },
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "nói thật", meaning: "說實話", tail: " " },
+                { text: "không đấy", meaning: "不呢/嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "表示驚訝時使用。",
+          usage_note: "『Thật á?』帶有明顯的驚訝情緒。",
           image_file: "really_q.png",
         },
         {
@@ -1028,38 +1027,34 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tuyệt vời",
-              pronunciation: ["/twiət vəj/"],
-              specific_note: "讚嘆",
-              segments: [
-                { text: "Tuyệt", meaning: "絕/極", tail: " " },
-                { text: "vời", meaning: "佳/遠", tail: "" },
-              ],
+              pronunciation: ["/tuiə̰ːt vɜ̀i/"],
+              specific_note: "極度讚美。",
+              segments: [{ text: "Tuyệt vời", meaning: "絕佳/太棒", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tuyệt quá!",
-              translation: "太讚了！",
+              sentence: "Bạn giỏi quá, tuyệt vời!",
+              translation: "你太厲害了，真棒！",
               segments: [
-                { text: "Tuyệt", meaning: "絕佳", tail: " " },
-                { text: "quá", meaning: "太/過度", tail: "!" },
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "giỏi", meaning: "厲害/聰明", tail: " " },
+                { text: "quá", meaning: "太", tail: ", " },
+                { text: "tuyệt vời", meaning: "棒極了", tail: "!" },
               ],
             },
             {
-              sentence: "Hay quá!",
-              translation: "太好了！/ 好厲害！(常用於表演/點子)。",
+              sentence: "Cảnh ở đây đẹp tuyệt vời.",
+              translation: "這裡的風景美極了。",
               segments: [
-                { text: "Hay", meaning: "好/有趣/精彩", tail: " " },
-                { text: "quá", meaning: "太", tail: "!" },
+                { text: "Cảnh", meaning: "風景", tail: " " },
+                { text: "ở đây", meaning: "這裡", tail: " " },
+                { text: "đẹp", meaning: "美", tail: " " },
+                { text: "tuyệt vời", meaning: "絕佳", tail: "." },
               ],
-            },
-            {
-              sentence: "Đỉnh!",
-              translation: "頂！(年輕人流行語，指超強)。",
-              segments: [{ text: "Đỉnh", meaning: "頂峰/巔峰", tail: "!" }],
             },
           ],
-          usage_note: "Quá (太) 是加強語氣的常用詞。",
+          usage_note: "形容東西好吃也可以用『Tuyệt vời』。",
           image_file: "awesome.png",
         },
         {
@@ -1068,52 +1063,30 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Rất vui được gặp bạn",
-              pronunciation: ["/zət vuj ɗəək gap ban/"],
-              specific_note: "初次見面",
+              pronunciation: ["/zə̂ːt vui dɨə̰ːk ɣa̰ːp ba̰ːn/"],
+              specific_note: "正式初次見面。",
               segments: [
-                { text: "Rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: " " },
-                { text: "được", meaning: "獲得/被", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
+                { text: "Rất vui", meaning: "很高興", tail: " " },
+                { text: "được gặp", meaning: "能遇見", tail: " " },
                 { text: "bạn", meaning: "你", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Chào, rất vui được làm quen.",
-              translation: "你好，很高興能認識(結交)你。",
+              sentence: "Chào anh, rất vui được làm quen.",
+              translation: "哥你好，很高興認識你。（結識朋友常用）",
               segments: [
-                { text: "Chào", meaning: "你好", tail: ", " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: " " },
-                { text: "được", meaning: "能", tail: " " },
-                { text: "làm quen", meaning: "做朋友/認識", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hân hạnh được gặp anh.",
-              translation: "很榮幸見到你 (較正式)。",
-              segments: [
-                { text: "Hân hạnh", meaning: "欣幸/榮幸", tail: " " },
-                { text: "được", meaning: "能", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "anh", meaning: "哥", tail: "." },
-              ],
-            },
-            {
-              sentence: "Rất vui được biết bạn.",
-              translation: "很高興認識(知道)你。",
-              segments: [
-                { text: "Rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: " " },
-                { text: "được", meaning: "能", tail: " " },
-                { text: "biết", meaning: "知道", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
+                { text: "Chào", meaning: "問候", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: ", " },
+                { text: "rất vui", meaning: "很高興", tail: " " },
+                { text: "được", meaning: "被/能", tail: " " },
+                { text: "làm quen", meaning: "結識/認識", tail: "." },
               ],
             },
           ],
-          usage_note: "交換名片或握手時說。",
+          usage_note:
+            "商務場合說『được gặp』（見到面），交朋友說『làm quen』（結識）。",
           image_file: "nice_to_meet_you.png",
         },
         {
@@ -1122,49 +1095,43 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tiếc quá",
-              pronunciation: ["/tiək kwa/"],
-              specific_note: "遺憾",
+              pronunciation: ["/tiə̌k kwaː/"],
+              specific_note: "遺憾感嘆。",
               segments: [
-                { text: "Tiếc", meaning: "可惜/惋惜", tail: " " },
+                { text: "Tiếc", meaning: "可惜", tail: " " },
                 { text: "quá", meaning: "太", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tiếc thật!",
-              translation: "真是可惜！",
+              sentence: "Bạn không đi được à? Tiếc quá!",
+              translation: "你不能去喔？真可惜！",
               segments: [
-                { text: "Tiếc", meaning: "可惜", tail: " " },
-                { text: "thật", meaning: "真", tail: "!" },
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "không đi được", meaning: "不能去", tail: " " },
+                { text: "à", meaning: "啊", tail: "? " },
+                { text: "Tiếc quá", meaning: "太可惜了", tail: "!" },
               ],
             },
             {
-              sentence: "Xui ghê.",
-              translation: "真倒楣 / 運氣真差。",
+              sentence: "Uầy, tiếc thế nhỉ!",
+              translation: "哇，真可惜呢！（非常口語感嘆）",
               segments: [
-                { text: "Xui", meaning: "倒楣/衰", tail: " " },
-                { text: "ghê", meaning: "可怕/厲害", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thôi kệ đi.",
-              translation: "算了 / 隨它去吧 (自我安慰)。",
-              segments: [
-                { text: "Thôi", meaning: "罷了/停", tail: " " },
-                { text: "kệ", meaning: "管它的", tail: " " },
-                { text: "đi", meaning: "去/吧", tail: "." },
+                { text: "Uầy", meaning: "哇(感嘆詞)", tail: ", " },
+                { text: "tiếc", meaning: "可惜", tail: " " },
+                { text: "thế nhỉ", meaning: "這樣呢", tail: "!" },
               ],
             },
           ],
-          usage_note: "聽到壞消息或錯過機會時使用。",
+          usage_note: "聽到朋友沒辦法參加聚會時，這句是標準回應。",
           image_file: "too_bad.png",
         },
       ],
     },
     {
-      id: "pronouns",
-      name: "主詞與代名詞 (越南語)",
+      id: "pronouns_vn",
+      name: "主詞與代名詞",
       items: [
         {
           id: "pro-01",
@@ -1172,52 +1139,46 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nó",
-              pronunciation: ["/nɔ/"],
-              specific_note: "指動物/物品/晚輩",
-              segments: [{ text: "Nó", meaning: "它/牠", tail: "" }],
+              pronunciation: ["/nɔ̌/"],
+              specific_note: "指無生命物、動物，或對極熟的朋友、晚輩的稱呼。",
+              segments: [{ text: "Nó", meaning: "它", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Con mèo này dễ thương, nó tên là Mi.",
-              translation: "這隻貓很可愛，它叫 Mi。",
-              segments: [
-                { text: "Con", meaning: "隻(動物量詞)", tail: " " },
-                { text: "mèo", meaning: "貓", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "dễ thương", meaning: "可愛", tail: ", " },
-                { text: "nó", meaning: "它", tail: " " },
-                { text: "tên", meaning: "名字", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "Mi", meaning: "咪(名)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cái máy này hư rồi, nó không chạy.",
-              translation: "這台機器壞了，它不動了。",
-              segments: [
-                { text: "Cái", meaning: "個/台", tail: " " },
-                { text: "máy", meaning: "機器", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "hư", meaning: "壞", tail: " " },
-                { text: "rồi", meaning: "了", tail: ", " },
-                { text: "nó", meaning: "它", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "chạy", meaning: "跑/運作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nó đi đâu rồi?",
-              translation: "它(譬如狗)跑去哪了？",
+              sentence: "Nó hỏng rồi.",
+              translation: "它壞掉了。",
               segments: [
                 { text: "Nó", meaning: "它", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: " " },
-                { text: "rồi", meaning: "了", tail: "?" },
+                { text: "hỏng", meaning: "壞掉", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+            {
+              sentence: "Con mèo đó, nó đang ngủ.",
+              translation: "那隻貓，它正在睡覺。",
+              segments: [
+                { text: "Con mèo", meaning: "貓", tail: " " },
+                { text: "đó", meaning: "那", tail: ", " },
+                { text: "nó", meaning: "它", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "ngủ", meaning: "睡覺", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cái điện thoại này, nó đắt lắm.",
+              translation: "這台手機，它很貴喔。",
+              segments: [
+                { text: "Cái điện thoại", meaning: "手機", tail: " " },
+                { text: "này", meaning: "這", tail: ", " },
+                { text: "nó", meaning: "它", tail: " " },
+                { text: "đắt", meaning: "貴", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
               ],
             },
           ],
-          usage_note: "注意：講天氣(下雨)時不用 Nó，而是說「Trời」(天)。",
+          usage_note:
+            "跟英文的 it 很像，但在越南對晚輩或小孩有時也會自稱或稱呼對方為 nó，語氣較隨意。",
           image_file: "that.png",
         },
         {
@@ -1226,8741 +1187,22 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tôi",
-              pronunciation: ["/toj/"],
-              specific_note: "正式/通用",
+              pronunciation: ["/toːj/"],
+              specific_note: "最中性、正式的「我」。外國人初學最保險的詞。",
               segments: [{ text: "Tôi", meaning: "我", tail: "" }],
             },
             {
               term_target: "Em",
               pronunciation: ["/ɛm/"],
-              specific_note: "自稱(對長輩/情人)",
-              segments: [{ text: "Em", meaning: "我(弟妹)", tail: "" }],
+              specific_note:
+                "最常用的自稱。當你年紀比對方小，或是在餐廳點餐時自稱。",
+              segments: [{ text: "Em", meaning: "我 (晚輩)", tail: "" }],
             },
             {
               term_target: "Mình",
-              pronunciation: ["/mɨn/"],
-              specific_note: "親密/朋友",
-              segments: [{ text: "Mình", meaning: "我(自己)", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi là người Đài Loan.",
-              translation: "我是台灣人 (標準介紹)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "Đài Loan", meaning: "台灣", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em đói bụng quá.",
-              translation: "我好餓 (對朋友/情人撒嬌)。",
-              segments: [
-                { text: "Em", meaning: "我", tail: " " },
-                { text: "đói", meaning: "餓", tail: " " },
-                { text: "bụng", meaning: "肚子", tail: " " },
-                { text: "quá", meaning: "太/好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mình đi trước nhé.",
-              translation: "我先走囉 (平輩朋友)。",
-              segments: [
-                { text: "Mình", meaning: "我", tail: " " },
-                { text: "đi", meaning: "走", tail: " " },
-                { text: "trước", meaning: "先/前", tail: " " },
-                { text: "nhé", meaning: "喔(語助詞)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Tôi 很正式。日常生活中通常依輩分自稱 Anh/Chị/Em。",
-          image_file: "i.png",
-        },
-        {
-          id: "pro-03",
-          term_zh: "你",
-          related_terms: [
-            {
-              term_target: "Bạn",
-              pronunciation: ["/ban/"],
-              specific_note: "朋友/平輩通用",
-              segments: [{ text: "Bạn", meaning: "朋友/你", tail: "" }],
-            },
-            {
-              term_target: "Anh",
-              pronunciation: ["/aɲ/"],
-              specific_note: "稱呼男性(哥)",
-              segments: [{ text: "Anh", meaning: "哥(你)", tail: "" }],
-            },
-            {
-              term_target: "Chị",
-              pronunciation: ["/tʃi/"],
-              specific_note: "稱呼女性(姊)",
-              segments: [{ text: "Chị", meaning: "姊(你)", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn tên là gì?",
-              translation: "你叫什麼名字？(標準問法)",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "tên", meaning: "名字", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Anh đi đâu đấy?",
-              translation: "哥(你)要去哪裡？",
-              segments: [
-                { text: "Anh", meaning: "哥", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: " " },
-                { text: "đấy", meaning: "那(語助詞)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Chị ăn cơm chưa?",
-              translation: "姊(你)吃飯了嗎？",
-              segments: [
-                { text: "Chị", meaning: "姊", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "cơm", meaning: "飯", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "看到男的叫 Anh，女的叫 Chị，比你小的叫 Em。",
-          image_file: "you.png",
-        },
-        {
-          id: "pro-04",
-          term_zh: "他 (男性)",
-          related_terms: [
-            {
-              term_target: "Anh ấy",
-              pronunciation: ["/aɲ əj/"],
-              specific_note: "年輕男性",
-              segments: [
-                { text: "Anh", meaning: "哥/男", tail: " " },
-                { text: "ấy", meaning: "那(指代)", tail: "" },
-              ],
-            },
-            {
-              term_target: "Ông ấy",
-              pronunciation: ["/əwŋ͡m əj/"],
-              specific_note: "年長男性",
-              segments: [
-                { text: "Ông", meaning: "先生/爺爺", tail: " " },
-                { text: "ấy", meaning: "那", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Anh ấy là bạn trai tôi.",
-              translation: "他是我的男朋友。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "bạn trai", meaning: "男朋友", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Anh ấy làm việc ở đây.",
-              translation: "他在這裡工作。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ông ấy rất giàu.",
-              translation: "他(那位先生)很有錢。",
-              segments: [
-                { text: "Ông ấy", meaning: "他", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "giàu", meaning: "富裕", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "稱謂(Anh/Ông/Chú) + ấy = 他。",
-          image_file: "he.png",
-        },
-        {
-          id: "pro-05",
-          term_zh: "他的",
-          related_terms: [
-            {
-              term_target: "Của anh ấy",
-              pronunciation: ["/kuə aɲ əj/"],
-              specific_note: "",
-              segments: [
-                { text: "Của", meaning: "的/屬於", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đây là xe của anh ấy.",
-              translation: "這是他的車。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "xe", meaning: "車", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà anh ấy đẹp lắm.",
-              translation: "他家很漂亮 (口語常省略 Của)。",
-              segments: [
-                { text: "Nhà", meaning: "房子/家", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: " " },
-                { text: "đẹp", meaning: "漂亮", tail: " " },
-                { text: "lắm", meaning: "很/非常", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tên anh ấy là Nam.",
-              translation: "他的名字叫阿南。",
-              segments: [
-                { text: "Tên", meaning: "名字", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "Nam", meaning: "南", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "結構：物品 + (Của) + 人。",
-          image_file: "his.png",
-        },
-        {
-          id: "pro-06",
-          term_zh: "我們",
-          related_terms: [
-            {
-              term_target: "Chúng tôi",
-              pronunciation: ["/tʃuŋ͡m toj/"],
-              specific_note: "排除聽話者",
-              segments: [
-                { text: "Chúng", meaning: "眾/們", tail: " " },
-                { text: "tôi", meaning: "我", tail: "" },
-              ],
-            },
-            {
-              term_target: "Chúng ta",
-              pronunciation: ["/tʃuŋ͡m ta/"],
-              specific_note: "包含聽話者",
-              segments: [
-                { text: "Chúng", meaning: "眾", tail: " " },
-                { text: "ta", meaning: "咱/我們", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chúng tôi là sinh viên.",
-              translation: "我們是大學生 (跟別人介紹自己團體)。",
-              segments: [
-                { text: "Chúng tôi", meaning: "我們(排除你)", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sinh viên", meaning: "大學生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta đi ăn đi!",
-              translation: "我們(大家)去吃飯吧！",
-              segments: [
-                { text: "Chúng ta", meaning: "我們(包含你)", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "đi", meaning: "吧", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Tụi mình đi chơi nhé.",
-              translation: "我們去玩吧 (朋友間口語：Tụi mình)。",
-              segments: [
-                { text: "Tụi mình", meaning: "我們(親密)", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "chơi", meaning: "玩", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "跟對方說「我們一起做...」要用 Chúng ta。",
-          image_file: "we.png",
-        },
-        {
-          id: "pro-07",
-          term_zh: "她 (女性)",
-          related_terms: [
-            {
-              term_target: "Cô ấy",
-              pronunciation: ["/ko əj/"],
-              specific_note: "年輕女性/老師",
-              segments: [
-                { text: "Cô", meaning: "小姐/姑/老師", tail: " " },
-                { text: "ấy", meaning: "那", tail: "" },
-              ],
-            },
-            {
-              term_target: "Chị ấy",
-              pronunciation: ["/tʃi əj/"],
-              specific_note: "姊姊輩",
-              segments: [
-                { text: "Chị", meaning: "姊", tail: " " },
-                { text: "ấy", meaning: "那", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cô ấy đẹp quá.",
-              translation: "她好漂亮。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "đẹp", meaning: "漂亮", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chị ấy là sếp tôi.",
-              translation: "她是我的老闆。",
-              segments: [
-                { text: "Chị ấy", meaning: "她(姊)", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sếp", meaning: "老闆/上司", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy thích uống cà phê.",
-              translation: "她喜歡喝咖啡。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "uống", meaning: "喝", tail: " " },
-                { text: "cà phê", meaning: "咖啡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "稱謂(Cô/Chị/Bà) + ấy = 她。",
-          image_file: "she.png",
-        },
-        {
-          id: "pro-08",
-          term_zh: "他們",
-          related_terms: [
-            {
-              term_target: "Họ",
-              pronunciation: ["/hɔ/"],
-              specific_note: "通用",
-              segments: [{ text: "Họ", meaning: "他們", tail: "" }],
-            },
-            {
-              term_target: "Các anh ấy",
-              pronunciation: ["/kak aɲ əj/"],
-              specific_note: "那些男生",
-              segments: [
-                { text: "Các", meaning: "各/眾(複數)", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Họ đang làm gì?",
-              translation: "他們在做什麼？",
-              segments: [
-                { text: "Họ", meaning: "他們", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Họ là người nước ngoài.",
-              translation: "他們是外國人。",
-              segments: [
-                { text: "Họ", meaning: "他們", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "nước", meaning: "國", tail: " " },
-                { text: "ngoài", meaning: "外", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mấy người đó đi đâu rồi?",
-              translation: "那幾個人(他們)去哪了？",
-              segments: [
-                { text: "Mấy", meaning: "幾", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "đó", meaning: "那", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đâu", meaning: "哪", tail: " " },
-                { text: "rồi", meaning: "了", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Họ 是最安全的通用詞。",
-          image_file: "they.png",
-        },
-        {
-          id: "pro-09",
-          term_zh: "這個",
-          related_terms: [
-            {
-              term_target: "Cái này",
-              pronunciation: ["/kaj naj/"],
-              specific_note: "指物品",
-              segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "này", meaning: "這", tail: "" },
-              ],
-            },
-            {
-              term_target: "Người này",
-              pronunciation: ["/ŋɨəj naj/"],
-              specific_note: "指人",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "này", meaning: "這", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái này ngon lắm.",
-              translation: "這個很好吃。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích cái này.",
-              translation: "我喜歡這個。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cái này bao nhiêu tiền?",
-              translation: "這個多少錢？",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Này = 這。量詞(Cái/Con/Người) + Này。",
-          image_file: "this.png",
-        },
-        {
-          id: "pro-10",
-          term_zh: "那個",
-          related_terms: [
-            {
-              term_target: "Cái đó",
-              pronunciation: ["/kaj ɗɔ/"],
-              specific_note: "指物品(剛提過)",
-              segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "đó", meaning: "那", tail: "" },
-              ],
-            },
-            {
-              term_target: "Cái kia",
-              pronunciation: ["/kaj kiə/"],
-              specific_note: "指物品(遠處)",
-              segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "kia", meaning: "那(遠)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cho tôi xem cái đó.",
-              translation: "給我看看那個。",
-              segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "cái đó", meaning: "那個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cái kia là cái gì?",
-              translation: "那邊那個是什麼？",
-              segments: [
-                { text: "Cái kia", meaning: "那個(遠)", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "cái gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi không lấy cái đó.",
-              translation: "我不拿(買)那個。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "lấy", meaning: "拿/取", tail: " " },
-                { text: "cái đó", meaning: "那個", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Đó (剛提到的/那裡)，Kia (遠方的那裡)。",
-          image_file: "that.png",
-        },
-        {
-          id: "pro-11",
-          term_zh: "她的",
-          related_terms: [
-            {
-              term_target: "Của cô ấy",
-              pronunciation: ["/kuə ko əj/"],
-              specific_note: "",
-              segments: [
-                { text: "Của", meaning: "的", tail: " " },
-                { text: "cô ấy", meaning: "她", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tóc cô ấy dài.",
-              translation: "她的頭髮很長。",
-              segments: [
-                { text: "Tóc", meaning: "頭髮", tail: " " },
-                { text: "cô ấy", meaning: "她", tail: " " },
-                { text: "dài", meaning: "長", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đây là túi của chị ấy.",
-              translation: "這是她的包包。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "túi", meaning: "包/袋", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "chị ấy", meaning: "她(姊)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích áo của cô ấy.",
-              translation: "我喜歡她的衣服。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "áo", meaning: "衣服", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "cô ấy", meaning: "她", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一樣可省略 Của，直接說 Tóc cô ấy (她頭髮)。",
-          image_file: "her.png",
-        },
-        {
-          id: "pro-12",
-          term_zh: "你的",
-          related_terms: [
-            {
-              term_target: "Của bạn",
-              pronunciation: ["/kuə ban/"],
-              specific_note: "通用",
-              segments: [
-                { text: "Của", meaning: "的", tail: " " },
-                { text: "bạn", meaning: "你", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tên bạn là gì?",
-              translation: "你的名字是什麼？(省略了 Của)。",
-              segments: [
-                { text: "Tên", meaning: "名字", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đây có phải là điện thoại của bạn không?",
-              translation: "這是你的手機嗎？",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "có phải là", meaning: "是否是", tail: " " },
-                { text: "điện thoại", meaning: "電話/手機", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đừng quên chìa khóa của anh.",
-              translation: "別忘了你的鑰匙 (對男性說)。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "quên", meaning: "忘記", tail: " " },
-                { text: "chìa khóa", meaning: "鑰匙", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "anh", meaning: "哥(你)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常省略 Của，變成「名詞 + 你」。",
-          image_file: "your.png",
-        },
-        {
-          id: "pro-13",
-          term_zh: "他們的",
-          related_terms: [
-            {
-              term_target: "Của họ",
-              pronunciation: ["/kuə hɔ/"],
-              specific_note: "",
-              segments: [
-                { text: "Của", meaning: "的", tail: " " },
-                { text: "họ", meaning: "他們", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nhà của họ to lắm.",
-              translation: "他們的房子很大。",
-              segments: [
-                { text: "Nhà", meaning: "房子", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "họ", meaning: "他們", tail: " " },
-                { text: "to", meaning: "大", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Con của họ rất ngoan.",
-              translation: "他們的孩子很乖。",
-              segments: [
-                { text: "Con", meaning: "孩子", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "họ", meaning: "他們", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "ngoan", meaning: "乖", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi biết bố mẹ họ.",
-              translation: "我認識他們的父母。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "認識/知道", tail: " " },
-                { text: "bố mẹ", meaning: "父母", tail: " " },
-                { text: "họ", meaning: "他們", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "所有格。",
-          image_file: "their.png",
-        },
-        {
-          id: "pro-14",
-          term_zh: "我們的",
-          related_terms: [
-            {
-              term_target: "Của chúng tôi",
-              pronunciation: ["/kuə tʃuŋ͡m toj/"],
-              specific_note: "排除聽話者",
-              segments: [
-                { text: "Của", meaning: "的", tail: " " },
-                { text: "chúng tôi", meaning: "我們", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đây là nhà của chúng tôi.",
-              translation: "這是我們的家。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "nhà", meaning: "家", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "chúng tôi", meaning: "我們", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chào mừng đến công ty chúng tôi.",
-              translation: "歡迎來到我們公司。",
-              segments: [
-                { text: "Chào mừng", meaning: "歡迎", tail: " " },
-                { text: "đến", meaning: "來到", tail: " " },
-                { text: "công ty", meaning: "公司", tail: " " },
-                { text: "chúng tôi", meaning: "我們", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đội của chúng ta thắng rồi!",
-              translation: "我們這隊贏了！(包含聽話者)。",
-              segments: [
-                { text: "Đội", meaning: "隊伍", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "chúng ta", meaning: "咱們", tail: " " },
-                { text: "thắng", meaning: "贏", tail: " " },
-                { text: "rồi", meaning: "了", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "區分 Chúng tôi (不含你) 和 Chúng ta (含你)。",
-          image_file: "our.png",
-        },
-        {
-          id: "pro-15",
-          term_zh: "這些",
-          related_terms: [
-            {
-              term_target: "Những cái này",
-              pronunciation: ["/ɲɨŋ kaj naj/"],
-              specific_note: "複數物品",
-              segments: [
-                { text: "Những", meaning: "些(複數)", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "này", meaning: "這", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Những quả táo này ngọt lắm.",
-              translation: "這些蘋果很甜。",
-              segments: [
-                { text: "Những", meaning: "這些", tail: " " },
-                { text: "quả", meaning: "顆(果實)", tail: " " },
-                { text: "táo", meaning: "蘋果", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "ngọt", meaning: "甜", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mấy cái này của bạn hả?",
-              translation: "這幾個是你的嗎？(口語：Mấy 代替 Những)。",
-              segments: [
-                { text: "Mấy", meaning: "幾/些", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "hả", meaning: "蛤(疑問)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi thích những đôi giày này.",
-              translation: "我喜歡這些鞋子。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "những", meaning: "些", tail: " " },
-                { text: "đôi", meaning: "雙", tail: " " },
-                { text: "giày", meaning: "鞋", tail: " " },
-                { text: "này", meaning: "這", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Những 表示複數 + Này (這)。",
-          image_file: "these.png",
-        },
-        {
-          id: "pro-16",
-          term_zh: "那些",
-          related_terms: [
-            {
-              term_target: "Những cái đó",
-              pronunciation: ["/ɲɨŋ kaj ɗɔ/"],
-              specific_note: "複數物品",
-              segments: [
-                { text: "Những", meaning: "些", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "đó", meaning: "那", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Những bông hoa đó đẹp quá.",
-              translation: "那些花好漂亮。",
-              segments: [
-                { text: "Những", meaning: "那些", tail: " " },
-                { text: "bông", meaning: "朵", tail: " " },
-                { text: "hoa", meaning: "花", tail: " " },
-                { text: "đó", meaning: "那", tail: " " },
-                { text: "đẹp", meaning: "美", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Những người đó là ai?",
-              translation: "那些人是誰？",
-              segments: [
-                { text: "Những", meaning: "些", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "đó", meaning: "那", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "ai", meaning: "誰", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi muốn mua mấy cái bánh đó.",
-              translation: "我想買那幾個餅乾。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "mua", meaning: "買", tail: " " },
-                { text: "mấy", meaning: "幾(些)", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "bánh", meaning: "餅", tail: " " },
-                { text: "đó", meaning: "那", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Những 表示複數 + Đó (那)。",
-          image_file: "those.png",
-        },
-      ],
-    },
-    {
-      id: "verbs",
-      name: "常用動詞 (越南語)",
-      items: [
-        {
-          id: "v-01",
-          term_zh: "是",
-          related_terms: [
-            {
-              term_target: "Là",
-              pronunciation: ["/la/"],
-              specific_note: "定義/等於",
-              segments: [{ text: "Là", meaning: "是", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi là người Việt Nam.",
-              translation: "我是越南人。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "Việt Nam", meaning: "越南", tail: "." },
-              ],
-            },
-            {
-              sentence: "Anh ấy là giáo viên.",
-              translation: "他是一位老師。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "giáo viên", meaning: "老師", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đây là bạn tôi.",
-              translation: "這是我的朋友。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "bạn", meaning: "朋友", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-          ],
-          usage_note:
-            "越南語的「是」專指身分或定義，形容詞前不需要加 (如：我很開心 = Tôi rất vui)。",
-          image_file: "be.png",
-        },
-        {
-          id: "v-02",
-          term_zh: "有（擁有）",
-          related_terms: [
-            {
-              term_target: "Có",
-              pronunciation: ["/kɔ/"],
-              specific_note: "",
-              segments: [{ text: "Có", meaning: "有", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi có xe máy.",
-              translation: "我有一台機車。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "xe máy", meaning: "機車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy có con mèo.",
-              translation: "她有一隻貓。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "con", meaning: "隻", tail: " " },
-                { text: "mèo", meaning: "貓", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có câu hỏi gì không?",
-              translation: "你有任何問題嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "câu hỏi", meaning: "問題", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "除了「擁有」，Có 也用在 Yes/No 問句 (Có... không)。",
-          image_file: "have.png",
-        },
-        {
-          id: "v-03",
-          term_zh: "去",
-          related_terms: [
-            {
-              term_target: "Đi",
-              pronunciation: ["/ɗi/"],
-              specific_note: "",
-              segments: [{ text: "Đi", meaning: "去/走", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi làm.",
-              translation: "我去上班。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "làm", meaning: "做(上班)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi thôi!",
-              translation: "走吧！/ 出發吧！",
-              segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "thôi", meaning: "罷了/語助詞", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Bạn đi đâu đấy?",
-              translation: "你要去哪裡？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: " " },
-                { text: "đấy", meaning: "那(語助詞)", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Đi 既是「去某地」，也是走路的「走」。",
-          image_file: "go.png",
-        },
-        {
-          id: "v-04",
-          term_zh: "得到 / 拿 / 收",
-          related_terms: [
-            {
-              term_target: "Lấy",
-              pronunciation: ["/ləj/"],
-              specific_note: "拿取/娶/嫁",
-              segments: [{ text: "Lấy", meaning: "拿", tail: "" }],
-            },
-            {
-              term_target: "Nhận",
-              pronunciation: ["/ɲən/"],
-              specific_note: "收到/領取",
-              segments: [{ text: "Nhận", meaning: "收", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đã nhận được quà.",
-              translation: "我已經收到禮物了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "nhận", meaning: "收", tail: " " },
-                { text: "được", meaning: "到/得", tail: " " },
-                { text: "quà", meaning: "禮物", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lấy cho tôi cái kia.",
-              translation: "幫我拿那個 (拿給我不需用 get)。",
-              segments: [
-                { text: "Lấy", meaning: "拿", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "cái kia", meaning: "那個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn nhận được email chưa?",
-              translation: "你收到電子郵件了嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nhận", meaning: "收", tail: " " },
-                { text: "được", meaning: "到", tail: " " },
-                { text: "email", meaning: "電郵", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "主動去拿用 Lấy，被動收到用 Nhận。",
-          image_file: "get.png",
-        },
-        {
-          id: "v-05",
-          term_zh: "做",
-          related_terms: [
-            {
-              term_target: "Làm",
-              pronunciation: ["/lam/"],
-              specific_note: "",
-              segments: [{ text: "Làm", meaning: "做", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đang làm bài tập.",
-              translation: "我正在做功課。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "bài tập", meaning: "練習題/功課", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cứ làm đi.",
-              translation: "儘管做吧 / 做就對了。",
-              segments: [
-                { text: "Cứ", meaning: "儘管/繼續", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn làm nghề gì?",
-              translation: "你做什麼工作？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "nghề", meaning: "職業", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "最萬用的動詞，做菜、做事、上班都用它。",
-          image_file: "do.png",
-        },
-        {
-          id: "v-06",
-          term_zh: "說（講）",
-          related_terms: [
-            {
-              term_target: "Nói",
-              pronunciation: ["/nɔj/"],
-              specific_note: "",
-              segments: [{ text: "Nói", meaning: "說", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đừng nói chuyện.",
-              translation: "別講話 / 別聊天。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "chuyện", meaning: "故事/事情", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn nói gì cơ?",
-              translation: "你剛剛說什麼？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
-                { text: "cơ", meaning: "啊(語助詞)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Nói đi!",
-              translation: "說呀！",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "đi", meaning: "吧", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "Nói chuyện = 說故事 = 聊天/講話。",
-          image_file: "say.png",
-        },
-        {
-          id: "v-07",
-          term_zh: "知道",
-          related_terms: [
-            {
-              term_target: "Biết",
-              pronunciation: ["/biət/"],
-              specific_note: "知道事情/技能",
-              segments: [{ text: "Biết", meaning: "知道", tail: "" }],
-            },
-            {
-              term_target: "Quen",
-              pronunciation: ["/kwɛn/"],
-              specific_note: "認識某人",
-              segments: [{ text: "Quen", meaning: "熟識", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi biết rồi.",
-              translation: "我知道了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "知道", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không biết bơi.",
-              translation: "我不會(知道)游泳。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "biết", meaning: "會/知道", tail: " " },
-                { text: "bơi", meaning: "游泳", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có quen anh ấy không?",
-              translation: "你認識他嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "quen", meaning: "認識/熟", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "知道事情用 Biết，認識朋友用 Quen。",
-          image_file: "know.png",
-        },
-        {
-          id: "v-08",
-          term_zh: "想／思考",
-          related_terms: [
-            {
-              term_target: "Nghĩ",
-              pronunciation: ["/ŋi/"],
-              specific_note: "思考",
-              segments: [{ text: "Nghĩ", meaning: "想", tail: "" }],
-            },
-            {
-              term_target: "Thấy",
-              pronunciation: ["/tʰəj/"],
-              specific_note: "覺得/認為",
-              segments: [{ text: "Thấy", meaning: "感到/看見", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi cũng nghĩ vậy.",
-              translation: "我也這麼認為(想)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cũng", meaning: "也", tail: " " },
-                { text: "nghĩ", meaning: "想", tail: " " },
-                { text: "vậy", meaning: "那樣", tail: "." },
-              ],
-            },
-            {
-              sentence: "Để tôi nghĩ đã.",
-              translation: "讓我想一想。",
-              segments: [
-                { text: "Để", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "nghĩ", meaning: "想", tail: " " },
-                { text: "đã", meaning: "先/已經", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thấy bạn đúng.",
-              translation: "我覺得你是對的。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thấy", meaning: "覺得/看見", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đúng", meaning: "對", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "表達「觀點」常用 Thấy (覺得)，動腦筋用 Nghĩ (思考)。",
-          image_file: "think.png",
-        },
-        {
-          id: "v-09",
-          term_zh: "看見",
-          related_terms: [
-            {
-              term_target: "Thấy",
-              pronunciation: ["/tʰəj/"],
-              specific_note: "看到(結果)",
-              segments: [{ text: "Thấy", meaning: "看見", tail: "" }],
-            },
-            {
-              term_target: "Nhìn",
-              pronunciation: ["/ɲin/"],
-              specific_note: "看(動作)",
-              segments: [{ text: "Nhìn", meaning: "注視", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi không thấy gì cả.",
-              translation: "我什麼都沒看見。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "thấy", meaning: "看見", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
-                { text: "cả", meaning: "全部/都", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có thấy chìa khóa đâu không?",
-              translation: "你有看到鑰匙在哪嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "thấy", meaning: "看見", tail: " " },
-                { text: "chìa khóa", meaning: "鑰匙", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Nhìn kìa!",
-              translation: "看那邊！",
-              segments: [
-                { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "kìa", meaning: "那裡(遠)", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "Nhìn 是盯著看，Thấy 是看到了。",
-          image_file: "see.png",
-        },
-        {
-          id: "v-10",
-          term_zh: "做出 / 泡(飲料)",
-          related_terms: [
-            {
-              term_target: "Làm",
-              pronunciation: ["/lam/"],
-              specific_note: "製作",
-              segments: [{ text: "Làm", meaning: "做", tail: "" }],
-            },
-            {
-              term_target: "Pha",
-              pronunciation: ["/fa/"],
-              specific_note: "泡/調製",
-              segments: [{ text: "Pha", meaning: "沖泡", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Pha cà phê.",
-              translation: "泡咖啡。",
-              segments: [
-                { text: "Pha", meaning: "泡", tail: " " },
-                { text: "cà phê", meaning: "咖啡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng làm ồn.",
-              translation: "不要製造噪音(做吵)。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "ồn", meaning: "吵雜", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi làm sai rồi.",
-              translation: "我搞錯了 (做錯了)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "sai", meaning: "錯", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Make 飲料用 Pha，Make 錯誤/東西用 Làm。",
-          image_file: "make.png",
-        },
-        {
-          id: "v-11",
-          term_zh: "來",
-          related_terms: [
-            {
-              term_target: "Đến",
-              pronunciation: ["/ɗen/"],
-              specific_note: "抵達",
-              segments: [{ text: "Đến", meaning: "到/來", tail: "" }],
-            },
-            {
-              term_target: "Lại",
-              pronunciation: ["/laj/"],
-              specific_note: "靠近",
-              segments: [{ text: "Lại", meaning: "來/回", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Lại đây.",
-              translation: "過來這裡。",
-              segments: [
-                { text: "Lại", meaning: "來", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mời vào.",
-              translation: "請進 (來裡面)。",
-              segments: [
-                { text: "Mời", meaning: "邀請/請", tail: " " },
-                { text: "vào", meaning: "進/入", tail: "." },
-              ],
-            },
-            {
-              sentence: "Khi nào bạn đến?",
-              translation: "你什麼時候會來(到)？",
-              segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đến", meaning: "到", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "叫人過來用 Lại đây，講抵達目的地用 Đến。",
-          image_file: "come.png",
-        },
-        {
-          id: "v-12",
-          term_zh: "需要",
-          related_terms: [
-            {
-              term_target: "Cần",
-              pronunciation: ["/kən/"],
-              specific_note: "",
-              segments: [{ text: "Cần", meaning: "需要", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi cần nước.",
-              translation: "我需要水。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "nước", meaning: "水", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cần bạn giúp.",
-              translation: "我需要你幫忙。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "giúp", meaning: "幫", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta cần nói chuyện.",
-              translation: "我們需要談談。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "chuyện", meaning: "事", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Cần + 名詞/動詞 皆可。",
-          image_file: "need.png",
-        },
-        {
-          id: "v-13",
-          term_zh: "使用",
-          related_terms: [
-            {
-              term_target: "Dùng",
-              pronunciation: ["/zuŋ͡m/"],
-              specific_note: "口語",
-              segments: [{ text: "Dùng", meaning: "用", tail: "" }],
-            },
-            {
-              term_target: "Sử dụng",
-              pronunciation: ["/sɨ zuŋ͡m/"],
-              specific_note: "正式",
-              segments: [{ text: "Sử dụng", meaning: "使用", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Dùng bút này đi.",
-              translation: "用這支筆吧。",
-              segments: [
-                { text: "Dùng", meaning: "用", tail: " " },
-                { text: "bút", meaning: "筆", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi mượn điện thoại được không?",
-              translation: "我可以借(用)你的手機嗎？",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "mượn", meaning: "借", tail: " " },
-                { text: "điện thoại", meaning: "電話", tail: " " },
-                { text: "được", meaning: "行", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cái này dùng thế nào?",
-              translation: "這個怎麼用？",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "dùng", meaning: "用", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "日常說 Dùng，寫作或說明書說 Sử dụng。",
-          image_file: "use.png",
-        },
-        {
-          id: "v-14",
-          term_zh: "找到",
-          related_terms: [
-            {
-              term_target: "Tìm",
-              pronunciation: ["/tim/"],
-              specific_note: "尋找(動作)",
-              segments: [{ text: "Tìm", meaning: "找", tail: "" }],
-            },
-            {
-              term_target: "Tìm thấy",
-              pronunciation: ["/tim tʰəj/"],
-              specific_note: "找到了(結果)",
-              segments: [
-                { text: "Tìm", meaning: "找", tail: " " },
-                { text: "thấy", meaning: "見", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đang tìm việc.",
-              translation: "我正在找工作。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "tìm", meaning: "找", tail: " " },
-                { text: "việc", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không tìm thấy chìa khóa.",
-              translation: "我找不到鑰匙。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "tìm thấy", meaning: "找到", tail: " " },
-                { text: "chìa khóa", meaning: "鑰匙", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn tìm thấy chưa?",
-              translation: "你找到了嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "tìm thấy", meaning: "找到", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Tìm 是過程，Tìm thấy 是結果。",
-          image_file: "find.png",
-        },
-        {
-          id: "v-15",
-          term_zh: "給",
-          related_terms: [
-            {
-              term_target: "Cho",
-              pronunciation: ["/tʃɔ/"],
-              specific_note: "給予",
-              segments: [{ text: "Cho", meaning: "給", tail: "" }],
-            },
-            {
-              term_target: "Đưa",
-              pronunciation: ["/ɗɨə/"],
-              specific_note: "遞給/交給",
-              segments: [{ text: "Đưa", meaning: "遞", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đưa cho tôi cái đó.",
-              translation: "把那個遞給我。",
-              segments: [
-                { text: "Đưa", meaning: "遞", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "cái đó", meaning: "那個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giúp tôi một tay.",
-              translation: "幫我一把 (Give me a hand)。",
-              segments: [
-                { text: "Giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "tay", meaning: "手", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng bao giờ bỏ cuộc.",
-              translation: "永不放棄 (Never give up)。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "bao giờ", meaning: "何時(永遠)", tail: " " },
-                { text: "bỏ cuộc", meaning: "放棄", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一般送禮或給東西用 Cho，傳遞東西用 Đưa。",
-          image_file: "give.png",
-        },
-        {
-          id: "v-16",
-          term_zh: "告訴",
-          related_terms: [
-            {
-              term_target: "Nói (cho)",
-              pronunciation: ["/nɔj/"],
-              specific_note: "告訴(某人)",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "cho", meaning: "給", tail: "" },
-              ],
-            },
-            {
-              term_target: "Kể",
-              pronunciation: ["/ke/"],
-              specific_note: "講述(故事)",
-              segments: [{ text: "Kể", meaning: "講", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nói cho tôi biết tại sao.",
-              translation: "告訴我為什麼。",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "知道", tail: " " },
-                { text: "tại sao", meaning: "為什麼", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nói thật đi.",
-              translation: "說實話 (Tell the truth)。",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "thật", meaning: "真", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng nói với ai.",
-              translation: "不要告訴任何人。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "với", meaning: "跟/對", tail: " " },
-                { text: "ai", meaning: "誰", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nói cho (說給..聽) = Tell。",
-          image_file: "tell.png",
-        },
-        {
-          id: "v-17",
-          term_zh: "工作",
-          related_terms: [
-            {
-              term_target: "Làm việc",
-              pronunciation: ["/lam viək/"],
-              specific_note: "上班/做事",
-              segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "việc", meaning: "事", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi làm việc ở đây.",
-              translation: "我在這工作。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Máy tính không chạy.",
-              translation: "電腦不運作(壞了)。",
-              segments: [
-                { text: "Máy tính", meaning: "電腦", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "chạy", meaning: "跑/運作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy làm việc chăm chỉ.",
-              translation: "她工作很認真。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "chăm chỉ", meaning: "勤勞/認真", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "機器運作通常用 Chạy (跑)，人工作用 Làm việc。",
-          image_file: "work.png",
-        },
-        {
-          id: "v-18",
-          term_zh: "喜歡",
-          related_terms: [
-            {
-              term_target: "Thích",
-              pronunciation: ["/tʰik/"],
-              specific_note: "",
-              segments: [{ text: "Thích", meaning: "喜歡", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi thích nó.",
-              translation: "我喜歡它。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "nó", meaning: "它", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích ăn pizza.",
-              translation: "我喜歡吃披薩。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "pizza", meaning: "披薩", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có thích anh ấy không?",
-              translation: "你喜歡他嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Thích + 名詞 或 Thích + 動詞 都可以。",
-          image_file: "like.png",
-        },
-        {
-          id: "v-19",
-          term_zh: "起床",
-          related_terms: [
-            {
-              term_target: "Thức dậy",
-              pronunciation: ["/tʰɨk zəj/"],
-              specific_note: "醒來",
-              segments: [
-                { text: "Thức", meaning: "醒", tail: " " },
-                { text: "dậy", meaning: "起", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Dậy đi.",
-              translation: "起床啦 (口語)。",
-              segments: [
-                { text: "Dậy", meaning: "起來", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thường dậy lúc 7 giờ.",
-              translation: "我通常7點起床。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thường", meaning: "經常", tail: " " },
-                { text: "dậy", meaning: "起來", tail: " " },
-                { text: "lúc", meaning: "在...時刻", tail: " " },
-                { text: "7", meaning: "七", tail: " " },
-                { text: "giờ", meaning: "點/小時", tail: "." },
-              ],
-            },
-            {
-              sentence: "Dậy đi! Muộn rồi.",
-              translation: "起床！遲到了。",
-              segments: [
-                { text: "Dậy", meaning: "起來", tail: " " },
-                { text: "đi", meaning: "吧", tail: "! " },
-                { text: "Muộn", meaning: "晚", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "日常口語常省略成 Dậy (起)。",
-          image_file: "wake_up.png",
-        },
-        {
-          id: "v-20",
-          term_zh: "說話 (講語言)",
-          related_terms: [
-            {
-              term_target: "Nói",
-              pronunciation: ["/nɔj/"],
-              specific_note: "講",
-              segments: [{ text: "Nói", meaning: "說", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nói tiếng Anh.",
-              translation: "說英文。",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "tiếng", meaning: "語言", tail: " " },
-                { text: "Anh", meaning: "英", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cho tôi gặp Tom được không?",
-              translation: "我可以跟湯姆說話嗎？(電話用語: 讓我見Tom)。",
-              segments: [
-                { text: "Cho", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "gặp", meaning: "遇見", tail: " " },
-                { text: "Tom", meaning: "湯姆", tail: " " },
-                { text: "được", meaning: "行", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Làm ơn nói chậm lại.",
-              translation: "請說慢一點。",
-              segments: [
-                { text: "Làm ơn", meaning: "拜託", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "lại", meaning: "下來", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "說某種語言用 Nói + 語言名。",
-          image_file: "speak.png",
-        },
-        {
-          id: "v-21",
-          term_zh: "聽見",
-          related_terms: [
-            {
-              term_target: "Nghe",
-              pronunciation: ["/ŋɛ/"],
-              specific_note: "聽(動作)",
-              segments: [{ text: "Nghe", meaning: "聽", tail: "" }],
-            },
-            {
-              term_target: "Nghe thấy",
-              pronunciation: ["/ŋɛ tʰəj/"],
-              specific_note: "聽到了(結果)",
-              segments: [
-                { text: "Nghe", meaning: "聽", tail: " " },
-                { text: "thấy", meaning: "見/覺", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn nghe rõ không?",
-              translation: "你聽得清楚嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nghe", meaning: "聽", tail: " " },
-                { text: "rõ", meaning: "清楚", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi không nghe thấy gì.",
-              translation: "我什麼都沒聽到。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不/沒", tail: " " },
-                { text: "nghe thấy", meaning: "聽到", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghe này!",
-              translation: "聽我說！/ 聽著！",
-              segments: [
-                { text: "Nghe", meaning: "聽", tail: " " },
-                { text: "này", meaning: "這(語助詞)", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "講電話或訊號不好時常問「Nghe rõ không?」。",
-          image_file: "hear.png",
-        },
-        {
-          id: "v-22",
-          term_zh: "寫",
-          related_terms: [
-            {
-              term_target: "Viết",
-              pronunciation: ["/viət/"],
-              specific_note: "",
-              segments: [{ text: "Viết", meaning: "寫", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Viết tên bạn vào đây.",
-              translation: "把你的名字寫在這裡。",
-              segments: [
-                { text: "Viết", meaning: "寫", tail: " " },
-                { text: "tên", meaning: "名字", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "vào", meaning: "進/入", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đang viết email.",
-              translation: "我正在寫電子郵件。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "viết", meaning: "寫", tail: " " },
-                { text: "email", meaning: "電郵", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng viết bậy.",
-              translation: "不要亂寫。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "viết", meaning: "寫", tail: " " },
-                { text: "bậy", meaning: "亂/錯", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "書寫動作。",
-          image_file: "write.png",
-        },
-        {
-          id: "v-23",
-          term_zh: "閱讀",
-          related_terms: [
-            {
-              term_target: "Đọc",
-              pronunciation: ["/ɗɔk/"],
-              specific_note: "",
-              segments: [{ text: "Đọc", meaning: "讀", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi thích đọc sách.",
-              translation: "我喜歡看書。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "đọc", meaning: "閱讀", tail: " " },
-                { text: "sách", meaning: "書", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đọc tin nhắn đi.",
-              translation: "讀(看)訊息吧。",
-              segments: [
-                { text: "Đọc", meaning: "讀", tail: " " },
-                { text: "tin nhắn", meaning: "訊息/簡訊", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn biết đọc tiếng Việt không?",
-              translation: "你會讀越南文嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "biết", meaning: "會/懂", tail: " " },
-                { text: "đọc", meaning: "讀", tail: " " },
-                { text: "tiếng Việt", meaning: "越南語", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "看書、看報紙、看訊息都用 Đọc。",
-          image_file: "read.png",
-        },
-        {
-          id: "v-24",
-          term_zh: "等待",
-          related_terms: [
-            {
-              term_target: "Đợi",
-              pronunciation: ["/ɗəj/"],
-              specific_note: "北部/通用",
-              segments: [{ text: "Đợi", meaning: "等", tail: "" }],
-            },
-            {
-              term_target: "Chờ",
-              pronunciation: ["/tʃə/"],
-              specific_note: "南部/通用",
-              segments: [{ text: "Chờ", meaning: "等", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đợi tôi một chút.",
-              translation: "等我一下。",
-              segments: [
-                { text: "Đợi", meaning: "等", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "một chút", meaning: "一點點/一下", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn đang chờ ai?",
-              translation: "你在等誰？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "chờ", meaning: "等", tail: " " },
-                { text: "ai", meaning: "誰", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Làm ơn đợi ở đây.",
-              translation: "麻煩在這裡等。",
-              segments: [
-                { text: "Làm ơn", meaning: "拜託/麻煩", tail: " " },
-                { text: "đợi", meaning: "等", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Đợi 和 Chờ 大部分情況可通用。",
-          image_file: "wait.png",
-        },
-        {
-          id: "v-25",
-          term_zh: "嘗試 / 盡力",
-          related_terms: [
-            {
-              term_target: "Thử",
-              pronunciation: ["/tʰɨ/"],
-              specific_note: "試驗(Try out)",
-              segments: [{ text: "Thử", meaning: "試", tail: "" }],
-            },
-            {
-              term_target: "Cố gắng",
-              pronunciation: ["/ko gaŋ/"],
-              specific_note: "盡力(Try hard)",
-              segments: [{ text: "Cố gắng", meaning: "努力", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ăn thử món này đi.",
-              translation: "試吃看看這道菜。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "thử", meaning: "試", tail: " " },
-                { text: "món", meaning: "道(菜)", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mặc thử xem có vừa không.",
-              translation: "試穿看看合不合身。",
-              segments: [
-                { text: "Mặc", meaning: "穿", tail: " " },
-                { text: "thử", meaning: "試", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "có", meaning: "有/是否", tail: " " },
-                { text: "vừa", meaning: "合適", tail: " " },
-                { text: "không", meaning: "嗎", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi sẽ cố gắng hết sức.",
-              translation: "我會盡全力的 (Try my best)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "sẽ", meaning: "將會", tail: " " },
-                { text: "cố gắng", meaning: "努力", tail: " " },
-                { text: "hết sức", meaning: "盡力/竭盡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "試衣服、試吃用「Thử」；加油努力用「Cố gắng」。",
-          image_file: "try.png",
-        },
-        {
-          id: "v-26",
-          term_zh: "付錢",
-          related_terms: [
-            {
-              term_target: "Trả tiền",
-              pronunciation: ["/tʃa tiən/"],
-              specific_note: "口語",
-              segments: [
-                { text: "Trả", meaning: "付/還", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "" },
-              ],
-            },
-            {
-              term_target: "Thanh toán",
-              pronunciation: ["/tʰaɲ tɔan/"],
-              specific_note: "正式/餐廳",
-              segments: [
-                { text: "Thanh toán", meaning: "結帳/清算", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Em ơi, tính tiền!",
-              translation: "服務生，買單！(最道地說法)。",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "ơi", meaning: "喂", tail: ", " },
-                { text: "tính", meaning: "算", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Để tôi trả tiền.",
-              translation: "讓我來付錢。",
-              segments: [
-                { text: "Để", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "trả", meaning: "付", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có thể thanh toán bằng thẻ.",
-              translation: "你可以用卡付款。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "thanh toán", meaning: "結帳", tail: " " },
-                { text: "bằng", meaning: "用/藉由", tail: " " },
-                { text: "thẻ", meaning: "卡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "餐廳結帳大喊「Tính tiền」(算錢) 即可。",
-          image_file: "pay.png",
-        },
-        {
-          id: "v-27",
-          term_zh: "選擇",
-          related_terms: [
-            {
-              term_target: "Chọn",
-              pronunciation: ["/tʃɔn/"],
-              specific_note: "",
-              segments: [{ text: "Chọn", meaning: "選", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn chọn cái nào?",
-              translation: "你選哪一個？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "chọn", meaning: "選", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "nào", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Khó chọn quá.",
-              translation: "太難選了。",
-              segments: [
-                { text: "Khó", meaning: "難", tail: " " },
-                { text: "chọn", meaning: "選", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hãy chọn một số.",
-              translation: "請選一個號碼。",
-              segments: [
-                { text: "Hãy", meaning: "請/祈使詞", tail: " " },
-                { text: "chọn", meaning: "選", tail: " " },
-                { text: "một", meaning: "一個", tail: " " },
-                { text: "số", meaning: "數字", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "挑選物品或做決定。",
-          image_file: "choose.png",
-        },
-        {
-          id: "v-28",
-          term_zh: "進入",
-          related_terms: [
-            {
-              term_target: "Vào",
-              pronunciation: ["/vaːw/"],
-              specific_note: "進入空間",
-              segments: [{ text: "Vào", meaning: "進", tail: "" }],
-            },
-            {
-              term_target: "Nhập",
-              pronunciation: ["/ɲəp/"],
-              specific_note: "輸入資料",
-              segments: [{ text: "Nhập", meaning: "輸入", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mời vào nhà.",
-              translation: "請進屋。",
-              segments: [
-                { text: "Mời", meaning: "請", tail: " " },
-                { text: "vào", meaning: "進", tail: " " },
-                { text: "nhà", meaning: "家/屋", tail: "." },
-              ],
-            },
-            {
-              sentence: "Không được vào.",
-              translation: "禁止進入 (不能進)。",
-              segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "được", meaning: "可以/被允許", tail: " " },
-                { text: "vào", meaning: "進", tail: "." },
-              ],
-            },
-            {
-              sentence: "Vui lòng nhập mật khẩu.",
-              translation: "請輸入密碼。",
-              segments: [
-                { text: "Vui lòng", meaning: "請/樂意", tail: " " },
-                { text: "nhập", meaning: "輸入", tail: " " },
-                { text: "mật khẩu", meaning: "密碼", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "身體移動用 Vào，打字輸入用 Nhập。",
-          image_file: "enter.png",
-        },
-        {
-          id: "v-29",
-          term_zh: "住",
-          related_terms: [
-            {
-              term_target: "Sống",
-              pronunciation: ["/səwŋ͡m/"],
-              specific_note: "生活/生存",
-              segments: [{ text: "Sống", meaning: "活/住", tail: "" }],
-            },
-            {
-              term_target: "Ở",
-              pronunciation: ["/ə/"],
-              specific_note: "居住/待在",
-              segments: [{ text: "Ở", meaning: "在/住", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn sống ở đâu?",
-              translation: "你住在哪裡？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "sống", meaning: "生活", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi ở Hà Nội.",
-              translation: "我住在河內。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "ở", meaning: "住/在", tail: " " },
-                { text: "Hà Nội", meaning: "河內", tail: "." },
-              ],
-            },
-            {
-              sentence: "Anh ấy sống một mình.",
-              translation: "他一個人住(生活)。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "sống", meaning: "生活", tail: " " },
-                { text: "một mình", meaning: "獨自", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "問地址常用 Ở đâu (在哪)，問定居城市可用 Sống ở đâu。",
-          image_file: "live.png",
-        },
-        {
-          id: "v-30",
-          term_zh: "到達",
-          related_terms: [
-            {
-              term_target: "Đến",
-              pronunciation: ["/ɗen/"],
-              specific_note: "通用",
-              segments: [{ text: "Đến", meaning: "到", tail: "" }],
-            },
-            {
-              term_target: "Tới",
-              pronunciation: ["/təj/"],
-              specific_note: "南方常用",
-              segments: [{ text: "Tới", meaning: "到", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Khi nào chúng ta đến nơi?",
-              translation: "我們什麼時候會到(目的地)？",
-              segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "chúng ta", meaning: "我們", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "nơi", meaning: "地方/目的地", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Xe buýt đến rồi.",
-              translation: "公車到了。",
-              segments: [
-                { text: "Xe buýt", meaning: "公車", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi mới tới.",
-              translation: "我剛到。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "mới", meaning: "剛剛/新", tail: " " },
-                { text: "tới", meaning: "到", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Đến 和 Tới 都可以表示到達。",
-          image_file: "arrive.png",
-        },
-        {
-          id: "v-31",
-          term_zh: "走路",
-          related_terms: [
-            {
-              term_target: "Đi bộ",
-              pronunciation: ["/ɗi bo/"],
-              specific_note: "",
-              segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "bộ", meaning: "部/步", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi bộ đi học.",
-              translation: "我走路去上學。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi bộ", meaning: "走路", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "học", meaning: "學", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta đi bộ nhé.",
-              translation: "我們走路吧。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "đi bộ", meaning: "走路", tail: " " },
-                { text: "nhé", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi bộ tốt cho sức khỏe.",
-              translation: "走路對健康很好。",
-              segments: [
-                { text: "Đi bộ", meaning: "走路", tail: " " },
-                { text: "tốt", meaning: "好", tail: " " },
-                { text: "cho", meaning: "給/對", tail: " " },
-                { text: "sức khỏe", meaning: "健康", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "單說 Đi 只是「去」，強調雙腳走要說 Đi bộ。",
-          image_file: "walk.png",
-        },
-        {
-          id: "v-32",
-          term_zh: "打開",
-          related_terms: [
-            {
-              term_target: "Mở",
-              pronunciation: ["/mə/"],
-              specific_note: "開門/開機",
-              segments: [{ text: "Mở", meaning: "開", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Làm ơn mở cửa.",
-              translation: "麻煩開門。",
-              segments: [
-                { text: "Làm ơn", meaning: "麻煩", tail: " " },
-                { text: "mở", meaning: "開", tail: " " },
-                { text: "cửa", meaning: "門", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mở sách trang 10.",
-              translation: "打開書本第10頁。",
-              segments: [
-                { text: "Mở", meaning: "打開", tail: " " },
-                { text: "sách", meaning: "書", tail: " " },
-                { text: "trang", meaning: "頁", tail: " " },
-                { text: "10", meaning: "十", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mấy giờ quán mở cửa?",
-              translation: "店幾點開門？",
-              segments: [
-                { text: "Mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "quán", meaning: "店", tail: " " },
-                { text: "mở cửa", meaning: "開門", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "開門、開燈、開店都用 Mở。",
-          image_file: "open.png",
-        },
-        {
-          id: "v-33",
-          term_zh: "關閉",
-          related_terms: [
-            {
-              term_target: "Đóng",
-              pronunciation: ["/ɗawŋ͡m/"],
-              specific_note: "關門/蓋上",
-              segments: [{ text: "Đóng", meaning: "關", tail: "" }],
-            },
-            {
-              term_target: "Tắt",
-              pronunciation: ["/tat/"],
-              specific_note: "關電器/燈",
-              segments: [{ text: "Tắt", meaning: "熄滅", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đóng cửa lại đi.",
-              translation: "把門關上吧。",
-              segments: [
-                { text: "Đóng", meaning: "關", tail: " " },
-                { text: "cửa", meaning: "門", tail: " " },
-                { text: "lại", meaning: "起來/回", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhớ tắt đèn.",
-              translation: "記得關燈。",
-              segments: [
-                { text: "Nhớ", meaning: "記得", tail: " " },
-                { text: "tắt", meaning: "關(電)", tail: " " },
-                { text: "đèn", meaning: "燈", tail: "." },
-              ],
-            },
-            {
-              sentence: "Quán đóng cửa rồi.",
-              translation: "店已經打烊了。",
-              segments: [
-                { text: "Quán", meaning: "店", tail: " " },
-                { text: "đóng cửa", meaning: "關門", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "物理關閉用 Đóng，電器電源用 Tắt。",
-          image_file: "close.png",
-        },
-        {
-          id: "v-34",
-          term_zh: "幫助",
-          related_terms: [
-            {
-              term_target: "Giúp",
-              pronunciation: ["/zup/"],
-              specific_note: "口語",
-              segments: [{ text: "Giúp", meaning: "幫", tail: "" }],
-            },
-            {
-              term_target: "Giúp đỡ",
-              pronunciation: ["/zup ɗə/"],
-              specific_note: "完整",
-              segments: [
-                { text: "Giúp", meaning: "幫", tail: " " },
-                { text: "đỡ", meaning: "助/扶", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cứu tôi với!",
-              translation: "救命！(緊急求助)",
-              segments: [
-                { text: "Cứu", meaning: "救", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "với", meaning: "吧/語助詞", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Bạn có thể giúp tôi không?",
-              translation: "你可以幫我嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cảm ơn bạn đã giúp đỡ.",
-              translation: "謝謝你的幫忙。",
-              segments: [
-                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "giúp đỡ", meaning: "幫助", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常說 Giúp，書面或鄭重說 Giúp đỡ。",
-          image_file: "help.png",
-        },
-        {
-          id: "v-35",
-          term_zh: "帶來 / 帶去",
-          related_terms: [
-            {
-              term_target: "Mang",
-              pronunciation: ["/maŋ/"],
-              specific_note: "攜帶(北部/通用)",
-              segments: [{ text: "Mang", meaning: "帶", tail: "" }],
-            },
-            {
-              term_target: "Đem",
-              pronunciation: ["/ɗɛm/"],
-              specific_note: "攜帶(南部)",
-              segments: [{ text: "Đem", meaning: "帶", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mang về.",
-              translation: "帶走 / 外帶。",
-              segments: [
-                { text: "Mang", meaning: "帶", tail: " " },
-                { text: "về", meaning: "回", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng quên mang ô.",
-              translation: "別忘了帶傘。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "quên", meaning: "忘", tail: " " },
-                { text: "mang", meaning: "帶", tail: " " },
-                { text: "ô", meaning: "傘", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mang cho tôi cái kia.",
-              translation: "把那個帶給我。",
-              segments: [
-                { text: "Mang", meaning: "帶", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "cái kia", meaning: "那個", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "買東西外帶常說「Mang về」。",
-          image_file: "bring.png",
-        },
-        {
-          id: "v-36",
-          term_zh: "需要",
-          related_terms: [
-            {
-              term_target: "Cần",
-              pronunciation: ["/kən/"],
-              specific_note: "需要",
-              segments: [{ text: "Cần", meaning: "需要", tail: "" }],
-            },
-            {
-              term_target: "Phải",
-              pronunciation: ["/faj/"],
-              specific_note: "必須/得",
-              segments: [{ text: "Phải", meaning: "必須", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi cần đi vệ sinh.",
-              translation: "我需要去洗手間。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "vệ sinh", meaning: "衛生(廁所)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi phải đi bây giờ.",
-              translation: "我現在得走了 (必須走)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "phải", meaning: "必須", tail: " " },
-                { text: "đi", meaning: "走", tail: " " },
-                { text: "bây giờ", meaning: "現在", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có cần túi không?",
-              translation: "你需要袋子嗎？(商店常用)。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "túi", meaning: "袋子", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Cần 是需求，Phải 是義務或必要。",
-          image_file: "need.png",
-        },
-        {
-          id: "v-37",
-          term_zh: "使用",
-          related_terms: [
-            {
-              term_target: "Dùng",
-              pronunciation: ["/zuŋ͡m/"],
-              specific_note: "標準",
-              segments: [{ text: "Dùng", meaning: "用", tail: "" }],
-            },
-            {
-              term_target: "Xài",
-              pronunciation: ["/saj/"],
-              specific_note: "口語(南方)",
-              segments: [{ text: "Xài", meaning: "用/花", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái này xài tốt lắm.",
-              translation: "這東西很好用 (南方口語)。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "xài", meaning: "用", tail: " " },
-                { text: "tốt", meaning: "好", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn dùng đũa được không?",
-              translation: "你會用筷子嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "dùng", meaning: "用", tail: " " },
-                { text: "đũa", meaning: "筷子", tail: " " },
-                { text: "được", meaning: "行/會", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi đang xài wifi chùa.",
-              translation: "我正在用免費wifi。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "xài", meaning: "用", tail: " " },
-                { text: "wifi", meaning: "Wifi", tail: " " },
-                { text: "chùa", meaning: "廟(引申為免費)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Dùng 是通用語，Xài 較口語且常用於花錢/用東西。",
-          image_file: "use.png",
-        },
-        {
-          id: "v-38",
-          term_zh: "變成 / 成為",
-          related_terms: [
-            {
-              term_target: "Trở thành",
-              pronunciation: ["/tʃə tʰaɲ/"],
-              specific_note: "成為",
-              segments: [
-                { text: "Trở", meaning: "變/轉", tail: " " },
-                { text: "thành", meaning: "成", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn trở thành bác sĩ.",
-              translation: "我想成為醫生。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "trở thành", meaning: "成為", tail: " " },
-                { text: "bác sĩ", meaning: "醫生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trời trở lạnh rồi.",
-              translation: "天變冷了。",
-              segments: [
-                { text: "Trời", meaning: "天", tail: " " },
-                { text: "trở", meaning: "變/轉", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ước mơ thành sự thật.",
-              translation: "夢想成真。",
-              segments: [
-                { text: "Ước mơ", meaning: "夢想", tail: " " },
-                { text: "thành", meaning: "成", tail: " " },
-                { text: "sự thật", meaning: "事實/真", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "描述職業或身分變化用 Trở thành。",
-          image_file: "become.png",
-        },
-        {
-          id: "v-39",
-          term_zh: "開始",
-          related_terms: [
-            {
-              term_target: "Bắt đầu",
-              pronunciation: ["/bat ɗəw/"],
-              specific_note: "",
-              segments: [
-                { text: "Bắt", meaning: "抓/捕", tail: " " },
-                { text: "đầu", meaning: "頭/首", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chúng ta bắt đầu thôi.",
-              translation: "我們開始吧。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "bắt đầu", meaning: "開始", tail: " " },
-                { text: "thôi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phim bắt đầu lúc mấy giờ?",
-              translation: "電影幾點開始？",
-              segments: [
-                { text: "Phim", meaning: "電影", tail: " " },
-                { text: "bắt đầu", meaning: "開始", tail: " " },
-                { text: "lúc", meaning: "在...時候", tail: " " },
-                { text: "mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bắt đầu từ đâu?",
-              translation: "從哪裡開始？",
-              segments: [
-                { text: "Bắt đầu", meaning: "開始", tail: " " },
-                { text: "từ", meaning: "從", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Bắt đầu = 抓頭 = 開始。",
-          image_file: "start.png",
-        },
-        {
-          id: "v-41",
-          term_zh: "結束 / 完成",
-          related_terms: [
-            {
-              term_target: "Xong",
-              pronunciation: ["/sawŋ͡m/"],
-              specific_note: "做完/完了",
-              segments: [{ text: "Xong", meaning: "完", tail: "" }],
-            },
-            {
-              term_target: "Kết thúc",
-              pronunciation: ["/ket tʰuk/"],
-              specific_note: "正式結束",
-              segments: [{ text: "Kết thúc", meaning: "結束", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi làm xong việc rồi.",
-              translation: "我工作做完了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "xong", meaning: "完", tail: " " },
-                { text: "việc", meaning: "工作", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi chưa ăn xong.",
-              translation: "我還沒吃完。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chưa", meaning: "還沒", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "xong", meaning: "完", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phim kết thúc rồi.",
-              translation: "電影結束了。",
-              segments: [
-                { text: "Phim", meaning: "電影", tail: " " },
-                { text: "kết thúc", meaning: "結束", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語最常用「動詞 + Xong」(做完了)。",
-          image_file: "finish.png",
-        },
-        {
-          id: "v-42",
-          term_zh: "停止",
-          related_terms: [
-            {
-              term_target: "Dừng",
-              pronunciation: ["/zɨŋ/"],
-              specific_note: "停下動作",
-              segments: [{ text: "Dừng", meaning: "停", tail: "" }],
-            },
-            {
-              term_target: "Thôi",
-              pronunciation: ["/tʰoj/"],
-              specific_note: "罷了/停止",
-              segments: [{ text: "Thôi", meaning: "停/罷", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Dừng xe ở đây.",
-              translation: "在這裡停車。",
-              segments: [
-                { text: "Dừng", meaning: "停", tail: " " },
-                { text: "xe", meaning: "車", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thôi đi! Đừng nói nữa.",
-              translation: "夠了(停吧)！別再說了。",
-              segments: [
-                { text: "Thôi", meaning: "停/罷", tail: " " },
-                { text: "đi", meaning: "吧", tail: "! " },
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "nữa", meaning: "再/更多", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xe buýt đã dừng lại.",
-              translation: "公車已經停下來了。",
-              segments: [
-                { text: "Xe buýt", meaning: "公車", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "dừng", meaning: "停", tail: " " },
-                { text: "lại", meaning: "下來", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "叫人住手或閉嘴常用「Thôi đi」。",
-          image_file: "stop.png",
-        },
-        {
-          id: "v-43",
-          term_zh: "記住 / 想念",
-          related_terms: [
-            {
-              term_target: "Nhớ",
-              pronunciation: ["/ɲə/"],
-              specific_note: "記得/想念",
-              segments: [{ text: "Nhớ", meaning: "記/想", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nhớ gọi cho mẹ nhé.",
-              translation: "記得打電話給媽媽喔。",
-              segments: [
-                { text: "Nhớ", meaning: "記得", tail: " " },
-                { text: "gọi", meaning: "打(電話)", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "mẹ", meaning: "媽", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không nhớ tên anh ấy.",
-              translation: "我不記得他的名字。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "nhớ", meaning: "記得", tail: " " },
-                { text: "tên", meaning: "名字", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em nhớ anh.",
-              translation: "我想你 (男女朋友/夫妻常用)。",
-              segments: [
-                { text: "Em", meaning: "我(妹)", tail: " " },
-                { text: "nhớ", meaning: "想念", tail: " " },
-                { text: "anh", meaning: "你(哥)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nhớ 既是「記得」也是「想念」，看上下文。",
-          image_file: "remember.png",
-        },
-        {
-          id: "v-44",
-          term_zh: "談話",
-          related_terms: [
-            {
-              term_target: "Nói chuyện",
-              pronunciation: ["/nɔj tʃwiən/"],
-              specific_note: "聊天/交談",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "chuyện", meaning: "故事/事", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nói chuyện với tôi đi.",
-              translation: "跟我說說話吧。",
-              segments: [
-                { text: "Nói chuyện", meaning: "說話", tail: " " },
-                { text: "với", meaning: "跟/與", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta cần nói chuyện.",
-              translation: "我們需要談談。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "nói chuyện", meaning: "談話", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng nói chuyện với người lạ.",
-              translation: "不要跟陌生人說話。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "nói chuyện", meaning: "說話", tail: " " },
-                { text: "với", meaning: "跟", tail: " " },
-                { text: "người lạ", meaning: "陌生人", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nói 是單純「說」，Nói chuyện 是雙向「交談」。",
-          image_file: "talk.png",
-        },
-        {
-          id: "v-45",
-          term_zh: "見面",
-          related_terms: [
-            {
-              term_target: "Gặp",
-              pronunciation: ["/gap/"],
-              specific_note: "",
-              segments: [{ text: "Gặp", meaning: "見/遇", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Gặp bạn bè.",
-              translation: "見朋友。",
-              segments: [
-                { text: "Gặp", meaning: "見", tail: " " },
-                { text: "bạn bè", meaning: "朋友", tail: "." },
-              ],
-            },
-            {
-              sentence: "Rất vui được gặp bạn.",
-              translation: "很高興認識(見到)你。",
-              segments: [
-                { text: "Rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: " " },
-                { text: "được", meaning: "能/被", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hẹn gặp lại.",
-              translation: "再見 (約定再見面)。",
-              segments: [
-                { text: "Hẹn", meaning: "約/約定", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "lại", meaning: "再", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "見面。",
-          image_file: "meet.png",
-        },
-        {
-          id: "v-46",
-          term_zh: "乘坐 / 拿 / 吃(藥)",
-          related_terms: [
-            {
-              term_target: "Đi",
-              pronunciation: ["/ɗi/"],
-              specific_note: "搭乘(交通)",
-              segments: [{ text: "Đi", meaning: "走/搭", tail: "" }],
-            },
-            {
-              term_target: "Uống",
-              pronunciation: ["/uəŋ͡m/"],
-              specific_note: "吃(藥)/喝",
-              segments: [{ text: "Uống", meaning: "喝/服", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi xe buýt đi làm.",
-              translation: "我搭(走)公車去上班。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "搭/走", tail: " " },
-                { text: "xe buýt", meaning: "公車", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "làm", meaning: "上班", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghỉ ngơi một chút đi.",
-              translation: "休息一下吧 (Take a break)。",
-              segments: [
-                { text: "Nghỉ ngơi", meaning: "休息", tail: " " },
-                { text: "một chút", meaning: "一點/一下", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhớ uống thuốc nhé.",
-              translation: "記得吃藥喔 (越南語用「喝」藥)。",
-              segments: [
-                { text: "Nhớ", meaning: "記得", tail: " " },
-                { text: "uống", meaning: "喝/服用", tail: " " },
-                { text: "thuốc", meaning: "藥", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-          ],
-          usage_note:
-            "英文 Take 用法多，越南語要分開：搭車用 Đi，吃藥用 Uống。",
-          image_file: "take.png",
-        },
-        {
-          id: "v-47",
-          term_zh: "放 / 穿(鞋)",
-          related_terms: [
-            {
-              term_target: "Để",
-              pronunciation: ["/ɗe/"],
-              specific_note: "放置",
-              segments: [{ text: "Để", meaning: "放/留", tail: "" }],
-            },
-            {
-              term_target: "Đi / Mang",
-              pronunciation: ["/ɗi/", "/maŋ/"],
-              specific_note: "穿(鞋襪)",
-              segments: [
-                { text: "Đi", meaning: "穿(鞋)", tail: " / " },
-                { text: "Mang", meaning: "穿(鞋)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Để nó xuống.",
-              translation: "把它放下。",
-              segments: [
-                { text: "Để", meaning: "放", tail: " " },
-                { text: "nó", meaning: "它", tail: " " },
-                { text: "xuống", meaning: "下", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi giày vào đi.",
-              translation: "把鞋子穿上吧。",
-              segments: [
-                { text: "Đi", meaning: "穿(腳部)", tail: " " },
-                { text: "giày", meaning: "鞋", tail: " " },
-                { text: "vào", meaning: "進/上", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi nên để cái này ở đâu?",
-              translation: "我該把這個放哪裡？",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nên", meaning: "應該", tail: " " },
-                { text: "để", meaning: "放", tail: " " },
-                { text: "cái này", meaning: "這個", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "穿衣服用 Mặc，穿鞋子用 Đi 或 Mang。",
-          image_file: "put.png",
-        },
-        {
-          id: "v-48",
-          term_zh: "吃",
-          related_terms: [
-            {
-              term_target: "Ăn",
-              pronunciation: ["/an/"],
-              specific_note: "",
-              segments: [{ text: "Ăn", meaning: "吃", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ăn tối chưa?",
-              translation: "吃晚餐了嗎？",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "tối", meaning: "晚(餐)", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn muốn ăn gì?",
-              translation: "你想吃什麼？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đừng ăn nhiều quá.",
-              translation: "別吃太多。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "nhiều", meaning: "多", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "進食。",
-          image_file: "eat.png",
-        },
-        {
-          id: "v-49",
-          term_zh: "睡覺",
-          related_terms: [
-            {
-              term_target: "Ngủ",
-              pronunciation: ["/ŋu/"],
-              specific_note: "",
-              segments: [{ text: "Ngủ", meaning: "睡", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đi ngủ đi.",
-              translation: "去睡覺吧。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm qua tôi ngủ không ngon.",
-              translation: "我昨天沒睡好。",
-              segments: [
-                { text: "Hôm qua", meaning: "昨天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "ngon", meaning: "香/好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em bé đang ngủ.",
-              translation: "寶寶正在睡覺。",
-              segments: [
-                { text: "Em bé", meaning: "嬰兒/寶寶", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "祝人晚安說 Chúc ngủ ngon。",
-          image_file: "sleep.png",
-        },
-        {
-          id: "v-50",
-          term_zh: "寄送",
-          related_terms: [
-            {
-              term_target: "Gửi",
-              pronunciation: ["/gɨj/"],
-              specific_note: "",
-              segments: [{ text: "Gửi", meaning: "寄", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Gửi email cho tôi.",
-              translation: "寄Email給我。",
-              segments: [
-                { text: "Gửi", meaning: "寄", tail: " " },
-                { text: "email", meaning: "電郵", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gửi tin nhắn.",
-              translation: "傳(寄)訊息。",
-              segments: [
-                { text: "Gửi", meaning: "傳/寄", tail: " " },
-                { text: "tin nhắn", meaning: "訊息", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đã gửi quà cho bạn.",
-              translation: "我已經寄禮物給你了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "gửi", meaning: "寄", tail: " " },
-                { text: "quà", meaning: "禮物", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "寄信、傳訊息、寄包裹都用 Gửi。",
-          image_file: "send.png",
-        },
-        {
-          id: "v-51",
-          term_zh: "開車",
-          related_terms: [
-            {
-              term_target: "Lái xe",
-              pronunciation: ["/laj sɛ/"],
-              specific_note: "駕駛",
-              segments: [
-                { text: "Lái", meaning: "駕駛", tail: " " },
-                { text: "xe", meaning: "車", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi biết lái xe.",
-              translation: "我會開車。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "會/懂", tail: " " },
-                { text: "lái xe", meaning: "開車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lái xe cẩn thận nhé.",
-              translation: "開車小心喔。",
-              segments: [
-                { text: "Lái xe", meaning: "開車", tail: " " },
-                { text: "cẩn thận", meaning: "小心/謹慎", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Anh ấy đang lái xe.",
-              translation: "他正在開車。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "lái xe", meaning: "開車", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Lái 也可以指駕駛船、飛機。",
-          image_file: "drive.png",
-        },
-        {
-          id: "v-52",
-          term_zh: "讀書 / 學習",
-          related_terms: [
-            {
-              term_target: "Học",
-              pronunciation: ["/hawk/"],
-              specific_note: "",
-              segments: [{ text: "Học", meaning: "學", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Học hành chăm chỉ.",
-              translation: "用功讀書(學習)。",
-              segments: [
-                { text: "Học hành", meaning: "學習", tail: " " },
-                { text: "chăm chỉ", meaning: "勤奮/認真", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi học tiếng Việt.",
-              translation: "我學越南語。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "học", meaning: "學", tail: " " },
-                { text: "tiếng Việt", meaning: "越南語", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy đang ôn thi.",
-              translation: "她正在複習考試(讀書)。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ôn", meaning: "溫習", tail: " " },
-                { text: "thi", meaning: "考試", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Học 是廣泛的學習。",
-          image_file: "study.png",
-        },
-        {
-          id: "v-53",
-          term_zh: "回去",
-          related_terms: [
-            {
-              term_target: "Về",
-              pronunciation: ["/ve/"],
-              specific_note: "回(家/國)",
-              segments: [{ text: "Về", meaning: "回", tail: "" }],
-            },
-            {
-              term_target: "Quay lại",
-              pronunciation: ["/kwaj laj/"],
-              specific_note: "返回/轉回",
-              segments: [
-                { text: "Quay", meaning: "轉", tail: " " },
-                { text: "lại", meaning: "回", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn về nhà.",
-              translation: "我想回家。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Về chỗ ngồi đi.",
-              translation: "回你的座位去。",
-              segments: [
-                { text: "Về", meaning: "回", tail: " " },
-                { text: "chỗ ngồi", meaning: "座位", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta quay lại thôi.",
-              translation: "我們折返(回去)吧。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "quay lại", meaning: "返回", tail: " " },
-                { text: "thôi", meaning: "吧", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "回家一定用 Về，走回頭路用 Quay lại。",
-          image_file: "go_back.png",
-        },
-        {
-          id: "v-54",
-          term_zh: "了解 / 懂",
-          related_terms: [
-            {
-              term_target: "Hiểu",
-              pronunciation: ["/hiəw/"],
-              specific_note: "",
-              segments: [{ text: "Hiểu", meaning: "懂", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi hiểu rồi.",
-              translation: "我懂了(了解了)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có hiểu không?",
-              translation: "你懂嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi không hiểu tiếng Pháp.",
-              translation: "我不懂法文。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: " " },
-                { text: "tiếng Pháp", meaning: "法語", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "明白意思。",
-          image_file: "understand.png",
-        },
-      ],
-    },
-    {
-      id: "adjectives",
-      name: "常用形容詞 (越南語)",
-      items: [
-        {
-          id: "adj-01",
-          term_zh: "好的",
-          related_terms: [
-            {
-              term_target: "Tốt",
-              pronunciation: ["/tot/"],
-              specific_note: "品質好/人好",
-              segments: [{ text: "Tốt", meaning: "好", tail: "" }],
-            },
-            {
-              term_target: "Ngon",
-              pronunciation: ["/ŋɔn/"],
-              specific_note: "好吃/好喝",
-              segments: [{ text: "Ngon", meaning: "美味", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Người này rất tốt.",
-              translation: "這個人很好。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúc một ngày tốt lành.",
-              translation: "祝你有美好的一天。",
-              segments: [
-                { text: "Chúc", meaning: "祝", tail: " " },
-                { text: "một", meaning: "一個", tail: " " },
-                { text: "ngày", meaning: "天", tail: " " },
-                { text: "tốt lành", meaning: "美好/吉祥", tail: "." },
-              ],
-            },
-            {
-              sentence: "Món này ngon quá!",
-              translation: "這道菜太好吃了！(食物的好用 Ngon)。",
-              segments: [
-                { text: "Món", meaning: "道(菜)", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: " " },
-                { text: "quá", meaning: "太", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "人品好用 Tốt，食物好用 Ngon，能力好用 Giỏi。",
-          image_file: "good.png",
-        },
-        {
-          id: "adj-02",
-          term_zh: "壞的",
-          related_terms: [
-            {
-              term_target: "Xấu",
-              pronunciation: ["/səw/"],
-              specific_note: "品德/外表/天氣",
-              segments: [{ text: "Xấu", meaning: "壞/醜", tail: "" }],
-            },
-            {
-              term_target: "Hư",
-              pronunciation: ["/hɨ/"],
-              specific_note: "損壞/變質",
-              segments: [{ text: "Hư", meaning: "壞掉", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hôm nay trời xấu.",
-              translation: "今天天氣不好(壞)。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "trời", meaning: "天", tail: " " },
-                { text: "xấu", meaning: "壞", tail: "." },
-              ],
-            },
-            {
-              sentence: "Người xấu.",
-              translation: "壞人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "xấu", meaning: "壞", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xe của tôi bị hư rồi.",
-              translation: "我的車壞掉了。",
-              segments: [
-                { text: "Xe", meaning: "車", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "bị", meaning: "被/遭", tail: " " },
-                { text: "hư", meaning: "壞", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Xấu 還有「醜」的意思。",
-          image_file: "bad.png",
-        },
-        {
-          id: "adj-03",
-          term_zh: "新的",
-          related_terms: [
-            {
-              term_target: "Mới",
-              pronunciation: ["/məj/"],
-              specific_note: "",
-              segments: [{ text: "Mới", meaning: "新", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chúc mừng năm mới!",
-              translation: "新年快樂！",
-              segments: [
-                { text: "Chúc mừng", meaning: "祝賀", tail: " " },
-                { text: "năm", meaning: "年", tail: " " },
-                { text: "mới", meaning: "新", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Tôi có điện thoại mới.",
-              translation: "我有新手機。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "điện thoại", meaning: "電話", tail: " " },
-                { text: "mới", meaning: "新", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn mới đến à?",
-              translation: "你剛(新)到的嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "mới", meaning: "剛剛/新", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "à", meaning: "啊(語助詞)", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "除了形容詞，Mới 也當副詞「剛剛」。",
-          image_file: "new.png",
-        },
-        {
-          id: "adj-04",
-          term_zh: "第一 / 首先",
-          related_terms: [
-            {
-              term_target: "Đầu tiên",
-              pronunciation: ["/ɗəw tiən/"],
-              specific_note: "時間/順序",
-              segments: [
-                { text: "Đầu", meaning: "頭", tail: " " },
-                { text: "tiên", meaning: "先", tail: "" },
-              ],
-            },
-            {
-              term_target: "Thứ nhất",
-              pronunciation: ["/tʰɨ ɲət/"],
-              specific_note: "排名",
-              segments: [
-                { text: "Thứ", meaning: "第", tail: " " },
-                { text: "nhất", meaning: "一", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đây là lần đầu tiên.",
-              translation: "這是第一次。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "lần", meaning: "次", tail: " " },
-                { text: "đầu tiên", meaning: "首先/第一", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ai là người đầu tiên?",
-              translation: "誰是第一個人？",
-              segments: [
-                { text: "Ai", meaning: "誰", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "đầu tiên", meaning: "第一", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đứng thứ nhất.",
-              translation: "排名第一。",
-              segments: [
-                { text: "Đứng", meaning: "站/位居", tail: " " },
-                { text: "thứ nhất", meaning: "第一", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "第一次說 Lần đầu tiên，第一名說 Thứ nhất。",
-          image_file: "first.png",
-        },
-        {
-          id: "adj-05",
-          term_zh: "上一個 / 最後",
-          related_terms: [
-            {
-              term_target: "Trước",
-              pronunciation: ["/tʃɨək/"],
-              specific_note: "之前的(Last week)",
-              segments: [{ text: "Trước", meaning: "前/先", tail: "" }],
-            },
-            {
-              term_target: "Cuối cùng",
-              pronunciation: ["/kwoj kuŋ͡m/"],
-              specific_note: "最終的(Final)",
-              segments: [
-                { text: "Cuối", meaning: "末/底", tail: " " },
-                { text: "cùng", meaning: "窮盡", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tuần trước tôi đi Đà Nẵng.",
-              translation: "上週我去峴港。",
-              segments: [
-                { text: "Tuần", meaning: "週", tail: " " },
-                { text: "trước", meaning: "前/上", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "Đà Nẵng", meaning: "峴港", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đây là cơ hội cuối cùng.",
-              translation: "這是最後一次機會。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "cơ hội", meaning: "機會", tail: " " },
-                { text: "cuối cùng", meaning: "最後", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tháng trước.",
-              translation: "上個月。",
-              segments: [
-                { text: "Tháng", meaning: "月", tail: " " },
-                { text: "trước", meaning: "前/上", tail: "." },
-              ],
-            },
-          ],
-          usage_note:
-            "時間的「上一個」用 Trước (前)，順序的「最後」用 Cuối cùng。",
-          image_file: "last.png",
-        },
-        {
-          id: "adj-06",
-          term_zh: "下一個",
-          related_terms: [
-            {
-              term_target: "Sau",
-              pronunciation: ["/saw/"],
-              specific_note: "時間(Next week)",
-              segments: [{ text: "Sau", meaning: "後", tail: "" }],
-            },
-            {
-              term_target: "Tiếp theo",
-              pronunciation: ["/tiəp tʰɛw/"],
-              specific_note: "順序(Next one)",
-              segments: [
-                { text: "Tiếp", meaning: "接", tail: " " },
-                { text: "theo", meaning: "跟隨", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hẹn gặp lại tuần sau.",
-              translation: "下週見。",
-              segments: [
-                { text: "Hẹn", meaning: "約", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "tuần", meaning: "週", tail: " " },
-                { text: "sau", meaning: "後/下", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ai là người tiếp theo?",
-              translation: "下一位是誰？",
-              segments: [
-                { text: "Ai", meaning: "誰", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "tiếp theo", meaning: "接下來", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Trạm kế tiếp.",
-              translation: "下一站 (公車/捷運廣播常用 Kế tiếp)。",
-              segments: [
-                { text: "Trạm", meaning: "站", tail: " " },
-                { text: "kế tiếp", meaning: "繼/接續", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "時間用 Sau (後)，排隊順序用 Tiếp theo。",
-          image_file: "next.png",
-        },
-        {
-          id: "adj-07",
-          term_zh: "長的 / 久的",
-          related_terms: [
-            {
-              term_target: "Dài",
-              pronunciation: ["/zaːj/"],
-              specific_note: "長度",
-              segments: [{ text: "Dài", meaning: "長", tail: "" }],
-            },
-            {
-              term_target: "Lâu",
-              pronunciation: ["/ləw/"],
-              specific_note: "時間",
-              segments: [{ text: "Lâu", meaning: "久", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tóc cô ấy rất dài.",
-              translation: "她的頭髮很長。",
-              segments: [
-                { text: "Tóc", meaning: "頭髮", tail: " " },
-                { text: "cô ấy", meaning: "她", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "dài", meaning: "長", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đã bao lâu rồi?",
-              translation: "已經多久了？",
-              segments: [
-                { text: "Đã", meaning: "已經", tail: " " },
-                { text: "bao", meaning: "多少", tail: " " },
-                { text: "lâu", meaning: "久", tail: " " },
-                { text: "rồi", meaning: "了", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Chờ lâu quá.",
-              translation: "等太久了。",
-              segments: [
-                { text: "Chờ", meaning: "等", tail: " " },
-                { text: "lâu", meaning: "久", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Dài 指物體長度，Lâu 指時間長度。",
-          image_file: "long.png",
-        },
-        {
-          id: "adj-08",
-          term_zh: "大的",
-          related_terms: [
-            {
-              term_target: "To",
-              pronunciation: ["/tɔ/"],
-              specific_note: "體積(北部常用)",
-              segments: [{ text: "To", meaning: "大", tail: "" }],
-            },
-            {
-              term_target: "Lớn",
-              pronunciation: ["/ləːn/"],
-              specific_note: "規模/年紀(南部)",
-              segments: [{ text: "Lớn", meaning: "大", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái nhà này to quá.",
-              translation: "這間房子好大。",
-              segments: [
-                { text: "Cái", meaning: "間", tail: " " },
-                { text: "nhà", meaning: "房", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "to", meaning: "大", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Anh ấy lớn hơn tôi.",
-              translation: "他比我大 (年紀)。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "lớn", meaning: "大", tail: " " },
-                { text: "hơn", meaning: "比/更", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thành phố lớn.",
-              translation: "大城市。",
-              segments: [
-                { text: "Thành phố", meaning: "城市", tail: " " },
-                { text: "lớn", meaning: "大", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "To 指具體大小，Lớn 可指抽象規模或年紀。",
-          image_file: "big.png",
-        },
-        {
-          id: "adj-09",
-          term_zh: "小的",
-          related_terms: [
-            {
-              term_target: "Nhỏ",
-              pronunciation: ["/ɲɔ/"],
-              specific_note: "通用",
-              segments: [{ text: "Nhỏ", meaning: "小", tail: "" }],
-            },
-            {
-              term_target: "Bé",
-              pronunciation: ["/bɛ/"],
-              specific_note: "可愛/年紀小",
-              segments: [{ text: "Bé", meaning: "小/幼", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái này nhỏ quá.",
-              translation: "這個太小了 (尺寸)。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "nhỏ", meaning: "小", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em bé dễ thương.",
-              translation: "小寶寶很可愛。",
-              segments: [
-                { text: "Em bé", meaning: "小孩/嬰兒", tail: " " },
-                { text: "dễ thương", meaning: "可愛", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chuyện nhỏ.",
-              translation: "小事 (沒問題)。",
-              segments: [
-                { text: "Chuyện", meaning: "事情", tail: " " },
-                { text: "nhỏ", meaning: "小", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nhỏ 是通用的小，Bé 常用在小孩 (Em bé)。",
-          image_file: "small.png",
-        },
-        {
-          id: "adj-10",
-          term_zh: "多的",
-          related_terms: [
-            {
-              term_target: "Nhiều",
-              pronunciation: ["/ɲiəw/"],
-              specific_note: "",
-              segments: [{ text: "Nhiều", meaning: "多", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ở đây có nhiều người.",
-              translation: "這裡有很多人。",
-              segments: [
-                { text: "Ở đây", meaning: "這裡", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "nhiều", meaning: "多", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bao nhiêu tiền?",
-              translation: "多少錢？(包=包容/多大範圍, Nhiêu=多)。",
-              segments: [
-                { text: "Bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cảm ơn nhiều.",
-              translation: "多謝 (非常感謝)。",
-              segments: [
-                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "nhiều", meaning: "多", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "數量多。",
-          image_file: "many.png",
-        },
-        {
-          id: "adj-11",
-          term_zh: "高的",
-          related_terms: [
-            {
-              term_target: "Cao",
-              pronunciation: ["/kaːw/"],
-              specific_note: "",
-              segments: [{ text: "Cao", meaning: "高", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Anh ấy rất cao.",
-              translation: "他很高。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "cao", meaning: "高", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tòa nhà cao tầng.",
-              translation: "高樓大廈。",
-              segments: [
-                { text: "Tòa nhà", meaning: "大樓", tail: " " },
-                { text: "cao", meaning: "高", tail: " " },
-                { text: "tầng", meaning: "層", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn cao bao nhiêu?",
-              translation: "你多高？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "cao", meaning: "高", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "身高或物體高度。",
-          image_file: "tall.png",
-        },
-        {
-          id: "adj-12",
-          term_zh: "年輕的",
-          related_terms: [
-            {
-              term_target: "Trẻ",
-              pronunciation: ["/tʃɛ/"],
-              specific_note: "",
-              segments: [{ text: "Trẻ", meaning: "年輕", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cô ấy còn trẻ.",
-              translation: "她還年輕。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "còn", meaning: "還", tail: " " },
-                { text: "trẻ", meaning: "年輕", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trẻ em.",
-              translation: "兒童 (年輕的人)。",
-              segments: [
-                { text: "Trẻ", meaning: "幼/年輕", tail: " " },
-                { text: "em", meaning: "弟妹/孩子", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhìn bạn rất trẻ.",
-              translation: "你看起來很年輕。",
-              segments: [
-                { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "trẻ", meaning: "年輕", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "年紀小。",
-          image_file: "young.png",
-        },
-        {
-          id: "adj-13",
-          term_zh: "老的 / 舊的",
-          related_terms: [
-            {
-              term_target: "Già",
-              pronunciation: ["/za/"],
-              specific_note: "人(老)",
-              segments: [{ text: "Già", meaning: "老", tail: "" }],
-            },
-            {
-              term_target: "Cũ",
-              pronunciation: ["/ku/"],
-              specific_note: "物品(舊)",
-              segments: [{ text: "Cũ", meaning: "舊", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ông ấy già rồi.",
-              translation: "他老了 (指人)。",
-              segments: [
-                { text: "Ông ấy", meaning: "他(老先生)", tail: " " },
-                { text: "già", meaning: "老", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sách cũ.",
-              translation: "舊書 (指物品)。",
-              segments: [
-                { text: "Sách", meaning: "書", tail: " " },
-                { text: "cũ", meaning: "舊", tail: "." },
-              ],
-            },
-            {
-              sentence: "Người già.",
-              translation: "老人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "già", meaning: "老", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "非常重要：人老用 Già，東西舊用 Cũ，不可混用。",
-          image_file: "old.png",
-        },
-        {
-          id: "adj-14",
-          term_zh: "近的",
-          related_terms: [
-            {
-              term_target: "Gần",
-              pronunciation: ["/gən/"],
-              specific_note: "",
-              segments: [{ text: "Gần", meaning: "近", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nhà tôi ở gần đây.",
-              translation: "我家在這附近(近這裡)。",
-              segments: [
-                { text: "Nhà", meaning: "家", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "gần", meaning: "近", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có gần không?",
-              translation: "近嗎？",
-              segments: [
-                { text: "Có", meaning: "有/是否", tail: " " },
-                { text: "gần", meaning: "近", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Gần xong rồi.",
-              translation: "快(將近)做完了。",
-              segments: [
-                { text: "Gần", meaning: "將近", tail: " " },
-                { text: "xong", meaning: "完", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "距離近。",
-          image_file: "near.png",
-        },
-        {
-          id: "adj-15",
-          term_zh: "遠的",
-          related_terms: [
-            {
-              term_target: "Xa",
-              pronunciation: ["/sa/"],
-              specific_note: "",
-              segments: [{ text: "Xa", meaning: "遠", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nhà tôi rất xa.",
-              translation: "我家很遠。",
-              segments: [
-                { text: "Nhà", meaning: "家", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "xa", meaning: "遠", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi xa.",
-              translation: "出遠門 (去遠)。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "xa", meaning: "遠", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cách đây không xa.",
-              translation: "離這裡不遠。",
-              segments: [
-                { text: "Cách", meaning: "距離", tail: " " },
-                { text: "đây", meaning: "這", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "xa", meaning: "遠", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "距離遠。",
-          image_file: "far.png",
-        },
-        {
-          id: "adj-16",
-          term_zh: "快的",
-          related_terms: [
-            {
-              term_target: "Nhanh",
-              pronunciation: ["/ɲaɲ/"],
-              specific_note: "",
-              segments: [{ text: "Nhanh", meaning: "快", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chạy nhanh.",
-              translation: "跑得快。",
-              segments: [
-                { text: "Chạy", meaning: "跑", tail: " " },
-                { text: "nhanh", meaning: "快", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhanh lên!",
-              translation: "快一點！",
-              segments: [
-                { text: "Nhanh", meaning: "快", tail: " " },
-                { text: "lên", meaning: "起來/上", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Thời gian trôi nhanh quá.",
-              translation: "時間過得太快了。",
-              segments: [
-                { text: "Thời gian", meaning: "時間", tail: " " },
-                { text: "trôi", meaning: "流逝/漂", tail: " " },
-                { text: "nhanh", meaning: "快", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "速度快。",
-          image_file: "fast.png",
-        },
-        {
-          id: "adj-17",
-          term_zh: "慢的",
-          related_terms: [
-            {
-              term_target: "Chậm",
-              pronunciation: ["/tʃəm/"],
-              specific_note: "",
-              segments: [{ text: "Chậm", meaning: "慢", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nói chậm lại.",
-              translation: "說慢一點。",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "lại", meaning: "下來", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi chậm thôi.",
-              translation: "走慢一點就好。",
-              segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "thôi", meaning: "罷了/就好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mạng chậm quá.",
-              translation: "網路太慢了。",
-              segments: [
-                { text: "Mạng", meaning: "網絡", tail: " " },
-                { text: "chậm", meaning: "慢", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "速度慢。",
-          image_file: "slow.png",
-        },
-        {
-          id: "adj-18",
-          term_zh: "熱的",
-          related_terms: [
-            {
-              term_target: "Nóng",
-              pronunciation: ["/nawŋ͡m/"],
-              specific_note: "",
-              segments: [{ text: "Nóng", meaning: "熱", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hôm nay trời nóng.",
-              translation: "今天天氣熱。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "trời", meaning: "天", tail: " " },
-                { text: "nóng", meaning: "熱", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nước nóng.",
-              translation: "熱水。",
-              segments: [
-                { text: "Nước", meaning: "水", tail: " " },
-                { text: "nóng", meaning: "熱", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cẩn thận, nóng đấy!",
-              translation: "小心，很燙喔！",
-              segments: [
-                { text: "Cẩn thận", meaning: "小心", tail: ", " },
-                { text: "nóng", meaning: "熱/燙", tail: " " },
-                { text: "đấy", meaning: "那(語助詞)", tail: "!" },
-              ],
-            },
-          ],
-          usage_note: "天氣熱或物體燙都用 Nóng。",
-          image_file: "hot.png",
-        },
-        {
-          id: "adj-19",
-          term_zh: "冷的",
-          related_terms: [
-            {
-              term_target: "Lạnh",
-              pronunciation: ["/laɲ/"],
-              specific_note: "",
-              segments: [{ text: "Lạnh", meaning: "冷", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Trời lạnh quá.",
-              translation: "天氣好冷。",
-              segments: [
-                { text: "Trời", meaning: "天", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cảm thấy lạnh.",
-              translation: "我覺得冷。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cảm thấy", meaning: "覺得", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nước lạnh.",
-              translation: "冷水/冰水。",
-              segments: [
-                { text: "Nước", meaning: "水", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "低溫。",
-          image_file: "cold.png",
-        },
-        {
-          id: "adj-20",
-          term_zh: "乾淨的",
-          related_terms: [
-            {
-              term_target: "Sạch",
-              pronunciation: ["/sat͡ʃ/"],
-              specific_note: "",
-              segments: [{ text: "Sạch", meaning: "乾淨", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Phòng sạch sẽ.",
-              translation: "房間乾淨 (Sạch sẽ 是 Sạch 的加強詞)。",
-              segments: [
-                { text: "Phòng", meaning: "房", tail: " " },
-                { text: "sạch sẽ", meaning: "乾淨", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nước này sạch không?",
-              translation: "這水乾淨嗎？",
-              segments: [
-                { text: "Nước", meaning: "水", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "sạch", meaning: "乾淨", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Ăn ở sạch sẽ.",
-              translation: "愛乾淨 (生活習慣好)。",
-              segments: [
-                { text: "Ăn ở", meaning: "生活/起居", tail: " " },
-                { text: "sạch sẽ", meaning: "乾淨", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常說 Sạch sẽ。",
-          image_file: "clean.png",
-        },
-        {
-          id: "adj-21",
-          term_zh: "髒的",
-          related_terms: [
-            {
-              term_target: "Bẩn",
-              pronunciation: ["/bən/"],
-              specific_note: "髒(北部/通用)",
-              segments: [{ text: "Bẩn", meaning: "髒", tail: "" }],
-            },
-            {
-              term_target: "Dơ",
-              pronunciation: ["/jə/"],
-              specific_note: "髒(南部)",
-              segments: [{ text: "Dơ", meaning: "髒", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tay bạn bẩn quá.",
-              translation: "你的手好髒。",
-              segments: [
-                { text: "Tay", meaning: "手", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "bẩn", meaning: "髒", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng chạm vào, dơ lắm.",
-              translation: "別碰，很髒 (南部口語)。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "chạm", meaning: "碰/觸", tail: " " },
-                { text: "vào", meaning: "進", tail: ", " },
-                { text: "dơ", meaning: "髒", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Quần áo bẩn.",
-              translation: "髒衣服。",
-              segments: [
-                { text: "Quần áo", meaning: "衣服", tail: " " },
-                { text: "bẩn", meaning: "髒", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Bẩn 和 Dơ 意思完全一樣。",
-          image_file: "dirty.png",
-        },
-        {
-          id: "adj-22",
-          term_zh: "簡單的",
-          related_terms: [
-            {
-              term_target: "Dễ",
-              pronunciation: ["/ze/"],
-              specific_note: "容易",
-              segments: [{ text: "Dễ", meaning: "簡單", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tiếng Việt không dễ.",
-              translation: "越南語不簡單。",
-              segments: [
-                { text: "Tiếng Việt", meaning: "越南語", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "dễ", meaning: "簡單", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bài này dễ lắm.",
-              translation: "這題(課)很簡單。",
-              segments: [
-                { text: "Bài", meaning: "課/題", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "dễ", meaning: "簡單", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Dễ thương.",
-              translation: "可愛 (字面義：容易受傷/憐愛)。",
-              segments: [
-                { text: "Dễ", meaning: "易", tail: " " },
-                { text: "thương", meaning: "愛/憐", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "容易。",
-          image_file: "easy.png",
-        },
-        {
-          id: "adj-23",
-          term_zh: "困難的",
-          related_terms: [
-            {
-              term_target: "Khó",
-              pronunciation: ["/xɔ/"],
-              specific_note: "難",
-              segments: [{ text: "Khó", meaning: "難", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Việc này rất khó.",
-              translation: "這件事很難。",
-              segments: [
-                { text: "Việc", meaning: "事/工作", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "khó", meaning: "難", tail: "." },
-              ],
-            },
-            {
-              sentence: "Khó nói lắm.",
-              translation: "很難啟齒(說)。",
-              segments: [
-                { text: "Khó", meaning: "難", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Khó tính.",
-              translation: "難搞 / 挑惕 (指個性)。",
-              segments: [
-                { text: "Khó", meaning: "難", tail: " " },
-                { text: "tính", meaning: "個性", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "難。",
-          image_file: "difficult.png",
-        },
-        {
-          id: "adj-24",
-          term_zh: "正確的",
-          related_terms: [
-            {
-              term_target: "Đúng",
-              pronunciation: ["/ɗuŋ͡m/"],
-              specific_note: "對",
-              segments: [{ text: "Đúng", meaning: "對", tail: "" }],
-            },
-            {
-              term_target: "Chính xác",
-              pronunciation: ["/tʃiɲ sak/"],
-              specific_note: "精確",
-              segments: [{ text: "Chính xác", meaning: "準確", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đúng rồi!",
-              translation: "對了！/ 沒錯！",
-              segments: [
-                { text: "Đúng", meaning: "對", tail: " " },
-                { text: "rồi", meaning: "了", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Bạn nói đúng.",
-              translation: "你說得對。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "đúng", meaning: "對", tail: "." },
-              ],
-            },
-            {
-              sentence: "Không đúng.",
-              translation: "不對。",
-              segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "đúng", meaning: "對", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語最常用 Đúng。",
-          image_file: "correct.png",
-        },
-        {
-          id: "adj-25",
-          term_zh: "錯誤的",
-          related_terms: [
-            {
-              term_target: "Sai",
-              pronunciation: ["/saj/"],
-              specific_note: "錯",
-              segments: [{ text: "Sai", meaning: "錯", tail: "" }],
-            },
-            {
-              term_target: "Nhầm",
-              pronunciation: ["/ɲəm/"],
-              specific_note: "搞混/弄錯",
-              segments: [{ text: "Nhầm", meaning: "誤", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn làm sai rồi.",
-              translation: "你做錯了。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "sai", meaning: "錯", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xin lỗi, nhầm số.",
-              translation: "抱歉，打錯(號碼)了。",
-              segments: [
-                { text: "Xin lỗi", meaning: "抱歉", tail: ", " },
-                { text: "nhầm", meaning: "錯/誤", tail: " " },
-                { text: "số", meaning: "號碼", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đúng hay sai?",
-              translation: "對還是錯？",
-              segments: [
-                { text: "Đúng", meaning: "對", tail: " " },
-                { text: "hay", meaning: "或", tail: " " },
-                { text: "sai", meaning: "錯", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "行為錯誤用 Sai，不小心搞混用 Nhầm。",
-          image_file: "wrong.png",
-        },
-        {
-          id: "adj-26",
-          term_zh: "重要的",
-          related_terms: [
-            {
-              term_target: "Quan trọng",
-              pronunciation: ["/kwan tʃawŋ͡m/"],
-              specific_note: "漢語:關重",
-              segments: [
-                { text: "Quan", meaning: "關", tail: " " },
-                { text: "trọng", meaning: "重", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Việc này rất quan trọng.",
-              translation: "這件事很重要。",
-              segments: [
-                { text: "Việc", meaning: "事", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "quan trọng", meaning: "重要", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gia đình là quan trọng nhất.",
-              translation: "家庭是最重要的。",
-              segments: [
-                { text: "Gia đình", meaning: "家庭", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "quan trọng", meaning: "重要", tail: " " },
-                { text: "nhất", meaning: "最", tail: "." },
-              ],
-            },
-            {
-              sentence: "Không quan trọng đâu.",
-              translation: "沒那麼重要啦。",
-              segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "quan trọng", meaning: "重要", tail: " " },
-                { text: "đâu", meaning: "哪(語助詞)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "關鍵。",
-          image_file: "important.png",
-        },
-        {
-          id: "adj-27",
-          term_zh: "不同的",
-          related_terms: [
-            {
-              term_target: "Khác",
-              pronunciation: ["/xak/"],
-              specific_note: "",
-              segments: [{ text: "Khác", meaning: "異/其他", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn cái khác.",
-              translation: "我想要別的(另一個)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "khác", meaning: "其他/不同", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hai cái này khác nhau.",
-              translation: "這兩個不一樣。",
-              segments: [
-                { text: "Hai", meaning: "二", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "khác", meaning: "不同", tail: " " },
-                { text: "nhau", meaning: "彼此/互相", tail: "." },
-              ],
-            },
-            {
-              sentence: "Không khác gì.",
-              translation: "沒什麼兩樣 (沒差)。",
-              segments: [
-                { text: "Không", meaning: "沒", tail: " " },
-                { text: "khác", meaning: "差", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "差異。",
-          image_file: "different.png",
-        },
-        {
-          id: "adj-28",
-          term_zh: "真的 / 真實的",
-          related_terms: [
-            {
-              term_target: "Thật",
-              pronunciation: ["/tʰət/"],
-              specific_note: "真實",
-              segments: [{ text: "Thật", meaning: "真/實", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Thật không?",
-              translation: "真的嗎？",
-              segments: [
-                { text: "Thật", meaning: "真", tail: " " },
-                { text: "không", meaning: "不(反問)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Nói thật đi.",
-              translation: "說實話吧。",
-              segments: [
-                { text: "Nói", meaning: "說", tail: " " },
-                { text: "thật", meaning: "實話", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hàng thật.",
-              translation: "正版貨 (真貨)。",
-              segments: [
-                { text: "Hàng", meaning: "貨/商品", tail: " " },
-                { text: "thật", meaning: "真", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Thật 放在形容詞前也表示「真...」(如 Thật đẹp 真美)。",
-          image_file: "real.png",
-        },
-        {
-          id: "adj-29",
-          term_zh: "有趣的",
-          related_terms: [
-            {
-              term_target: "Thú vị",
-              pronunciation: ["/tʰu vi/"],
-              specific_note: "有意思",
-              segments: [
-                { text: "Thú", meaning: "趣", tail: " " },
-                { text: "vị", meaning: "味", tail: "" },
-              ],
-            },
-            {
-              term_target: "Hay",
-              pronunciation: ["/haj/"],
-              specific_note: "精彩/好看",
-              segments: [{ text: "Hay", meaning: "好/棒", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Quyển sách này rất hay.",
-              translation: "這本書很有趣(好看)。",
-              segments: [
-                { text: "Quyển sách", meaning: "書本", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "hay", meaning: "棒/精彩", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chuyện này thú vị đấy.",
-              translation: "這件事很有趣喔。",
-              segments: [
-                { text: "Chuyện", meaning: "事", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "thú vị", meaning: "趣味", tail: " " },
-                { text: "đấy", meaning: "喔(語助詞)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phim hay lắm.",
-              translation: "電影很好看。",
-              segments: [
-                { text: "Phim", meaning: "電影", tail: " " },
-                { text: "hay", meaning: "精彩", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "書/電影/音樂通常用 Hay；事情/想法用 Thú vị。",
-          image_file: "interesting.png",
-        },
-        {
-          id: "adj-30",
-          term_zh: "美麗的",
-          related_terms: [
-            {
-              term_target: "Đẹp",
-              pronunciation: ["/ɗɛp/"],
-              specific_note: "通用",
-              segments: [{ text: "Đẹp", meaning: "美/漂亮", tail: "" }],
-            },
-            {
-              term_target: "Xinh",
-              pronunciation: ["/siɲ/"],
-              specific_note: "可愛/俏麗",
-              segments: [{ text: "Xinh", meaning: "漂亮", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cô ấy đẹp quá.",
-              translation: "她好美。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "đẹp", meaning: "美", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cảnh đẹp.",
-              translation: "風景優美。",
-              segments: [
-                { text: "Cảnh", meaning: "風景", tail: " " },
-                { text: "đẹp", meaning: "美", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em gái bạn xinh thế.",
-              translation: "你妹妹真漂亮(俏)。",
-              segments: [
-                { text: "Em gái", meaning: "妹妹", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "xinh", meaning: "俏/美", tail: " " },
-                { text: "thế", meaning: "那樣/真", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "形容人或景物。Đẹp 比較正式/大氣，Xinh 比較嬌小/可愛。",
-          image_file: "beautiful.png",
-        },
-        {
-          id: "adj-31",
-          term_zh: "便宜的",
-          related_terms: [
-            {
-              term_target: "Rẻ",
-              pronunciation: ["/zɛ/"],
-              specific_note: "",
-              segments: [{ text: "Rẻ", meaning: "便宜", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái này rẻ quá.",
-              translation: "這個太便宜了。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "rẻ", meaning: "便宜", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có cái nào rẻ hơn không?",
-              translation: "有更便宜的嗎？",
-              segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "cái nào", meaning: "哪個", tail: " " },
-                { text: "rẻ", meaning: "便宜", tail: " " },
-                { text: "hơn", meaning: "更/比", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Giá rẻ.",
-              translation: "價格便宜。",
-              segments: [
-                { text: "Giá", meaning: "價格", tail: " " },
-                { text: "rẻ", meaning: "便宜", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "殺價必備單字。",
-          image_file: "cheap.png",
-        },
-        {
-          id: "adj-32",
-          term_zh: "昂貴的",
-          related_terms: [
-            {
-              term_target: "Đắt",
-              pronunciation: ["/ɗat/"],
-              specific_note: "貴(北部/通用)",
-              segments: [{ text: "Đắt", meaning: "貴", tail: "" }],
-            },
-            {
-              term_target: "Mắc",
-              pronunciation: ["/mak/"],
-              specific_note: "貴(南部)",
-              segments: [{ text: "Mắc", meaning: "貴", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đắt quá, giảm giá đi.",
-              translation: "太貴了，打折吧。",
-              segments: [
-                { text: "Đắt", meaning: "貴", tail: " " },
-                { text: "quá", meaning: "太", tail: ", " },
-                { text: "giảm giá", meaning: "減價", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cái này hơi mắc.",
-              translation: "這個有點貴 (南部口語)。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "hơi", meaning: "稍微", tail: " " },
-                { text: "mắc", meaning: "貴", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xe đắt tiền.",
-              translation: "昂貴的車。",
-              segments: [
-                { text: "Xe", meaning: "車", tail: " " },
-                { text: "đắt", meaning: "貴", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "北越說 Đắt，南越說 Mắc。",
-          image_file: "expensive.png",
-        },
-        {
-          id: "adj-33",
-          term_zh: "飢餓的",
-          related_terms: [
-            {
-              term_target: "Đói",
-              pronunciation: ["/ɗɔj/"],
-              specific_note: "",
-              segments: [{ text: "Đói", meaning: "餓", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đói bụng quá.",
-              translation: "我肚子好餓。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đói", meaning: "餓", tail: " " },
-                { text: "bụng", meaning: "肚子", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn đói chưa?",
-              translation: "你餓了嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đói", meaning: "餓", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đói mềm người.",
-              translation: "餓得發軟 (餓扁了)。",
-              segments: [
-                { text: "Đói", meaning: "餓", tail: " " },
-                { text: "mềm", meaning: "軟", tail: " " },
-                { text: "người", meaning: "人/身體", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "可以單說 Đói 或完整說 Đói bụng (餓肚子)。",
-          image_file: "hungry.png",
-        },
-        {
-          id: "adj-34",
-          term_zh: "疲累的",
-          related_terms: [
-            {
-              term_target: "Mệt",
-              pronunciation: ["/met/"],
-              specific_note: "",
-              segments: [{ text: "Mệt", meaning: "累", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hôm nay tôi rất mệt.",
-              translation: "我今天很累。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "mệt", meaning: "累", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhìn bạn có vẻ mệt.",
-              translation: "你看起來好像很累。",
-              segments: [
-                { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "có vẻ", meaning: "看起來/似乎", tail: " " },
-                { text: "mệt", meaning: "累", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mệt mỏi quá.",
-              translation: "太疲勞了。",
-              segments: [
-                { text: "Mệt mỏi", meaning: "疲憊", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "身體或心理累都可用。",
-          image_file: "tired.png",
-        },
-        {
-          id: "adj-35",
-          term_zh: "忙碌的",
-          related_terms: [
-            {
-              term_target: "Bận",
-              pronunciation: ["/bən/"],
-              specific_note: "",
-              segments: [{ text: "Bận", meaning: "忙", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đang bận.",
-              translation: "我正在忙。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "bận", meaning: "忙", tail: "." },
-              ],
-            },
-            {
-              sentence: "Công việc bận rộn.",
-              translation: "工作忙碌。",
-              segments: [
-                { text: "Công việc", meaning: "工作", tail: " " },
-                { text: "bận rộn", meaning: "忙碌", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có bận không?",
-              translation: "你忙嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "bận", meaning: "忙", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "沒空。",
-          image_file: "busy.png",
-        },
-        {
-          id: "adj-36",
-          term_zh: "高興的",
-          related_terms: [
-            {
-              term_target: "Vui",
-              pronunciation: ["/vuj/"],
-              specific_note: "開心",
-              segments: [{ text: "Vui", meaning: "樂", tail: "" }],
-            },
-            {
-              term_target: "Hạnh phúc",
-              pronunciation: ["/haɲ fuk/"],
-              specific_note: "幸福",
-              segments: [{ text: "Hạnh phúc", meaning: "幸福", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi rất vui.",
-              translation: "我很開心。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: "." },
-              ],
-            },
-            {
-              sentence: "Vui vẻ nhé!",
-              translation: "玩得開心喔！(祝你愉快)。",
-              segments: [
-                { text: "Vui vẻ", meaning: "快樂/愉快", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Tin vui.",
-              translation: "好消息 (開心的消息)。",
-              segments: [
-                { text: "Tin", meaning: "消息", tail: " " },
-                { text: "vui", meaning: "樂", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "日常開心用 Vui。",
-          image_file: "happy.png",
-        },
-        {
-          id: "adj-37",
-          term_zh: "悲傷的",
-          related_terms: [
-            {
-              term_target: "Buồn",
-              pronunciation: ["/buən/"],
-              specific_note: "",
-              segments: [{ text: "Buồn", meaning: "難過/悶", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Sao bạn buồn vậy?",
-              translation: "你為什麼那麼難過？",
-              segments: [
-                { text: "Sao", meaning: "為什麼", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "buồn", meaning: "難過", tail: " " },
-                { text: "vậy", meaning: "那樣", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Chuyện buồn.",
-              translation: "悲傷的故事/事情。",
-              segments: [
-                { text: "Chuyện", meaning: "故事", tail: " " },
-                { text: "buồn", meaning: "悲傷", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng buồn nữa.",
-              translation: "別再難過了。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "buồn", meaning: "難過", tail: " " },
-                { text: "nữa", meaning: "再/更多", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "無聊也可以說 Buồn (Buồn chán)。",
-          image_file: "sad.png",
-        },
-        {
-          id: "adj-38",
-          term_zh: "相似的",
-          related_terms: [
-            {
-              term_target: "Giống",
-              pronunciation: ["/zoŋ͡m/"],
-              specific_note: "像/同",
-              segments: [{ text: "Giống", meaning: "像", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hai người nhìn giống nhau.",
-              translation: "兩個人看起來很像。",
-              segments: [
-                { text: "Hai", meaning: "二", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "nhìn", meaning: "看", tail: " " },
-                { text: "giống", meaning: "像", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cái này giống cái kia.",
-              translation: "這個跟那個很像。",
-              segments: [
-                { text: "Cái này", meaning: "這個", tail: " " },
-                { text: "giống", meaning: "像", tail: " " },
-                { text: "cái kia", meaning: "那個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn giống bố.",
-              translation: "你像爸爸。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "giống", meaning: "像", tail: " " },
-                { text: "bố", meaning: "爸", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "類似。",
-          image_file: "similar.png",
-        },
-        {
-          id: "adj-39",
-          term_zh: "有名的",
-          related_terms: [
-            {
-              term_target: "Nổi tiếng",
-              pronunciation: ["/noj tiəŋ/"],
-              specific_note: "知名",
-              segments: [
-                { text: "Nổi", meaning: "浮/起", tail: " " },
-                { text: "tiếng", meaning: "名聲/聲音", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ca sĩ nổi tiếng.",
-              translation: "知名歌手。",
-              segments: [
-                { text: "Ca sĩ", meaning: "歌手", tail: " " },
-                { text: "nổi tiếng", meaning: "有名", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nơi này rất nổi tiếng.",
-              translation: "這地方很有名。",
-              segments: [
-                { text: "Nơi", meaning: "地方", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "nổi tiếng", meaning: "有名", tail: "." },
-              ],
-            },
-            {
-              sentence: "Món ăn nổi tiếng.",
-              translation: "有名的菜(美食)。",
-              segments: [
-                { text: "Món ăn", meaning: "食物/菜", tail: " " },
-                { text: "nổi tiếng", meaning: "有名", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nổi tiếng (浮聲) = 聲名大噪。",
-          image_file: "famous.png",
-        },
-        {
-          id: "adj-40",
-          term_zh: "外國的",
-          related_terms: [
-            {
-              term_target: "Nước ngoài",
-              pronunciation: ["/nɨək ŋwai/"],
-              specific_note: "國外",
-              segments: [
-                { text: "Nước", meaning: "國/水", tail: " " },
-                { text: "ngoài", meaning: "外", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Người nước ngoài.",
-              translation: "外國人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "nước ngoài", meaning: "外國", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi du lịch nước ngoài.",
-              translation: "去國外旅遊。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "du lịch", meaning: "旅遊", tail: " " },
-                { text: "nước ngoài", meaning: "國外", tail: "." },
-              ],
-            },
-            {
-              sentence: "Công ty nước ngoài.",
-              translation: "外商公司。",
-              segments: [
-                { text: "Công ty", meaning: "公司", tail: " " },
-                { text: "nước ngoài", meaning: "國外", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nước (國) + Ngoài (外)。",
-          image_file: "foreign.png",
-        },
-        {
-          id: "adj-41",
-          term_zh: "聰明的",
-          related_terms: [
-            {
-              term_target: "Thông minh",
-              pronunciation: ["/tʰəwŋ͡m miɲ/"],
-              specific_note: "智商高",
-              segments: [
-                { text: "Thông", meaning: "通", tail: " " },
-                { text: "minh", meaning: "明", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cậu bé này rất thông minh.",
-              translation: "這小男孩很聰明。",
-              segments: [
-                { text: "Cậu bé", meaning: "小男孩", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "thông minh", meaning: "聰明", tail: "." },
-              ],
-            },
-            {
-              sentence: "Con chó thông minh.",
-              translation: "聰明的狗。",
-              segments: [
-                { text: "Con", meaning: "隻", tail: " " },
-                { text: "chó", meaning: "狗", tail: " " },
-                { text: "thông minh", meaning: "聰明", tail: "." },
-              ],
-            },
-            {
-              sentence: "Điện thoại thông minh.",
-              translation: "智慧型手機 (Smart phone)。",
-              segments: [
-                { text: "Điện thoại", meaning: "電話", tail: " " },
-                { text: "thông minh", meaning: "聰明/智慧", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "形容人、動物或高科技產品。",
-          image_file: "intelligent.png",
-        },
-        {
-          id: "adj-42",
-          term_zh: "危險的",
-          related_terms: [
-            {
-              term_target: "Nguy hiểm",
-              pronunciation: ["/ŋwi hiəm/"],
-              specific_note: "漢語:危險",
-              segments: [
-                { text: "Nguy", meaning: "危", tail: " " },
-                { text: "hiểm", meaning: "險", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chỗ này nguy hiểm lắm.",
-              translation: "這裡很危險。",
-              segments: [
-                { text: "Chỗ", meaning: "地方", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "nguy hiểm", meaning: "危險", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cẩn thận, nguy hiểm!",
-              translation: "小心，危險！",
-              segments: [
-                { text: "Cẩn thận", meaning: "小心", tail: ", " },
-                { text: "nguy hiểm", meaning: "危險", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Động vật nguy hiểm.",
-              translation: "危險動物。",
-              segments: [
-                { text: "Động vật", meaning: "動物", tail: " " },
-                { text: "nguy hiểm", meaning: "危險", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "警示用語。",
-          image_file: "dangerous.png",
-        },
-        {
-          id: "adj-43",
-          term_zh: "仁慈的 / 好心的",
-          related_terms: [
-            {
-              term_target: "Tốt bụng",
-              pronunciation: ["/tot buŋ͡m/"],
-              specific_note: "心腸好",
-              segments: [
-                { text: "Tốt", meaning: "好", tail: " " },
-                { text: "bụng", meaning: "肚子/心腸", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Anh ấy rất tốt bụng.",
-              translation: "他非常好心。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "tốt bụng", meaning: "好心", tail: "." },
-              ],
-            },
-            {
-              sentence: "Người tốt bụng.",
-              translation: "好心人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "tốt bụng", meaning: "好心", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cảm ơn bạn, bạn tốt bụng quá.",
-              translation: "謝謝你，你人真好。",
-              segments: [
-                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "bạn", meaning: "你", tail: ", " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "tốt bụng", meaning: "好心", tail: " " },
-                { text: "quá", meaning: "太/真", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "越南人認為心思在肚子裡，所以好心叫「好肚」。",
-          image_file: "kind.png",
-        },
-        {
-          id: "adj-44",
-          term_zh: "所有的 / 每一個",
-          related_terms: [
-            {
-              term_target: "Mỗi",
-              pronunciation: ["/məj/"],
-              specific_note: "每一(個)",
-              segments: [{ text: "Mỗi", meaning: "每", tail: "" }],
-            },
-            {
-              term_target: "Mọi",
-              pronunciation: ["/mɔj/"],
-              specific_note: "所有/大家",
-              segments: [{ text: "Mọi", meaning: "所有", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mỗi ngày.",
-              translation: "每一天。",
-              segments: [
-                { text: "Mỗi", meaning: "每", tail: " " },
-                { text: "ngày", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chào mọi người.",
-              translation: "大家好 (所有的人)。",
-              segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "mọi", meaning: "所有", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mỗi người một cái.",
-              translation: "一人一個 (每人一個)。",
-              segments: [
-                { text: "Mỗi", meaning: "每", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "cái", meaning: "個", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Mỗi 強調個體(Each)，Mọi 強調群體(Every/All)。",
-          image_file: "every.png",
-        },
-        {
-          id: "adj-45",
-          term_zh: "喜愛的 / 最愛的",
-          related_terms: [
-            {
-              term_target: "Yêu thích",
-              pronunciation: ["/iəw tʰik/"],
-              specific_note: "喜愛(形容詞)",
-              segments: [
-                { text: "Yêu", meaning: "愛", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: "" },
-              ],
-            },
-            {
-              term_target: "Thích nhất",
-              pronunciation: ["/tʰik ɲət/"],
-              specific_note: "最喜歡(動詞片語)",
-              segments: [
-                { text: "Thích", meaning: "喜歡", tail: " " },
-                { text: "nhất", meaning: "最", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Món ăn yêu thích của tôi.",
-              translation: "我最喜愛的食物。",
-              segments: [
-                { text: "Món ăn", meaning: "食物", tail: " " },
-                { text: "yêu thích", meaning: "喜愛", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn thích màu gì nhất?",
-              translation: "你最喜歡什麼顏色？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "màu", meaning: "顏色", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
-                { text: "nhất", meaning: "最", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đây là bài hát tôi thích nhất.",
-              translation: "這是我最喜歡的一首歌。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "bài hát", meaning: "歌", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "nhất", meaning: "最", tail: "." },
-              ],
-            },
-          ],
-          usage_note:
-            "口語中常用「Thích... nhất」(喜歡...最) 來表達 Favorite。",
-          image_file: "favorite.png",
-        },
-        {
-          id: "adj-46",
-          term_zh: "美味的",
-          related_terms: [
-            {
-              term_target: "Ngon",
-              pronunciation: ["/ŋɔn/"],
-              specific_note: "",
-              segments: [{ text: "Ngon", meaning: "好吃/好喝", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Món này ngon quá!",
-              translation: "這道菜太好吃了！",
-              segments: [
-                { text: "Món", meaning: "道(菜)", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: " " },
-                { text: "quá", meaning: "太/極", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Nhìn ngon thế.",
-              translation: "看起來真好吃。",
-              segments: [
-                { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: " " },
-                { text: "thế", meaning: "那樣/真", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúc ngon miệng.",
-              translation: "祝你用餐愉快 (祝好胃口)。",
-              segments: [
-                { text: "Chúc", meaning: "祝", tail: " " },
-                { text: "ngon", meaning: "香/好", tail: " " },
-                { text: "miệng", meaning: "嘴巴", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Ngon 既可以形容食物好吃，也可以形容飲料好喝。",
-          image_file: "delicious.png",
-        },
-      ],
-    },
-    {
-      id: "nouns",
-      name: "常用名詞 (越南語)",
-      items: [
-        {
-          id: "n-01",
-          term_zh: "時間",
-          related_terms: [
-            {
-              term_target: "Thời gian",
-              pronunciation: ["/tʰəj zan/"],
-              specific_note: "抽象概念",
-              segments: [
-                { text: "Thời", meaning: "時", tail: " " },
-                { text: "gian", meaning: "間", tail: "" },
-              ],
-            },
-            {
-              term_target: "Giờ",
-              pronunciation: ["/zə/"],
-              specific_note: "時刻/點鐘",
-              segments: [{ text: "Giờ", meaning: "點/小時", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mấy giờ rồi?",
-              translation: "現在幾點了？",
-              segments: [
-                { text: "Mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "rồi", meaning: "了", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi không có thời gian.",
-              translation: "我沒有時間。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "沒有", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "thời gian", meaning: "時間", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thời gian là vàng.",
-              translation: "時間就是金錢 (字面: 時間是金子)。",
-              segments: [
-                { text: "Thời gian", meaning: "時間", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "vàng", meaning: "金子", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "問時間用 Giờ，講空閒用 Thời gian。",
-          image_file: "time.png",
-        },
-        {
-          id: "n-02",
-          term_zh: "人們 / 人",
-          related_terms: [
-            {
-              term_target: "Người",
-              pronunciation: ["/ŋɨəj/"],
-              specific_note: "人",
-              segments: [{ text: "Người", meaning: "人", tail: "" }],
-            },
-            {
-              term_target: "Mọi người",
-              pronunciation: ["/mɔj ŋɨəj/"],
-              specific_note: "大家/人們",
-              segments: [
-                { text: "Mọi", meaning: "所有", tail: " " },
-                { text: "người", meaning: "人", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đông người quá.",
-              translation: "人好多 (太擠了)。",
-              segments: [
-                { text: "Đông", meaning: "擁擠/多", tail: " " },
-                { text: "người", meaning: "人", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mọi người đang nói chuyện.",
-              translation: "大家(人們)正在聊天。",
-              segments: [
-                { text: "Mọi người", meaning: "大家", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "nói chuyện", meaning: "聊天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà tôi có 5 người.",
-              translation: "我家有五口人。",
-              segments: [
-                { text: "Nhà", meaning: "家", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "5", meaning: "五", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "泛指「人」或量詞。",
-          image_file: "people.png",
-        },
-        {
-          id: "n-03",
-          term_zh: "金錢",
-          related_terms: [
-            {
-              term_target: "Tiền",
-              pronunciation: ["/tiən/"],
-              specific_note: "",
-              segments: [{ text: "Tiền", meaning: "錢", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hết tiền rồi.",
-              translation: "沒錢了 (花光了)。",
-              segments: [
-                { text: "Hết", meaning: "結束/光", tail: " " },
-                { text: "tiền", meaning: "錢", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cần rút tiền.",
-              translation: "我需要領錢。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "rút", meaning: "拔/領", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cho tôi mượn tiền được không?",
-              translation: "可以借我錢嗎？",
-              segments: [
-                { text: "Cho", meaning: "給/讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "mượn", meaning: "借入", tail: " " },
-                { text: "tiền", meaning: "錢", tail: " " },
-                { text: "được không", meaning: "可以嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "生活必備單字。",
-          image_file: "money.png",
-        },
-        {
-          id: "n-04",
-          term_zh: "孩子 / 小孩",
-          related_terms: [
-            {
-              term_target: "Con",
-              pronunciation: ["/kɔn/"],
-              specific_note: "兒女/稱呼晚輩",
-              segments: [{ text: "Con", meaning: "子/女", tail: "" }],
-            },
-            {
-              term_target: "Trẻ con",
-              pronunciation: ["/tʃɛ kɔn/"],
-              specific_note: "兒童(泛指)",
-              segments: [
-                { text: "Trẻ", meaning: "幼", tail: " " },
-                { text: "con", meaning: "子", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Con nít mà!",
-              translation: "小孩子嘛！(指不懂事)。",
-              segments: [
-                { text: "Con nít", meaning: "小孩子(口語)", tail: " " },
-                { text: "mà", meaning: "嘛(語助詞)", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Em bé đang ngủ.",
-              translation: "小寶寶正在睡覺。",
-              segments: [
-                { text: "Em bé", meaning: "嬰兒/寶寶", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chị ấy có hai đứa con.",
-              translation: "她有兩個孩子。",
-              segments: [
-                { text: "Chị ấy", meaning: "她", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "hai", meaning: "二", tail: " " },
-                { text: "đứa", meaning: "個(指小孩)", tail: " " },
-                { text: "con", meaning: "孩子", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "自己的小孩用 Con，別人的小孩或泛指用 Trẻ con / Em bé。",
-          image_file: "child.png",
-        },
-        {
-          id: "n-05",
-          term_zh: "水",
-          related_terms: [
-            {
-              term_target: "Nước",
-              pronunciation: ["/nɨək/"],
-              specific_note: "",
-              segments: [{ text: "Nước", meaning: "水/國", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cho tôi xin nước lọc.",
-              translation: "請給我白開水。",
-              segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xin", meaning: "請求", tail: " " },
-                { text: "nước lọc", meaning: "過濾水/白水", tail: "." },
-              ],
-            },
-            {
-              sentence: "Uống nhiều nước.",
-              translation: "多喝水。",
-              segments: [
-                { text: "Uống", meaning: "喝", tail: " " },
-                { text: "nhiều", meaning: "多", tail: " " },
-                { text: "nước", meaning: "水", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nước này lạnh quá.",
-              translation: "這水太冷了。",
-              segments: [
-                { text: "Nước", meaning: "水", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Nước 也有「國家」的意思 (如 Nước Việt Nam)。",
-          image_file: "water.png",
-        },
-        {
-          id: "n-06",
-          term_zh: "食物",
-          related_terms: [
-            {
-              term_target: "Đồ ăn",
-              pronunciation: ["/ɗo an/"],
-              specific_note: "口語",
-              segments: [
-                { text: "Đồ", meaning: "東西", tail: " " },
-                { text: "ăn", meaning: "吃", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đồ ăn ngon quá.",
-              translation: "食物很好吃。",
-              segments: [
-                { text: "Đồ ăn", meaning: "食物", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có đồ ăn không?",
-              translation: "你有吃的嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "đồ ăn", meaning: "食物", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi thích đồ ăn Việt Nam.",
-              translation: "我喜歡越南食物。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "đồ ăn", meaning: "食物", tail: " " },
-                { text: "Việt Nam", meaning: "越南", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "字面意思就是「吃的東西」。",
-          image_file: "food.png",
-        },
-        {
-          id: "n-07",
-          term_zh: "朋友",
-          related_terms: [
-            {
-              term_target: "Bạn",
-              pronunciation: ["/ban/"],
-              specific_note: "朋友/你",
-              segments: [{ text: "Bạn", meaning: "朋友", tail: "" }],
-            },
-            {
-              term_target: "Bạn bè",
-              pronunciation: ["/ban bɛ/"],
-              specific_note: "朋友們(泛指)",
-              segments: [
-                { text: "Bạn", meaning: "伴", tail: " " },
-                { text: "bè", meaning: "群", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đây là bạn tôi.",
-              translation: "這是我朋友。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "bạn", meaning: "朋友", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn thân.",
-              translation: "好朋友 (死黨/閨蜜)。",
-              segments: [
-                { text: "Bạn", meaning: "朋友", tail: " " },
-                { text: "thân", meaning: "親/深", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi chơi với bạn bè.",
-              translation: "跟朋友出去玩。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "chơi", meaning: "玩", tail: " " },
-                { text: "với", meaning: "跟/與", tail: " " },
-                { text: "bạn bè", meaning: "朋友們", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Bạn 也是「你」的代名詞。",
-          image_file: "friend.png",
-        },
-        {
-          id: "n-08",
-          term_zh: "家庭",
-          related_terms: [
-            {
-              term_target: "Gia đình",
-              pronunciation: ["/za ɗiɲ/"],
-              specific_note: "正式",
-              segments: [
-                { text: "Gia", meaning: "家", tail: " " },
-                { text: "đình", meaning: "庭", tail: "" },
-              ],
-            },
-            {
-              term_target: "Nhà",
-              pronunciation: ["/ɲa/"],
-              specific_note: "口語/房子",
-              segments: [{ text: "Nhà", meaning: "家/屋", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Gia đình tôi có 4 người.",
-              translation: "我家(庭)有四個人。",
-              segments: [
-                { text: "Gia đình", meaning: "家庭", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "4", meaning: "四", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi yêu gia đình.",
-              translation: "我愛我的家人。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "yêu", meaning: "愛", tail: " " },
-                { text: "gia đình", meaning: "家庭", tail: "." },
-              ],
-            },
-            {
-              sentence: "Về nhà thôi.",
-              translation: "回家吧。",
-              segments: [
-                { text: "Về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: " " },
-                { text: "thôi", meaning: "吧", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Gia đình 指成員關係，Nhà 指房子或口語的家。",
-          image_file: "family.png",
-        },
-        {
-          id: "n-09",
-          term_zh: "學生",
-          related_terms: [
-            {
-              term_target: "Học sinh",
-              pronunciation: ["/hawk siɲ/"],
-              specific_note: "中小學生",
-              segments: [
-                { text: "Học", meaning: "學", tail: " " },
-                { text: "sinh", meaning: "生", tail: "" },
-              ],
-            },
-            {
-              term_target: "Sinh viên",
-              pronunciation: ["/siɲ viən/"],
-              specific_note: "大學生",
-              segments: [
-                { text: "Sinh", meaning: "生", tail: " " },
-                { text: "viên", meaning: "員", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi là sinh viên.",
-              translation: "我是大學生。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sinh viên", meaning: "大學生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Học sinh giỏi.",
-              translation: "好學生 (成績優秀)。",
-              segments: [
-                { text: "Học sinh", meaning: "學生", tail: " " },
-                { text: "giỏi", meaning: "棒/優秀", tail: "." },
-              ],
-            },
-            {
-              sentence: "Các em học sinh.",
-              translation: "各位同學 (老師稱呼學生)。",
-              segments: [
-                { text: "Các", meaning: "各/諸位", tail: " " },
-                { text: "em", meaning: "弟妹/晚輩", tail: " " },
-                { text: "học sinh", meaning: "學生", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "區分：Học sinh (中小學) vs Sinh viên (大學)。",
-          image_file: "student.png",
-        },
-        {
-          id: "n-10",
-          term_zh: "文化",
-          related_terms: [
-            {
-              term_target: "Văn hóa",
-              pronunciation: ["/van hɔa/"],
-              specific_note: "漢語:文化",
-              segments: [
-                { text: "Văn", meaning: "文", tail: " " },
-                { text: "hóa", meaning: "化", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Văn hóa Việt Nam.",
-              translation: "越南文化。",
-              segments: [
-                { text: "Văn hóa", meaning: "文化", tail: " " },
-                { text: "Việt Nam", meaning: "越南", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích tìm hiểu văn hóa.",
-              translation: "我喜歡了解(探索)文化。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "tìm hiểu", meaning: "探索/了解", tail: " " },
-                { text: "văn hóa", meaning: "文化", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sốc văn hóa.",
-              translation: "文化衝擊。",
-              segments: [
-                { text: "Sốc", meaning: "休克/衝擊(Shock)", tail: " " },
-                { text: "văn hóa", meaning: "文化", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "發音跟中文「文化」非常像。",
-          image_file: "culture.png",
-        },
-        {
-          id: "n-11",
-          term_zh: "問題",
-          related_terms: [
-            {
-              term_target: "Vấn đề",
-              pronunciation: ["/vən ɗe/"],
-              specific_note: "難題/議題",
-              segments: [
-                { text: "Vấn", meaning: "問", tail: " " },
-                { text: "đề", meaning: "題", tail: "" },
-              ],
-            },
-            {
-              term_target: "Câu hỏi",
-              pronunciation: ["/kəw hɔj/"],
-              specific_note: "提問",
-              segments: [
-                { text: "Câu", meaning: "句", tail: " " },
-                { text: "hỏi", meaning: "問", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Không sao, không có vấn đề gì.",
-              translation: "沒關係，沒什麼問題。",
-              segments: [
-                { text: "Không sao", meaning: "沒事", tail: ", " },
-                { text: "không", meaning: "沒", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "vấn đề", meaning: "問題", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "." },
-              ],
-            },
-            {
-              sentence: "Vấn đề lớn.",
-              translation: "大問題。",
-              segments: [
-                { text: "Vấn đề", meaning: "問題", tail: " " },
-                { text: "lớn", meaning: "大", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giải quyết vấn đề.",
-              translation: "解決問題。",
-              segments: [
-                { text: "Giải quyết", meaning: "解決", tail: " " },
-                { text: "vấn đề", meaning: "問題", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "要發問時用 Câu hỏi，遇到麻煩用 Vấn đề。",
-          image_file: "problem.png",
-        },
-        {
-          id: "n-12",
-          term_zh: "公司",
-          related_terms: [
-            {
-              term_target: "Công ty",
-              pronunciation: ["/kəwŋ͡m ti/"],
-              specific_note: "漢語:公司",
-              segments: [
-                { text: "Công", meaning: "公", tail: " " },
-                { text: "ty", meaning: "司", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Công ty lớn.",
-              translation: "大公司。",
-              segments: [
-                { text: "Công ty", meaning: "公司", tail: " " },
-                { text: "lớn", meaning: "大", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi làm việc ở công ty này.",
-              translation: "我在這家公司工作。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "công ty", meaning: "公司", tail: " " },
-                { text: "này", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giám đốc công ty.",
-              translation: "公司經理/董事。",
-              segments: [
-                { text: "Giám đốc", meaning: "監督/經理", tail: " " },
-                { text: "công ty", meaning: "公司", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "上班地點。",
-          image_file: "company.png",
-        },
-        {
-          id: "n-13",
-          term_zh: "男性 / 男人",
-          related_terms: [
-            {
-              term_target: "Đàn ông",
-              pronunciation: ["/ɗan əwŋ͡m/"],
-              specific_note: "成年男子",
-              segments: [
-                { text: "Đàn", meaning: "群/類", tail: " " },
-                { text: "ông", meaning: "公/翁", tail: "" },
-              ],
-            },
-            {
-              term_target: "Nam",
-              pronunciation: ["/nam/"],
-              specific_note: "性別(填表用)",
-              segments: [{ text: "Nam", meaning: "男", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Anh ấy là đàn ông.",
-              translation: "他是個男人。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "đàn ông", meaning: "男人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Người đàn ông đó.",
-              translation: "那個男人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "đàn ông", meaning: "男人", tail: " " },
-                { text: "đó", meaning: "那", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chàng trai trẻ.",
-              translation: "年輕男子(帥哥)。",
-              segments: [
-                { text: "Chàng trai", meaning: "男子/男生", tail: " " },
-                { text: "trẻ", meaning: "年輕", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一般對話稱 Anh (哥)，泛指性別用 Đàn ông。",
-          image_file: "man.png",
-        },
-        {
-          id: "n-14",
-          term_zh: "女性 / 女人",
-          related_terms: [
-            {
-              term_target: "Phụ nữ",
-              pronunciation: ["/fu nɨ/"],
-              specific_note: "成年女子",
-              segments: [
-                { text: "Phụ", meaning: "婦", tail: " " },
-                { text: "nữ", meaning: "女", tail: "" },
-              ],
-            },
-            {
-              term_target: "Nữ",
-              pronunciation: ["/nɨ/"],
-              specific_note: "性別(填表用)",
-              segments: [{ text: "Nữ", meaning: "女", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cô ấy là phụ nữ hiện đại.",
-              translation: "她是現代女性。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "phụ nữ", meaning: "婦女", tail: " " },
-                { text: "hiện đại", meaning: "現代", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ngày Quốc tế Phụ nữ.",
-              translation: "國際婦女節。",
-              segments: [
-                { text: "Ngày", meaning: "日/節", tail: " " },
-                { text: "Quốc tế", meaning: "國際", tail: " " },
-                { text: "Phụ nữ", meaning: "婦女", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô gái xinh đẹp.",
-              translation: "漂亮的女生(女孩)。",
-              segments: [
-                { text: "Cô gái", meaning: "女孩/女生", tail: " " },
-                { text: "xinh đẹp", meaning: "漂亮", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "年輕未婚多用 Cô gái，成熟或統稱用 Phụ nữ。",
-          image_file: "woman.png",
-        },
-        {
-          id: "n-15",
-          term_zh: "學校",
-          related_terms: [
-            {
-              term_target: "Trường học",
-              pronunciation: ["/tʃɨəŋ hawk/"],
-              specific_note: "",
-              segments: [
-                { text: "Trường", meaning: "場/校", tail: " " },
-                { text: "học", meaning: "學", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi học.",
-              translation: "我去上學。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去/走", tail: " " },
-                { text: "học", meaning: "學", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trường học ở gần đây.",
-              translation: "學校在這附近。",
-              segments: [
-                { text: "Trường học", meaning: "學校", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "gần", meaning: "近", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trường đại học.",
-              translation: "大學 (大場學)。",
-              segments: [
-                { text: "Trường", meaning: "學校", tail: " " },
-                { text: "đại", meaning: "大", tail: " " },
-                { text: "học", meaning: "學", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常簡稱為 Trường。",
-          image_file: "school.png",
-        },
-        {
-          id: "n-16",
-          term_zh: "老師",
-          related_terms: [
-            {
-              term_target: "Giáo viên",
-              pronunciation: ["/zaːw viən/"],
-              specific_note: "職業名稱",
-              segments: [
-                { text: "Giáo", meaning: "教", tail: " " },
-                { text: "viên", meaning: "員", tail: "" },
-              ],
-            },
-            {
-              term_target: "Thầy / Cô",
-              pronunciation: ["/tʰəj/", "/ko/"],
-              specific_note: "稱呼(男/女)",
-              segments: [
-                { text: "Thầy", meaning: "男師", tail: " / " },
-                { text: "Cô", meaning: "女師", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Em chào thầy ạ.",
-              translation: "老師(男)好。",
-              segments: [
-                { text: "Em", meaning: "學生自稱", tail: " " },
-                { text: "chào", meaning: "招呼", tail: " " },
-                { text: "thầy", meaning: "老師", tail: " " },
-                { text: "ạ", meaning: "敬語助詞", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô giáo dạy tiếng Anh.",
-              translation: "英文女老師。",
-              segments: [
-                { text: "Cô giáo", meaning: "女老師", tail: " " },
-                { text: "dạy", meaning: "教", tail: " " },
-                { text: "tiếng Anh", meaning: "英文", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghe lời thầy cô.",
-              translation: "聽老師的話。",
-              segments: [
-                { text: "Nghe", meaning: "聽", tail: " " },
-                { text: "lời", meaning: "話語", tail: " " },
-                { text: "thầy cô", meaning: "老師們", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "當面稱呼絕對不能叫 Giáo viên，一定要叫 Thầy 或 Cô。",
-          image_file: "teacher.png",
-        },
-        {
-          id: "n-17",
-          term_zh: "電影 / 影片",
-          related_terms: [
-            {
-              term_target: "Phim",
-              pronunciation: ["/fim/"],
-              specific_note: "外來語(Film)",
-              segments: [{ text: "Phim", meaning: "片/電影", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đi xem phim.",
-              translation: "去看電影。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "phim", meaning: "電影", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phim này hay lắm.",
-              translation: "這部電影很好看。",
-              segments: [
-                { text: "Phim", meaning: "電影", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "hay", meaning: "精彩/好", tail: " " },
-                { text: "lắm", meaning: "很", tail: "." },
-              ],
-            },
-            {
-              sentence: "Rạp chiếu phim.",
-              translation: "電影院。",
-              segments: [
-                { text: "Rạp", meaning: "棚/院", tail: " " },
-                { text: "chiếu", meaning: "照/放映", tail: " " },
-                { text: "phim", meaning: "電影", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "電影、電視劇都統稱 Phim。",
-          image_file: "movie.png",
-        },
-        {
-          id: "n-18",
-          term_zh: "手機 / 電話",
-          related_terms: [
-            {
-              term_target: "Điện thoại",
-              pronunciation: ["/ɗiən tʰwaj/"],
-              specific_note: "漢語:電話",
-              segments: [
-                { text: "Điện", meaning: "電", tail: " " },
-                { text: "thoại", meaning: "話", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Số điện thoại của bạn là gì?",
-              translation: "你的電話號碼是多少？",
-              segments: [
-                { text: "Số", meaning: "號碼", tail: " " },
-                { text: "điện thoại", meaning: "電話", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Nghe điện thoại đi.",
-              translation: "接(聽)電話吧。",
-              segments: [
-                { text: "Nghe", meaning: "聽", tail: " " },
-                { text: "điện thoại", meaning: "電話", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Điện thoại di động.",
-              translation: "行動電話 (手機)。",
-              segments: [
-                { text: "Điện thoại", meaning: "電話", tail: " " },
-                { text: "di động", meaning: "移動", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常簡稱 ĐT。",
-          image_file: "phone.png",
-        },
-        {
-          id: "n-19",
-          term_zh: "電腦",
-          related_terms: [
-            {
-              term_target: "Máy tính",
-              pronunciation: ["/maj tiɲ/"],
-              specific_note: "",
-              segments: [
-                { text: "Máy", meaning: "機器", tail: " " },
-                { text: "tính", meaning: "計算", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Dùng máy tính.",
-              translation: "用電腦。",
-              segments: [
-                { text: "Dùng", meaning: "用", tail: " " },
-                { text: "máy tính", meaning: "電腦", tail: "." },
-              ],
-            },
-            {
-              sentence: "Máy tính xách tay.",
-              translation: "筆記型電腦 (手提電腦)。",
-              segments: [
-                { text: "Máy tính", meaning: "電腦", tail: " " },
-                { text: "xách", meaning: "提", tail: " " },
-                { text: "tay", meaning: "手", tail: "." },
-              ],
-            },
-            {
-              sentence: "Máy tính bị hư.",
-              translation: "電腦壞了。",
-              segments: [
-                { text: "Máy tính", meaning: "電腦", tail: " " },
-                { text: "bị", meaning: "被/遭", tail: " " },
-                { text: "hư", meaning: "壞", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "字面意思是「計算機」。",
-          image_file: "computer.png",
-        },
-        {
-          id: "n-20",
-          term_zh: "車 / 汽車",
-          related_terms: [
-            {
-              term_target: "Xe hơi",
-              pronunciation: ["/sɛ həj/"],
-              specific_note: "汽車(南部)",
-              segments: [
-                { text: "Xe", meaning: "車", tail: " " },
-                { text: "hơi", meaning: "氣/汽", tail: "" },
-              ],
-            },
-            {
-              term_target: "Ô tô",
-              pronunciation: ["/o to/"],
-              specific_note: "汽車(北部)",
-              segments: [{ text: "Ô tô", meaning: "Auto", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Lái xe.",
-              translation: "開車 / 駕駛。",
-              segments: [
-                { text: "Lái", meaning: "駕駛", tail: " " },
-                { text: "xe", meaning: "車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lên xe đi.",
-              translation: "上車吧。",
-              segments: [
-                { text: "Lên", meaning: "上", tail: " " },
-                { text: "xe", meaning: "車", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xe màu đỏ.",
-              translation: "紅色的車。",
-              segments: [
-                { text: "Xe", meaning: "車", tail: " " },
-                { text: "màu", meaning: "顏色", tail: " " },
-                { text: "đỏ", meaning: "紅", tail: "." },
-              ],
-            },
-          ],
-          usage_note:
-            "單說 Xe 通常指機車 (Xe máy)，指汽車要說清楚 Xe hơi/Ô tô。",
-          image_file: "car.png",
-        },
-        {
-          id: "n-21",
-          term_zh: "市場",
-          related_terms: [
-            {
-              term_target: "Chợ",
-              pronunciation: ["/tʃə/"],
-              specific_note: "傳統市場",
-              segments: [{ text: "Chợ", meaning: "市場", tail: "" }],
-            },
-            {
-              term_target: "Siêu thị",
-              pronunciation: ["/siəw tʰi/"],
-              specific_note: "超級市場",
-              segments: [
-                { text: "Siêu", meaning: "超", tail: " " },
-                { text: "thị", meaning: "市", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đi chợ.",
-              translation: "去市場 (買菜)。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "chợ", meaning: "市場", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chợ đêm.",
-              translation: "夜市。",
-              segments: [
-                { text: "Chợ", meaning: "市場", tail: " " },
-                { text: "đêm", meaning: "夜", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chợ Bến Thành ở đâu?",
-              translation: "濱城市場在哪裡？",
-              segments: [
-                { text: "Chợ", meaning: "市場", tail: " " },
-                { text: "Bến Thành", meaning: "濱城(名)", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "傳統市場是越南生活重心。",
-          image_file: "market.png",
-        },
-        {
-          id: "n-22",
-          term_zh: "衣服",
-          related_terms: [
-            {
-              term_target: "Quần áo",
-              pronunciation: ["/kwən aːw/"],
-              specific_note: "衣物總稱",
-              segments: [
-                { text: "Quần", meaning: "褲", tail: " " },
-                { text: "áo", meaning: "衣", tail: "" },
-              ],
-            },
-            {
-              term_target: "Đồ",
-              pronunciation: ["/ɗo/"],
-              specific_note: "口語/東西",
-              segments: [{ text: "Đồ", meaning: "物品/衣服", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mua quần áo mới.",
-              translation: "買新衣服。",
-              segments: [
-                { text: "Mua", meaning: "買", tail: " " },
-                { text: "quần áo", meaning: "衣服", tail: " " },
-                { text: "mới", meaning: "新", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thay đồ đi.",
-              translation: "去換衣服吧。",
-              segments: [
-                { text: "Thay", meaning: "換", tail: " " },
-                { text: "đồ", meaning: "衣服(口語)", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giặt quần áo.",
-              translation: "洗衣服。",
-              segments: [
-                { text: "Giặt", meaning: "洗(衣)", tail: " " },
-                { text: "quần áo", meaning: "衣服", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "正式說 Quần áo，口語常說 Đồ (如 Mua đồ 買東西/衣服)。",
-          image_file: "clothes.png",
-        },
-        {
-          id: "n-23",
-          term_zh: "商店",
-          related_terms: [
-            {
-              term_target: "Cửa hàng",
-              pronunciation: ["/kɨə haŋ/"],
-              specific_note: "一般商店",
-              segments: [
-                { text: "Cửa", meaning: "門", tail: " " },
-                { text: "hàng", meaning: "行/貨", tail: "" },
-              ],
-            },
-            {
-              term_target: "Quán",
-              pronunciation: ["/kwan/"],
-              specific_note: "飲食店/小店",
-              segments: [{ text: "Quán", meaning: "館/店", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Quán cà phê.",
-              translation: "咖啡店。",
-              segments: [
-                { text: "Quán", meaning: "店", tail: " " },
-                { text: "cà phê", meaning: "咖啡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cửa hàng tiện lợi.",
-              translation: "便利商店。",
-              segments: [
-                { text: "Cửa hàng", meaning: "商店", tail: " " },
-                { text: "tiện lợi", meaning: "便利", tail: "." },
-              ],
-            },
-            {
-              sentence: "Quán ăn ngon.",
-              translation: "好吃的餐館。",
-              segments: [
-                { text: "Quán", meaning: "店", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "賣吃的喝的多用 Quán，賣物品多用 Cửa hàng。",
-          image_file: "shop.png",
-        },
-        {
-          id: "n-24",
-          term_zh: "公車 / 巴士",
-          related_terms: [
-            {
-              term_target: "Xe buýt",
-              pronunciation: ["/sɛ bit/"],
-              specific_note: "Bus",
-              segments: [
-                { text: "Xe", meaning: "車", tail: " " },
-                { text: "buýt", meaning: "巴士(Bus)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi học bằng xe buýt.",
-              translation: "我搭公車去上學。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "học", meaning: "學", tail: " " },
-                { text: "bằng", meaning: "藉由", tail: " " },
-                { text: "xe buýt", meaning: "公車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trạm xe buýt ở đâu?",
-              translation: "公車站牌在哪裡？",
-              segments: [
-                { text: "Trạm", meaning: "站", tail: " " },
-                { text: "xe buýt", meaning: "公車", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Lên xe đi.",
-              translation: "上車吧。",
-              segments: [
-                { text: "Lên", meaning: "上", tail: " " },
-                { text: "xe", meaning: "車", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "大眾運輸工具。",
-          image_file: "bus.png",
-        },
-        {
-          id: "n-25",
-          term_zh: "街道 / 路",
-          related_terms: [
-            {
-              term_target: "Đường",
-              pronunciation: ["/ɗɨəŋ/"],
-              specific_note: "路/街",
-              segments: [{ text: "Đường", meaning: "路/道", tail: "" }],
-            },
-            {
-              term_target: "Phố",
-              pronunciation: ["/fo/"],
-              specific_note: "市街",
-              segments: [{ text: "Phố", meaning: "街", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Sang đường.",
-              translation: "過馬路。",
-              segments: [
-                { text: "Sang", meaning: "過/到", tail: " " },
-                { text: "đường", meaning: "路", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà mặt phố.",
-              translation: "臨街的房子 (店面)。",
-              segments: [
-                { text: "Nhà", meaning: "房", tail: " " },
-                { text: "mặt", meaning: "面", tail: " " },
-                { text: "phố", meaning: "街", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đường này hay tắc đường.",
-              translation: "這條路常塞車。",
-              segments: [
-                { text: "Đường", meaning: "路", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "hay", meaning: "經常", tail: " " },
-                { text: "tắc", meaning: "堵塞", tail: " " },
-                { text: "đường", meaning: "路", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "地址上常用 Đường (如：Đường Nguyễn Huệ)。",
-          image_file: "street.png",
-        },
-        {
-          id: "n-26",
-          term_zh: "房子 / 家",
-          related_terms: [
-            {
-              term_target: "Nhà",
-              pronunciation: ["/ɲa/"],
-              specific_note: "通用",
-              segments: [{ text: "Nhà", meaning: "家/屋", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Về nhà.",
-              translation: "回家。",
-              segments: [
-                { text: "Về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà tôi ở đây.",
-              translation: "我家在這裡。",
-              segments: [
-                { text: "Nhà", meaning: "家", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mua nhà mới.",
-              translation: "買新房子。",
-              segments: [
-                { text: "Mua", meaning: "買", tail: " " },
-                { text: "nhà", meaning: "房子", tail: " " },
-                { text: "mới", meaning: "新", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "既指建築物(House)也指家庭(Home)。",
-          image_file: "house.png",
-        },
-        {
-          id: "n-27",
-          term_zh: "母親 / 媽媽",
-          related_terms: [
-            {
-              term_target: "Mẹ",
-              pronunciation: ["/mɛ/"],
-              specific_note: "北部/通用",
-              segments: [{ text: "Mẹ", meaning: "媽", tail: "" }],
-            },
-            {
-              term_target: "Má",
-              pronunciation: ["/ma/"],
-              specific_note: "南部",
-              segments: [{ text: "Má", meaning: "媽", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mẹ ơi!",
-              translation: "媽咪！(呼喚時)。",
-              segments: [
-                { text: "Mẹ", meaning: "媽", tail: " " },
-                { text: "ơi", meaning: "喂/啊", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Con yêu mẹ.",
-              translation: "我愛媽媽。",
-              segments: [
-                { text: "Con", meaning: "孩子(我)", tail: " " },
-                { text: "yêu", meaning: "愛", tail: " " },
-                { text: "mẹ", meaning: "媽", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mẹ nấu ăn rất ngon.",
-              translation: "媽媽煮飯很好吃。",
-              segments: [
-                { text: "Mẹ", meaning: "媽", tail: " " },
-                { text: "nấu ăn", meaning: "煮飯", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "北越叫 Mẹ，南越叫 Má。",
-          image_file: "mother.png",
-        },
-        {
-          id: "n-28",
-          term_zh: "父親 / 爸爸",
-          related_terms: [
-            {
-              term_target: "Bố",
-              pronunciation: ["/bo/"],
-              specific_note: "北部",
-              segments: [{ text: "Bố", meaning: "爸", tail: "" }],
-            },
-            {
-              term_target: "Ba",
-              pronunciation: ["/ba/"],
-              specific_note: "南部/通用",
-              segments: [{ text: "Ba", meaning: "爸", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bố đang làm việc.",
-              translation: "爸爸正在工作。",
-              segments: [
-                { text: "Bố", meaning: "爸", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ba ơi, đi chơi đi.",
-              translation: "爸爸，去玩吧 (南部說法)。",
-              segments: [
-                { text: "Ba", meaning: "爸", tail: " " },
-                { text: "ơi", meaning: "啊/喂", tail: ", " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "chơi", meaning: "玩", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giống bố.",
-              translation: "長得像爸爸。",
-              segments: [
-                { text: "Giống", meaning: "像", tail: " " },
-                { text: "bố", meaning: "爸", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "北越叫 Bố，南越叫 Ba。",
-          image_file: "father.png",
-        },
-        {
-          id: "n-29",
-          term_zh: "兄弟 (哥哥/弟弟)",
-          related_terms: [
-            {
-              term_target: "Anh trai",
-              pronunciation: ["/aɲ tʃaj/"],
-              specific_note: "哥哥",
-              segments: [
-                { text: "Anh", meaning: "兄", tail: " " },
-                { text: "trai", meaning: "男", tail: "" },
-              ],
-            },
-            {
-              term_target: "Em trai",
-              pronunciation: ["/ɛm tʃaj/"],
-              specific_note: "弟弟",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "trai", meaning: "男", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Anh trai tôi.",
-              translation: "我哥哥。",
-              segments: [
-                { text: "Anh trai", meaning: "哥哥", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em trai ngoan.",
-              translation: "乖弟弟。",
-              segments: [
-                { text: "Em trai", meaning: "弟弟", tail: " " },
-                { text: "ngoan", meaning: "乖", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hai anh em.",
-              translation: "兩兄弟 (或兄妹)。",
-              segments: [
-                { text: "Hai", meaning: "兩", tail: " " },
-                { text: "anh", meaning: "兄", tail: " " },
-                { text: "em", meaning: "弟", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "越南語必須區分長幼：大的叫 Anh，小的叫 Em。",
-          image_file: "brother.png",
-        },
-        {
-          id: "n-30",
-          term_zh: "姐妹 (姊姊/妹妹)",
-          related_terms: [
-            {
-              term_target: "Chị gái",
-              pronunciation: ["/tʃi gaj/"],
-              specific_note: "姊姊",
-              segments: [
-                { text: "Chị", meaning: "姊", tail: " " },
-                { text: "gái", meaning: "女", tail: "" },
-              ],
-            },
-            {
-              term_target: "Em gái",
-              pronunciation: ["/ɛm gaj/"],
-              specific_note: "妹妹",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "gái", meaning: "女", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chị gái tôi đã kết hôn.",
-              translation: "我姊姊已經結婚了。",
-              segments: [
-                { text: "Chị gái", meaning: "姊姊", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "kết hôn", meaning: "結婚", tail: "." },
-              ],
-            },
-            {
-              sentence: "Em gái đang đi học.",
-              translation: "妹妹正在上學。",
-              segments: [
-                { text: "Em gái", meaning: "妹妹", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "đi học", meaning: "上學", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hai chị em.",
-              translation: "兩姊妹 (或姊弟)。",
-              segments: [
-                { text: "Hai", meaning: "兩", tail: " " },
-                { text: "chị", meaning: "姊", tail: " " },
-                { text: "em", meaning: "妹", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "必須區分長幼：大的叫 Chị，小的叫 Em。",
-          image_file: "sister.png",
-        },
-        {
-          id: "n-31",
-          term_zh: "中文 / 華語",
-          related_terms: [
-            {
-              term_target: "Tiếng Trung",
-              pronunciation: ["/tiəŋ tʃuŋ͡m/"],
-              specific_note: "通用",
-              segments: [
-                { text: "Tiếng", meaning: "語", tail: " " },
-                { text: "Trung", meaning: "中", tail: "" },
-              ],
-            },
-            {
-              term_target: "Tiếng Hoa",
-              pronunciation: ["/tiəŋ hɔa/"],
-              specific_note: "南方常用",
-              segments: [
-                { text: "Tiếng", meaning: "語", tail: " " },
-                { text: "Hoa", meaning: "華", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi nói tiếng Trung.",
-              translation: "我說中文。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nói", meaning: "說", tail: " " },
-                { text: "tiếng Trung", meaning: "中文", tail: "." },
-              ],
-            },
-            {
-              sentence: "Học tiếng Trung có khó không?",
-              translation: "學中文難嗎？",
-              segments: [
-                { text: "Học", meaning: "學", tail: " " },
-                { text: "tiếng Trung", meaning: "中文", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "khó", meaning: "難", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Người Hoa.",
-              translation: "華人。",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "Hoa", meaning: "華", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "指語言用 Tiếng Trung 或 Tiếng Hoa。",
-          image_file: "chinese.png",
-        },
-        {
-          id: "n-32",
-          term_zh: "早晨 / 早上",
-          related_terms: [
-            {
-              term_target: "Buổi sáng",
-              pronunciation: ["/buəj saːŋ/"],
-              specific_note: "時段",
-              segments: [
-                { text: "Buổi", meaning: "時段", tail: " " },
-                { text: "sáng", meaning: "早/亮", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chào buổi sáng.",
-              translation: "早安。",
-              segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi sáng", meaning: "早上", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ăn sáng.",
-              translation: "吃早餐。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "sáng", meaning: "早", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sáng nay.",
-              translation: "今天早上。",
-              segments: [
-                { text: "Sáng", meaning: "早", tail: " " },
-                { text: "nay", meaning: "今", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Sáng 本身也是形容詞「亮」。",
-          image_file: "morning.png",
-        },
-        {
-          id: "n-33",
-          term_zh: "夜晚 / 晚上",
-          related_terms: [
-            {
-              term_target: "Buổi tối",
-              pronunciation: ["/buəj toj/"],
-              specific_note: "晚上(6-10點)",
-              segments: [
-                { text: "Buổi", meaning: "時段", tail: " " },
-                { text: "tối", meaning: "晚/暗", tail: "" },
-              ],
-            },
-            {
-              term_target: "Ban đêm",
-              pronunciation: ["/ban ɗem/"],
-              specific_note: "深夜",
-              segments: [
-                { text: "Ban", meaning: "班/時", tail: " " },
-                { text: "đêm", meaning: "夜", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Chào buổi tối.",
-              translation: "晚安 (見面時)。",
-              segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi tối", meaning: "晚上", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ăn tối.",
-              translation: "吃晚餐。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "tối", meaning: "晚", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúc ngủ ngon.",
-              translation: "晚安 (睡覺前)。",
-              segments: [
-                { text: "Chúc", meaning: "祝", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: " " },
-                { text: "ngon", meaning: "香/好", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "生活中的「晚上」多用 Buổi tối。",
-          image_file: "night.png",
-        },
-        {
-          id: "n-34",
-          term_zh: "票",
-          related_terms: [
-            {
-              term_target: "Vé",
-              pronunciation: ["/vɛ/"],
-              specific_note: "票券",
-              segments: [{ text: "Vé", meaning: "票", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Vé máy bay.",
-              translation: "飛機票。",
-              segments: [
-                { text: "Vé", meaning: "票", tail: " " },
-                { text: "máy bay", meaning: "飛機", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mua vé ở đâu?",
-              translation: "在哪裡買票？",
-              segments: [
-                { text: "Mua", meaning: "買", tail: " " },
-                { text: "vé", meaning: "票", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Vé xe buýt.",
-              translation: "公車票。",
-              segments: [
-                { text: "Vé", meaning: "票", tail: " " },
-                { text: "xe buýt", meaning: "公車", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "門票、車票、機票都用 Vé。",
-          image_file: "ticket.png",
-        },
-        {
-          id: "n-35",
-          term_zh: "包包",
-          related_terms: [
-            {
-              term_target: "Túi",
-              pronunciation: ["/tuj/"],
-              specific_note: "袋子/包包",
-              segments: [{ text: "Túi", meaning: "袋", tail: "" }],
-            },
-            {
-              term_target: "Ba lô",
-              pronunciation: ["/ba lo/"],
-              specific_note: "背包",
-              segments: [{ text: "Ba lô", meaning: "背包", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cái túi này đẹp quá.",
-              translation: "這包包好漂亮。",
-              segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "túi", meaning: "袋/包", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "đẹp", meaning: "美", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Túi xách.",
-              translation: "手提包。",
-              segments: [
-                { text: "Túi", meaning: "袋", tail: " " },
-                { text: "xách", meaning: "提", tail: "." },
-              ],
-            },
-            {
-              sentence: "Quên mang túi.",
-              translation: "忘了帶包包。",
-              segments: [
-                { text: "Quên", meaning: "忘", tail: " " },
-                { text: "mang", meaning: "帶", tail: " " },
-                { text: "túi", meaning: "包", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Túi 泛指各種袋子或包包。",
-          image_file: "bag.png",
-        },
-        {
-          id: "n-36",
-          term_zh: "杯子",
-          related_terms: [
-            {
-              term_target: "Ly",
-              pronunciation: ["/li/"],
-              specific_note: "南部/玻璃杯",
-              segments: [{ text: "Ly", meaning: "杯", tail: "" }],
-            },
-            {
-              term_target: "Cốc",
-              pronunciation: ["/kəwk/"],
-              specific_note: "北部/杯子",
-              segments: [{ text: "Cốc", meaning: "杯", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Một ly cà phê đá.",
-              translation: "一杯冰咖啡。",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "ly", meaning: "杯", tail: " " },
-                { text: "cà phê", meaning: "咖啡", tail: " " },
-                { text: "đá", meaning: "冰/石", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cho tôi mượn cái cốc.",
-              translation: "借我一個杯子。",
-              segments: [
-                { text: "Cho", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "mượn", meaning: "借", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "cốc", meaning: "杯子", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ly nước.",
-              translation: "水杯 (一杯水)。",
-              segments: [
-                { text: "Ly", meaning: "杯", tail: " " },
-                { text: "nước", meaning: "水", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "北越說 Cốc，南越說 Ly。",
-          image_file: "cup.png",
-        },
-        {
-          id: "n-37",
-          term_zh: "醫生",
-          related_terms: [
-            {
-              term_target: "Bác sĩ",
-              pronunciation: ["/bak si/"],
-              specific_note: "漢語:博士",
-              segments: [
-                { text: "Bác", meaning: "伯", tail: " " },
-                { text: "sĩ", meaning: "士", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đi khám bác sĩ.",
-              translation: "去看醫生。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "khám", meaning: "檢查/看診", tail: " " },
-                { text: "bác sĩ", meaning: "醫生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bác sĩ ơi, tôi bị đau.",
-              translation: "醫生，我很痛。",
-              segments: [
-                { text: "Bác sĩ", meaning: "醫生", tail: " " },
-                { text: "ơi", meaning: "啊/喂", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "bị", meaning: "被/遭", tail: " " },
-                { text: "đau", meaning: "痛", tail: "." },
-              ],
-            },
-            {
-              sentence: "Làm bác sĩ.",
-              translation: "當醫生。",
-              segments: [
-                { text: "Làm", meaning: "做/當", tail: " " },
-                { text: "bác sĩ", meaning: "醫生", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "稱呼醫生時直接叫 Bác sĩ。",
-          image_file: "doctor.png",
-        },
-        {
-          id: "n-38",
-          term_zh: "警察 / 公安",
-          related_terms: [
-            {
-              term_target: "Công an",
-              pronunciation: ["/kəwŋ͡m an/"],
-              specific_note: "公安(常用)",
-              segments: [
-                { text: "Công", meaning: "公", tail: " " },
-                { text: "an", meaning: "安", tail: "" },
-              ],
-            },
-            {
-              term_target: "Cảnh sát",
-              pronunciation: ["/kaɲ sat/"],
-              specific_note: "警察",
-              segments: [
-                { text: "Cảnh", meaning: "警", tail: " " },
-                { text: "sát", meaning: "察", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Gọi công an đi!",
-              translation: "叫警察(公安)！",
-              segments: [
-                { text: "Gọi", meaning: "叫/打電話", tail: " " },
-                { text: "công an", meaning: "公安", tail: " " },
-                { text: "đi", meaning: "吧", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Cảnh sát giao thông.",
-              translation: "交通警察。",
-              segments: [
-                { text: "Cảnh sát", meaning: "警察", tail: " " },
-                { text: "giao thông", meaning: "交通", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đồn công an.",
-              translation: "派出所 (公安局)。",
-              segments: [
-                { text: "Đồn", meaning: "屯/局", tail: " " },
-                { text: "công an", meaning: "公安", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "越南最常說 Công an。",
-          image_file: "police.png",
-        },
-        {
-          id: "n-39",
-          term_zh: "醫院",
-          related_terms: [
-            {
-              term_target: "Bệnh viện",
-              pronunciation: ["/beɲ viən/"],
-              specific_note: "漢語:病院",
-              segments: [
-                { text: "Bệnh", meaning: "病", tail: " " },
-                { text: "viện", meaning: "院", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đưa tôi đến bệnh viện.",
-              translation: "送我(帶我)去醫院。",
-              segments: [
-                { text: "Đưa", meaning: "送/遞", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "bệnh viện", meaning: "醫院", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nằm bệnh viện.",
-              translation: "住院 (躺醫院)。",
-              segments: [
-                { text: "Nằm", meaning: "躺", tail: " " },
-                { text: "bệnh viện", meaning: "醫院", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bệnh viện ở đâu?",
-              translation: "醫院在哪裡？",
-              segments: [
-                { text: "Bệnh viện", meaning: "醫院", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "醫療機構。",
-          image_file: "hospital.png",
-        },
-        {
-          id: "n-40",
-          term_zh: "座位 / 椅子",
-          related_terms: [
-            {
-              term_target: "Ghế",
-              pronunciation: ["/ɣe/"],
-              specific_note: "椅子",
-              segments: [{ text: "Ghế", meaning: "椅", tail: "" }],
-            },
-            {
-              term_target: "Chỗ ngồi",
-              pronunciation: ["/tʃo ŋoj/"],
-              specific_note: "座位(空間)",
-              segments: [
-                { text: "Chỗ", meaning: "地方", tail: " " },
-                { text: "ngồi", meaning: "坐", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mời ngồi.",
-              translation: "請坐。",
-              segments: [
-                { text: "Mời", meaning: "邀請/請", tail: " " },
-                { text: "ngồi", meaning: "坐", tail: "." },
-              ],
-            },
-            {
-              sentence: "Còn chỗ không?",
-              translation: "還有位子嗎？",
-              segments: [
-                { text: "Còn", meaning: "還/剩", tail: " " },
-                { text: "chỗ", meaning: "位子", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cái ghế này.",
-              translation: "這張椅子。",
-              segments: [
-                { text: "Cái", meaning: "張/個", tail: " " },
-                { text: "ghế", meaning: "椅子", tail: " " },
-                { text: "này", meaning: "這", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Ghế 是實體的椅子，Chỗ 是空間位子。",
-          image_file: "seat.png",
-        },
-        {
-          id: "n-41",
-          term_zh: "門",
-          related_terms: [
-            {
-              term_target: "Cửa",
-              pronunciation: ["/kɨə/"],
-              specific_note: "",
-              segments: [{ text: "Cửa", meaning: "門", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Mở cửa ra.",
-              translation: "把門打開。",
-              segments: [
-                { text: "Mở", meaning: "開", tail: " " },
-                { text: "cửa", meaning: "門", tail: " " },
-                { text: "ra", meaning: "出/開", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đóng cửa lại.",
-              translation: "把門關上。",
-              segments: [
-                { text: "Đóng", meaning: "關", tail: " " },
-                { text: "cửa", meaning: "門", tail: " " },
-                { text: "lại", meaning: "入/合", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ai đang ở ngoài cửa?",
-              translation: "誰在門外？",
-              segments: [
-                { text: "Ai", meaning: "誰", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "ngoài", meaning: "外", tail: " " },
-                { text: "cửa", meaning: "門", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "門戶。",
-          image_file: "door.png",
-        },
-        {
-          id: "n-42",
-          term_zh: "房間",
-          related_terms: [
-            {
-              term_target: "Phòng",
-              pronunciation: ["/fawŋ͡m/"],
-              specific_note: "房",
-              segments: [{ text: "Phòng", meaning: "房間", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đây là phòng của tôi.",
-              translation: "這是我的房間。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "phòng", meaning: "房", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Dọn phòng.",
-              translation: "打掃房間。",
-              segments: [
-                { text: "Dọn", meaning: "整理/打掃", tail: " " },
-                { text: "phòng", meaning: "房間", tail: "." },
-              ],
-            },
-            {
-              sentence: "Phòng ngủ.",
-              translation: "臥室 (睡覺的房間)。",
-              segments: [
-                { text: "Phòng", meaning: "房", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "室內空間都用 Phòng (如：Phòng họp 會議室)。",
-          image_file: "room.png",
-        },
-        {
-          id: "n-43",
-          term_zh: "車站",
-          related_terms: [
-            {
-              term_target: "Ga",
-              pronunciation: ["/ga/"],
-              specific_note: "火車/捷運站",
-              segments: [{ text: "Ga", meaning: "站", tail: "" }],
-            },
-            {
-              term_target: "Bến xe",
-              pronunciation: ["/ben sɛ/"],
-              specific_note: "客運/公車總站",
-              segments: [
-                { text: "Bến", meaning: "碼頭/站", tail: " " },
-                { text: "xe", meaning: "車", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ga Hà Nội.",
-              translation: "河內火車站。",
-              segments: [
-                { text: "Ga", meaning: "站", tail: " " },
-                { text: "Hà Nội", meaning: "河內", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ra bến xe.",
-              translation: "去(出)車站。",
-              segments: [
-                { text: "Ra", meaning: "出/去", tail: " " },
-                { text: "bến xe", meaning: "車站", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gặp nhau ở ga.",
-              translation: "在車站見。",
-              segments: [
-                { text: "Gặp", meaning: "見", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "ga", meaning: "車站", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "火車用 Ga，公車總站用 Bến，路邊站牌用 Trạm。",
-          image_file: "station.png",
-        },
-        {
-          id: "n-44",
-          term_zh: "地鐵 / 捷運",
-          related_terms: [
-            {
-              term_target: "Tàu điện",
-              pronunciation: ["/taw ɗiən/"],
-              specific_note: "電車/捷運",
-              segments: [
-                { text: "Tàu", meaning: "船/車", tail: " " },
-                { text: "điện", meaning: "電", tail: "" },
-              ],
-            },
-            {
-              term_target: "Metro",
-              pronunciation: ["/mɛtro/"],
-              specific_note: "外來語",
-              segments: [{ text: "Metro", meaning: "捷運", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đi tàu điện.",
-              translation: "搭捷運/電車。",
-              segments: [
-                { text: "Đi", meaning: "搭/去", tail: " " },
-                { text: "tàu điện", meaning: "電車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ga Metro ở đâu?",
-              translation: "捷運站在哪？",
-              segments: [
-                { text: "Ga", meaning: "站", tail: " " },
-                { text: "Metro", meaning: "捷運", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tàu điện ngầm.",
-              translation: "地下鐵。",
-              segments: [
-                { text: "Tàu điện", meaning: "電車", tail: " " },
-                { text: "ngầm", meaning: "地下/潛", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "越南捷運系統習慣稱 Metro 或 Tàu điện。",
-          image_file: "subway.png",
-        },
-        {
-          id: "n-45",
-          term_zh: "火車",
-          related_terms: [
-            {
-              term_target: "Tàu hỏa",
-              pronunciation: ["/taw hɔa/"],
-              specific_note: "全稱",
-              segments: [
-                { text: "Tàu", meaning: "船/艦/車", tail: " " },
-                { text: "hỏa", meaning: "火", tail: "" },
-              ],
-            },
-            {
-              term_target: "Tàu",
-              pronunciation: ["/taw/"],
-              specific_note: "簡稱",
-              segments: [{ text: "Tàu", meaning: "火車", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi đi bằng tàu hỏa.",
-              translation: "我搭火車去。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "bằng", meaning: "藉由", tail: " " },
-                { text: "tàu hỏa", meaning: "火車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mua vé tàu.",
-              translation: "買火車票。",
-              segments: [
-                { text: "Mua", meaning: "買", tail: " " },
-                { text: "vé", meaning: "票", tail: " " },
-                { text: "tàu", meaning: "火車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tàu sắp chạy rồi.",
-              translation: "火車快開了。",
-              segments: [
-                { text: "Tàu", meaning: "火車", tail: " " },
-                { text: "sắp", meaning: "快要", tail: " " },
-                { text: "chạy", meaning: "跑/行駛", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Tàu 本意是船，後來指大型交通工具，火車全稱 Tàu hỏa。",
-          image_file: "train.png",
-        },
-        {
-          id: "n-46",
-          term_zh: "機場",
-          related_terms: [
-            {
-              term_target: "Sân bay",
-              pronunciation: ["/sən baj/"],
-              specific_note: "",
-              segments: [
-                { text: "Sân", meaning: "院子/場", tail: " " },
-                { text: "bay", meaning: "飛", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ra sân bay.",
-              translation: "去機場 (越南語習慣用 Ra=出)。",
-              segments: [
-                { text: "Ra", meaning: "出/去", tail: " " },
-                { text: "sân bay", meaning: "機場", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sân bay Nội Bài.",
-              translation: "內排機場 (河內)。",
-              segments: [
-                { text: "Sân bay", meaning: "機場", tail: " " },
-                { text: "Nội Bài", meaning: "內排", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đến sân bay sớm.",
-              translation: "早點到機場。",
-              segments: [
-                { text: "Đến", meaning: "到", tail: " " },
-                { text: "sân bay", meaning: "機場", tail: " " },
-                { text: "sớm", meaning: "早", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "飛的場地 = 機場。",
-          image_file: "airport.png",
-        },
-        {
-          id: "n-47",
-          term_zh: "行李",
-          related_terms: [
-            {
-              term_target: "Hành lý",
-              pronunciation: ["/haɲ li/"],
-              specific_note: "漢語:行李",
-              segments: [
-                { text: "Hành", meaning: "行", tail: " " },
-                { text: "lý", meaning: "李", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Hành lý ký gửi.",
-              translation: "托運行李。",
-              segments: [
-                { text: "Hành lý", meaning: "行李", tail: " " },
-                { text: "ký gửi", meaning: "寄送/托運", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hành lý của tôi đâu?",
-              translation: "我的行李在哪？",
-              segments: [
-                { text: "Hành lý", meaning: "行李", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Hành lý xách tay.",
-              translation: "手提行李。",
-              segments: [
-                { text: "Hành lý", meaning: "行李", tail: " " },
-                { text: "xách tay", meaning: "手提", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "旅行用的包裹。",
-          image_file: "luggage.png",
-        },
-        {
-          id: "n-48",
-          term_zh: "地圖",
-          related_terms: [
-            {
-              term_target: "Bản đồ",
-              pronunciation: ["/ban ɗo/"],
-              specific_note: "漢語:版圖",
-              segments: [
-                { text: "Bản", meaning: "版/本", tail: " " },
-                { text: "đồ", meaning: "圖", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Xem bản đồ.",
-              translation: "看地圖。",
-              segments: [
-                { text: "Xem", meaning: "看", tail: " " },
-                { text: "bản đồ", meaning: "地圖", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bản đồ thành phố.",
-              translation: "城市地圖。",
-              segments: [
-                { text: "Bản đồ", meaning: "地圖", tail: " " },
-                { text: "thành phố", meaning: "城市", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tìm trên bản đồ.",
-              translation: "在地圖上找。",
-              segments: [
-                { text: "Tìm", meaning: "找", tail: " " },
-                { text: "trên", meaning: "在...上", tail: " " },
-                { text: "bản đồ", meaning: "地圖", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "指引。",
-          image_file: "map.png",
-        },
-        {
-          id: "n-49",
-          term_zh: "櫃檯",
-          related_terms: [
-            {
-              term_target: "Quầy",
-              pronunciation: ["/kwəj/"],
-              specific_note: "",
-              segments: [{ text: "Quầy", meaning: "櫃檯", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Quầy lễ tân.",
-              translation: "接待櫃檯 (前台)。",
-              segments: [
-                { text: "Quầy", meaning: "櫃檯", tail: " " },
-                { text: "lễ tân", meaning: "禮賓/接待", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thanh toán tại quầy.",
-              translation: "在櫃檯結帳。",
-              segments: [
-                { text: "Thanh toán", meaning: "付款", tail: " " },
-                { text: "tại", meaning: "在", tail: " " },
-                { text: "quầy", meaning: "櫃檯", tail: "." },
-              ],
-            },
-            {
-              sentence: "Quầy bán vé.",
-              translation: "售票口。",
-              segments: [
-                { text: "Quầy", meaning: "櫃檯", tail: " " },
-                { text: "bán", meaning: "賣", tail: " " },
-                { text: "vé", meaning: "票", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "任何服務台或售票處都叫 Quầy。",
-          image_file: "counter.png",
-        },
-        {
-          id: "n-50",
-          term_zh: "大廳",
-          related_terms: [
-            {
-              term_target: "Sảnh",
-              pronunciation: ["/saɲ/"],
-              specific_note: "",
-              segments: [{ text: "Sảnh", meaning: "廳/堂", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Đợi ở sảnh.",
-              translation: "在大廳等。",
-              segments: [
-                { text: "Đợi", meaning: "等", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "sảnh", meaning: "大廳", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sảnh khách sạn.",
-              translation: "飯店大廳。",
-              segments: [
-                { text: "Sảnh", meaning: "大廳", tail: " " },
-                { text: "khách sạn", meaning: "飯店", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gặp nhau tại sảnh.",
-              translation: "在大廳碰面。",
-              segments: [
-                { text: "Gặp", meaning: "見", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: " " },
-                { text: "tại", meaning: "在", tail: " " },
-                { text: "sảnh", meaning: "大廳", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "飯店或機場的公共大廳。",
-          image_file: "lobby.png",
-        },
-        {
-          id: "n-51",
-          term_zh: "預定 / 訂位",
-          related_terms: [
-            {
-              term_target: "Đặt trước",
-              pronunciation: ["/ɗat tʃɨək/"],
-              specific_note: "預約(動作)",
-              segments: [
-                { text: "Đặt", meaning: "訂/放", tail: " " },
-                { text: "trước", meaning: "先/前", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn đặt bàn.",
-              translation: "我想要訂位 (餐廳)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "đặt", meaning: "訂", tail: " " },
-                { text: "bàn", meaning: "桌子", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đã đặt phòng trước rồi.",
-              translation: "我已經預訂房間了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "đặt", meaning: "訂", tail: " " },
-                { text: "phòng", meaning: "房", tail: " " },
-                { text: "trước", meaning: "先", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có đặt trước không?",
-              translation: "你有預約嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "đặt trước", meaning: "預訂", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "Đặt 是動詞，指「訂」或「放置」。",
-          image_file: "reservation.png",
-        },
-        {
-          id: "n-52",
-          term_zh: "入住 (Check-in)",
-          related_terms: [
-            {
-              term_target: "Nhận phòng",
-              pronunciation: ["/ɲən fawŋ͡m/"],
-              specific_note: "領房",
-              segments: [
-                { text: "Nhận", meaning: "領/收", tail: " " },
-                { text: "phòng", meaning: "房", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn nhận phòng.",
-              translation: "我要辦理入住。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "nhận phòng", meaning: "領房(Check-in)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giờ nhận phòng là mấy giờ?",
-              translation: "入住時間是幾點？",
-              segments: [
-                { text: "Giờ", meaning: "時間", tail: " " },
-                { text: "nhận phòng", meaning: "入住", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "mấy giờ", meaning: "幾點", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Làm thủ tục nhận phòng.",
-              translation: "辦理入住手續。",
-              segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "thủ tục", meaning: "手續", tail: " " },
-                { text: "nhận phòng", meaning: "入住", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "字面意思是「接收房間」。",
-          image_file: "check_in.png",
-        },
-        {
-          id: "n-53",
-          term_zh: "退房 (Check-out)",
-          related_terms: [
-            {
-              term_target: "Trả phòng",
-              pronunciation: ["/tʃa fawŋ͡m/"],
-              specific_note: "還房",
-              segments: [
-                { text: "Trả", meaning: "還/付", tail: " " },
-                { text: "phòng", meaning: "房", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi muốn trả phòng.",
-              translation: "我要退房。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "trả phòng", meaning: "還房(Check-out)", tail: "." },
-              ],
-            },
-            {
-              sentence: "12 giờ phải trả phòng.",
-              translation: "12點必須退房。",
-              segments: [
-                { text: "12 giờ", meaning: "12點", tail: " " },
-                { text: "phải", meaning: "必須", tail: " " },
-                { text: "trả phòng", meaning: "退房", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đã trả phòng chưa?",
-              translation: "退房了嗎？",
-              segments: [
-                { text: "Đã", meaning: "已經", tail: " " },
-                { text: "trả phòng", meaning: "退房", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "字面意思是「歸還房間」。",
-          image_file: "check_out.png",
-        },
-        {
-          id: "n-54",
-          term_zh: "飲料",
-          related_terms: [
-            {
-              term_target: "Đồ uống",
-              pronunciation: ["/ɗo uəŋ͡m/"],
-              specific_note: "",
-              segments: [
-                { text: "Đồ", meaning: "東西", tail: " " },
-                { text: "uống", meaning: "喝", tail: "" },
-              ],
-            },
-            {
-              term_target: "Nước",
-              pronunciation: ["/nɨək/"],
-              specific_note: "口語/水",
-              segments: [{ text: "Nước", meaning: "水", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Bạn muốn uống nước gì?",
-              translation: "你想喝什麼飲料(水)？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "uống", meaning: "喝", tail: " " },
-                { text: "nước", meaning: "水/飲料", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Thực đơn đồ uống.",
-              translation: "飲料單。",
-              segments: [
-                { text: "Thực đơn", meaning: "菜單", tail: " " },
-                { text: "đồ uống", meaning: "飲料", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đồ uống lạnh.",
-              translation: "冷飲。",
-              segments: [
-                { text: "Đồ uống", meaning: "飲料", tail: " " },
-                { text: "lạnh", meaning: "冷", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語常直接說 Nước (水) 來代表飲料。",
-          image_file: "drink.png",
-        },
-        {
-          id: "n-55",
-          term_zh: "菜單",
-          related_terms: [
-            {
-              term_target: "Thực đơn",
-              pronunciation: ["/tʰɨk ɗən/"],
-              specific_note: "正式",
-              segments: [
-                { text: "Thực", meaning: "食", tail: " " },
-                { text: "đơn", meaning: "單", tail: "" },
-              ],
-            },
-            {
-              term_target: "Menu",
-              pronunciation: ["/mɛnu/"],
-              specific_note: "口語",
-              segments: [{ text: "Menu", meaning: "菜單", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Cho tôi xem thực đơn.",
-              translation: "給我看菜單。",
-              segments: [
-                { text: "Cho", meaning: "給/讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "thực đơn", meaning: "菜單", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trong menu có gì?",
-              translation: "菜單裡有什麼？",
-              segments: [
-                { text: "Trong", meaning: "裡面", tail: " " },
-                { text: "menu", meaning: "菜單", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Gọi món theo thực đơn.",
-              translation: "照菜單點菜。",
-              segments: [
-                { text: "Gọi món", meaning: "點菜", tail: " " },
-                { text: "theo", meaning: "跟著/照", tail: " " },
-                { text: "thực đơn", meaning: "菜單", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語直接說 Menu 也可以。",
-          image_file: "menu.png",
-        },
-        {
-          id: "n-56",
-          term_zh: "午餐",
-          related_terms: [
-            {
-              term_target: "Bữa trưa",
-              pronunciation: ["/bɨa tʃɨə/"],
-              specific_note: "",
-              segments: [
-                { text: "Bữa", meaning: "餐", tail: " " },
-                { text: "trưa", meaning: "中午", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ăn trưa chưa?",
-              translation: "吃午餐了嗎？(口語省略 Bữa)。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "trưa", meaning: "午(餐)", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đi ăn trưa thôi.",
-              translation: "去吃午餐吧。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "trưa", meaning: "午餐", tail: " " },
-                { text: "thôi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghỉ trưa.",
-              translation: "午休。",
-              segments: [
-                { text: "Nghỉ", meaning: "休息", tail: " " },
-                { text: "trưa", meaning: "中午", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "名詞是 Bữa trưa，動詞常說 Ăn trưa。",
-          image_file: "lunch.png",
-        },
-        {
-          id: "n-57",
-          term_zh: "晚餐",
-          related_terms: [
-            {
-              term_target: "Bữa tối",
-              pronunciation: ["/bɨa toj/"],
-              specific_note: "",
-              segments: [
-                { text: "Bữa", meaning: "餐", tail: " " },
-                { text: "tối", meaning: "晚上", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ăn tối nhé.",
-              translation: "吃晚餐喔。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "tối", meaning: "晚(餐)", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mời bạn ăn tối.",
-              translation: "請你吃晚餐。",
-              segments: [
-                { text: "Mời", meaning: "邀請/請", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "ăn tối", meaning: "吃晚餐", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nấu bữa tối.",
-              translation: "煮晚餐。",
-              segments: [
-                { text: "Nấu", meaning: "煮", tail: " " },
-                { text: "bữa tối", meaning: "晚餐", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "名詞是 Bữa tối，動詞常說 Ăn tối。",
-          image_file: "dinner.png",
-        },
-        {
-          id: "n-58",
-          term_zh: "帳單 / 買單",
-          related_terms: [
-            {
-              term_target: "Hóa đơn",
-              pronunciation: ["/hɔa ɗən/"],
-              specific_note: "帳單/發票",
-              segments: [
-                { text: "Hóa", meaning: "貨/化", tail: " " },
-                { text: "đơn", meaning: "單", tail: "" },
-              ],
-            },
-            {
-              term_target: "Tính tiền",
-              pronunciation: ["/tiɲ tiən/"],
-              specific_note: "算錢(口語)",
-              segments: [
-                { text: "Tính", meaning: "算", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Em ơi, tính tiền!",
-              translation: "服務生，買單！(最常用)。",
-              segments: [
-                { text: "Em", meaning: "弟/妹", tail: " " },
-                { text: "ơi", meaning: "喂", tail: ", " },
-                { text: "tính tiền", meaning: "買單", tail: "!" },
-              ],
-            },
-            {
-              sentence: "Cho tôi hóa đơn.",
-              translation: "給我帳單(或發票)。",
-              segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "hóa đơn", meaning: "帳單", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thanh toán hóa đơn.",
-              translation: "支付帳單。",
-              segments: [
-                { text: "Thanh toán", meaning: "結帳/支付", tail: " " },
-                { text: "hóa đơn", meaning: "帳單", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "吃飯結帳喊 Tính tiền，索取單據說 Hóa đơn。",
-          image_file: "bill.png",
-        },
-        {
-          id: "n-59",
-          term_zh: "價錢",
-          related_terms: [
-            {
-              term_target: "Giá",
-              pronunciation: ["/za/"],
-              specific_note: "價格",
-              segments: [{ text: "Giá", meaning: "價", tail: "" }],
-            },
-            {
-              term_target: "Giá tiền",
-              pronunciation: ["/za tiən/"],
-              specific_note: "價錢",
-              segments: [
-                { text: "Giá", meaning: "價", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Giá bao nhiêu?",
-              translation: "價格多少？",
-              segments: [
-                { text: "Giá", meaning: "價格", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Giảm giá.",
-              translation: "降價 / 打折。",
-              segments: [
-                { text: "Giảm", meaning: "減", tail: " " },
-                { text: "giá", meaning: "價", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giá cao quá.",
-              translation: "價格太高了。",
-              segments: [
-                { text: "Giá", meaning: "價格", tail: " " },
-                { text: "cao", meaning: "高", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "詢問時常用 Bao nhiêu tiền (多少錢)。",
-          image_file: "price.png",
-        },
-        {
-          id: "n-60",
-          term_zh: "收據",
-          related_terms: [
-            {
-              term_target: "Biên lai",
-              pronunciation: ["/biən laj/"],
-              specific_note: "收據",
-              segments: [
-                { text: "Biên", meaning: "邊", tail: " " },
-                { text: "lai", meaning: "來", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Lấy biên lai.",
-              translation: "拿收據。",
-              segments: [
-                { text: "Lấy", meaning: "拿/取", tail: " " },
-                { text: "biên lai", meaning: "收據", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giữ lại biên lai.",
-              translation: "保留收據。",
-              segments: [
-                { text: "Giữ", meaning: "保存/守", tail: " " },
-                { text: "lại", meaning: "下來", tail: " " },
-                { text: "biên lai", meaning: "收據", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ký tên vào biên lai.",
-              translation: "在收據上簽名。",
-              segments: [
-                { text: "Ký", meaning: "簽", tail: " " },
-                { text: "tên", meaning: "名", tail: " " },
-                { text: "vào", meaning: "進/入", tail: " " },
-                { text: "biên lai", meaning: "收據", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "購物多用 Hóa đơn，繳費憑證多用 Biên lai。",
-          image_file: "receipt.png",
-        },
-        {
-          id: "n-61",
-          term_zh: "尺寸",
-          related_terms: [
-            {
-              term_target: "Size",
-              pronunciation: ["/sai/"],
-              specific_note: "外來語(常用)",
-              segments: [{ text: "Size", meaning: "尺寸", tail: "" }],
-            },
-            {
-              term_target: "Cỡ",
-              pronunciation: ["/kə/"],
-              specific_note: "尺碼",
-              segments: [{ text: "Cỡ", meaning: "尺寸", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Size lớn.",
-              translation: "大尺寸。",
-              segments: [
-                { text: "Size", meaning: "尺寸", tail: " " },
-                { text: "lớn", meaning: "大", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn mặc size gì?",
-              translation: "你穿什麼尺寸？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "mặc", meaning: "穿", tail: " " },
-                { text: "size", meaning: "尺寸", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Không đúng cỡ.",
-              translation: "尺寸不對。",
-              segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "đúng", meaning: "對/準確", tail: " " },
-                { text: "cỡ", meaning: "尺寸", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "買衣服直接說 Size S/M/L 即可。",
-          image_file: "size.png",
-        },
-        {
-          id: "n-62",
-          term_zh: "入口",
-          related_terms: [
-            {
-              term_target: "Lối vào",
-              pronunciation: ["/loj vaːw/"],
-              specific_note: "通道",
-              segments: [
-                { text: "Lối", meaning: "路/徑", tail: " " },
-                { text: "vào", meaning: "進", tail: "" },
-              ],
-            },
-            {
-              term_target: "Cửa vào",
-              pronunciation: ["/kɨə vaːw/"],
-              specific_note: "門",
-              segments: [
-                { text: "Cửa", meaning: "門", tail: " " },
-                { text: "vào", meaning: "進", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Lối vào chính.",
-              translation: "正門入口。",
-              segments: [
-                { text: "Lối vào", meaning: "入口", tail: " " },
-                { text: "chính", meaning: "主/正", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lối vào ở đâu?",
-              translation: "入口在哪裡？",
-              segments: [
-                { text: "Lối vào", meaning: "入口", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Cấm vào.",
-              translation: "禁止進入 (No entrance)。",
-              segments: [
-                { text: "Cấm", meaning: "禁止", tail: " " },
-                { text: "vào", meaning: "進", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "找入口時問「Lối vào」。",
-          image_file: "entrance.png",
-        },
-        {
-          id: "n-63",
-          term_zh: "出口",
-          related_terms: [
-            {
-              term_target: "Lối ra",
-              pronunciation: ["/loj za/"],
-              specific_note: "通道",
-              segments: [
-                { text: "Lối", meaning: "路", tail: " " },
-                { text: "ra", meaning: "出", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Lối ra ở đây.",
-              translation: "出口在這裡。",
-              segments: [
-                { text: "Lối ra", meaning: "出口", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lối thoát hiểm.",
-              translation: "緊急出口。",
-              segments: [
-                { text: "Lối", meaning: "路", tail: " " },
-                { text: "thoát", meaning: "逃/脫", tail: " " },
-                { text: "hiểm", meaning: "險", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "看到 Exit 標誌通常會寫「Lối ra」。",
-          image_file: "exit.png",
-        },
-        {
-          id: "n-64",
-          term_zh: "台灣",
-          related_terms: [
-            {
-              term_target: "Đài Loan",
-              pronunciation: ["/ɗaːj lwan/"],
-              specific_note: "地名",
-              segments: [
-                { text: "Đài", meaning: "臺", tail: " " },
-                { text: "Loan", meaning: "灣", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi yêu Đài Loan.",
-              translation: "我愛台灣。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "yêu", meaning: "愛", tail: " " },
-                { text: "Đài Loan", meaning: "台灣", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chào mừng đến Đài Loan.",
-              translation: "歡迎來台灣。",
-              segments: [
-                { text: "Chào mừng", meaning: "歡迎", tail: " " },
-                { text: "đến", meaning: "來到", tail: " " },
-                { text: "Đài Loan", meaning: "台灣", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đài Loan rất đẹp.",
-              translation: "台灣很美。",
-              segments: [
-                { text: "Đài Loan", meaning: "台灣", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "đẹp", meaning: "美", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一定要學會的地名。",
-          image_file: "taiwan.png",
-        },
-        {
-          id: "n-65",
-          term_zh: "台灣人",
-          related_terms: [
-            {
-              term_target: "Người Đài Loan",
-              pronunciation: ["/ŋɨəj ɗaːj lwan/"],
-              specific_note: "國籍",
-              segments: [
-                { text: "Người", meaning: "人", tail: " " },
-                { text: "Đài Loan", meaning: "台灣", tail: "" },
-              ],
+              pronunciation: ["/miɲ/"],
+              specific_note: "親近的朋友間自稱「我」，類似「人家」。",
+              segments: [{ text: "Mình", meaning: "我 (親近)", tail: "" }],
             },
           ],
           examples: [
@@ -9975,79 +1217,6576 @@ export const vietnameseData: AppData = {
               ],
             },
             {
-              sentence: "Cô ấy là người Đài Loan.",
-              translation: "她是台灣人。",
+              sentence: "Em lấy một ly trà sữa.",
+              translation: "（點餐時）我要一杯奶茶。",
+              segments: [
+                { text: "Em", meaning: "我 (晚輩)", tail: " " },
+                { text: "lấy", meaning: "拿/點", tail: " " },
+                { text: "một", meaning: "一", tail: " " },
+                { text: "ly", meaning: "杯", tail: " " },
+                { text: "trà sữa", meaning: "奶茶", tail: "." },
+              ],
+            },
+            {
+              sentence: "Mình không đi được, xin lỗi nha.",
+              translation: "我不能去，抱歉啦。（對朋友說）",
+              segments: [
+                { text: "Mình", meaning: "我", tail: " " },
+                { text: "không đi được", meaning: "不能去", tail: ", " },
+                { text: "xin lỗi", meaning: "抱歉", tail: " " },
+                { text: "nha", meaning: "唷", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "去越南餐廳點餐，開頭用 Em (我) 會比用 Tôi (我) 聽起來更親切像當地人。",
+          image_file: "i.png",
+        },
+        {
+          id: "pro-03",
+          term_zh: "你",
+          related_terms: [
+            {
+              term_target: "Bạn",
+              pronunciation: ["/ba̰ːn/"],
+              specific_note: "中性的「你/朋友」，用於平輩或陌生人。",
+              segments: [{ text: "Bạn", meaning: "你", tail: "" }],
+            },
+            {
+              term_target: "Anh",
+              pronunciation: ["/aːɲ/"],
+              specific_note: "稱呼年紀稍長的男性（哥）。",
+              segments: [{ text: "Anh", meaning: "哥哥/你", tail: "" }],
+            },
+            {
+              term_target: "Chị",
+              pronunciation: ["/cḭʔ/"],
+              specific_note: "稱呼年紀稍長的女性（姊）。",
+              segments: [{ text: "Chị", meaning: "姊姊/妳", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bạn tên là gì?",
+              translation: "你叫什麼名字？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "tên", meaning: "名字", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Anh ơi, cho em tính tiền.",
+              translation: "帥哥（哥哥），我要結帳。",
+              segments: [
+                { text: "Anh", meaning: "哥哥", tail: " " },
+                { text: "ơi", meaning: "喂/呼喚詞", tail: ", " },
+                { text: "cho", meaning: "讓", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "tính tiền", meaning: "算錢", tail: "." },
+              ],
+            },
+            {
+              sentence: "Chị có khỏe không?",
+              translation: "姊姊妳好嗎？",
+              segments: [
+                { text: "Chị", meaning: "姊姊", tail: " " },
+                { text: "có", meaning: "有/是", tail: " " },
+                { text: "khỏe", meaning: "好/健康", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note:
+            "在越南，看到服務生比你大就叫 Anh/Chị，比你小就叫 Em，這就是最標準的「你」。",
+          image_file: "you.png",
+        },
+        {
+          id: "pro-04",
+          term_zh: "他",
+          related_terms: [
+            {
+              term_target: "Anh ấy",
+              pronunciation: ["/aːɲ ə̌j/"],
+              specific_note: "指那位男性（他）。",
+              segments: [
+                { text: "Anh", meaning: "哥哥", tail: " " },
+                { text: "ấy", meaning: "那", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh ấy là đồng nghiệp của tôi.",
+              translation: "他是我的同事。",
+              segments: [
+                { text: "Anh ấy", meaning: "他", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "đồng nghiệp", meaning: "同事", tail: " " },
+                { text: "của", meaning: "的", tail: " " },
+                { text: "tôi", meaning: "我", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "越南語的「他」就是「哥哥+那」，組合起來就是「那位哥哥」。",
+          image_file: "he.png",
+        },
+        {
+          id: "pro-05",
+          term_zh: "他的",
+          related_terms: [
+            {
+              term_target: "Của anh ấy",
+              pronunciation: ["/kuə̰ʔ aːɲ ə̌j/"],
+              specific_note: "所有格形式。",
+              segments: [
+                { text: "Của", meaning: "的/屬於", tail: " " },
+                { text: "anh ấy", meaning: "他", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đây là xe máy của anh ấy.",
+              translation: "這是他的機車。",
+              segments: [
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "xe máy", meaning: "機車", tail: " " },
+                { text: "của anh ấy", meaning: "他的", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "只要在代名詞前加個 Của 就變成「...的」。",
+          image_file: "his.png",
+        },
+        {
+          id: "pro-06",
+          term_zh: "我們",
+          related_terms: [
+            {
+              term_target: "Chúng tôi",
+              pronunciation: ["/cuŋ̌ toːj/"],
+              specific_note: "排他性「我們」（不包含對方，如向顧客介紹公司）。",
+              segments: [
+                { text: "Chúng", meaning: "群體", tail: " " },
+                { text: "tôi", meaning: "我", tail: "" },
+              ],
+            },
+            {
+              term_target: "Chúng mình",
+              pronunciation: ["/cuŋ̌ miɲ/"],
+              specific_note: "包含性「我們」（包含對方，如約朋友去吃飯）。",
+              segments: [
+                { text: "Chúng", meaning: "群體", tail: " " },
+                { text: "mình", meaning: "我/自己", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chúng mình đi uống cà phê đi!",
+              translation: "我們去喝咖啡吧！（包含聽的人）",
+              segments: [
+                { text: "Chúng mình", meaning: "我們", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note:
+            "約台灣朋友去玩要用 Chúng mình，如果是跟老闆報告「我們組」要用 Chúng tôi。",
+          image_file: "we.png",
+        },
+        {
+          id: "pro-07",
+          term_zh: "她",
+          related_terms: [
+            {
+              term_target: "Chị ấy",
+              pronunciation: ["/cḭʔ ə̌j/"],
+              specific_note: "指那位女性（她）。",
+              segments: [
+                { text: "Chị", meaning: "姊姊", tail: " " },
+                { text: "ấy", meaning: "那", tail: "" },
+              ],
+            },
+            {
+              term_target: "Cô ấy",
+              pronunciation: ["/koː ə̌j/"],
+              specific_note: "較正式或指年輕、單身女性（她）。",
+              segments: [
+                { text: "Cô", meaning: "阿姨/小姐", tail: " " },
+                { text: "ấy", meaning: "那", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cô ấy đẹp quá!",
+              translation: "她好漂亮喔！",
               segments: [
                 { text: "Cô ấy", meaning: "她", tail: " " },
+                { text: "đẹp", meaning: "漂亮", tail: " " },
+                { text: "quá", meaning: "太/非常", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "如果你在聊一個剛認識的漂亮女生，用 Cô ấy 會很自然。",
+          image_file: "she.png",
+        },
+        {
+          id: "pro-08",
+          term_zh: "他們",
+          related_terms: [
+            {
+              term_target: "Họ",
+              pronunciation: ["/hɔ̰ʔ/"],
+              specific_note: "指「他們」這群人（較正式）。",
+              segments: [{ text: "Họ", meaning: "他們", tail: "" }],
+            },
+            {
+              term_target: "Chúng nó",
+              pronunciation: ["/cuŋ̌ nɔ̌/"],
+              specific_note: "指那些東西、動物，或較隨意稱呼一群小孩/朋友。",
+              segments: [
+                { text: "Chúng", meaning: "群體", tail: " " },
+                { text: "nó", meaning: "它", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Họ đang họp.",
+              translation: "他們正在開會。",
+              segments: [
+                { text: "Họ", meaning: "他們", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "họp", meaning: "開會", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "Chúng nó 常用來指「那群傢伙」或「那些動物」。",
+          image_file: "they.png",
+        },
+        {
+          id: "pro-09",
+          term_zh: "這個",
+          related_terms: [
+            {
+              term_target: "Cái này",
+              pronunciation: ["/kaːj nàːj/"],
+              specific_note: "指近處的某個東西。",
+              segments: [
+                { text: "Cái", meaning: "物品量詞", tail: " " },
+                { text: "này", meaning: "這", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái này ngon lắm!",
+              translation: "這個很好吃！",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Cho tôi xem cái này.",
+              translation: "給我看看這個。",
+              segments: [
+                { text: "Cho tôi", meaning: "給我", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在市場點東西吃，手一指說『Cái này』準沒錯。",
+          image_file: "this.png",
+        },
+        {
+          id: "pro-10",
+          term_zh: "那個",
+          related_terms: [
+            {
+              term_target: "Cái đó",
+              pronunciation: ["/kaːj dɔ̌/"],
+              specific_note: "指稍遠處或剛提到過的東西。",
+              segments: [
+                { text: "Cái", meaning: "物品", tail: " " },
+                { text: "đó", meaning: "那", tail: "" },
+              ],
+            },
+            {
+              term_target: "Cái kia",
+              pronunciation: ["/kaːj kiə/"],
+              specific_note: "指更遠處、對面的東西。",
+              segments: [
+                { text: "Cái", meaning: "物品", tail: " " },
+                { text: "kia", meaning: "那邊", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái đó giá bao nhiêu?",
+              translation: "那個多少錢？",
+              segments: [
+                { text: "Cái đó", meaning: "那個", tail: " " },
+                { text: "giá", meaning: "價格", tail: " " },
+                { text: "bao nhiêu", meaning: "多少", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "Cái đó 常用於對話中提到的事，Cái kia 則是用手指向遠方。",
+          image_file: "that.png",
+        },
+        {
+          id: "pro-11",
+          term_zh: "她的",
+          related_terms: [
+            {
+              term_target: "Của chị ấy",
+              pronunciation: ["/kuə̰ʔ cḭʔ ə̌j/"],
+              specific_note: "屬於她的。",
+              segments: [
+                { text: "Của", meaning: "的", tail: " " },
+                { text: "chị ấy", meaning: "她", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đây là túi xách của chị ấy.",
+              translation: "這是她的包包。",
+              segments: [
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "túi xách", meaning: "包包", tail: " " },
+                { text: "của chị ấy", meaning: "她的", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "注意越南語的所有格順序跟中文相反：『東西 + 的 + 人』。",
+          image_file: "her.png",
+        },
+        {
+          id: "pro-12",
+          term_zh: "你的",
+          related_terms: [
+            {
+              term_target: "Của bạn",
+              pronunciation: ["/kuə̰ʔ ba̰ːn/"],
+              specific_note: "屬於你的。",
+              segments: [
+                { text: "Của", meaning: "的", tail: " " },
+                { text: "bạn", meaning: "你", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Số điện thoại của bạn là gì?",
+              translation: "你的電話號碼是多少？",
+              segments: [
+                { text: "Số điện thoại", meaning: "電話號碼", tail: " " },
+                { text: "của bạn", meaning: "你的", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "詢問對方東西時常用這個格式。",
+          image_file: "your.png",
+        },
+        {
+          id: "pro-13",
+          term_zh: "他們的",
+          related_terms: [
+            {
+              term_target: "Của họ",
+              pronunciation: ["/kuə̰ʔ hɔ̰ʔ/"],
+              specific_note: "屬於他們的。",
+              segments: [
+                { text: "Của", meaning: "的", tail: " " },
+                { text: "họ", meaning: "他們", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đó là nhà của họ.",
+              translation: "那是他們的家。",
+              segments: [
+                { text: "Đó", meaning: "那", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "nhà", meaning: "家", tail: " " },
+                { text: "của họ", meaning: "他們的", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "họ 常用於指稱第三方的一群人。",
+          image_file: "their.png",
+        },
+        {
+          id: "pro-14",
+          term_zh: "我們的",
+          related_terms: [
+            {
+              term_target: "Của chúng mình",
+              pronunciation: ["/kuə̰ʔ cuŋ̌ miɲ/"],
+              specific_note: "我們（好友/情侶）的。",
+              segments: [
+                { text: "Của", meaning: "的", tail: " " },
+                { text: "chúng mình", meaning: "我們", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đây là ảnh của chúng mình.",
+              translation: "這是我們的照片。",
+              segments: [
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "ảnh", meaning: "照片", tail: " " },
+                { text: "của chúng mình", meaning: "我們的", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在 FB 打卡曬恩愛或放合照，常用 Của chúng mình。",
+          image_file: "our.png",
+        },
+        {
+          id: "pro-15",
+          term_zh: "這些",
+          related_terms: [
+            {
+              term_target: "Những cái này",
+              pronunciation: ["/ɲɨŋ̌ kaːj nàːj/"],
+              specific_note: "近處複數物品。",
+              segments: [
+                { text: "Những", meaning: "複數標記", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Những cái này bao nhiêu tiền?",
+              translation: "這些總共多少錢？",
+              segments: [
+                { text: "Những cái này", meaning: "這些", tail: " " },
+                { text: "bao nhiêu tiền", meaning: "多少錢", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "Những 就像英文的複數 -s，放在名詞前面。",
+          image_file: "these.png",
+        },
+        {
+          id: "pro-16",
+          term_zh: "那些",
+          related_terms: [
+            {
+              term_target: "Những cái đó",
+              pronunciation: ["/ɲɨŋ̌ kaːj dɔ̌/"],
+              specific_note: "遠處複數物品。",
+              segments: [
+                { text: "Những", meaning: "複數標記", tail: " " },
+                { text: "cái đó", meaning: "那個", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi thích những cái đó.",
+              translation: "我喜歡那些。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "những cái đó", meaning: "那些", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "同樣是在名詞前加個 Những 即可。",
+          image_file: "those.png",
+        },
+      ],
+    },
+    {
+      id: "verbs_vn",
+      name: "常用動詞",
+      items: [
+        {
+          id: "v-01",
+          term_zh: "是",
+          related_terms: [
+            {
+              term_target: "Là",
+              pronunciation: ["/laː˨˩/"],
+              specific_note: "用於連接兩個名詞（A 是 B）。",
+              segments: [{ text: "Là", meaning: "是", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi là người Đài Loan.",
+              translation: "我是台灣人。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
                 { text: "người", meaning: "人", tail: " " },
                 { text: "Đài Loan", meaning: "台灣", tail: "." },
               ],
             },
             {
-              sentence: "Tôi thích món ăn Đài Loan.",
-              translation: "我喜歡台灣菜(食物)。",
+              sentence: "Đây là cái gì?",
+              translation: "這是什麼？",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "món ăn", meaning: "食物", tail: " " },
-                { text: "Đài Loan", meaning: "台灣", tail: "." },
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "cái gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Đó là sự thật.",
+              translation: "那是事實。",
+              segments: [
+                { text: "Đó", meaning: "那", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "sự thật", meaning: "事實", tail: "." },
               ],
             },
           ],
-          usage_note: "自我介紹必備：Tôi là người Đài Loan.",
+          usage_note: "注意：如果是形容詞（如：我很忙），中間不需要加 là。",
+          image_file: "be.png",
+        },
+        {
+          id: "v-02",
+          term_zh: "有",
+          related_terms: [
+            {
+              term_target: "Có",
+              pronunciation: ["/kɔ˧˥/"],
+              specific_note: "擁有，或表達「有某物存在」。",
+              segments: [{ text: "Có", meaning: "有", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi có một câu hỏi.",
+              translation: "我有個問題。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "một", meaning: "一個", tail: " " },
+                { text: "câu hỏi", meaning: "問題", tail: "." },
+              ],
+            },
+            {
+              sentence: "Ở đây có WiFi không?",
+              translation: "這裡有 WiFi 嗎？",
+              segments: [
+                { text: "Ở đây", meaning: "這裡", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "WiFi", meaning: "WiFi", tail: " " },
+                { text: "không", meaning: "嗎(疑問詞)", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Bạn có tiền lẻ không?",
+              translation: "你有零錢嗎？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "tiền lẻ", meaning: "零錢", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "句尾加 không 就變成問句「有沒有...？」。",
+          image_file: "have.png",
+        },
+        {
+          id: "v-03",
+          term_zh: "去",
+          related_terms: [
+            {
+              term_target: "Đi",
+              pronunciation: ["/ɗi˧˧/"],
+              specific_note: "移動到某處，或作為命令句尾「吧」。",
+              segments: [{ text: "Đi", meaning: "去", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi thôi!",
+              translation: "走吧！",
+              segments: [
+                { text: "Đi", meaning: "走/去", tail: " " },
+                { text: "thôi", meaning: "吧/罷了", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Tôi đi làm đây.",
+              translation: "我去上班囉。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "đi làm", meaning: "去上班", tail: " " },
+                { text: "đây", meaning: "現在/這(語助)", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cuối tuần bạn đi đâu?",
+              translation: "週末你要去哪？",
+              segments: [
+                { text: "Cuối tuần", meaning: "週末", tail: " " },
+                { text: "bạn", meaning: "你", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "『Đi chơi』（去玩）是越南人社交最常用的詞。",
+          image_file: "go.png",
+        },
+        {
+          id: "v-04",
+          term_zh: "拿 / 得到",
+          related_terms: [
+            {
+              term_target: "Lấy",
+              pronunciation: ["/ləj˧˥/"],
+              specific_note: "用手拿、取走，點餐時也用這個字。",
+              segments: [{ text: "Lấy", meaning: "拿/取", tail: "" }],
+            },
+            {
+              term_target: "Được",
+              pronunciation: ["/ɗɨəʔ˨˩/"],
+              specific_note: "得到、獲取（通常指非實體或被動獲得）。",
+              segments: [{ text: "Được", meaning: "得到", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lấy cho tôi cái này.",
+              translation: "幫我拿這個。",
+              segments: [
+                { text: "Lấy", meaning: "拿", tail: " " },
+                { text: "cho tôi", meaning: "給我", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tôi được tặng quà.",
+              translation: "我收到了禮物（被送禮物）。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "được", meaning: "得到/被(正面)", tail: " " },
+                { text: "tặng", meaning: "送", tail: " " },
+                { text: "quà", meaning: "禮物", tail: "." },
+              ],
+            },
+            {
+              sentence: "Bạn lấy mấy cái?",
+              translation: "你要拿幾個？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "lấy", meaning: "拿", tail: " " },
+                { text: "mấy", meaning: "幾", tail: " " },
+                { text: "cái", meaning: "個", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "結帳要收據時會說『Lấy hóa đơn』。",
+          image_file: "get.png",
+        },
+        {
+          id: "v-05",
+          term_zh: "做",
+          related_terms: [
+            {
+              term_target: "Làm",
+              pronunciation: ["/laːm˨˩/"],
+              specific_note: "執行動作或製造東西。",
+              segments: [{ text: "Làm", meaning: "做", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bạn đang làm gì đấy?",
+              translation: "你在幹嘛？(正在做什麼？)",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "làm", meaning: "做", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "đấy", meaning: "呢", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Làm việc thôi!",
+              translation: "開工吧！(去做事吧)",
+              segments: [
+                { text: "Làm việc", meaning: "工作", tail: " " },
+                { text: "thôi", meaning: "吧", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Làm ơn giúp tôi.",
+              translation: "請幫幫我（做恩情）。",
+              segments: [
+                { text: "Làm ơn", meaning: "請/拜託", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "tôi", meaning: "我", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『Làm việc』是工作，『Làm xong』是做完了。",
+          image_file: "do.png",
+        },
+        {
+          id: "v-06",
+          term_zh: "說",
+          related_terms: [
+            {
+              term_target: "Nói",
+              pronunciation: ["/nɔj˧˥/"],
+              specific_note: "表達內容、講話。",
+              segments: [{ text: "Nói", meaning: "說", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bạn nói gì cơ?",
+              translation: "你說什麼？(沒聽清楚時)",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "cơ", meaning: "呢(語助詞)", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Nói thật đi.",
+              translation: "說實話吧。",
+              segments: [
+                { text: "Nói", meaning: "說", tail: " " },
+                { text: "thật", meaning: "真/實", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Đừng nói nữa.",
+              translation: "別說了。",
+              segments: [
+                { text: "Đừng", meaning: "不要", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "nữa", meaning: "再/繼續", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "講越南語是『Nói tiếng Việt』。",
+          image_file: "say.png",
+        },
+        {
+          id: "v-07",
+          term_zh: "知道",
+          related_terms: [
+            {
+              term_target: "Biết",
+              pronunciation: ["/biət˧˥/"],
+              specific_note: "理解事實、掌握技能或認識某人。",
+              segments: [{ text: "Biết", meaning: "知道", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi không biết.",
+              translation: "我不知道。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "biết", meaning: "知道", tail: "." },
+              ],
+            },
+            {
+              sentence: "Bạn có biết bơi không?",
+              translation: "你會游泳嗎？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "biết", meaning: "知道/會", tail: " " },
+                { text: "bơi", meaning: "游泳", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Ai mà biết được!",
+              translation: "誰知道啊！(天曉得)",
+              segments: [
+                { text: "Ai", meaning: "誰", tail: " " },
+                { text: "mà", meaning: "而/卻", tail: " " },
+                { text: "biết", meaning: "知道", tail: " " },
+                { text: "được", meaning: "能/得", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "『Biết rồi』是我知道了/懂了。",
+          image_file: "know.png",
+        },
+        {
+          id: "v-08",
+          term_zh: "想 / 認為",
+          related_terms: [
+            {
+              term_target: "Nghĩ",
+              pronunciation: ["/ŋi˦ˀ˥/"],
+              specific_note: "思考、覺得。",
+              segments: [{ text: "Nghĩ", meaning: "想", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Để tôi nghĩ đã.",
+              translation: "讓我想想先。",
+              segments: [
+                { text: "Để", meaning: "讓", tail: " " },
+                { text: "tôi", meaning: "我", tail: " " },
+                { text: "nghĩ", meaning: "想", tail: " " },
+                { text: "đã", meaning: "先/已經", tail: "." },
+              ],
+            },
+            {
+              sentence: "Bạn nghĩ sao?",
+              translation: "你覺得呢？(你怎麼想？)",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "nghĩ", meaning: "想", tail: " " },
+                { text: "sao", meaning: "如何/怎樣", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "如果是「想念」要用『Nhớ』，如果是「想要」要用『Muốn』。",
+          image_file: "think.png",
+        },
+        {
+          id: "v-09",
+          term_zh: "看 / 觀看 / 瞧瞧",
+             related_terms: [
+                {
+                  term_target: "Xem",
+                  pronunciation: ["/sɛm˧˧/"],
+                  specific_note:
+                    "指有目的性的看（看電影、看菜單、檢查、瞧一瞧）。",
+                  segments: [{ text: "Xem", meaning: "看", tail: "" }],
+                },
+              ],
+              examples: [
+                {
+                  sentence: "Để em xem chút.",
+                  translation:
+                    "讓我看一下。（買東西或被問到問題時最常用的口頭禪）",
+                  segments: [
+                    { text: "Để", meaning: "讓", tail: " " },
+                    { text: "em", meaning: "我(弟妹)", tail: " " },
+                    { text: "xem", meaning: "看", tail: " " },
+                    { text: "chút", meaning: "一點/一下", tail: "." },
+                  ],
+                },
+                {
+                  sentence: "Cho em xem cái này.",
+                  translation: "請給我看這個。（在店裡想看某件商品時說）",
+                  segments: [
+                    { text: "Cho", meaning: "讓/給", tail: " " },
+                    { text: "em", meaning: "我", tail: " " },
+                    { text: "xem", meaning: "看", tail: " " },
+                    { text: "cái này", meaning: "這個", tail: "." },
+                  ],
+                },
+                {
+                  sentence: "Xem phim không anh?",
+                  translation: "要看電影嗎？（邀約朋友、情侶時的道地說法）",
+                  segments: [
+                    { text: "Xem", meaning: "看", tail: " " },
+                    { text: "phim", meaning: "電影", tail: " " },
+                    { text: "không", meaning: "嗎", tail: " " },
+                    { text: "anh", meaning: "哥(你)", tail: "?" },
+                  ],
+                },
+                {
+                  sentence: "Để anh xem giá nhé.",
+                  translation: "讓我（哥）看看價格喔。",
+                  segments: [
+                    { text: "Để", meaning: "讓", tail: " " },
+                    { text: "anh", meaning: "我(哥哥)", tail: " " },
+                    { text: "xem", meaning: "看", tail: " " },
+                    { text: "giá", meaning: "價格", tail: " " },
+                    { text: "nhé", meaning: "喔", tail: "." },
+                  ],
+                },
+              ],
+              usage_note:
+                "在餐廳點餐或在攤位挑選衣服時，如果還沒決定好，只要對店員說『Để em xem』，他們就會讓你慢慢選，不會一直催你喔。",
+              image_file: "see.png",
+        },
+        {
+          id: "v-10",
+          term_zh: "製作 / 做出",
+          related_terms: [
+            {
+              term_target: "Làm",
+              pronunciation: ["/laːm˨˩/"],
+              specific_note: "製造、煮飯。",
+              segments: [{ text: "Làm", meaning: "做", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Làm cà phê.",
+              translation: "沖咖啡/做咖啡。",
+              segments: [
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cái này làm bằng gì?",
+              translation: "這個是用什麼做的？",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "làm", meaning: "做", tail: " " },
+                { text: "bằng", meaning: "用/藉由", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "做菜通常說『Làm món ăn』或『Nấu ăn』。",
+          image_file: "make.png",
+        },
+        {
+          id: "v-11",
+          term_zh: "來",
+          related_terms: [
+            {
+              term_target: "Đến",
+              pronunciation: ["/ɗen˧˥/"],
+              specific_note: "到達、來到。",
+              segments: [{ text: "Đến", meaning: "來", tail: "" }],
+            },
+            {
+              term_target: "Tới",
+              pronunciation: ["/təj˧˥/"],
+              specific_note: "來到（較口語）。",
+              segments: [{ text: "Tới", meaning: "來/到", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tới rồi!",
+              translation: "到了！(外送員或司機常說)",
+              segments: [
+                { text: "Tới", meaning: "來/到", tail: " " },
+                { text: "rồi", meaning: "了", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Đến đây chơi.",
+              translation: "來這裡玩。",
+              segments: [
+                { text: "Đến", meaning: "來", tail: " " },
+                { text: "đây", meaning: "這裡", tail: " " },
+                { text: "chơi", meaning: "玩", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『Chào mừng bạn đến...』（歡迎你來到...）。",
+          image_file: "come.png",
+        },
+        {
+          id: "v-12",
+          term_zh: "需要",
+          related_terms: [
+            {
+              term_target: "Cần",
+              pronunciation: ["/kən˨˩/"],
+              specific_note: "必要、需求。",
+              segments: [{ text: "Cần", meaning: "需要", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi cần giúp đỡ.",
+              translation: "我需要幫助。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "cần", meaning: "需要", tail: " " },
+                { text: "giúp đỡ", meaning: "幫助", tail: "." },
+              ],
+            },
+            {
+              sentence: "Bạn cần gì?",
+              translation: "你需要什麼？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "cần", meaning: "需要", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "『Cần thiết』是必要的。",
+          image_file: "need.png",
+        },
+        {
+          id: "v-13",
+          term_zh: "使用 / 用",
+          related_terms: [
+            {
+              term_target: "Dùng",
+              pronunciation: ["/zum˨˩/"],
+              specific_note: "使用、食用（禮貌用語）。",
+              segments: [{ text: "Dùng", meaning: "用", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Dùng cái này đi.",
+              translation: "用這個吧。",
+              segments: [
+                { text: "Dùng", meaning: "用", tail: " " },
+                { text: "cái này", meaning: "這個", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Bạn dùng cơm chưa?",
+              translation: "你用過餐了嗎？(較有禮貌的問候)",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "dùng", meaning: "用/吃", tail: " " },
+                { text: "cơm", meaning: "飯", tail: " " },
+                { text: "chưa", meaning: "沒/尚未", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "正式文件多用『Sử dụng』，口語多用『Dùng』。",
+          image_file: "use.png",
+        },
+{
+  "id": "v-14",
+  "term_zh": "找 / 尋找",
+  "related_terms": [
+    {
+      "term_target": "Tìm",
+      "pronunciation": ["/tim˨˩/"],
+      "specific_note": "指「尋找」的行為或動作過程。",
+      "segments": [{ "text": "Tìm", "meaning": "找", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Anh tìm ai ạ?",
+      "translation": "你（哥）在找誰呀？（進辦公室或去別人家時，對方最常問的一句話）",
+      "segments": [
+        { "text": "Anh", "meaning": "哥哥(你)", "tail": " " },
+        { "text": "tìm", "meaning": "找", "tail": " " },
+        { "text": "ai", "meaning": "誰", "tail": " " },
+        { "text": "ạ", "meaning": "敬語", "tail": "?" }
+      ]
+    },
+    {
+      "sentence": "Em đang tìm việc làm.",
+      "translation": "我正在找工作。",
+      "segments": [
+        { "text": "Em", "meaning": "我(弟妹)", "tail": " " },
+        { "text": "đang", "meaning": "正在", "tail": " " },
+        { "text": "tìm", "meaning": "找", "tail": " " },
+        { "text": "việc làm", "meaning": "工作", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Để em tìm trên Google Maps.",
+      "translation": "讓我用 Google Maps 找一下。（找路時非常道地的說法）",
+      "segments": [
+        { "text": "Để", "meaning": "讓", "tail": " " },
+        { "text": "em", "meaning": "我", "tail": " " },
+        { "text": "tìm", "meaning": "找", "tail": " " },
+        { "text": "trên", "meaning": "在...之上", "tail": " " },
+        { "text": "Google Maps", "meaning": "Google地圖", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Em đang tìm chìa khóa.",
+      "translation": "我正在找鑰匙。",
+      "segments": [
+        { "text": "Em", "meaning": "我", "tail": " " },
+        { "text": "đang", "meaning": "正在", "tail": " " },
+        { "text": "tìm", "meaning": "找", "tail": " " },
+        { "text": "chìa khóa", "meaning": "鑰匙", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "『Tìm』是指尋找的動作。如果是結帳時店員『找錢』給你，越南語要用『Trả lại tiền thừa』或者是更簡單的『Thối tiền』，不能用 Tìm 喔！",
+  "image_file": "find.png"
+},
+        {
+          id: "v-15",
+          term_zh: "給 / 送",
+          related_terms: [
+            {
+              term_target: "Cho",
+              pronunciation: ["/cɔ˧˧/"],
+              specific_note: "給予、讓。",
+              segments: [{ text: "Cho", meaning: "給", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho tôi một ly trà đá.",
+              translation: "給我一杯冰茶。",
+              segments: [
+                { text: "Cho", meaning: "給", tail: " " },
+                { text: "tôi", meaning: "我", tail: " " },
+                { text: "một ly", meaning: "一杯", tail: " " },
+                { text: "trà đá", meaning: "冰茶", tail: "." },
+              ],
+            },
+            {
+              sentence: "Đừng cho ai biết.",
+              translation: "別讓任何人知道。",
+              segments: [
+                { text: "Đừng", meaning: "不要", tail: " " },
+                { text: "cho", meaning: "讓/給", tail: " " },
+                { text: "ai", meaning: "誰", tail: " " },
+                { text: "biết", meaning: "知道", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "如果是「送禮物」會用『Tặng』。",
+          image_file: "give.png",
+        },
+        {
+          id: "v-16",
+          term_zh: "告訴 / 講述",
+          related_terms: [
+            {
+              term_target: "Kể",
+              pronunciation: ["/kɛ˦ˀ˥/"],
+              specific_note: "敘述故事、講經歷。",
+              segments: [{ text: "Kể", meaning: "告訴/敘述", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Kể chuyện đi.",
+              translation: "講故事吧。",
+              segments: [
+                { text: "Kể", meaning: "講", tail: " " },
+                { text: "chuyện", meaning: "故事/事情", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Kể cho tôi nghe.",
+              translation: "講給我聽。",
+              segments: [
+                { text: "Kể", meaning: "講", tail: " " },
+                { text: "cho tôi", meaning: "給我", tail: " " },
+                { text: "nghe", meaning: "聽", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "單純傳達資訊用『Bảo』或『Nói』。",
+          image_file: "tell.png",
+        },
+        {
+          id: "v-17",
+          term_zh: "工作",
+          related_terms: [
+            {
+              term_target: "Làm việc",
+              pronunciation: ["/laːm˨˩ viək˨˩/"],
+              specific_note: "上班、做事。",
+              segments: [
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "việc", meaning: "事情/工作", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi đang làm việc.",
+              translation: "我正在工作。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "làm việc", meaning: "工作", tail: "." },
+              ],
+            },
+            {
+              sentence: "Hôm nay không phải làm việc.",
+              translation: "今天不用上班。",
+              segments: [
+                { text: "Hôm nay", meaning: "今天", tail: " " },
+                { text: "không phải", meaning: "不用/不是", tail: " " },
+                { text: "làm việc", meaning: "工作", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人常問：『Bạn làm việc ở đâu?』（你在哪工作？）。",
+          image_file: "work.png",
+        },
+        {
+          id: "v-18",
+          term_zh: "喜歡",
+          related_terms: [
+            {
+              term_target: "Thích",
+              pronunciation: ["/tʰik˧˥/"],
+              specific_note: "喜愛、中意。",
+              segments: [{ text: "Thích", meaning: "喜歡", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em thích anh.",
+              translation: "我喜歡你。(女對男告白常用)",
+              segments: [
+                { text: "Em", meaning: "我(弟妹輩)", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "anh", meaning: "你(哥哥輩)", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tôi thích ăn phở.",
+              translation: "我喜歡吃河粉。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "phở", meaning: "河粉", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "喜歡做某事，直接在 thích 後面加動詞即可。",
+          image_file: "like.png",
+        },
+        {
+          id: "v-19",
+          term_zh: "起床",
+          related_terms: [
+            {
+              term_target: "Ngủ dậy",
+              pronunciation: ["/ŋu˦ˀ˥ zəj˨˩/"],
+              specific_note: "睡醒起床。",
+              segments: [
+                { text: "Ngủ", meaning: "睡", tail: " " },
+                { text: "dậy", meaning: "起/醒", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Dậy đi!",
+              translation: "起床啦！",
+              segments: [
+                { text: "Dậy", meaning: "起/醒", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Mấy giờ bạn dậy?",
+              translation: "你幾點起床？",
+              segments: [
+                { text: "Mấy giờ", meaning: "幾點", tail: " " },
+                { text: "bạn", meaning: "你", tail: " " },
+                { text: "dậy", meaning: "起/醒", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "通常簡稱『Dậy』即可。",
+          image_file: "wake_up.png",
+        },
+        {
+          id: "v-20",
+          term_zh: "說話 / 聊天",
+          related_terms: [
+            {
+              term_target: "Nói chuyện",
+              pronunciation: ["/nɔj˧˥ cuiən˨˩/"],
+              specific_note: "交談、聊八卦。",
+              segments: [
+                { text: "Nói", meaning: "說", tail: " " },
+                { text: "chuyện", meaning: "事情/故事", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đang nói chuyện với ai đấy?",
+              translation: "你在跟誰說話？",
+              segments: [
+                { text: "Đang", meaning: "正在", tail: " " },
+                { text: "nói chuyện", meaning: "說話", tail: " " },
+                { text: "với", meaning: "跟", tail: " " },
+                { text: "ai", meaning: "誰", tail: " " },
+                { text: "đấy", meaning: "呢", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Chúng ta nói chuyện đi.",
+              translation: "我們談談吧。",
+              segments: [
+                { text: "Chúng ta", meaning: "我們(含對方)", tail: " " },
+                { text: "nói chuyện", meaning: "說話", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "『Tám chuyện』是聊八卦的意思（源自廣東話的「三姑六婆」）。",
+          image_file: "speak.png",
+        },
+        {
+          id: "v-21",
+          term_zh: "聽見 / 聽",
+          related_terms: [
+            {
+              term_target: "Nghe",
+              pronunciation: ["/ŋɛ˧˧/"],
+              specific_note: "聽覺、接電話、聽音樂。",
+              segments: [{ text: "Nghe", meaning: "聽", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Alo, anh nghe rõ không?",
+              translation: "喂，哥你聽得清楚嗎？（電話常用）",
+              segments: [
+                { text: "Alo", meaning: "喂", tail: ", " },
+                { text: "anh", meaning: "哥", tail: " " },
+                { text: "nghe", meaning: "聽", tail: " " },
+                { text: "rõ", meaning: "清楚", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Tôi thích nghe nhạc Việt.",
+              translation: "我喜歡聽越南音樂。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "nghe", meaning: "聽", tail: " " },
+                { text: "nhạc Việt", meaning: "越語音樂", tail: "." },
+              ],
+            },
+            {
+              sentence: "Đừng nghe nó nói linh tinh.",
+              translation: "別聽它瞎說。",
+              segments: [
+                { text: "Đừng", meaning: "不要", tail: " " },
+                { text: "nghe", meaning: "聽", tail: " " },
+                { text: "nó", meaning: "它", tail: " " },
+                { text: "nói linh tinh", meaning: "瞎說/亂講", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "接電話的第一句通常就是『Alo, tôi nghe đây』（喂，我在聽）。",
+          image_file: "hear.png",
+        },
+        {
+          id: "v-22",
+          term_zh: "寫",
+          related_terms: [
+            {
+              term_target: "Viết",
+              pronunciation: ["/viət˧˥/"],
+              specific_note: "書寫、寫作。",
+              segments: [{ text: "Viết", meaning: "寫", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Viết tên vào đây.",
+              translation: "把名字寫在這裡。",
+              segments: [
+                { text: "Viết", meaning: "寫", tail: " " },
+                { text: "tên", meaning: "名字", tail: " " },
+                { text: "vào", meaning: "進入/到", tail: " " },
+                { text: "đây", meaning: "這裡", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em viết tin nhắn cho anh nhé.",
+              translation: "我傳簡訊（寫訊息）給你喔。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "viết", meaning: "寫", tail: " " },
+                { text: "tin nhắn", meaning: "訊息", tail: " " },
+                { text: "cho", meaning: "給", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "寫簡訊或在 Zalo 留言都常用 viết。",
+          image_file: "write.png",
+        },
+        {
+          id: "v-23",
+          term_zh: "閱讀 / 看",
+          related_terms: [
+            {
+              term_target: "Đọc",
+              pronunciation: ["/ɗɔk˨˩/"],
+              specific_note: "閱讀、朗讀。",
+              segments: [{ text: "Đọc", meaning: "閱讀", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bạn đang đọc gì đấy?",
+              translation: "你在看什麼（書/報）呢？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "đọc", meaning: "閱讀", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "đấy", meaning: "呢", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Để em đọc thực đơn.",
+              translation: "讓我來看看菜單。",
+              segments: [
+                { text: "Để", meaning: "讓", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "đọc", meaning: "閱讀/看", tail: " " },
+                { text: "thực đơn", meaning: "菜單", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "越南語區分得很細，『看書』要用 đọc，『看電影』要用 xem。",
+          image_file: "read.png",
+        },
+{
+  "id": "v-24",
+  "term_zh": "等待 / 等",
+  "related_terms": [
+    {
+      "term_target": "Đợi",
+      "pronunciation": ["/ɗəj˧˨/"],
+      "specific_note": "口語中最通用的「等」。",
+      "segments": [{ "text": "Đợi", "meaning": "等/等待", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Đợi em một chút nhé!",
+      "translation": "等我一下下喔！（最萬用的禮貌說法）",
+      "segments": [
+        { "text": "Đợi", "meaning": "等", "tail": " " },
+        { "text": "em", "meaning": "我(弟妹輩)", "tail": " " },
+        { "text": "một chút", "meaning": "一下下/一點點", "tail": " " },
+        { "text": "nhé", "meaning": "喔(語助詞)", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Anh đang đợi ai thế?",
+      "translation": "你（哥）正在等誰呀？",
+      "segments": [
+        { "text": "Anh", "meaning": "哥哥(你)", "tail": " " },
+        { "text": "đang", "meaning": "正在", "tail": " " },
+        { "text": "đợi", "meaning": "等", "tail": " " },
+        { "text": "ai", "meaning": "誰", "tail": " " },
+        { "text": "thế", "meaning": "呢/呀", "tail": "?" }
+      ]
+    },
+    {
+      "sentence": "Đợi em tí nhé.",
+      "translation": "等我一下喔。（比 một chút 更口語、更快速的用法）",
+      "segments": [
+        { "text": "Đợi", "meaning": "等", "tail": " " },
+        { "text": "em", "meaning": "我", "tail": " " },
+        { "text": "tí", "meaning": "一下(極短)", "tail": " " },
+        { "text": "nhé", "meaning": "喔", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Đợi lâu quá rồi.",
+      "translation": "等太久了啦。",
+      "segments": [
+        { "text": "Đợi", "meaning": "等", "tail": " " },
+        { "text": "lâu", "meaning": "久", "tail": " " },
+        { "text": "quá", "meaning": "太", "tail": " " },
+        { "text": "rồi", "meaning": "了", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "在越南跟司機、外送員或是朋友溝通時，『Đợi em một chút』是必備的神句，加個『nhé』會讓你的語氣聽起來非常友善。",
+  "image_file": "wait.png"
+},
+        {
+          id: "v-25",
+          term_zh: "嘗試 / 試試",
+          related_terms: [
+            {
+              term_target: "Thử",
+              pronunciation: ["/tʰɨ˧˩/"],
+              specific_note: "試吃、試穿、嘗試做某事。",
+              segments: [{ text: "Thử", meaning: "嘗試", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Ăn thử đi, ngon lắm!",
+              translation: "試吃看看吧，很好吃喔！",
+              segments: [
+                { text: "Ăn thử", meaning: "試吃", tail: " " },
+                { text: "đi", meaning: "吧", tail: ", " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Em muốn mặc thử cái này.",
+              translation: "我想要試穿這個。（買衣服常用）",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "muốn", meaning: "想要", tail: " " },
+                { text: "mặc thử", meaning: "試穿", tail: " " },
+                { text: "cái này", meaning: "這個", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "越南市場買衣服一定要問：『Có được mặc thử không?』（可以試穿嗎？）。",
+          image_file: "try.png",
+        },
+{
+  "id": "v-26",
+  "term_zh": "付錢 / 結帳",
+  "related_terms": [
+    {
+      "term_target": "Tính tiền",
+      "pronunciation": ["/tiɲ˧˥ tiən˨˩/"],
+      "specific_note": "口語中最通用的「算錢/結帳」。",
+      "segments": [
+        { "text": "Tính", "meaning": "計算", "tail": " " },
+        { "text": "tiền", "meaning": "錢", "tail": "" }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Anh ơi, tính tiền!",
+      "translation": "哥，結帳！（在越南餐廳最常用的喊法）",
+      "segments": [
+        { "text": "Anh ơi", "meaning": "呼喚哥哥/帥哥", "tail": ", " },
+        { "text": "tính tiền", "meaning": "結帳/算錢", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Cho em tính tiền ạ.",
+      "translation": "我要結帳喔。（口語中帶有敬意的說法）",
+      "segments": [
+        { "text": "Cho em", "meaning": "讓我", "tail": " " },
+        { "text": "tính tiền", "meaning": "結帳", "tail": " " },
+        { "text": "ạ", "meaning": "敬語", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Hôm nay em mời.",
+      "translation": "今天我請客。（我來付錢的意思）",
+      "segments": [
+        { "text": "Hôm nay", "meaning": "今天", "tail": " " },
+        { "text": "em", "meaning": "我(弟妹輩)", "tail": " " },
+        { "text": "mời", "meaning": "邀請/請客", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "在餐廳想買單時，只要舉手對店員喊『Tính tiền!』即可。如果對方比你大，喊『Anh ơi, tính tiền』；比你小則喊『Em ơi, tính tiền』。",
+  "image_file": "pay.png"
+},
+        {
+          id: "v-27",
+          term_zh: "選擇",
+          related_terms: [
+            {
+              term_target: "Chọn",
+              pronunciation: ["/cɔn˧˨/"],
+              specific_note: "從多個中挑選一個。",
+              segments: [{ text: "Chọn", meaning: "選擇", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Khó chọn quá!",
+              translation: "太難選了啦！",
+              segments: [
+                { text: "Khó", meaning: "困難", tail: " " },
+                { text: "chọn", meaning: "選擇", tail: " " },
+                { text: "quá", meaning: "太/非常", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Bạn chọn cái nào?",
+              translation: "你選哪一個？",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "chọn", meaning: "選擇", tail: " " },
+                { text: "cái nào", meaning: "哪一個", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "『Lựa chọn』是更正式的選擇名詞。",
+          image_file: "choose.png",
+        },
+        {
+          id: "v-28",
+          term_zh: "進入 / 進去",
+          related_terms: [
+            {
+              term_target: "Vào",
+              pronunciation: ["/vaːw˨˩/"],
+              specific_note: "進入室內、交通工具或某個空間。",
+              segments: [{ text: "Vào", meaning: "進", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mời anh vào nhà chơi.",
+              translation: "請哥哥進屋坐坐。（去越南人家家訪時最常聽到）",
+              segments: [
+                { text: "Mời", meaning: "邀請/請", tail: " " },
+                { text: "anh", meaning: "哥哥(你)", tail: " " },
+                { text: "vào", meaning: "進", tail: " " },
+                { text: "nhà", meaning: "家", tail: " " },
+                { text: "chơi", meaning: "玩/坐坐", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em đi vào trong nhé.",
+              translation: "我進去裡面喔。",
+              segments: [
+                { text: "Em", meaning: "我(弟妹)", tail: " " },
+                { text: "đi vào", meaning: "進去", tail: " " },
+                { text: "trong", meaning: "裡面", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+            {
+              sentence: "Lối vào ở đâu ạ?",
+              translation: "請問入口在哪裡？",
+              segments: [
+                { text: "Lối vào", meaning: "入口/進去的路", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Anh vào xe đi!",
+              translation: "哥，上車吧！（進去車子裡）",
+              segments: [
+                { text: "Anh", meaning: "哥哥(你)", tail: " " },
+                { text: "vào", meaning: "進/上", tail: " " },
+                { text: "xe", meaning: "車", tail: " " },
+                { text: "đi", meaning: "吧(祈使)", tail: "!" },
+              ],
+            },
+          ],
+          usage_note:
+            "在越南看到門口寫著『Vào』就是入口的意思。對應的詞是『Ra』（出）。",
+          image_file: "enter.png",
+        },
+        {
+          id: "v-29",
+          term_zh: "住 / 在 (場所)",
+          related_terms: [
+            {
+              term_target: "Ở",
+              pronunciation: ["/əː˧˩/"],
+              specific_note: "指居住在某處，或表達人、物「在」某個地點。",
+              segments: [{ text: "Ở", meaning: "住/在", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh ở đâu?",
+              translation: "你（哥）住哪裡？ / 你現在在哪？",
+              segments: [
+                { text: "Anh", meaning: "哥哥(你)", tail: " " },
+                { text: "ở", meaning: "住/在", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Nhà em ở Quận 1.",
+              translation: "我家住在第一郡。（自我介紹居住地常用的說法）",
+              segments: [
+                { text: "Nhà", meaning: "家", tail: " " },
+                { text: "em", meaning: "我(弟妹)", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "Quận 1", meaning: "第一郡", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em ở khách sạn nào?",
+              translation: "妳住在（哪間）飯店？",
+              segments: [
+                { text: "Em", meaning: "妳(弟妹)", tail: " " },
+                { text: "ở", meaning: "住/待在", tail: " " },
+                { text: "khách sạn", meaning: "飯店", tail: " " },
+                { text: "nào", meaning: "哪一個", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Điện thoại ở trên bàn.",
+              translation: "手機在桌子上面。",
+              segments: [
+                { text: "Điện thoại", meaning: "手機", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "trên", meaning: "上面", tail: " " },
+                { text: "bàn", meaning: "桌子", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "不管是問人住哪，還是問東西在哪，越南語都習慣把主詞放在最前面，然後接『ở đâu』。這對台灣學習者來說是非常直覺的句型！",
+          image_file: "live.png",
+        },
+        {
+          id: "v-30",
+          term_zh: "到達",
+          related_terms: [
+            {
+              term_target: "Tới",
+              pronunciation: ["/təj˧˥/"],
+              specific_note: "到站、到了。",
+              segments: [{ text: "Tới", meaning: "到", tail: "" }],
+            },
+            {
+              term_target: "Đến",
+              pronunciation: ["/ɗen˧˥/"],
+              specific_note: "到達、來到。",
+              segments: [{ text: "Đến", meaning: "到", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em tới rồi đây!",
+              translation: "我到了喔！（跟朋友碰面常用）",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "tới rồi", meaning: "到了", tail: " " },
+                { text: "đây", meaning: "這喔/現在", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Sắp đến nơi chưa anh?",
+              translation: "帥哥（哥哥），快要到了嗎？（問司機）",
+              segments: [
+                { text: "Sắp", meaning: "快要", tail: " " },
+                { text: "đến", meaning: "到", tail: " " },
+                { text: "nơi", meaning: "地方", tail: " " },
+                { text: "chưa", meaning: "沒/了嗎", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: "?" },
+              ],
+            },
+          ],
+          usage_note:
+            "司機送到目的地後通常會說：『Tới nơi rồi ạ』（到地方了喔）。",
+          image_file: "arrive.png",
+        },
+        {
+          id: "v-31",
+          term_zh: "走路 / 散步",
+          related_terms: [
+            {
+              term_target: "Đi bộ",
+              pronunciation: ["/ɗi˧˧ ɓo˧˨/"],
+              specific_note: "步行、走步。",
+              segments: [
+                { text: "Đi", meaning: "去/走", tail: " " },
+                { text: "bộ", meaning: "部(足部)", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi bộ cho khỏe.",
+              translation: "走路對身體好（為了健康）。",
+              segments: [
+                { text: "Đi bộ", meaning: "走路", tail: " " },
+                { text: "cho", meaning: "給/為了", tail: " " },
+                { text: "khỏe", meaning: "健康", tail: "." },
+              ],
+            },
+            {
+              sentence: "Nhà em gần đây, đi bộ được.",
+              translation: "我家就在附近，走路可以到。",
+              segments: [
+                { text: "Nhà em", meaning: "我家", tail: " " },
+                { text: "gần đây", meaning: "附近", tail: ", " },
+                { text: "đi bộ", meaning: "走路", tail: " " },
+                { text: "được", meaning: "可以/能", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "越南機車很多，如果你說要『Đi bộ』當地人可能會覺得你很特別。",
+          image_file: "walk.png",
+        },
+        {
+          id: "v-32",
+          term_zh: "打開",
+          related_terms: [
+            {
+              term_target: "Mở",
+              pronunciation: ["/məː˧˩/"],
+              specific_note: "開門、開燈、打開軟體。",
+              segments: [{ text: "Mở", meaning: "開", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mở cửa giúp em với.",
+              translation: "幫我開一下門。",
+              segments: [
+                { text: "Mở cửa", meaning: "開門", tail: " " },
+                { text: "giúp", meaning: "幫助", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "với", meaning: "吧/伴隨", tail: "." },
+              ],
+            },
+            {
+              sentence: "Mấy giờ cửa hàng mở cửa?",
+              translation: "店幾點開門？",
+              segments: [
+                { text: "Mấy giờ", meaning: "幾點", tail: " " },
+                { text: "cửa hàng", meaning: "商店", tail: " " },
+                { text: "mở cửa", meaning: "開門", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "『Mở WiFi』就是開啟 WiFi。",
+          image_file: "open.png",
+        },
+        {
+          id: "v-33",
+          term_zh: "關閉 / 熄滅",
+          related_terms: [
+            {
+              term_target: "Đóng",
+              pronunciation: ["/ɗoŋ˧˥/"],
+              specific_note: "關門、關窗、關閉（實體物）。",
+              segments: [{ text: "Đóng", meaning: "關", tail: "" }],
+            },
+            {
+              term_target: "Tắt",
+              pronunciation: ["/tat˧˥/"],
+              specific_note: "關燈、關火、關手機電源。",
+              segments: [{ text: "Tắt", meaning: "關/熄", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đóng cửa lại đi.",
+              translation: "把門關上吧。",
+              segments: [
+                { text: "Đóng cửa", meaning: "關門", tail: " " },
+                { text: "lại", meaning: "回/起來", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tắt đèn khi đi ra ngoài.",
+              translation: "出去時要關燈。",
+              segments: [
+                { text: "Tắt đèn", meaning: "關燈", tail: " " },
+                { text: "khi", meaning: "當...時", tail: " " },
+                { text: "đi ra ngoài", meaning: "出去外面", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "關電源類要用 Tắt，關門窗類要用 Đóng。",
+          image_file: "close.png",
+        },
+        {
+          id: "v-34",
+          term_zh: "幫助",
+          related_terms: [
+            {
+              term_target: "Giúp",
+              pronunciation: ["/zup˧˥/"],
+              specific_note: "幫忙、協助。",
+              segments: [{ text: "Giúp", meaning: "幫", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cần em giúp gì không?",
+              translation: "需要我幫什麼嗎？",
+              segments: [
+                { text: "Cần", meaning: "需要", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Cảm ơn chị đã giúp em.",
+              translation: "謝謝姊姊幫了我。",
+              segments: [
+                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "chị", meaning: "姊姊", tail: " " },
+                { text: "đã giúp", meaning: "已經幫", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "求救時喊『Giúp tôi với!』。",
+          image_file: "help.png",
+        },
+        {
+          id: "v-35",
+          term_zh: "帶來 / 攜帶",
+          related_terms: [
+            {
+              term_target: "Mang",
+              pronunciation: ["/maːŋ˧˧/"],
+              specific_note: "攜帶、外帶。",
+              segments: [{ text: "Mang", meaning: "帶", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Ăn đây hay mang về?",
+              translation: "內用還是外帶？（店員必問）",
+              segments: [
+                { text: "Ăn đây", meaning: "這吃(內用)", tail: " " },
+                { text: "hay", meaning: "還是", tail: " " },
+                { text: "mang về", meaning: "帶回(外帶)", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Nhớ mang theo áo mưa.",
+              translation: "記得帶上雨衣。",
+              segments: [
+                { text: "Nhớ", meaning: "記得", tail: " " },
+                { text: "mang theo", meaning: "帶上/隨身帶", tail: " " },
+                { text: "áo mưa", meaning: "雨衣", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南點餐，『Mang về』就是外帶的意思。",
+          image_file: "bring.png",
+        },
+        {
+          id: "v-41",
+          term_zh: "結束 / 完成",
+          related_terms: [
+            {
+              term_target: "Xong",
+              pronunciation: ["/səwŋm/"],
+              specific_note: "強調動作完成、結束。",
+              segments: [{ text: "Xong", meaning: "完成/結束", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Làm xong chưa?",
+              translation: "做完了沒？",
+              segments: [
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "xong", meaning: "完", tail: " " },
+                { text: "chưa", meaning: "了沒", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Ăn xong rồi đi.",
+              translation: "吃完後再走。",
+              segments: [
+                { text: "Ăn", meaning: "吃", tail: " " },
+                { text: "xong", meaning: "完", tail: " " },
+                { text: "rồi", meaning: "之後/了", tail: " " },
+                { text: "đi", meaning: "走", tail: "." },
+              ],
+            },
+            {
+              sentence: "Thế là xong!",
+              translation: "就這樣，搞定！（結束了）",
+              segments: [
+                { text: "Thế là", meaning: "就是這樣", tail: " " },
+                { text: "xong", meaning: "結束/完工", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "越南人常把 xong 放在動詞後，表示動作的結束。",
+          image_file: "finish.png",
+        },
+        {
+          id: "v-42",
+          term_zh: "停止 / 停下",
+          related_terms: [
+            {
+              term_target: "Dừng lại",
+              pronunciation: ["/zɨŋ˨˩ laːj˨˩/"],
+              specific_note: "身體或車輛停下來。",
+              segments: [
+                { text: "Dừng", meaning: "停", tail: " " },
+                { text: "lại", meaning: "下來", tail: "" },
+              ],
+            },
+            {
+              term_target: "Thôi",
+              pronunciation: ["/tʰoːj/"],
+              specific_note: "停止動作（算了、別再做）。",
+              segments: [{ text: "Thôi", meaning: "停止/算了", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Dừng xe ở đây.",
+              translation: "停在這邊。（對司機說）",
+              segments: [
+                { text: "Dừng xe", meaning: "停車", tail: " " },
+                { text: "ở đây", meaning: "在這裡", tail: "." },
+              ],
+            },
+            {
+              sentence: "Thôi đi, đừng nói nữa.",
+              translation: "算了啦，別再說了。",
+              segments: [
+                { text: "Thôi đi", meaning: "算了/停下", tail: ", " },
+                { text: "đừng", meaning: "不要", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "nữa", meaning: "再/繼續", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "叫 Grab 司機停車，直接喊『Dừng ở đây』即可。",
+          image_file: "stop.png",
+        },
+        {
+          id: "v-43",
+          term_zh: "記住 / 想念",
+          related_terms: [
+            {
+              term_target: "Nhớ",
+              pronunciation: ["/ɲəː˧˥/"],
+              specific_note: "同時有「記得」跟「思念」的意思。",
+              segments: [{ text: "Nhớ", meaning: "記住/想念", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nhớ nhé!",
+              translation: "要記得喔！",
+              segments: [
+                { text: "Nhớ", meaning: "記得", tail: " " },
+                { text: "nhé", meaning: "喔(語助詞)", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Anh nhớ em lắm.",
+              translation: "我（哥）好想妳（妹）。",
+              segments: [
+                { text: "Anh", meaning: "哥(我)", tail: " " },
+                { text: "nhớ", meaning: "想念", tail: " " },
+                { text: "em", meaning: "妹(妳)", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em không nhớ đường.",
+              translation: "我不記路（路癡常用）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "nhớ", meaning: "記得", tail: " " },
+                { text: "đường", meaning: "路", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南，對喜歡的人說『Em nhớ anh』是非常直白的情話。",
+          image_file: "remember.png",
+        },
+        {
+          id: "v-44",
+          term_zh: "談話 / 聊",
+          related_terms: [
+            {
+              term_target: "Nói chuyện",
+              pronunciation: ["/nɔj˧˥ cuiən˨˩/"],
+              specific_note: "一般的說話、聊天。",
+              segments: [
+                { text: "Nói", meaning: "說", tail: " " },
+                { text: "chuyện", meaning: "事情", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nói chuyện sau nhé.",
+              translation: "晚點聊喔。",
+              segments: [
+                { text: "Nói chuyện", meaning: "說話", tail: " " },
+                { text: "sau", meaning: "之後", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em đang nói chuyện với bạn.",
+              translation: "我正在跟朋友聊天。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "nói chuyện", meaning: "說話", tail: " " },
+                { text: "với", meaning: "跟", tail: " " },
+                { text: "bạn", meaning: "朋友", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "如果是「講八卦」，越南年輕人常說『Tám chuyện』。",
+          image_file: "talk.png",
+        },
+        {
+          id: "v-45",
+          term_zh: "見面 / 遇到",
+          related_terms: [
+            {
+              term_target: "Gặp",
+              pronunciation: ["/ɣa̰ːp˨˩/"],
+              specific_note: "與人會面。",
+              segments: [{ text: "Gặp", meaning: "見面", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Gặp lại sau.",
+              translation: "再見（晚點見）。",
+              segments: [
+                { text: "Gặp lại", meaning: "再見面", tail: " " },
+                { text: "sau", meaning: "稍後", tail: "." },
+              ],
+            },
+            {
+              sentence: "Mai gặp nhé!",
+              translation: "明天見喔！",
+              segments: [
+                { text: "Mai", meaning: "明天", tail: " " },
+                { text: "gặp", meaning: "見面", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Rất vui được gặp anh.",
+              translation: "很高興見到你（哥）。",
+              segments: [
+                { text: "Rất vui", meaning: "很高興", tail: " " },
+                { text: "được", meaning: "被/能", tail: " " },
+                { text: "gặp", meaning: "見面", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人常說『Hẹn gặp lại』作為正式的再見。",
+          image_file: "meet.png",
+        },
+        {
+          id: "v-46",
+          term_zh: "去 / 搭乘 / ...吧",
+          related_terms: [
+            {
+              term_target: "Đi",
+              pronunciation: ["/ɗi˧˧/"],
+              specific_note:
+                "移動到某處、搭乘交通工具，或放在句尾表示「提議/吧」。",
+              segments: [{ text: "Đi", meaning: "去/搭乘", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi Grab cho nhanh.",
+              translation: "搭 Grab 比較快。（在越南移動最常用的說法）",
+              segments: [
+                { text: "Đi", meaning: "搭乘", tail: " " },
+                { text: "Grab", meaning: "叫車軟體", tail: " " },
+                { text: "cho", meaning: "給/為了", tail: " " },
+                { text: "nhanh", meaning: "快", tail: "." },
+              ],
+            },
+            {
+              sentence: "Anh đi đâu đấy?",
+              translation: "你要去哪呀？（越南人見面最常用的打招呼方式）",
+              segments: [
+                { text: "Anh", meaning: "哥哥(你)", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Đi uống cà phê đi!",
+              translation: "去喝咖啡吧！（揪團喝咖啡必備句）",
+              segments: [
+                { text: "Đi", meaning: "去", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: " " },
+                { text: "đi", meaning: "吧(語助詞)", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Em đi bộ được.",
+              translation: "我走路可以（到）。（表示不用搭車時使用）",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đi bộ", meaning: "走路", tail: " " },
+                { text: "được", meaning: "可以/能", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "搭機車、公車、計程車通通都用『Đi』。另外，想約朋友做某事，在句尾加一個『đi』就很有熱情的感覺！",
+          image_file: "take.png",
+        },
+        {
+          id: "v-47",
+          term_zh: "放 / 讓 / 留",
+          related_terms: [
+            {
+              term_target: "Để",
+              pronunciation: ["/ɗeː˧˩/"],
+              specific_note: "物理上的放置，或口語中的「讓某人做某事」。",
+              segments: [{ text: "Để", meaning: "放/讓", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Để em xem chút.",
+              translation: "讓我看一下。（看菜單或挑商品時必說）",
+              segments: [
+                { text: "Để", meaning: "讓", tail: " " },
+                { text: "em", meaning: "我(弟妹)", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "chút", meaning: "一點/一下", tail: "." },
+              ],
+            },
+            {
+              sentence: "Để ở đây ạ.",
+              translation: "放在這裡喔。（告訴外送員或司機放哪裡）",
+              segments: [
+                { text: "Để", meaning: "放", tail: " " },
+                { text: "ở đây", meaning: "在這裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cứ để đó đi.",
+              translation: "就放那裡吧。（不用收、不用動，在那裡就好）",
+              segments: [
+                { text: "Cứ", meaning: "儘管/就", tail: " " },
+                { text: "để", meaning: "放/留", tail: " " },
+                { text: "đó", meaning: "那裡", tail: " " },
+                { text: "đi", meaning: "吧(語助詞)", tail: "." },
+              ],
+            },
+            {
+              sentence: "Để em làm cho.",
+              translation: "讓我來做吧。（主動幫忙別人時的道地說法）",
+              segments: [
+                { text: "Để", meaning: "讓", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "làm", meaning: "做", tail: " " },
+                { text: "cho", meaning: "給/幫忙", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "Để 是一個超級萬用詞！想看東西、想幫忙、想叫人放東西，通通先說一個 Để 就對了。",
+          image_file: "put.png",
+        },
+        {
+          id: "v-48",
+          term_zh: "吃",
+          related_terms: [
+            {
+              term_target: "Ăn",
+              pronunciation: ["/aŋ˧˧/"],
+              specific_note: "最通用的「吃」。",
+              segments: [{ text: "Ăn", meaning: "吃", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Ăn gì chưa?",
+              translation: "吃了沒？（最道地的問候語）",
+              segments: [
+                { text: "Ăn", meaning: "吃", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "chưa", meaning: "了沒", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Ngon quá, ăn đi!",
+              translation: "太好吃了，快吃吧！",
+              segments: [
+                { text: "Ngon", meaning: "好吃", tail: " " },
+                { text: "quá", meaning: "太/非常", tail: ", " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "đi", meaning: "吧(祈使)", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Tôi ăn chay.",
+              translation: "我吃素。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "ăn chay", meaning: "吃素", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『Ăn cơm』雖然是吃飯，但也常用來泛指吃正餐。",
+          image_file: "eat.png",
+        },
+        {
+          id: "v-49",
+          term_zh: "睡覺",
+          related_terms: [
+            {
+              term_target: "Ngủ",
+              pronunciation: ["/ŋu˦ˀ˥/"],
+              specific_note: "睡覺。",
+              segments: [{ text: "Ngủ", meaning: "睡", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi ngủ đi.",
+              translation: "去睡覺吧。",
+              segments: [
+                { text: "Đi", meaning: "去", tail: " " },
+                { text: "ngủ", meaning: "睡", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+            {
+              sentence: "Chúc em ngủ ngon.",
+              translation: "祝妳晚安（睡得好）。",
+              segments: [
+                { text: "Chúc", meaning: "祝", tail: " " },
+                { text: "em", meaning: "妳", tail: " " },
+                { text: "ngủ ngon", meaning: "睡好/晚安", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "午覺在越南文化中很重要，稱為『Ngủ trưa』。",
+          image_file: "sleep.png",
+        },
+        {
+          id: "v-50",
+          term_zh: "寄送 / 傳送",
+          related_terms: [
+            {
+              term_target: "Gửi",
+              pronunciation: ["/ɣɨːj˧˩/"],
+              specific_note: "寄信、傳訊息、寄放東西。",
+              segments: [{ text: "Gửi", meaning: "寄送", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Gửi định vị cho em.",
+              translation: "傳定位給我。（找人必備句）",
+              segments: [
+                { text: "Gửi", meaning: "傳送", tail: " " },
+                { text: "định vị", meaning: "定位", tail: " " },
+                { text: "cho", meaning: "給", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
+              ],
+            },
+            {
+              sentence: "Gửi xe ở đâu ạ?",
+              translation: "請問機車停哪裡？（寄車）",
+              segments: [
+                { text: "Gửi xe", meaning: "寄車/停車", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Gửi ảnh cho mình nhé.",
+              translation: "把照片傳給我喔。",
+              segments: [
+                { text: "Gửi", meaning: "傳送", tail: " " },
+                { text: "ảnh", meaning: "照片", tail: " " },
+                { text: "cho mình", meaning: "給我", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南機車不能亂停，一定要找有看板寫『Gửi xe』的地方。",
+          image_file: "send.png",
+        },
+        {
+          id: "v-51",
+          term_zh: "開車 / 駕駛",
+          related_terms: [
+            {
+              term_target: "Lái",
+              pronunciation: ["/laːj˧˥/"],
+              specific_note: "駕駛汽車、機車。",
+              segments: [{ text: "Lái", meaning: "駕駛", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lái xe cẩn thận nhé.",
+              translation: "開車（騎車）小心喔。",
+              segments: [
+                { text: "Lái xe", meaning: "開車", tail: " " },
+                { text: "cẩn thận", meaning: "小心", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em đang lái xe, gọi sau nhé.",
+              translation: "我正在開車，晚點打給你。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: " lái xe", meaning: "開車", tail: ", " },
+                { text: "gọi", meaning: "打(電話)", tail: " " },
+                { text: "sau", meaning: "之後", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "雖然騎機車正式是 Chạy xe，但一般說 Lái xe 也通。",
+          image_file: "drive.png",
+        },
+        {
+          id: "v-52",
+          term_zh: "讀書 / 學習",
+          related_terms: [
+            {
+              term_target: "Học",
+              pronunciation: ["/hɔk˨˩/"],
+              specific_note: "讀書、上學、模仿。",
+              segments: [{ text: "Học", meaning: "讀書/學習", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em đang học tiếng Việt.",
+              translation: "我正在學越南語。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "học", meaning: "學習", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: "." },
+              ],
+            },
+            {
+              sentence: "Học đi đôi với hành.",
+              translation: "學以致用（學與行並行）。",
+              segments: [
+                { text: "Học", meaning: "學", tail: " " },
+                { text: "đi đôi", meaning: "並行", tail: " " },
+                { text: "với", meaning: "跟", tail: " " },
+                { text: "hành", meaning: "行(實踐)", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "上學叫『Đi học』。",
+          image_file: "study.png",
+        },
+        {
+          id: "v-53",
+          term_zh: "回去 / 返回",
+          related_terms: [
+            {
+              term_target: "Về",
+              pronunciation: ["/veː˨˩/"],
+              specific_note: "回到有歸屬感的地方（家、國、座席）。",
+              segments: [{ text: "Về", meaning: "回去", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em về đây.",
+              translation: "我走囉（回去了）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "về", meaning: "回", tail: " " },
+                { text: "đây", meaning: "這(語助)", tail: "." },
+              ],
+            },
+            {
+              sentence: "Khi nào anh về Đài Loan?",
+              translation: "你什麼時候回台灣？",
+              segments: [
+                { text: "Khi nào", meaning: "什麼時候", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "về", meaning: "回", tail: " " },
+                { text: "Đài Loan", meaning: "台灣", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Về nhà đi.",
+              translation: "回家吧。",
+              segments: [
+                { text: "Về", meaning: "回", tail: " " },
+                { text: "nhà", meaning: "家", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南語分得很清楚，去不熟的地方用 Đi，回熟的地方用 Về。",
+          image_file: "go_back.png",
+        },
+        {
+          id: "v-54",
+          term_zh: "了解 / 明白",
+          related_terms: [
+            {
+              term_target: "Hiểu",
+              pronunciation: ["/hiə̉ʊ/"],
+              specific_note: "理解意思、明白道理。",
+              segments: [{ text: "Hiểu", meaning: "明白/了解", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Có hiểu không?",
+              translation: "聽得懂嗎？（明白了沒？）",
+              segments: [
+                { text: "Có", meaning: "有/是否", tail: " " },
+                { text: "hiểu", meaning: "明白", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Em hiểu rồi.",
+              translation: "我懂了。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "hiểu", meaning: "明白", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+            {
+              sentence: "Khó hiểu quá!",
+              translation: "太難懂了啦！",
+              segments: [
+                { text: "Khó", meaning: "困難", tail: " " },
+                { text: "hiểu", meaning: "明白", tail: " " },
+                { text: "quá", meaning: "太/非常", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "如果你想說「我明白了」，最道地就是『Hiểu rồi』。",
+          image_file: "understand.png",
+        },
+      ],
+    },
+    {
+      id: "adjectives_vn",
+      name: "常用形容詞",
+      items: [
+  {
+  "id": "adj-01",
+  "term_zh": "好的 / 良好的",
+  "related_terms": [
+    {
+      "term_target": "Tốt",
+      "pronunciation": ["/tot˧˥/"],
+      "specific_note": "指品質好、人品好，或對某事有益處。",
+      "segments": [{ "text": "Tốt", "meaning": "好", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Người đó rất tốt.",
+      "translation": "那個人很好（心地善良）。",
+      "segments": [
+        { "text": "Người đó", "meaning": "那個人", "tail": " " },
+        { "text": "rất", "meaning": "非常", "tail": " " },
+        { "text": "tốt", "meaning": "好", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Sản phẩm này chất lượng tốt.",
+      "translation": "這個產品品質很好。",
+      "segments": [
+        { "text": "Sản phẩm", "meaning": "產品", "tail": " " },
+        { "text": "này", "meaning": "這", "tail": " " },
+        { "text": "chất lượng", "meaning": "品質", "tail": " " },
+        { "text": "tốt", "meaning": "好", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Tốt cho sức khỏe.",
+      "translation": "對健康有益。",
+      "segments": [
+        { "text": "Tốt", "meaning": "好", "tail": " " },
+        { "text": "cho", "meaning": "給/對於", "tail": " " },
+        { "text": "sức khỏe", "meaning": "健康", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Tốt lắm!",
+      "translation": "非常好！（誇獎別人的表現）",
+      "segments": [
+        { "text": "Tốt", "meaning": "好", "tail": " " },
+        { "text": "lắm", "meaning": "非常", "tail": "!" }
+      ]
+    }
+  ],
+  "usage_note": "如果你想稱讚一個人『人很好』，或是買東西時強調『品質好』，請務必使用 Tốt。",
+  "image_file": "good.png"
+},
+        {
+          id: "adj-02",
+          term_zh: "壞的 / 差的",
+          related_terms: [
+            {
+              term_target: "Xấu",
+              pronunciation: ["/səw˧˥/"],
+              specific_note: "指外觀醜、人品壞或天氣差。",
+              segments: [{ text: "Xấu", meaning: "壞/醜", tail: "" }],
+            },
+            {
+              term_target: "Tệ",
+              pronunciation: ["/tɛ˨˩˨/"],
+              specific_note: "指糟糕、差勁。",
+              segments: [{ text: "Tệ", meaning: "糟/差", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Thời tiết hôm nay xấu quá.",
+              translation: "今天天氣太差了。",
+              segments: [
+                { text: "Thời tiết", meaning: "天氣", tail: " " },
+                { text: "hôm nay", meaning: "今天", tail: " " },
+                { text: "xấu", meaning: "壞/不好", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cảm giác thật là tệ.",
+              translation: "感覺真的很糟糕。",
+              segments: [
+                { text: "Cảm giác", meaning: "感覺", tail: " " },
+                { text: "thật là", meaning: "真是", tail: " " },
+                { text: "tệ", meaning: "糟糕", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "說人「長得醜」也是用 Xấu，說「品質爛」可以用 Tệ。",
+          image_file: "bad.png",
+        },
+        {
+          id: "adj-03",
+          term_zh: "新的",
+          related_terms: [
+            {
+              term_target: "Mới",
+              pronunciation: ["/məːj˧˥/"],
+              specific_note: "物品新，也可以指「剛做完某事」。",
+              segments: [{ text: "Mới", meaning: "新", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Xe máy mới của ai đấy?",
+              translation: "這台新機車是誰的呀？",
+              segments: [
+                { text: "Xe máy", meaning: "機車", tail: " " },
+                { text: "mới", meaning: "新", tail: " " },
+                { text: "của ai", meaning: "誰的", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Chúc mừng năm mới!",
+              translation: "新年快樂！（祝賀新春）",
+              segments: [
+                { text: "Chúc mừng", meaning: "祝賀", tail: " " },
+                { text: "năm", meaning: "年", tail: " " },
+                { text: "mới", meaning: "新", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "形容詞放在名詞後，所以是「機車 新 (Xe máy mới)」。",
+          image_file: "new.png",
+        },
+        {
+          id: "adj-04",
+          term_zh: "第一的",
+          related_terms: [
+            {
+              term_target: "Đầu tiên",
+              pronunciation: ["/ɗəw˨˩ tiən˧˧/"],
+              specific_note: "序位上的最初。",
+              segments: [{ text: "Đầu tiên", meaning: "第一/最初", tail: "" }],
+            },
+            {
+              term_target: "Thứ nhất",
+              pronunciation: ["/tʰɨ˧˥ ɲat˧˥/"],
+              specific_note: "第一名、第一個。",
+              segments: [{ text: "Thứ nhất", meaning: "第一", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lần đầu tiên em tới Việt Nam.",
+              translation: "這是我第一次來到越南。",
+              segments: [
+                { text: "Lần", meaning: "次", tail: " " },
+                { text: "đầu tiên", meaning: "最初/第一", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "tới", meaning: "來到", tail: " " },
+                { text: "Việt Nam", meaning: "越南", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "形容「第一次」固定用 Lần đầu tiên。",
+          image_file: "first.png",
+        },
+        {
+          id: "adj-05",
+          term_zh: "上一個 / 最後的",
+          related_terms: [
+            {
+              term_target: "Trước",
+              pronunciation: ["/cɨək˧˥/"],
+              specific_note: "之前的、上一個。",
+              segments: [{ text: "Trước", meaning: "前", tail: "" }],
+            },
+            {
+              term_target: "Cuối cùng",
+              pronunciation: ["/kuəj˧˥ kuŋ˨˩/"],
+              specific_note: "最後一個。",
+              segments: [{ text: "Cuối cùng", meaning: "最後", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tuần trước anh đi đâu?",
+              translation: "上週你（哥）去哪了？",
+              segments: [
+                { text: "Tuần", meaning: "週", tail: " " },
+                { text: "trước", meaning: "前/上一個", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Đây là cơ hội cuối cùng.",
+              translation: "這是最後的機會。",
+              segments: [
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "cơ hội", meaning: "機會", tail: " " },
+                { text: "cuối cùng", meaning: "最後", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『上個月』叫 Tháng trước，『上週』叫 Tuần trước。",
+          image_file: "last.png",
+        },
+        {
+          id: "adj-06",
+          term_zh: "下一個",
+          related_terms: [
+            {
+              term_target: "Sau",
+              pronunciation: ["/saːw˧˧/"],
+              specific_note: "之後的、下一個。",
+              segments: [{ text: "Sau", meaning: "後", tail: "" }],
+            },
+            {
+              term_target: "Tiếp theo",
+              pronunciation: ["/tiəp˧˥ tʰɛw˧˧/"],
+              specific_note: "接下來的。",
+              segments: [{ text: "Tiếp theo", meaning: "接下來", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Hẹn gặp lại lần sau nhé.",
+              translation: "下次見（約見下次）。",
+              segments: [
+                { text: "Hẹn gặp lại", meaning: "再見面", tail: " " },
+                { text: "lần", meaning: "次", tail: " " },
+                { text: "sau", meaning: "下一個/後", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+            {
+              sentence: "Người tiếp theo là ai?",
+              translation: "下一位是誰？",
+              segments: [
+                { text: "Người", meaning: "人", tail: " " },
+                { text: "tiếp theo", meaning: "下一個", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "ai", meaning: "誰", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "同樣，『下個月』是 Tháng sau，『下週』是 Tuần sau。",
+          image_file: "next.png",
+        },
+{
+  "id": "adj-07",
+  "term_zh": "長的",
+  "related_terms": [
+    {
+      "term_target": "Dài",
+      "pronunciation": ["/zaːj˨˩/"],
+      "specific_note": "指空間、長度或距離上的「長」。",
+      "segments": [{ "text": "Dài", "meaning": "長", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Tóc chị dài quá!",
+      "translation": "姊姊的頭髮好長喔！",
+      "segments": [
+        { "text": "Tóc", "meaning": "頭髮", "tail": " " },
+        { "text": "chị", "meaning": "姊姊", "tail": " " },
+        { "text": "dài", "meaning": "長", "tail": " " },
+        { "text": "quá", "meaning": "太/真", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Cái quần này hơi dài.",
+      "translation": "這條褲子有一點點長。（試穿衣服時常用）",
+      "segments": [
+        { "text": "Cái quần", "meaning": "褲子", "tail": " " },
+        { "text": "này", "meaning": "這", "tail": " " },
+        { "text": "hơi", "meaning": "有點", "tail": " " },
+        { "text": "dài", "meaning": "長", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Đường này dài lắm.",
+      "translation": "這條路非常長。",
+      "segments": [
+        { "text": "Đường", "meaning": "馬路/路", "tail": " " },
+        { "text": "này", "meaning": "這", "tail": " " },
+        { "text": "dài", "meaning": "長", "tail": " " },
+        { "text": "lắm", "meaning": "非常", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Em muốn mua một cái thước dài.",
+      "translation": "我想買一把長尺。",
+      "segments": [
+        { "text": "Em", "meaning": "我", "tail": " " },
+        { "text": "muốn", "meaning": "想", "tail": " " },
+        { "text": "mua", "meaning": "買", "tail": " " },
+        { "text": "một cái", "meaning": "一個", "tail": " " },
+        { "text": "thước", "meaning": "尺", "tail": " " },
+        { "text": "dài", "meaning": "長", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "形容物理長度固定用 Dài。如果是指時間很久，記得要改用 Lâu 喔！",
+  "image_file": "long.png"
+},
+        {
+          id: "adj-08",
+          term_zh: "大的",
+          related_terms: [
+            {
+              term_target: "To",
+              pronunciation: ["/tɔ˧˧/"],
+              specific_note: "指體積大、聲音大。",
+              segments: [{ text: "To", meaning: "大", tail: "" }],
+            },
+            {
+              term_target: "Lớn",
+              pronunciation: ["/lən˧˥/"],
+              specific_note: "指規模大、長大、偉大。",
+              segments: [{ text: "Lớn", meaning: "大/壯大", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nói to lên!",
+              translation: "說大聲一點！",
+              segments: [
+                { text: "Nói", meaning: "說", tail: " " },
+                { text: "to", meaning: "大", tail: " " },
+                { text: "lên", meaning: "起來", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Thành phố này rất lớn.",
+              translation: "這座城市非常大。",
+              segments: [
+                { text: "Thành phố", meaning: "城市", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "lớn", meaning: "大", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "形容東西體積大，口語最愛用 To。",
+          image_file: "big.png",
+        },
+        {
+          id: "adj-09",
+          term_zh: "小的",
+          related_terms: [
+            {
+              term_target: "Nhỏ",
+              pronunciation: ["/ɲɔ˧˩/"],
+              specific_note: "指體積小、年紀小（北越常用）。",
+              segments: [{ text: "Nhỏ", meaning: "小", tail: "" }],
+            },
+            {
+              term_target: "Bé",
+              pronunciation: ["/ɓɛ˧˥/"],
+              specific_note: "指小、幼小（常用於小孩）。",
+              segments: [{ text: "Bé", meaning: "小", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái này nhỏ quá, có cái to không?",
+              translation: "這個太小了，有大的嗎？",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "nhỏ", meaning: "小", tail: " " },
+                { text: "quá", meaning: "太", tail: ", " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "cái to", meaning: "大的(東西)", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "叫小孩子可以親切地叫 Bé ơi。",
+          image_file: "small.png",
+        },
+        {
+          id: "adj-10",
+          term_zh: "多的 / 常",
+          related_terms: [
+            {
+              term_target: "Nhiều",
+              pronunciation: ["/ɲiəw˨˩/"],
+              specific_note: "指數量多。",
+              segments: [{ text: "Nhiều", meaning: "多", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cảm ơn anh nhiều nhé!",
+              translation: "非常謝謝你（哥）喔！",
+              segments: [
+                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "nhiều", meaning: "多", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Ở đây nhiều người quá.",
+              translation: "這裡人太多了。",
+              segments: [
+                { text: "Ở đây", meaning: "這裡", tail: " " },
+                { text: "nhiều", meaning: "多", tail: " " },
+                { text: "người", meaning: "人", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『喝很多水』叫 Uống nhiều nước。",
+          image_file: "many.png",
+        },
+        {
+          id: "adj-11",
+          term_zh: "高的",
+          related_terms: [
+            {
+              term_target: "Cao",
+              pronunciation: ["/kaːw˧˧/"],
+              specific_note: "指身高高、位置高。",
+              segments: [{ text: "Cao", meaning: "高", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh ấy rất cao.",
+              translation: "他很高。",
+              segments: [
+                { text: "Anh ấy", meaning: "他", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "cao", meaning: "高", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "物價高也可以說 Giá cao。",
+          image_file: "tall.png",
+        },
+        {
+          id: "adj-12",
+          term_zh: "年輕的",
+          related_terms: [
+            {
+              term_target: "Trẻ",
+              pronunciation: ["/cɛ˧˩/"],
+              specific_note: "指年紀輕。",
+              segments: [{ text: "Trẻ", meaning: "年輕", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chị nhìn trẻ quá!",
+              translation: "姊姊你看起來真年輕！",
+              segments: [
+                { text: "Chị", meaning: "姊姊", tail: " " },
+                { text: "nhìn", meaning: "看起來", tail: " " },
+                { text: "trẻ", meaning: "年輕", tail: " " },
+                { text: "quá", meaning: "太", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "稱讚越南女性必備句：Trẻ đẹp (年輕漂亮)。",
+          image_file: "young.png",
+        },
+        {
+          id: "adj-13",
+          term_zh: "老的 / 舊的",
+          related_terms: [
+            {
+              term_target: "Già",
+              pronunciation: ["/zaː˨˩/"],
+              specific_note: "指人年老。",
+              segments: [{ text: "Già", meaning: "老", tail: "" }],
+            },
+            {
+              term_target: "Cũ",
+              pronunciation: ["/ku˦ˀ˥/"],
+              specific_note: "指物品陳舊。",
+              segments: [{ text: "Cũ", meaning: "舊", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bố em già rồi.",
+              translation: "我爸爸老了。",
+              segments: [
+                { text: "Bố em", meaning: "我爸爸", tail: " " },
+                { text: "già", meaning: "老", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+            {
+              sentence: "Sách cũ này của ai?",
+              translation: "這本舊書是誰的？",
+              segments: [
+                { text: "Sách", meaning: "書", tail: " " },
+                { text: "cũ", meaning: "舊", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "của ai", meaning: "誰的", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "注意區分：人老用 Già，東西舊用 Cũ。",
+          image_file: "old.png",
+        },
+        {
+          id: "adj-14",
+          term_zh: "近的",
+          related_terms: [
+            {
+              term_target: "Gần",
+              pronunciation: ["/ɣən˨˩/"],
+              specific_note: "指距離近。",
+              segments: [{ text: "Gần", meaning: "近", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nhà em ở gần đây.",
+              translation: "我家住在這附近。",
+              segments: [
+                { text: "Nhà em", meaning: "我家", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "gần đây", meaning: "這附近", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『附近』通常說 Gần đây。",
+          image_file: "near.png",
+        },
+        {
+          id: "adj-15",
+          term_zh: "遠的",
+          related_terms: [
+            {
+              term_target: "Xa",
+              pronunciation: ["/saː˧˧/"],
+              specific_note: "指距離遠。",
+              segments: [{ text: "Xa", meaning: "遠", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi sân bay có xa không?",
+              translation: "去機場遠嗎？",
+              segments: [
+                { text: "Đi", meaning: "去", tail: " " },
+                { text: "sân bay", meaning: "機場", tail: " " },
+                { text: "có", meaning: "是否", tail: " " },
+                { text: "xa", meaning: "遠", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "問路常用：Cách đây bao xa? (離這多遠？)。",
+          image_file: "far.png",
+        },
+        {
+          id: "adj-16",
+          term_zh: "快的",
+          related_terms: [
+            {
+              term_target: "Nhanh",
+              pronunciation: ["/ɲaɲ˧˧/"],
+              specific_note: "指速度快。",
+              segments: [{ text: "Nhanh", meaning: "快", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi nhanh lên!",
+              translation: "快一點走！（趕時間常用）",
+              segments: [
+                { text: "Đi", meaning: "走", tail: " " },
+                { text: "nhanh", meaning: "快", tail: " " },
+                { text: "lên", meaning: "起來", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Làm nhanh nhé.",
+              translation: "動作快點喔。",
+              segments: [
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "nhanh", meaning: "快", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『快點』就是 Nhanh lên。",
+          image_file: "fast.png",
+        },
+        {
+          id: "adj-17",
+          term_zh: "慢的",
+          related_terms: [
+            {
+              term_target: "Chậm",
+              pronunciation: ["/cəm˨˩/"],
+              specific_note: "指速度慢。",
+              segments: [{ text: "Chậm", meaning: "慢", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh nói chậm một chút.",
+              translation: "哥你講慢一點。",
+              segments: [
+                { text: "Anh", meaning: "哥哥", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "chậm", meaning: "慢", tail: " " },
+                { text: "một chút", meaning: "一點點", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "外國人必學：Nói chậm lại (講慢一點)。",
+          image_file: "slow.png",
+        },
+        {
+          id: "adj-18",
+          term_zh: "熱的",
+          related_terms: [
+            {
+              term_target: "Nóng",
+              pronunciation: ["/nɔŋ˧˥/"],
+              specific_note: "指天氣熱、溫度高。",
+              segments: [{ text: "Nóng", meaning: "熱", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Trời nóng quá, đi uống bia đi!",
+              translation: "天氣太熱了，去喝啤酒吧！",
+              segments: [
+                { text: "Trời", meaning: "天氣/天", tail: " " },
+                { text: "nóng", meaning: "熱", tail: " " },
+                { text: "quá", meaning: "太", tail: ", " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "bia", meaning: "啤酒", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "點熱咖啡叫 Cà phê nóng。",
+          image_file: "hot.png",
+        },
+        {
+          id: "adj-19",
+          term_zh: "冷的",
+          related_terms: [
+            {
+              term_target: "Lạnh",
+              pronunciation: ["/lan˨˩˨/"],
+              specific_note: "指天氣冷、身體冷。",
+              segments: [{ text: "Lạnh", meaning: "冷", tail: "" }],
+            },
+            {
+              term_target: "Nguội",
+              pronunciation: ["/ŋuəj˨˩/"],
+              specific_note: "指食物變涼、不熱了。",
+              segments: [{ text: "Nguội", meaning: "涼/冷(食物)", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mùa đông ở Hà Nội rất lạnh.",
+              translation: "河內的冬天很冷。",
+              segments: [
+                { text: "Mùa đông", meaning: "冬天", tail: " " },
+                { text: "ở Hà Nội", meaning: "在河內", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "lạnh", meaning: "冷", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "如果想要加冰塊的冷飲，要用 Đá (冰)。",
+          image_file: "cold.png",
+        },
+        {
+          id: "adj-20",
+          term_zh: "乾淨的",
+          related_terms: [
+            {
+              term_target: "Sạch",
+              pronunciation: ["/sac˧˥/"],
+              specific_note: "指乾淨、衛生。",
+              segments: [{ text: "Sạch", meaning: "乾淨", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Quán này nhìn rất sạch sẽ.",
+              translation: "這家店看起來很乾淨衛生。",
+              segments: [
+                { text: "Quán này", meaning: "這家店", tail: " " },
+                { text: "nhìn", meaning: "看/看起來", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "sạch sẽ", meaning: "乾淨", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "形容環境整潔常說 Sạch sẽ。",
+          image_file: "clean.png",
+        },
+        {
+          id: "adj-21",
+          term_zh: "髒的",
+          related_terms: [
+            {
+              term_target: "Bẩn",
+              pronunciation: ["/ɓən˧˩/"],
+              specific_note: "北越常用。",
+              segments: [{ text: "Bẩn", meaning: "髒", tail: "" }],
+            },
+            {
+              term_target: "Dơ",
+              pronunciation: ["/zəː˧˧/"],
+              specific_note: "南越常用。",
+              segments: [{ text: "Dơ", meaning: "髒", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái bàn này bẩn quá, lau giúp em.",
+              translation: "這張桌子好髒，幫我擦一下。",
+              segments: [
+                { text: "Cái bàn", meaning: "桌子", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "bẩn", meaning: "髒", tail: " " },
+                { text: "quá", meaning: "太", tail: ", " },
+                { text: "lau", meaning: "擦", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tay dơ rồi, đi rửa đi.",
+              translation: "手髒了，去洗手吧。",
+              segments: [
+                { text: "Tay", meaning: "手", tail: " " },
+                { text: "dơ", meaning: "髒", tail: " " },
+                { text: "rồi", meaning: "了", tail: ", " },
+                { text: "đi rửa", meaning: "去洗", tail: " " },
+                { text: "đi", meaning: "吧", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在路邊攤坐下前，如果覺得桌子髒，可以用這句叫店員。",
+          image_file: "dirty.png",
+        },
+        {
+          id: "adj-22",
+          term_zh: "簡單的 / 容易的",
+          related_terms: [
+            {
+              term_target: "Dễ",
+              pronunciation: ["/ze˦ˀ˥/"],
+              specific_note: "指事情不困難、容易上手。",
+              segments: [{ text: "Dễ", meaning: "容易", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tiếng Việt có dễ không?",
+              translation: "越南語容易嗎？",
+              segments: [
+                { text: "Tiếng Việt", meaning: "越南語", tail: " " },
+                { text: "có", meaning: "有/是否", tail: " " },
+                { text: "dễ", meaning: "容易", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Dễ như ăn cháo.",
+              translation: "易如反掌（簡單得像喝粥）。",
+              segments: [
+                { text: "Dễ", meaning: "簡單", tail: " " },
+                { text: "như", meaning: "像", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "cháo", meaning: "粥", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "回答別人『很簡單』時，可以說『Dễ lắm!』。",
+          image_file: "easy.png",
+        },
+        {
+          id: "adj-23",
+          term_zh: "困難的",
+          related_terms: [
+            {
+              term_target: "Khó",
+              pronunciation: ["/xɔ˧˥/"],
+              specific_note: "指事情艱難或人很難搞。",
+              segments: [{ text: "Khó", meaning: "困難", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Phát âm tiếng Việt khó quá!",
+              translation: "越南語發音太難了！",
+              segments: [
+                { text: "Phát âm", meaning: "發音", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: " " },
+                { text: "khó", meaning: "難", tail: " " },
+                { text: "quá", meaning: "太", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Ông sếp này khó tính lắm.",
+              translation: "這個老闆（個性）很難搞。",
+              segments: [
+                { text: "Ông sếp", meaning: "老闆", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "khó tính", meaning: "難搞/挑剔", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "形容一個人脾氣古怪或難相處時用 Khó tính。",
+          image_file: "difficult.png",
+        },
+        {
+          id: "adj-24",
+          term_zh: "正確的 / 對的",
+          related_terms: [
+            {
+              term_target: "Đúng",
+              pronunciation: ["/ɗuŋ˧˥/"],
+              specific_note: "事實正確或回答「是的」。",
+              segments: [{ text: "Đúng", meaning: "對", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đúng rồi, chính là nó!",
+              translation: "對了，就是它！",
+              segments: [
+                { text: "Đúng rồi", meaning: "對了", tail: ", " },
+                { text: "chính là", meaning: "正是", tail: " " },
+                { text: "nó", meaning: "它", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Bạn nói đúng.",
+              translation: "你說得對。",
+              segments: [
+                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "đúng", meaning: "對", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "口語常說『Đúng rồi』來肯定別人的話。",
+          image_file: "correct.png",
+        },
+        {
+          id: "adj-25",
+          term_zh: "錯誤的 / 錯了",
+          related_terms: [
+            {
+              term_target: "Sai",
+              pronunciation: ["/saːj˧˧/"],
+              specific_note: "事實錯誤、弄錯號碼等。",
+              segments: [{ text: "Sai", meaning: "錯", tail: "" }],
+            },
+            {
+              term_target: "Nhầm",
+              pronunciation: ["/ɲəm˨˩/"],
+              specific_note: "搞混、弄錯（如找錯錢、認錯人）。",
+              segments: [{ text: "Nhầm", meaning: "弄錯", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Nhầm số rồi anh ơi.",
+              translation: "哥，（電話）打錯號碼了。",
+              segments: [
+                { text: "Nhầm số", meaning: "弄錯號碼", tail: " " },
+                { text: "rồi", meaning: "了", tail: " " },
+                { text: "anh ơi", meaning: "呼喚語", tail: "." },
+              ],
+            },
+            {
+              sentence: "Tính sai tiền rồi.",
+              translation: "錢算錯了。（結帳發現不對時說）",
+              segments: [
+                { text: "Tính", meaning: "計算", tail: " " },
+                { text: "sai", meaning: "錯", tail: " " },
+                { text: "tiền", meaning: "錢", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "打錯電話、找錯錢，用 Nhầm 聽起來比較委婉。",
+          image_file: "wrong.png",
+        },
+        {
+          id: "adj-26",
+          term_zh: "重要的",
+          related_terms: [
+            {
+              term_target: "Quan trọng",
+              pronunciation: ["/kwaːn˧˧ cɔŋ˨˩/"],
+              specific_note: "重要、關鍵。",
+              segments: [
+                { text: "Quan", meaning: "關", tail: " " },
+                { text: "trọng", meaning: "重", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Việc này rất quan trọng.",
+              translation: "這件事非常重要。",
+              segments: [
+                { text: "Việc", meaning: "事情", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "quan trọng", meaning: "重要", tail: "." },
+              ],
+            },
+            {
+              sentence: "Không quan trọng đâu.",
+              translation: "不重要啦（沒關係）。",
+              segments: [
+                { text: "Không", meaning: "不", tail: " " },
+                { text: "quan trọng", meaning: "重要", tail: " " },
+                { text: "đâu", meaning: "才不(語助詞)", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "可以用於工作或任何關鍵時刻。",
+          image_file: "important.png",
+        },
+        {
+          id: "adj-27",
+          term_zh: "不同的 / 其他的",
+          related_terms: [
+            {
+              term_target: "Khác",
+              pronunciation: ["/xaːk˧˥/"],
+              specific_note: "指不相同，也可用於「另一個」。",
+              segments: [{ text: "Khác", meaning: "不同", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Hai cái này khác nhau chỗ nào?",
+              translation: "這兩個哪裡不一樣？",
+              segments: [
+                { text: "Hai cái", meaning: "兩樣", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "khác nhau", meaning: "互相不同", tail: " " },
+                { text: "chỗ nào", meaning: "哪裡", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Em muốn xem món khác.",
+              translation: "我想看別的（東西/菜）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "muốn", meaning: "想要", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "món khác", meaning: "別的項目", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "在餐廳或商店不滿意時，可以說『Lấy cái khác』（拿別的）。",
+          image_file: "different.png",
+        },
+        {
+          id: "adj-28",
+          term_zh: "真的",
+          related_terms: [
+            {
+              term_target: "Thật",
+              pronunciation: ["/tʰət˨˩/"],
+              specific_note: "指真實、真話、真貨。",
+              segments: [{ text: "Thật", meaning: "真", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Thật không?",
+              translation: "真的嗎？",
+              segments: [
+                { text: "Thật", meaning: "真", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Hàng thật đấy.",
+              translation: "這可是真貨喔。",
+              segments: [
+                { text: "Hàng", meaning: "貨/商品", tail: " " },
+                { text: "thật", meaning: "真", tail: " " },
+                { text: "đấy", meaning: "喔/呢", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "常用於驚訝或確認事實。",
+          image_file: "real.png",
+        },
+        {
+          id: "adj-29",
+          term_zh: "有趣的 / 好聽的",
+          related_terms: [
+            {
+              term_target: "Hay",
+              pronunciation: ["/haːj˧˧/"],
+              specific_note: "口語極高頻，指電影、書、歌「好、精采」。",
+              segments: [{ text: "Hay", meaning: "好/精采", tail: "" }],
+            },
+            {
+              term_target: "Thú vị",
+              pronunciation: ["/tʰu˧˥ vḭ˨˩/"],
+              specific_note: "指事情有趣、耐人尋味。",
+              segments: [{ text: "Thú vị", meaning: "有趣", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Phim này hay quá!",
+              translation: "這部電影太精采（好看）了！",
+              segments: [
+                { text: "Phim", meaning: "電影", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "hay", meaning: "精采", tail: " " },
+                { text: "quá", meaning: "太", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Một câu hỏi thú vị.",
+              translation: "一個有趣的問題。",
+              segments: [
+                { text: "Một", meaning: "一個", tail: " " },
+                { text: "câu hỏi", meaning: "問題", tail: " " },
+                { text: "thú vị", meaning: "有趣", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人稱讚一首歌或一本書好時，最常說的就是『Hay!』。",
+          image_file: "interesting.png",
+        },
+        {
+          id: "adj-30",
+          term_zh: "美麗的",
+          related_terms: [
+            {
+              term_target: "Đẹp",
+              pronunciation: ["/ɗɛp˨˩/"],
+              specific_note: "形容人、景、物、衣服都通用。",
+              segments: [{ text: "Đẹp", meaning: "漂亮", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chị mặc áo này đẹp lắm.",
+              translation: "姊姊穿這件衣服很漂亮。",
+              segments: [
+                { text: "Chị", meaning: "姊姊", tail: " " },
+                { text: "mặc", meaning: "穿", tail: " " },
+                { text: "áo này", meaning: "這衣服", tail: " " },
+                { text: "đẹp", meaning: "漂亮", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+            {
+              sentence: "Phong cảnh thật đẹp!",
+              translation: "風景真美！",
+              segments: [
+                { text: "Phong cảnh", meaning: "風景", tail: " " },
+                { text: "thật", meaning: "真", tail: " " },
+                { text: "đẹp", meaning: "美", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "稱讚越南女生必備詞，也是越南語中最美的詞之一。",
+          image_file: "beautiful.png",
+        },
+        {
+          id: "adj-31",
+          term_zh: "便宜的",
+          related_terms: [
+            {
+              term_target: "Rẻ",
+              pronunciation: ["/zɛ˧˩/"],
+              specific_note: "指價格低廉。",
+              segments: [{ text: "Rẻ", meaning: "便宜", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái này có rẻ không?",
+              translation: "這個便宜嗎？",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "có", meaning: "有/是否", tail: " " },
+                { text: "rẻ", meaning: "便宜", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Rẻ quá, mua đi!",
+              translation: "太便宜了，買吧！",
+              segments: [
+                { text: "Rẻ quá", meaning: "太便宜", tail: ", " },
+                { text: "mua", meaning: "買", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "在越南市場殺價後成交，通常會說『Rẻ quá』。",
+          image_file: "cheap.png",
+        },
+        {
+          id: "adj-32",
+          term_zh: "昂貴的",
+          related_terms: [
+            {
+              term_target: "Đắt",
+              pronunciation: ["/ɗat˧˥/"],
+              specific_note: "北越常用「貴」。",
+              segments: [{ text: "Đắt", meaning: "貴", tail: "" }],
+            },
+            {
+              term_target: "Mắc",
+              pronunciation: ["/mak˧˥/"],
+              specific_note: "南越常用「貴」。",
+              segments: [{ text: "Mắc", meaning: "貴", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mắc quá anh ơi, bớt đi!",
+              translation: "哥，太貴了啦，算便宜點！",
+              segments: [
+                { text: "Mắc quá", meaning: "太貴", tail: " " },
+                { text: "anh ơi", meaning: "呼喚帥哥/哥哥", tail: ", " },
+                { text: "bớt đi", meaning: "減去吧/算便宜點", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Cái gì cũng đắt.",
+              translation: "什麼東西都很貴。",
+              segments: [
+                { text: "Cái gì", meaning: "什麼", tail: " " },
+                { text: "cũng", meaning: "也/都", tail: " " },
+                { text: "đắt", meaning: "貴", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "南越（胡志明市）一定要說 Mắc quá，北越（河內）說 Đắt quá。",
+          image_file: "expensive.png",
+        },
+        {
+          id: "adj-33",
+          term_zh: "飢餓的",
+          related_terms: [
+            {
+              term_target: "Đói",
+              pronunciation: ["/ɗɔj˧˥/"],
+              specific_note: "肚子餓。",
+              segments: [{ text: "Đói", meaning: "餓", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em đói bụng rồi.",
+              translation: "我肚子餓了。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đói bụng", meaning: "肚子餓", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+            {
+              sentence: "Đói muốn xỉu luôn.",
+              translation: "餓到要暈倒了。",
+              segments: [
+                { text: "Đói", meaning: "餓", tail: " " },
+                { text: "muốn xỉu", meaning: "想要暈倒", tail: " " },
+                { text: "luôn", meaning: "一直/真的", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "口語常在 Đói 後面加個 Bụng (肚子)。",
+          image_file: "hungry.png",
+        },
+        {
+          id: "adj-34",
+          term_zh: "疲累的",
+          related_terms: [
+            {
+              term_target: "Mệt",
+              pronunciation: ["/mət˨˩/"],
+              specific_note: "身體累、心情累。",
+              segments: [{ text: "Mệt", meaning: "累", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Hôm nay em mệt quá.",
+              translation: "我今天太累了。",
+              segments: [
+                { text: "Hôm nay", meaning: "今天", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "mệt", meaning: "累", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+            {
+              sentence: "Mệt nhưng mà vui.",
+              translation: "很累但是很開心。",
+              segments: [
+                { text: "Mệt", meaning: "累", tail: " " },
+                { text: "nhưng mà", meaning: "但是", tail: " " },
+                { text: "vui", meaning: "開心", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人常嘆氣說『Mệt quá...』。",
+          image_file: "tired.png",
+        },
+        {
+          id: "adj-35",
+          term_zh: "忙碌的",
+          related_terms: [
+            {
+              term_target: "Bận",
+              pronunciation: ["/ɓən˨˩/"],
+              specific_note: "沒空、正在忙。",
+              segments: [{ text: "Bận", meaning: "忙", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh đang bận, gọi lại sau nhé.",
+              translation: "我（哥）正在忙，晚點再打來喔。",
+              segments: [
+                { text: "Anh", meaning: "哥(我)", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "bận", meaning: "忙", tail: ", " },
+                { text: "gọi lại", meaning: "打回/再打", tail: " " },
+                { text: "sau", meaning: "之後", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cuối tuần em có bận không?",
+              translation: "妳週末忙嗎？",
+              segments: [
+                { text: "Cuối tuần", meaning: "週末", tail: " " },
+                { text: "em", meaning: "妳", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "bận", meaning: "忙", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "拒絕邀約常用：『Em bận rồi』（我忙了/我沒空）。",
+          image_file: "busy.png",
+        },
+        {
+          id: "adj-36",
+          term_zh: "高興的 / 開心的",
+          related_terms: [
+            {
+              term_target: "Vui",
+              pronunciation: ["/vui˧˧/"],
+              specific_note: "心情愉悅、好玩。",
+              segments: [{ text: "Vui", meaning: "開心", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi chơi vui vẻ nhé!",
+              translation: "去玩得開心喔！",
+              segments: [
+                { text: "Đi chơi", meaning: "去玩", tail: " " },
+                { text: "vui vẻ", meaning: "開心/愉快", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "『Vui ghê!』是很道地的「好開心喔！」。",
+          image_file: "happy.png",
+        },
+        {
+          id: "adj-37",
+          term_zh: "悲傷的 / 難過的",
+          related_terms: [
+            {
+              term_target: "Buồn",
+              pronunciation: ["/ɓuən˨˩/"],
+              specific_note: "心情憂傷，也可用於「無聊」。",
+              segments: [{ text: "Buồn", meaning: "悲傷", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em đừng buồn nữa.",
+              translation: "妳別再難過了。",
+              segments: [
+                { text: "Em", meaning: "妳", tail: " " },
+                { text: "đừng", meaning: "不要", tail: " " },
+                { text: "buồn", meaning: "難過", tail: " " },
+                { text: "nữa", meaning: "再/繼續", tail: "." },
+              ],
+            },
+            {
+              sentence: "Ở nhà một mình buồn quá.",
+              translation: "一個人在家好無聊（鬱悶）。",
+              segments: [
+                { text: "Ở nhà", meaning: "在家", tail: " " },
+                { text: "một mình", meaning: "一個人", tail: " " },
+                { text: "buồn", meaning: "無聊/悶", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南語的 Buồn 涵蓋了難過與無所事事的無聊感。",
+          image_file: "sad.png",
+        },
+        {
+          id: "adj-38",
+          term_zh: "相似的 / 像",
+          related_terms: [
+            {
+              term_target: "Giống",
+              pronunciation: ["/zəwŋm˧˥/"],
+              specific_note: "長得像、外觀或性質相似。",
+              segments: [{ text: "Giống", meaning: "像/相似", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Con gái giống mẹ.",
+              translation: "女兒長得像媽媽。",
+              segments: [
+                { text: "Con gái", meaning: "女兒", tail: " " },
+                { text: "giống", meaning: "像", tail: " " },
+                { text: "mẹ", meaning: "媽媽", tail: "." },
+              ],
+            },
+            {
+              sentence: "Hai cái này giống nhau.",
+              translation: "這兩個一模一樣（彼此相似）。",
+              segments: [
+                { text: "Hai cái", meaning: "兩樣", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "giống nhau", meaning: "互相像", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "形容兩樣東西一樣，要加一個 Nhau (互相)。",
+          image_file: "similar.png",
+        },
+        {
+          id: "adj-39",
+          term_zh: "有名的",
+          related_terms: [
+            {
+              term_target: "Nổi tiếng",
+              pronunciation: ["/noːj˧˩ tiəŋ˧˥/"],
+              specific_note: "知名、聲譽遠播。",
+              segments: [
+                { text: "Nổi", meaning: "浮/顯現", tail: " " },
+                { text: "tiếng", meaning: "聲音/名聲", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Quán cà phê này rất nổi tiếng.",
+              translation: "這家咖啡店非常有名。",
+              segments: [
+                { text: "Quán cà phê", meaning: "咖啡店", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "nổi tiếng", meaning: "有名", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "旅遊推薦景點或餐廳常用這個詞。",
+          image_file: "famous.png",
+        },
+        {
+          id: "adj-40",
+          term_zh: "外國的 / 國外",
+          related_terms: [
+            {
+              term_target: "Nước ngoài",
+              pronunciation: ["/nɨək˧˥ ŋwaːj˨˩/"],
+              specific_note: "指外國、也指外國人。",
+              segments: [
+                { text: "Nước", meaning: "國家", tail: " " },
+                { text: "ngoài", meaning: "外面", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em thích đi du lịch nước ngoài.",
+              translation: "我喜歡去國外旅遊。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "đi du lịch", meaning: "去旅遊", tail: " " },
+                { text: "nước ngoài", meaning: "國外", tail: "." },
+              ],
+            },
+            {
+              sentence: "Anh ấy là người nước ngoài.",
+              translation: "他是外國人。",
+              segments: [
+                { text: "Anh ấy", meaning: "他", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "người nước ngoài", meaning: "外國人", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "越南人常稱外國人為『Người nước ngoài』，有時也會簡稱『Tây』（指西方人）。",
+          image_file: "foreign.png",
+        },
+{
+  "id": "adj-41",
+  "term_zh": "聰明的",
+  "related_terms": [
+    {
+      "term_target": "Thông minh",
+      "pronunciation": ["/tʰəwŋm˧˧ miɲ˧˧/"],
+      "specific_note": "形容頭腦靈活、理解力強（漢越音：聰明）。",
+      "segments": [
+        { "text": "Thông", "meaning": "通", "tail": " " },
+        { "text": "minh", "meaning": "明", "tail": "" }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Con trai anh thông minh quá!",
+      "translation": "你兒子真聰明！（誇獎小孩常用）",
+      "segments": [
+        { "text": "Con trai", "meaning": "兒子", "tail": " " },
+        { "text": "anh", "meaning": "你(哥)", "tail": " " },
+        { "text": "thông minh", "meaning": "聰明", "tail": " " },
+        { "text": "quá", "meaning": "太/真", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Cô ấy rất thông minh.",
+      "translation": "她非常聰明。",
+      "segments": [
+        { "text": "Cô ấy", "meaning": "她", "tail": " " },
+        { "text": "rất", "meaning": "非常", "tail": " " },
+        { "text": "thông minh", "meaning": "聰明", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Đó là một câu hỏi thông minh.",
+      "translation": "那是個聰明的問題。",
+      "segments": [
+        { "text": "Đó là", "meaning": "那是", "tail": " " },
+        { "text": "một", "meaning": "一個", "tail": " " },
+        { "text": "câu hỏi", "meaning": "問題", "tail": " " },
+        { "text": "thông minh", "meaning": "聰明", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "『Thông minh』是讚美他人智力最高頻且最安全的詞彙。在越南家庭作客時，用這句話誇獎對方的小孩非常受歡迎喔！",
+  "image_file": "intelligent.png"
+},
+        {
+          id: "adj-42",
+          term_zh: "危險的",
+          related_terms: [
+            {
+              term_target: "Nguy hiểm",
+              pronunciation: ["/ŋwi˧˧ hiəm˧˩/"],
+              specific_note: "指環境、行為或物品具有危險性。",
+              segments: [
+                { text: "Nguy", meaning: "危", tail: " " },
+                { text: "hiểm", meaning: "險", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đừng đi ra đó, nguy hiểm lắm!",
+              translation: "別去那邊，很危險喔！",
+              segments: [
+                { text: "Đừng", meaning: "不要", tail: " " },
+                { text: "đi ra đó", meaning: "去那邊", tail: ", " },
+                { text: "nguy hiểm", meaning: "危險", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Đường này rất nguy hiểm.",
+              translation: "這條路（交通狀況）很危險。",
+              segments: [
+                { text: "Đường", meaning: "路", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "nguy hiểm", meaning: "危險", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南過馬路或騎車時，常會聽到當地人提醒這句。",
+          image_file: "dangerous.png",
+        },
+        {
+          id: "adj-43",
+          term_zh: "好心的 / 仁慈的",
+          related_terms: [
+            {
+              term_target: "Tốt bụng",
+              pronunciation: ["/tot˧˥ ɓuŋm˧˨/"],
+              specific_note: "直譯是「肚子好」，指人心地善良、愛幫助人。",
+              segments: [
+                { text: "Tốt", meaning: "好", tail: " " },
+                { text: "bụng", meaning: "肚子/心腸", tail: "" },
+              ],
+            },
+            {
+              term_target: "Hiền",
+              pronunciation: ["/hiən˨˩/"],
+              specific_note: "指人的性格溫柔、和藹、不愛爭吵。",
+              segments: [{ text: "Hiền", meaning: "賢/溫柔", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh ấy rất tốt bụng.",
+              translation: "他心地非常好。",
+              segments: [
+                { text: "Anh ấy", meaning: "他", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "tốt bụng", meaning: "好心", tail: "." },
+              ],
+            },
+            {
+              sentence: "Chị ấy hiền lắm.",
+              translation: "那位姊姊人很溫柔和藹。",
+              segments: [
+                { text: "Chị ấy", meaning: "她", tail: " " },
+                { text: "hiền", meaning: "溫柔/賢慧", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "想誇獎越南友人「人很好」，說 Tốt bụng 會讓他們覺得你很懂越南話。",
+          image_file: "kind.png",
+        },
+        
+{
+  "id": "adj-44",
+  "term_zh": "每一個 / 所有的 / 一切",
+  "related_terms": [
+    {
+      "term_target": "Mọi",
+      "pronunciation": ["/mɔj˧˨/"],
+      "specific_note": "強調群體的全部。常用於「大家」、「萬物」、「到處」。",
+      "segments": [{ "text": "Mọi", "meaning": "一切/所有", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Chào mọi người!",
+      "translation": "大家好！（向一群人打招呼的最標準說法）",
+      "segments": [
+        { "text": "Chào", "meaning": "問候/你好", "tail": " " },
+        { "text": "mọi người", "meaning": "大家/所有人", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Mọi thứ đều ổn.",
+      "translation": "一切都很好（沒問題）。",
+      "segments": [
+        { "text": "Mọi thứ", "meaning": "所有事情/萬物", "tail": " " },
+        { "text": "đều", "meaning": "都", "tail": " " },
+        { "text": "ổn", "meaning": "穩/OK", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Mọi lúc mọi nơi.",
+      "translation": "隨時隨地（隨時、隨處）。",
+      "segments": [
+        { "text": "Mọi lúc", "meaning": "任何時候", "tail": " " },
+        { "text": "mọi nơi", "meaning": "任何地方", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Cảm ơn mọi người.",
+      "translation": "謝謝大家。",
+      "segments": [
+        { "text": "Cảm ơn", "meaning": "謝謝", "tail": " " },
+        { "text": "mọi người", "meaning": "大家", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "如果你要對一群人講話，開頭說『Chào mọi người』絕對不會錯。它比『Chào các bạn』聽起來更親切且包含所有人。",
+  "image_file": "every.png"
+},
+        {
+          id: "adj-45",
+          term_zh: "最喜愛的",
+          related_terms: [
+            {
+              term_target: "Yêu thích",
+              pronunciation: ["/iəw˧˧ tʰik˧˥/"],
+              specific_note: "指喜愛、熱愛。",
+              segments: [
+                { text: "Yêu", meaning: "愛", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: "" },
+              ],
+            },
+            {
+              term_target: "Thích nhất",
+              pronunciation: ["/tʰik˧˥ ɲat˧˥/"],
+              specific_note: "最喜歡（最常用於口語）。",
+              segments: [
+                { text: "Thích", meaning: "喜歡", tail: " " },
+                { text: "nhất", meaning: "第一/最", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Món ăn yêu thích của bạn là gì?",
+              translation: "你最喜愛的菜是什麼？",
+              segments: [
+                { text: "Món ăn", meaning: "食物/菜餚", tail: " " },
+                { text: "yêu thích", meaning: "喜愛", tail: " " },
+                { text: "của bạn", meaning: "你的", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Em thích nhất là đi du lịch.",
+              translation: "我最喜歡的就是去旅遊。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "thích nhất", meaning: "最喜歡", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "đi du lịch", meaning: "去旅遊", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "口語中直接在喜歡 (Thích) 後面加最 (Nhất) 就等於 Favorite。",
+          image_file: "favorite.png",
+        },
+        {
+          id: "adj-46",
+          term_zh: "美味的 / 好吃的",
+          related_terms: [
+            {
+              term_target: "Ngon",
+              pronunciation: ["/ŋɔn˧˧/"],
+              specific_note: "最通用的「好吃」。",
+              segments: [{ text: "Ngon", meaning: "美味", tail: "" }],
+            },
+            {
+              term_target: "Ngon tuyệt",
+              pronunciation: ["/ŋɔn˧˧ tuiət˨˩/"],
+              specific_note: "絕頂美味、太好吃了。",
+              segments: [
+                { text: "Ngon", meaning: "好吃", tail: " " },
+                { text: "tuyệt", meaning: "絕佳", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cái này ngon quá!",
+              translation: "這個好好吃喔！",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "quá", meaning: "太/真", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Bún chả ở đây ngon tuyệt!",
+              translation: "這裡的烤肉米線簡直太美味了！",
+              segments: [
+                { text: "Bún chả", meaning: "烤肉米線", tail: " " },
+                { text: "ở đây", meaning: "這裡", tail: " " },
+                { text: "ngon tuyệt", meaning: "美味絕倫", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Nhìn ngon thế!",
+              translation: "看起來真好吃！（看到食物時的驚嘆）",
+              segments: [
+                { text: "Nhìn", meaning: "看/看起來", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "thế", meaning: "那麼/真(語氣)", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "對越南老闆說 Ngon 或者是 Ngon lắm，他們會非常開心。",
+          image_file: "delicious.png",
+        },
+      ],
+    },
+    {
+      id: "nouns_vn",
+      name: "常用名詞",
+      items: [
+        {
+          id: "n-01",
+          term_zh: "時間",
+          related_terms: [
+            {
+              term_target: "Thời gian",
+              pronunciation: ["/tʰəj˨˩ zaːn˧˧/"],
+              specific_note: "指抽象的時間概念。",
+              segments: [{ text: "Thời gian", meaning: "時間", tail: "" }],
+            },
+            {
+              term_target: "Giờ",
+              pronunciation: ["/zəː˨˩/"],
+              specific_note: "指鐘點、小時。",
+              segments: [{ text: "Giờ", meaning: "小時/點", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bây giờ là mấy giờ?",
+              translation: "現在幾點？",
+              segments: [
+                { text: "Bây giờ", meaning: "現在", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "mấy", meaning: "幾", tail: " " },
+                { text: "giờ", meaning: "點", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Em không có thời gian.",
+              translation: "我沒時間。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "không có", meaning: "沒有", tail: " " },
+                { text: "thời gian", meaning: "時間", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "問現在幾點固定用『Mấy giờ?』。",
+          image_file: "time.png",
+        },
+        {
+          id: "n-02",
+          term_zh: "人們 / 人",
+          related_terms: [
+            {
+              term_target: "Người",
+              pronunciation: ["/ŋɨəj˨˩/"],
+              specific_note: "泛指人，也是人的量詞。",
+              segments: [{ text: "Người", meaning: "人", tail: "" }],
+            },
+            {
+              term_target: "Mọi người",
+              pronunciation: ["/mɔj˧˨ ŋɨəj˨˩/"],
+              specific_note: "大家、每個人。",
+              segments: [
+                { text: "Mọi", meaning: "每/所有", tail: " " },
+                { text: "người", meaning: "人", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chào mọi người!",
+              translation: "大家好！",
+              segments: [
+                { text: "Chào", meaning: "問候", tail: " " },
+                { text: "mọi người", meaning: "大家", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Gia đình em có bốn người.",
+              translation: "我家有四口人。",
+              segments: [
+                { text: "Gia đình", meaning: "家庭", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "bốn", meaning: "四", tail: " " },
+                { text: "người", meaning: "人/位", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南語稱呼「台灣人」就是『Người Đài Loan』。",
+          image_file: "people.png",
+        },
+        {
+          id: "n-03",
+          term_zh: "金錢",
+          related_terms: [
+            {
+              term_target: "Tiền",
+              pronunciation: ["/tiən˨˩/"],
+              specific_note: "錢。",
+              segments: [{ text: "Tiền", meaning: "錢", tail: "" }],
+            },
+            {
+              term_target: "Tiền mặt",
+              pronunciation: ["/tiən˨˩ mat˨˩/"],
+              specific_note: "現金。",
+              segments: [
+                { text: "Tiền", meaning: "錢", tail: " " },
+                { text: "mặt", meaning: "面", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em hết tiền rồi.",
+              translation: "我沒錢了（錢花完了）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "hết", meaning: "完/盡", tail: " " },
+                { text: "tiền", meaning: "錢", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+            {
+              sentence: "Trả bằng tiền mặt được không?",
+              translation: "付現金可以嗎？",
+              segments: [
+                { text: "Trả", meaning: "付/還", tail: " " },
+                { text: "bằng", meaning: "用/藉由", tail: " " },
+                { text: "tiền mặt", meaning: "現金", tail: " " },
+                { text: "được không", meaning: "可以嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "結帳常用的『算錢』叫 Tính tiền。",
+          image_file: "money.png",
+        },
+        {
+          id: "n-04",
+          term_zh: "孩子",
+          related_terms: [
+            {
+              term_target: "Con nít",
+              pronunciation: ["/kɔn˧˧ nit˧˥/"],
+              specific_note: "小孩（口語）。",
+              segments: [
+                { text: "Con", meaning: "孩子", tail: " " },
+                { text: "nít", meaning: "幼小", tail: "" },
+              ],
+            },
+            {
+              term_target: "Trẻ em",
+              pronunciation: ["/cɛ˧˩ ɛm˧˧/"],
+              specific_note: "兒童（正式）。",
+              segments: [
+                { text: "Trẻ", meaning: "幼/少", tail: " " },
+                { text: "em", meaning: "弟妹", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Con nít thích ăn kẹo.",
+              translation: "小孩子喜歡吃糖果。",
+              segments: [
+                { text: "Con nít", meaning: "小孩", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "kẹo", meaning: "糖果", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南叫別人的小孩，常親切地叫 Bé。",
+          image_file: "child.png",
+        },
+        {
+          id: "n-05",
+          term_zh: "水",
+          related_terms: [
+            {
+              term_target: "Nước",
+              pronunciation: ["/nɨək˧˥/"],
+              specific_note: "水，也指國家或果汁。",
+              segments: [{ text: "Nước", meaning: "水", tail: "" }],
+            },
+            {
+              term_target: "Nước đá",
+              pronunciation: ["/nɨək˧˥ ɗa˧˥/"],
+              specific_note: "冰水。",
+              segments: [
+                { text: "Nước", meaning: "水", tail: " " },
+                { text: "đá", meaning: "冰/石", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em một ly nước lọc.",
+              translation: "給我一杯（過濾）純淨水。",
+              segments: [
+                { text: "Cho", meaning: "給", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "một", meaning: "一", tail: " " },
+                { text: "ly", meaning: "杯", tail: " " },
+                { text: "nước lọc", meaning: "純淨水", tail: "." },
+              ],
+            },
+            {
+              sentence: "Uống nước đi!",
+              translation: "喝點水吧！",
+              segments: [
+                { text: "Uống", meaning: "喝", tail: " " },
+                { text: "nước", meaning: "水", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "越南餐廳通常會提供免費的 Nước trà（茶水）。",
+          image_file: "water.png",
+        },
+        {
+          id: "n-06",
+          term_zh: "食物 / 飯菜",
+          related_terms: [
+            {
+              term_target: "Đồ ăn",
+              pronunciation: ["/ɗo˨˩ aŋ˧˧/"],
+              specific_note: "食物、東西吃。",
+              segments: [
+                { text: "Đồ", meaning: "東西", tail: " " },
+                { text: "ăn", meaning: "吃", tail: "" },
+              ],
+            },
+            {
+              term_target: "Món ăn",
+              pronunciation: ["/mɔn˧˥ aŋ˧˧/"],
+              specific_note: "菜餚、料理。",
+              segments: [
+                { text: "Món", meaning: "菜/項", tail: " " },
+                { text: "ăn", meaning: "吃", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đồ ăn Việt Nam rất ngon.",
+              translation: "越南食物非常好吃。",
+              segments: [
+                { text: "Đồ ăn", meaning: "食物", tail: " " },
+                { text: "Việt Nam", meaning: "越南", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: "." },
+              ],
+            },
+            {
+              sentence: "Đây là món gì?",
+              translation: "這是什麼菜？",
+              segments: [
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "món", meaning: "菜", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "逛夜市找「好吃的東西」就說 Đồ ăn ngon。",
+          image_file: "food.png",
+        },
+        {
+          id: "n-07",
+          term_zh: "朋友",
+          related_terms: [
+            {
+              term_target: "Bạn",
+              pronunciation: ["/ba̰ːn/"],
+              specific_note: "朋友、你（平輩）。",
+              segments: [{ text: "Bạn", meaning: "朋友", tail: "" }],
+            },
+            {
+              term_target: "Bạn thân",
+              pronunciation: ["/ba̰ːn tʰən˧˧/"],
+              specific_note: "摯友、好麻吉。",
+              segments: [
+                { text: "Bạn", meaning: "朋友", tail: " " },
+                { text: "thân", meaning: "親近", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chúng mình là bạn.",
+              translation: "我們是朋友。",
+              segments: [
+                { text: "Chúng mình", meaning: "我們", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "bạn", meaning: "朋友", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在 FB 或 Zalo 加好友，越南語叫 Kết bạn。",
+          image_file: "friend.png",
+        },
+        {
+          id: "n-08",
+          term_zh: "家庭",
+          related_terms: [
+            {
+              term_target: "Gia đình",
+              pronunciation: ["/zaː˧˧ ɗiɲ˨˩/"],
+              specific_note: "家庭（正式）。",
+              segments: [{ text: "Gia đình", meaning: "家庭", tail: "" }],
+            },
+            {
+              term_target: "Nhà",
+              pronunciation: ["/ɲaː˨˩/"],
+              specific_note: "家、房子（口語）。",
+              segments: [{ text: "Nhà", meaning: "家/房子", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em yêu gia đình mình.",
+              translation: "我愛我的家人。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "yêu", meaning: "愛", tail: " " },
+                { text: "gia đình", meaning: "家庭", tail: " " },
+                { text: "mình", meaning: "自己/我的", tail: "." },
+              ],
+            },
+            {
+              sentence: "Nhà em ở Quận 1.",
+              translation: "我家住在第一郡（胡志明市地名）。",
+              segments: [
+                { text: "Nhà", meaning: "家", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "Quận 1", meaning: "第一郡", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人常說『Về nhà』，意思是回家。",
+          image_file: "family.png",
+        },
+        {
+          id: "n-09",
+          term_zh: "學生",
+          related_terms: [
+            {
+              term_target: "Học sinh",
+              pronunciation: ["/hɔk˨˩ siɲ˧˧/"],
+              specific_note: "指國中小學生。",
+              segments: [{ text: "Học sinh", meaning: "學生", tail: "" }],
+            },
+            {
+              term_target: "Sinh viên",
+              pronunciation: ["/siɲ˧˧ viən˧˧/"],
+              specific_note: "指大學生。",
+              segments: [{ text: "Sinh viên", meaning: "大學生", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em là sinh viên đại học.",
+              translation: "我是大學生。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "sinh viên", meaning: "大學生", tail: " " },
+                { text: "đại học", meaning: "大學", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "學生對老師說話時，自稱一定要用 Em。",
+          image_file: "student.png",
+        },
+        {
+          id: "n-10",
+          term_zh: "文化",
+          related_terms: [
+            {
+              term_target: "Văn hóa",
+              pronunciation: ["/văn˧˧ hɔə˧˥/"],
+              specific_note: "文化。",
+              segments: [{ text: "Văn hóa", meaning: "文化", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Văn hóa cà phê Việt Nam rất thú vị.",
+              translation: "越南的咖啡文化非常有趣。",
+              segments: [
+                { text: "Văn hóa", meaning: "文化", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: " " },
+                { text: "Việt Nam", meaning: "越南", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "thú vị", meaning: "有趣", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南，『文化』一詞也常用於形容一個人的素養。",
+          image_file: "culture.png",
+        },
+        {
+          id: "n-11",
+          term_zh: "問題 / 事情",
+          related_terms: [
+            {
+              term_target: "Vấn đề",
+              pronunciation: ["/vən˧˥ ɗe˨˩/"],
+              specific_note: "指需要解決的問題。",
+              segments: [{ text: "Vấn đề", meaning: "問題", tail: "" }],
+            },
+            {
+              term_target: "Câu hỏi",
+              pronunciation: ["/kəw˧˧ hɔj˧˩/"],
+              specific_note: "指提問、疑問。",
+              segments: [{ text: "Câu hỏi", meaning: "問題/提問", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Không vấn đề gì.",
+              translation: "沒問題（沒什麼大事）。",
+              segments: [
+                { text: "Không", meaning: "不/沒", tail: " " },
+                { text: "vấn đề", meaning: "問題", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em có một câu hỏi.",
+              translation: "我有個問題（想請教）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "một", meaning: "一個", tail: " " },
+                { text: "câu hỏi", meaning: "提問", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "如果是「沒關係」，口語最常用 Không sao đâu。",
+          image_file: "problem.png",
+        },
+        {
+          id: "n-12",
+          term_zh: "公司",
+          related_terms: [
+            {
+              term_target: "Công ty",
+              pronunciation: ["/kəwŋm˧˧ ti˧˧/"],
+              specific_note: "公司。",
+              segments: [{ text: "Công ty", meaning: "公司", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Công ty của anh ở đâu?",
+              translation: "你（哥）的公司在哪裡？",
+              segments: [
+                { text: "Công ty", meaning: "公司", tail: " " },
+                { text: "của anh", meaning: "你的(哥)", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "許多台灣公司在越南設廠，通常會簡稱為 Cty。",
+          image_file: "company.png",
+        },
+        {
+          id: "n-13",
+          term_zh: "男性",
+          related_terms: [
+            {
+              term_target: "Đàn ông",
+              pronunciation: ["/ɗaːn˨˩ əwŋm˧˧/"],
+              specific_note: "男人（成年男性）。",
+              segments: [{ text: "Đàn ông", meaning: "男人", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Người đàn ông đó là ai?",
+              translation: "那個男人是誰？",
+              segments: [
+                { text: "Người đàn ông", meaning: "男人", tail: " " },
+                { text: "đó", meaning: "那", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "ai", meaning: "誰", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "如果要稱呼對方（你），常用 Anh 而不是 Đàn ông。",
+          image_file: "man.png",
+        },
+        {
+          id: "n-14",
+          term_zh: "女性",
+          related_terms: [
+            {
+              term_target: "Phụ nữ",
+              pronunciation: ["/fṵ˨˩ nɨ˦ˀ˥/"],
+              specific_note: "女人（較正式）。",
+              segments: [{ text: "Phụ nữ", meaning: "女人", tail: "" }],
+            },
+            {
+              term_target: "Đàn bà",
+              pronunciation: ["/ɗaːn˨˩ ɓaː˨˩/"],
+              specific_note: "女人（口語，有時較隨意）。",
+              segments: [{ text: "Đàn bà", meaning: "女人", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Phụ nữ Việt Nam rất giỏi.",
+              translation: "越南女性非常優秀（能幹）。",
+              segments: [
+                { text: "Phụ nữ", meaning: "女性", tail: " " },
+                { text: "Việt Nam", meaning: "越南", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "giỏi", meaning: "優秀/擅長", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "3月8日是越南很重要的『Ngày Quốc tế Phụ nữ』（國際婦女節）。",
+          image_file: "woman.png",
+        },
+        {
+          id: "n-15",
+          term_zh: "學校",
+          related_terms: [
+            {
+              term_target: "Trường học",
+              pronunciation: ["/cɨəŋ˨˩ hɔk˨˩/"],
+              specific_note: "學校。",
+              segments: [{ text: "Trường học", meaning: "學校", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi học thôi!",
+              translation: "去上學吧！",
+              segments: [
+                { text: "Đi học", meaning: "去上學", tail: " " },
+                { text: "thôi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "通常簡稱為 Trường 即可。",
+          image_file: "school.png",
+        },
+        {
+          id: "n-16",
+          term_zh: "老師",
+          related_terms: [
+            {
+              term_target: "Thầy giáo",
+              pronunciation: ["/tʰəj˨˩ zaːw˧˥/"],
+              specific_note: "男老師。",
+              segments: [
+                { text: "Thầy", meaning: "師/父", tail: " " },
+                { text: "giáo", meaning: "教", tail: "" },
+              ],
+            },
+            {
+              term_target: "Cô giáo",
+              pronunciation: ["/koː˧˧ zaːw˧˥/"],
+              specific_note: "女老師。",
+              segments: [
+                { text: "Cô", meaning: "姑/阿姨", tail: " " },
+                { text: "giáo", meaning: "教", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em chào cô ạ!",
+              translation: "老師好！（學生對女老師的標準問候）",
+              segments: [
+                { text: "Em", meaning: "我(學生)", tail: " " },
+                { text: "chào", meaning: "問候", tail: " " },
+                { text: "cô", meaning: "老師(女)", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "在越南，老師地位很高，打招呼一定要加 ạ 表示尊敬。",
+          image_file: "teacher.png",
+        },
+        {
+          id: "n-17",
+          term_zh: "影片 / 電影",
+          related_terms: [
+            {
+              term_target: "Phim",
+              pronunciation: ["/fim˧˧/"],
+              specific_note: "電影、影片（源自法語 Film）。",
+              segments: [{ text: "Phim", meaning: "電影", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Hôm nay xem phim gì?",
+              translation: "今天看什麼電影？",
+              segments: [
+                { text: "Hôm nay", meaning: "今天", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "phim", meaning: "電影", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "追劇在越南語叫 Cày phim。",
+          image_file: "movie.png",
+        },
+        {
+          id: "n-18",
+          term_zh: "手機 / 電話",
+          related_terms: [
+            {
+              term_target: "Điện thoại",
+              pronunciation: ["/ɗiən˨˩ tʰɔəj˨˩/"],
+              specific_note: "電話、手機。",
+              segments: [{ text: "Điện thoại", meaning: "電話", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Số điện thoại của bạn là gì?",
+              translation: "你的電話號碼是多少？",
+              segments: [
+                { text: "Số điện thoại", meaning: "電話號碼", tail: " " },
+                { text: "của bạn", meaning: "你的", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Điện thoại em hết pin rồi.",
+              translation: "我手機沒電了。",
+              segments: [
+                { text: "Điện thoại", meaning: "電話", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "hết pin", meaning: "沒電/盡電池", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "智慧型手機叫 Điện thoại thông minh。",
+          image_file: "phone.png",
+        },
+        {
+          id: "n-19",
+          term_zh: "電腦",
+          related_terms: [
+            {
+              term_target: "Máy tính",
+              pronunciation: ["/maːj˧˥ tiɲ˧˥/"],
+              specific_note: "電腦（含筆電、桌機）。",
+              segments: [
+                { text: "Máy", meaning: "機器", tail: " " },
+                { text: "tính", meaning: "計算", tail: "" },
+              ],
+            },
+            {
+              term_target: "Laptop",
+              pronunciation: ["/lap top/"],
+              specific_note: "筆記型電腦（直接用英文音）。",
+              segments: [{ text: "Laptop", meaning: "筆電", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Máy tính bị hỏng rồi.",
+              translation: "電腦壞掉了。",
+              segments: [
+                { text: "Máy tính", meaning: "電腦", tail: " " },
+                { text: "bị hỏng", meaning: "被壞/壞了", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "計算機也是叫 Máy tính，有時為了區分會說 Máy tính bỏ túi（口袋電腦）。",
+          image_file: "computer.png",
+        },
+        {
+          id: "n-20",
+          term_zh: "車",
+          related_terms: [
+            {
+              term_target: "Xe máy",
+              pronunciation: ["/sɛ˧˧ maːj˧˥/"],
+              specific_note: "機車（越南最主要的交通工具）。",
+              segments: [{ text: "Xe máy", meaning: "機車", tail: "" }],
+            },
+            {
+              term_target: "Xe ô tô",
+              pronunciation: ["/sɛ˧˧ oː˧˧ toː˧˧/"],
+              specific_note: "汽車。",
+              segments: [{ text: "Xe ô tô", meaning: "汽車", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi xe máy cho nhanh.",
+              translation: "騎機車比較快。",
+              segments: [
+                { text: "Đi", meaning: "走/騎", tail: " " },
+                { text: "xe máy", meaning: "機車", tail: " " },
+                { text: "cho", meaning: "給/為了", tail: " " },
+                { text: "nhanh", meaning: "快", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em đang lái xe.",
+              translation: "我正在開車/騎車。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "lái xe", meaning: "開車/駕駛", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南，『Xe』通常預設指的是機車。",
+          image_file: "car.png",
+        },
+        {
+          id: "n-21",
+          term_zh: "市場",
+          related_terms: [
+            {
+              term_target: "Chợ",
+              pronunciation: ["/cəː˧˨/"],
+              specific_note: "傳統市集、市場。",
+              segments: [{ text: "Chợ", meaning: "市場", tail: "" }],
+            },
+            {
+              term_target: "Siêu thị",
+              pronunciation: ["/siəw˧˧ tʰi˨˩/"],
+              specific_note: "超市。",
+              segments: [{ text: "Siêu thị", meaning: "超市", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi chợ mua đồ ăn.",
+              translation: "去市場買菜（買食物）。",
+              segments: [
+                { text: "Đi chợ", meaning: "去市場", tail: " " },
+                { text: "mua", meaning: "買", tail: " " },
+                { text: "đồ ăn", meaning: "食物", tail: "." },
+              ],
+            },
+            {
+              sentence: "Chợ đêm Bến Thành rất vui.",
+              translation: "檳城市場的夜市很好玩。",
+              segments: [
+                { text: "Chợ đêm", meaning: "夜市", tail: " " },
+                { text: "Bến Thành", meaning: "檳城(地名)", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "vui", meaning: "好玩/開心", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『Đi chợ』在越南語中也泛指去採買下廚用的食材。",
+          image_file: "market.png",
+        },
+        {
+          id: "n-22",
+          term_zh: "衣服",
+          related_terms: [
+            {
+              term_target: "Quần áo",
+              pronunciation: ["/kwən˨˩ aːw˧˥/"],
+              specific_note: "衣服（褲子與上衣的總稱）。",
+              segments: [
+                { text: "Quần", meaning: "褲子", tail: " " },
+                { text: "áo", meaning: "衣服", tail: "" },
+              ],
+            },
+            {
+              term_target: "Áo dài",
+              pronunciation: ["/aːw˧˥ zaːj˨˩/"],
+              specific_note: "越南長襖（國服）。",
+              segments: [{ text: "Áo dài", meaning: "長衫/國服", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mặc quần áo mới đi chơi.",
+              translation: "穿新衣服出去玩。",
+              segments: [
+                { text: "Mặc", meaning: "穿", tail: " " },
+                { text: "quần áo", meaning: "衣服", tail: " " },
+                { text: "mới", meaning: "新", tail: " " },
+                { text: "đi chơi", meaning: "去玩", tail: "." },
+              ],
+            },
+            {
+              sentence: "Giặt quần áo giúp em.",
+              translation: "幫我洗衣服。",
+              segments: [
+                { text: "Giặt", meaning: "洗(衣物)", tail: " " },
+                { text: "quần áo", meaning: "衣服", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "單說 Áo 通常指上衣，Quần 指褲子。",
+          image_file: "clothes.png",
+        },
+        {
+          id: "n-23",
+          term_zh: "商店 / 店",
+          related_terms: [
+            {
+              term_target: "Quán",
+              pronunciation: ["/kwaːn˧˥/"],
+              specific_note: "小店、攤販、食店。",
+              segments: [{ text: "Quán", meaning: "店", tail: "" }],
+            },
+            {
+              term_target: "Cửa hàng",
+              pronunciation: ["/kɨə˧˩ haːŋ˨˩/"],
+              specific_note: "較正式的商店、店鋪。",
+              segments: [
+                { text: "Cửa", meaning: "門", tail: " " },
+                { text: "hàng", meaning: "貨/行", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Quán cà phê này đẹp quá.",
+              translation: "這家咖啡店好漂亮。",
+              segments: [
+                { text: "Quán cà phê", meaning: "咖啡店", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "đẹp", meaning: "美", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cửa hàng đóng cửa rồi.",
+              translation: "商店已經關門了。",
+              segments: [
+                { text: "Cửa hàng", meaning: "商店", tail: " " },
+                { text: "đóng cửa", meaning: "關門", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "路邊的小吃店或咖啡廳多用 Quán，專賣店多用 Cửa hàng。",
+          image_file: "shop.png",
+        },
+        {
+          id: "n-24",
+          term_zh: "巴士 / 公車",
+          related_terms: [
+            {
+              term_target: "Xe buýt",
+              pronunciation: ["/sɛ˧˧ ɓwit˧˥/"],
+              specific_note: "公車（源自英語 Bus）。",
+              segments: [
+                { text: "Xe", meaning: "車", tail: " " },
+                { text: "buýt", meaning: "巴士", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi làm bằng xe buýt.",
+              translation: "搭公車去上班。",
+              segments: [
+                { text: "Đi làm", meaning: "去上班", tail: " " },
+                { text: "bằng", meaning: "搭乘/藉由", tail: " " },
+                { text: "xe buýt", meaning: "公車", tail: "." },
+              ],
+            },
+            {
+              sentence: "Trạm xe buýt ở đâu?",
+              translation: "公車站點在哪裡？",
+              segments: [
+                { text: "Trạm", meaning: "站點", tail: " " },
+                { text: "xe buýt", meaning: "公車", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "越南的大城市（河內、胡志明市）公車系統非常發達。",
+          image_file: "bus.png",
+        },
+        {
+          id: "n-25",
+          term_zh: "街道 / 路",
+          related_terms: [
+            {
+              term_target: "Đường",
+              pronunciation: ["/ɗɨəŋ˨˩/"],
+              specific_note: "馬路、道路、街道。",
+              segments: [{ text: "Đường", meaning: "路", tail: "" }],
+            },
+            {
+              term_target: "Phố",
+              pronunciation: ["/fo˧˥/"],
+              specific_note: "街道、市區街弄。",
+              segments: [{ text: "Phố", meaning: "街", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Sang đường cẩn thận.",
+              translation: "過馬路要小心。",
+              segments: [
+                { text: "Sang đường", meaning: "橫穿馬路", tail: " " },
+                { text: "cẩn thận", meaning: "小心", tail: "." },
+              ],
+            },
+            {
+              sentence: "Phố đi bộ rất đông người.",
+              translation: "步行街（廣場）人非常多。",
+              segments: [
+                { text: "Phố đi bộ", meaning: "步行街", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "đông người", meaning: "擠滿人/多人", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南城市中，大路叫 Đường，老街區常叫 Phố。",
+          image_file: "street.png",
+        },
+        {
+          id: "n-26",
+          term_zh: "房子 / 家",
+          related_terms: [
+            {
+              term_target: "Nhà",
+              pronunciation: ["/ɲaː˨˩/"],
+              specific_note: "家、房屋。",
+              segments: [{ text: "Nhà", meaning: "家", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em về nhà đây.",
+              translation: "我回家囉。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "về nhà", meaning: "回家", tail: " " },
+                { text: "đây", meaning: "這喔/現在", tail: "." },
+              ],
+            },
+            {
+              sentence: "Nhà anh ở đâu?",
+              translation: "你（哥）家住在哪？",
+              segments: [
+                { text: "Nhà anh", meaning: "你家", tail: " " },
+                { text: "ở đâu", meaning: "在哪", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "Nhà 同時指實體的建築物和心理上的「家」。",
+          image_file: "house.png",
+        },
+        {
+          id: "n-27",
+          term_zh: "母親",
+          related_terms: [
+            {
+              term_target: "Mẹ",
+              pronunciation: ["/mɛ˧˨/"],
+              specific_note: "媽媽（北越、公用語）。",
+              segments: [{ text: "Mẹ", meaning: "媽媽", tail: "" }],
+            },
+            {
+              term_target: "Má",
+              pronunciation: ["/maː˧˥/"],
+              specific_note: "媽媽（南越常用）。",
+              segments: [{ text: "Má", meaning: "阿母/媽", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mẹ ơi, con đói!",
+              translation: "媽！我餓了！",
+              segments: [
+                { text: "Mẹ ơi", meaning: "媽媽呀", tail: ", " },
+                { text: "con", meaning: "孩子(我)", tail: " " },
+                { text: "đói", meaning: "餓", tail: "!" },
+              ],
+            },
+            {
+              sentence: "Con yêu mẹ lắm.",
+              translation: "我很愛媽媽。",
+              segments: [
+                { text: "Con", meaning: "孩子(我)", tail: " " },
+                { text: "yêu", meaning: "愛", tail: " " },
+                { text: "mẹ", meaning: "媽媽", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "稱呼自己媽媽時，語氣要撒嬌一點加個『ơi』。",
+          image_file: "mother.png",
+        },
+        {
+          id: "n-28",
+          term_zh: "父親",
+          related_terms: [
+            {
+              term_target: "Bố",
+              pronunciation: ["/ɓo˧˥/"],
+              specific_note: "爸爸（北越常用）。",
+              segments: [{ text: "Bố", meaning: "爸爸", tail: "" }],
+            },
+            {
+              term_target: "Ba",
+              pronunciation: ["/ɓaː˧˧/"],
+              specific_note: "爸爸（南越常用）。",
+              segments: [{ text: "Ba", meaning: "老爸", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bố em đi làm rồi.",
+              translation: "我爸爸去上班了。",
+              segments: [
+                { text: "Bố em", meaning: "我爸爸", tail: " " },
+                { text: "đi làm", meaning: "去上班", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "北越習慣喊 Bố，南越則大都喊 Ba。",
+          image_file: "father.png",
+        },
+        {
+          id: "n-29",
+          term_zh: "兄弟",
+          related_terms: [
+            {
+              term_target: "Anh trai",
+              pronunciation: ["/aːɲ˧˧ caːj˧˧/"],
+              specific_note: "親哥哥。",
+              segments: [
+                { text: "Anh", meaning: "兄", tail: " " },
+                { text: "trai", meaning: "男", tail: "" },
+              ],
+            },
+            {
+              term_target: "Em trai",
+              pronunciation: ["/ɛm˧˧ caːj˧˧/"],
+              specific_note: "親弟弟。",
+              segments: [
+                { text: "Em", meaning: "弟/妹", tail: " " },
+                { text: "trai", meaning: "男", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh trai em rất hiền.",
+              translation: "我哥哥人很溫柔。",
+              segments: [
+                { text: "Anh trai", meaning: "親哥哥", tail: " " },
+                { text: "em", meaning: "我的", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "hiền", meaning: "溫柔/和藹", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南語會嚴格區分年齡。比自己大叫 Anh，比自己小叫 Em。",
+          image_file: "brother.png",
+        },
+        {
+          id: "n-30",
+          term_zh: "姐妹",
+          related_terms: [
+            {
+              term_target: "Chị gái",
+              pronunciation: ["/cḭʔ˨˩ ɣaːj˧˥/"],
+              specific_note: "親姊姊。",
+              segments: [
+                { text: "Chị", meaning: "姊", tail: " " },
+                { text: "gái", meaning: "女", tail: "" },
+              ],
+            },
+            {
+              term_target: "Em gái",
+              pronunciation: ["/ɛm˧˧ ɣaːj˧˥/"],
+              specific_note: "親妹妹。",
+              segments: [
+                { text: "Em", meaning: "弟/妹", tail: " " },
+                { text: "gái", meaning: "女", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em gái chị bao nhiêu tuổi?",
+              translation: "妳妹妹幾歲了？",
+              segments: [
+                { text: "Em gái", meaning: "親妹妹", tail: " " },
+                { text: "chị", meaning: "妳(姊)", tail: " " },
+                { text: "bao nhiêu", meaning: "多少", tail: " " },
+                { text: "tuổi", meaning: "歲", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "同樣，姊姊叫 Chị，妹妹叫 Em。",
+          image_file: "sister.png",
+        },
+        {
+          id: "n-31",
+          term_zh: "中文",
+          related_terms: [
+            {
+              term_target: "Tiếng Trung",
+              pronunciation: ["/tiəŋ˧˥ cuŋ˧˧/"],
+              specific_note: "中文、漢語（最通用）。",
+              segments: [
+                { text: "Tiếng", meaning: "語言", tail: " " },
+                { text: "Trung", meaning: "中", tail: "" },
+              ],
+            },
+            {
+              term_target: "Tiếng Hoa",
+              pronunciation: ["/tiəŋ˧˥ hɔə˧˧/"],
+              specific_note: "華語（南方華人社區常用）。",
+              segments: [
+                { text: "Tiếng", meaning: "語言", tail: " " },
+                { text: "Hoa", meaning: "華", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh nói tiếng Trung giỏi quá!",
+              translation: "你（哥）中文說得真好！",
+              segments: [
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "tiếng Trung", meaning: "中文", tail: " " },
+                { text: "giỏi", meaning: "擅長/好", tail: " " },
+                { text: "quá", meaning: "太/真", tail: "!" },
+              ],
+            },
+          ],
+          usage_note:
+            "在越南，『Tiếng Trung』專指語言，『Người Trung Quốc』是指中國人。",
+          image_file: "chinese.png",
+        },
+        {
+          id: "n-32",
+          term_zh: "早晨 / 早上",
+          related_terms: [
+            {
+              term_target: "Buổi sáng",
+              pronunciation: ["/ɓuəj˧˩ saːŋ˧˥/"],
+              specific_note: "早晨（約 5:00 - 10:00）。",
+              segments: [
+                { text: "Buổi", meaning: "時段", tail: " " },
+                { text: "sáng", meaning: "明亮/早", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Sáng nay anh ăn gì?",
+              translation: "今天早上你吃什麼？",
+              segments: [
+                { text: "Sáng nay", meaning: "今天早上", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "口語常簡稱為 Sáng。早餐叫 Ăn sáng。",
+          image_file: "morning.png",
+        },
+        {
+          id: "n-33",
+          term_zh: "夜晚",
+          related_terms: [
+            {
+              term_target: "Buổi tối",
+              pronunciation: ["/ɓuəj˧˩ tôj˧˥/"],
+              specific_note: "晚上（約 18:00 - 22:00）。",
+              segments: [
+                { text: "Buổi", meaning: "時段", tail: " " },
+                { text: "tối", meaning: "黑/晚", tail: "" },
+              ],
+            },
+            {
+              term_target: "Ban đêm",
+              pronunciation: ["/ɓaːn˧˧ ɗem˧˧/"],
+              specific_note: "深夜（半夜）。",
+              segments: [
+                { text: "Ban", meaning: "時段標記", tail: " " },
+                { text: "đêm", meaning: "夜", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Chúc em ngủ ngon.",
+              translation: "祝妳晚安（睡好）。",
+              segments: [
+                { text: "Chúc", meaning: "祝", tail: " " },
+                { text: "em", meaning: "妳", tail: " " },
+                { text: "ngủ ngon", meaning: "睡好/晚安", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "晚上見面打招呼說『Chào buổi tối』，睡覺前說『Ngủ ngon』。",
+          image_file: "night.png",
+        },
+        {
+          id: "n-34",
+          term_zh: "票 / 車票",
+          related_terms: [
+            {
+              term_target: "Vé",
+              pronunciation: ["/vɛ˧˥/"],
+              specific_note: "各種票券。",
+              segments: [{ text: "Vé", meaning: "票", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mua vé ở đâu ạ?",
+              translation: "請問票在哪裡買？",
+              segments: [
+                { text: "Mua vé", meaning: "買票", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Cho em hai vé xem phim.",
+              translation: "給我兩張電影票。",
+              segments: [
+                { text: "Cho em", meaning: "給我", tail: " " },
+                { text: "hai", meaning: "二", tail: " " },
+                { text: "vé xem phim", meaning: "電影票", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "票的量詞是 Tấm (張)，一張票叫 Một tấm vé。",
+          image_file: "ticket.png",
+        },
+        {
+          id: "n-35",
+          term_zh: "包包",
+          related_terms: [
+            {
+              term_target: "Túi xách",
+              pronunciation: ["/tuj˧˥ sak˧˥/"],
+              specific_note: "手提包、側背包。",
+              segments: [
+                { text: "Túi", meaning: "袋子", tail: " " },
+                { text: "xách", meaning: "提/拎", tail: "" },
+              ],
+            },
+            {
+              term_target: "Cặp",
+              pronunciation: ["/kap˨˩/"],
+              specific_note: "書包、公事包。",
+              segments: [{ text: "Cặp", meaning: "包/夾", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Túi xách này đẹp quá!",
+              translation: "這個包包好漂亮喔！",
+              segments: [
+                { text: "Túi xách", meaning: "包包", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "đẹp", meaning: "美", tail: " " },
+                { text: "quá", meaning: "太", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "在越南買伴手禮常會用到這個字。",
+          image_file: "bag.png",
+        },
+        {
+          id: "n-36",
+          term_zh: "杯子",
+          related_terms: [
+            {
+              term_target: "Ly",
+              pronunciation: ["/li˧˧/"],
+              specific_note: "杯子（南越通用語，指各種杯子）。",
+              segments: [{ text: "Ly", meaning: "杯子", tail: "" }],
+            },
+            {
+              term_target: "Cái cốc",
+              pronunciation: ["/kaːj˧˥ kəwk˧˥/"],
+              specific_note: "杯子（北越常用）。",
+              segments: [{ text: "Cái cốc", meaning: "杯子", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em một ly cà phê sữa đá.",
+              translation: "給我一杯冰牛奶咖啡。",
+              segments: [
+                { text: "Cho em", meaning: "給我", tail: " " },
+                { text: "một ly", meaning: "一杯", tail: " " },
+                { text: "cà phê sữa đá", meaning: "冰奶咖", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在胡志明市點飲料，單位請用 Ly。",
+          image_file: "cup.png",
+        },
+        {
+          id: "n-37",
+          term_zh: "醫生",
+          related_terms: [
+            {
+              term_target: "Bác sĩ",
+              pronunciation: ["/ɓaːk˧˥ si˦ˀ˥/"],
+              specific_note: "醫師、大夫。",
+              segments: [
+                { text: "Bác", meaning: "伯父", tail: " " },
+                { text: "sĩ", meaning: "士", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi khám bác sĩ.",
+              translation: "去看醫生（檢查）。",
+              segments: [
+                { text: "Đi khám", meaning: "去檢查", tail: " " },
+                { text: "bác sĩ", meaning: "醫生", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "跟醫生說話可以直接稱呼為 Bác sĩ。",
+          image_file: "doctor.png",
+        },
+        {
+          id: "n-38",
+          term_zh: "警察",
+          related_terms: [
+            {
+              term_target: "Công an",
+              pronunciation: ["/kəwŋm˧˧ aːn˧˧/"],
+              specific_note: "公安、警察（越南常用稱呼）。",
+              segments: [{ text: "Công an", meaning: "公安", tail: "" }],
+            },
+            {
+              term_target: "Cảnh sát",
+              pronunciation: ["/kaɲ˧˩ sat˧˥/"],
+              specific_note: "警察（指具體兵種，如交警）。",
+              segments: [{ text: "Cảnh sát", meaning: "警察", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cảnh sát giao thông.",
+              translation: "交通警察（路邊最常見）。",
+              segments: [
+                { text: "Cảnh sát", meaning: "警察", tail: " " },
+                { text: "giao thông", meaning: "交通", tail: "." },
+              ],
+            },
+            {
+              sentence: "Gọi công an đi!",
+              translation: "快叫警察（公安）！",
+              segments: [
+                { text: "Gọi", meaning: "叫/打電話", tail: " " },
+                { text: "공안", meaning: "公安", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note:
+            "越南路邊維持交通的制服人員大都稱為 Cảnh sát giao thông。",
+          image_file: "police.png",
+        },
+        {
+          id: "n-39",
+          term_zh: "醫院",
+          related_terms: [
+            {
+              term_target: "Bệnh viện",
+              pronunciation: ["/ɓə̰jɲ˨˩ viən˨˩/"],
+              specific_note: "醫院。",
+              segments: [
+                { text: "Bệnh", meaning: "病", tail: " " },
+                { text: "viện", meaning: "院", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bệnh viện ở gần đây không?",
+              translation: "這附近有醫院嗎？",
+              segments: [
+                { text: "Bệnh viện", meaning: "醫院", tail: " " },
+                { text: "ở gần đây", meaning: "在附近", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "醫院的縮寫常看到 BV。",
+          image_file: "hospital.png",
+        },
+        {
+          id: "n-40",
+          term_zh: "座位 / 地方",
+          related_terms: [
+            {
+              term_target: "Chỗ ngồi",
+              pronunciation: ["/co˦ˀ˥ ŋoːj˨˩/"],
+              specific_note: "座位、坐的地方。",
+              segments: [
+                { text: "Chỗ", meaning: "地方", tail: " " },
+                { text: "ngồi", meaning: "坐", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Ở đây còn chỗ không?",
+              translation: "這裡還有位子嗎？",
+              segments: [
+                { text: "Ở đây", meaning: "這裡", tail: " " },
+                { text: "còn", meaning: "剩/還", tail: " " },
+                { text: "chỗ", meaning: "位子", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Mời ngồi chỗ này.",
+              translation: "請坐這裡。",
+              segments: [
+                { text: "Mời", meaning: "請", tail: " " },
+                { text: "ngồi", meaning: "坐", tail: " " },
+                { text: "chỗ này", meaning: "這地方/這位子", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在擁擠的小店併桌，開口問『Còn chỗ không?』很有用。",
+          image_file: "seat.png",
+        },
+        {
+          id: "n-41",
+          term_zh: "門",
+          related_terms: [
+            {
+              term_target: "Cửa",
+              pronunciation: ["/kɨə˧˩/"],
+              specific_note: "泛指所有的門。",
+              segments: [{ text: "Cửa", meaning: "門", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đóng cửa giúp em.",
+              translation: "幫我關個門。",
+              segments: [
+                { text: "Đóng cửa", meaning: "關門", tail: " " },
+                { text: "giúp", meaning: "幫助", tail: " " },
+                { text: "em", meaning: "我(弟妹)", tail: "." },
+              ],
+            },
+            {
+              sentence: "Có người gõ cửa.",
+              translation: "有人在敲門。",
+              segments: [
+                { text: "Có người", meaning: "有人", tail: " " },
+                { text: "gõ cửa", meaning: "敲門", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『開門』是 Mở cửa，『關門』是 Đóng cửa。",
+          image_file: "door.png",
+        },
+        {
+          id: "n-42",
+          term_zh: "房間",
+          related_terms: [
+            {
+              term_target: "Phòng",
+              pronunciation: ["/fɔŋ˨˩/"],
+              specific_note: "房間（漢越音：房）。",
+              segments: [{ text: "Phòng", meaning: "房間", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Phòng của em ở đâu?",
+              translation: "我的房間在哪裡？",
+              segments: [
+                { text: "Phòng", meaning: "房間", tail: " " },
+                { text: "của em", meaning: "我的", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Dọn phòng giúp chị nhé.",
+              translation: "（對房務員說）請幫我打掃一下房間喔。",
+              segments: [
+                { text: "Dọn phòng", meaning: "打掃房間", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "chị", meaning: "姊姊(我)", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "飯店的單人房叫 Phòng đơn，雙人房叫 Phòng đôi。",
+          image_file: "room.png",
+        },
+        {
+          id: "n-43",
+          term_zh: "車站",
+          related_terms: [
+            {
+              term_target: "Bến xe",
+              pronunciation: ["/ɓen˧˥ sɛ˧˧/"],
+              specific_note: "指巴士站、客運站。",
+              segments: [
+                { text: "Bến", meaning: "泊/站", tail: " " },
+                { text: "xe", meaning: "車", tail: "" },
+              ],
+            },
+            {
+              term_target: "Ga",
+              pronunciation: ["/zaː˧˧/"],
+              specific_note: "指火車站、捷運站。",
+              segments: [{ text: "Ga", meaning: "火車站", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Bến xe miền Tây ở đâu?",
+              translation: "（胡志明市）西部客運站在哪？",
+              segments: [
+                { text: "Bến xe", meaning: "客運站", tail: " " },
+                { text: "miền Tây", meaning: "西部/西區", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "如果是路邊的公車候車亭，要說 Trạm xe buýt。",
+          image_file: "station.png",
+        },
+        {
+          id: "n-44",
+          term_zh: "地鐵 / 捷運",
+          related_terms: [
+            {
+              term_target: "Tàu điện",
+              pronunciation: ["/taːw˨˩ ɗiən˨˩/"],
+              specific_note: "電車、捷運（漢越音：火車 電）。",
+              segments: [
+                { text: "Tàu", meaning: "船/火車", tail: " " },
+                { text: "điện", meaning: "電", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi tàu điện cho nhanh.",
+              translation: "搭捷運比較快。",
+              segments: [
+                { text: "Đi", meaning: "搭乘/去", tail: " " },
+                { text: "tàu điện", meaning: "捷運", tail: " " },
+                { text: "cho", meaning: "給/為了", tail: " " },
+                { text: "nhanh", meaning: "快", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "河內已有捷運（Tàu điện cát linh），胡志明市則還在建設中。",
+          image_file: "subway.png",
+        },
+        {
+          id: "n-45",
+          term_zh: "火車",
+          related_terms: [
+            {
+              term_target: "Tàu hỏa",
+              pronunciation: ["/taːw˨˩ hɔə˧˩/"],
+              specific_note: "火車（漢越音：火車 火）。",
+              segments: [
+                { text: "Tàu", meaning: "車/船", tail: " " },
+                { text: "hỏa", meaning: "火", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tàu hỏa sắp chạy rồi.",
+              translation: "火車快要開了。",
+              segments: [
+                { text: "Tàu hỏa", meaning: "火車", tail: " " },
+                { text: "sắp", meaning: "即將", tail: " " },
+                { text: "chạy", meaning: "跑/行駛", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "搭火車可以體驗從河內到胡志明市的統一鐵路。",
+          image_file: "train.png",
+        },
+        {
+          id: "n-46",
+          term_zh: "機場",
+          related_terms: [
+            {
+              term_target: "Sân bay",
+              pronunciation: ["/sən˧˧ ɓaːj˧˧/"],
+              specific_note: "機場（ bay 意為飛）。",
+              segments: [
+                { text: "Sân", meaning: "場/院子", tail: " " },
+                { text: "bay", meaning: "飛", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em ra sân bay Tân Sơn Nhất.",
+              translation: "（對司機說）請載我去新山一機場。",
+              segments: [
+                { text: "Cho em ra", meaning: "帶我去(出)", tail: " " },
+                { text: "sân bay", meaning: "機場", tail: " " },
+                { text: "Tân Sơn Nhất", meaning: "新山一(機場名)", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "胡志明市機場叫 Tân Sơn Nhất，河內機場叫 Nội Bài。",
+          image_file: "airport.png",
+        },
+        {
+          id: "n-47",
+          term_zh: "行李",
+          related_terms: [
+            {
+              term_target: "Hành lý",
+              pronunciation: ["/ha̰ːɲ˨˩ li˧˥/"],
+              specific_note: "行李（漢越音：行李）。",
+              segments: [
+                { text: "Hành", meaning: "行", tail: "" },
+                { text: "lý", meaning: "李", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Hành lý của em nặng quá.",
+              translation: "我的行李太重了。",
+              segments: [
+                { text: "Hành lý", meaning: "行李", tail: " " },
+                { text: "của em", meaning: "我的", tail: " " },
+                { text: "nặng", meaning: "重", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "隨身行李叫 Hành lý xách tay。",
+          image_file: "luggage.png",
+        },
+        {
+          id: "n-48",
+          term_zh: "地圖",
+          related_terms: [
+            {
+              term_target: "Bản đồ",
+              pronunciation: ["/ɓaːn˧˩ ɗo˨˩/"],
+              specific_note: "地圖（漢越音：版圖）。",
+              segments: [
+                { text: "Bản", meaning: "版", tail: " " },
+                { text: "đồ", meaning: "圖", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Để em xem bản đồ.",
+              translation: "讓我看一下地圖。",
+              segments: [
+                { text: "Để em", meaning: "讓我", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "bản đồ", meaning: "地圖", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在越南通常直接說『Google Maps』大家也聽得懂。",
+          image_file: "map.png",
+        },
+        {
+          id: "n-49",
+          term_zh: "櫃檯 / 服務台",
+          related_terms: [
+            {
+              term_target: "Quầy",
+              pronunciation: ["/kwej˨˩/"],
+              specific_note: "櫃檯。",
+              segments: [{ text: "Quầy", meaning: "櫃檯", tail: "" }],
+            },
+            {
+              term_target: "Quầy lễ tân",
+              pronunciation: ["/kwej˨˩ le˦ˀ˥ tən˧˧/"],
+              specific_note: "飯店前台、接待處。",
+              segments: [
+                { text: "Quầy", meaning: "櫃檯", tail: " " },
+                { text: "lễ tân", meaning: "禮賓/接待", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Gửi hành lý ở quầy lễ tân.",
+              translation: "把行李寄放在前台。",
+              segments: [
+                { text: "Gửi", meaning: "寄放", tail: " " },
+                { text: "hành lý", meaning: "行李", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "quầy lễ tân", meaning: "前台", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "結帳櫃檯也可以叫 Quầy thu ngân。",
+          image_file: "counter.png",
+        },
+        {
+          id: "n-50",
+          term_zh: "大廳 / 門廳",
+          related_terms: [
+            {
+              term_target: "Sảnh",
+              pronunciation: ["/saɲ˧˩/"],
+              specific_note: "大廳。",
+              segments: [{ text: "Sảnh", meaning: "廳", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Gặp nhau ở sảnh khách sạn nhé.",
+              translation: "我們在飯店大廳見面喔。",
+              segments: [
+                { text: "Gặp nhau", meaning: "互相見面", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "sảnh", meaning: "大廳", tail: " " },
+                { text: "khách sạn", meaning: "飯店", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "機場候機廳叫 Sảnh chờ。",
+          image_file: "lobby.png",
+        },
+        {
+          id: "n-51",
+          term_zh: "預約 / 訂位",
+          related_terms: [
+            {
+              term_target: "Đặt trước",
+              pronunciation: ["/ɗat˨˩ cɨək˧˥/"],
+              specific_note: "事先預約、預訂。",
+              segments: [
+                { text: "Đặt", meaning: "訂", tail: " " },
+                { text: "trước", meaning: "先", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em có đặt trước rồi.",
+              translation: "我已經預約過了。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "có", meaning: "有/是", tail: " " },
+                { text: "đặt trước", meaning: "預約", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "『預約醫生』常用 Đặt lịch khám。",
+          image_file: "reservation.png",
+        },
+        {
+          id: "n-52",
+          term_zh: "入住",
+          related_terms: [
+            {
+              term_target: "Nhận phòng",
+              pronunciation: ["/ɲən˨˩ fɔŋ˨˩/"],
+              specific_note: "飯店入住（直譯：領房間）。",
+              segments: [
+                { text: "Nhận", meaning: "領取/接收", tail: " " },
+                { text: "phòng", meaning: "房間", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Mấy giờ được nhận phòng ạ?",
+              translation: "請問幾點可以入住？",
+              segments: [
+                { text: "Mấy giờ", meaning: "幾點", tail: " " },
+                { text: "được", meaning: "得以/可以", tail: " " },
+                { text: "nhận phòng", meaning: "入住", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "越南飯店入住時間通常是 14:00。",
+          image_file: "check_in.png",
+        },
+        {
+          id: "n-53",
+          term_zh: "退房",
+          related_terms: [
+            {
+              term_target: "Trả phòng",
+              pronunciation: ["/caː˧˩ fɔŋ˨˩/"],
+              specific_note: "飯店退房（直譯：還房間）。",
+              segments: [
+                { text: "Trả", meaning: "還/付", tail: " " },
+                { text: "phòng", meaning: "房間", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em muốn trả phòng.",
+              translation: "我要退房。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "muốn", meaning: "想要", tail: " " },
+                { text: "trả phòng", meaning: "退房", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南飯店退房時間通常是 12:00。",
+          image_file: "check_out.png",
+        },
+        {
+          id: "n-54",
+          term_zh: "飲料",
+          related_terms: [
+            {
+              term_target: "Đồ uống",
+              pronunciation: ["/ɗo˨˩ uəŋ˧˥/"],
+              specific_note: "飲料、東西喝（北越常用）。",
+              segments: [
+                { text: "Đồ", meaning: "東西", tail: " " },
+                { text: "uống", meaning: "喝", tail: "" },
+              ],
+            },
+            {
+              term_target: "Thức uống",
+              pronunciation: ["/tʰɨk˧˥ uəŋ˧˥/"],
+              specific_note: "飲品（南越常用）。",
+              segments: [{ text: "Thức uống", meaning: "飲料", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh muốn dùng đồ uống gì?",
+              translation: "（服務員問）哥，您想要用什麼飲料？",
+              segments: [
+                { text: "Anh", meaning: "哥哥(您)", tail: " " },
+                { text: "muốn dùng", meaning: "想要用", tail: " " },
+                { text: "đồ uống", meaning: "飲料", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "水也叫 Nước，口語中常用 Nước 代替所有飲料。",
+          image_file: "drink.png",
+        },
+        {
+          id: "n-55",
+          term_zh: "菜單",
+          related_terms: [
+            {
+              term_target: "Menu",
+              pronunciation: ["/mɛ˧˧ nu˧˧/"],
+              specific_note: "直接用英文外來語（極通用）。",
+              segments: [{ text: "Menu", meaning: "菜單", tail: "" }],
+            },
+            {
+              term_target: "Thực đơn",
+              pronunciation: ["/tʰɨk˨˩ ɗən˧˧/"],
+              specific_note: "菜單（漢越音：食單）。",
+              segments: [
+                { text: "Thực", meaning: "食", tail: " " },
+                { text: "đơn", meaning: "單", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em xin cái menu.",
+              translation: "請給我看一下菜單。",
+              segments: [
+                { text: "Cho em xin", meaning: "請給我", tail: " " },
+                { text: "cái menu", meaning: "這菜單", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在餐廳直接說『Menu』老闆都聽得懂。",
+          image_file: "menu.png",
+        },
+        {
+          id: "n-56",
+          term_zh: "午餐",
+          related_terms: [
+            {
+              term_target: "Cơm trưa",
+              pronunciation: ["/kəm˧˧ cɨə˧˧/"],
+              specific_note: "午餐（直譯：午飯）。",
+              segments: [
+                { text: "Cơm", meaning: "飯", tail: " " },
+                { text: "trưa", meaning: "中午", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Đi ăn cơm trưa đi!",
+              translation: "去吃午餐吧！",
+              segments: [
+                { text: "Đi ăn", meaning: "去吃", tail: " " },
+                { text: "cơm trưa", meaning: "午餐", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "越南上班族午休時間通常會吃 Cơm tấm（碎米飯）。",
+          image_file: "lunch.png",
+        },
+        {
+          id: "n-57",
+          term_zh: "晚餐",
+          related_terms: [
+            {
+              term_target: "Cơm tối",
+              pronunciation: ["/kəm˧˧ tôj˧˥/"],
+              specific_note: "晚餐（直譯：晚飯）。",
+              segments: [
+                { text: "Cơm", meaning: "飯", tail: " " },
+                { text: "tối", meaning: "晚上", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cơm tối xong rồi.",
+              translation: "晚餐準備好了。",
+              segments: [
+                { text: "Cơm tối", meaning: "晚餐", tail: " " },
+                { text: "xong rồi", meaning: "完成了/好了", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "晚餐後喝杯 Nước mía（甘蔗汁）是當地日常。",
+          image_file: "dinner.png",
+        },
+        {
+          id: "n-58",
+          term_zh: "帳單 / 結帳",
+          related_terms: [
+            {
+              term_target: "Hóa đơn",
+              pronunciation: ["/hɔə˧˥ ɗən˧˧/"],
+              specific_note: "實體帳單、發票。",
+              segments: [{ text: "Hóa đơn", meaning: "帳單", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em xem hóa đơn.",
+              translation: "給我看一下帳單。",
+              segments: [
+                { text: "Cho em xem", meaning: "給我看", tail: " " },
+                { text: "hóa đơn", meaning: "帳單", tail: "." },
+              ],
+            },
+            {
+              sentence: "Anh ơi, tính tiền!",
+              translation: "哥，結帳！（最道地的喊法）",
+              segments: [
+                { text: "Anh ơi", meaning: "呼喚帥哥", tail: ", " },
+                { text: "tính tiền", meaning: "結帳/算錢", tail: "!" },
+              ],
+            },
+          ],
+          usage_note: "在餐廳結帳，直接喊『Tính tiền』比問『帳單在哪』更常用。",
+          image_file: "bill.png",
+        },
+        {
+          id: "n-59",
+          term_zh: "價格",
+          related_terms: [
+            {
+              term_target: "Giá",
+              pronunciation: ["/zaː˧˥/"],
+              specific_note: "價錢、價格。",
+              segments: [{ text: "Giá", meaning: "價格", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Giá này hơi đắt.",
+              translation: "這價格有點貴。",
+              segments: [
+                { text: "Giá", meaning: "價格", tail: " " },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "hơi", meaning: "有點", tail: " " },
+                { text: "đắt", meaning: "貴", tail: "." },
+              ],
+            },
+            {
+              sentence: "Giá bao nhiêu vậy?",
+              translation: "價格是多少啊？",
+              segments: [
+                { text: "Giá", meaning: "價格", tail: " " },
+                { text: "bao nhiêu", meaning: "多少", tail: " " },
+                { text: "vậy", meaning: "呢/啊", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "詢問總價通常用『Hết bao nhiêu tiền?』。",
+          image_file: "price.png",
+        },
+        {
+          id: "n-60",
+          term_zh: "收據 / 發票",
+          related_terms: [
+            {
+              term_target: "Biên lai",
+              pronunciation: ["/ɓiən˧˧ laːj˧˧/"],
+              specific_note: "收據（漢越音：邊來）。",
+              segments: [{ text: "Biên lai", meaning: "收據", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lấy cho em biên lai.",
+              translation: "請拿收據給我。",
+              segments: [
+                { text: "Lấy", meaning: "拿", tail: " " },
+                { text: "cho em", meaning: "給我", tail: " " },
+                { text: "biên lai", meaning: "收據", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "在超市買東西拿到的那一長條通常也直接叫 Hóa đơn。",
+          image_file: "receipt.png",
+        },
+        {
+          id: "n-61",
+          term_zh: "尺寸 / 大小",
+          related_terms: [
+            {
+              term_target: "Kích cỡ",
+              pronunciation: ["/kic˧˥ kəː˦ˀ˥/"],
+              specific_note: "正式的尺寸用法。",
+              segments: [{ text: "Kích cỡ", meaning: "尺寸", tail: "" }],
+            },
+            {
+              term_target: "Size",
+              pronunciation: ["/saɪz/"],
+              specific_note: "越南口語非常常用英文音直接講 Size。",
+              segments: [{ text: "Size", meaning: "尺寸(外來語)", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Cho em size M.",
+              translation: "給我 M 號。",
+              segments: [
+                { text: "Cho", meaning: "給", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "size M", meaning: "M號", tail: "." },
+              ],
+            },
+            {
+              sentence: "Cái này có size to hơn không?",
+              translation: "這個有更大一點的尺寸嗎？",
+              segments: [
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "size", meaning: "尺寸", tail: " " },
+                { text: "to hơn", meaning: "更大", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+          ],
+          usage_note:
+            "在越南買衣服直接講「Size」加上大中小（S, M, L）大家都懂。",
+          image_file: "size.png",
+        },
+        {
+          id: "n-62",
+          term_zh: "入口",
+          related_terms: [
+            {
+              term_target: "Lối vào",
+              pronunciation: ["/loj˧˥ vaːw˨˩/"],
+              specific_note: "進去的路。",
+              segments: [
+                { text: "Lối", meaning: "小徑/路", tail: " " },
+                { text: "vào", meaning: "進", tail: "" },
+              ],
+            },
+            {
+              term_target: "Cổng vào",
+              pronunciation: ["/koŋm˧˩ vaːw˨˩/"],
+              specific_note: "進去的大門。",
+              segments: [
+                { text: "Cổng", meaning: "大門", tail: " " },
+                { text: "vào", meaning: "進", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lối vào ở đằng kia.",
+              translation: "入口在那邊。",
+              segments: [
+                { text: "Lối vào", meaning: "入口", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "đằng kia", meaning: "那邊", tail: "." },
+              ],
+            },
+          ],
+          usage_note:
+            "在百貨公司或停車場找門，看標示牌上的『Vào』或『Lối vào』。",
+          image_file: "entrance.png",
+        },
+        {
+          id: "n-63",
+          term_zh: "出口",
+          related_terms: [
+            {
+              term_target: "Lối ra",
+              pronunciation: ["/loj˧˥ zaː˧˧/"],
+              specific_note: "出去的路。",
+              segments: [
+                { text: "Lối", meaning: "路", tail: " " },
+                { text: "ra", meaning: "出", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Lối ra ở đâu ạ?",
+              translation: "請問出口在哪裡？",
+              segments: [
+                { text: "Lối ra", meaning: "出口", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
+              ],
+            },
+          ],
+          usage_note: "通常大門標示會寫單一個『Ra』字。",
+          image_file: "exit.png",
+        },
+        {
+          id: "n-64",
+          term_zh: "台灣",
+          related_terms: [
+            {
+              term_target: "Đài Loan",
+              pronunciation: ["/ɗaːj˨˩ lɔəŋ˧˧/"],
+              specific_note: "地名（漢越音：台灣）。",
+              segments: [{ text: "Đài Loan", meaning: "台灣", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Em nhớ Đài Loan lắm.",
+              translation: "我很想念台灣。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "nhớ", meaning: "想念", tail: " " },
+                { text: "Đài Loan", meaning: "台灣", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "向越南朋友介紹自己家鄉時必備。",
+          image_file: "taiwan.png",
+        },
+        {
+          id: "n-65",
+          term_zh: "台灣人",
+          related_terms: [
+            {
+              term_target: "Người Đài Loan",
+              pronunciation: ["/ŋɨəj˨˩ ɗaːj˨˩ lɔəŋ˧˧/"],
+              specific_note: "台灣的人。",
+              segments: [
+                { text: "Người", meaning: "人", tail: " " },
+                { text: "Đài Loan", meaning: "台灣", tail: "" },
+              ],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Tôi là người Đài Loan.",
+              translation: "我是台灣人。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "người Đài Loan", meaning: "台灣人", tail: "." },
+              ],
+            },
+          ],
+          usage_note: "越南人對台灣人通常很熱情，記得學會這一句。",
           image_file: "taiwanese.png",
         },
         {
           id: "n-66",
-          term_zh: "一切 / 所有事物",
+          term_zh: "一切事物 / 全部",
           related_terms: [
             {
               term_target: "Mọi thứ",
-              pronunciation: ["/mɔj tʰɨ/"],
-              specific_note: "一切",
+              pronunciation: ["/mɔj˧˨ tʰɨ˧˥/"],
+              specific_note: "所有的事物。",
               segments: [
-                { text: "Mọi", meaning: "每/諸", tail: " " },
-                { text: "thứ", meaning: "東西/事", tail: "" },
+                { text: "Mọi", meaning: "所有", tail: " " },
+                { text: "thứ", meaning: "樣/東西", tail: "" },
               ],
             },
             {
               term_target: "Tất cả",
-              pronunciation: ["/tət ka/"],
-              specific_note: "全部",
+              pronunciation: ["/tət˧˥ kaː˧˩/"],
+              specific_note: "全部（包含人或物）。",
               segments: [{ text: "Tất cả", meaning: "全部", tail: "" }],
             },
           ],
           examples: [
             {
               sentence: "Mọi thứ đều ổn.",
-              translation: "一切都好。",
+              translation: "一切都好（一切都OK）。",
               segments: [
                 { text: "Mọi thứ", meaning: "一切", tail: " " },
                 { text: "đều", meaning: "都", tail: " " },
-                { text: "ổn", meaning: "穩/好", tail: "." },
+                { text: "ổn", meaning: "穩/OK", tail: "." },
               ],
             },
             {
-              sentence: "Tất cả đã sẵn sàng.",
-              translation: "一切(全部)都準備好了。",
-              segments: [
-                { text: "Tất cả", meaning: "全部", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "sẵn sàng", meaning: "準備就緒", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cảm ơn vì tất cả.",
-              translation: "感謝這一切。",
+              sentence: "Cảm ơn anh vì tất cả.",
+              translation: "謝謝你（為我做的）這一切。",
               segments: [
                 { text: "Cảm ơn", meaning: "謝謝", tail: " " },
+                { text: "anh", meaning: "哥哥(你)", tail: " " },
                 { text: "vì", meaning: "因為", tail: " " },
-                { text: "tất cả", meaning: "全部", tail: "." },
+                { text: "tất cả", meaning: "全部/這一切", tail: "." },
               ],
             },
           ],
-          usage_note: "泛指所有事情用 Mọi thứ，指總數量用 Tất cả。",
+          usage_note: "『一切都好』常說 Mọi thứ đều tốt。",
           image_file: "everything.png",
         },
         {
@@ -10056,103 +7795,64 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ví",
-              pronunciation: ["/vi/"],
-              specific_note: "北部/通用",
-              segments: [{ text: "Ví", meaning: "皮夾", tail: "" }],
+              pronunciation: ["/vi˧˥/"],
+              specific_note: "錢包（北越常用，泛指皮夾）。",
+              segments: [{ text: "Ví", meaning: "錢包", tail: "" }],
             },
             {
               term_target: "Bóp",
-              pronunciation: ["/bɔp/"],
-              specific_note: "南部",
-              segments: [{ text: "Bóp", meaning: "錢包", tail: "" }],
+              pronunciation: ["/ɓɔp˧˥/"],
+              specific_note: "錢包（南越常用）。",
+              segments: [{ text: "Bóp", meaning: "錢包/夾子", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi bị mất ví.",
-              translation: "我的錢包掉了(被弄丟)。",
+              sentence: "Em quên mang ví rồi.",
+              translation: "我忘記帶錢包了。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "bị", meaning: "被/遭", tail: " " },
-                { text: "mất", meaning: "失去", tail: " " },
-                { text: "ví", meaning: "錢包", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ví của tôi hết tiền.",
-              translation: "我錢包沒錢了。",
-              segments: [
-                { text: "Ví", meaning: "錢包", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "hết", meaning: "完/盡", tail: " " },
-                { text: "tiền", meaning: "錢", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhặt được cái bóp.",
-              translation: "撿到一個錢包 (南方口語)。",
-              segments: [
-                { text: "Nhặt", meaning: "撿", tail: " " },
-                { text: "được", meaning: "到/得", tail: " " },
-                { text: "cái", meaning: "個", tail: " " },
-                { text: "bóp", meaning: "錢包", tail: "." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "quên", meaning: "忘記", tail: " " },
+                { text: "mang", meaning: "帶", tail: " " },
+                { text: "ví", meaning: "錢包", tail: " " },
+                { text: "rồi", meaning: "了", tail: "." },
               ],
             },
           ],
-          usage_note: "北越用 Ví，南越用 Bóp。",
+          usage_note: "在胡志明市，當地人習慣說 Bóp。",
           image_file: "wallet.png",
         },
         {
           id: "n-68",
-          term_zh: "身分證",
+          term_zh: "身分證 / 證件",
           related_terms: [
             {
-              term_target: "Căn cước",
-              pronunciation: ["/kan kɨək/"],
-              specific_note: "新式身分證",
-              segments: [
-                { text: "Căn cước", meaning: "身分證(晶片)", tail: "" },
-              ],
+              term_target: "CCCD",
+              pronunciation: ["/se˧˧ se˧˧ se˧˧ ze˧˧/"],
+              specific_note: "越南公民身分證縮寫（最常用）。",
+              segments: [{ text: "CCCD", meaning: "身分證", tail: "" }],
             },
             {
-              term_target: "Giấy tờ",
-              pronunciation: ["/zəj tə/"],
-              specific_note: "證件(統稱)",
-              segments: [{ text: "Giấy tờ", meaning: "文件/證件", tail: "" }],
+              term_target: "Chứng minh thư",
+              pronunciation: ["/cɨŋ˧˥ miɲ˧˧ tʰɨ˧˧/"],
+              specific_note: "舊稱的身分證（漢越音：證明書）。",
+              segments: [
+                { text: "Chứng minh thư", meaning: "身分證", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Cho xem giấy tờ.",
-              translation: "請出示證件。",
+              sentence: "Cho em xem CCCD.",
+              translation: "請給我看一下身分證。（辦理手續時）",
               segments: [
-                { text: "Cho", meaning: "讓/給", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "giấy tờ", meaning: "證件", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có mang căn cước không?",
-              translation: "你有帶身分證嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "mang", meaning: "帶", tail: " " },
-                { text: "căn cước", meaning: "身分證", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Kiểm tra giấy tờ.",
-              translation: "檢查證件。",
-              segments: [
-                { text: "Kiểm tra", meaning: "檢查", tail: " " },
-                { text: "giấy tờ", meaning: "證件", tail: "." },
+                { text: "Cho em xem", meaning: "讓我看/請出示", tail: " " },
+                { text: "CCCD", meaning: "身分證", tail: "." },
               ],
             },
           ],
-          usage_note: "現在越南主要使用 Căn cước (晶片身分證)。",
+          usage_note:
+            "在越南買 SIM 卡或住飯店，工作人員常會跟你要 CCCD（或 Passport）。",
           image_file: "id.png",
         },
         {
@@ -10161,46 +7861,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hộ chiếu",
-              pronunciation: ["/ho tʃiəw/"],
-              specific_note: "漢語:護照",
-              segments: [
-                { text: "Hộ", meaning: "護/户", tail: " " },
-                { text: "chiếu", meaning: "照", tail: "" },
-              ],
+              pronunciation: ["/ho˨˩ ciəw˧˥/"],
+              specific_note: "護照（漢越音：護照）。",
+              segments: [{ text: "Hộ chiếu", meaning: "護照", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Cho tôi xem hộ chiếu.",
-              translation: "給我看你的護照。",
+              sentence: "Đây là hộ chiếu của em.",
+              translation: "這是我的護照。",
               segments: [
-                { text: "Cho", meaning: "讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "hộ chiếu", meaning: "護照", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi bị mất hộ chiếu.",
-              translation: "我弄丟了護照。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "bị", meaning: "被/遭", tail: " " },
-                { text: "mất", meaning: "丟失", tail: " " },
-                { text: "hộ chiếu", meaning: "護照", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mang theo hộ chiếu.",
-              translation: "隨身攜帶護照。",
-              segments: [
-                { text: "Mang", meaning: "帶", tail: " " },
-                { text: "theo", meaning: "跟隨/隨身", tail: " " },
-                { text: "hộ chiếu", meaning: "護照", tail: "." },
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "hộ chiếu", meaning: "護照", tail: " " },
+                { text: "của em", meaning: "我的", tail: "." },
               ],
             },
           ],
-          usage_note: "住宿Check-in時必備。",
+          usage_note: "出國必備，漢越音發音跟台語護照很像。",
           image_file: "passport.png",
         },
         {
@@ -10209,148 +7887,94 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nhà hàng",
-              pronunciation: ["/ɲa haŋ/"],
-              specific_note: "正式餐廳",
-              segments: [
-                { text: "Nhà", meaning: "家/房", tail: " " },
-                { text: "hàng", meaning: "行/店", tail: "" },
-              ],
+              pronunciation: ["/ɲaː˨˩ haːŋ˨˩/"],
+              specific_note: "較正式的大型餐廳（漢越音：家行）。",
+              segments: [{ text: "Nhà hàng", meaning: "餐廳", tail: "" }],
             },
             {
               term_target: "Quán ăn",
-              pronunciation: ["/kwan an/"],
-              specific_note: "小餐館",
-              segments: [
-                { text: "Quán", meaning: "店", tail: " " },
-                { text: "ăn", meaning: "吃", tail: "" },
-              ],
+              pronunciation: ["/kwaːn˧˥ aŋ˧˧/"],
+              specific_note: "一般的小吃店、飯館。",
+              segments: [{ text: "Quán ăn", meaning: "食店", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Nhà hàng sang trọng.",
-              translation: "高級(豪華)餐廳。",
-              segments: [
-                { text: "Nhà hàng", meaning: "餐廳", tail: " " },
-                { text: "sang trọng", meaning: "莊重/豪華", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi ăn nhà hàng.",
-              translation: "去餐廳吃飯。",
+              sentence: "Đi nhà hàng ăn tối.",
+              translation: "去餐廳吃晚餐。",
               segments: [
                 { text: "Đi", meaning: "去", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "nhà hàng", meaning: "餐廳", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà hàng nào ngon?",
-              translation: "哪間餐廳好吃？",
-              segments: [
-                { text: "Nhà hàng", meaning: "餐廳", tail: " " },
-                { text: "nào", meaning: "哪", tail: " " },
-                { text: "ngon", meaning: "好吃", tail: "?" },
+                { text: "nhà hàng", meaning: "餐廳", tail: " " },
+                { text: "ăn tối", meaning: "吃晚餐", tail: "." },
               ],
             },
           ],
-          usage_note: "Nhà hàng 是有規模的，路邊小店叫 Quán。",
+          usage_note: "越南路邊攤通常用 Quán，高檔一點有冷氣的叫 Nhà hàng。",
           image_file: "restaurant.png",
         },
         {
           id: "n-71",
-          term_zh: "飯店",
+          term_zh: "飯店 / 酒店",
           related_terms: [
             {
               term_target: "Khách sạn",
-              pronunciation: ["/xat͡ʃ san/"],
-              specific_note: "漢語:客棧",
-              segments: [
-                { text: "Khách", meaning: "客", tail: " " },
-                { text: "sạn", meaning: "棧", tail: "" },
-              ],
+              pronunciation: ["/xac˧˥ saːn˨˩/"],
+              specific_note: "正式的飯店（漢越音：客棧）。",
+              segments: [{ text: "Khách sạn", meaning: "飯店", tail: "" }],
+            },
+            {
+              term_target: "Nhà nghỉ",
+              pronunciation: ["/ɲaː˨˩ ŋi˦ˀ˥/"],
+              specific_note: "簡易的小型旅店（直譯：休息之家）。",
+              segments: [{ text: "Nhà nghỉ", meaning: "旅社", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đặt khách sạn.",
-              translation: "預訂飯店。",
-              segments: [
-                { text: "Đặt", meaning: "訂", tail: " " },
-                { text: "khách sạn", meaning: "飯店", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ở khách sạn.",
-              translation: "住飯店。",
-              segments: [
-                { text: "Ở", meaning: "住/在", tail: " " },
-                { text: "khách sạn", meaning: "飯店", tail: "." },
-              ],
-            },
-            {
-              sentence: "Khách sạn này đẹp.",
-              translation: "這間飯店很漂亮。",
+              sentence: "Khách sạn này sạch lắm.",
+              translation: "這間飯店非常乾淨。",
               segments: [
                 { text: "Khách sạn", meaning: "飯店", tail: " " },
                 { text: "này", meaning: "這", tail: " " },
-                { text: "đẹp", meaning: "美", tail: "." },
+                { text: "sạch", meaning: "乾淨", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
               ],
             },
           ],
-          usage_note: "住宿的地方。",
+          usage_note: "找正規大飯店要認明『Khách sạn』標誌。",
           image_file: "hotel.png",
         },
         {
           id: "n-72",
-          term_zh: "地方 / 場所",
+          term_zh: "場所 / 地方",
           related_terms: [
             {
-              term_target: "Nơi",
-              pronunciation: ["/nəj/"],
-              specific_note: "地點(抽象/大)",
-              segments: [{ text: "Nơi", meaning: "地方", tail: "" }],
+              term_target: "Chỗ",
+              pronunciation: ["/co˦ˀ˥/"],
+              specific_note: "口語指「地方、空位」。",
+              segments: [{ text: "Chỗ", meaning: "地方", tail: "" }],
             },
             {
-              term_target: "Chỗ",
-              pronunciation: ["/tʃo/"],
-              specific_note: "位置(具體/小)",
-              segments: [{ text: "Chỗ", meaning: "處/位子", tail: "" }],
+              term_target: "Địa điểm",
+              pronunciation: ["/ɗiə˨˩ ɗiəm˧˩/"],
+              specific_note: "正式的地點、場所（漢越音：地點）。",
+              segments: [{ text: "Địa điểm", meaning: "地點", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Nơi này đẹp quá.",
-              translation: "這地方好美。",
+              sentence: "Chỗ này có ai ngồi chưa?",
+              translation: "這地方（這位子）有人坐了嗎？",
               segments: [
-                { text: "Nơi", meaning: "地方", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "đẹp", meaning: "美", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhầm chỗ rồi.",
-              translation: "走錯地方(位子)了。",
-              segments: [
-                { text: "Nhầm", meaning: "錯/誤", tail: " " },
-                { text: "chỗ", meaning: "地方", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đây là một nơi nổi tiếng.",
-              translation: "這是一個有名的地方。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "một", meaning: "一個", tail: " " },
-                { text: "nơi", meaning: "地方", tail: " " },
-                { text: "nổi tiếng", meaning: "有名", tail: "." },
+                { text: "Chỗ này", meaning: "這地方", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "ai", meaning: "誰", tail: " " },
+                { text: "ngồi", meaning: "坐", tail: " " },
+                { text: "chưa", meaning: "沒/了嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "風景名勝用 Nơi，停車位或座位用 Chỗ。",
+          usage_note: "併桌時問『Chỗ này được không?』（這地方行嗎？）很實用。",
           image_file: "place.png",
         },
         {
@@ -10359,44 +7983,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nhân viên",
-              pronunciation: ["/ɲən viən/"],
-              specific_note: "漢語:人員",
-              segments: [
-                { text: "Nhân", meaning: "人", tail: " " },
-                { text: "viên", meaning: "員", tail: "" },
-              ],
+              pronunciation: ["/ɲən˧˧ viən˧˧/"],
+              specific_note: "職員、員工（漢越音：人員）。",
+              segments: [{ text: "Nhân viên", meaning: "職員", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Hỏi nhân viên.",
-              translation: "問店員。",
+              sentence: "Em là nhân viên bán hàng.",
+              translation: "我是銷售店員。",
               segments: [
-                { text: "Hỏi", meaning: "問", tail: " " },
-                { text: "nhân viên", meaning: "店員/職員", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhân viên phục vụ.",
-              translation: "服務生。",
-              segments: [
-                { text: "Nhân viên", meaning: "人員", tail: " " },
-                { text: "phục vụ", meaning: "服務", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi là nhân viên bán hàng.",
-              translation: "我是銷售員 (賣貨員)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "nhân viên", meaning: "職員", tail: " " },
-                { text: "bán", meaning: "賣", tail: " " },
-                { text: "hàng", meaning: "貨", tail: "." },
+                { text: "nhân viên", meaning: "人員", tail: " " },
+                { text: "bán hàng", meaning: "賣貨/銷售", tail: "." },
               ],
             },
           ],
-          usage_note: "各種工作人員都通稱 Nhân viên。",
+          usage_note: "服務生叫 Nhân viên phục vụ。",
           image_file: "clerk.png",
         },
         {
@@ -10405,245 +8009,168 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Siêu thị",
-              pronunciation: ["/siəw tʰi/"],
-              specific_note: "漢語:超市",
-              segments: [
-                { text: "Siêu", meaning: "超", tail: " " },
-                { text: "thị", meaning: "市", tail: "" },
-              ],
+              pronunciation: ["/siəw˧˧ tʰi˨˩/"],
+              specific_note: "超市（漢越音：超市）。",
+              segments: [{ text: "Siêu thị", meaning: "超市", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đi siêu thị.",
-              translation: "去超市。",
+              sentence: "Đi siêu thị mua hoa quả.",
+              translation: "去超市買水果。",
               segments: [
                 { text: "Đi", meaning: "去", tail: " " },
-                { text: "siêu thị", meaning: "超市", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mua đồ ở siêu thị.",
-              translation: "在超市買東西。",
-              segments: [
-                { text: "Mua", meaning: "買", tail: " " },
-                { text: "đồ", meaning: "東西", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "siêu thị", meaning: "超市", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gần đây có siêu thị không?",
-              translation: "這附近有超市嗎？",
-              segments: [
-                { text: "Gần đây", meaning: "附近", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
                 { text: "siêu thị", meaning: "超市", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "mua", meaning: "買", tail: " " },
+                { text: "hoa quả", meaning: "花果/水果", tail: "." },
               ],
             },
           ],
-          usage_note: "大型賣場。",
+          usage_note: "越南連鎖超市如 WinMart, Big C 隨處可見。",
           image_file: "supermarket.png",
         },
         {
           id: "n-75",
-          term_zh: "月台",
+          term_zh: "月台 / 站台",
           related_terms: [
             {
               term_target: "Sân ga",
-              pronunciation: ["/sən ga/"],
-              specific_note: "火車月台",
+              pronunciation: ["/sən˧˧ zaː˧˧/"],
+              specific_note: "車站的月台、候車場。",
               segments: [
                 { text: "Sân", meaning: "場/院", tail: " " },
-                { text: "ga", meaning: "車站", tail: "" },
-              ],
-            },
-            {
-              term_target: "Cửa ra",
-              pronunciation: ["/kɨə za/"],
-              specific_note: "登機門/出口",
-              segments: [
-                { text: "Cửa", meaning: "門", tail: " " },
-                { text: "ra", meaning: "出", tail: "" },
+                { text: "ga", meaning: "火車站", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Sân ga số 1.",
-              translation: "第一月台 (車站)。",
+              sentence: "Hẹn gặp anh ở sân ga nhé.",
+              translation: "約在車站月台見喔。",
               segments: [
-                { text: "Sân ga", meaning: "月台", tail: " " },
-                { text: "số", meaning: "號", tail: " " },
-                { text: "1", meaning: "一", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đợi ở sân ga.",
-              translation: "在月台等。",
-              segments: [
-                { text: "Đợi", meaning: "等", tail: " " },
+                { text: "Hẹn gặp", meaning: "約見", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "sân ga", meaning: "月台", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xe lửa sắp vào ga.",
-              translation: "火車快進站了。",
-              segments: [
-                { text: "Xe lửa", meaning: "火車(南)", tail: " " },
-                { text: "sắp", meaning: "快要", tail: " " },
-                { text: "vào", meaning: "進", tail: " " },
-                { text: "ga", meaning: "站", tail: "." },
+                { text: "sân ga", meaning: "月台", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "火車用 Sân ga，機場常用 Cửa (Gate)。",
+          usage_note: "Ga 來自法文 Gare，指火車站。",
           image_file: "platform.png",
         },
-        {
-          id: "n-76",
-          term_zh: "音樂",
-          related_terms: [
-            {
-              term_target: "Nhạc",
-              pronunciation: ["/ɲak/"],
-              specific_note: "口語",
-              segments: [{ text: "Nhạc", meaning: "樂", tail: "" }],
-            },
-            {
-              term_target: "Âm nhạc",
-              pronunciation: ["/əm ɲak/"],
-              specific_note: "正式",
-              segments: [
-                { text: "Âm", meaning: "音", tail: " " },
-                { text: "nhạc", meaning: "樂", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nghe nhạc.",
-              translation: "聽音樂。",
-              segments: [
-                { text: "Nghe", meaning: "聽", tail: " " },
-                { text: "nhạc", meaning: "音樂", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích nhạc trẻ.",
-              translation: "我喜歡流行音樂 (年輕音樂)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "nhạc", meaning: "音樂", tail: " " },
-                { text: "trẻ", meaning: "年輕", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhạc to quá.",
-              translation: "音樂太大聲了。",
-              segments: [
-                { text: "Nhạc", meaning: "音樂", tail: " " },
-                { text: "to", meaning: "大", tail: " " },
-                { text: "quá", meaning: "太", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "口語都說 Nhạc。",
-          image_file: "music.png",
-        },
+{
+  "id": "n-76",
+  "term_zh": "音樂",
+  "related_terms": [
+    {
+      "term_target": "Nhạc",
+      "pronunciation": ["/ɲa̰ːk˨˩/"],
+      "specific_note": "音樂（漢越音：樂）。口語中最道地、最通用的說法。",
+      "segments": [{ "text": "Nhạc", "meaning": "音樂", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Em thích nghe nhạc.",
+      "translation": "我喜歡聽音樂。",
+      "segments": [
+        { "text": "Em", "meaning": "我", "tail": " " },
+        { "text": "thích", "meaning": "喜歡", "tail": " " },
+        { "text": "nghe", "meaning": "聽", "tail": " " },
+        { "text": "nhạc", "meaning": "音樂", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Nhạc này hay quá!",
+      "translation": "這音樂真好聽！（聽到喜歡的歌時必說）",
+      "segments": [
+        { "text": "Nhạc", "meaning": "音樂", "tail": " " },
+        { "text": "này", "meaning": "這", "tail": " " },
+        { "text": "hay", "meaning": "好聽/精采", "tail": " " },
+        { "text": "quá", "meaning": "太/真", "tail": "!" }
+      ]
+    },
+    {
+      "sentence": "Mở nhạc đi anh.",
+      "translation": "哥，放點音樂吧。（在車上或聚會時常用）",
+      "segments": [
+        { "text": "Mở", "meaning": "開啟/放", "tail": " " },
+        { "text": "nhạc", "meaning": "音樂", "tail": " " },
+        { "text": "đi", "meaning": "吧(語助詞)", "tail": " " },
+        { "text": "anh", "meaning": "哥哥(你)", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Nhạc trẻ Việt Nam rất sôi động.",
+      "translation": "越南流行音樂非常熱鬧好聽。",
+      "segments": [
+        { "text": "Nhạc trẻ", "meaning": "流行音樂", "tail": " " },
+        { "text": "Việt Nam", "meaning": "越南", "tail": " " },
+        { "text": "rất", "meaning": "非常", "tail": " " },
+        { "text": "sôi động", "meaning": "熱鬧/活躍", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "雖然『Âm nhạc』是正式名稱，但在日常生活中，不管是聽歌 (Nghe nhạc) 還是流行音樂 (Nhạc trẻ)，越南人都只會用單音節的『Nhạc』。",
+  "image_file": "music.png"
+},
         {
           id: "n-77",
           term_zh: "雨",
           related_terms: [
             {
               term_target: "Mưa",
-              pronunciation: ["/mɨa/"],
-              specific_note: "",
+              pronunciation: ["/mɨə˧˧/"],
+              specific_note: "下雨。",
               segments: [{ text: "Mưa", meaning: "雨", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Trời đang mưa.",
-              translation: "正在下雨。",
+              sentence: "Trời đang mưa to lắm.",
+              translation: "天正在下大雨喔。",
               segments: [
-                { text: "Trời", meaning: "天", tail: " " },
+                { text: "Trời", meaning: "天空/天", tail: " " },
                 { text: "đang", meaning: "正在", tail: " " },
-                { text: "mưa", meaning: "雨/下雨", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mưa to.",
-              translation: "大雨。",
-              segments: [
-                { text: "Mưa", meaning: "雨", tail: " " },
-                { text: "to", meaning: "大", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không thích mưa.",
-              translation: "我不喜歡下雨。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "mưa", meaning: "雨", tail: "." },
+                { text: "mưa to", meaning: "雨大", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
               ],
             },
           ],
-          usage_note: "天氣現象。",
+          usage_note: "雨衣叫 Áo mưa。",
           image_file: "rain.png",
         },
         {
           id: "n-78",
-          term_zh: "照片",
+          term_zh: "照片 / 圖片",
           related_terms: [
             {
               term_target: "Ảnh",
-              pronunciation: ["/aɲ/"],
-              specific_note: "北部/通用",
-              segments: [{ text: "Ảnh", meaning: "影/照片", tail: "" }],
+              pronunciation: ["/a̰ːɲ˨˩/"],
+              specific_note: "照片。",
+              segments: [{ text: "Ảnh", meaning: "照片", tail: "" }],
             },
             {
               term_target: "Hình",
-              pronunciation: ["/hiɲ/"],
-              specific_note: "南部",
-              segments: [{ text: "Hình", meaning: "形/照片", tail: "" }],
+              pronunciation: ["/hiɲ˨˩/"],
+              specific_note: "圖片、影像（南越常用）。",
+              segments: [{ text: "Hình", meaning: "圖片/形", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Chụp ảnh.",
-              translation: "拍照。",
+              sentence: "Chụp ảnh giúp em với!",
+              translation: "幫我拍張照！",
               segments: [
-                { text: "Chụp", meaning: "抓/拍", tail: " " },
-                { text: "ảnh", meaning: "照片", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xem ảnh.",
-              translation: "看照片。",
-              segments: [
-                { text: "Xem", meaning: "看", tail: " " },
-                { text: "ảnh", meaning: "照片", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chụp hộ tôi tấm ảnh.",
-              translation: "幫我拍張照。",
-              segments: [
-                { text: "Chụp", meaning: "拍", tail: " " },
-                { text: "hộ", meaning: "幫忙", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "tấm", meaning: "張", tail: " " },
-                { text: "ảnh", meaning: "照片", tail: "." },
+                { text: "Chụp ảnh", meaning: "拍照", tail: " " },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "với", meaning: "吧/伴隨", tail: "!" },
               ],
             },
           ],
-          usage_note: "北越說 Ảnh，南越說 Hình。",
+          usage_note: "如果是自拍，越南人常用英文 Selfie。",
           image_file: "picture.png",
         },
         {
@@ -10652,92 +8179,59 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Sách",
-              pronunciation: ["/sat͡ʃ/"],
-              specific_note: "漢語:冊",
+              pronunciation: ["/sac˧˥/"],
+              specific_note: "書籍。",
               segments: [{ text: "Sách", meaning: "書", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đọc sách.",
-              translation: "看(讀)書。",
+              sentence: "Cuốn sách này rất hay.",
+              translation: "這本書非常精采。",
               segments: [
-                { text: "Đọc", meaning: "讀", tail: " " },
-                { text: "sách", meaning: "書", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mở sách ra.",
-              translation: "把書打開。",
-              segments: [
-                { text: "Mở", meaning: "開", tail: " " },
+                { text: "Cuốn", meaning: "本(量詞)", tail: " " },
                 { text: "sách", meaning: "書", tail: " " },
-                { text: "ra", meaning: "出來", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đây là sách của tôi.",
-              translation: "這是我的書。",
-              segments: [
-                { text: "Đây", meaning: "這", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sách", meaning: "書", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
+                { text: "này", meaning: "這", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "hay", meaning: "好/精采", tail: "." },
               ],
             },
           ],
-          usage_note: "書籍。",
+          usage_note: "書的量詞是 Cuốn 或 Quyển。",
           image_file: "book.png",
         },
         {
           id: "n-80",
-          term_zh: "廁所 / 洗手間",
+          term_zh: "廁所",
           related_terms: [
             {
               term_target: "Nhà vệ sinh",
-              pronunciation: ["/ɲa ve siɲ/"],
-              specific_note: "標準",
+              pronunciation: ["/ɲaː˨˩ vê siɲ˧˧/"],
+              specific_note: "洗手間（直譯：衛生屋）。",
               segments: [
-                { text: "Nhà", meaning: "房", tail: " " },
+                { text: "Nhà", meaning: "屋", tail: " " },
                 { text: "vệ sinh", meaning: "衛生", tail: "" },
               ],
             },
             {
               term_target: "Toilet",
-              pronunciation: ["/tɔj lɛt/"],
-              specific_note: "外來語",
+              pronunciation: ["/tɔj lèt/"],
+              specific_note: "外來語，非常通用。",
               segments: [{ text: "Toilet", meaning: "廁所", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Nhà vệ sinh ở đâu?",
-              translation: "廁所在哪裡？",
-              segments: [
-                { text: "Nhà vệ sinh", meaning: "洗手間", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đi vệ sinh.",
-              translation: "去上廁所。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "vệ sinh", meaning: "衛生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhà vệ sinh sạch.",
-              translation: "乾淨的廁所。",
+              sentence: "Nhà vệ sinh ở hướng nào?",
+              translation: "廁所在哪個方向？",
               segments: [
                 { text: "Nhà vệ sinh", meaning: "廁所", tail: " " },
-                { text: "sạch", meaning: "乾淨", tail: "." },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "hướng nào", meaning: "哪向", tail: "?" },
               ],
             },
           ],
-          usage_note: "最實用的問路詞。",
+          usage_note: "如果是在外面找廁所，直接問『Toilet ở đâu?』最簡單。",
           image_file: "restroom.png",
         },
         {
@@ -10746,93 +8240,59 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Thời tiết",
-              pronunciation: ["/tʰəj tiət/"],
-              specific_note: "漢語:時節",
-              segments: [
-                { text: "Thời", meaning: "時", tail: " " },
-                { text: "tiết", meaning: "節/氣候", tail: "" },
-              ],
+              pronunciation: ["/tʰəj˨˩ tiət˧˥/"],
+              specific_note: "天氣（漢越音：時節）。",
+              segments: [{ text: "Thời tiết", meaning: "天氣", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Thời tiết đẹp.",
-              translation: "好天氣。",
+              sentence: "Thời tiết hôm nay thế nào?",
+              translation: "今天天氣如何？",
               segments: [
                 { text: "Thời tiết", meaning: "天氣", tail: " " },
-                { text: "đẹp", meaning: "美/好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thời tiết xấu.",
-              translation: "壞天氣。",
-              segments: [
-                { text: "Thời tiết", meaning: "天氣", tail: " " },
-                { text: "xấu", meaning: "壞", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thời tiết thế nào?",
-              translation: "天氣如何？",
-              segments: [
-                { text: "Thời tiết", meaning: "天氣", tail: " " },
+                { text: "hôm nay", meaning: "今天", tail: " " },
                 { text: "thế nào", meaning: "如何", tail: "?" },
               ],
             },
           ],
-          usage_note: "氣候。",
+          usage_note: "越南氣候分雨季與乾季，對行程規劃很重要。",
           image_file: "weather.png",
         },
         {
           id: "n-82",
-          term_zh: "訊息",
+          term_zh: "訊息 / 簡訊",
           related_terms: [
             {
               term_target: "Tin nhắn",
-              pronunciation: ["/tin ɲan/"],
-              specific_note: "簡訊/留言",
+              pronunciation: ["/tin˧˧ ɲan˧˥/"],
+              specific_note: "訊息、簡訊。",
               segments: [
-                { text: "Tin", meaning: "信/訊", tail: " " },
-                { text: "nhắn", meaning: "寄語", tail: "" },
+                { text: "Tin", meaning: "訊息", tail: " " },
+                { text: "nhắn", meaning: "留言/吩咐", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Gửi tin nhắn.",
-              translation: "傳訊息。",
+              sentence: "Đợi tin nhắn của em nhé.",
+              translation: "等我的訊息喔。",
               segments: [
-                { text: "Gửi", meaning: "寄/傳", tail: " " },
-                { text: "tin nhắn", meaning: "訊息", tail: "." },
-              ],
-            },
-            {
-              sentence: "Để lại tin nhắn.",
-              translation: "留言。",
-              segments: [
-                { text: "Để lại", meaning: "留下", tail: " " },
-                { text: "tin nhắn", meaning: "訊息", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi nhận được tin nhắn.",
-              translation: "我收到訊息了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nhận", meaning: "收", tail: " " },
-                { text: "được", meaning: "到", tail: " " },
-                { text: "tin nhắn", meaning: "訊息", tail: "." },
+                { text: "Đợi", meaning: "等待", tail: " " },
+                { text: "tin nhắn", meaning: "訊息", tail: " " },
+                { text: "của em", meaning: "我的", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "手機簡訊或Line訊息都叫 Tin nhắn。",
+          usage_note: "傳簡訊常用的動詞是 Gửi (傳) 或 Nhắn tin (傳訊)。",
           image_file: "message.png",
         },
       ],
     },
     {
-      id: "adverbs",
-      name: "常用副詞 (越南語)",
+      id: "adverbs_vn",
+      name: "常用副詞",
       items: [
         {
           id: "adv-01",
@@ -10840,292 +8300,253 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bây giờ",
-              pronunciation: ["/bəj zə/"],
-              specific_note: "現在",
+              pronunciation: ["/ɓəj˧˧ zəː˨˩/"],
+              specific_note: "目前的時刻。",
               segments: [
-                { text: "Bây", meaning: "現", tail: " " },
-                { text: "giờ", meaning: "時", tail: "" },
+                { text: "Bây", meaning: "當下", tail: " " },
+                { text: "giờ", meaning: "小時/時刻", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Làm ngay bây giờ.",
-              translation: "現在立刻做。",
+              sentence: "Bây giờ đi luôn không?",
+              translation: "現在馬上走嗎？",
               segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "ngay", meaning: "立刻", tail: " " },
+                { text: "Bây giờ", meaning: "現在", tail: " " },
+                { text: "đi", meaning: "走", tail: " " },
+                { text: "luôn", meaning: "直接/立刻", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Em đang bận bây giờ.",
+              translation: "我現在正忙。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "bận", meaning: "忙", tail: " " },
                 { text: "bây giờ", meaning: "現在", tail: "." },
               ],
             },
-            {
-              sentence: "Bây giờ tôi bận.",
-              translation: "我現在很忙。",
-              segments: [
-                { text: "Bây giờ", meaning: "現在", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "bận", meaning: "忙", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn đang ở đâu?",
-              translation: "你現在在哪裡？(省略了現在)。",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
           ],
-          usage_note: "口語常簡稱為 Giờ (如 Giờ đi đâu? 現在去哪？)。",
+          usage_note: "越南語常把時間放在句首或句尾，放在句首強調感較強。",
           image_file: "now.png",
         },
         {
           id: "adv-02",
-          term_zh: "非常",
+          term_zh: "非常 / 很",
           related_terms: [
             {
               term_target: "Rất",
-              pronunciation: ["/zət/"],
-              specific_note: "放形容詞前",
+              pronunciation: ["/zət˧˥/"],
+              specific_note: "放在形容詞前，程度一般。",
               segments: [{ text: "Rất", meaning: "很/非常", tail: "" }],
             },
             {
               term_target: "Lắm",
-              pronunciation: ["/lam/"],
-              specific_note: "放形容詞後",
-              segments: [{ text: "Lắm", meaning: "很/甚", tail: "" }],
+              pronunciation: ["/lam˧˥/"],
+              specific_note: "放在句尾，口語極高頻。",
+              segments: [{ text: "Lắm", meaning: "非常", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Rất tốt.",
-              translation: "非常好。",
+              sentence: "Cái này ngon lắm!",
+              translation: "這個非常好吃！",
               segments: [
-                { text: "Rất", meaning: "非常", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "ngon", meaning: "好吃", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "!" },
               ],
             },
             {
-              sentence: "Cảm ơn nhiều lắm.",
-              translation: "非常感謝 (感謝很多)。",
-              segments: [
-                { text: "Cảm ơn", meaning: "謝謝", tail: " " },
-                { text: "nhiều", meaning: "多", tail: " " },
-                { text: "lắm", meaning: "非常", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm nay trời rất nóng.",
-              translation: "今天非常熱。",
+              sentence: "Hôm nay rất nóng.",
+              translation: "今天很熱。",
               segments: [
                 { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "trời", meaning: "天", tail: " " },
                 { text: "rất", meaning: "很", tail: " " },
                 { text: "nóng", meaning: "熱", tail: "." },
               ],
             },
           ],
-          usage_note: "Rất + 形容詞 = 形容詞 + Lắm。",
+          usage_note: "口語中稱讚東西「很...」時，習慣用『形容詞 + Lắm』。",
           image_file: "very.png",
         },
-        {
-          id: "adv-03",
-          term_zh: "真的",
-          related_terms: [
-            {
-              term_target: "Thật sự",
-              pronunciation: ["/tʰət sɨ/"],
-              specific_note: "確實/真的",
-              segments: [
-                { text: "Thật", meaning: "真", tail: " " },
-                { text: "sự", meaning: "事", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Thật á?",
-              translation: "真的嗎？(口語)。",
-              segments: [
-                { text: "Thật", meaning: "真", tail: " " },
-                { text: "á", meaning: "啊(語助詞)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi thực sự thích nó.",
-              translation: "我真的喜歡它。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thực sự", meaning: "確實/真的", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "nó", meaning: "它", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy rất tốt.",
-              translation: "她人真的很好 (用「很」來強調)。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "Thật sự 強調真實性。",
-          image_file: "really.png",
-        },
+{
+  "id": "adv-03",
+  "term_zh": "真的 / 確實",
+  "related_terms": [
+    {
+      "term_target": "Thật sự",
+      "pronunciation": ["/tʰət˨˩ sɨ̰˨˩/"],
+      "specific_note": "強調某種情感、態度或事實的真實性。",
+      "segments": [
+        { "text": "Thật", "meaning": "真", "tail": " " },
+        { "text": "sự", "meaning": "事", "tail": "" }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Em thật sự thích anh.",
+      "translation": "我真的喜歡你（哥）。",
+      "segments": [
+        { "text": "Em", "meaning": "我(弟妹)", "tail": " " },
+        { "text": "thật sự", "meaning": "真的", "tail": " " },
+        { "text": "thích", "meaning": "喜歡", "tail": " " },
+        { "text": "anh", "meaning": "哥(你)", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Em thật sự xin lỗi.",
+      "translation": "我真的很抱歉。",
+      "segments": [
+        { "text": "Em", "meaning": "我", "tail": " " },
+        { "text": "thật sự", "meaning": "真的", "tail": " " },
+        { "text": "xin lỗi", "meaning": "抱歉", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Việc này thật sự quan trọng.",
+      "translation": "這件事真的很重要。",
+      "segments": [
+        { "text": "Việc", "meaning": "事", "tail": " " },
+        { "text": "này", "meaning": "這", "tail": " " },
+        { "text": "thật sự", "meaning": "真的", "tail": " " },
+        { "text": "quan trọng", "meaning": "重要", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "當你想表達內心由衷的想法時，使用 Thật sự 會讓對方感覺你更誠懇。",
+  "image_file": "really.png"
+},
         {
           id: "adv-04",
           term_zh: "好好地 / 很好地",
           related_terms: [
             {
-              term_target: "Tốt",
-              pronunciation: ["/tot/"],
-              specific_note: "好",
-              segments: [{ text: "Tốt", meaning: "好", tail: "" }],
+              term_target: "Giỏi",
+              pronunciation: ["/zɔj˧˩/"],
+              specific_note: "指能力很好、很棒。",
+              segments: [{ text: "Giỏi", meaning: "好/厲害", tail: "" }],
             },
             {
-              term_target: "Giỏi",
-              pronunciation: ["/zɔj/"],
-              specific_note: "棒/厲害",
-              segments: [{ text: "Giỏi", meaning: "優秀", tail: "" }],
+              term_target: "Tốt",
+              pronunciation: ["/tot˧˥/"],
+              specific_note: "指性質好、表現好。",
+              segments: [{ text: "Tốt", meaning: "好", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Ngủ ngon.",
-              translation: "睡好 (晚安)。",
-              segments: [
-                { text: "Ngủ", meaning: "睡", tail: " " },
-                { text: "ngon", meaning: "香/好", tail: "." },
-              ],
-            },
-            {
               sentence: "Làm tốt lắm!",
-              translation: "做得好 (Well done)！",
+              translation: "做得好！（誇獎別人）",
               segments: [
                 { text: "Làm", meaning: "做", tail: " " },
                 { text: "tốt", meaning: "好", tail: " " },
-                { text: "lắm", meaning: "很", tail: "!" },
+                { text: "lắm", meaning: "非常", tail: "!" },
               ],
             },
             {
-              sentence: "Tôi thấy không khỏe.",
-              translation: "我覺得不舒服 (不健康/不好)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thấy", meaning: "覺得", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "khỏe", meaning: "健康", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "形容動作做得好用 Tốt 或 Giỏi。",
-          image_file: "well.png",
-        },
-        {
-          id: "adv-05",
-          term_zh: "經常",
-          related_terms: [
-            {
-              term_target: "Thường",
-              pronunciation: ["/tʰɨəŋ/"],
-              specific_note: "常",
-              segments: [{ text: "Thường", meaning: "常", tail: "" }],
-            },
-            {
-              term_target: "Hay",
-              pronunciation: ["/haj/"],
-              specific_note: "口語/常",
-              segments: [{ text: "Hay", meaning: "常/愛", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Tôi thường đến đây.",
-              translation: "我常來這裡。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thường", meaning: "常", tail: " " },
-                { text: "đến", meaning: "來", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn có hay tập thể dục không?",
-              translation: "你常運動嗎？",
+              sentence: "Bạn nói tiếng Việt giỏi quá.",
+              translation: "你越南語說得真好。",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "hay", meaning: "常", tail: " " },
-                { text: "tập thể dục", meaning: "做體操/運動", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Ở đây hay mưa.",
-              translation: "這裡常下雨。",
-              segments: [
-                { text: "Ở đây", meaning: "這裡", tail: " " },
-                { text: "hay", meaning: "常", tail: " " },
-                { text: "mưa", meaning: "下雨", tail: "." },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: " " },
+                { text: "giỏi", meaning: "好/擅長", tail: " " },
+                { text: "quá", meaning: "真/太", tail: "." },
               ],
             },
           ],
-          usage_note: "Hay + 動詞 = 常做某事。",
-          image_file: "often.png",
+          usage_note: "誇獎小孩子或下屬常用『Giỏi lắm』或『Tốt lắm』。",
+          image_file: "well.png",
         },
+{
+  "id": "adv-05",
+  "term_zh": "經常 / 常",
+  "related_terms": [
+    {
+      "term_target": "Hay",
+      "pronunciation": ["/haːj˧˧/"],
+      "specific_note": "口語中最通用的「常」。當它放在動詞前表示頻率。",
+      "segments": [{ "text": "Hay", "meaning": "常/經常", "tail": "" }]
+    }
+  ],
+  "examples": [
+    {
+      "sentence": "Em hay ăn ở đây.",
+      "translation": "我常在這邊吃。",
+      "segments": [
+        { "text": "Em", "meaning": "我", "tail": " " },
+        { "text": "hay", "meaning": "常", "tail": " " },
+        { "text": "ăn", "meaning": "吃", "tail": " " },
+        { "text": "ở đây", "meaning": "在這邊", "tail": "." }
+      ]
+    },
+    {
+      "sentence": "Anh có hay đi bơi không?",
+      "translation": "你（哥）常去游泳嗎？",
+      "segments": [
+        { "text": "Anh", "meaning": "哥哥(你)", "tail": " " },
+        { "text": "có", "meaning": "是否", "tail": " " },
+        { "text": "hay", "meaning": "常", "tail": " " },
+        { "text": "đi bơi", "meaning": "去游泳", "tail": " " },
+        { "text": "không", "meaning": "嗎", "tail": "?" }
+      ]
+    },
+    {
+      "sentence": "Sao em hay quên thế?",
+      "translation": "妳怎麼常忘記呀？",
+      "segments": [
+        { "text": "Sao", "meaning": "怎麼/為何", "tail": " " },
+        { "text": "em", "meaning": "妳", "tail": " " },
+        { "text": "hay", "meaning": "常", "tail": " " },
+        { "text": "quên", "meaning": "忘記", "tail": " " },
+        { "text": "thế", "meaning": "那樣/呀", "tail": "?" }
+      ]
+    },
+    {
+      "sentence": "Dạo này anh hay bận lắm.",
+      "translation": "最近我（哥）常變得很忙。",
+      "segments": [
+        { "text": "Dạo này", "meaning": "最近", "tail": " " },
+        { "text": "anh", "meaning": "哥哥(我)", "tail": " " },
+        { "text": "hay", "meaning": "常", "tail": " " },
+        { "text": "bận", "meaning": "忙", "tail": " " },
+        { "text": "lắm", "meaning": "非常", "tail": "." }
+      ]
+    }
+  ],
+  "usage_note": "Hay 除了當『常』，在句尾或形容詞位子時，也代表『精采、好聽』（如：Nhạc hay = 音樂好聽）。",
+  "image_file": "often.png"
+},
         {
           id: "adv-06",
           term_zh: "通常",
           related_terms: [
             {
-              term_target: "Thông thường",
-              pronunciation: ["/tʰəwŋ͡m tʰɨəŋ/"],
-              specific_note: "一般來說",
-              segments: [
-                { text: "Thông", meaning: "通", tail: " " },
-                { text: "thường", meaning: "常", tail: "" },
-              ],
+              term_target: "Thường",
+              pronunciation: ["/tʰɨəŋ˨˩/"],
+              specific_note: "一般的習慣。",
+              segments: [{ text: "Thường", meaning: "常/通常", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Thông thường là 6 giờ.",
-              translation: "通常是六點。",
+              sentence: "Thường thì em đi làm lúc 8 giờ.",
+              translation: "通常我8點去上班。",
               segments: [
-                { text: "Thông thường", meaning: "通常", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "6", meaning: "六", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thường dậy lúc 7 giờ.",
-              translation: "我通常(習慣)7點起床。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thường", meaning: "常", tail: " " },
-                { text: "dậy", meaning: "起", tail: " " },
-                { text: "lúc", meaning: "在", tail: " " },
-                { text: "7", meaning: "七", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn thường làm gì?",
-              translation: "你通常做什麼？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "thường", meaning: "常", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
+                { text: "Thường thì", meaning: "通常的話", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "đi làm", meaning: "去上班", tail: " " },
+                { text: "lúc", meaning: "在(時間)", tail: " " },
+                { text: "8 giờ", meaning: "八點", tail: "." },
               ],
             },
           ],
-          usage_note: "習慣性動作。",
+          usage_note: "Thường 放在主詞前後皆可。",
           image_file: "usually.png",
         },
         {
@@ -11133,96 +8554,65 @@ export const vietnameseData: AppData = {
           term_zh: "已經",
           related_terms: [
             {
-              term_target: "Đã",
-              pronunciation: ["/ɗa/"],
-              specific_note: "過去式標記",
-              segments: [{ text: "Đã", meaning: "已經", tail: "" }],
+              term_target: "Rồi",
+              pronunciation: ["/zoj˨˩/"],
+              specific_note: "放在句尾，表示動作已完成。",
+              segments: [{ text: "Rồi", meaning: "了/已經", tail: "" }],
             },
             {
-              term_target: "Rồi",
-              pronunciation: ["/zoj/"],
-              specific_note: "句尾助詞(了)",
-              segments: [{ text: "Rồi", meaning: "了/完", tail: "" }],
+              term_target: "Đã",
+              pronunciation: ["/ɗa˦ˀ˥/"],
+              specific_note: "放在動詞前，強調過去式。",
+              segments: [{ text: "Đã", meaning: "已經", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Xong rồi.",
-              translation: "已經好了 (做完了)。",
+              sentence: "Em ăn cơm rồi.",
+              translation: "我吃過飯了。",
               segments: [
-                { text: "Xong", meaning: "完", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "ăn cơm", meaning: "吃飯", tail: " " },
                 { text: "rồi", meaning: "了", tail: "." },
               ],
             },
             {
-              sentence: "Đã 10 giờ rồi.",
-              translation: "已經10點了。",
+              sentence: "Anh biết rồi!",
+              translation: "我知道了！（常用口頭禪）",
               segments: [
-                { text: "Đã", meaning: "已經", tail: " " },
-                { text: "10", meaning: "十", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi ăn rồi.",
-              translation: "我吃過了 (已經吃了)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
+                { text: "Anh", meaning: "我(哥)", tail: " " },
+                { text: "biết", meaning: "知道", tail: " " },
+                { text: "rồi", meaning: "了", tail: "!" },
               ],
             },
           ],
-          usage_note: "動詞 + Rồi = 已經做了。",
+          usage_note: "越南語最常用的「已經」就是句尾的 Rồi，非常有靈魂。",
           image_file: "already.png",
         },
         {
           id: "adv-08",
-          term_zh: "只有",
+          term_zh: "只有 / 才",
           related_terms: [
             {
               term_target: "Chỉ",
-              pronunciation: ["/tʃi/"],
-              specific_note: "",
-              segments: [{ text: "Chỉ", meaning: "只", tail: "" }],
+              pronunciation: ["/ci˧˩/"],
+              specific_note: "限定數量或範圍。",
+              segments: [{ text: "Chỉ", meaning: "只/只有", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Chỉ một cái.",
-              translation: "只有一個。",
+              sentence: "Chỉ có một cái thôi.",
+              translation: "只有一個而已。",
               segments: [
                 { text: "Chỉ", meaning: "只", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "cái", meaning: "個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi chỉ có 100 nghìn.",
-              translation: "我只有10萬(越盾)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chỉ", meaning: "只", tail: " " },
                 { text: "có", meaning: "有", tail: " " },
-                { text: "100", meaning: "一百", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chỉ bạn mới giúp được tôi.",
-              translation: "只有你能幫我。",
-              segments: [
-                { text: "Chỉ", meaning: "只", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "mới", meaning: "才", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "được", meaning: "得", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
+                { text: "một cái", meaning: "一個", tail: " " },
+                { text: "thôi", meaning: "而已/罷了", tail: "." },
               ],
             },
           ],
-          usage_note: "限定。",
+          usage_note: "『Chỉ... thôi』是常用的固定搭法，表示「僅僅...而已」。",
           image_file: "only.png",
         },
         {
@@ -11231,339 +8621,239 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Lại",
-              pronunciation: ["/laj/"],
-              specific_note: "重複",
-              segments: [{ text: "Lại", meaning: "再", tail: "" }],
-            },
-            {
-              term_target: "Nữa",
-              pronunciation: ["/nɨa/"],
-              specific_note: "更多/再",
-              segments: [{ text: "Nữa", meaning: "再", tail: "" }],
+              pronunciation: ["/laːj˨˩/"],
+              specific_note: "動作重複發生。",
+              segments: [{ text: "Lại", meaning: "又/再次", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Thử lại.",
-              translation: "再試一次。",
-              segments: [
-                { text: "Thử", meaning: "試", tail: " " },
-                { text: "lại", meaning: "再/重來", tail: "." },
-              ],
-            },
-            {
               sentence: "Nói lại đi.",
-              translation: "請再說一次。",
+              translation: "再說一次吧。",
               segments: [
                 { text: "Nói", meaning: "說", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
+                { text: "lại", meaning: "再次", tail: " " },
                 { text: "đi", meaning: "吧", tail: "." },
               ],
             },
             {
-              sentence: "Không bao giờ làm thế nữa.",
-              translation: "再也不會那樣做了。",
+              sentence: "Hẹn gặp lại!",
+              translation: "再見！（約定再次見面）",
               segments: [
-                { text: "Không", meaning: "不", tail: " " },
-                { text: "bao giờ", meaning: "何時(永遠)", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "thế", meaning: "那樣", tail: " " },
-                { text: "nữa", meaning: "再", tail: "." },
+                { text: "Hẹn", meaning: "約定", tail: " " },
+                { text: "gặp lại", meaning: "再見面", tail: "!" },
               ],
             },
           ],
-          usage_note: "動詞 + Lại = 重做；句尾 + Nữa = 再一次。",
+          usage_note: "『Lại nữa à?』意思是「又來了喔？」。",
           image_file: "again.png",
         },
         {
           id: "adv-10",
-          term_zh: "大約",
+          term_zh: "大約 / 左右",
           related_terms: [
             {
               term_target: "Khoảng",
-              pronunciation: ["/xwaŋ/"],
-              specific_note: "大概",
+              pronunciation: ["/xwaːŋ˧˩/"],
+              specific_note: "用於時間、距離、數量的估計。",
               segments: [{ text: "Khoảng", meaning: "大約", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Khoảng 10 phút.",
-              translation: "大約10分鐘。",
+              sentence: "Khoảng bao nhiêu tiền?",
+              translation: "大約多少錢？",
               segments: [
                 { text: "Khoảng", meaning: "大約", tail: " " },
-                { text: "10", meaning: "十", tail: " " },
-                { text: "phút", meaning: "分", tail: "." },
+                { text: "bao nhiêu", meaning: "多少", tail: " " },
+                { text: "tiền", meaning: "錢", tail: "?" },
               ],
             },
             {
-              sentence: "Khoảng 5 cây số.",
-              translation: "大約5公里。",
+              sentence: "Đợi em khoảng 5 phút.",
+              translation: "等我大約5分鐘。",
               segments: [
-                { text: "Khoảng", meaning: "大約", tail: " " },
-                { text: "5", meaning: "五", tail: " " },
-                { text: "cây số", meaning: "公里", tail: "." },
-              ],
-            },
-            {
-              sentence: "Giá khoảng 50 nghìn.",
-              translation: "價格大約5萬(越盾)。",
-              segments: [
-                { text: "Giá", meaning: "價格", tail: " " },
+                { text: "Đợi", meaning: "等", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
                 { text: "khoảng", meaning: "大約", tail: " " },
-                { text: "50", meaning: "五十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
+                { text: "5 phút", meaning: "五分鐘", tail: "." },
               ],
             },
           ],
-          usage_note: "用於時間、距離、金錢。",
+          usage_note: "問路或問時間預算時，Khoảng 非常好用。",
           image_file: "about.png",
         },
         {
           id: "adv-11",
-          term_zh: "一點點",
+          term_zh: "一點點 / 有點",
           related_terms: [
             {
               term_target: "Một chút",
-              pronunciation: ["/mot tʃut/"],
-              specific_note: "一點",
+              pronunciation: ["/mot˨˩ cụt˧˥/"],
+              specific_note: "指份量或時間的一點點。",
               segments: [
                 { text: "Một", meaning: "一", tail: " " },
-                { text: "chút", meaning: "點/些", tail: "" },
+                { text: "chút", meaning: "點點", tail: "" },
               ],
             },
             {
-              term_target: "Xíu",
-              pronunciation: ["/siu/"],
-              specific_note: "一點點(口語)",
-              segments: [{ text: "Xíu", meaning: "小/少", tail: "" }],
+              term_target: "Hơi",
+              pronunciation: ["/həːj˧˧/"],
+              specific_note: "指程度上的「有一點」。",
+              segments: [{ text: "Hơi", meaning: "稍微/有點", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Cay một chút.",
-              translation: "有一點辣。",
+              sentence: "Cho em một chút tương ớt.",
+              translation: "給我一點點辣椒醬。",
               segments: [
-                { text: "Cay", meaning: "辣", tail: " " },
-                { text: "một chút", meaning: "一點", tail: "." },
+                { text: "Cho em", meaning: "給我", tail: " " },
+                { text: "một chút", meaning: "一點點", tail: " " },
+                { text: "tương ớt", meaning: "辣椒醬", tail: "." },
               ],
             },
             {
-              sentence: "Tôi hơi mệt một chút.",
-              translation: "我有一點累。",
+              sentence: "Cái này hơi đắt.",
+              translation: "這個有點貴。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "hơi", meaning: "稍微", tail: " " },
-                { text: "mệt", meaning: "累", tail: " " },
-                { text: "một chút", meaning: "一點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chờ xíu nhé.",
-              translation: "等一下下喔 (口語)。",
-              segments: [
-                { text: "Chờ", meaning: "等", tail: " " },
-                { text: "xíu", meaning: "一下", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "hơi", meaning: "有點", tail: " " },
+                { text: "đắt", meaning: "貴", tail: "." },
               ],
             },
           ],
-          usage_note: "少量。",
+          usage_note: "點餐要少辣、少糖，可以說『Một chút thôi』。",
           image_file: "a_little.png",
         },
         {
           id: "adv-12",
-          term_zh: "也 / 也是",
+          term_zh: "也是 / 也",
           related_terms: [
             {
               term_target: "Cũng",
-              pronunciation: ["/kuŋ͡m/"],
-              specific_note: "",
+              pronunciation: ["/kuŋ˦ˀ˥/"],
+              specific_note: "表示同樣的情況。",
               segments: [{ text: "Cũng", meaning: "也", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi cũng thích.",
-              translation: "我也喜歡。",
+              sentence: "Em cũng thế.",
+              translation: "我也是。（回覆對方的問候或意見）",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "cũng", meaning: "也", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy cũng là giáo viên.",
-              translation: "她也是老師。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "cũng", meaning: "也", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "giáo viên", meaning: "老師", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cũng vậy.",
-              translation: "我也是 (Me too)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cũng", meaning: "也", tail: " " },
-                { text: "vậy", meaning: "那樣", tail: "." },
+                { text: "thế", meaning: "那樣/如此", tail: "." },
               ],
             },
           ],
-          usage_note: "放在動詞前面。",
+          usage_note: "常用於回覆：『Em cũng thích』 (我也喜歡)。",
           image_file: "also.png",
         },
         {
           id: "adv-13",
-          term_zh: "或許 / 也許",
+          term_zh: "或許 / 可能",
           related_terms: [
             {
               term_target: "Có lẽ",
-              pronunciation: ["/kɔ lɛ/"],
-              specific_note: "可能/或許",
+              pronunciation: ["/kɔ˧˥ lɛ˦ˀ˥/"],
+              specific_note: "推測可能性。",
               segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "lẽ", meaning: "理", tail: "" },
+                { text: "Có", meaning: "有", tail: "" },
+                { text: "lẽ", meaning: "理/道理", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Có lẽ để sau.",
-              translation: "也許以後吧。",
+              sentence: "Có lẽ mai em sẽ đến.",
+              translation: "或許明天我會來。",
               segments: [
                 { text: "Có lẽ", meaning: "或許", tail: " " },
-                { text: "để", meaning: "留/放", tail: " " },
-                { text: "sau", meaning: "以後", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có lẽ bạn đúng.",
-              translation: "也許你是對的。",
-              segments: [
-                { text: "Có lẽ", meaning: "或許", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đúng", meaning: "對", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chắc là vậy.",
-              translation: "應該是吧 (大概)。",
-              segments: [
-                { text: "Chắc", meaning: "肯定/大概", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "vậy", meaning: "那樣", tail: "." },
+                { text: "mai", meaning: "明天", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "sẽ", meaning: "將會", tail: " " },
+                { text: "đến", meaning: "來", tail: "." },
               ],
             },
           ],
-          usage_note: "表示不確定。",
+          usage_note: "用於不確定的回答。",
           image_file: "maybe.png",
         },
         {
           id: "adv-14",
-          term_zh: "之後 / 稍後",
+          term_zh: "之後 / 等一下",
           related_terms: [
             {
               term_target: "Sau",
-              pronunciation: ["/saw/"],
-              specific_note: "以後",
-              segments: [{ text: "Sau", meaning: "後", tail: "" }],
+              pronunciation: ["/saːw˧˧/"],
+              specific_note: "時間上的後續。",
+              segments: [{ text: "Sau", meaning: "之後", tail: "" }],
             },
             {
               term_target: "Lát nữa",
-              pronunciation: ["/lat nɨa/"],
-              specific_note: "等一下",
+              pronunciation: ["/lat˧˥ nɨə˦ˀ˥/"],
+              specific_note: "待會、等一下。",
               segments: [
                 { text: "Lát", meaning: "片刻", tail: " " },
-                { text: "nữa", meaning: "再", tail: "" },
+                { text: "nữa", meaning: "再/更加", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Hẹn gặp lại sau.",
-              translation: "待會見(以後見)。",
+              sentence: "Lát nữa gặp nhé.",
+              translation: "等一下見喔。",
               segments: [
-                { text: "Hẹn", meaning: "約", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "sau", meaning: "後", tail: "." },
-              ],
-            },
-            {
-              sentence: "Gọi tôi sau nhé.",
-              translation: "晚點打給我。",
-              segments: [
-                { text: "Gọi", meaning: "打(電話)", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "sau", meaning: "後", tail: " " },
+                { text: "Lát nữa", meaning: "待會", tail: " " },
+                { text: "gặp", meaning: "見面", tail: " " },
                 { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
-            {
-              sentence: "Hai năm sau.",
-              translation: "兩年後。",
-              segments: [
-                { text: "Hai", meaning: "二", tail: " " },
-                { text: "năm", meaning: "年", tail: " " },
-                { text: "sau", meaning: "後", tail: "." },
-              ],
-            },
           ],
-          usage_note: "時間先後。",
+          usage_note: "『Sau đó』是「在那之後」。",
           image_file: "later.png",
         },
         {
           id: "adv-15",
-          term_zh: "很快 / 不久",
+          term_zh: "很快 / 快要",
           related_terms: [
             {
-              term_target: "Sớm",
-              pronunciation: ["/səm/"],
-              specific_note: "早",
-              segments: [{ text: "Sớm", meaning: "早/快", tail: "" }],
+              term_target: "Sắp",
+              pronunciation: ["/sap˧˥/"],
+              specific_note: "指即將發生。",
+              segments: [{ text: "Sắp", meaning: "快要", tail: "" }],
             },
             {
-              term_target: "Sắp",
-              pronunciation: ["/sap/"],
-              specific_note: "快要",
-              segments: [{ text: "Sắp", meaning: "即將", tail: "" }],
+              term_target: "Nhanh",
+              pronunciation: ["/ɲaɲ˧˧/"],
+              specific_note: "指動作迅速。",
+              segments: [{ text: "Nhanh", meaning: "快", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Hẹn gặp lại sớm.",
-              translation: "希望能很快再見到你。",
-              segments: [
-                { text: "Hẹn", meaning: "約", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "sớm", meaning: "早", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sớm khỏi bệnh nhé.",
-              translation: "早日康復。",
-              segments: [
-                { text: "Sớm", meaning: "早", tail: " " },
-                { text: "khỏi", meaning: "痊癒", tail: " " },
-                { text: "bệnh", meaning: "病", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sắp đến rồi.",
-              translation: "快到了。",
+              sentence: "Sắp đến nơi rồi.",
+              translation: "快要到了。（搭 Grab 常用）",
               segments: [
                 { text: "Sắp", meaning: "快要", tail: " " },
                 { text: "đến", meaning: "到", tail: " " },
+                { text: "nơi", meaning: "地方", tail: " " },
                 { text: "rồi", meaning: "了", tail: "." },
               ],
             },
+            {
+              sentence: "Đi nhanh lên!",
+              translation: "走快點！",
+              segments: [
+                { text: "Đi", meaning: "走", tail: " " },
+                { text: "nhanh", meaning: "快", tail: " " },
+                { text: "lên", meaning: "起來", tail: "!" },
+              ],
+            },
           ],
-          usage_note: "時間短。",
+          usage_note: "催促別人時，句尾一定要加一個『lên』。",
           image_file: "soon.png",
         },
         {
@@ -11572,98 +8862,64 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Cùng nhau",
-              pronunciation: ["/kuŋ͡m ɲaw/"],
-              specific_note: "共同",
+              pronunciation: ["/kuŋ˨˩ ɲaːw˧˧/"],
+              specific_note: "共同做某事。",
               segments: [
                 { text: "Cùng", meaning: "同", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: "" },
+                { text: "nhau", meaning: "互相", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Đi cùng nhau.",
-              translation: "一起去。",
+              sentence: "Chúng mình cùng nhau đi ăn nhé.",
+              translation: "我們一起去吃飯喔。",
               segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "cùng nhau", meaning: "一起", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng ta làm cùng nhau.",
-              translation: "我們一起做。",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "cùng nhau", meaning: "一起", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúng tôi ở bên nhau.",
-              translation: "我們在一起。",
-              segments: [
-                { text: "Chúng tôi", meaning: "我們", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "bên", meaning: "邊", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: "." },
+                { text: "Chúng mình", meaning: "我們", tail: " " },
+                { text: "cùng nhau", meaning: "一起", tail: " " },
+                { text: "đi ăn", meaning: "去吃", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "共同行動。",
+          usage_note: "約朋友做某事，加上 Cùng nhau 會顯得很親近。",
           image_file: "together.png",
         },
         {
           id: "adv-17",
-          term_zh: "仍然 / 還",
+          term_zh: "仍然 / 還在",
           related_terms: [
             {
               term_target: "Vẫn",
-              pronunciation: ["/vən/"],
-              specific_note: "還/依舊",
-              segments: [{ text: "Vẫn", meaning: "仍", tail: "" }],
+              pronunciation: ["/vən˦ˀ˥/"],
+              specific_note: "狀態持續。",
+              segments: [{ text: "Vẫn", meaning: "仍然", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Vẫn ở đây.",
-              translation: "還在這裡。",
+              sentence: "Em vẫn đang ở nhà.",
+              translation: "我還在家裡。",
               segments: [
-                { text: "Vẫn", meaning: "還", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "vẫn", meaning: "仍然", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi vẫn đói.",
-              translation: "我還是很餓。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "vẫn", meaning: "還", tail: " " },
-                { text: "đói", meaning: "餓", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn vẫn làm việc à?",
-              translation: "你還在工作啊？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "vẫn", meaning: "還", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "à", meaning: "啊", tail: "?" },
+                { text: "nhà", meaning: "家", tail: "." },
               ],
             },
           ],
-          usage_note: "狀態持續。",
+          usage_note: "問候常用：『Vẫn khỏe chứ?』 (還好嗎/還健康吧？)。",
           image_file: "still.png",
         },
         {
           id: "adv-18",
-          term_zh: "一般來說 / 通常",
+          term_zh: "一般來說 / 平常",
           related_terms: [
             {
               term_target: "Bình thường",
-              pronunciation: ["/biɲ tʰɨəŋ/"],
-              specific_note: "普通/平常",
+              pronunciation: ["/ɓiɲ˨˩ tʰɨəŋ˨˩/"],
+              specific_note: "正常、平常狀況。",
               segments: [
                 { text: "Bình", meaning: "平", tail: " " },
                 { text: "thường", meaning: "常", tail: "" },
@@ -11672,33 +8928,17 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Bình thường tôi đi bộ.",
-              translation: "平常我走路。",
+              sentence: "Bình thường em không ăn cay.",
+              translation: "平常我不吃辣。",
               segments: [
                 { text: "Bình thường", meaning: "平常", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đi bộ", meaning: "走路", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mọi chuyện bình thường.",
-              translation: "一切正常。",
-              segments: [
-                { text: "Mọi", meaning: "所有", tail: " " },
-                { text: "chuyện", meaning: "事", tail: " " },
-                { text: "bình thường", meaning: "正常", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cũng bình thường.",
-              translation: "也就普普通通。",
-              segments: [
-                { text: "Cũng", meaning: "也", tail: " " },
-                { text: "bình thường", meaning: "普通", tail: "." },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "ăn cay", meaning: "吃辣", tail: "." },
               ],
             },
           ],
-          usage_note: "常態。",
+          usage_note: "回答最近過得如何，也可以回『Bình thường』 (一般般)。",
           image_file: "normally.png",
         },
         {
@@ -11707,57 +8947,42 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ngay",
-              pronunciation: ["/ŋaj/"],
-              specific_note: "立即",
+              pronunciation: ["/ŋaj˧˧/"],
+              specific_note: "時間上的緊迫。",
               segments: [{ text: "Ngay", meaning: "立刻", tail: "" }],
-            },
-            {
-              term_target: "Liền",
-              pronunciation: ["/liən/"],
-              specific_note: "緊接",
-              segments: [{ text: "Liền", meaning: "連/馬上", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đi ngay.",
-              translation: "馬上去。",
+              sentence: "Làm ngay đi!",
+              translation: "立刻做吧！",
               segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "ngay", meaning: "立刻", tail: "." },
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "ngay", meaning: "立刻", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
               ],
             },
             {
-              sentence: "Dừng lại ngay.",
-              translation: "立刻停下來。",
+              sentence: "Đến ngay đây.",
+              translation: "（我）馬上到。",
               segments: [
-                { text: "Dừng", meaning: "停", tail: " " },
-                { text: "lại", meaning: "下來", tail: " " },
-                { text: "ngay", meaning: "立刻", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cần giúp ngay.",
-              translation: "我需要立刻的協助。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "ngay", meaning: "立刻", tail: "." },
+                { text: "Đến", meaning: "到", tail: " " },
+                { text: "ngay", meaning: "立刻", tail: " " },
+                { text: "đây", meaning: "這", tail: "." },
               ],
             },
           ],
-          usage_note: "Ngay (立刻)，Liền (接著)。",
+          usage_note: "『Ngay lập tức』是更正式的「立即」。",
           image_file: "immediately.png",
         },
         {
           id: "adv-20",
-          term_zh: "也不",
+          term_zh: "也不 / 也沒",
           related_terms: [
             {
               term_target: "Cũng không",
-              pronunciation: ["/kuŋ͡m xəwŋ͡m/"],
-              specific_note: "也不",
+              pronunciation: ["/kuŋ˦ˀ˥ xoŋ˧˧/"],
+              specific_note: "否定句中的「也」。",
               segments: [
                 { text: "Cũng", meaning: "也", tail: " " },
                 { text: "không", meaning: "不", tail: "" },
@@ -11766,44 +8991,24 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Tôi cũng không biết.",
+              sentence: "Em cũng không biết.",
               translation: "我也不知道。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "cũng", meaning: "也", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
                 { text: "biết", meaning: "知道", tail: "." },
               ],
             },
-            {
-              sentence: "Tôi cũng không.",
-              translation: "我也不 (Me neither)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cũng", meaning: "也", tail: " " },
-                { text: "không", meaning: "不", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cả hai đều không tốt.",
-              translation: "兩個都不好。",
-              segments: [
-                { text: "Cả", meaning: "全", tail: " " },
-                { text: "hai", meaning: "二", tail: " " },
-                { text: "đều", meaning: "都", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
-              ],
-            },
           ],
-          usage_note: "否定附和。",
+          usage_note: "對應英文的 neither 或 also not。",
           image_file: "neither.png",
         },
       ],
     },
     {
-      id: "questions",
-      name: "疑問詞 (越南語)",
+      id: "questions_vn",
+      name: "常用疑問詞",
       items: [
         {
           id: "q-01",
@@ -11811,26 +9016,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Gì",
-              pronunciation: ["/zi/"],
-              specific_note: "什麼",
+              pronunciation: ["/zi˨˩/"],
+              specific_note: "放在動詞或名詞後，詢問「什麼」。",
               segments: [{ text: "Gì", meaning: "什麼", tail: "" }],
             },
             {
               term_target: "Cái gì",
-              pronunciation: ["/kaj zi/"],
-              specific_note: "什麼東西",
+              pronunciation: ["/kaːj˧˥ zi˨˩/"],
+              specific_note: "詢問具體「什麼東西」。",
               segments: [
-                { text: "Cái", meaning: "個(東西)", tail: " " },
+                { text: "Cái", meaning: "個/物", tail: " " },
                 { text: "gì", meaning: "什麼", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Đây là cái gì?",
-              translation: "這是什麼？",
+              sentence: "Cái này là cái gì?",
+              translation: "這是什麼東西？",
               segments: [
-                { text: "Đây", meaning: "這", tail: " " },
+                { text: "Cái này", meaning: "這個", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
                 { text: "cái gì", meaning: "什麼東西", tail: "?" },
               ],
@@ -11846,74 +9051,72 @@ export const vietnameseData: AppData = {
               ],
             },
             {
-              sentence: "Bạn muốn ăn gì?",
-              translation: "你想吃什麼？",
+              sentence: "Anh đang làm gì đấy?",
+              translation: "你（哥）在幹嘛？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "đang", meaning: "正在", tail: " " },
+                { text: "làm", meaning: "做", tail: " " },
+                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
               ],
             },
           ],
-          usage_note: "放在動詞後面，如：做什麼 (Làm gì)。",
+          usage_note:
+            "注意詞序：『做什麼』要說『Làm gì』，跟中文一樣，但問句不用倒裝。",
           image_file: "what.png",
         },
         {
           id: "q-02",
-          term_zh: "如何 / 怎麼樣",
+          term_zh: "如何 / 怎樣",
           related_terms: [
             {
               term_target: "Thế nào",
-              pronunciation: ["/tʰe naːw/"],
-              specific_note: "怎麼樣(狀態)",
+              pronunciation: ["/tʰe˧˥ naːw˨˩/"],
+              specific_note: "詢問狀況或意見。",
               segments: [
-                { text: "Thế", meaning: "態/勢", tail: " " },
+                { text: "Thế", meaning: "樣/勢", tail: " " },
                 { text: "nào", meaning: "哪", tail: "" },
               ],
             },
             {
-              term_target: "Làm sao",
-              pronunciation: ["/lam saːw/"],
-              specific_note: "怎麼(方法)",
-              segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "sao", meaning: "星/怎", tail: "" },
-              ],
+              term_target: "Sao",
+              pronunciation: ["/saːw˧˧/"],
+              specific_note: "為什麼、怎麼了（口語常用）。",
+              segments: [{ text: "Sao", meaning: "如何/為什麼", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Bạn thấy thế nào?",
-              translation: "你覺得怎麼樣？",
+              sentence: "Sức khỏe anh thế nào?",
+              translation: "你（哥）身體狀況如何？",
+              segments: [
+                { text: "Sức khỏe", meaning: "健康/身體", tail: " " },
+                { text: "anh", meaning: "哥哥", tail: " " },
+                { text: "thế nào", meaning: "如何", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Bạn thấy món này thế nào?",
+              translation: "你覺得這道菜怎麼樣？",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
                 { text: "thấy", meaning: "覺得", tail: " " },
+                { text: "món này", meaning: "這道菜", tail: " " },
                 { text: "thế nào", meaning: "如何", tail: "?" },
               ],
             },
             {
-              sentence: "Làm thế nào để đi đến đó?",
-              translation: "要如何去那裡？",
+              sentence: "Làm sao bây giờ?",
+              translation: "現在該怎麼辦？",
               segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: " " },
-                { text: "để", meaning: "為了", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "đó", meaning: "那裡", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Dạo này thế nào?",
-              translation: "最近好嗎(怎麼樣)？",
-              segments: [
-                { text: "Dạo này", meaning: "最近", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: "?" },
+                { text: "Làm sao", meaning: "如何做/怎辦", tail: " " },
+                { text: "bây giờ", meaning: "現在", tail: "?" },
               ],
             },
           ],
-          usage_note: "問意見或狀態用 Thế nào。",
+          usage_note:
+            "詢問進度或天氣常用 Thế nào，遇到困難問怎麼辦常用 Làm sao。",
           image_file: "how.png",
         },
         {
@@ -11922,54 +9125,45 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Khi nào",
-              pronunciation: ["/xi naːw/"],
-              specific_note: "何時",
+              pronunciation: ["/xi˧˧ naːw˨˩/"],
+              specific_note: "通用詢問時間（過去或未來）。",
               segments: [
-                { text: "Khi", meaning: "時", tail: " " },
+                { text: "Khi", meaning: "當...時", tail: " " },
                 { text: "nào", meaning: "哪", tail: "" },
               ],
             },
             {
               term_target: "Bao giờ",
-              pronunciation: ["/baːw zə/"],
-              specific_note: "幾時(口語)",
+              pronunciation: ["/ɓaːw˧˧ zəː˨˩/"],
+              specific_note: "常用於詢問未來「什麼時候」。",
               segments: [
-                { text: "Bao", meaning: "多少", tail: " " },
+                { text: "Bao", meaning: "多", tail: " " },
                 { text: "giờ", meaning: "點/時", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Khi nào bạn đi?",
-              translation: "你什麼時候去？",
+              sentence: "Khi nào anh về nước?",
+              translation: "你（哥）什麼時候回國？",
               segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: "?" },
+                { text: "Khi nào", meaning: "什麼時候", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "về nước", meaning: "回國", tail: "?" },
               ],
             },
             {
-              sentence: "Sinh nhật bạn là khi nào?",
-              translation: "你的生日是什麼時候？",
+              sentence: "Bao giờ thì cơm chín?",
+              translation: "飯什麼時候會煮好？",
               segments: [
-                { text: "Sinh nhật", meaning: "生日", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "khi nào", meaning: "何時", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bao giờ về nhà?",
-              translation: "幾時(什麼時候)回家？",
-              segments: [
-                { text: "Bao giờ", meaning: "幾時", tail: " " },
-                { text: "về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: "?" },
+                { text: "Bao giờ", meaning: "何時", tail: " " },
+                { text: "thì", meaning: "則/就", tail: " " },
+                { text: "cơm", meaning: "飯", tail: " " },
+                { text: "chín", meaning: "熟", tail: "?" },
               ],
             },
           ],
-          usage_note: "問時間點。",
+          usage_note: "問時間時，Khi nào 放在句首問未來，放在句尾問過去。",
           image_file: "when.png",
         },
         {
@@ -11978,12 +9172,18 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ở đâu",
-              pronunciation: ["/ə ɗəw/"],
-              specific_note: "在哪",
+              pronunciation: ["/əː˧˩ ɗəw˧˧/"],
+              specific_note: "詢問所在地點。",
               segments: [
                 { text: "Ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪", tail: "" },
+                { text: "đâu", meaning: "哪裡", tail: "" },
               ],
+            },
+            {
+              term_target: "Đâu",
+              pronunciation: ["/ɗəw˧˧/"],
+              specific_note: "單獨使用，放在動詞後詢問「去哪」。",
+              segments: [{ text: "Đâu", meaning: "哪裡", tail: "" }],
             },
           ],
           examples: [
@@ -11997,24 +9197,27 @@ export const vietnameseData: AppData = {
               ],
             },
             {
-              sentence: "Nhà vệ sinh ở đâu?",
-              translation: "廁所在哪裡？",
+              sentence: "Anh đi đâu đấy?",
+              translation: "你要去哪呀？（越南路邊最常見的打招呼）",
               segments: [
-                { text: "Nhà vệ sinh", meaning: "廁所", tail: " " },
-                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "đâu", meaning: "哪裡", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
               ],
             },
             {
-              sentence: "Bạn sống ở đâu?",
-              translation: "你住在哪裡？",
+              sentence: "Mua cái này ở đâu?",
+              translation: "這個在哪裡買？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "sống", meaning: "住/生活", tail: " " },
+                { text: "Mua", meaning: "買", tail: " " },
+                { text: "cái này", meaning: "這個", tail: " " },
                 { text: "ở đâu", meaning: "在哪裡", tail: "?" },
               ],
             },
           ],
-          usage_note: "問地點。",
+          usage_note:
+            "越南人見面問『Đi đâu đấy?』通常只是像台灣人問『飽了沒』一樣的寒暄。",
           image_file: "where.png",
         },
         {
@@ -12023,43 +9226,42 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ai",
-              pronunciation: ["/aːj/"],
-              specific_note: "",
+              pronunciation: ["/aːj˧˧/"],
+              specific_note: "詢問人身分。",
               segments: [{ text: "Ai", meaning: "誰", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Anh ấy là ai?",
-              translation: "他是誰？",
+              sentence: "Ai đấy?",
+              translation: "是誰呀？（有人敲門時問）",
               segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
+                { text: "Ai", meaning: "誰", tail: " " },
+                { text: "đấy", meaning: "呢/呀", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Người đó là ai?",
+              translation: "那個人是誰？",
+              segments: [
+                { text: "Người đó", meaning: "那個人", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
                 { text: "ai", meaning: "誰", tail: "?" },
               ],
             },
             {
-              sentence: "Ai đang gọi đó?",
-              translation: "是誰在打電話(呼叫)？",
+              sentence: "Ai nói với bạn thế?",
+              translation: "誰跟你那樣說的？",
               segments: [
                 { text: "Ai", meaning: "誰", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "gọi", meaning: "叫/打電話", tail: " " },
-                { text: "đó", meaning: "那(語助詞)", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn đi cùng ai?",
-              translation: "你跟誰一起去？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "cùng", meaning: "一起/同", tail: " " },
-                { text: "ai", meaning: "誰", tail: "?" },
+                { text: "nói", meaning: "說", tail: " " },
+                { text: "với", meaning: "跟", tail: " " },
+                { text: "bạn", meaning: "你", tail: " " },
+                { text: "thế", meaning: "那樣", tail: "?" },
               ],
             },
           ],
-          usage_note: "問人。",
+          usage_note: "Ai 可以放在句首當主詞，也可以放在句尾當賓語。",
           image_file: "who.png",
         },
         {
@@ -12068,48 +9270,44 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tại sao",
-              pronunciation: ["/taj saːw/"],
-              specific_note: "正式",
+              pronunciation: ["/taːj˨˩ saːw˧˧/"],
+              specific_note: "正式、完整的為什麼。",
               segments: [
-                { text: "Tại", meaning: "在/因", tail: " " },
-                { text: "sao", meaning: "怎/何", tail: "" },
+                { text: "Tại", meaning: "由於", tail: " " },
+                { text: "sao", meaning: "如何", tail: "" },
               ],
             },
             {
               term_target: "Sao",
-              pronunciation: ["/saːw/"],
-              specific_note: "口語",
-              segments: [{ text: "Sao", meaning: "怎/為何", tail: "" }],
+              pronunciation: ["/saːw˧˧/"],
+              specific_note: "口語化的為什麼。",
+              segments: [{ text: "Sao", meaning: "為何", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tại sao?",
-              translation: "為什麼？",
-              segments: [{ text: "Tại sao", meaning: "為什麼", tail: "?" }],
-            },
-            {
-              sentence: "Sao bạn đến muộn?",
-              translation: "你為什麼遲到？",
-              segments: [
-                { text: "Sao", meaning: "為何", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "muộn", meaning: "晚", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tại sao bạn thích nó?",
-              translation: "你為什麼喜歡它？",
+              sentence: "Tại sao bạn lại khóc?",
+              translation: "你為什麼哭了？",
               segments: [
                 { text: "Tại sao", meaning: "為什麼", tail: " " },
                 { text: "bạn", meaning: "你", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "nó", meaning: "它", tail: "?" },
+                { text: "lại", meaning: "卻/又", tail: " " },
+                { text: "khóc", meaning: "哭", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Sao anh không ăn?",
+              translation: "為什麼你（哥）不吃？",
+              segments: [
+                { text: "Sao", meaning: "為何", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "ăn", meaning: "吃", tail: "?" },
               ],
             },
           ],
-          usage_note: "回答通常用 Vì (因為)。",
+          usage_note:
+            "Tại sao 通常放在句首，Sao 則非常靈活，常出現在朋友對話中。",
           image_file: "why.png",
         },
         {
@@ -12118,133 +9316,115 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nào",
-              pronunciation: ["/naːw/"],
-              specific_note: "置於名詞後",
+              pronunciation: ["/naːw˨˩/"],
+              specific_note: "放在量詞或名詞後，表示「哪個」。",
               segments: [{ text: "Nào", meaning: "哪", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Cái nào?",
-              translation: "哪一個？",
+              sentence: "Cái nào tốt hơn?",
+              translation: "哪一個比較好？",
               segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "nào", meaning: "哪", tail: "?" },
+                { text: "Cái nào", meaning: "哪一個", tail: " " },
+                { text: "tốt hơn", meaning: "更好", tail: "?" },
               ],
             },
             {
-              sentence: "Bạn thích màu nào?",
-              translation: "你喜歡哪個顏色？",
+              sentence: "Bạn là người nước nào?",
+              translation: "你是哪國人？",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "màu", meaning: "顏色", tail: " " },
-                { text: "nào", meaning: "哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Đi đường nào?",
-              translation: "走哪條路？",
-              segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "đường", meaning: "路", tail: " " },
-                { text: "nào", meaning: "哪", tail: "?" },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "người", meaning: "人", tail: " " },
+                { text: "nước nào", meaning: "哪國", tail: "?" },
               ],
             },
           ],
-          usage_note: "注意順序：名詞 + Nào (如：Người nào 哪個人)。",
+          usage_note: "『Người nước nào?』是認識外國新朋友的第一句話。",
           image_file: "which.png",
         },
         {
           id: "q-08",
-          term_zh: "多少 (錢/數量)",
+          term_zh: "多少 (數量/錢)",
           related_terms: [
             {
               term_target: "Bao nhiêu",
-              pronunciation: ["/baːw ɲiəw/"],
-              specific_note: "數量多/價格",
+              pronunciation: ["/ɓaːw˧˧ ɲiəw˧˧/"],
+              specific_note: "詢問 10 以上的數量或價錢。",
               segments: [
-                { text: "Bao", meaning: "包/多大", tail: " " },
-                { text: "nhiêu", meaning: "多", tail: "" },
+                { text: "Bao", meaning: "多", tail: " " },
+                { text: "nhiêu", meaning: "少", tail: "" },
               ],
+            },
+            {
+              term_target: "Mấy",
+              pronunciation: ["/məj˧˥/"],
+              specific_note: "詢問 10 以下的數量。",
+              segments: [{ text: "Mấy", meaning: "幾", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Bao nhiêu tiền?",
-              translation: "多少錢？",
+              sentence: "Cái này bao nhiêu tiền?",
+              translation: "這個多少錢？",
               segments: [
-                { text: "Bao nhiêu", meaning: "多少", tail: " " },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "bao nhiêu", meaning: "多少", tail: " " },
                 { text: "tiền", meaning: "錢", tail: "?" },
               ],
             },
             {
-              sentence: "Cái này bao nhiêu?",
-              translation: "這個多少(錢)？",
+              sentence: "Nhà bạn có mấy người?",
+              translation: "你家有幾口人？",
               segments: [
-                { text: "Cái", meaning: "個", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn cần bao nhiêu nước?",
-              translation: "你需要多少水？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "cần", meaning: "需要", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: " " },
-                { text: "nước", meaning: "水", tail: "?" },
+                { text: "Nhà bạn", meaning: "你家", tail: " " },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "mấy", meaning: "幾", tail: " " },
+                { text: "người", meaning: "人", tail: "?" },
               ],
             },
           ],
-          usage_note: "問價格必用 Bao nhiêu。",
+          usage_note: "問價格永遠用 Bao nhiêu，問幾點或家裡幾個人用 Mấy。",
           image_file: "how_much.png",
         },
         {
           id: "q-09",
-          term_zh: "多久 (時間)",
+          term_zh: "多久",
           related_terms: [
             {
               term_target: "Bao lâu",
-              pronunciation: ["/baːw ləw/"],
-              specific_note: "時間長度",
+              pronunciation: ["/ɓaːw˧˧ ləw˧˧/"],
+              specific_note: "詢問時間長度。",
               segments: [
-                { text: "Bao", meaning: "多大範圍", tail: " " },
+                { text: "Bao", meaning: "多", tail: " " },
                 { text: "lâu", meaning: "久", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Mất bao lâu?",
-              translation: "要花(失去)多久？",
+              sentence: "Đi taxi mất bao lâu?",
+              translation: "搭計程車要花多久時間？",
               segments: [
-                { text: "Mất", meaning: "失去/花費", tail: " " },
+                { text: "Đi taxi", meaning: "搭計程車", tail: " " },
+                { text: "mất", meaning: "花費/損失", tail: " " },
                 { text: "bao lâu", meaning: "多久", tail: "?" },
               ],
             },
             {
-              sentence: "Bạn ở đây bao lâu rồi?",
-              translation: "你在這裡多久了？",
+              sentence: "Bạn học tiếng Việt bao lâu rồi?",
+              translation: "你學越南語多久了？",
               segments: [
                 { text: "Bạn", meaning: "你", tail: " " },
-                { text: "ở", meaning: "待/在", tail: " " },
-                { text: "đây", meaning: "這", tail: " " },
+                { text: "học", meaning: "學習", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: " " },
                 { text: "bao lâu", meaning: "多久", tail: " " },
                 { text: "rồi", meaning: "了", tail: "?" },
               ],
             },
-            {
-              sentence: "Chờ bao lâu?",
-              translation: "要等多久？",
-              segments: [
-                { text: "Chờ", meaning: "等", tail: " " },
-                { text: "bao lâu", meaning: "多久", tail: "?" },
-              ],
-            },
           ],
-          usage_note: "問時間長短用 Bao lâu。",
+          usage_note: "詢問路程或學習時間常用 Bao lâu。",
           image_file: "how_long.png",
         },
         {
@@ -12253,48 +9433,35 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mấy giờ",
-              pronunciation: ["/məj zə/"],
-              specific_note: "",
+              pronunciation: ["/məj˧˥ zəː˨˩/"],
+              specific_note: "詢問具體鐘點。",
               segments: [
                 { text: "Mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點/時", tail: "" },
+                { text: "giờ", meaning: "點/小時", tail: "" },
               ],
             },
           ],
           examples: [
             {
               sentence: "Bây giờ là mấy giờ?",
-              translation: "現在幾點了？",
+              translation: "現在是幾點？",
               segments: [
                 { text: "Bây giờ", meaning: "現在", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: "?" },
+                { text: "mấy giờ", meaning: "幾點", tail: "?" },
               ],
             },
             {
-              sentence: "Chúng ta gặp nhau mấy giờ?",
-              translation: "我們幾點見面？",
+              sentence: "Mấy giờ anh đến?",
+              translation: "你（哥）幾點會到？",
               segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "nhau", meaning: "彼此", tail: " " },
-                { text: "mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Mấy giờ bắt đầu?",
-              translation: "幾點開始？",
-              segments: [
-                { text: "Mấy", meaning: "幾", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "bắt đầu", meaning: "開始", tail: "?" },
+                { text: "Mấy giờ", meaning: "幾點", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "đến", meaning: "來到", tail: "?" },
               ],
             },
           ],
-          usage_note:
-            "Mấy 用於問數量較少(如時間0-12)，Bao nhiêu 用於數量較多。",
+          usage_note: "這是在越南約時間最重要的一句話。",
           image_file: "what_time.png",
         },
         {
@@ -12303,8 +9470,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bao nhiêu tuổi",
-              pronunciation: ["/baːw ɲiəw tuəj/"],
-              specific_note: "成年人",
+              pronunciation: ["/ɓaːw˧˧ ɲiəw˧˧ tuiəj˧˩/"],
+              specific_note: "詢問成年人年齡。",
               segments: [
                 { text: "Bao nhiêu", meaning: "多少", tail: " " },
                 { text: "tuổi", meaning: "歲", tail: "" },
@@ -12312,8 +9479,8 @@ export const vietnameseData: AppData = {
             },
             {
               term_target: "Mấy tuổi",
-              pronunciation: ["/məj tuəj/"],
-              specific_note: "小孩(10歲下)",
+              pronunciation: ["/məj˧˥ tuiəj˧˩/"],
+              specific_note: "詢問小孩年齡（10歲以下）。",
               segments: [
                 { text: "Mấy", meaning: "幾", tail: " " },
                 { text: "tuổi", meaning: "歲", tail: "" },
@@ -12322,42 +9489,34 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Bạn bao nhiêu tuổi?",
-              translation: "你幾歲？(一般詢問)",
+              sentence: "Em bao nhiêu tuổi rồi?",
+              translation: "妳幾歲了？（問稍微年輕的女性）",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tuổi", meaning: "歲", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Em bé mấy tuổi rồi?",
-              translation: "寶寶幾歲了？",
-              segments: [
-                { text: "Em bé", meaning: "寶寶", tail: " " },
-                { text: "mấy", meaning: "幾", tail: " " },
-                { text: "tuổi", meaning: "歲", tail: " " },
+                { text: "Em", meaning: "妳(弟妹輩)", tail: " " },
+                { text: "bao nhiêu tuổi", meaning: "幾歲", tail: " " },
                 { text: "rồi", meaning: "了", tail: "?" },
               ],
             },
             {
-              sentence: "Anh ấy bao nhiêu tuổi?",
-              translation: "他幾歲？",
+              sentence: "Bé mấy tuổi rồi ạ?",
+              translation: "小朋友幾歲了呀？",
               segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "bao nhiêu", meaning: "多少", tail: " " },
-                { text: "tuổi", meaning: "歲", tail: "?" },
+                { text: "Bé", meaning: "小孩", tail: " " },
+                { text: "mấy tuổi", meaning: "幾歲", tail: " " },
+                { text: "rồi", meaning: "了", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "?" },
               ],
             },
           ],
-          usage_note: "對長輩問年紀要加敬語，或用 Bao nhiêu tuổi 較禮貌。",
+          usage_note:
+            "在越南，問年齡是為了決定該怎麼稱呼對方（哥哥、姊姊、叔叔），所以並不沒禮貌喔！",
           image_file: "how_old.png",
         },
       ],
     },
     {
-      id: "time_place",
-      name: "表達場所和時間的單字 (越南語)",
+      id: "time_place_vn",
+      name: "表達場所和時間的單字",
       items: [
         {
           id: "tp-01",
@@ -12365,52 +9524,43 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bây giờ",
-              pronunciation: ["/bəj zə/"],
-              specific_note: "標準",
+              pronunciation: ["/ɓəj˧˧ zəː˨˩/"],
+              specific_note: "目前的時刻。",
               segments: [
-                { text: "Bây", meaning: "現", tail: " " },
-                { text: "giờ", meaning: "時", tail: "" },
+                { text: "Bây", meaning: "當下", tail: " " },
+                { text: "giờ", meaning: "小時/時刻", tail: "" },
               ],
             },
             {
               term_target: "Giờ",
-              pronunciation: ["/zə/"],
-              specific_note: "口語",
-              segments: [{ text: "Giờ", meaning: "現在/點", tail: "" }],
+              pronunciation: ["/zəː˨˩/"],
+              specific_note: "口語簡化說法。",
+              segments: [{ text: "Giờ", meaning: "現在", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Làm ngay bây giờ.",
-              translation: "現在立刻做。",
-              segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "ngay", meaning: "立刻", tail: " " },
-                { text: "bây giờ", meaning: "現在", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bây giờ bạn ở đâu?",
-              translation: "你現在在哪裡？",
+              sentence: "Bây giờ đi luôn nhé!",
+              translation: "現在就馬上走喔！",
               segments: [
                 { text: "Bây giờ", meaning: "現在", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
+                { text: "đi", meaning: "走", tail: " " },
+                { text: "luôn", meaning: "直接/馬上", tail: " " },
+                { text: "nhé", meaning: "喔(語助)", tail: "!" },
               ],
             },
             {
-              sentence: "Giờ tôi đang bận.",
-              translation: "我現在正忙。",
+              sentence: "Giờ em đang ở đâu?",
+              translation: "妳現在在哪裡？",
               segments: [
                 { text: "Giờ", meaning: "現在", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
+                { text: "em", meaning: "妳", tail: " " },
                 { text: "đang", meaning: "正在", tail: " " },
-                { text: "bận", meaning: "忙", tail: "." },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
               ],
             },
           ],
-          usage_note: "口語常把 Bây giờ 簡化為 Giờ。",
+          usage_note: "口語中常縮短成 Giờ，聽起來很俐落。",
           image_file: "now.png",
         },
         {
@@ -12419,43 +9569,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hôm nay",
-              pronunciation: ["/hom naj/"],
-              specific_note: "",
+              pronunciation: ["/hom˧˧ naj˧˧/"],
+              specific_note: "本日。",
               segments: [
-                { text: "Hôm", meaning: "日/天", tail: " " },
-                { text: "nay", meaning: "今/這", tail: "" },
+                { text: "Hôm", meaning: "天/日", tail: " " },
+                { text: "nay", meaning: "這", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Không phải hôm nay.",
-              translation: "不是今天。",
-              segments: [
-                { text: "Không phải", meaning: "不是", tail: " " },
-                { text: "hôm nay", meaning: "今天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm nay bạn thế nào?",
-              translation: "你今天好嗎？",
+              sentence: "Hôm nay nóng quá!",
+              translation: "今天太熱了！",
               segments: [
                 { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Hôm nay là thứ hai.",
-              translation: "今天是星期一。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "thứ hai", meaning: "星期一", tail: "." },
+                { text: "nóng", meaning: "熱", tail: " " },
+                { text: "quá", meaning: "太/真", tail: "!" },
               ],
             },
           ],
-          usage_note: "本日。",
+          usage_note: "越南人見面常說『Hôm nay thế nào?』（今天過得怎樣？）。",
           image_file: "today.png",
         },
         {
@@ -12464,54 +9597,32 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ngày mai",
-              pronunciation: ["/ŋaj maːj/"],
-              specific_note: "標準",
+              pronunciation: ["/ŋaj˨˩ maj˧˧/"],
+              specific_note: "隔天。",
               segments: [
                 { text: "Ngày", meaning: "日", tail: " " },
-                { text: "mai", meaning: "明/晨", tail: "" },
+                { text: "mai", meaning: "明", tail: "" },
               ],
             },
             {
               term_target: "Mai",
-              pronunciation: ["/maːj/"],
-              specific_note: "口語",
-              segments: [{ text: "Mai", meaning: "明", tail: "" }],
+              pronunciation: ["/maj˧˧/"],
+              specific_note: "口語縮寫。",
+              segments: [{ text: "Mai", meaning: "明天", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Hẹn gặp lại ngày mai.",
-              translation: "明天見。",
-              segments: [
-                { text: "Hẹn", meaning: "約", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "lại", meaning: "再", tail: " " },
-                { text: "ngày mai", meaning: "明天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mai là sinh nhật tôi.",
-              translation: "明天是我生日。",
+              sentence: "Mai gặp lại nhé.",
+              translation: "明天見喔。",
               segments: [
                 { text: "Mai", meaning: "明天", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sinh nhật", meaning: "生日", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mai bạn có rảnh không?",
-              translation: "你明天有空嗎？",
-              segments: [
-                { text: "Mai", meaning: "明天", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "rảnh", meaning: "空閒", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "gặp lại", meaning: "再見面", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
           ],
-          usage_note: "隔天。",
+          usage_note: "朋友道別最常用『Mai gặp!』（明天見）。",
           image_file: "tomorrow.png",
         },
         {
@@ -12520,44 +9631,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hôm qua",
-              pronunciation: ["/hom kwa/"],
-              specific_note: "",
+              pronunciation: ["/hom˧˧ kwaː˧˧/"],
+              specific_note: "前一天。",
               segments: [
-                { text: "Hôm", meaning: "日", tail: " " },
-                { text: "qua", meaning: "過/去", tail: "" },
+                { text: "Hôm", meaning: "天", tail: " " },
+                { text: "qua", meaning: "過/過去", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Sáng hôm qua.",
-              translation: "昨天早上。",
-              segments: [
-                { text: "Sáng", meaning: "早上", tail: " " },
-                { text: "hôm qua", meaning: "昨天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm qua bạn đi đâu?",
-              translation: "你昨天去哪裡？",
+              sentence: "Hôm qua vui ghê!",
+              translation: "昨天真開心！",
               segments: [
                 { text: "Hôm qua", meaning: "昨天", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "đâu", meaning: "哪裡", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Hôm qua trời mưa.",
-              translation: "昨天下雨了。",
-              segments: [
-                { text: "Hôm qua", meaning: "昨天", tail: " " },
-                { text: "trời", meaning: "天", tail: " " },
-                { text: "mưa", meaning: "雨", tail: "." },
+                { text: "vui", meaning: "開心", tail: " " },
+                { text: "ghê", meaning: "真/厲害(語助)", tail: "!" },
               ],
             },
           ],
-          usage_note: "前一天。",
+          usage_note: "指時間時放在句首或句尾都可以。",
           image_file: "yesterday.png",
         },
         {
@@ -12566,50 +9659,35 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ở đây",
-              pronunciation: ["/ə ɗəj/"],
-              specific_note: "在這",
+              pronunciation: ["/əː˧˩ ɗəj˧˧/"],
+              specific_note: "在這邊。",
               segments: [
                 { text: "Ở", meaning: "在", tail: " " },
                 { text: "đây", meaning: "這", tail: "" },
               ],
             },
-            {
-              term_target: "Đây",
-              pronunciation: ["/ɗəj/"],
-              specific_note: "這",
-              segments: [{ text: "Đây", meaning: "這", tail: "" }],
-            },
           ],
           examples: [
             {
-              sentence: "Lại đây.",
-              translation: "過來這裡。",
+              sentence: "Lại đây chơi.",
+              translation: "來這玩。",
               segments: [
-                { text: "Lại", meaning: "來/靠近", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
+                { text: "Lại", meaning: "來到", tail: " " },
+                { text: "đây", meaning: "這/這裡", tail: " " },
+                { text: "chơi", meaning: "玩", tail: "." },
               ],
             },
             {
-              sentence: "Tôi đang ở đây.",
-              translation: "我正在這裡。",
+              sentence: "Dừng ở đây ạ.",
+              translation: "（對司機說）停在這裡喔。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "ở đây", meaning: "在這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có gần đây không?",
-              translation: "離這裡近嗎？",
-              segments: [
-                { text: "Có", meaning: "有/是否", tail: " " },
-                { text: "gần", meaning: "近", tail: " " },
-                { text: "đây", meaning: "這", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "Dừng", meaning: "停", tail: " " },
+                { text: "ở đây", meaning: "這裡", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "." },
               ],
             },
           ],
-          usage_note: "近處。",
+          usage_note: "『Ăn đây hay mang về?』意思是「在這裡吃還是外帶？」。",
           image_file: "here.png",
         },
         {
@@ -12618,94 +9696,62 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ở đó",
-              pronunciation: ["/ə ɗɔ/"],
-              specific_note: "在那(中距離)",
+              pronunciation: ["/əː˧˩ ɗɔ˧˥/"],
+              specific_note: "在那裡（剛提到的或稍遠處）。",
               segments: [
                 { text: "Ở", meaning: "在", tail: " " },
                 { text: "đó", meaning: "那", tail: "" },
               ],
             },
             {
-              term_target: "Ở kia",
-              pronunciation: ["/ə kiə/"],
-              specific_note: "在那(遠距離)",
+              term_target: "Đằng kia",
+              pronunciation: ["/ɗaŋ˨˩ kiə˧˧/"],
+              specific_note: "在那邊（視覺上較遠的地方）。",
               segments: [
-                { text: "Ở", meaning: "在", tail: " " },
-                { text: "kia", meaning: "那(遠)", tail: "" },
+                { text: "Đằng", meaning: "方/向", tail: " " },
+                { text: "kia", meaning: "那", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Đi đến đó.",
-              translation: "去那裡。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "đó", meaning: "那裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhìn kìa.",
-              translation: "看那邊 (指遠處)。",
+              sentence: "Nhìn đằng kia kìa!",
+              translation: "看那邊那邊！",
               segments: [
                 { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "kìa", meaning: "那邊", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ai ở đó vậy?",
-              translation: "誰在那裡？",
-              segments: [
-                { text: "Ai", meaning: "誰", tail: " " },
-                { text: "ở đó", meaning: "在那", tail: " " },
-                { text: "vậy", meaning: "啊/呀", tail: "?" },
+                { text: "đằng kia", meaning: "那邊", tail: " " },
+                { text: "kìa", meaning: "喏/那個(加強)", tail: "!" },
               ],
             },
           ],
-          usage_note: "Đó (那)，Kia (那邊/遠處)。",
+          usage_note: "問路看到對方指著遠處，通常會聽到 Đằng kia。",
           image_file: "there.png",
         },
         {
           id: "tp-07",
-          term_zh: "天 (日期)",
+          term_zh: "天 / 日",
           related_terms: [
             {
               term_target: "Ngày",
-              pronunciation: ["/ŋaj/"],
-              specific_note: "",
-              segments: [{ text: "Ngày", meaning: "日/天", tail: "" }],
+              pronunciation: ["/ŋaj˨˩/"],
+              specific_note: "日子、天。",
+              segments: [{ text: "Ngày", meaning: "天", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Một ngày.",
-              translation: "一天。",
+              sentence: "Mỗi ngày em đều học tiếng Việt.",
+              translation: "我每天都學越南語。",
               segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "ngày", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúc một ngày tốt lành.",
-              translation: "祝你有美好的一天。",
-              segments: [
-                { text: "Chúc", meaning: "祝", tail: " " },
-                { text: "một", meaning: "一個", tail: " " },
-                { text: "ngày", meaning: "天", tail: " " },
-                { text: "tốt lành", meaning: "美好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mỗi ngày.",
-              translation: "每一天。",
-              segments: [
-                { text: "Mỗi", meaning: "每", tail: " " },
-                { text: "ngày", meaning: "天", tail: "." },
+                { text: "Mỗi ngày", meaning: "每天", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "đều", meaning: "都", tail: " " },
+                { text: "học", meaning: "學", tail: " " },
+                { text: "tiếng Việt", meaning: "越南語", tail: "." },
               ],
             },
           ],
-          usage_note: "計算時間的單位。",
+          usage_note: "『Ngày lễ』是節日。",
           image_file: "day.png",
         },
         {
@@ -12714,39 +9760,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Năm",
-              pronunciation: ["/nam/"],
-              specific_note: "",
+              pronunciation: ["/năm˧˧/"],
+              specific_note: "年份、歲。",
               segments: [{ text: "Năm", meaning: "年", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Năm nay.",
-              translation: "今年。",
+              sentence: "Năm nay em bao nhiêu tuổi?",
+              translation: "你今年幾歲？",
               segments: [
-                { text: "Năm", meaning: "年", tail: " " },
-                { text: "nay", meaning: "今/這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chúc mừng năm mới.",
-              translation: "新年快樂。",
-              segments: [
-                { text: "Chúc mừng", meaning: "祝賀", tail: " " },
-                { text: "năm", meaning: "年", tail: " " },
-                { text: "mới", meaning: "新", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm ngoái.",
-              translation: "去年。",
-              segments: [
-                { text: "Năm", meaning: "年", tail: " " },
-                { text: "ngoái", meaning: "過往/頭", tail: "." },
+                { text: "Năm nay", meaning: "今年", tail: " " },
+                { text: "em", meaning: "你", tail: " " },
+                { text: "bao nhiêu", meaning: "多少", tail: " " },
+                { text: "tuổi", meaning: "歲", tail: "?" },
               ],
             },
           ],
-          usage_note: "去年叫 Năm ngoái，明年叫 Năm sau。",
+          usage_note: "注意：去年叫 Năm ngoái，而不是 Năm trước。",
           image_file: "year.png",
         },
         {
@@ -12755,41 +9786,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tháng",
-              pronunciation: ["/tʰaŋ/"],
-              specific_note: "",
+              pronunciation: ["/tʰaːŋ˧˥/"],
+              specific_note: "月份。",
               segments: [{ text: "Tháng", meaning: "月", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tháng này.",
-              translation: "這個月。",
+              sentence: "Tháng sau em về Đài Loan.",
+              translation: "下個月我回台灣。",
               segments: [
-                { text: "Tháng", meaning: "月", tail: " " },
-                { text: "này", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tháng sau.",
-              translation: "下個月。",
-              segments: [
-                { text: "Tháng", meaning: "月", tail: " " },
-                { text: "sau", meaning: "後/下", tail: "." },
-              ],
-            },
-            {
-              sentence: "Một năm có 12 tháng.",
-              translation: "一年有12個月。",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "năm", meaning: "年", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "12", meaning: "十二", tail: " " },
-                { text: "tháng", meaning: "月", tail: "." },
+                { text: "Tháng sau", meaning: "下個月", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "về", meaning: "回", tail: " " },
+                { text: "Đài Loan", meaning: "台灣", tail: "." },
               ],
             },
           ],
-          usage_note: "月份。",
+          usage_note: "月份名稱很簡單：Tháng 1, Tháng 2... 直接加數字。",
           image_file: "month.png",
         },
         {
@@ -12798,41 +9812,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tuần",
-              pronunciation: ["/twiən/"],
-              specific_note: "",
+              pronunciation: ["/tuən˨˩/"],
+              specific_note: "週（漢越音：週）。",
               segments: [{ text: "Tuần", meaning: "週", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tuần sau.",
-              translation: "下週。",
+              sentence: "Cuối tuần đi chơi đi!",
+              translation: "週末去玩吧！",
               segments: [
-                { text: "Tuần", meaning: "週", tail: " " },
-                { text: "sau", meaning: "後/下", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mỗi tuần một lần.",
-              translation: "一週一次。",
-              segments: [
-                { text: "Mỗi", meaning: "每", tail: " " },
-                { text: "tuần", meaning: "週", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "lần", meaning: "次", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cuối tuần vui vẻ.",
-              translation: "週末愉快。",
-              segments: [
-                { text: "Cuối", meaning: "末/底", tail: " " },
-                { text: "tuần", meaning: "週", tail: " " },
-                { text: "vui vẻ", meaning: "快樂", tail: "." },
+                { text: "Cuối tuần", meaning: "週末", tail: " " },
+                { text: "đi chơi", meaning: "去玩", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
               ],
             },
           ],
-          usage_note: "週末 = Cuối tuần。",
+          usage_note:
+            "『週一』不叫 Thứ 1，而是從 Thứ 2 開始算（因為週日是第一個日子）。",
           image_file: "week.png",
         },
         {
@@ -12841,8 +9838,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Buổi sáng",
-              pronunciation: ["/buəj saːŋ/"],
-              specific_note: "",
+              pronunciation: ["/ɓuəj˧˩ saːŋ˧˥/"],
+              specific_note: "早晨（5:00 - 11:00）。",
               segments: [
                 { text: "Buổi", meaning: "時段", tail: " " },
                 { text: "sáng", meaning: "早/亮", tail: "" },
@@ -12851,32 +9848,17 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Vào buổi sáng.",
-              translation: "在早上。",
+              sentence: "Sáng nay anh ăn gì?",
+              translation: "今天早上你吃什麼？",
               segments: [
-                { text: "Vào", meaning: "進入/在", tail: " " },
-                { text: "buổi sáng", meaning: "早上", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chào buổi sáng.",
-              translation: "早安。",
-              segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi sáng", meaning: "早上", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi chạy bộ buổi sáng.",
-              translation: "我早上跑步。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chạy bộ", meaning: "跑步", tail: " " },
-                { text: "buổi sáng", meaning: "早上", tail: "." },
+                { text: "Sáng nay", meaning: "今天早上", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "gì", meaning: "什麼", tail: "?" },
               ],
             },
           ],
-          usage_note: "上午。",
+          usage_note: "早餐叫 Ăn sáng。",
           image_file: "morning.png",
         },
         {
@@ -12885,43 +9867,27 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Buổi chiều",
-              pronunciation: ["/buəj tʃiəw/"],
-              specific_note: "",
+              pronunciation: ["/ɓuəj˧˩ ciəw˨˩/"],
+              specific_note: "下午（14:00 - 18:00）。",
               segments: [
                 { text: "Buổi", meaning: "時段", tail: " " },
-                { text: "chiều", meaning: "下午/晚", tail: "" },
+                { text: "chiều", meaning: "下午", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Chào buổi chiều.",
-              translation: "午安。",
+              sentence: "Chiều nay em rảnh không?",
+              translation: "今天下午妳有空嗎？",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi chiều", meaning: "下午", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chiều nay gặp nhé.",
-              translation: "今天下午見。",
-              segments: [
-                { text: "Chiều", meaning: "下午", tail: " " },
-                { text: "nay", meaning: "今", tail: " " },
-                { text: "gặp", meaning: "見", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chiều chủ nhật.",
-              translation: "星期天下午。",
-              segments: [
-                { text: "Chiều", meaning: "下午", tail: " " },
-                { text: "chủ nhật", meaning: "週日", tail: "." },
+                { text: "Chiều nay", meaning: "今天下午", tail: " " },
+                { text: "em", meaning: "妳", tail: " " },
+                { text: "rảnh", meaning: "有空", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "中午12點後到太陽下山。",
+          usage_note: "『Chiều tà』是指傍晚太陽下山時。",
           image_file: "afternoon.png",
         },
         {
@@ -12930,45 +9896,28 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Buổi tối",
-              pronunciation: ["/buəj toj/"],
-              specific_note: "",
+              pronunciation: ["/ɓuəj˧˩ toj˧˥/"],
+              specific_note: "晚上（18:00 - 22:00）。",
               segments: [
                 { text: "Buổi", meaning: "時段", tail: " " },
-                { text: "tối", meaning: "晚/暗", tail: "" },
+                { text: "tối", meaning: "黑/晚", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Chào buổi tối.",
-              translation: "晚安 (問候)。",
+              sentence: "Tối nay đi uống bia không?",
+              translation: "今晚去喝啤酒嗎？",
               segments: [
-                { text: "Chào", meaning: "招呼", tail: " " },
-                { text: "buổi tối", meaning: "晚上", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tối nay rảnh không?",
-              translation: "今晚有空嗎？",
-              segments: [
-                { text: "Tối", meaning: "晚", tail: " " },
-                { text: "nay", meaning: "今", tail: " " },
-                { text: "rảnh", meaning: "空閒", tail: " " },
+                { text: "Tối nay", meaning: "今晚", tail: " " },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "bia", meaning: "啤酒", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
-            {
-              sentence: "Tôi xem tivi buổi tối.",
-              translation: "我晚上看電視。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "tivi", meaning: "電視", tail: " " },
-                { text: "buổi tối", meaning: "晚上", tail: "." },
-              ],
-            },
           ],
-          usage_note: "太陽下山後。",
+          usage_note: "晚上見面打招呼用『Chào buổi tối』。",
           image_file: "evening.png",
         },
         {
@@ -12977,8 +9926,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Buổi trưa",
-              pronunciation: ["/buəj tʃɨə/"],
-              specific_note: "",
+              pronunciation: ["/ɓuəj˧˩ cɨə˧˧/"],
+              specific_note: "中午（11:00 - 14:00）。",
               segments: [
                 { text: "Buổi", meaning: "時段", tail: " " },
                 { text: "trưa", meaning: "中午", tail: "" },
@@ -12987,31 +9936,15 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Vào buổi trưa.",
-              translation: "在中午。",
+              sentence: "Nghỉ trưa một chút.",
+              translation: "午休一下。",
               segments: [
-                { text: "Vào", meaning: "在", tail: " " },
-                { text: "buổi trưa", meaning: "中午", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ăn trưa.",
-              translation: "吃午餐。",
-              segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "trưa", meaning: "午(餐)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghỉ trưa.",
-              translation: "午休。",
-              segments: [
-                { text: "Nghỉ", meaning: "休息", tail: " " },
-                { text: "trưa", meaning: "中午", tail: "." },
+                { text: "Nghỉ trưa", meaning: "午休", tail: " " },
+                { text: "một chút", meaning: "一點點", tail: "." },
               ],
             },
           ],
-          usage_note: "約11:00-13:00。",
+          usage_note: "越南人有非常強烈的午睡（Ngủ trưa）習慣。",
           image_file: "noon.png",
         },
         {
@@ -13019,46 +9952,28 @@ export const vietnameseData: AppData = {
           term_zh: "前面",
           related_terms: [
             {
-              term_target: "Phía trước",
-              pronunciation: ["/fiə tʃɨək/"],
-              specific_note: "",
+              term_target: "Đằng trước",
+              pronunciation: ["/ɗaŋ˨˩ cɨək˧˥/"],
+              specific_note: "在前方。",
               segments: [
-                { text: "Phía", meaning: "方/邊", tail: " " },
+                { text: "Đằng", meaning: "向/面", tail: " " },
                 { text: "trước", meaning: "前", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Ở phía trước bạn.",
-              translation: "在你前面。",
+              sentence: "Nhà em ở ngay đằng trước.",
+              translation: "我家就在前面。",
               segments: [
-                { text: "Ở", meaning: "在", tail: " " },
-                { text: "phía trước", meaning: "前面", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đợi ở trước ga.",
-              translation: "在車站前等。",
-              segments: [
-                { text: "Đợi", meaning: "等", tail: " " },
+                { text: "Nhà em", meaning: "我家", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "trước", meaning: "前", tail: " " },
-                { text: "ga", meaning: "車站", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đừng đứng đằng trước.",
-              translation: "不要站在前面 (口語常說 Đằng trước)。",
-              segments: [
-                { text: "Đừng", meaning: "別", tail: " " },
-                { text: "đứng", meaning: "站", tail: " " },
+                { text: "ngay", meaning: "就/立刻", tail: " " },
                 { text: "đằng trước", meaning: "前面", tail: "." },
               ],
             },
           ],
-          usage_note: "前方。",
+          usage_note: "指方向時很常用。",
           image_file: "front.png",
         },
         {
@@ -13066,44 +9981,27 @@ export const vietnameseData: AppData = {
           term_zh: "後面",
           related_terms: [
             {
-              term_target: "Phía sau",
-              pronunciation: ["/fiə saw/"],
-              specific_note: "",
+              term_target: "Đằng sau",
+              pronunciation: ["/ɗaŋ˨˩ saːw˧˧/"],
+              specific_note: "在後方。",
               segments: [
-                { text: "Phía", meaning: "方", tail: " " },
+                { text: "Đằng", meaning: "面", tail: " " },
                 { text: "sau", meaning: "後", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Sau cánh cửa.",
-              translation: "門後面。",
-              segments: [
-                { text: "Sau", meaning: "後", tail: " " },
-                { text: "cánh cửa", meaning: "門扇", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nhìn ra sau.",
-              translation: "向後看。",
-              segments: [
-                { text: "Nhìn", meaning: "看", tail: " " },
-                { text: "ra", meaning: "往/出", tail: " " },
-                { text: "sau", meaning: "後", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi ra đằng sau.",
-              translation: "去後面 (口語常說 Đằng sau)。",
+              sentence: "Đi cửa đằng sau.",
+              translation: "走後門。",
               segments: [
                 { text: "Đi", meaning: "走", tail: " " },
-                { text: "ra", meaning: "往", tail: " " },
+                { text: "cửa", meaning: "門", tail: " " },
                 { text: "đằng sau", meaning: "後面", tail: "." },
               ],
             },
           ],
-          usage_note: "後方。",
+          usage_note: "『Phía sau』也是後面的意思，較為正式。",
           image_file: "behind.png",
         },
         {
@@ -13112,41 +10010,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bên trái",
-              pronunciation: ["/ben tʃaj/"],
-              specific_note: "",
+              pronunciation: ["/ɓen˧˧ caːj˧˥/"],
+              specific_note: "左側。",
               segments: [
-                { text: "Bên", meaning: "邊", tail: " " },
+                { text: "Bên", meaning: "側/邊", tail: " " },
                 { text: "trái", meaning: "左", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Rẽ trái.",
-              translation: "左轉。",
+              sentence: "Rẽ trái nhé anh.",
+              translation: "哥，（等下）左轉喔。",
               segments: [
-                { text: "Rẽ", meaning: "轉彎", tail: " " },
-                { text: "trái", meaning: "左", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ở bên trái.",
-              translation: "在左邊。",
-              segments: [
-                { text: "Ở", meaning: "在", tail: " " },
-                { text: "bên trái", meaning: "左邊", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tay trái.",
-              translation: "左手。",
-              segments: [
-                { text: "Tay", meaning: "手", tail: " " },
-                { text: "trái", meaning: "左", tail: "." },
+                { text: "Rẽ trái", meaning: "左轉", tail: " " },
+                { text: "nhé", meaning: "喔", tail: " " },
+                { text: "anh", meaning: "你(司機)", tail: "." },
               ],
             },
           ],
-          usage_note: "左側。",
+          usage_note: "搭車指路必備。",
           image_file: "left.png",
         },
         {
@@ -13155,41 +10038,27 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bên phải",
-              pronunciation: ["/ben faj/"],
-              specific_note: "",
+              pronunciation: ["/ɓen˧˧ faːj˧˩/"],
+              specific_note: "右側。",
               segments: [
-                { text: "Bên", meaning: "邊", tail: " " },
+                { text: "Bên", meaning: "側/邊", tail: " " },
                 { text: "phải", meaning: "右", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Rẽ phải.",
-              translation: "右轉。",
+              sentence: "Nó ở bên phải đường.",
+              translation: "它在馬路右邊。",
               segments: [
-                { text: "Rẽ", meaning: "轉彎", tail: " " },
-                { text: "phải", meaning: "右", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ở bên phải.",
-              translation: "在右邊。",
-              segments: [
-                { text: "Ở", meaning: "在", tail: " " },
-                { text: "bên phải", meaning: "右邊", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tay phải.",
-              translation: "右手。",
-              segments: [
-                { text: "Tay", meaning: "手", tail: " " },
-                { text: "phải", meaning: "右", tail: "." },
+                { text: "Nó", meaning: "它", tail: " " },
+                { text: "ở", meaning: "在", tail: " " },
+                { text: "bên phải", meaning: "右邊", tail: " " },
+                { text: "đường", meaning: "路", tail: "." },
               ],
             },
           ],
-          usage_note: "Phải 也有「正確」或「必須」的意思，看上下文。",
+          usage_note: "注意：Phải 同時也有「必須、正確」的意思。",
           image_file: "right.png",
         },
         {
@@ -13198,43 +10067,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bên cạnh",
-              pronunciation: ["/ben kaɲ/"],
-              specific_note: "",
+              pronunciation: ["/ɓen˧˧ ka̰ːɲ˨˩/"],
+              specific_note: "在身邊、隔壁。",
               segments: [
-                { text: "Bên", meaning: "邊", tail: " " },
-                { text: "cạnh", meaning: "旁/側", tail: "" },
+                { text: "Bên", meaning: "側", tail: " " },
+                { text: "cạnh", meaning: "邊/稜", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Ngồi cạnh tôi.",
-              translation: "坐我旁邊。",
+              sentence: "Ngồi bên cạnh em.",
+              translation: "坐在我旁邊。",
               segments: [
                 { text: "Ngồi", meaning: "坐", tail: " " },
-                { text: "cạnh", meaning: "旁", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Kế bên ngân hàng.",
-              translation: "在銀行隔壁 (口語常說 Kế bên)。",
-              segments: [
-                { text: "Kế bên", meaning: "隔壁/旁邊", tail: " " },
-                { text: "ngân hàng", meaning: "銀行", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ai ngồi bên cạnh?",
-              translation: "誰坐旁邊？",
-              segments: [
-                { text: "Ai", meaning: "誰", tail: " " },
-                { text: "ngồi", meaning: "坐", tail: " " },
-                { text: "bên cạnh", meaning: "旁邊", tail: "?" },
+                { text: "bên cạnh", meaning: "旁邊", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
               ],
             },
           ],
-          usage_note: "側邊。",
+          usage_note: "形容位置很靠近。",
           image_file: "beside.png",
         },
         {
@@ -13243,42 +10095,27 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Đối diện",
-              pronunciation: ["/ɗoj ziən/"],
-              specific_note: "漢語:對面",
+              pronunciation: ["/ɗoj˧˥ ziən˨˩/"],
+              specific_note: "正對著（漢越音：對面）。",
               segments: [
-                { text: "Đối", meaning: "對", tail: " " },
+                { text: "Đối", meaning: "對", tail: "" },
                 { text: "diện", meaning: "面", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Đối diện ngân hàng.",
-              translation: "銀行對面。",
+              sentence: "Khách sạn ở đối diện chợ.",
+              translation: "飯店在市場對面。",
               segments: [
-                { text: "Đối diện", meaning: "對面", tail: " " },
-                { text: "ngân hàng", meaning: "銀行", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ngồi đối diện.",
-              translation: "坐對面。",
-              segments: [
-                { text: "Ngồi", meaning: "坐", tail: " " },
-                { text: "đối diện", meaning: "對面", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cửa hàng ở đối diện.",
-              translation: "商店在對面。",
-              segments: [
-                { text: "Cửa hàng", meaning: "商店", tail: " " },
+                { text: "Khách sạn", meaning: "飯店", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "đối diện", meaning: "對面", tail: "." },
+                { text: "đối diện", meaning: "對面", tail: " " },
+                { text: "chợ", meaning: "市場", tail: "." },
               ],
             },
           ],
-          usage_note: "找路時常用。",
+          usage_note: "找標的物時非常好用。",
           image_file: "across_from.png",
         },
         {
@@ -13287,8 +10124,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mùa xuân",
-              pronunciation: ["/muə swən/"],
-              specific_note: "",
+              pronunciation: ["/muə˨˩ swən˧˧/"],
+              specific_note: "一年之始（漢越音：季節 春）。",
               segments: [
                 { text: "Mùa", meaning: "季節", tail: " " },
                 { text: "xuân", meaning: "春", tail: "" },
@@ -13297,35 +10134,16 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Mùa xuân đến rồi.",
-              translation: "春天來了。",
+              sentence: "Mùa xuân có Tết.",
+              translation: "春天有春節（過年）。",
               segments: [
                 { text: "Mùa xuân", meaning: "春天", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích mùa xuân.",
-              translation: "我喜歡春天。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "mùa xuân", meaning: "春天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hoa nở vào mùa xuân.",
-              translation: "花在春天盛開。",
-              segments: [
-                { text: "Hoa", meaning: "花", tail: " " },
-                { text: "nở", meaning: "開", tail: " " },
-                { text: "vào", meaning: "在(時間)", tail: " " },
-                { text: "mùa xuân", meaning: "春天", tail: "." },
+                { text: "có", meaning: "有", tail: " " },
+                { text: "Tết", meaning: "春節/過年", tail: "." },
               ],
             },
           ],
-          usage_note: "農曆年在春天，叫 Tết。",
+          usage_note: "春天是越南最重要的季節，因為有農曆新年。",
           image_file: "spring.png",
         },
         {
@@ -13334,43 +10152,26 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mùa hè",
-              pronunciation: ["/muə hɛ/"],
-              specific_note: "口語",
+              pronunciation: ["/muə˨˩ hɛ˨˩/"],
+              specific_note: "北越常用此詞。",
               segments: [
-                { text: "Mùa", meaning: "季", tail: " " },
+                { text: "Mùa", meaning: "季節", tail: " " },
                 { text: "hè", meaning: "夏", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Mùa hè nóng.",
-              translation: "夏天很熱。",
+              sentence: "Mùa hè đi tắm biển.",
+              translation: "夏天去海水浴場（游泳）。",
               segments: [
                 { text: "Mùa hè", meaning: "夏天", tail: " " },
-                { text: "nóng", meaning: "熱", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi bơi vào mùa hè.",
-              translation: "夏天去游泳。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "bơi", meaning: "游", tail: " " },
-                { text: "vào", meaning: "在", tail: " " },
-                { text: "mùa hè", meaning: "夏天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghỉ hè.",
-              translation: "暑假 (夏休)。",
-              segments: [
-                { text: "Nghỉ", meaning: "休息", tail: " " },
-                { text: "hè", meaning: "夏", tail: "." },
+                { text: "đi", meaning: "去", tail: " " },
+                { text: "tắm biển", meaning: "洗澡大海/游泳", tail: "." },
               ],
             },
           ],
-          usage_note: "正式說法是 Mùa hạ，但口語多說 Mùa hè。",
+          usage_note: "南越人有時會說 Mùa nắng (陽光季/旱季)。",
           image_file: "summer.png",
         },
         {
@@ -13379,41 +10180,27 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mùa thu",
-              pronunciation: ["/muə tʰu/"],
-              specific_note: "",
+              pronunciation: ["/muə˨˩ tʰu˧˧/"],
+              specific_note: "漢越音：季節 秋。",
               segments: [
-                { text: "Mùa", meaning: "季", tail: " " },
+                { text: "Mùa", meaning: "季節", tail: " " },
                 { text: "thu", meaning: "秋", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Mùa thu mát mẻ.",
-              translation: "秋天很涼爽。",
+              sentence: "Mùa thu Hà Nội rất đẹp.",
+              translation: "河內的秋天非常美。",
               segments: [
                 { text: "Mùa thu", meaning: "秋天", tail: " " },
-                { text: "mát mẻ", meaning: "涼爽", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lá mùa thu.",
-              translation: "秋天的葉子。",
-              segments: [
-                { text: "Lá", meaning: "葉", tail: " " },
-                { text: "mùa thu", meaning: "秋天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mùa thu Hà Nội.",
-              translation: "河內的秋天 (很有名)。",
-              segments: [
-                { text: "Mùa thu", meaning: "秋天", tail: " " },
-                { text: "Hà Nội", meaning: "河內", tail: "." },
+                { text: "Hà Nội", meaning: "河內", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
+                { text: "đẹp", meaning: "美", tail: "." },
               ],
             },
           ],
-          usage_note: "季節。",
+          usage_note: "河內的秋天是越南最浪漫的旅遊時節。",
           image_file: "autumn.png",
         },
         {
@@ -13422,51 +10209,33 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mùa đông",
-              pronunciation: ["/muə ɗəwŋ͡m/"],
-              specific_note: "",
+              pronunciation: ["/muə˨˩ ɗəwŋm˧˧/"],
+              specific_note: "漢越音：季節 冬。",
               segments: [
-                { text: "Mùa", meaning: "季", tail: " " },
+                { text: "Mùa", meaning: "季節", tail: " " },
                 { text: "đông", meaning: "冬", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Mùa đông lạnh.",
-              translation: "冬天很冷。",
+              sentence: "Mùa đông rất lạnh.",
+              translation: "冬天非常冷。",
               segments: [
                 { text: "Mùa đông", meaning: "冬天", tail: " " },
+                { text: "rất", meaning: "非常", tail: " " },
                 { text: "lạnh", meaning: "冷", tail: "." },
               ],
             },
-            {
-              sentence: "Bạn thích mùa đông không?",
-              translation: "你喜歡冬天嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "mùa đông", meaning: "冬天", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Mùa đông có tuyết.",
-              translation: "冬天有雪 (沙壩 Sapa 會有)。",
-              segments: [
-                { text: "Mùa đông", meaning: "冬天", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "tuyết", meaning: "雪", tail: "." },
-              ],
-            },
           ],
-          usage_note: "季節。",
+          usage_note: "南越沒有冬天，但北越（如河內）冬天會低於10度喔！",
           image_file: "winter.png",
         },
       ],
     },
     {
-      id: "conjunctions",
-      name: "連接詞 (越南語)",
+      id: "conjunctions_vn",
+      name: "常用連接詞",
       items: [
         {
           id: "conj-01",
@@ -13474,49 +10243,53 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hay",
-              pronunciation: ["/haj/"],
-              specific_note: "常用於問句",
+              pronunciation: ["/haj˧˧/"],
+              specific_note: "專用於問句中的「或者」（二選一）。",
               segments: [{ text: "Hay", meaning: "或者/還是", tail: "" }],
             },
             {
               term_target: "Hoặc",
-              pronunciation: ["/hwak/"],
-              specific_note: "常用於肯定句",
-              segments: [{ text: "Hoặc", meaning: "或是", tail: "" }],
+              pronunciation: ["/hwək˨˩/"],
+              specific_note: "用於肯定句中的「或者」。",
+              segments: [{ text: "Hoặc", meaning: "或者", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Trà hay cà phê?",
-              translation: "茶還是咖啡？",
+              sentence: "Uống trà hay cà phê?",
+              translation: "喝茶還是咖啡？",
               segments: [
-                { text: "Trà", meaning: "茶", tail: " " },
+                { text: "Uống", meaning: "喝", tail: " " },
+                { text: "trà", meaning: "茶", tail: " " },
                 { text: "hay", meaning: "還是", tail: " " },
                 { text: "cà phê", meaning: "咖啡", tail: "?" },
               ],
             },
             {
-              sentence: "Sáng hay chiều?",
-              translation: "早上還是下午？",
+              sentence: "Hôm nay hoặc ngày mai đều được.",
+              translation: "今天或者明天都可以。",
               segments: [
-                { text: "Sáng", meaning: "早上", tail: " " },
-                { text: "hay", meaning: "還是", tail: " " },
-                { text: "chiều", meaning: "下午", tail: "?" },
+                { text: "Hôm nay", meaning: "今天", tail: " " },
+                { text: "hoặc", meaning: "或者", tail: " " },
+                { text: "ngày mai", meaning: "明天", tail: " " },
+                { text: "đều được", meaning: "都可以", tail: "." },
               ],
             },
             {
-              sentence: "Bạn đi hay tôi đi?",
-              translation: "你去還是我去？",
+              sentence: "Anh đi bằng Grab hay taxi?",
+              translation: "你搭 Grab 還是計程車？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "đi", meaning: "去/搭乘", tail: " " },
+                { text: "bằng", meaning: "藉由", tail: " " },
+                { text: "Grab", meaning: "叫車軟體", tail: " " },
                 { text: "hay", meaning: "還是", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: "?" },
+                { text: "taxi", meaning: "計程車", tail: "?" },
               ],
             },
           ],
-          usage_note: "做選擇時用 Hay。",
+          usage_note:
+            "問別人要選哪個，請務必用 Hay。如果是陳述事實，則用 Hoặc。",
           image_file: "or.png",
         },
         {
@@ -13525,141 +10298,135 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Nhưng",
-              pronunciation: ["/ɲɨŋ/"],
-              specific_note: "轉折",
+              pronunciation: ["/ɲɨŋ˧˧/"],
+              specific_note: "最通用的「但是」。",
               segments: [{ text: "Nhưng", meaning: "但是", tail: "" }],
+            },
+            {
+              term_target: "Nhưng mà",
+              pronunciation: ["/ɲɨŋ˧˧ maː˨˩/"],
+              specific_note: "更口語的說法，語氣較軟。",
+              segments: [
+                { text: "Nhưng", meaning: "但", tail: " " },
+                { text: "mà", meaning: "而/語氣助詞", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi thích nhưng không mua.",
-              translation: "我喜歡，但是不買。",
+              sentence: "Cái này đẹp nhưng đắt quá.",
+              translation: "這個漂亮，但是太貴了。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "đẹp", meaning: "漂亮", tail: " " },
                 { text: "nhưng", meaning: "但是", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "mua", meaning: "買", tail: "." },
+                { text: "đắt", meaning: "貴", tail: " " },
+                { text: "quá", meaning: "太", tail: "." },
               ],
             },
             {
-              sentence: "Đẹp nhưng đắt.",
-              translation: "很美但是很貴。",
+              sentence: "Em muốn đi, nhưng mà em bận.",
+              translation: "我想去，但是我很忙。",
               segments: [
-                { text: "Đẹp", meaning: "美", tail: " " },
-                { text: "nhưng", meaning: "但是", tail: " " },
-                { text: "đắt", meaning: "貴", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xin lỗi nhưng tôi bận.",
-              translation: "抱歉，但我很忙。",
-              segments: [
-                { text: "Xin lỗi", meaning: "抱歉", tail: " " },
-                { text: "nhưng", meaning: "但是", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "muốn", meaning: "想", tail: " " },
+                { text: "đi", meaning: "去", tail: ", " },
+                { text: "nhưng mà", meaning: "但是", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
                 { text: "bận", meaning: "忙", tail: "." },
               ],
             },
           ],
-          usage_note: "語氣轉折。",
+          usage_note: "口語中越南人常連讀為『Nhưng mà』。",
           image_file: "but.png",
         },
         {
           id: "conj-03",
-          term_zh: "所以",
+          term_zh: "所以 / 因而",
           related_terms: [
             {
               term_target: "Nên",
-              pronunciation: ["/nen/"],
-              specific_note: "結果",
+              pronunciation: ["/nen˧˧/"],
+              specific_note: "表示結果，最常用。",
               segments: [{ text: "Nên", meaning: "所以", tail: "" }],
+            },
+            {
+              term_target: "Cho nên",
+              pronunciation: ["/cɔ˧˧ nen˧˧/"],
+              specific_note: "較正式或強調結果。",
+              segments: [
+                { text: "Cho", meaning: "使", tail: " " },
+                { text: "nên", meaning: "所以", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Trời mưa nên tôi ở nhà.",
-              translation: "下雨了，所以我待在家。",
+              sentence: "Em đói nên em ăn.",
+              translation: "我餓了，所以我吃東西。",
               segments: [
-                { text: "Trời mưa", meaning: "下雨", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đói", meaning: "餓", tail: " " },
                 { text: "nên", meaning: "所以", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "ăn", meaning: "吃", tail: "." },
               ],
             },
             {
-              sentence: "Mệt quá nên đi ngủ.",
-              translation: "太累了，所以去睡覺。",
+              sentence: "Trời mưa nên đi taxi đi.",
+              translation: "下雨了，所以搭計程車吧。",
               segments: [
-                { text: "Mệt", meaning: "累", tail: " " },
-                { text: "quá", meaning: "太", tail: " " },
+                { text: "Trời mưa", meaning: "天雨/下雨", tail: " " },
                 { text: "nên", meaning: "所以", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thích nên mua.",
-              translation: "喜歡所以買了。",
-              segments: [
-                { text: "Thích", meaning: "喜歡", tail: " " },
-                { text: "nên", meaning: "所以", tail: " " },
-                { text: "mua", meaning: "買", tail: "." },
+                { text: "đi", meaning: "搭乘/去", tail: " " },
+                { text: "taxi", meaning: "計程車", tail: " " },
+                { text: "đi", meaning: "吧(祈使)", tail: "." },
               ],
             },
           ],
-          usage_note: "表示因果關係。",
+          usage_note: "口語中單用一個 Nên 放在句子中間連接結果非常方便。",
           image_file: "so.png",
         },
         {
           id: "conj-04",
-          term_zh: "以及 / 和",
+          term_zh: "和 / 跟 / 以及",
           related_terms: [
             {
               term_target: "Và",
-              pronunciation: ["/va/"],
-              specific_note: "和",
+              pronunciation: ["/vaː˨˩/"],
+              specific_note: "標準的「和」，用於連結兩個並列的東西。",
               segments: [{ text: "Và", meaning: "和", tail: "" }],
             },
             {
               term_target: "Với",
-              pronunciation: ["/vəj/"],
-              specific_note: "跟/與",
-              segments: [{ text: "Với", meaning: "跟", tail: "" }],
+              pronunciation: ["/vəj˧˥/"],
+              specific_note: "口語中常當作「跟...一起」。",
+              segments: [{ text: "Với", meaning: "跟/與", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi và bạn.",
-              translation: "我和你。",
+              sentence: "Anh và em.",
+              translation: "你和我。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Anh", meaning: "哥(你)", tail: " " },
                 { text: "và", meaning: "和", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
+                { text: "em", meaning: "妹(我)", tail: "." },
               ],
             },
             {
-              sentence: "Bánh mì và trứng.",
-              translation: "麵包加(和)蛋。",
+              sentence: "Cho em bánh mì với trứng.",
+              translation: "給我一份麵包（和）加蛋。",
               segments: [
-                { text: "Bánh mì", meaning: "麵包", tail: " " },
-                { text: "và", meaning: "和", tail: " " },
-                { text: "trứng", meaning: "蛋", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đi với tôi nhé.",
-              translation: "跟我一起去吧。",
-              segments: [
-                { text: "Đi", meaning: "去", tail: " " },
-                { text: "với", meaning: "跟/和", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
+                { text: "Cho em", meaning: "給我", tail: " " },
+                { text: "bánh mì", meaning: "法國麵包", tail: " " },
+                { text: "với", meaning: "跟/與", tail: " " },
+                { text: "trứng", meaning: "雞蛋", tail: "." },
               ],
             },
           ],
-          usage_note: "連接兩者。口語中 With (Với) 常被用來代替 And。",
+          usage_note:
+            "點餐時想在主要食物外加點東西，用 Với 會比 Và 更有「加點」的感覺。",
           image_file: "and.png",
         },
         {
@@ -13668,48 +10435,44 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Vì",
-              pronunciation: ["/vi/"],
-              specific_note: "通用",
-              segments: [{ text: "Vì", meaning: "因為", tail: "" }],
+              pronunciation: ["/vi˨˩/"],
+              specific_note: "解釋原因，最簡便。",
+              segments: [{ text: "Vì", meaning: "因", tail: "" }],
             },
             {
-              term_target: "Tại",
-              pronunciation: ["/taj/"],
-              specific_note: "歸咎/因為",
-              segments: [{ text: "Tại", meaning: "因為", tail: "" }],
+              term_target: "Tại vì",
+              pronunciation: ["/taːj˨˩ vi˨˩/"],
+              specific_note: "更強烈地強調原因，類似「都是因為...」。",
+              segments: [
+                { text: "Tại", meaning: "由於", tail: " " },
+                { text: "vì", meaning: "因為", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Tại sao? Vì tôi thích.",
-              translation: "為什麼？因為我喜歡。",
+              sentence: "Em đến muộn vì tắc đường.",
+              translation: "我遲到了，因為塞車。",
               segments: [
-                { text: "Tại sao", meaning: "為什麼", tail: "? " },
-                { text: "Vì", meaning: "因為", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Xin lỗi vì đến muộn.",
-              translation: "抱歉因為遲到了。",
-              segments: [
-                { text: "Xin lỗi", meaning: "抱歉", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đến muộn", meaning: "來晚/遲到", tail: " " },
                 { text: "vì", meaning: "因為", tail: " " },
-                { text: "đến", meaning: "來", tail: " " },
-                { text: "muộn", meaning: "晚", tail: "." },
+                { text: "tắc đường", meaning: "塞車/堵路", tail: "." },
               ],
             },
             {
-              sentence: "Tại kẹt xe.",
-              translation: "因為塞車 (歸咎於塞車)。",
+              sentence: "Em thích vì nó tốt.",
+              translation: "我喜歡是因為它很好。",
               segments: [
-                { text: "Tại", meaning: "因為/怪", tail: " " },
-                { text: "kẹt xe", meaning: "塞車", tail: "." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "vì", meaning: "因為", tail: " " },
+                { text: "nó", meaning: "它", tail: " " },
+                { text: "tốt", meaning: "好", tail: "." },
               ],
             },
           ],
-          usage_note: "最常用 Vì。壞事的原因有時用 Tại。",
+          usage_note: "越南交通繁忙，『Tắc đường』（塞車）是遲到最常用的理由。",
           image_file: "because.png",
         },
       ],
@@ -13720,71 +10483,57 @@ export const vietnameseData: AppData = {
       items: [
         {
           id: "prep-01",
-          term_zh: "和...一起 / 跟",
+          term_zh: "和...一起 / 與",
           related_terms: [
             {
               term_target: "Với",
-              pronunciation: ["/vəj/"],
-              specific_note: "跟/和",
-              segments: [{ text: "Với", meaning: "和", tail: "" }],
-            },
-            {
-              term_target: "Cùng",
-              pronunciation: ["/kuŋ͡m/"],
-              specific_note: "一起",
-              segments: [{ text: "Cùng", meaning: "共/同", tail: "" }],
+              pronunciation: ["/vəj˧˥/"],
+              specific_note: "伴隨某人或在飲料中添加東西。",
+              segments: [{ text: "Với", meaning: "和/與/加", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đi với tôi.",
-              translation: "跟我走(來)。",
+              sentence: "Đi chơi với em nhé.",
+              translation: "跟我一起去玩喔。",
               segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "với", meaning: "跟", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
+                { text: "Đi chơi", meaning: "去玩", tail: " " },
+                { text: "với", meaning: "和", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "nhé", meaning: "喔", tail: "." },
               ],
             },
             {
-              sentence: "Tôi sống với gia đình.",
-              translation: "我跟家人住。",
+              sentence: "Cà phê sữa với nhiều đá.",
+              translation: "奶咖（加）多一點冰塊。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "sống", meaning: "住/生活", tail: " " },
-                { text: "với", meaning: "跟", tail: " " },
-                { text: "gia đình", meaning: "家庭", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bánh mì với trứng.",
-              translation: "麵包配(加)蛋。",
-              segments: [
-                { text: "Bánh mì", meaning: "麵包", tail: " " },
-                { text: "với", meaning: "加/和", tail: " " },
-                { text: "trứng", meaning: "蛋", tail: "." },
+                { text: "Cà phê sữa", meaning: "奶咖", tail: " " },
+                { text: "với", meaning: "加/與", tail: " " },
+                { text: "nhiều", meaning: "多", tail: " " },
+                { text: "đá", meaning: "冰塊", tail: "." },
               ],
             },
           ],
-          usage_note: "表示伴隨關係。",
+          usage_note: "點餐時想加料（如加蛋、加冰）可以用 với。",
           image_file: "with.png",
         },
         {
           id: "prep-02",
-          term_zh: "從...",
+          term_zh: "從... / 來自",
           related_terms: [
             {
               term_target: "Từ",
-              pronunciation: ["/tɨ/"],
-              specific_note: "來源/起點",
-              segments: [{ text: "Từ", meaning: "從/自", tail: "" }],
+              pronunciation: ["/tɨ˨˩/"],
+              specific_note: "時間或空間的起點。",
+              segments: [{ text: "Từ", meaning: "從", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đến từ Đài Loan.",
+              sentence: "Em đến từ Đài Loan.",
               translation: "我來自台灣。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "đến", meaning: "來到", tail: " " },
                 { text: "từ", meaning: "從", tail: " " },
                 { text: "Đài Loan", meaning: "台灣", tail: "." },
@@ -13795,214 +10544,146 @@ export const vietnameseData: AppData = {
               translation: "從早到晚。",
               segments: [
                 { text: "Từ", meaning: "從", tail: " " },
-                { text: "sáng", meaning: "早", tail: " " },
+                { text: "sáng", meaning: "早上", tail: " " },
                 { text: "đến", meaning: "到", tail: " " },
-                { text: "tối", meaning: "晚", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cách đây không xa.",
-              translation: "離(從)這裡不遠。",
-              segments: [
-                { text: "Cách", meaning: "距離", tail: " " },
-                { text: "đây", meaning: "這", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "xa", meaning: "遠", tail: "." },
+                { text: "tối", meaning: "晚上", tail: "." },
               ],
             },
           ],
-          usage_note: "表示時間或地點的起點。",
+          usage_note: "自我介紹必備：『Đến từ + 地名』。",
           image_file: "from.png",
         },
         {
           id: "prep-03",
-          term_zh: "為了 / 給",
+          term_zh: "給 / 為了",
           related_terms: [
             {
               term_target: "Cho",
-              pronunciation: ["/tʃɔ/"],
-              specific_note: "給/為",
-              segments: [{ text: "Cho", meaning: "給", tail: "" }],
-            },
-            {
-              term_target: "Để",
-              pronunciation: ["/ɗe/"],
-              specific_note: "為了(目的)",
-              segments: [{ text: "Để", meaning: "為了", tail: "" }],
+              pronunciation: ["/cɔ˧˧/"],
+              specific_note: "給予某人，或為了某個對象。",
+              segments: [{ text: "Cho", meaning: "給/為了", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Cái này cho bạn.",
-              translation: "這是給你的。",
+              sentence: "Cái này cho anh.",
+              translation: "這個給你（哥）。",
               segments: [
                 { text: "Cái này", meaning: "這個", tail: " " },
                 { text: "cho", meaning: "給", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
+                { text: "anh", meaning: "哥(你)", tail: "." },
               ],
             },
             {
-              sentence: "Tốt cho sức khỏe.",
-              translation: "對(為了)健康好。",
+              sentence: "Làm cho vui thôi.",
+              translation: "只是做開心的而已（為了好玩）。",
               segments: [
-                { text: "Tốt", meaning: "好", tail: " " },
-                { text: "cho", meaning: "給/對", tail: " " },
-                { text: "sức khỏe", meaning: "健康", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi học để đi làm.",
-              translation: "我為了工作而學習。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "học", meaning: "學", tail: " " },
-                { text: "để", meaning: "為了", tail: " " },
-                { text: "đi làm", meaning: "上班", tail: "." },
+                { text: "Làm", meaning: "做", tail: " " },
+                { text: "cho", meaning: "為了/使", tail: " " },
+                { text: "vui", meaning: "開心", tail: " " },
+                { text: "thôi", meaning: "而已", tail: "." },
               ],
             },
           ],
-          usage_note: "給人用 Cho，表目的用 Để。",
+          usage_note: "Cho 可以當動詞「給」，也可以當介系詞「為」。",
           image_file: "for.png",
         },
         {
           id: "prep-04",
-          term_zh: "...的",
+          term_zh: "...的 (所有格)",
           related_terms: [
             {
               term_target: "Của",
-              pronunciation: ["/kuə/"],
-              specific_note: "所有格",
+              pronunciation: ["/kuə˧˩/"],
+              specific_note: "屬於...的。",
               segments: [{ text: "Của", meaning: "的", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Sách của tôi.",
-              translation: "我的書。",
+              sentence: "Đây là xe của em.",
+              translation: "這是我的車。",
               segments: [
-                { text: "Sách", meaning: "書", tail: " " },
+                { text: "Đây", meaning: "這", tail: " " },
+                { text: "là", meaning: "是", tail: " " },
+                { text: "xe", meaning: "車", tail: " " },
                 { text: "của", meaning: "的", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "Màu của xe.",
-              translation: "車子的顏色。",
-              segments: [
-                { text: "Màu", meaning: "顏色", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "xe", meaning: "車", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn của anh ấy.",
-              translation: "他的朋友。",
-              segments: [
-                { text: "Bạn", meaning: "朋友", tail: " " },
-                { text: "của", meaning: "的", tail: " " },
-                { text: "anh ấy", meaning: "他", tail: "." },
+                { text: "em", meaning: "我", tail: "." },
               ],
             },
           ],
-          usage_note: "物品 + Của + 主人。",
+          usage_note: "結構與中文相反：『物品 + Của + 人』。",
           image_file: "of.png",
         },
         {
           id: "prep-05",
-          term_zh: "在... (場所)",
+          term_zh: "在... (場所/時間)",
           related_terms: [
             {
               term_target: "Ở",
-              pronunciation: ["/ə/"],
-              specific_note: "位於",
+              pronunciation: ["/əː˧˩/"],
+              specific_note: "指地點（在某處）。",
               segments: [{ text: "Ở", meaning: "在", tail: "" }],
             },
             {
-              term_target: "Trong",
-              pronunciation: ["/tʃawŋ͡m/"],
-              specific_note: "裡面",
-              segments: [{ text: "Trong", meaning: "內", tail: "" }],
+              term_target: "Lúc",
+              pronunciation: ["/luk˧˥/"],
+              specific_note: "指時間（在某點）。",
+              segments: [{ text: "Lúc", meaning: "在(時間)", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đang ở nhà.",
-              translation: "我正在家。",
+              sentence: "Em ở khách sạn.",
+              translation: "我在飯店。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "ở", meaning: "在", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
+                { text: "khách sạn", meaning: "飯店", tail: "." },
               ],
             },
             {
-              sentence: "Ở đây.",
-              translation: "在這裡。",
+              sentence: "Gặp nhau lúc 7 giờ.",
+              translation: "7點見面。",
               segments: [
-                { text: "Ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這", tail: "." },
-              ],
-            },
-            {
-              sentence: "Trong phòng.",
-              translation: "在房間裡。",
-              segments: [
-                { text: "Trong", meaning: "裡面", tail: " " },
-                { text: "phòng", meaning: "房間", tail: "." },
+                { text: "Gặp nhau", meaning: "見面", tail: " " },
+                { text: "lúc", meaning: "在", tail: " " },
+                { text: "7 giờ", meaning: "七點", tail: "." },
               ],
             },
           ],
-          usage_note: "最通用的「在」是 Ở。",
+          usage_note: "問人在哪裡用 Ở đâu?，問什麼時候用 Lúc nào?。",
           image_file: "at_in.png",
         },
         {
           id: "prep-06",
-          term_zh: "往... (去/給)",
+          term_zh: "往... / 到...",
           related_terms: [
             {
               term_target: "Đến",
-              pronunciation: ["/ɗen/"],
-              specific_note: "去/到",
+              pronunciation: ["/ɗen˧˥/"],
+              specific_note: "抵達目的地。",
               segments: [{ text: "Đến", meaning: "到", tail: "" }],
             },
             {
-              term_target: "Cho",
-              pronunciation: ["/tʃɔ/"],
-              specific_note: "給/對",
-              segments: [{ text: "Cho", meaning: "給", tail: "" }],
+              term_target: "Tới",
+              pronunciation: ["/təj˧˥/"],
+              specific_note: "到、往（口語常用）。",
+              segments: [{ text: "Tới", meaning: "到/往", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Đi đến trường.",
-              translation: "去(到)學校。",
+              sentence: "Đi tới trường.",
+              translation: "去學校。",
               segments: [
-                { text: "Đi", meaning: "走", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
+                { text: "Đi", meaning: "去", tail: " " },
+                { text: "tới", meaning: "到/往", tail: " " },
                 { text: "trường", meaning: "學校", tail: "." },
               ],
             },
-            {
-              sentence: "Chúc mừng sinh nhật bạn.",
-              translation: "祝你生日快樂 (給你的祝福)。",
-              segments: [
-                { text: "Chúc mừng", meaning: "祝賀", tail: " " },
-                { text: "sinh nhật", meaning: "生日", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đưa nó cho tôi.",
-              translation: "把它給我。",
-              segments: [
-                { text: "Đưa", meaning: "遞", tail: " " },
-                { text: "nó", meaning: "它", tail: " " },
-                { text: "cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: "." },
-              ],
-            },
           ],
-          usage_note: "移動方向用 Đến，對象用 Cho。",
+          usage_note: "搭 Grab 告訴司機目的地時可以說『Tới + 地點』。",
           image_file: "to.png",
         },
       ],
@@ -14017,9 +10698,9 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Không",
-              pronunciation: ["/xəwŋ͡m/"],
-              specific_note: "",
-              segments: [{ text: "Không", meaning: "零/不", tail: "" }],
+              pronunciation: ["/xoŋ˧˧/"],
+              specific_note: "零。報電話號碼或編號時常用。",
+              segments: [{ text: "Không", meaning: "零", tail: "" }],
             },
           ],
           examples: [
@@ -14033,23 +10714,14 @@ export const vietnameseData: AppData = {
             },
             {
               sentence: "Không độ.",
-              translation: "零度 (或綠茶品牌)。",
+              translation: "零度。",
               segments: [
                 { text: "Không", meaning: "零", tail: " " },
                 { text: "độ", meaning: "度", tail: "." },
               ],
             },
-            {
-              sentence: "Bắt đầu từ số không.",
-              translation: "從零開始。",
-              segments: [
-                { text: "Bắt đầu", meaning: "開始", tail: " " },
-                { text: "từ", meaning: "從", tail: " " },
-                { text: "số không", meaning: "零", tail: "." },
-              ],
-            },
           ],
-          usage_note: "與「不」是同一個字。",
+          usage_note: "Không 同時也是『不』的意思，要看語境區分喔。",
           image_file: "zero.png",
         },
         {
@@ -14058,40 +10730,24 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Một",
-              pronunciation: ["/mot/"],
-              specific_note: "",
+              pronunciation: ["/mot˨˩/"],
+              specific_note: "一。發音很像台語的「莫」。",
               segments: [{ text: "Một", meaning: "一", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Một cái.",
-              translation: "一個。",
+              sentence: "Cho em một ly trà sữa.",
+              translation: "給我一杯奶茶。",
               segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "cái", meaning: "個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cho tôi một vé.",
-              translation: "給我一張票。",
-              segments: [
-                { text: "Cho", meaning: "給", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
+                { text: "Cho em", meaning: "給我", tail: " " },
                 { text: "một", meaning: "一", tail: " " },
-                { text: "vé", meaning: "票", tail: "." },
-              ],
-            },
-            {
-              sentence: "Một người.",
-              translation: "一個人。",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
+                { text: "ly", meaning: "杯", tail: " " },
+                { text: "trà sữa", meaning: "奶茶", tail: "." },
               ],
             },
           ],
-          usage_note: "一。",
+          usage_note: "如果是在 21, 31... 等尾數，1 會唸成 mốt。",
           image_file: "one.png",
         },
         {
@@ -14100,38 +10756,23 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hai",
-              pronunciation: ["/haj/"],
-              specific_note: "",
+              pronunciation: ["/haːj˧˧/"],
+              specific_note: "二。發音就像中文的「嗨」。",
               segments: [{ text: "Hai", meaning: "二", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Hai ngày.",
-              translation: "兩天。",
+              sentence: "Hai người ạ.",
+              translation: "（用餐）兩位喔。",
               segments: [
                 { text: "Hai", meaning: "二", tail: " " },
-                { text: "ngày", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hai người.",
-              translation: "兩個人。",
-              segments: [
-                { text: "Hai", meaning: "二", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thứ hai.",
-              translation: "星期一 (第二天)。",
-              segments: [
-                { text: "Thứ", meaning: "第/序", tail: " " },
-                { text: "hai", meaning: "二", tail: "." },
+                { text: "người", meaning: "人/位", tail: " " },
+                { text: "ạ", meaning: "敬語", tail: "." },
               ],
             },
           ],
-          usage_note: "越南語星期一叫「Thứ hai」(第二天)。",
+          usage_note: "點餐、報人數最常用。",
           image_file: "two.png",
         },
         {
@@ -14140,38 +10781,22 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Ba",
-              pronunciation: ["/ba/"],
-              specific_note: "",
+              pronunciation: ["/ɓaː˧˧/"],
+              specific_note: "三。發音像中文的「爸」。",
               segments: [{ text: "Ba", meaning: "三", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Ba người.",
-              translation: "三個人。",
+              sentence: "Một, hai, ba, dô!",
+              translation: "一、二、三，乾杯！",
               segments: [
-                { text: "Ba", meaning: "三", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ba giờ.",
-              translation: "三點。",
-              segments: [
-                { text: "Ba", meaning: "三", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thứ ba.",
-              translation: "星期二 (第三天)。",
-              segments: [
-                { text: "Thứ", meaning: "第", tail: " " },
-                { text: "ba", meaning: "三", tail: "." },
+                { text: "Một, hai, ba", meaning: "1, 2, 3", tail: ", " },
+                { text: "dô", meaning: "進(乾杯口號)", tail: "!" },
               ],
             },
           ],
-          usage_note: "也是「爸爸」(Ba) 的意思 (南越)。",
+          usage_note: "Ba 在南越也是「爸爸」的意思。",
           image_file: "three.png",
         },
         {
@@ -14180,8 +10805,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bốn",
-              pronunciation: ["/bon/"],
-              specific_note: "",
+              pronunciation: ["/ɓon˧˥/"],
+              specific_note: "四。",
               segments: [{ text: "Bốn", meaning: "四", tail: "" }],
             },
           ],
@@ -14191,28 +10816,11 @@ export const vietnameseData: AppData = {
               translation: "四季。",
               segments: [
                 { text: "Bốn", meaning: "四", tail: " " },
-                { text: "mùa", meaning: "季", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bốn giờ.",
-              translation: "四點。",
-              segments: [
-                { text: "Bốn", meaning: "四", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bàn số bốn.",
-              translation: "四號桌。",
-              segments: [
-                { text: "Bàn", meaning: "桌", tail: " " },
-                { text: "số", meaning: "號", tail: " " },
-                { text: "bốn", meaning: "四", tail: "." },
+                { text: "mùa", meaning: "季節", tail: "." },
               ],
             },
           ],
-          usage_note: "四。",
+          usage_note: "序數「第四」會唸成 Tư。",
           image_file: "four.png",
         },
         {
@@ -14221,38 +10829,23 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Năm",
-              pronunciation: ["/nam/"],
-              specific_note: "單獨使用",
+              pronunciation: ["/năm˧˧/"],
+              specific_note: "五。發音像中文的「男」。",
               segments: [{ text: "Năm", meaning: "五", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Năm sao.",
-              translation: "五星。",
+              sentence: "Năm phút nữa.",
+              translation: "再五分鐘。",
               segments: [
                 { text: "Năm", meaning: "五", tail: " " },
-                { text: "sao", meaning: "星", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm phút.",
-              translation: "五分鐘。",
-              segments: [
-                { text: "Năm", meaning: "五", tail: " " },
-                { text: "phút", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm người.",
-              translation: "五個人。",
-              segments: [
-                { text: "Năm", meaning: "五", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
+                { text: "phút", meaning: "分鐘", tail: " " },
+                { text: "nữa", meaning: "再/更加", tail: "." },
               ],
             },
           ],
-          usage_note: "單獨念 Năm，在十位數後(如15)念 Lăm。",
+          usage_note: "當 5 出現在尾數（如15, 25）時，會變音唸成 lăm。",
           image_file: "five.png",
         },
         {
@@ -14261,39 +10854,23 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Sáu",
-              pronunciation: ["/saw/"],
-              specific_note: "",
+              pronunciation: ["/saːw˧˥/"],
+              specific_note: "六。",
               segments: [{ text: "Sáu", meaning: "六", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Sáu giờ.",
-              translation: "六點。",
+              sentence: "Sáu giờ sáng.",
+              translation: "早上六點。",
               segments: [
                 { text: "Sáu", meaning: "六", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thứ sáu.",
-              translation: "星期五 (第六天)。",
-              segments: [
-                { text: "Thứ", meaning: "第", tail: " " },
-                { text: "sáu", meaning: "六", tail: "." },
-              ],
-            },
-            {
-              sentence: "Sáu quả trứng.",
-              translation: "六顆蛋。",
-              segments: [
-                { text: "Sáu", meaning: "六", tail: " " },
-                { text: "quả", meaning: "顆", tail: " " },
-                { text: "trứng", meaning: "蛋", tail: "." },
+                { text: "giờ", meaning: "點", tail: " " },
+                { text: "sáng", meaning: "早", tail: "." },
               ],
             },
           ],
-          usage_note: "六。",
+          usage_note: "發音像中文的「掃」（上聲）。",
           image_file: "six.png",
         },
         {
@@ -14302,39 +10879,22 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Bảy",
-              pronunciation: ["/baj/"],
-              specific_note: "",
+              pronunciation: ["/ɓaj˧˩/"],
+              specific_note: "七。",
               segments: [{ text: "Bảy", meaning: "七", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Bảy ngày.",
-              translation: "七天。",
+              sentence: "Thứ Bảy.",
+              translation: "星期六（注意：越南週六是第7個日子）。",
               segments: [
-                { text: "Bảy", meaning: "七", tail: " " },
-                { text: "ngày", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Thứ bảy.",
-              translation: "星期六 (第七天)。",
-              segments: [
-                { text: "Thứ", meaning: "第", tail: " " },
-                { text: "bảy", meaning: "七", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bảy giờ sáng.",
-              translation: "早上七點。",
-              segments: [
-                { text: "Bảy", meaning: "七", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "sáng", meaning: "早", tail: "." },
+                { text: "Thứ", meaning: "序數/第", tail: " " },
+                { text: "Bảy", meaning: "七", tail: "." },
               ],
             },
           ],
-          usage_note: "七。",
+          usage_note: "發音像中文的「百」（問項調）。",
           image_file: "seven.png",
         },
         {
@@ -14343,39 +10903,22 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Tám",
-              pronunciation: ["/tam/"],
-              specific_note: "",
+              pronunciation: ["/taːm˧˥/"],
+              specific_note: "八。",
               segments: [{ text: "Tám", meaning: "八", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tám tuổi.",
-              translation: "八歲。",
+              sentence: "Tám nghìn.",
+              translation: "八千。",
               segments: [
                 { text: "Tám", meaning: "八", tail: " " },
-                { text: "tuổi", meaning: "歲", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hẹn tám giờ.",
-              translation: "約八點。",
-              segments: [
-                { text: "Hẹn", meaning: "約", tail: " " },
-                { text: "tám", meaning: "八", tail: " " },
-                { text: "giờ", meaning: "點", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tháng tám.",
-              translation: "八月。",
-              segments: [
-                { text: "Tháng", meaning: "月", tail: " " },
-                { text: "tám", meaning: "八", tail: "." },
+                { text: "nghìn", meaning: "千", tail: "." },
               ],
             },
           ],
-          usage_note: "Tám 也有「八卦/聊天」的意思。",
+          usage_note: "發音像中文的「擔」（去聲）。",
           image_file: "eight.png",
         },
         {
@@ -14384,8 +10927,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Chín",
-              pronunciation: ["/tʃin/"],
-              specific_note: "",
+              pronunciation: ["/cin˧˥/"],
+              specific_note: "九。同時也是「成熟、煮熟」的意思。",
               segments: [{ text: "Chín", meaning: "九", tail: "" }],
             },
           ],
@@ -14399,24 +10942,8 @@ export const vietnameseData: AppData = {
                 { text: "tối", meaning: "晚", tail: "." },
               ],
             },
-            {
-              sentence: "Chín nghìn.",
-              translation: "九千(越盾)。",
-              segments: [
-                { text: "Chín", meaning: "九", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
-              ],
-            },
-            {
-              sentence: "Số chín.",
-              translation: "九號。",
-              segments: [
-                { text: "Số", meaning: "號", tail: " " },
-                { text: "chín", meaning: "九", tail: "." },
-              ],
-            },
           ],
-          usage_note: "與「熟」(食物熟了) 同音。",
+          usage_note: "發音像中文的「進」。",
           image_file: "nine.png",
         },
         {
@@ -14425,39 +10952,22 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mười",
-              pronunciation: ["/mɨəj/"],
-              specific_note: "",
+              pronunciation: ["/mɨəj˨˩/"],
+              specific_note: "十。",
               segments: [{ text: "Mười", meaning: "十", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Mười nghìn.",
-              translation: "一萬 (十千) 越盾。",
+              sentence: "Mười điểm!",
+              translation: "十分！（滿分、太棒了）",
               segments: [
                 { text: "Mười", meaning: "十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
-              ],
-            },
-            {
-              sentence: "Đếm đến mười.",
-              translation: "數到十。",
-              segments: [
-                { text: "Đếm", meaning: "數", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "mười", meaning: "十", tail: "." },
-              ],
-            },
-            {
-              sentence: "Mười điểm.",
-              translation: "十分 (滿分)。",
-              segments: [
-                { text: "Mười", meaning: "十", tail: " " },
-                { text: "điểm", meaning: "分", tail: "." },
+                { text: "điểm", meaning: "分", tail: "!" },
               ],
             },
           ],
-          usage_note: "十。",
+          usage_note: "發音像中文的「每」（玄聲）。",
           image_file: "ten.png",
         },
         {
@@ -14466,8 +10976,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mười một",
-              pronunciation: ["/mɨəj mot/"],
-              specific_note: "",
+              pronunciation: ["/mɨəj˨˩ mot˨˩/"],
+              specific_note: "十一。",
               segments: [
                 { text: "Mười", meaning: "十", tail: " " },
                 { text: "một", meaning: "一", tail: "" },
@@ -14483,25 +10993,8 @@ export const vietnameseData: AppData = {
                 { text: "giờ", meaning: "點", tail: "." },
               ],
             },
-            {
-              sentence: "Tháng mười một.",
-              translation: "十一月。",
-              segments: [
-                { text: "Tháng", meaning: "月", tail: " " },
-                { text: "mười một", meaning: "十一", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có mười một người.",
-              translation: "有十一個人。",
-              segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "mười một", meaning: "十一", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
           ],
-          usage_note: "10 (Mười) + 1 (Một)。",
+          usage_note: "11 到 19 的邏輯跟中文一樣：『十 + 個位數』。",
           image_file: "eleven.png",
         },
         {
@@ -14510,8 +11003,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mười hai",
-              pronunciation: ["/mɨəj haj/"],
-              specific_note: "",
+              pronunciation: ["/mɨəj˨˩ haːj˧˧/"],
+              specific_note: "十二。",
               segments: [
                 { text: "Mười", meaning: "十", tail: " " },
                 { text: "hai", meaning: "二", tail: "" },
@@ -14527,25 +11020,8 @@ export const vietnameseData: AppData = {
                 { text: "tháng", meaning: "月", tail: "." },
               ],
             },
-            {
-              sentence: "Mười hai giờ trưa.",
-              translation: "中午十二點。",
-              segments: [
-                { text: "Mười hai", meaning: "十二", tail: " " },
-                { text: "giờ", meaning: "點", tail: " " },
-                { text: "trưa", meaning: "中午", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lớp mười hai.",
-              translation: "十二年級 (高三)。",
-              segments: [
-                { text: "Lớp", meaning: "班/級", tail: " " },
-                { text: "mười hai", meaning: "十二", tail: "." },
-              ],
-            },
           ],
-          usage_note: "10 (Mười) + 2 (Hai)。",
+          usage_note: "十二個月即一年。",
           image_file: "twelve.png",
         },
         {
@@ -14554,8 +11030,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Mười lăm",
-              pronunciation: ["/mɨəj lam/"],
-              specific_note: "注意: Năm變Lăm",
+              pronunciation: ["/mɨəj˨˩ lăm˧˧/"],
+              specific_note: "十五（注意 5 變音為 lăm）。",
               segments: [
                 { text: "Mười", meaning: "十", tail: " " },
                 { text: "lăm", meaning: "五(變音)", tail: "" },
@@ -14568,28 +11044,11 @@ export const vietnameseData: AppData = {
               translation: "十五分鐘。",
               segments: [
                 { text: "Mười lăm", meaning: "十五", tail: " " },
-                { text: "phút", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "Cô ấy mười lăm tuổi.",
-              translation: "她十五歲。",
-              segments: [
-                { text: "Cô ấy", meaning: "她", tail: " " },
-                { text: "mười lăm", meaning: "十五", tail: " " },
-                { text: "tuổi", meaning: "歲", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ngày mười lăm.",
-              translation: "十五號 (農曆十五)。",
-              segments: [
-                { text: "Ngày", meaning: "日", tail: " " },
-                { text: "mười lăm", meaning: "十五", tail: "." },
+                { text: "phút", meaning: "分鐘", tail: "." },
               ],
             },
           ],
-          usage_note: "重要規則：10位數是Mười時，5讀作 Lăm。",
+          usage_note: "這是新手最常唸錯的地方，不要唸成 Mười năm 喔！",
           image_file: "fifteen.png",
         },
         {
@@ -14598,51 +11057,25 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Hai mươi",
-              pronunciation: ["/haj mɨəj/"],
-              specific_note: "標準",
+              pronunciation: ["/haːj˧˧ mɨəj˧˧/"],
+              specific_note: "二十。",
               segments: [
                 { text: "Hai", meaning: "二", tail: " " },
-                { text: "mươi", meaning: "十(位數)", tail: "" },
-              ],
-            },
-            {
-              term_target: "Hai chục",
-              pronunciation: ["/haj tʃʊkp/"],
-              specific_note: "口語",
-              segments: [
-                { text: "Hai", meaning: "二", tail: " " },
-                { text: "chục", meaning: "十(個)", tail: "" },
+                { text: "mươi", meaning: "十(十位數專用)", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Hai mươi phút.",
-              translation: "二十分鐘。",
+              sentence: "Hai mươi tuổi.",
+              translation: "二十歲。",
               segments: [
                 { text: "Hai mươi", meaning: "二十", tail: " " },
-                { text: "phút", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hai mươi nghìn.",
-              translation: "兩萬越盾。",
-              segments: [
-                { text: "Hai mươi", meaning: "二十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi hai mươi tuổi.",
-              translation: "我二十歲。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "hai mươi", meaning: "二十", tail: " " },
                 { text: "tuổi", meaning: "歲", tail: "." },
               ],
             },
           ],
-          usage_note: "整數 20, 30... 用 Mươi。",
+          usage_note: "當 10 在十位數時，發音由 mười 變為平聲的 mươi。",
           image_file: "twenty.png",
         },
         {
@@ -14651,41 +11084,25 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Năm mươi",
-              pronunciation: ["/nam mɨəj/"],
-              specific_note: "",
+              pronunciation: ["/năm˧˧ mɨəj˧˧/"],
+              specific_note: "五十。",
               segments: [
                 { text: "Năm", meaning: "五", tail: " " },
-                { text: "mươi", meaning: "十(位數)", tail: "" },
+                { text: "mươi", meaning: "十", tail: "" },
               ],
             },
           ],
           examples: [
             {
               sentence: "Năm mươi phần trăm.",
-              translation: "百分之五十 (50%)。",
+              translation: "百分之五十（五成）。",
               segments: [
                 { text: "Năm mươi", meaning: "五十", tail: " " },
-                { text: "phần trăm", meaning: "百分之", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm mươi người.",
-              translation: "五十人。",
-              segments: [
-                { text: "Năm mươi", meaning: "五十", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm mươi nghìn.",
-              translation: "五萬越盾。",
-              segments: [
-                { text: "Năm mươi", meaning: "五十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
+                { text: "phần trăm", meaning: "百分比", tail: "." },
               ],
             },
           ],
-          usage_note: "50 = Năm + Mươi。",
+          usage_note: "這裡的 5 在開頭，所以唸 năm 而不是 lăm。",
           image_file: "fifty.png",
         },
         {
@@ -14694,8 +11111,8 @@ export const vietnameseData: AppData = {
           related_terms: [
             {
               term_target: "Một trăm",
-              pronunciation: ["/mot tʃam/"],
-              specific_note: "",
+              pronunciation: ["/mot˨˩ cam˧˧/"],
+              specific_note: "一百。",
               segments: [
                 { text: "Một", meaning: "一", tail: " " },
                 { text: "trăm", meaning: "百", tail: "" },
@@ -14704,31 +11121,15 @@ export const vietnameseData: AppData = {
           ],
           examples: [
             {
-              sentence: "Một trăm điểm.",
-              translation: "一百分。",
+              sentence: "Một trăm phần trăm!",
+              translation: "百分之百！（越南乾杯口號：乾啦！）",
               segments: [
                 { text: "Một trăm", meaning: "一百", tail: " " },
-                { text: "điểm", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "Một trăm phần trăm.",
-              translation: "百分之百。",
-              segments: [
-                { text: "Một trăm", meaning: "一百", tail: " " },
-                { text: "phần trăm", meaning: "百分比", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hơn một trăm.",
-              translation: "超過一百。",
-              segments: [
-                { text: "Hơn", meaning: "超過/更", tail: " " },
-                { text: "một trăm", meaning: "一百", tail: "." },
+                { text: "phần trăm", meaning: "百分之百", tail: "!" },
               ],
             },
           ],
-          usage_note: "百 = Trăm。",
+          usage_note: "越南乾杯時喊這句最有氣氛。",
           image_file: "hundred.png",
         },
         {
@@ -14736,51 +11137,30 @@ export const vietnameseData: AppData = {
           term_zh: "1000",
           related_terms: [
             {
-              term_target: "Một nghìn",
-              pronunciation: ["/mot ŋin/"],
-              specific_note: "北部/標準",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "" },
-              ],
+              term_target: "Nghìn",
+              pronunciation: ["/ŋiɲ˨˩/"],
+              specific_note: "千（北越常用）。",
+              segments: [{ text: "Nghìn", meaning: "千", tail: "" }],
             },
             {
-              term_target: "Một ngàn",
-              pronunciation: ["/mot ŋaːn/"],
-              specific_note: "南部",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "ngàn", meaning: "千", tail: "" },
-              ],
+              term_target: "Ngàn",
+              pronunciation: ["/ŋaːn˨˩/"],
+              specific_note: "千（南越常用）。",
+              segments: [{ text: "Ngàn", meaning: "千", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Một nghìn năm.",
-              translation: "一千年。",
+              sentence: "Năm ngàn đồng.",
+              translation: "五千越南盾。",
               segments: [
-                { text: "Một nghìn", meaning: "一千", tail: " " },
-                { text: "năm", meaning: "年", tail: "." },
-              ],
-            },
-            {
-              sentence: "Một nghìn đồng.",
-              translation: "一千越盾 (最小紙鈔)。",
-              segments: [
-                { text: "Một nghìn", meaning: "一千", tail: " " },
+                { text: "Năm", meaning: "五", tail: " " },
+                { text: "ngàn", meaning: "千", tail: " " },
                 { text: "đồng", meaning: "盾(貨幣)", tail: "." },
               ],
             },
-            {
-              sentence: "Năm nghìn.",
-              translation: "五千。",
-              segments: [
-                { text: "Năm", meaning: "五", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
-              ],
-            },
           ],
-          usage_note: "北越 Nghìn，南越 Ngàn，都是千的意思。",
+          usage_note: "越南盾面額大，報價通常以「千 (K)」為單位。",
           image_file: "thousand.png",
         },
         {
@@ -14788,707 +11168,497 @@ export const vietnameseData: AppData = {
           term_zh: "10000",
           related_terms: [
             {
-              term_target: "Mười nghìn",
-              pronunciation: ["/mɨəj ŋin/"],
-              specific_note: "一萬",
+              term_target: "Mười ngàn",
+              pronunciation: ["/mɨəj˨˩ ŋaːn˨˩/"],
+              specific_note: "一萬（直譯為：十千）。",
               segments: [
                 { text: "Mười", meaning: "十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "" },
+                { text: "ngàn", meaning: "千", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Mười nghìn đồng.",
-              translation: "一萬越盾。",
+              sentence: "Mười ngàn một cái.",
+              translation: "一萬塊（十千）一個。",
               segments: [
-                { text: "Mười", meaning: "十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: " " },
-                { text: "đồng", meaning: "盾", tail: "." },
-              ],
-            },
-            {
-              sentence: "Một vạn bước.",
-              translation: "一萬步 (雖有「萬/Vạn」字，但錢習慣說十千)。",
-              segments: [
-                { text: "Một", meaning: "一", tail: " " },
-                { text: "vạn", meaning: "萬", tail: " " },
-                { text: "bước", meaning: "步", tail: "." },
-              ],
-            },
-            {
-              sentence: "Năm mươi nghìn.",
-              translation: "五萬 (50千)。",
-              segments: [
-                { text: "Năm mươi", meaning: "五十", tail: " " },
-                { text: "nghìn", meaning: "千", tail: "." },
+                { text: "Mười ngàn", meaning: "一萬", tail: " " },
+                { text: "một cái", meaning: "一個", tail: "." },
               ],
             },
           ],
           usage_note:
-            "越南貨幣沒有「萬」的單位，一萬要說「十千」(Mười nghìn/ngàn)。",
+            "越南語沒有專門的『萬』，是以千為進位，所以一萬要說『十千』。",
           image_file: "ten_thousand.png",
         },
       ],
     },
     {
-      id: "grammar",
-      name: "常用句型與文法 (越南語)",
+      id: "grammar_vn",
+      name: "基礎句型與語法",
       items: [
         {
           id: "g-01",
-          term_zh: "我是 / 我覺得...",
+          term_zh: "我是... / 我覺得... (狀態)",
           related_terms: [
             {
-              term_target: "Tôi...",
-              pronunciation: ["/toj/"],
-              specific_note: "狀態/身分",
-              segments: [{ text: "Tôi", meaning: "我", tail: "..." }],
+              term_target: "Tôi là... / Em... (adjective)",
+              pronunciation: ["/toːj˧˧ laː˨˩/", "/ɛm˧˧/"],
+              specific_note: "注意：越南語形容詞前不需要加「是 (là)」。",
+              segments: [
+                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "là", meaning: "是(接名詞)", tail: " " },
+                { text: "...", meaning: "...", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi rất vui.",
-              translation: "我很快樂 (形容詞前不加是)。",
+              sentence: "Em đói quá.",
+              translation: "我好餓喔。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "快樂", tail: "." },
+                { text: "Em", meaning: "我(弟妹)", tail: " " },
+                { text: "đói", meaning: "餓", tail: " " },
+                { text: "quá", meaning: "太/真", tail: "." },
               ],
             },
             {
-              sentence: "Tôi mệt.",
-              translation: "我很累。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "mệt", meaning: "累", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi là sinh viên.",
-              translation: "我是學生 (名詞前要加是)。",
+              sentence: "Tôi là người Đài Loan.",
+              translation: "我是台灣人。",
               segments: [
                 { text: "Tôi", meaning: "我", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "sinh viên", meaning: "學生", tail: "." },
+                { text: "người", meaning: "人", tail: " " },
+                { text: "Đài Loan", meaning: "台灣", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em mệt lắm.",
+              translation: "我很累。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "mệt", meaning: "累", tail: " " },
+                { text: "lắm", meaning: "非常", tail: "." },
               ],
             },
           ],
-          usage_note: "形容詞直接接主詞後，名詞前才加 Là。",
+          usage_note:
+            "只有『我是(名詞)』才要加 là。形容心境或身體狀況直接說『我+形容詞』就好。",
           image_file: "i_am.png",
         },
         {
           id: "g-02",
-          term_zh: "我的名字叫...",
+          term_zh: "我的名字叫～",
           related_terms: [
             {
-              term_target: "Tên tôi là...",
-              pronunciation: ["/ten toj la/"],
-              specific_note: "自我介紹",
+              term_target: "Tên em là ～",
+              pronunciation: ["/ten˧˧ ɛm˧˧ laː˨˩/"],
+              specific_note: "自我介紹最常用的句型。",
               segments: [
                 { text: "Tên", meaning: "名字", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: "..." },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "là", meaning: "是", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tên tôi là Nam.",
-              translation: "我的名字叫阿南。",
+              sentence: "Tên em là Lan.",
+              translation: "我的名字叫蘭。",
               segments: [
-                { text: "Tên", meaning: "名字", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
+                { text: "Tên em", meaning: "我的名字", tail: " " },
                 { text: "là", meaning: "是", tail: " " },
-                { text: "Nam", meaning: "南(人名)", tail: "." },
+                { text: "Lan", meaning: "蘭(人名)", tail: "." },
               ],
             },
             {
-              sentence: "Tôi tên là Linh.",
-              translation: "我叫小靈。",
+              sentence: "Em tên là Hùng, rất vui được gặp anh.",
+              translation: "我名字叫雄，很高興見到你(哥)。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "tên", meaning: "名/叫", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "Linh", meaning: "靈(人名)", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chào, tôi là Tom.",
-              translation: "嗨，我是湯姆。",
-              segments: [
-                { text: "Chào", meaning: "你好", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "Tom", meaning: "湯姆", tail: "." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "tên là", meaning: "名叫", tail: " " },
+                { text: "Hùng", meaning: "雄", tail: ", " },
+                { text: "rất vui", meaning: "很高興", tail: " " },
+                { text: "được gặp", meaning: "得以遇見", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: "." },
               ],
             },
           ],
-          usage_note: "也可簡說：Tôi tên + 名字。",
+          usage_note: "自我介紹也可以簡化成『Em là + 名字』。",
           image_file: "my_name_is.png",
         },
         {
           id: "g-03",
-          term_zh: "我做... (習慣/事實)",
+          term_zh: "我做～ (習慣)",
           related_terms: [
             {
-              term_target: "Tôi + 動詞",
-              pronunciation: ["/toj/"],
-              specific_note: "一般現在式",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm", meaning: "做", tail: "..." },
-              ],
+              term_target: "Em (verb)",
+              pronunciation: ["/ɛm˧˧/"],
+              specific_note: "一般現在式。",
+              segments: [{ text: "Em", meaning: "我", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi làm việc ở đây.",
+              sentence: "Em làm việc ở đây.",
               translation: "我在這裡工作。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "đây", meaning: "這裡", tail: "." },
+                { text: "ở đây", meaning: "在這裡", tail: "." },
               ],
             },
             {
-              sentence: "Tôi chơi bóng đá.",
-              translation: "我踢足球。",
+              sentence: "Sáng nào em cũng uống cà phê.",
+              translation: "每天早上我都會喝咖啡。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chơi", meaning: "玩/打", tail: " " },
-                { text: "bóng đá", meaning: "足球", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi yêu âm nhạc.",
-              translation: "我熱愛音樂。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "yêu", meaning: "愛", tail: " " },
-                { text: "âm nhạc", meaning: "音樂", tail: "." },
+                { text: "Sáng nào", meaning: "每個早上", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "cũng", meaning: "也/都", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: "." },
               ],
             },
           ],
-          usage_note: "直接加動詞即可，不需變化。",
+          usage_note: "直接用『主詞 + 動詞』即可表達習慣。",
           image_file: "i_do.png",
         },
         {
           id: "g-04",
-          term_zh: "我正在做...",
+          term_zh: "我正在做～",
           related_terms: [
             {
-              term_target: "Tôi đang...",
-              pronunciation: ["/toj ɗaŋ/"],
-              specific_note: "進行式",
+              term_target: "Em đang ～",
+              pronunciation: ["/ɛm˧˧ ɗaŋ˧˧/"],
+              specific_note: "正在進行的動作。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: "..." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đang", meaning: "正在", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đang ăn cơm.",
+              sentence: "Em đang ăn cơm.",
               translation: "我正在吃飯。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "đang", meaning: "正在", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "cơm", meaning: "飯", tail: "." },
+                { text: "ăn cơm", meaning: "吃飯", tail: "." },
               ],
             },
             {
-              sentence: "Tôi đang làm việc.",
-              translation: "我正在工作。",
+              sentence: "Đợi chút, anh đang lái xe.",
+              translation: "等一下，我（哥）正在開車。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Đợi chút", meaning: "等一下", tail: ", " },
+                { text: "anh", meaning: "哥(我)", tail: " " },
                 { text: "đang", meaning: "正在", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đang đợi bạn.",
-              translation: "我正在等你。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đang", meaning: "正在", tail: " " },
-                { text: "đợi", meaning: "等", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
+                { text: "lái xe", meaning: "開車", tail: "." },
               ],
             },
           ],
-          usage_note: "關鍵字：Đang (正在)。",
+          usage_note: "『Đang』直接放在動詞前面即可。",
           image_file: "ing.png",
         },
         {
           id: "g-05",
-          term_zh: "我會 / 我能夠...",
+          term_zh: "我能夠 / 會～",
           related_terms: [
             {
-              term_target: "Tôi có thể",
-              pronunciation: ["/toj kɔ tʰe/"],
-              specific_note: "能夠",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "có thể", meaning: "可以/能夠", tail: "..." },
-              ],
-            },
-            {
-              term_target: "Tôi biết",
-              pronunciation: ["/toj biət/"],
-              specific_note: "懂得/會(技能)",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "懂/會", tail: "..." },
-              ],
+              term_target: "Em biết... / ...được",
+              pronunciation: ["/ɓiət˧˥/", "/ɗɨəʔ˨˩/"],
+              specific_note: "技能用 biết，許可或結果用 được。",
+              segments: [{ text: "biết", meaning: "知道/會", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi biết bơi.",
-              translation: "我會游泳 (技能)。",
+              sentence: "Em biết nói tiếng Việt một chút.",
+              translation: "我會說一點點越南語。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "biết", meaning: "會/懂", tail: " " },
-                { text: "bơi", meaning: "游泳", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi nói được tiếng Anh.",
-              translation: "我能說英文 (能力)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "biết", meaning: "會", tail: " " },
                 { text: "nói", meaning: "說", tail: " " },
-                { text: "được", meaning: "得/行", tail: " " },
-                { text: "tiếng Anh", meaning: "英文", tail: "." },
+                { text: "tiếng Việt", meaning: "越南語", tail: " " },
+                { text: "một chút", meaning: "一點點", tail: "." },
               ],
             },
             {
-              sentence: "Tôi có thể giúp bạn.",
-              translation: "我可以幫你 (意願/許可)。",
+              sentence: "Cái này ăn được không?",
+              translation: "這個能吃嗎？",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
+                { text: "Cái này", meaning: "這個", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "được", meaning: "能/可以", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "技能用 Biết，可能性用 Có thể。",
+          usage_note: "表達「可以」常用『動詞 + được』放在句尾。",
           image_file: "can.png",
         },
         {
           id: "g-06",
-          term_zh: "我喜歡做...",
+          term_zh: "我喜歡做～",
           related_terms: [
             {
-              term_target: "Tôi thích...",
-              pronunciation: ["/toj tʰik/"],
-              specific_note: "喜好",
+              term_target: "Em thích ～",
+              pronunciation: ["/ɛm˧˧ tʰik˧˥/"],
+              specific_note: "表達喜好。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: "..." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi thích đọc sách.",
-              translation: "我喜歡閱讀。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "đọc", meaning: "讀", tail: " " },
-                { text: "sách", meaning: "書", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích đi du lịch.",
+              sentence: "Em thích đi du lịch.",
               translation: "我喜歡去旅行。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "du lịch", meaning: "旅遊", tail: "." },
+                { text: "đi du lịch", meaning: "去旅遊", tail: "." },
               ],
             },
             {
-              sentence: "Tôi thích ăn phở.",
-              translation: "我喜歡吃河粉。",
+              sentence: "Anh thích uống bia không?",
+              translation: "你（哥）喜歡喝啤酒嗎？",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
                 { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "phở", meaning: "河粉", tail: "." },
+                { text: "uống bia", meaning: "喝啤酒", tail: " " },
+                { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "Thích + 動詞/名詞 皆可。",
+          usage_note: "喜歡做某事，直接在 thích 後面加動詞，不用像英文加 ing。",
           image_file: "like_ing.png",
         },
         {
           id: "g-07",
-          term_zh: "我曾經... (過去狀態)",
+          term_zh: "我曾經～ (過去狀態)",
           related_terms: [
             {
-              term_target: "Hồi đó tôi...",
-              pronunciation: ["/hoj ɗɔ toj/"],
-              specific_note: "以前/當時",
+              term_target: "Em đã từng là ～",
+              pronunciation: ["/ɗa˦ˀ˥ tɨŋ˨˩ laː˨˩/"],
+              specific_note: "強調過去的經驗。",
               segments: [
-                { text: "Hồi đó", meaning: "那時候", tail: " " },
-                { text: "tôi", meaning: "我", tail: "..." },
+                { text: "đã từng", meaning: "曾經", tail: " " },
+                { text: "là", meaning: "是", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Hồi đó tôi là sinh viên.",
-              translation: "我那時候是學生。",
+              sentence: "Em đã từng là sinh viên ở đây.",
+              translation: "我以前曾在這邊當學生。",
               segments: [
-                { text: "Hồi đó", meaning: "那時候", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "sinh viên", meaning: "學生", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm qua tôi ở nhà.",
-              translation: "昨天我在家。",
-              segments: [
-                { text: "Hôm qua", meaning: "昨天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lúc đó tôi rất bận.",
-              translation: "那時候我很忙。",
-              segments: [
-                { text: "Lúc đó", meaning: "那時", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "bận", meaning: "忙", tail: "." },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "đã từng là", meaning: "曾經是", tail: " " },
+                { text: "sinh viên", meaning: "學生", tail: " " },
+                { text: "ở đây", meaning: "在這裡", tail: "." },
               ],
             },
           ],
-          usage_note: "通常加上時間詞 (Hôm qua, Hồi đó) 來表示過去。",
+          usage_note: "越南語主要靠『Đã』表示過去發生過的事。",
           image_file: "i_was.png",
         },
         {
           id: "g-08",
-          term_zh: "我做了... (過去動作)",
+          term_zh: "我做過～ (過去動作)",
           related_terms: [
             {
-              term_target: "Tôi đã...",
-              pronunciation: ["/toj ɗa/"],
-              specific_note: "過去式",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經(過去)", tail: "..." },
-              ],
+              term_target: "Em đã (verb)",
+              pronunciation: ["/ɗa˦ˀ˥/"],
+              specific_note: "發生過的動作。",
+              segments: [{ text: "đã", meaning: "已經(過去式助詞)", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đã đi bộ về nhà.",
-              translation: "我走路回家了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "đi bộ", meaning: "走路", tail: " " },
-                { text: "về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đã xem phim đó.",
-              translation: "我看過那部電影了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "phim", meaning: "電影", tail: " " },
-                { text: "đó", meaning: "那", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm qua tôi đã mua nó.",
-              translation: "昨天我買了它。",
+              sentence: "Hôm qua em đã xem phim đó.",
+              translation: "昨天我看了那部電影。",
               segments: [
                 { text: "Hôm qua", meaning: "昨天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đã", meaning: "已經", tail: " " },
-                { text: "mua", meaning: "買", tail: " " },
-                { text: "nó", meaning: "它", tail: "." },
+                { text: "em", meaning: "我", tail: " " },
+                { text: "đã", meaning: "已經/做了", tail: " " },
+                { text: "xem", meaning: "看", tail: " " },
+                { text: "phim đó", meaning: "那電影", tail: "." },
               ],
             },
           ],
-          usage_note: "關鍵字：Đã (放在動詞前)。",
+          usage_note: "口語中如果已經有『昨天』，有時會省略 Đã。",
           image_file: "i_did.png",
         },
         {
           id: "g-09",
-          term_zh: "我已經做過... (完成)",
+          term_zh: "我已做過～ (完成)",
           related_terms: [
             {
-              term_target: "...rồi",
-              pronunciation: ["/zoj/"],
-              specific_note: "句尾助詞",
-              segments: [
-                { text: "...", meaning: "(動作)", tail: " " },
-                { text: "rồi", meaning: "了/過", tail: "" },
-              ],
+              term_target: "(verb) rồi",
+              pronunciation: ["/zoj˨˩/"],
+              specific_note: "放在句尾表示「了、已經」。",
+              segments: [{ text: "rồi", meaning: "了/已經", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi làm xong rồi.",
-              translation: "我做完了。",
+              sentence: "Em làm xong rồi.",
+              translation: "我已經做完了。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "làm", meaning: "做", tail: " " },
-                { text: "xong", meaning: "完", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "làm xong", meaning: "做完", tail: " " },
                 { text: "rồi", meaning: "了", tail: "." },
               ],
             },
             {
-              sentence: "Tôi ăn cơm rồi.",
-              translation: "我吃飽(過)了。",
+              sentence: "Anh ăn rồi.",
+              translation: "我（哥）吃過了。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "ăn cơm", meaning: "吃飯", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi mất chìa khóa rồi.",
-              translation: "我把鑰匙弄丟了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "mất", meaning: "弄丟", tail: " " },
-                { text: "chìa khóa", meaning: "鑰匙", tail: " " },
+                { text: "Anh", meaning: "哥(我)", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
                 { text: "rồi", meaning: "了", tail: "." },
               ],
             },
           ],
-          usage_note: "動詞 + Rồi = 完成。",
+          usage_note: "句尾的『Rồi』是越南語最靈魂的字，表示動作告一段落。",
           image_file: "i_have_done.png",
         },
         {
           id: "g-10",
-          term_zh: "我曾經去過...",
+          term_zh: "我曾去過～",
           related_terms: [
             {
-              term_target: "Tôi đã từng đi...",
-              pronunciation: ["/toj ɗa tɨŋ ɗi/"],
-              specific_note: "經驗",
+              term_target: "Em đã từng đi ～",
+              pronunciation: ["/ɗa˦ˀ˥ tɨŋ˨˩ ɗi˧˧/"],
+              specific_note: "強調人生經驗。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
                 { text: "đã từng", meaning: "曾經", tail: " " },
-                { text: "đi", meaning: "去", tail: "..." },
+                { text: "đi", meaning: "去", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đã từng đi Nhật Bản.",
-              translation: "我曾經去過日本。",
+              sentence: "Anh đã từng đi Đà Lạt chưa?",
+              translation: "你（哥）去過大叻了嗎？",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
                 { text: "đã từng", meaning: "曾經", tail: " " },
                 { text: "đi", meaning: "去", tail: " " },
-                { text: "Nhật Bản", meaning: "日本", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đi Đài Bắc rồi.",
-              translation: "我去過台北了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "Đài Bắc", meaning: "台北", tail: " " },
-                { text: "rồi", meaning: "了/過", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi đến đó hai lần rồi.",
-              translation: "我去過那裡兩次了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "đó", meaning: "那裡", tail: " " },
-                { text: "hai lần", meaning: "兩次", tail: " " },
-                { text: "rồi", meaning: "了", tail: "." },
+                { text: "Đà Lạt", meaning: "大叻(地名)", tail: " " },
+                { text: "chưa", meaning: "了嗎/還沒", tail: "?" },
               ],
             },
           ],
-          usage_note: "強調「曾經」用 Đã từng，強調「去過」用 Đi... rồi。",
+          usage_note:
+            "問別人有沒有經驗，常用句型是『已經曾經...了沒？(đã từng...chưa?)』。",
           image_file: "have_been_to.png",
         },
         {
           id: "g-11",
-          term_zh: "我打算 / 將要...",
+          term_zh: "我打算 / 將會～",
           related_terms: [
             {
-              term_target: "Tôi sẽ...",
-              pronunciation: ["/toj sɛ/"],
-              specific_note: "未來式",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "sẽ", meaning: "將會", tail: "..." },
-              ],
+              term_target: "Em sẽ ～",
+              pronunciation: ["/sɛ˦ˀ˥/"],
+              specific_note: "未來式。",
+              segments: [{ text: "sẽ", meaning: "將會", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi sẽ đi.",
-              translation: "我會去。",
+              sentence: "Mai em sẽ gọi cho anh.",
+              translation: "明天我會打電話給你（哥）。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "sẽ", meaning: "將會", tail: " " },
-                { text: "đi", meaning: "去", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi sẽ gọi cho bạn.",
-              translation: "我會打電話給你。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Mai", meaning: "明天", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
                 { text: "sẽ", meaning: "將會", tail: " " },
                 { text: "gọi", meaning: "打電話", tail: " " },
                 { text: "cho", meaning: "給", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi sẽ cố gắng.",
-              translation: "我會盡力。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "sẽ", meaning: "將會", tail: " " },
-                { text: "cố gắng", meaning: "努力", tail: "." },
+                { text: "anh", meaning: "哥(你)", tail: "." },
               ],
             },
           ],
-          usage_note: "關鍵字：Sẽ (放在動詞前)。",
+          usage_note: "口語中如果已經有『等一下』或『明天』，sẽ 有時會被省略。",
           image_file: "i_will.png",
         },
         {
           id: "g-12",
-          term_zh: "你是...嗎？",
+          term_zh: "你是...嗎？ (狀態)",
           related_terms: [
             {
-              term_target: "Bạn có... không?",
-              pronunciation: ["/ban kɔ ... xəwŋ͡m/"],
-              specific_note: "問形容詞",
+              term_target: "Anh có... không?",
+              pronunciation: ["/kɔ˧˥/ ... /xoŋ˧˧/"],
+              specific_note: "最通用的疑問句型。",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "...", meaning: "(形容詞)", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              term_target: "Bạn là... à?",
-              pronunciation: ["/ban la ... a/"],
-              specific_note: "問身分",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "...", meaning: "(名詞)", tail: " " },
-                { text: "à", meaning: "啊/嗎", tail: "?" },
+                { text: "có", meaning: "是否", tail: " " },
+                { text: "...", meaning: "...", tail: " " },
+                { text: "không", meaning: "嗎/不", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Bạn có mệt không?",
-              translation: "你累嗎？",
+              sentence: "Anh có mệt không?",
+              translation: "你（哥）累嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
                 { text: "có", meaning: "有/是否", tail: " " },
                 { text: "mệt", meaning: "累", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
             {
-              sentence: "Bạn có đói không?",
-              translation: "你餓嗎？",
+              sentence: "Món này có cay không?",
+              translation: "這道菜辣嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "đói", meaning: "餓", tail: " " },
+                { text: "Món này", meaning: "這道菜", tail: " " },
+                { text: "có", meaning: "是否", tail: " " },
+                { text: "cay", meaning: "辣", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
-            {
-              sentence: "Bạn là học sinh à?",
-              translation: "你是學生嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "học sinh", meaning: "學生", tail: " " },
-                { text: "à", meaning: "嗎", tail: "?" },
-              ],
-            },
           ],
-          usage_note: "形容詞用 Có... không，名詞用 Là... à。",
+          usage_note: "問狀態或形容詞，固定套用『Có + Adj + Không?』。",
           image_file: "are_you.png",
         },
         {
           id: "g-13",
-          term_zh: "你有/會...嗎？",
+          term_zh: "你在做...嗎？",
           related_terms: [
             {
-              term_target: "Bạn có... không?",
-              pronunciation: ["/ban kɔ ... xəwŋ͡m/"],
-              specific_note: "通用問句",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有/是否", tail: " " },
-                { text: "...", meaning: "(動詞)", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
+              term_target: "Anh (verb) không?",
+              pronunciation: ["/xoŋ˧˧/"],
+              specific_note: "詢問意願或正在進行的動作。",
+              segments: [{ text: "không", meaning: "嗎", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Bạn có thích không?",
-              translation: "你喜歡嗎？",
+              sentence: "Anh uống cà phê không?",
+              translation: "你（哥）要喝咖啡嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "uống", meaning: "喝", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
             {
-              sentence: "Bạn có hiểu không?",
+              sentence: "Anh có hiểu không?",
               translation: "你懂嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "hiểu", meaning: "懂", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn có ăn cay được không?",
-              translation: "你能吃辣嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có", meaning: "有", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "cay", meaning: "辣", tail: " " },
-                { text: "được", meaning: "行", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "có", meaning: "是否", tail: " " },
+                { text: "hiểu", meaning: "明白", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "Có... không 是最萬用的 Yes/No 問句結構。",
+          usage_note: "詢問對方意願（要不要...）時，直接在動詞後加 không。",
           image_file: "do_you.png",
         },
         {
@@ -15496,1159 +11666,696 @@ export const vietnameseData: AppData = {
           term_zh: "你曾經...嗎？",
           related_terms: [
             {
-              term_target: "Bạn đã từng... chưa?",
-              pronunciation: ["/ban ɗa tɨŋ ... tʃɨə/"],
-              specific_note: "經驗",
+              term_target: "Anh đã từng... chưa?",
+              pronunciation: ["/ɗa˦ˀ˥ tɨŋ˨˩/ ... /cɨə˧˧/"],
+              specific_note: "問經驗（了嗎？/過了嗎？）",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
                 { text: "đã từng", meaning: "曾經", tail: " " },
-                { text: "...", meaning: "(動作)", tail: " " },
-                { text: "chưa", meaning: "還沒/嗎", tail: "?" },
+                { text: "...", meaning: "...", tail: " " },
+                { text: "chưa", meaning: "沒/了嗎", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Bạn ăn bún chả chưa?",
-              translation: "你吃過烤肉米線了嗎？",
+              sentence: "Anh đã từng ăn phở chưa?",
+              translation: "你（哥）吃過河粉了嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "ăn", meaning: "吃", tail: " " },
-                { text: "bún chả", meaning: "烤肉米線", tail: " " },
-                { text: "chưa", meaning: "還沒/了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn đã từng đi Hà Nội chưa?",
-              translation: "你曾經去過河內嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
                 { text: "đã từng", meaning: "曾經", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "Hà Nội", meaning: "河內", tail: " " },
-                { text: "chưa", meaning: "了嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn xem phim này chưa?",
-              translation: "你看過這部電影了嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "phim này", meaning: "這部電影", tail: " " },
+                { text: "ăn", meaning: "吃", tail: " " },
+                { text: "phở", meaning: "河粉", tail: " " },
                 { text: "chưa", meaning: "了嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "問「有沒有做過」句尾用 Chưa (還沒)，而不是 Không (不)。",
+          usage_note: "這是越南人最愛問外國人的問題格式。",
           image_file: "have_you_ever.png",
         },
         {
           id: "g-15",
-          term_zh: "你何時做...？",
+          term_zh: "你何時做（某事）？",
           related_terms: [
             {
-              term_target: "Khi nào bạn...?",
-              pronunciation: ["/xi naːw ban/"],
-              specific_note: "問時間",
+              term_target: "Khi nào anh (verb)?",
+              pronunciation: ["/xi˧˧ naːw˨˩/"],
+              specific_note: "詢問未來的時間點。",
               segments: [
                 { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: "..." },
+                { text: "anh", meaning: "你(哥)", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Khi nào bạn ngủ?",
-              translation: "你什麼時候睡覺？",
+              sentence: "Khi nào anh đi làm?",
+              translation: "你什麼時候去上班？",
               segments: [
                 { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "ngủ", meaning: "睡", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bao giờ bạn rảnh?",
-              translation: "你幾時有空？(口語)",
-              segments: [
-                { text: "Bao giờ", meaning: "幾時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "rảnh", meaning: "有空", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Khi nào bắt đầu?",
-              translation: "什麼時候開始？",
-              segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bắt đầu", meaning: "開始", tail: "?" },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "đi làm", meaning: "去上班", tail: "?" },
               ],
             },
           ],
-          usage_note: "Khi nào 可以放句首或句尾。",
+          usage_note: "Khi nào 放在句首通常是指「未來」的時間。",
           image_file: "when_do_you.png",
         },
         {
           id: "g-16",
-          term_zh: "你何時去...？",
+          term_zh: "你什麼時候去（某地）？",
           related_terms: [
             {
-              term_target: "Khi nào bạn đi...?",
-              pronunciation: ["/xi naːw ban ɗi/"],
-              specific_note: "問出發時間",
+              term_target: "Mấy giờ anh đi ～ ?",
+              pronunciation: ["/məj˧˥ zəː˨˩/"],
+              specific_note: "詢問具體幾點鐘。",
               segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: "..." },
+                { text: "Mấy giờ", meaning: "幾點", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "đi", meaning: "去", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Khi nào bạn đi học?",
-              translation: "你什麼時候去上學？",
-              segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "học", meaning: "學", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Mấy giờ bạn đi làm?",
-              translation: "你幾點去上班？",
+              sentence: "Mấy giờ anh đi sân bay?",
+              translation: "你幾點去機場？",
               segments: [
                 { text: "Mấy giờ", meaning: "幾點", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
                 { text: "đi", meaning: "去", tail: " " },
-                { text: "làm", meaning: "工作", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Khi nào bạn về nhà?",
-              translation: "你什麼時候回家？",
-              segments: [
-                { text: "Khi nào", meaning: "何時", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "về", meaning: "回", tail: " " },
-                { text: "nhà", meaning: "家", tail: "?" },
+                { text: "sân bay", meaning: "機場", tail: "?" },
               ],
             },
           ],
-          usage_note: "問具體時間用 Mấy giờ，問大概時間用 Khi nào。",
+          usage_note: "約定具體時間時，用 Mấy giờ 會比 Khi nào 更明確。",
           image_file: "when_go_to.png",
         },
         {
           id: "g-17",
-          term_zh: "你在哪裡做...？",
+          term_zh: "你在哪裡做（某事）？",
           related_terms: [
             {
-              term_target: "Bạn... ở đâu?",
-              pronunciation: ["/ban ... ə ɗəw/"],
-              specific_note: "問地點",
+              term_target: "Anh (verb) ở đâu?",
+              pronunciation: ["/əː˧˩ ɗəw˧˧/"],
+              specific_note: "詢問地點，置於動詞後。",
+              segments: [{ text: "ở đâu", meaning: "在哪裡", tail: "" }],
+            },
+          ],
+          examples: [
+            {
+              sentence: "Anh sống ở đâu?",
+              translation: "你（哥）住在哪裡？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "...", meaning: "(動作)", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "sống", meaning: "生活/居住", tail: " " },
+                { text: "ở đâu", meaning: "在哪裡", tail: "?" },
+              ],
+            },
+            {
+              sentence: "Anh làm việc ở đâu?",
+              translation: "你在哪裡工作？",
+              segments: [
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "làm việc", meaning: "工作", tail: " " },
                 { text: "ở đâu", meaning: "在哪裡", tail: "?" },
               ],
             },
           ],
-          examples: [
-            {
-              sentence: "Bạn sống ở đâu?",
-              translation: "你住在哪裡？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "sống", meaning: "住", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn làm việc ở đâu?",
-              translation: "你在哪裡工作？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn mua cái này ở đâu?",
-              translation: "你在哪裡買這個的？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "mua", meaning: "買", tail: " " },
-                { text: "cái này", meaning: "這個", tail: " " },
-                { text: "ở đâu", meaning: "在哪", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "地點疑問詞 Ở đâu 通常放句尾。",
+          usage_note: "詢問地點時，要把『在哪裡』放在動詞後面喔！",
           image_file: "where_do_you.png",
         },
         {
           id: "g-18",
-          term_zh: "你如何做...？",
+          term_zh: "你如何做（某事）？",
           related_terms: [
             {
-              term_target: "Làm sao",
-              pronunciation: ["/lam saːw/"],
-              specific_note: "問方法",
-              segments: [
-                { text: "Làm", meaning: "做", tail: " " },
-                { text: "sao", meaning: "怎", tail: "" },
-              ],
-            },
-            {
-              term_target: "Thế nào",
-              pronunciation: ["/tʰe naːw/"],
-              specific_note: "問狀態",
-              segments: [{ text: "Thế nào", meaning: "如何", tail: "" }],
+              term_target: "Anh (verb) thế nào?",
+              pronunciation: ["/tʰe˧˥ naːw˨˩/"],
+              specific_note: "詢問方法或感受。",
+              segments: [{ text: "thế nào", meaning: "如何/怎樣", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Bạn thấy thế nào?",
-              translation: "你覺得如何？",
+              sentence: "Anh thấy món này thế nào?",
+              translation: "你覺得這道菜怎麼樣？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "thấy", meaning: "覺得", tail: " " },
-                { text: "thế nào", meaning: "如何", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Làm sao dùng cái này?",
-              translation: "這個怎麼用？",
-              segments: [
-                { text: "Làm sao", meaning: "怎麼", tail: " " },
-                { text: "dùng", meaning: "用", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn nấu món này thế nào?",
-              translation: "你怎麼煮這道菜的？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "nấu", meaning: "煮", tail: " " },
-                { text: "món này", meaning: "這道菜", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "thấy", meaning: "覺得/看見", tail: " " },
+                { text: "món này", meaning: "這菜", tail: " " },
                 { text: "thế nào", meaning: "如何", tail: "?" },
               ],
             },
           ],
-          usage_note: "問「方法」常用 Làm sao 或 Như thế nào。",
+          usage_note: "問別人意見時，這句話非常道地。",
           image_file: "how_do_you.png",
         },
         {
           id: "g-19",
-          term_zh: "你怎麼去...？",
+          term_zh: "你怎麼去（某地）？",
           related_terms: [
             {
-              term_target: "Bạn đi... bằng gì?",
-              pronunciation: ["/ban ɗi ... baŋ zi/"],
-              specific_note: "問交通工具",
+              term_target: "Anh đi ～ bằng gì?",
+              pronunciation: ["/ɓaŋ˨˩ zi˨˩/"],
+              specific_note: "詢問交通工具。",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "...", meaning: "(地名)", tail: " " },
-                { text: "bằng", meaning: "用/藉由", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
+                { text: "bằng gì", meaning: "用什麼/搭什麼", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Bạn đi làm bằng gì?",
-              translation: "你怎麼去上班？(搭什麼車)",
+              sentence: "Anh đi làm bằng gì?",
+              translation: "你怎麼去上班？（搭什麼去）",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi làm", meaning: "上班", tail: " " },
-                { text: "bằng", meaning: "用", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Bạn đi sân bay bằng gì?",
-              translation: "你怎麼去機場？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "sân bay", meaning: "機場", tail: " " },
-                { text: "bằng", meaning: "用", tail: " " },
-                { text: "gì", meaning: "什麼", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Tôi đi bằng xe máy.",
-              translation: "我騎機車去。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "去", tail: " " },
-                { text: "bằng", meaning: "用", tail: " " },
-                { text: "xe máy", meaning: "機車", tail: "." },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "đi làm", meaning: "去上班", tail: " " },
+                { text: "bằng gì", meaning: "搭什麼/用什麼", tail: "?" },
               ],
             },
           ],
-          usage_note: "Bằng gì = 用什麼(工具)。",
+          usage_note:
+            "越南人常問這句，你可以回答『Đi bằng xe máy』（騎機車）。",
           image_file: "how_go_to.png",
         },
         {
           id: "g-20",
-          term_zh: "我不是 / 我不覺得...",
+          term_zh: "我不是～",
           related_terms: [
             {
-              term_target: "Tôi không...",
-              pronunciation: ["/toj xəwŋ͡m/"],
-              specific_note: "否定狀態",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: "..." },
-              ],
+              term_target: "Em không phải là ～",
+              pronunciation: ["/ɛm˧˧ xoŋ˧˧ faːj˧˩ laː˨˩/"],
+              specific_note: "否定身分或事實。",
+              segments: [{ text: "không phải là", meaning: "不是", tail: "" }],
+            },
+            {
+              term_target: "Em không ～ (adjective)",
+              pronunciation: ["/ɛm˧˧ xoŋ˧˧/"],
+              specific_note: "否定狀態（我不...）。",
+              segments: [{ text: "không", meaning: "不", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi không mệt.",
+              sentence: "Em không phải là người Nhật.",
+              translation: "我不是日本人。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "không phải là", meaning: "不是", tail: " " },
+                { text: "người Nhật", meaning: "日本人", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em không mệt.",
               translation: "我不累。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
                 { text: "mệt", meaning: "累", tail: "." },
               ],
             },
-            {
-              sentence: "Tôi không sẵn sàng.",
-              translation: "我還沒準備好。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "sẵn sàng", meaning: "準備好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không phải là bác sĩ.",
-              translation: "我不是醫生 (名詞前加 phải là)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "phải", meaning: "是(強調)", tail: " " },
-                { text: "là", meaning: "是", tail: " " },
-                { text: "bác sĩ", meaning: "醫生", tail: "." },
-              ],
-            },
           ],
-          usage_note: "形容詞直接加 Không，名詞前加 Không phải là。",
+          usage_note:
+            "否定身分要用『không phải là』，否定累、餓、熱等形容詞只要用『không』就好。",
           image_file: "i_am_not.png",
         },
         {
           id: "g-21",
-          term_zh: "我不做...",
+          term_zh: "我不做～",
           related_terms: [
             {
-              term_target: "Tôi không...",
-              pronunciation: ["/toj xəwŋ͡m/"],
-              specific_note: "否定動作",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: "..." },
-              ],
+              term_target: "Em không (verb)",
+              pronunciation: ["/ɛm˧˧ xoŋ˧˧/"],
+              specific_note: "否定動作或意願。",
+              segments: [{ text: "không", meaning: "不", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi không hút thuốc.",
-              translation: "我不抽菸。",
+              sentence: "Em không ăn cay.",
+              translation: "我不吃辣。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
-                { text: "hút", meaning: "吸/抽", tail: " " },
-                { text: "thuốc", meaning: "菸/藥", tail: "." },
+                { text: "ăn cay", meaning: "吃辣", tail: "." },
               ],
             },
             {
-              sentence: "Tôi không biết.",
+              sentence: "Em không biết.",
               translation: "我不知道。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
                 { text: "biết", meaning: "知道", tail: "." },
               ],
             },
-            {
-              sentence: "Tôi không hiểu.",
-              translation: "我不懂。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "hiểu", meaning: "了解", tail: "." },
-              ],
-            },
           ],
-          usage_note: "關鍵字：Không (放在動詞前)。",
+          usage_note: "『我不懂』是 Em không hiểu。",
           image_file: "i_dont.png",
         },
         {
           id: "g-22",
-          term_zh: "我不能 / 不會...",
+          term_zh: "我不能～",
           related_terms: [
             {
-              term_target: "Tôi không thể...",
-              pronunciation: ["/toj xəwŋ͡m tʰe/"],
-              specific_note: "無法",
+              term_target: "Em không ... được",
+              pronunciation: ["/xoŋ˧˧/ ... /ɗɨəʔ˨˩/"],
+              specific_note: "表示無法完成某事。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "thể", meaning: "能", tail: "..." },
+                { text: "không", meaning: "不", tail: " ... " },
+                { text: "được", meaning: "得/能", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi không biết bơi.",
-              translation: "我不會游泳 (技能)。",
+              sentence: "Em không đi được.",
+              translation: "我不能去（沒辦法去）。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "biết", meaning: "會/懂", tail: " " },
-                { text: "bơi", meaning: "游泳", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không nghe được.",
-              translation: "我聽不到 (能力受限)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "nghe", meaning: "聽", tail: " " },
-                { text: "được", meaning: "得/到", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm nay tôi không đi được.",
-              translation: "我今天不能去。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "không", meaning: "不", tail: " " },
                 { text: "đi", meaning: "去", tail: " " },
-                { text: "được", meaning: "行/成", tail: "." },
+                { text: "được", meaning: "能", tail: "." },
+              ],
+            },
+            {
+              sentence: "Em không nghe được.",
+              translation: "我聽不到（聽不見）。",
+              segments: [
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "không", meaning: "不", tail: " " },
+                { text: "nghe", meaning: "聽", tail: " " },
+                { text: "được", meaning: "能", tail: "." },
               ],
             },
           ],
-          usage_note: "不會(技能)用 Không biết，不能(情況)用 Không... được。",
+          usage_note: "否定能力時，通常在動詞前後加上 không...được。",
           image_file: "i_cant.png",
         },
         {
           id: "g-23",
-          term_zh: "我從未...",
+          term_zh: "我未曾～",
           related_terms: [
             {
-              term_target: "Tôi chưa bao giờ...",
-              pronunciation: ["/toj tʃɨə baːw zə/"],
-              specific_note: "經驗",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chưa", meaning: "還沒", tail: " " },
-                { text: "bao giờ", meaning: "何時(從未)", tail: "..." },
-              ],
+              term_target: "Em chưa bao giờ ～",
+              pronunciation: ["/ɛm˧˧ cɨə˧˧ ɓaːw˧˧ zəː˨˩/"],
+              specific_note: "表示從來沒有過的經驗。",
+              segments: [{ text: "chưa bao giờ", meaning: "從未", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi chưa bao giờ ăn cái này.",
-              translation: "我從未吃過這個。",
+              sentence: "Em chưa bao giờ ăn món này.",
+              translation: "我從來沒吃過這道菜。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "chưa bao giờ", meaning: "從未", tail: " " },
                 { text: "ăn", meaning: "吃", tail: " " },
-                { text: "cái này", meaning: "這個", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi chưa từng đến đó.",
-              translation: "我從未去過那裡。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chưa", meaning: "未", tail: " " },
-                { text: "từng", meaning: "曾經", tail: " " },
-                { text: "đến", meaning: "到", tail: " " },
-                { text: "đó", meaning: "那裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi chưa bao giờ thấy.",
-              translation: "我從未見過。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "chưa bao giờ", meaning: "從未", tail: " " },
-                { text: "thấy", meaning: "看見", tail: "." },
+                { text: "món này", meaning: "這道菜", tail: "." },
               ],
             },
           ],
-          usage_note: "Chưa bao giờ = Never。",
+          usage_note: "比起單說『未(chưa)』，『chưa bao giờ』語氣更強烈。",
           image_file: "i_have_never.png",
         },
         {
           id: "g-24",
-          term_zh: "我不必...",
+          term_zh: "我不必～",
           related_terms: [
             {
-              term_target: "Tôi không cần...",
-              pronunciation: ["/toj xəwŋ͡m kən/"],
-              specific_note: "不需要",
+              term_target: "Em không cần phải ～",
+              pronunciation: ["/ɛm˧˧ xoŋ˧˧ kən˨˩ faːj˧˩/"],
+              specific_note: "沒有義務或需要。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "cần", meaning: "需要", tail: "..." },
+                { text: "không cần phải", meaning: "不必/不需要", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi không cần đi.",
-              translation: "我不必去。",
+              sentence: "Anh không cần phải trả tiền.",
+              translation: "你（哥）不必付錢（我請客）。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không cần", meaning: "不需要", tail: " " },
-                { text: "đi", meaning: "去", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hôm nay tôi không phải làm việc.",
-              translation: "我今天不必工作。",
-              segments: [
-                { text: "Hôm nay", meaning: "今天", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "phải", meaning: "必須/得", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không cần trả tiền.",
-              translation: "我不必付錢。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không cần", meaning: "不需要", tail: " " },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "không cần phải", meaning: "不必", tail: " " },
                 { text: "trả tiền", meaning: "付錢", tail: "." },
               ],
             },
           ],
-          usage_note: "Không cần (不需要) 或 Không phải (不用/非必須)。",
+          usage_note: "不想麻煩別人時，可以客氣地說這句。",
           image_file: "i_dont_have_to.png",
         },
         {
           id: "g-25",
-          term_zh: "如果...的話",
+          term_zh: "如果～的話，就～",
           related_terms: [
             {
-              term_target: "Nếu...",
-              pronunciation: ["/new/"],
-              specific_note: "假設",
-              segments: [{ text: "Nếu", meaning: "如果", tail: "..." }],
+              term_target: "Nếu... thì...",
+              pronunciation: ["/nɛw˧˥/ ... /tʰi˨˩/"],
+              specific_note: "假設句型。",
+              segments: [
+                { text: "Nếu", meaning: "如果", tail: " ... " },
+                { text: "thì", meaning: "就", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Nếu bạn thích, cứ lấy đi.",
-              translation: "如果你喜歡，就拿去吧。",
+              sentence: "Nếu anh thích thì cứ lấy đi.",
+              translation: "如果你（哥）喜歡的話，就拿去吧。",
               segments: [
                 { text: "Nếu", meaning: "如果", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: ", " },
-                { text: "cứ", meaning: "儘管", tail: " " },
-                { text: "lấy", meaning: "拿", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nếu trời mưa, tôi sẽ ở nhà.",
-              translation: "如果下雨，我會待在家。",
-              segments: [
-                { text: "Nếu", meaning: "如果", tail: " " },
-                { text: "trời mưa", meaning: "下雨", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "sẽ", meaning: "將會", tail: " " },
-                { text: "ở", meaning: "在", tail: " " },
-                { text: "nhà", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nếu mệt thì đi ngủ.",
-              translation: "如果累了就去睡覺。",
-              segments: [
-                { text: "Nếu", meaning: "如果", tail: " " },
-                { text: "mệt", meaning: "累", tail: " " },
-                { text: "thì", meaning: "則/就", tail: " " },
-                { text: "đi ngủ", meaning: "去睡", tail: "." },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "thích", meaning: "喜歡", tail: " " },
+                { text: "thì", meaning: "就", tail: " " },
+                { text: "cứ lấy đi", meaning: "儘管拿去吧", tail: "." },
               ],
             },
           ],
-          usage_note: "關鍵字：Nếu (如果) ... Thì (就/則)。",
+          usage_note: "如果省略 Nếu，單用 Thì 也可以表達「那就...」。",
           image_file: "if.png",
         },
         {
           id: "g-26",
-          term_zh: "當...的時候",
+          term_zh: "當～時，就～",
           related_terms: [
             {
-              term_target: "Khi...",
-              pronunciation: ["/xi/"],
-              specific_note: "時間點",
-              segments: [{ text: "Khi", meaning: "當/時", tail: "..." }],
+              term_target: "Khi... thì...",
+              pronunciation: ["/xi˧˧/ ... /tʰi˨˩/"],
+              specific_note: "時間點的聯結。",
+              segments: [
+                { text: "Khi", meaning: "當...時", tail: " ... " },
+                { text: "thì", meaning: "就", tail: "" },
+              ],
             },
           ],
           examples: [
             {
-              sentence: "Khi tôi ăn, tôi rất vui.",
-              translation: "當我吃東西時，我很開心。",
+              sentence: "Khi nào đến thì gọi em.",
+              translation: "什麼時候到的話（當你到時），就打給我。",
               segments: [
-                { text: "Khi", meaning: "當", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "ăn", meaning: "吃", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: "." },
-              ],
-            },
-            {
-              sentence: "Khi nào đến nơi, gọi tôi nhé.",
-              translation: "當你到的時候，打給我。",
-              segments: [
-                { text: "Khi nào", meaning: "何時/當", tail: " " },
+                { text: "Khi nào", meaning: "什麼時候", tail: " " },
                 { text: "đến", meaning: "到", tail: " " },
-                { text: "nơi", meaning: "地方", tail: ", " },
-                { text: "gọi", meaning: "叫/打電話", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "nhé", meaning: "喔", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lúc rảnh rỗi, tôi đọc sách.",
-              translation: "有空的時候(當有空時)，我會看書。",
-              segments: [
-                { text: "Lúc", meaning: "時刻/當", tail: " " },
-                { text: "rảnh rỗi", meaning: "空閒", tail: ", " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "đọc", meaning: "讀", tail: " " },
-                { text: "sách", meaning: "書", tail: "." },
+                { text: "thì", meaning: "就", tail: " " },
+                { text: "gọi", meaning: "打電話給", tail: " " },
+                { text: "em", meaning: "我", tail: "." },
               ],
             },
           ],
-          usage_note: "Khi 或 Lúc 都可以表示「當...時」。",
+          usage_note: "口語中常把 Khi 放在句首引導時間。",
           image_file: "when_condition.png",
         },
         {
           id: "g-27",
-          term_zh: "請你...好嗎？(請求)",
+          term_zh: "請你～",
           related_terms: [
             {
-              term_target: "Bạn có thể... không?",
-              pronunciation: ["/ban kɔ tʰe ... xəwŋ͡m/"],
-              specific_note: "禮貌請求",
+              term_target: "Anh... giúp em được không?",
+              pronunciation: ["/zṵp ɛm ɗɨəʔ˨˩ xoŋ˧˧/"],
+              specific_note: "委婉的請求方式。",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "...", meaning: "(動作)", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
+                { text: "giúp", meaning: "幫", tail: " " },
+                { text: "được không", meaning: "可以嗎", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Bạn có thể giúp tôi không?",
-              translation: "你可以幫我嗎？",
+              sentence: "Anh chụp ảnh giúp em được không?",
+              translation: "你能幫我拍張照嗎？",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Mở cửa giúp tôi được không?",
-              translation: "幫我開個門可以嗎？",
-              segments: [
-                { text: "Mở", meaning: "開", tail: " " },
-                { text: "cửa", meaning: "門", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "được không", meaning: "行嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Chờ một chút nhé.",
-              translation: "請等一下喔 (較隨意的請求)。",
-              segments: [
-                { text: "Chờ", meaning: "等", tail: " " },
-                { text: "một chút", meaning: "一下", tail: " " },
-                { text: "nhé", meaning: "好嗎/喔", tail: "." },
+                { text: "Anh", meaning: "你(哥)", tail: " " },
+                { text: "chụp ảnh", meaning: "拍照", tail: " " },
+                { text: "giúp em", meaning: "幫我", tail: " " },
+                { text: "được không", meaning: "可以嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "句尾加 Được không? (行嗎?) 或 Giúp tôi (幫我)。",
-          image_file: "can_you_help.png",
+          usage_note:
+            "在越南，請求別人幫忙，句尾加個『được không?』會更有禮貌。",
+          image_file: "can_you.png",
         },
         {
           id: "g-28",
-          term_zh: "我們...吧！(提議)",
+          term_zh: "我們來做～吧！",
           related_terms: [
             {
-              term_target: "Chúng ta... đi",
-              pronunciation: ["/tʃuŋ͡m ta ... ɗi/"],
-              specific_note: "建議",
-              segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "...", meaning: "(動作)", tail: " " },
-                { text: "đi", meaning: "吧/走", tail: "!" },
-              ],
+              term_target: "... đi!",
+              pronunciation: ["/ɗi˧˧/"],
+              specific_note: "放在句尾表示提議或命令。",
+              segments: [{ text: "đi", meaning: "走/吧", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Chúng ta đi thôi.",
-              translation: "我們走吧。",
+              sentence: "Đi ăn đi!",
+              translation: "去吃飯吧！",
               segments: [
-                { text: "Chúng ta", meaning: "我們", tail: " " },
-                { text: "đi", meaning: "走", tail: " " },
-                { text: "thôi", meaning: "罷了/吧", tail: "." },
+                { text: "Đi ăn", meaning: "去吃", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
               ],
             },
             {
-              sentence: "Ăn cơm đi.",
-              translation: "吃飯吧。",
+              sentence: "Chúng mình đi uống cà phê đi!",
+              translation: "我們去喝咖啡吧！",
               segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "cơm", meaning: "飯", tail: " " },
-                { text: "đi", meaning: "吧", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nghỉ một lát nhé.",
-              translation: "我們休息一下吧。",
-              segments: [
-                { text: "Nghỉ", meaning: "休息", tail: " " },
-                { text: "một lát", meaning: "片刻", tail: " " },
-                { text: "nhé", meaning: "吧/喔", tail: "." },
+                { text: "Chúng mình", meaning: "我們", tail: " " },
+                { text: "đi uống", meaning: "去喝", tail: " " },
+                { text: "cà phê", meaning: "咖啡", tail: " " },
+                { text: "đi", meaning: "吧", tail: "!" },
               ],
             },
           ],
-          usage_note: "句尾加 Đi 或 Nhé 表示提議或催促。",
+          usage_note: "雖然『Đi』是走的意思，但在句尾它是最強大的揪團助詞。",
           image_file: "lets.png",
         },
         {
           id: "g-29",
-          term_zh: "我認為...",
+          term_zh: "我認為～",
           related_terms: [
             {
-              term_target: "Tôi nghĩ (là)...",
-              pronunciation: ["/toj ŋi la/"],
-              specific_note: "想法",
+              term_target: "Em nghĩ là ～",
+              pronunciation: ["/ɛm˧˧ ŋi˦ˀ˥ laː˨˩/"],
+              specific_note: "表達主觀想法。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nghĩ", meaning: "想/認為", tail: "..." },
+                { text: "nghĩ", meaning: "想/認為", tail: " " },
+                { text: "là", meaning: "是", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi nghĩ nó tốt.",
-              translation: "我認為那很好。",
+              sentence: "Em nghĩ là anh đúng rồi.",
+              translation: "我覺得你（哥）是對的。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nghĩ", meaning: "想", tail: " " },
-                { text: "nó", meaning: "它", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi nghĩ bạn đúng.",
-              translation: "我覺得你是對的。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "nghĩ", meaning: "認為", tail: " " },
-                { text: "bạn", meaning: "你", tail: " " },
-                { text: "đúng", meaning: "對", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi cũng nghĩ vậy.",
-              translation: "我也這麼認為。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "cũng", meaning: "也", tail: " " },
-                { text: "nghĩ", meaning: "想", tail: " " },
-                { text: "vậy", meaning: "那樣", tail: "." },
+                { text: "Em nghĩ là", meaning: "我認為是", tail: " " },
+                { text: "anh", meaning: "你(哥)", tail: " " },
+                { text: "đúng rồi", meaning: "對了", tail: "." },
               ],
             },
           ],
-          usage_note: "表達個人意見。",
+          usage_note: "表達個人意見時的起手式。",
           image_file: "i_think.png",
         },
         {
           id: "g-30",
-          term_zh: "我想要...",
+          term_zh: "我想做～",
           related_terms: [
             {
-              term_target: "Tôi muốn...",
-              pronunciation: ["/toj muon/"],
-              specific_note: "意願",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想要", tail: "..." },
-              ],
+              term_target: "Em muốn ～",
+              pronunciation: ["/ɛm˧˧ muən˧˥/"],
+              specific_note: "表達願望。",
+              segments: [{ text: "muốn", meaning: "想要", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi muốn đi.",
-              translation: "我想走(去)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "đi", meaning: "走", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi muốn mua cái này.",
+              sentence: "Em muốn mua cái này.",
               translation: "我想買這個。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "muốn", meaning: "想", tail: " " },
                 { text: "mua", meaning: "買", tail: " " },
                 { text: "cái này", meaning: "這個", tail: "." },
               ],
             },
-            {
-              sentence: "Tôi muốn xem phim.",
-              translation: "我想看電影。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "muốn", meaning: "想", tail: " " },
-                { text: "xem", meaning: "看", tail: " " },
-                { text: "phim", meaning: "電影", tail: "." },
-              ],
-            },
           ],
-          usage_note: "Muốn + 動詞/名詞。",
+          usage_note: "買東西、點餐時最直接的說法。",
           image_file: "want_to.png",
         },
         {
           id: "g-31",
-          term_zh: "我必須...",
+          term_zh: "我必須做～",
           related_terms: [
             {
-              term_target: "Tôi phải...",
-              pronunciation: ["/toj faj/"],
-              specific_note: "義務",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "phải", meaning: "必須", tail: "..." },
-              ],
+              term_target: "Em phải ～",
+              pronunciation: ["/ɛm˧˧ faːj˧˩/"],
+              specific_note: "義務或必然性。",
+              segments: [{ text: "phải", meaning: "必須", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi phải làm việc.",
-              translation: "我必須工作。",
+              sentence: "Bây giờ em phải đi rồi.",
+              translation: "我現在必須走了。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "phải", meaning: "得/必須", tail: " " },
-                { text: "làm việc", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi phải đi bây giờ.",
-              translation: "我現在得走了。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Bây giờ", meaning: "現在", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
                 { text: "phải", meaning: "必須", tail: " " },
                 { text: "đi", meaning: "走", tail: " " },
-                { text: "bây giờ", meaning: "現在", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi phải học bài.",
-              translation: "我必須讀書(做功課)。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "phải", meaning: "必須", tail: " " },
-                { text: "học", meaning: "學", tail: " " },
-                { text: "bài", meaning: "課/功課", tail: "." },
+                { text: "rồi", meaning: "了", tail: "." },
               ],
             },
           ],
-          usage_note: "Phải 表示責任或義務。",
+          usage_note: "要趕場或回家時的常用藉口。",
           image_file: "i_have_to.png",
         },
         {
           id: "g-32",
-          term_zh: "做(某事)是...的",
+          term_zh: "做某事是...的",
           related_terms: [
             {
-              term_target: "Làm ... thì ...",
-              pronunciation: ["/lam ... tʰi/"],
-              specific_note: "評價動作",
-              segments: [
-                { text: "Làm", meaning: "做", tail: "..." },
-                { text: "thì", meaning: "就/是", tail: "..." },
-              ],
+              term_target: "(Verb) thật là (adj)",
+              pronunciation: ["/tʰət˨˩ laː˨˩/"],
+              specific_note: "描述某種行為的性質。",
+              segments: [{ text: "thật là", meaning: "真是/實在是", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Ăn rau rất tốt.",
-              translation: "吃蔬菜很好。",
+              sentence: "Gặp anh thật là vui.",
+              translation: "見到你（哥）真開心。",
               segments: [
-                { text: "Ăn", meaning: "吃", tail: " " },
-                { text: "rau", meaning: "菜", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "tốt", meaning: "好", tail: "." },
-              ],
-            },
-            {
-              sentence: "Rất vui được gặp bạn.",
-              translation: "很高興(能)認識你。",
-              segments: [
-                { text: "Rất", meaning: "很", tail: " " },
-                { text: "vui", meaning: "開心", tail: " " },
-                { text: "được", meaning: "能夠/被", tail: " " },
-                { text: "gặp", meaning: "遇見", tail: " " },
-                { text: "bạn", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "Học tiếng Việt rất thú vị.",
-              translation: "學越南語很有趣。",
-              segments: [
-                { text: "Học", meaning: "學", tail: " " },
-                { text: "tiếng Việt", meaning: "越南語", tail: " " },
-                { text: "rất", meaning: "很", tail: " " },
-                { text: "thú vị", meaning: "有趣", tail: "." },
+                { text: "Gặp", meaning: "見面", tail: " " },
+                { text: "anh", meaning: "哥哥(你)", tail: " " },
+                { text: "thật là", meaning: "真是", tail: " " },
+                { text: "vui", meaning: "開心", tail: "." },
               ],
             },
           ],
-          usage_note: "越南語直接用「動詞片語 + 形容詞」即可。",
+          usage_note: "這比英文的 It is... 結構更直接，把重點動作放在最前面。",
           image_file: "it_is_to.png",
         },
         {
           id: "g-33",
-          term_zh: "你可以幫我...嗎？",
+          term_zh: "你可以幫我…嗎？",
           related_terms: [
             {
-              term_target: "Bạn giúp tôi... được không?",
-              pronunciation: ["/ban zup toj ... ɗəək xəwŋ͡m/"],
-              specific_note: "請求協助",
+              term_target: "Giúp em ... với",
+              pronunciation: ["/zup˧˥ ɛm/ ... /vəj˧˥/"],
+              specific_note: "求助時最道地的說法。",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "được không", meaning: "行嗎", tail: "?" },
+                { text: "Giúp", meaning: "幫", tail: " " },
+                { text: "với", meaning: "吧/伴隨", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Bạn giúp tôi dọn dẹp được không?",
-              translation: "你可以幫我打掃嗎？",
+              sentence: "Giúp em tìm ví với!",
+              translation: "幫我找一下錢包！",
               segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
-                { text: "giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "dọn dẹp", meaning: "打掃/整理", tail: " " },
-                { text: "được không", meaning: "可以嗎", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Giúp tôi việc này nhé.",
-              translation: "幫我做這件事喔。",
-              segments: [
-                { text: "Giúp", meaning: "幫", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "việc", meaning: "事", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "nhé", meaning: "好嗎", tail: "." },
-              ],
-            },
-            {
-              sentence: "Bạn tìm giúp tôi được không?",
-              translation: "你可以幫我找嗎？",
-              segments: [
-                { text: "Bạn", meaning: "你", tail: " " },
+                { text: "Giúp", meaning: "幫助", tail: " " },
+                { text: "em", meaning: "我", tail: " " },
                 { text: "tìm", meaning: "找", tail: " " },
-                { text: "giúp", meaning: "幫忙", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "được không", meaning: "行嗎", tail: "?" },
+                { text: "ví", meaning: "錢包", tail: " " },
+                { text: "với", meaning: "吧", tail: "!" },
               ],
             },
           ],
-          usage_note: "Giúp = Help。",
+          usage_note: "句尾加個『với』，拜託別人的語氣會更誠懇。",
           image_file: "can_you_help.png",
         },
         {
           id: "g-34",
-          term_zh: "我可以...嗎？",
+          term_zh: "我可以…嗎？",
           related_terms: [
             {
-              term_target: "Tôi có thể... không?",
-              pronunciation: ["/toj kɔ tʰe ... xəwŋ͡m/"],
-              specific_note: "請求許可",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "có thể", meaning: "可以", tail: " " },
-                { text: "...", meaning: "(動作)", tail: " " },
-                { text: "không", meaning: "嗎", tail: "?" },
-              ],
+              term_target: "Em ... được không?",
+              pronunciation: ["/ɗɨəʔ˨˩ xoŋ˧˧/"],
+              specific_note: "請求許可。",
+              segments: [{ text: "được không", meaning: "可以嗎", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi đi được không?",
-              translation: "我可以走(離開)嗎？",
+              sentence: "Em ngồi đây được không?",
+              translation: "我可以坐這裡嗎？",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "đi", meaning: "走", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
+                { text: "ngồi", meaning: "坐", tail: " " },
+                { text: "đây", meaning: "這裡", tail: " " },
                 { text: "được không", meaning: "可以嗎", tail: "?" },
               ],
             },
-            {
-              sentence: "Cho tôi xin nước.",
-              translation: "請給我水 (我可以要水嗎)。",
-              segments: [
-                { text: "Cho", meaning: "給/讓", tail: " " },
-                { text: "tôi", meaning: "我", tail: " " },
-                { text: "xin", meaning: "請求", tail: " " },
-                { text: "nước", meaning: "水", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi ngồi đây được không?",
-              translation: "我可以坐這裡嗎？",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "ngồi", meaning: "坐", tail: " " },
-                { text: "đây", meaning: "這", tail: " " },
-                { text: "được không", meaning: "行嗎", tail: "?" },
-              ],
-            },
           ],
-          usage_note: "句尾用 Được không (行嗎/可以嗎) 最自然。",
+          usage_note: "不管是問路、併桌或借東西，最後都加這句就對了。",
           image_file: "can_i.png",
         },
         {
           id: "g-35",
-          term_zh: "我不喜歡...",
+          term_zh: "我不喜歡…",
           related_terms: [
             {
-              term_target: "Tôi không thích...",
-              pronunciation: ["/toj xəwŋ͡m tʰik/"],
-              specific_note: "",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không", meaning: "不", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: "..." },
-              ],
+              term_target: "Em không thích ...",
+              pronunciation: ["/xoŋ˧˧ tʰik˧˥/"],
+              specific_note: "表達反感。",
+              segments: [{ text: "không thích", meaning: "不喜歡", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Tôi không thích nó.",
-              translation: "我不喜歡它。",
+              sentence: "Em không thích chờ lâu.",
+              translation: "我不喜歡等很久。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "không thích", meaning: "不喜歡", tail: " " },
-                { text: "nó", meaning: "它", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi không thích sầu riêng.",
-              translation: "我不喜歡榴槤。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "không thích", meaning: "不喜歡", tail: " " },
-                { text: "sầu riêng", meaning: "榴槤", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi ghét chờ đợi.",
-              translation: "我討厭等待。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "ghét", meaning: "討厭", tail: " " },
-                { text: "chờ đợi", meaning: "等待", tail: "." },
+                { text: "chờ", meaning: "等", tail: " " },
+                { text: "lâu", meaning: "久", tail: "." },
               ],
             },
           ],
-          usage_note: "討厭可以用 Ghét。",
+          usage_note: "拒絕推銷或邀約時很乾脆的說法。",
           image_file: "i_dont_like.png",
         },
         {
           id: "g-36",
-          term_zh: "我比較喜歡...",
+          term_zh: "我比較喜歡…",
           related_terms: [
             {
-              term_target: "Tôi thích... hơn",
-              pronunciation: ["/toj tʰik ... hən/"],
-              specific_note: "偏好",
+              term_target: "Em thích ... hơn",
+              pronunciation: ["/tʰik˧˥/ ... /həːn˧˧/"],
+              specific_note: "比較之後的偏好。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "...", meaning: "(某物)", tail: " " },
-                { text: "hơn", meaning: "更/比", tail: "" },
+                { text: "thích", meaning: "喜歡", tail: " ... " },
+                { text: "hơn", meaning: "更/勝過", tail: "" },
               ],
             },
           ],
           examples: [
             {
-              sentence: "Tôi thích trà hơn.",
-              translation: "我比較喜歡茶 (我喜歡茶更多)。",
+              sentence: "Em thích uống trà hơn.",
+              translation: "我比較喜歡喝茶（相對於咖啡）。",
               segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
+                { text: "Em", meaning: "我", tail: " " },
                 { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "trà", meaning: "茶", tail: " " },
-                { text: "hơn", meaning: "更", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích chó hơn mèo.",
-              translation: "比起貓，我更喜歡狗。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "chó", meaning: "狗", tail: " " },
-                { text: "hơn", meaning: "比...更", tail: " " },
-                { text: "mèo", meaning: "貓", tail: "." },
-              ],
-            },
-            {
-              sentence: "Tôi thích ở nhà hơn.",
-              translation: "我比較喜歡待在家。",
-              segments: [
-                { text: "Tôi", meaning: "我", tail: " " },
-                { text: "thích", meaning: "喜歡", tail: " " },
-                { text: "ở nhà", meaning: "在家", tail: " " },
+                { text: "uống trà", meaning: "喝茶", tail: " " },
                 { text: "hơn", meaning: "更", tail: "." },
               ],
             },
           ],
-          usage_note: "比較級關鍵字：Hơn (更/比)。",
+          usage_note: "把 Hơn 放在最後面，就是「比較喜歡」的意思。",
           image_file: "prefer.png",
         },
         {
           id: "g-37",
-          term_zh: "A 比 B 更...",
+          term_zh: "A 比 B 更…",
           related_terms: [
             {
-              term_target: "A ... hơn B",
-              pronunciation: ["/A ... hən B/"],
-              specific_note: "比較級",
-              segments: [
-                { text: "A", meaning: "A", tail: " " },
-                { text: "...", meaning: "(形容詞)", tail: " " },
-                { text: "hơn", meaning: "更/比", tail: " " },
-                { text: "B", meaning: "B", tail: "" },
-              ],
+              term_target: "A (adj) hơn B",
+              pronunciation: ["/həːn˧˧/"],
+              specific_note: "基礎比較句型。",
+              segments: [{ text: "hơn", meaning: "更", tail: "" }],
             },
           ],
           examples: [
@@ -16658,78 +12365,38 @@ export const vietnameseData: AppData = {
               segments: [
                 { text: "Cái này", meaning: "這個", tail: " " },
                 { text: "đắt", meaning: "貴", tail: " " },
-                { text: "hơn", meaning: "比", tail: " " },
+                { text: "hơn", meaning: "更", tail: " " },
                 { text: "cái kia", meaning: "那個", tail: "." },
               ],
             },
-            {
-              sentence: "Anh ấy cao hơn cô ấy.",
-              translation: "他比她高。",
-              segments: [
-                { text: "Anh ấy", meaning: "他", tail: " " },
-                { text: "cao", meaning: "高", tail: " " },
-                { text: "hơn", meaning: "比", tail: " " },
-                { text: "cô ấy", meaning: "她", tail: "." },
-              ],
-            },
-            {
-              sentence: "Câu này khó hơn.",
-              translation: "這一題(句)比較難。",
-              segments: [
-                { text: "Câu", meaning: "句/題", tail: " " },
-                { text: "này", meaning: "這", tail: " " },
-                { text: "khó", meaning: "難", tail: " " },
-                { text: "hơn", meaning: "更", tail: "." },
-              ],
-            },
           ],
-          usage_note: "A + 形容詞 + Hơn + B。",
+          usage_note: "不需要加英文的 more，直接在形容詞後加 Hơn 就好。",
           image_file: "more_than.png",
         },
         {
           id: "g-38",
-          term_zh: "有... (存在)",
+          term_zh: "有…（存在）",
           related_terms: [
             {
-              term_target: "Có...",
-              pronunciation: ["/kɔ/"],
-              specific_note: "有",
-              segments: [{ text: "Có", meaning: "有", tail: "..." }],
+              term_target: "Có ～",
+              pronunciation: ["/kɔ˧˥/"],
+              specific_note: "不分單複數，代表「有某物」。",
+              segments: [{ text: "Có", meaning: "有", tail: "" }],
             },
           ],
           examples: [
             {
-              sentence: "Có một con chó.",
-              translation: "(那裡)有一隻狗。",
-              segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "một", meaning: "一", tail: " " },
-                { text: "con", meaning: "隻", tail: " " },
-                { text: "chó", meaning: "狗", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ở đây có nhiều người.",
-              translation: "這裡有很多人。",
+              sentence: "Ở đây có WiFi không?",
+              translation: "這裡有 WiFi 嗎？",
               segments: [
                 { text: "Ở đây", meaning: "這裡", tail: " " },
                 { text: "có", meaning: "有", tail: " " },
-                { text: "nhiều", meaning: "多", tail: " " },
-                { text: "người", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "Có vấn đề gì không?",
-              translation: "有什麼問題嗎？",
-              segments: [
-                { text: "Có", meaning: "有", tail: " " },
-                { text: "vấn đề", meaning: "問題", tail: " " },
-                { text: "gì", meaning: "什麼", tail: " " },
+                { text: "WiFi", meaning: "WiFi", tail: " " },
                 { text: "không", meaning: "嗎", tail: "?" },
               ],
             },
           ],
-          usage_note: "",
+          usage_note: "問路、找廁所、找東西，開頭通通可以用 Có。",
           image_file: "there_is.png",
         },
       ],

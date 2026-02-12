@@ -13092,2793 +13092,1724 @@ export const englishData: AppData = {
         },
       ],
     },
+{
+  "id": "numbers_vn",
+  "name": "基本的數字",
+  "items": [
     {
-      id: "numbers",
-      name: "基本的數字",
-      items: [
+      "id": "num-0",
+      "term_zh": "0",
+      "related_terms": [
         {
-          id: "num-0",
-          term_zh: "0",
-          related_terms: [
-            {
-              term_target: "zero",
-              pronunciation: ["/ˈzɪroʊ/"],
-              specific_note: "",
-              segments: [{ text: "zero", meaning: "零", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Zero point.",
-              translation: "零分。",
-              segments: [
-                { text: "Zero", meaning: "零", tail: " " },
-                { text: "point", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "It is zero degrees today.",
-              translation: "今天零度。",
-              segments: [
-                { text: "It", meaning: "它(天氣)", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "zero", meaning: "零", tail: " " },
-                { text: "degrees", meaning: "度", tail: " " },
-                { text: "today", meaning: "今天", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have zero experience.",
-              translation: "我毫無經驗。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "有", tail: " " },
-                { text: "zero", meaning: "零", tail: " " },
-                { text: "experience", meaning: "經驗", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "零。",
-          image_file: "zero.png",
-        },
-        {
-          id: "num-1",
-          term_zh: "1",
-          related_terms: [
-            {
-              term_target: "one",
-              pronunciation: ["/wʌn/"],
-              specific_note: "",
-              segments: [{ text: "one", meaning: "一", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "One apple.",
-              translation: "一顆蘋果。",
-              segments: [
-                { text: "One", meaning: "一顆", tail: " " },
-                { text: "apple", meaning: "蘋果", tail: "." },
-              ],
-            },
-            {
-              sentence: "One ticket, please.",
-              translation: "請給我一張票。",
-              segments: [
-                { text: "One", meaning: "一張", tail: " " },
-                { text: "ticket", meaning: "票", tail: ", " },
-                { text: "please", meaning: "請", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have one brother.",
-              translation: "我有一個兄弟。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "有", tail: " " },
-                { text: "one", meaning: "一個", tail: " " },
-                { text: "brother", meaning: "兄弟", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一。",
-          image_file: "one.png",
-        },
-        {
-          id: "num-2",
-          term_zh: "2",
-          related_terms: [
-            {
-              term_target: "two",
-              pronunciation: ["/tu/"],
-              specific_note: "",
-              segments: [{ text: "two", meaning: "二", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Two days.",
-              translation: "兩天。",
-              segments: [
-                { text: "Two", meaning: "兩", tail: " " },
-                { text: "days", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Table for two, please.",
-              translation: "請給我們兩人的位子。",
-              segments: [
-                { text: "Table", meaning: "桌子", tail: " " },
-                { text: "for", meaning: "給", tail: " " },
-                { text: "two", meaning: "兩人", tail: ", " },
-                { text: "please", meaning: "請", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have two cats.",
-              translation: "我有兩隻貓。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "有", tail: " " },
-                { text: "two", meaning: "兩隻", tail: " " },
-                { text: "cats", meaning: "貓", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "二。",
-          image_file: "two.png",
-        },
-        {
-          id: "num-3",
-          term_zh: "3",
-          related_terms: [
-            {
-              term_target: "three",
-              pronunciation: ["/θri/"],
-              specific_note: "",
-              segments: [{ text: "three", meaning: "三", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Three people.",
-              translation: "三人。",
-              segments: [
-                { text: "Three", meaning: "三", tail: " " },
-                { text: "people", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "See you in three minutes.",
-              translation: "三分鐘後見。",
-              segments: [
-                { text: "See", meaning: "見", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "in", meaning: "在...之後", tail: " " },
-                { text: "three", meaning: "三", tail: " " },
-                { text: "minutes", meaning: "分鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "I bought three books.",
-              translation: "我買了三本書。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "bought", meaning: "買了", tail: " " },
-                { text: "three", meaning: "三本", tail: " " },
-                { text: "books", meaning: "書", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "咬舌音。",
-          image_file: "three.png",
-        },
-        {
-          id: "num-4",
-          term_zh: "4",
-          related_terms: [
-            {
-              term_target: "four",
-              pronunciation: ["/fɔr/"],
-              specific_note: "",
-              segments: [{ text: "four", meaning: "四", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Four seasons.",
-              translation: "四季。",
-              segments: [
-                { text: "Four", meaning: "四", tail: " " },
-                { text: "seasons", meaning: "季節", tail: "." },
-              ],
-            },
-            {
-              sentence: "Four o'clock.",
-              translation: "四點鐘。",
-              segments: [
-                { text: "Four", meaning: "四", tail: " " },
-                { text: "o'clock", meaning: "點鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "Table number four.",
-              translation: "四號桌。",
-              segments: [
-                { text: "Table", meaning: "桌子", tail: " " },
-                { text: "number", meaning: "號碼", tail: " " },
-                { text: "four", meaning: "四", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "四。",
-          image_file: "four.png",
-        },
-        {
-          id: "num-5",
-          term_zh: "5",
-          related_terms: [
-            {
-              term_target: "five",
-              pronunciation: ["/faɪv/"],
-              specific_note: "",
-              segments: [{ text: "five", meaning: "五", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Five stars.",
-              translation: "五星。",
-              segments: [
-                { text: "Five", meaning: "五", tail: " " },
-                { text: "stars", meaning: "星", tail: "." },
-              ],
-            },
-            {
-              sentence: "Give me five minutes.",
-              translation: "給我五分鐘。",
-              segments: [
-                { text: "Give", meaning: "給", tail: " " },
-                { text: "me", meaning: "我", tail: " " },
-                { text: "five", meaning: "五", tail: " " },
-                { text: "minutes", meaning: "分鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "She is five years old.",
-              translation: "她五歲。",
-              segments: [
-                { text: "She", meaning: "她", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "five", meaning: "五", tail: " " },
-                { text: "years", meaning: "歲", tail: " " },
-                { text: "old", meaning: "老(歲)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "五。",
-          image_file: "five.png",
-        },
-        {
-          id: "num-6",
-          term_zh: "6",
-          related_terms: [
-            {
-              term_target: "six",
-              pronunciation: ["/sɪks/"],
-              specific_note: "",
-              segments: [{ text: "six", meaning: "六", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Six o'clock.",
-              translation: "六點。",
-              segments: [
-                { text: "Six", meaning: "六", tail: " " },
-                { text: "o'clock", meaning: "點鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "There are six eggs.",
-              translation: "有六顆蛋。",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "are", meaning: "有", tail: " " },
-                { text: "six", meaning: "六", tail: " " },
-                { text: "eggs", meaning: "蛋", tail: "." },
-              ],
-            },
-            {
-              sentence: "I wake up at six.",
-              translation: "我六點起床。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "wake", meaning: "醒", tail: " " },
-                { text: "up", meaning: "起", tail: " " },
-                { text: "at", meaning: "在", tail: " " },
-                { text: "six", meaning: "六點", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "六。",
-          image_file: "six.png",
-        },
-        {
-          id: "num-7",
-          term_zh: "7",
-          related_terms: [
-            {
-              term_target: "seven",
-              pronunciation: ["/ˈsɛvən/"],
-              specific_note: "",
-              segments: [{ text: "seven", meaning: "七", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Seven days.",
-              translation: "七天。",
-              segments: [
-                { text: "Seven", meaning: "七", tail: " " },
-                { text: "days", meaning: "天", tail: "." },
-              ],
-            },
-            {
-              sentence: "Seven-Eleven.",
-              translation: "7-11便利商店。",
-              segments: [
-                { text: "Seven", meaning: "七", tail: "-" },
-                { text: "Eleven", meaning: "十一", tail: "." },
-              ],
-            },
-            {
-              sentence: "Lucky seven.",
-              translation: "幸運數字七。",
-              segments: [
-                { text: "Lucky", meaning: "幸運的", tail: " " },
-                { text: "seven", meaning: "七", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "七。",
-          image_file: "seven.png",
-        },
-        {
-          id: "num-8",
-          term_zh: "8",
-          related_terms: [
-            {
-              term_target: "eight",
-              pronunciation: ["/eɪt/"],
-              specific_note: "",
-              segments: [{ text: "eight", meaning: "八", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Eight years old.",
-              translation: "八歲。",
-              segments: [
-                { text: "Eight", meaning: "八", tail: " " },
-                { text: "years", meaning: "歲", tail: " " },
-                { text: "old", meaning: "老(歲)", tail: "." },
-              ],
-            },
-            {
-              sentence: "See you at eight.",
-              translation: "八點見。",
-              segments: [
-                { text: "See", meaning: "見", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "at", meaning: "在", tail: " " },
-                { text: "eight", meaning: "八點", tail: "." },
-              ],
-            },
-            {
-              sentence: "I slept for eight hours.",
-              translation: "我睡了八個小時。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "slept", meaning: "睡(過去式)", tail: " " },
-                { text: "for", meaning: "持續", tail: " " },
-                { text: "eight", meaning: "八", tail: " " },
-                { text: "hours", meaning: "小時", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "八。",
-          image_file: "eight.png",
-        },
-        {
-          id: "num-9",
-          term_zh: "9",
-          related_terms: [
-            {
-              term_target: "nine",
-              pronunciation: ["/naɪn/"],
-              specific_note: "",
-              segments: [{ text: "nine", meaning: "九", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Nine PM.",
-              translation: "晚上九點。",
-              segments: [
-                { text: "Nine", meaning: "九", tail: " " },
-                { text: "PM", meaning: "下午", tail: "." },
-              ],
-            },
-            {
-              sentence: "Nine dollars.",
-              translation: "九塊錢。",
-              segments: [
-                { text: "Nine", meaning: "九", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-            {
-              sentence: "Number nine.",
-              translation: "九號。",
-              segments: [
-                { text: "Number", meaning: "號碼", tail: " " },
-                { text: "nine", meaning: "九", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "九。",
-          image_file: "nine.png",
-        },
-        {
-          id: "num-10",
-          term_zh: "10",
-          related_terms: [
-            {
-              term_target: "ten",
-              pronunciation: ["/tɛn/"],
-              specific_note: "",
-              segments: [{ text: "ten", meaning: "十", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ten dollars.",
-              translation: "十元。",
-              segments: [
-                { text: "Ten", meaning: "十", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-            {
-              sentence: "Count to ten.",
-              translation: "數到十。",
-              segments: [
-                { text: "Count", meaning: "數", tail: " " },
-                { text: "to", meaning: "到", tail: " " },
-                { text: "ten", meaning: "十", tail: "." },
-              ],
-            },
-            {
-              sentence: "Top ten.",
-              translation: "前十名。",
-              segments: [
-                { text: "Top", meaning: "頂尖", tail: " " },
-                { text: "ten", meaning: "十", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "十。",
-          image_file: "ten.png",
-        },
-        {
-          id: "num-11",
-          term_zh: "11",
-          related_terms: [
-            {
-              term_target: "eleven",
-              pronunciation: ["/ɪˈlɛvən/"],
-              specific_note: "",
-              segments: [{ text: "eleven", meaning: "十一", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Eleven o'clock.",
-              translation: "11點。",
-              segments: [
-                { text: "Eleven", meaning: "十一", tail: " " },
-                { text: "o'clock", meaning: "點鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "Chapter eleven.",
-              translation: "第11章。",
-              segments: [
-                { text: "Chapter", meaning: "章節", tail: " " },
-                { text: "eleven", meaning: "十一", tail: "." },
-              ],
-            },
-            {
-              sentence: "There are eleven players.",
-              translation: "有11名球員。",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "are", meaning: "有", tail: " " },
-                { text: "eleven", meaning: "十一", tail: " " },
-                { text: "players", meaning: "球員", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "十一。",
-          image_file: "eleven.png",
-        },
-        {
-          id: "num-12",
-          term_zh: "12",
-          related_terms: [
-            {
-              term_target: "twelve",
-              pronunciation: ["/twɛlv/"],
-              specific_note: "",
-              segments: [{ text: "twelve", meaning: "十二", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Twelve months.",
-              translation: "12個月。",
-              segments: [
-                { text: "Twelve", meaning: "十二", tail: " " },
-                { text: "months", meaning: "個月", tail: "." },
-              ],
-            },
-            {
-              sentence: "It is twelve noon.",
-              translation: "現在是中午12點。",
-              segments: [
-                { text: "It", meaning: "它(時間)", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "twelve", meaning: "十二點", tail: " " },
-                { text: "noon", meaning: "中午", tail: "." },
-              ],
-            },
-            {
-              sentence: "A box of twelve.",
-              translation: "一盒12個。",
-              segments: [
-                { text: "A", meaning: "一", tail: " " },
-                { text: "box", meaning: "盒", tail: " " },
-                { text: "of", meaning: "裝有...", tail: " " },
-                { text: "twelve", meaning: "十二個", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "十二。",
-          image_file: "twelve.png",
-        },
-        {
-          id: "num-15",
-          term_zh: "15",
-          related_terms: [
-            {
-              term_target: "fifteen",
-              pronunciation: ["/fɪfˈtin/"],
-              specific_note: "",
-              segments: [{ text: "fifteen", meaning: "十五", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Fifteen minutes.",
-              translation: "15分鐘。",
-              segments: [
-                { text: "Fifteen", meaning: "十五", tail: " " },
-                { text: "minutes", meaning: "分鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "She is fifteen.",
-              translation: "她15歲。",
-              segments: [
-                { text: "She", meaning: "她", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "fifteen", meaning: "十五歲", tail: "." },
-              ],
-            },
-            {
-              sentence: "Room fifteen.",
-              translation: "15號房。",
-              segments: [
-                { text: "Room", meaning: "房間", tail: " " },
-                { text: "fifteen", meaning: "十五", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "十五。",
-          image_file: "fifteen.png",
-        },
-        {
-          id: "num-20",
-          term_zh: "20",
-          related_terms: [
-            {
-              term_target: "twenty",
-              pronunciation: ["/ˈtwɛnti/"],
-              specific_note: "",
-              segments: [{ text: "twenty", meaning: "二十", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Twenty minutes.",
-              translation: "20分鐘。",
-              segments: [
-                { text: "Twenty", meaning: "二十", tail: " " },
-                { text: "minutes", meaning: "分鐘", tail: "." },
-              ],
-            },
-            {
-              sentence: "Twenty dollars.",
-              translation: "20元。",
-              segments: [
-                { text: "Twenty", meaning: "二十", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am twenty years old.",
-              translation: "我20歲。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "twenty", meaning: "二十", tail: " " },
-                { text: "years", meaning: "歲", tail: " " },
-                { text: "old", meaning: "老(歲)", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "二十。",
-          image_file: "twenty.png",
-        },
-        {
-          id: "num-50",
-          term_zh: "50",
-          related_terms: [
-            {
-              term_target: "fifty",
-              pronunciation: ["/ˈfɪfti/"],
-              specific_note: "",
-              segments: [{ text: "fifty", meaning: "五十", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Fifty percent.",
-              translation: "50%。",
-              segments: [
-                { text: "Fifty", meaning: "五十", tail: " " },
-                { text: "percent", meaning: "百分比", tail: "." },
-              ],
-            },
-            {
-              sentence: "Fifty people.",
-              translation: "50個人。",
-              segments: [
-                { text: "Fifty", meaning: "五十", tail: " " },
-                { text: "people", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "It costs fifty dollars.",
-              translation: "這個要50元。",
-              segments: [
-                { text: "It", meaning: "它", tail: " " },
-                { text: "costs", meaning: "花費", tail: " " },
-                { text: "fifty", meaning: "五十", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "五十。",
-          image_file: "fifty.png",
-        },
-        {
-          id: "num-100",
-          term_zh: "100",
-          related_terms: [
-            {
-              term_target: "one hundred",
-              pronunciation: ["/wʌn ˈhʌndrəd/"],
-              specific_note: "",
-              segments: [
-                { text: "one", meaning: "一", tail: " " },
-                { text: "hundred", meaning: "百", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "100 points.",
-              translation: "一百分。",
-              segments: [
-                { text: "100", meaning: "一百", tail: " " },
-                { text: "points", meaning: "分", tail: "." },
-              ],
-            },
-            {
-              sentence: "One hundred percent.",
-              translation: "百分之百。",
-              segments: [
-                { text: "One", meaning: "一", tail: " " },
-                { text: "hundred", meaning: "百", tail: " " },
-                { text: "percent", meaning: "百分比", tail: "." },
-              ],
-            },
-            {
-              sentence: "More than one hundred.",
-              translation: "超過一百個。",
-              segments: [
-                { text: "More", meaning: "更", tail: " " },
-                { text: "than", meaning: "比", tail: " " },
-                { text: "one", meaning: "一", tail: " " },
-                { text: "hundred", meaning: "百", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "百。",
-          image_file: "hundred.png",
-        },
-        {
-          id: "num-1000",
-          term_zh: "1000",
-          related_terms: [
-            {
-              term_target: "one thousand",
-              pronunciation: ["/wʌn ˈθaʊzənd/"],
-              specific_note: "",
-              segments: [
-                { text: "one", meaning: "一", tail: " " },
-                { text: "thousand", meaning: "千", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "1000 years.",
-              translation: "一千年。",
-              segments: [
-                { text: "1000", meaning: "一千", tail: " " },
-                { text: "years", meaning: "年", tail: "." },
-              ],
-            },
-            {
-              sentence: "One thousand dollars.",
-              translation: "一千元。",
-              segments: [
-                { text: "One", meaning: "一", tail: " " },
-                { text: "thousand", meaning: "千", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-            {
-              sentence: "A thousand thanks.",
-              translation: "非常感謝（一千個謝謝）。",
-              segments: [
-                { text: "A", meaning: "一", tail: " " },
-                { text: "thousand", meaning: "千", tail: " " },
-                { text: "thanks", meaning: "謝謝", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "千。",
-          image_file: "thousand.png",
-        },
-        {
-          id: "num-10000",
-          term_zh: "10000",
-          related_terms: [
-            {
-              term_target: "ten thousand",
-              pronunciation: ["/tɛn ˈθaʊzənd/"],
-              specific_note: "",
-              segments: [
-                { text: "ten", meaning: "十", tail: " " },
-                { text: "thousand", meaning: "千(一萬)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Ten thousand dollars.",
-              translation: "一萬元。",
-              segments: [
-                { text: "Ten", meaning: "十", tail: " " },
-                { text: "thousand", meaning: "千(萬)", tail: " " },
-                { text: "dollars", meaning: "元", tail: "." },
-              ],
-            },
-            {
-              sentence: "Ten thousand steps.",
-              translation: "一萬步。",
-              segments: [
-                { text: "Ten", meaning: "十", tail: " " },
-                { text: "thousand", meaning: "千(萬)", tail: " " },
-                { text: "steps", meaning: "步", tail: "." },
-              ],
-            },
-            {
-              sentence: "Over ten thousand fans.",
-              translation: "超過一萬名粉絲。",
-              segments: [
-                { text: "Over", meaning: "超過", tail: " " },
-                { text: "ten", meaning: "十", tail: " " },
-                { text: "thousand", meaning: "千(萬)", tail: " " },
-                { text: "fans", meaning: "粉絲", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一萬。",
-          image_file: "ten_thousand.png",
-        },
+          "term_target": "Không",
+          "pronunciation": ["/xoŋ˧˧/"],
+          "specific_note": "零。報電話號碼或編號時常用。",
+          "segments": [{ "text": "Không", "meaning": "零", "tail": "" }]
+        }
       ],
+      "examples": [
+        {
+          "sentence": "Số không.",
+          "translation": "數字零。",
+          "segments": [
+            { "text": "Số", "meaning": "數字", "tail": " " },
+            { "text": "không", "meaning": "零", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Không độ.",
+          "translation": "零度。",
+          "segments": [
+            { "text": "Không", "meaning": "零", "tail": " " },
+            { "text": "độ", "meaning": "度", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "Không 同時也是『不』的意思，要看語境區分喔。",
+      "image_file": "zero.png"
     },
     {
-      id: "grammar",
-      name: "基本句型",
-      items: [
+      "id": "num-1",
+      "term_zh": "1",
+      "related_terms": [
         {
-          id: "g-01",
-          term_zh: "我是/覺得～",
-          related_terms: [
-            {
-              term_target: "I am ～",
-              pronunciation: ["/aɪ æm/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I am happy.",
-              translation: "我很快樂。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "happy", meaning: "快樂的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am tired.",
-              translation: "我很累。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "tired", meaning: "累的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am a student.",
-              translation: "我是學生。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "a", meaning: "一個", tail: " " },
-                { text: "student", meaning: "學生", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "狀態。",
-          image_file: "i_am.png",
-        },
-        {
-          id: "g-02",
-          term_zh: "我的名字叫～",
-          related_terms: [
-            {
-              term_target: "My name is ～",
-              pronunciation: ["/maɪ neɪm ɪz/"],
-              specific_note: "",
-              segments: [
-                { text: "My", meaning: "我的", tail: " " },
-                { text: "name", meaning: "名字", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "My name is John.",
-              translation: "我的名字叫約翰。",
-              segments: [
-                { text: "My", meaning: "我的", tail: " " },
-                { text: "name", meaning: "名字", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "John", meaning: "約翰", tail: "." },
-              ],
-            },
-            {
-              sentence: "My name is Mary.",
-              translation: "我的名字叫瑪麗。",
-              segments: [
-                { text: "My", meaning: "我的", tail: " " },
-                { text: "name", meaning: "名字", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "Mary", meaning: "瑪麗", tail: "." },
-              ],
-            },
-            {
-              sentence: "Hello, my name is Tom.",
-              translation: "哈囉，我的名字叫湯姆。",
-              segments: [
-                { text: "Hello", meaning: "哈囉", tail: ", " },
-                { text: "my", meaning: "我的", tail: " " },
-                { text: "name", meaning: "名字", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "Tom", meaning: "湯姆", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "自我介紹。",
-          image_file: "my_name_is.png",
-        },
-        {
-          id: "g-03",
-          term_zh: "我做～",
-          related_terms: [
-            {
-              term_target: "I (verb)",
-              pronunciation: ["/aɪ/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "(verb)", meaning: "(動詞)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I work here.",
-              translation: "我在這裡工作。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "work", meaning: "工作", tail: " " },
-                { text: "here", meaning: "這裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "I play tennis.",
-              translation: "我打網球。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "play", meaning: "打", tail: " " },
-                { text: "tennis", meaning: "網球", tail: "." },
-              ],
-            },
-            {
-              sentence: "I love music.",
-              translation: "我熱愛音樂。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "love", meaning: "愛", tail: " " },
-                { text: "music", meaning: "音樂", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "一般動作。",
-          image_file: "i_do.png",
-        },
-        {
-          id: "g-04",
-          term_zh: "我正在做～",
-          related_terms: [
-            {
-              term_target: "I am ～ing",
-              pronunciation: ["/aɪ æm ...ɪŋ/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "正在", tail: " " },
-                { text: "～ing", meaning: "做...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I am eating.",
-              translation: "我正在吃。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "正在", tail: " " },
-                { text: "eating", meaning: "吃", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am working now.",
-              translation: "我現在正在工作。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "正在", tail: " " },
-                { text: "working", meaning: "工作", tail: " " },
-                { text: "now", meaning: "現在", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am waiting for you.",
-              translation: "我正在等你。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "正在", tail: " " },
-                { text: "waiting", meaning: "等待", tail: " " },
-                { text: "for", meaning: "...", tail: " " },
-                { text: "you", meaning: "你", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "進行式。",
-          image_file: "ing.png",
-        },
-        {
-          id: "g-05",
-          term_zh: "我能夠～",
-          related_terms: [
-            {
-              term_target: "I can ～",
-              pronunciation: ["/aɪ kæn/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can", meaning: "能夠", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I can swim.",
-              translation: "我會游泳。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can", meaning: "會", tail: " " },
-                { text: "swim", meaning: "游泳", tail: "." },
-              ],
-            },
-            {
-              sentence: "I can speak English.",
-              translation: "我會說英文。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can", meaning: "會", tail: " " },
-                { text: "speak", meaning: "說", tail: " " },
-                { text: "English", meaning: "英文", tail: "." },
-              ],
-            },
-            {
-              sentence: "I can help you.",
-              translation: "我可以幫你。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can", meaning: "可以", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "you", meaning: "你", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "能力。",
-          image_file: "can.png",
-        },
-        {
-          id: "g-06",
-          term_zh: "我喜歡做～",
-          related_terms: [
-            {
-              term_target: "I like ～ing",
-              pronunciation: ["/aɪ laɪk ...ɪŋ/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "～ing", meaning: "做...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I like reading.",
-              translation: "我喜歡閱讀。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "reading", meaning: "閱讀", tail: "." },
-              ],
-            },
-            {
-              sentence: "I like traveling.",
-              translation: "我喜歡旅行。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "traveling", meaning: "旅行", tail: "." },
-              ],
-            },
-            {
-              sentence: "I like eating pizza.",
-              translation: "我喜歡吃披薩。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "eating", meaning: "吃", tail: " " },
-                { text: "pizza", meaning: "披薩", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "興趣。",
-          image_file: "like_ing.png",
-        },
-        {
-          id: "g-07",
-          term_zh: "我曾經～",
-          related_terms: [
-            {
-              term_target: "I was ～",
-              pronunciation: ["/aɪ wʌz/"],
-              specific_note: "狀態",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "was", meaning: "是(過去式)", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I was a student.",
-              translation: "我曾經是學生。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "was", meaning: "是(過去式)", tail: " " },
-                { text: "a", meaning: "一個", tail: " " },
-                { text: "student", meaning: "學生", tail: "." },
-              ],
-            },
-            {
-              sentence: "I was busy yesterday.",
-              translation: "我昨天很忙。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "was", meaning: "是(過去式)", tail: " " },
-                { text: "busy", meaning: "忙碌的", tail: " " },
-                { text: "yesterday", meaning: "昨天", tail: "." },
-              ],
-            },
-            {
-              sentence: "I was at home.",
-              translation: "我當時在家。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "was", meaning: "在(過去式)", tail: " " },
-                { text: "at", meaning: "在", tail: " " },
-                { text: "home", meaning: "家", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "過去狀態。",
-          image_file: "i_was.png",
-        },
-        {
-          id: "g-08",
-          term_zh: "我做過～",
-          related_terms: [
-            {
-              term_target: "I (verb)ed",
-              pronunciation: ["/aɪ ...d/"],
-              specific_note: "動作",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "(verb)ed", meaning: "(動詞過去式)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I walked home.",
-              translation: "我走路回家。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "walked", meaning: "走(過去式)", tail: " " },
-                { text: "home", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "I watched a movie.",
-              translation: "我看了一部電影。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "watched", meaning: "看(過去式)", tail: " " },
-                { text: "a", meaning: "一部", tail: " " },
-                { text: "movie", meaning: "電影", tail: "." },
-              ],
-            },
-            {
-              sentence: "I played basketball.",
-              translation: "我打了籃球。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "played", meaning: "打(過去式)", tail: " " },
-                { text: "basketball", meaning: "籃球", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "過去動作。",
-          image_file: "i_did.png",
-        },
-        {
-          id: "g-09",
-          term_zh: "我已做過～",
-          related_terms: [
-            {
-              term_target: "I have (pp)",
-              pronunciation: ["/aɪ hæv/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "(pp)", meaning: "(過去分詞)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I have finished.",
-              translation: "我已經完成了。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "finished", meaning: "完成", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have lost my keys.",
-              translation: "我弄丟了鑰匙。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "lost", meaning: "遺失", tail: " " },
-                { text: "my", meaning: "我的", tail: " " },
-                { text: "keys", meaning: "鑰匙", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have seen that movie.",
-              translation: "我看過那部電影了。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "seen", meaning: "看過", tail: " " },
-                { text: "that", meaning: "那部", tail: " " },
-                { text: "movie", meaning: "電影", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "完成式。",
-          image_file: "i_have_done.png",
-        },
-        {
-          id: "g-10",
-          term_zh: "我曾去過～",
-          related_terms: [
-            {
-              term_target: "I have been to ～",
-              pronunciation: ["/aɪ hæv bɪn tu/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I have been to Japan.",
-              translation: "我曾經去過日本。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "Japan", meaning: "日本", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have been to Taipei 101.",
-              translation: "我去過台北101。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "Taipei 101", meaning: "台北101", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have been there twice.",
-              translation: "我去過那裡兩次。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "there", meaning: "那裡", tail: " " },
-                { text: "twice", meaning: "兩次", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "經驗。",
-          image_file: "have_been_to.png",
-        },
-        {
-          id: "g-11",
-          term_zh: "我打算～",
-          related_terms: [
-            {
-              term_target: "I will ～",
-              pronunciation: ["/aɪ wɪl/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "will", meaning: "將會", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I will go.",
-              translation: "我將要去。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "will", meaning: "將會", tail: " " },
-                { text: "go", meaning: "去", tail: "." },
-              ],
-            },
-            {
-              sentence: "I will call you.",
-              translation: "我會打電話給你。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "will", meaning: "將會", tail: " " },
-                { text: "call", meaning: "打電話", tail: " " },
-                { text: "you", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "I will do my best.",
-              translation: "我會盡力。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "will", meaning: "將會", tail: " " },
-                { text: "do", meaning: "做", tail: " " },
-                { text: "my", meaning: "我的", tail: " " },
-                { text: "best", meaning: "最好", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "未來式。",
-          image_file: "i_will.png",
-        },
-        {
-          id: "g-12",
-          term_zh: "你是～嗎？",
-          related_terms: [
-            {
-              term_target: "Are you ～ ?",
-              pronunciation: ["/ɑr ju/"],
-              specific_note: "",
-              segments: [
-                { text: "Are", meaning: "是", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Are you ready?",
-              translation: "準備好了嗎？",
-              segments: [
-                { text: "Are", meaning: "是", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "ready", meaning: "準備好的", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Are you hungry?",
-              translation: "你餓了嗎？",
-              segments: [
-                { text: "Are", meaning: "是", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "hungry", meaning: "餓的", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Are you a student?",
-              translation: "你是學生嗎？",
-              segments: [
-                { text: "Are", meaning: "是", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "a", meaning: "一個", tail: " " },
-                { text: "student", meaning: "學生", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問狀態。",
-          image_file: "are_you.png",
-        },
-        {
-          id: "g-13",
-          term_zh: "你在做～嗎？",
-          related_terms: [
-            {
-              term_target: "Do you ～ ?",
-              pronunciation: ["/du ju/"],
-              specific_note: "",
-              segments: [
-                { text: "Do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Do you eat spicy food?",
-              translation: "你吃辣嗎？",
-              segments: [
-                { text: "Do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "eat", meaning: "吃", tail: " " },
-                { text: "spicy", meaning: "辣的", tail: " " },
-                { text: "food", meaning: "食物", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Do you like music?",
-              translation: "你喜歡音樂嗎？",
-              segments: [
-                { text: "Do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "music", meaning: "音樂", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Do you understand?",
-              translation: "你懂嗎？",
-              segments: [
-                { text: "Do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "understand", meaning: "了解", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問習慣或意願。",
-          image_file: "do_you.png",
-        },
-        {
-          id: "g-14",
-          term_zh: "你曾經～嗎？",
-          related_terms: [
-            {
-              term_target: "Have you ever ～ ?",
-              pronunciation: ["/hæv ju ˈɛvɚ/"],
-              specific_note: "",
-              segments: [
-                { text: "Have", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "ever", meaning: "曾經", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Have you ever seen snow?",
-              translation: "你曾經看過雪嗎？",
-              segments: [
-                { text: "Have", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "ever", meaning: "曾經", tail: " " },
-                { text: "seen", meaning: "看過", tail: " " },
-                { text: "snow", meaning: "雪", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Have you ever been to Taiwan?",
-              translation: "你曾經去過台灣嗎？",
-              segments: [
-                { text: "Have", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "ever", meaning: "曾經", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "Taiwan", meaning: "台灣", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Have you ever eaten stinky tofu?",
-              translation: "你曾經吃過臭豆腐嗎？",
-              segments: [
-                { text: "Have", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "ever", meaning: "曾經", tail: " " },
-                { text: "eaten", meaning: "吃過", tail: " " },
-                { text: "stinky", meaning: "臭", tail: " " },
-                { text: "tofu", meaning: "豆腐", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問經驗。",
-          image_file: "have_you_ever.png",
-        },
-        {
-          id: "g-15",
-          term_zh: "你何時做（某事）？",
-          related_terms: [
-            {
-              term_target: "When do you ～ ?",
-              pronunciation: ["/hwɛn du ju/"],
-              specific_note: "",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "When do you sleep?",
-              translation: "你何時睡覺？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "sleep", meaning: "睡覺", tail: "?" },
-              ],
-            },
-            {
-              sentence: "When do you start work?",
-              translation: "你何時開始工作？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "start", meaning: "開始", tail: " " },
-                { text: "work", meaning: "工作", tail: "?" },
-              ],
-            },
-            {
-              sentence: "When do you exercise?",
-              translation: "你何時運動？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "exercise", meaning: "運動", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問時間點。",
-          image_file: "when_do_you.png",
-        },
-        {
-          id: "g-16",
-          term_zh: "你什麼時候去（某地）？",
-          related_terms: [
-            {
-              term_target: "When do you go to ～ ?",
-              pronunciation: ["/hwɛn du ju goʊ tu/"],
-              specific_note: "",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "When do you go to school?",
-              translation: "你何時去學校？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "school", meaning: "學校", tail: "?" },
-              ],
-            },
-            {
-              sentence: "When do you go to work?",
-              translation: "你何時去工作？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "work", meaning: "工作", tail: "?" },
-              ],
-            },
-            {
-              sentence: "When do you go home?",
-              translation: "你何時回家？",
-              segments: [
-                { text: "When", meaning: "何時", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "home", meaning: "家", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問去的時間。",
-          image_file: "when_go_to.png",
-        },
-        {
-          id: "g-17",
-          term_zh: "你在哪裡做（某事）？",
-          related_terms: [
-            {
-              term_target: "Where do you ～ ?",
-              pronunciation: ["/wɛr du ju/"],
-              specific_note: "",
-              segments: [
-                { text: "Where", meaning: "哪裡", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Where do you live?",
-              translation: "你住哪裡？",
-              segments: [
-                { text: "Where", meaning: "哪裡", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "live", meaning: "居住", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Where do you work?",
-              translation: "你在哪裡工作？",
-              segments: [
-                { text: "Where", meaning: "哪裡", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "work", meaning: "工作", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Where do you buy food?",
-              translation: "你在哪裡買食物？",
-              segments: [
-                { text: "Where", meaning: "哪裡", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "buy", meaning: "買", tail: " " },
-                { text: "food", meaning: "食物", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問地點。",
-          image_file: "where_do_you.png",
-        },
-        {
-          id: "g-18",
-          term_zh: "你如何做（某事）？",
-          related_terms: [
-            {
-              term_target: "How do you ～ ?",
-              pronunciation: ["/haʊ du ju/"],
-              specific_note: "",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "How do you cook?",
-              translation: "你怎麼煮？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "cook", meaning: "煮", tail: "?" },
-              ],
-            },
-            {
-              sentence: "How do you spell your name?",
-              translation: "你的名字怎麼拼？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "spell", meaning: "拼寫", tail: " " },
-                { text: "your", meaning: "你的", tail: " " },
-                { text: "name", meaning: "名字", tail: "?" },
-              ],
-            },
-            {
-              sentence: "How do you feel?",
-              translation: "你覺得如何？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "feel", meaning: "感覺", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問方法。",
-          image_file: "how_do_you.png",
-        },
-        {
-          id: "g-19",
-          term_zh: "你怎麼去（某地）？",
-          related_terms: [
-            {
-              term_target: "How do you go to ～ ?",
-              pronunciation: ["/haʊ du ju goʊ tu/"],
-              specific_note: "",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "How do you go to school?",
-              translation: "你怎麼去學校？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "school", meaning: "學校", tail: "?" },
-              ],
-            },
-            {
-              sentence: "How do you go to the airport?",
-              translation: "你怎麼去機場？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "the", meaning: "這", tail: " " },
-                { text: "airport", meaning: "機場", tail: "?" },
-              ],
-            },
-            {
-              sentence: "How do you go to work?",
-              translation: "你怎麼去工作？",
-              segments: [
-                { text: "How", meaning: "如何", tail: " " },
-                { text: "do", meaning: "(助動詞)", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "to", meaning: "往", tail: " " },
-                { text: "work", meaning: "工作", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "問交通方式。",
-          image_file: "how_go_to.png",
-        },
-        {
-          id: "g-20",
-          term_zh: "我不是～",
-          related_terms: [
-            {
-              term_target: "I am not ～",
-              pronunciation: ["/aɪ æm nɑt/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "not", meaning: "不", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I am not tired.",
-              translation: "我不累。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "not", meaning: "不", tail: " " },
-                { text: "tired", meaning: "累的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am not ready.",
-              translation: "我還沒準備好。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "not", meaning: "不", tail: " " },
-                { text: "ready", meaning: "準備好的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I am not a doctor.",
-              translation: "我不是醫生。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "not", meaning: "不", tail: " " },
-                { text: "a", meaning: "一位", tail: " " },
-                { text: "doctor", meaning: "醫生", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "否定狀態。",
-          image_file: "i_am_not.png",
-        },
-        {
-          id: "g-21",
-          term_zh: "我不做～",
-          related_terms: [
-            {
-              term_target: "I don't ～",
-              pronunciation: ["/aɪ doʊnt/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I don't smoke.",
-              translation: "我不抽菸。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "smoke", meaning: "抽菸", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't know.",
-              translation: "我不知道。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "know", meaning: "知道", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't understand.",
-              translation: "我不懂。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "understand", meaning: "了解", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "否定動作。",
-          image_file: "i_dont.png",
-        },
-        {
-          id: "g-22",
-          term_zh: "我不能～",
-          related_terms: [
-            {
-              term_target: "I can't ～",
-              pronunciation: ["/aɪ kænt/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can't", meaning: "不能", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I can't swim.",
-              translation: "我不會游泳。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can't", meaning: "不能", tail: " " },
-                { text: "swim", meaning: "游泳", tail: "." },
-              ],
-            },
-            {
-              sentence: "I can't hear you.",
-              translation: "我聽不到你說話。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can't", meaning: "不能", tail: " " },
-                { text: "hear", meaning: "聽見", tail: " " },
-                { text: "you", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "I can't go today.",
-              translation: "我今天不能去。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "can't", meaning: "不能", tail: " " },
-                { text: "go", meaning: "去", tail: " " },
-                { text: "today", meaning: "今天", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "否定能力。",
-          image_file: "i_cant.png",
-        },
-        {
-          id: "g-23",
-          term_zh: "我未曾～",
-          related_terms: [
-            {
-              term_target: "I have never ～",
-              pronunciation: ["/aɪ hæv ˈnɛvɚ/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "never", meaning: "從未", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I have never eaten this.",
-              translation: "我沒吃過這個。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "never", meaning: "從未", tail: " " },
-                { text: "eaten", meaning: "吃過", tail: " " },
-                { text: "this", meaning: "這個", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have never been there.",
-              translation: "我從沒去過那裡。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "never", meaning: "從未", tail: " " },
-                { text: "been", meaning: "去過", tail: " " },
-                { text: "there", meaning: "那裡", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have never seen that.",
-              translation: "我從沒看過那個。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "已經", tail: " " },
-                { text: "never", meaning: "從未", tail: " " },
-                { text: "seen", meaning: "看過", tail: " " },
-                { text: "that", meaning: "那個", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "無此經驗。",
-          image_file: "i_have_never.png",
-        },
-        {
-          id: "g-24",
-          term_zh: "我不必～",
-          related_terms: [
-            {
-              term_target: "I don't have to ～",
-              pronunciation: ["/aɪ doʊnt hæv tu/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "have", meaning: "有/必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I don't have to go.",
-              translation: "我不必去。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "go", meaning: "走", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't have to work today.",
-              translation: "我今天不必工作。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "work", meaning: "工作", tail: " " },
-                { text: "today", meaning: "今天", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't have to pay.",
-              translation: "我不必付錢。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "pay", meaning: "付費", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "無義務。",
-          image_file: "i_dont_have_to.png",
-        },
-        {
-          id: "g-25",
-          term_zh: "如果～的話，就～",
-          related_terms: [
-            {
-              term_target: "If ..., ...",
-              pronunciation: ["/ɪf/"],
-              specific_note: "",
-              segments: [{ text: "If", meaning: "如果", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "If you like, take it.",
-              translation: "如果你喜歡，拿去吧。",
-              segments: [
-                { text: "If", meaning: "如果", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "like", meaning: "喜歡", tail: ", " },
-                { text: "take", meaning: "拿", tail: " " },
-                { text: "it", meaning: "它", tail: "." },
-              ],
-            },
-            {
-              sentence: "If it rains, stay home.",
-              translation: "如果下雨，就待在家。",
-              segments: [
-                { text: "If", meaning: "如果", tail: " " },
-                { text: "it", meaning: "它(天氣)", tail: " " },
-                { text: "rains", meaning: "下雨", tail: ", " },
-                { text: "stay", meaning: "待在", tail: " " },
-                { text: "home", meaning: "家", tail: "." },
-              ],
-            },
-            {
-              sentence: "If you are tired, sleep.",
-              translation: "如果你累了，就睡覺。",
-              segments: [
-                { text: "If", meaning: "如果", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "are", meaning: "是", tail: " " },
-                { text: "tired", meaning: "累的", tail: ", " },
-                { text: "sleep", meaning: "睡覺", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "假設條件。",
-          image_file: "if.png",
-        },
-        {
-          id: "g-26",
-          term_zh: "當～時，就～",
-          related_terms: [
-            {
-              term_target: "When ..., ...",
-              pronunciation: ["/hwɛn/"],
-              specific_note: "",
-              segments: [{ text: "When", meaning: "當...時", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "When I eat, I am happy.",
-              translation: "當我吃東西時，我很開心。",
-              segments: [
-                { text: "When", meaning: "當...時", tail: " " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "eat", meaning: "吃", tail: ", " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "am", meaning: "是", tail: " " },
-                { text: "happy", meaning: "快樂的", tail: "." },
-              ],
-            },
-            {
-              sentence: "When you arrive, call me.",
-              translation: "當你到達時，打給我。",
-              segments: [
-                { text: "When", meaning: "當...時", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "arrive", meaning: "抵達", tail: ", " },
-                { text: "call", meaning: "打電話給", tail: " " },
-                { text: "me", meaning: "我", tail: "." },
-              ],
-            },
-            {
-              sentence: "When I have time, I read.",
-              translation: "當我有空時，我會看書。",
-              segments: [
-                { text: "When", meaning: "當...時", tail: " " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "有", tail: " " },
-                { text: "time", meaning: "時間", tail: ", " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "read", meaning: "閱讀", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "時間條件。",
-          image_file: "when_condition.png",
-        },
-        {
-          id: "g-27",
-          term_zh: "請你～",
-          related_terms: [
-            {
-              term_target: "Can you ～ ?",
-              pronunciation: ["/kæn ju/"],
-              specific_note: "",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "～", meaning: "...", tail: "?" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Can you help me?",
-              translation: "請你幫我好嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "me", meaning: "我", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can you open the door?",
-              translation: "你可以開門嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "open", meaning: "打開", tail: " " },
-                { text: "the", meaning: "這", tail: " " },
-                { text: "door", meaning: "門", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can you wait a moment?",
-              translation: "你可以等一下嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "wait", meaning: "等待", tail: " " },
-                { text: "a", meaning: "一下", tail: " " },
-                { text: "moment", meaning: "片刻", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "請求。",
-          image_file: "can_you.png",
-        },
-        {
-          id: "g-28",
-          term_zh: "我們來做～吧！",
-          related_terms: [
-            {
-              term_target: "Let's ～",
-              pronunciation: ["/lɛts/"],
-              specific_note: "",
-              segments: [{ text: "Let's", meaning: "讓我們...", tail: "" }],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Let's go.",
-              translation: "我們走吧。",
-              segments: [
-                { text: "Let's", meaning: "讓我們", tail: " " },
-                { text: "go", meaning: "走", tail: "." },
-              ],
-            },
-            {
-              sentence: "Let's eat.",
-              translation: "我們吃吧。",
-              segments: [
-                { text: "Let's", meaning: "讓我們", tail: " " },
-                { text: "eat", meaning: "吃", tail: "." },
-              ],
-            },
-            {
-              sentence: "Let's take a break.",
-              translation: "我們休息一下吧。",
-              segments: [
-                { text: "Let's", meaning: "讓我們", tail: " " },
-                { text: "take", meaning: "進行", tail: " " },
-                { text: "a", meaning: "一個", tail: " " },
-                { text: "break", meaning: "休息", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "提議。",
-          image_file: "lets.png",
-        },
-        {
-          id: "g-29",
-          term_zh: "我認為～",
-          related_terms: [
-            {
-              term_target: "I think ～",
-              pronunciation: ["/aɪ θɪŋk/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "think", meaning: "認為", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I think it is good.",
-              translation: "我認為這很好。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "think", meaning: "認為", tail: " " },
-                { text: "it", meaning: "它", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "good", meaning: "好的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I think you are right.",
-              translation: "我認為你是對的。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "think", meaning: "認為", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "are", meaning: "是", tail: " " },
-                { text: "right", meaning: "對的", tail: "." },
-              ],
-            },
-            {
-              sentence: "I think so too.",
-              translation: "我也這麼認為。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "think", meaning: "認為", tail: " " },
-                { text: "so", meaning: "如此", tail: " " },
-                { text: "too", meaning: "也", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "表達想法。",
-          image_file: "i_think.png",
-        },
-        {
-          id: "g-30",
-          term_zh: "我想做～",
-          related_terms: [
-            {
-              term_target: "I want to ～",
-              pronunciation: ["/aɪ wɑnt tu/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "want", meaning: "想要", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I want to go.",
-              translation: "我想走。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "want", meaning: "想要", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "go", meaning: "走", tail: "." },
-              ],
-            },
-            {
-              sentence: "I want to buy this.",
-              translation: "我想買這個。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "want", meaning: "想要", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "buy", meaning: "買", tail: " " },
-                { text: "this", meaning: "這個", tail: "." },
-              ],
-            },
-            {
-              sentence: "I want to see a movie.",
-              translation: "我想看電影。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "want", meaning: "想要", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "see", meaning: "看", tail: " " },
-                { text: "a", meaning: "一部", tail: " " },
-                { text: "movie", meaning: "電影", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "慾望。",
-          image_file: "want_to.png",
-        },
-        {
-          id: "g-31",
-          term_zh: "我必須做～",
-          related_terms: [
-            {
-              term_target: "I have to ～",
-              pronunciation: ["/aɪ hæv tu/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "～", meaning: "...", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I have to work.",
-              translation: "我必須工作。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "work", meaning: "工作", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have to go now.",
-              translation: "我現在得走了。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "go", meaning: "走", tail: " " },
-                { text: "now", meaning: "現在", tail: "." },
-              ],
-            },
-            {
-              sentence: "I have to study.",
-              translation: "我必須讀書。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "必須", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "study", meaning: "讀書", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "義務。",
-          image_file: "i_have_to.png",
-        },
-        {
-          id: "g-32",
-          term_zh: "做某事是怎樣的",
-          related_terms: [
-            {
-              term_target: "It is ... to ～",
-              pronunciation: ["/ɪt ɪz ... tu/"],
-              specific_note: "",
-              segments: [
-                { text: "It", meaning: "它", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "...", meaning: "...", tail: " " },
-                { text: "to", meaning: "去", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "It is good to eat.",
-              translation: "吃東西是很好的。",
-              segments: [
-                { text: "It", meaning: "它", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "good", meaning: "好的", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "eat", meaning: "吃", tail: "." },
-              ],
-            },
-            {
-              sentence: "It is nice to meet you.",
-              translation: "很高興認識你。",
-              segments: [
-                { text: "It", meaning: "它", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "nice", meaning: "好的", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "meet", meaning: "遇見", tail: " " },
-                { text: "you", meaning: "你", tail: "." },
-              ],
-            },
-            {
-              sentence: "It is important to learn.",
-              translation: "學習是很重要的。",
-              segments: [
-                { text: "It", meaning: "它", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "important", meaning: "重要的", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "learn", meaning: "學習", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "描述動作。",
-          image_file: "it_is_to.png",
-        },
-        {
-          id: "g-33",
-          term_zh: "你可以幫我…嗎？",
-          related_terms: [
-            {
-              term_target: "Can you help me ... ?",
-              pronunciation: ["/kæn ju hɛlp mi/"],
-              specific_note: "",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "me", meaning: "我", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Can you help me clean?",
-              translation: "你可以幫我打掃嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "me", meaning: "我", tail: " " },
-                { text: "clean", meaning: "打掃", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can you help me with this?",
-              translation: "你可以幫我弄這個嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "me", meaning: "我", tail: " " },
-                { text: "with", meaning: "處理", tail: " " },
-                { text: "this", meaning: "這個", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can you help me find it?",
-              translation: "你可以幫我找它嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "you", meaning: "你", tail: " " },
-                { text: "help", meaning: "幫助", tail: " " },
-                { text: "me", meaning: "我", tail: " " },
-                { text: "find", meaning: "找到", tail: " " },
-                { text: "it", meaning: "它", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "尋求協助。",
-          image_file: "can_you_help.png",
-        },
-        {
-          id: "g-34",
-          term_zh: "我可以…嗎？",
-          related_terms: [
-            {
-              term_target: "Can I ... ?",
-              pronunciation: ["/kæn aɪ/"],
-              specific_note: "",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "I", meaning: "我", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "Can I go?",
-              translation: "我可以走嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "go", meaning: "走", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can I have some water?",
-              translation: "我可以喝點水嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "have", meaning: "有/喝", tail: " " },
-                { text: "some", meaning: "一些", tail: " " },
-                { text: "water", meaning: "水", tail: "?" },
-              ],
-            },
-            {
-              sentence: "Can I sit here?",
-              translation: "我可以坐這裡嗎？",
-              segments: [
-                { text: "Can", meaning: "可以", tail: " " },
-                { text: "I", meaning: "我", tail: " " },
-                { text: "sit", meaning: "坐", tail: " " },
-                { text: "here", meaning: "這裡", tail: "?" },
-              ],
-            },
-          ],
-          usage_note: "請求許可。",
-          image_file: "can_i.png",
-        },
-        {
-          id: "g-35",
-          term_zh: "我不喜歡…",
-          related_terms: [
-            {
-              term_target: "I don't like ...",
-              pronunciation: ["/aɪ doʊnt laɪk/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "like", meaning: "喜歡", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I don't like it.",
-              translation: "我不喜歡它。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "it", meaning: "它", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't like natto.",
-              translation: "我不喜歡納豆。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "natto", meaning: "納豆", tail: "." },
-              ],
-            },
-            {
-              sentence: "I don't like waiting.",
-              translation: "我不喜歡等待。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "don't", meaning: "不", tail: " " },
-                { text: "like", meaning: "喜歡", tail: " " },
-                { text: "waiting", meaning: "等待", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "表達反感。",
-          image_file: "i_dont_like.png",
-        },
-        {
-          id: "g-36",
-          term_zh: "我比較喜歡…",
-          related_terms: [
-            {
-              term_target: "I prefer ...",
-              pronunciation: ["/aɪ prɪˈfɝ/"],
-              specific_note: "",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "prefer", meaning: "偏好", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "I prefer tea.",
-              translation: "我比較喜歡茶。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "prefer", meaning: "偏好", tail: " " },
-                { text: "tea", meaning: "茶", tail: "." },
-              ],
-            },
-            {
-              sentence: "I prefer cats.",
-              translation: "我比較喜歡貓。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "prefer", meaning: "偏好", tail: " " },
-                { text: "cats", meaning: "貓", tail: "." },
-              ],
-            },
-            {
-              sentence: "I prefer to stay home.",
-              translation: "我比較喜歡待在家。",
-              segments: [
-                { text: "I", meaning: "我", tail: " " },
-                { text: "prefer", meaning: "偏好", tail: " " },
-                { text: "to", meaning: "去", tail: " " },
-                { text: "stay", meaning: "待在", tail: " " },
-                { text: "home", meaning: "家", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "偏好。",
-          image_file: "prefer.png",
-        },
-        {
-          id: "g-37",
-          term_zh: "A 比 B 更…",
-          related_terms: [
-            {
-              term_target: "A is more ... than B",
-              pronunciation: ["/... mɔr ... ðæn .../"],
-              specific_note: "",
-              segments: [
-                { text: "A", meaning: "A", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "more", meaning: "更", tail: " " },
-                { text: "...", meaning: "...", tail: " " },
-                { text: "than", meaning: "比", tail: " " },
-                { text: "B", meaning: "B", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "This is more expensive than that.",
-              translation: "這比那個貴。",
-              segments: [
-                { text: "This", meaning: "這", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "more", meaning: "更", tail: " " },
-                { text: "expensive", meaning: "貴的", tail: " " },
-                { text: "than", meaning: "比", tail: " " },
-                { text: "that", meaning: "那", tail: "." },
-              ],
-            },
-            {
-              sentence: "He is more famous than her.",
-              translation: "他比她更有名。",
-              segments: [
-                { text: "He", meaning: "他", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "more", meaning: "更", tail: " " },
-                { text: "famous", meaning: "有名的", tail: " " },
-                { text: "than", meaning: "比", tail: " " },
-                { text: "her", meaning: "她", tail: "." },
-              ],
-            },
-            {
-              sentence: "This problem is more difficult.",
-              translation: "這個問題更困難。",
-              segments: [
-                { text: "This", meaning: "這個", tail: " " },
-                { text: "problem", meaning: "問題", tail: " " },
-                { text: "is", meaning: "是", tail: " " },
-                { text: "more", meaning: "更", tail: " " },
-                { text: "difficult", meaning: "困難的", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "比較級。",
-          image_file: "more_than.png",
-        },
-        {
-          id: "g-38",
-          term_zh: "有…（存在）",
-          related_terms: [
-            {
-              term_target: "There is / There are",
-              pronunciation: ["/ðɛr ɪz / ðɛr ɑr/"],
-              specific_note: "",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "is", meaning: "有(單數)", tail: " / " },
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "are", meaning: "有(複數)", tail: "" },
-              ],
-            },
-          ],
-          examples: [
-            {
-              sentence: "There is a dog.",
-              translation: "那裡有一隻狗。",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "is", meaning: "有", tail: " " },
-                { text: "a", meaning: "一隻", tail: " " },
-                { text: "dog", meaning: "狗", tail: "." },
-              ],
-            },
-            {
-              sentence: "There are many people.",
-              translation: "那裡有很多人。",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "are", meaning: "有", tail: " " },
-                { text: "many", meaning: "許多", tail: " " },
-                { text: "people", meaning: "人", tail: "." },
-              ],
-            },
-            {
-              sentence: "There is a problem.",
-              translation: "有一個問題。",
-              segments: [
-                { text: "There", meaning: "那裡", tail: " " },
-                { text: "is", meaning: "有", tail: " " },
-                { text: "a", meaning: "一個", tail: " " },
-                { text: "problem", meaning: "問題", tail: "." },
-              ],
-            },
-          ],
-          usage_note: "存在。",
-          image_file: "there_is.png",
-        },
+          "term_target": "Một",
+          "pronunciation": ["/mot˨˩/"],
+          "specific_note": "一。發音很像台語的「莫」。",
+          "segments": [{ "text": "Một", "meaning": "一", "tail": "" }]
+        }
       ],
+      "examples": [
+        {
+          "sentence": "Cho em một ly trà sữa.",
+          "translation": "給我一杯奶茶。",
+          "segments": [
+            { "text": "Cho em", "meaning": "給我", "tail": " " },
+            { "text": "một", "meaning": "一", "tail": " " },
+            { "text": "ly", "meaning": "杯", "tail": " " },
+            { "text": "trà sữa", "meaning": "奶茶", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "如果是在 21, 31... 等尾數，1 會唸成 mốt。",
+      "image_file": "one.png"
     },
+    {
+      "id": "num-2",
+      "term_zh": "2",
+      "related_terms": [
+        {
+          "term_target": "Hai",
+          "pronunciation": ["/haːj˧˧/"],
+          "specific_note": "二。發音就像中文的「嗨」。",
+          "segments": [{ "text": "Hai", "meaning": "二", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hai người ạ.",
+          "translation": "（用餐）兩位喔。",
+          "segments": [
+            { "text": "Hai", "meaning": "二", "tail": " " },
+            { "text": "người", "meaning": "人/位", "tail": " " },
+            { "text": "ạ", "meaning": "敬語", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "點餐、報人數最常用。",
+      "image_file": "two.png"
+    },
+    {
+      "id": "num-3",
+      "term_zh": "3",
+      "related_terms": [
+        {
+          "term_target": "Ba",
+          "pronunciation": ["/ɓaː˧˧/"],
+          "specific_note": "三。發音像中文的「爸」。",
+          "segments": [{ "text": "Ba", "meaning": "三", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Một, hai, ba, dô!",
+          "translation": "一、二、三，乾杯！",
+          "segments": [
+            { "text": "Một, hai, ba", "meaning": "1, 2, 3", "tail": ", " },
+            { "text": "dô", "meaning": "進(乾杯口號)", "tail": "!" }
+          ]
+        }
+      ],
+      "usage_note": "Ba 在南越也是「爸爸」的意思。",
+      "image_file": "three.png"
+    },
+    {
+      "id": "num-4",
+      "term_zh": "4",
+      "related_terms": [
+        {
+          "term_target": "Bốn",
+          "pronunciation": ["/ɓon˧˥/"],
+          "specific_note": "四。",
+          "segments": [{ "text": "Bốn", "meaning": "四", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Bốn mùa.",
+          "translation": "四季。",
+          "segments": [
+            { "text": "Bốn", "meaning": "四", "tail": " " },
+            { "text": "mùa", "meaning": "季節", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "序數「第四」會唸成 Tư。",
+      "image_file": "four.png"
+    },
+    {
+      "id": "num-5",
+      "term_zh": "5",
+      "related_terms": [
+        {
+          "term_target": "Năm",
+          "pronunciation": ["/năm˧˧/"],
+          "specific_note": "五。發音像中文的「男」。",
+          "segments": [{ "text": "Năm", "meaning": "五", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Năm phút nữa.",
+          "translation": "再五分鐘。",
+          "segments": [
+            { "text": "Năm", "meaning": "五", "tail": " " },
+            { "text": "phút", "meaning": "分鐘", "tail": " " },
+            { "text": "nữa", "meaning": "再/更加", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "當 5 出現在尾數（如15, 25）時，會變音唸成 lăm。",
+      "image_file": "five.png"
+    },
+    {
+      "id": "num-6",
+      "term_zh": "6",
+      "related_terms": [
+        {
+          "term_target": "Sáu",
+          "pronunciation": ["/saːw˧˥/"],
+          "specific_note": "六。",
+          "segments": [{ "text": "Sáu", "meaning": "六", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Sáu giờ sáng.",
+          "translation": "早上六點。",
+          "segments": [
+            { "text": "Sáu", "meaning": "六", "tail": " " },
+            { "text": "giờ", "meaning": "點", "tail": " " },
+            { "text": "sáng", "meaning": "早", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "發音像中文的「掃」（上聲）。",
+      "image_file": "six.png"
+    },
+    {
+      "id": "num-7",
+      "term_zh": "7",
+      "related_terms": [
+        {
+          "term_target": "Bảy",
+          "pronunciation": ["/ɓaj˧˩/"],
+          "specific_note": "七。",
+          "segments": [{ "text": "Bảy", "meaning": "七", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Thứ Bảy.",
+          "translation": "星期六（注意：越南週六是第7個日子）。",
+          "segments": [
+            { "text": "Thứ", "meaning": "序數/第", "tail": " " },
+            { "text": "Bảy", "meaning": "七", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "發音像中文的「百」（問項調）。",
+      "image_file": "seven.png"
+    },
+    {
+      "id": "num-8",
+      "term_zh": "8",
+      "related_terms": [
+        {
+          "term_target": "Tám",
+          "pronunciation": ["/taːm˧˥/"],
+          "specific_note": "八。",
+          "segments": [{ "text": "Tám", "meaning": "八", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Tám nghìn.",
+          "translation": "八千。",
+          "segments": [
+            { "text": "Tám", "meaning": "八", "tail": " " },
+            { "text": "nghìn", "meaning": "千", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "發音像中文的「擔」（去聲）。",
+      "image_file": "eight.png"
+    },
+    {
+      "id": "num-9",
+      "term_zh": "9",
+      "related_terms": [
+        {
+          "term_target": "Chín",
+          "pronunciation": ["/cin˧˥/"],
+          "specific_note": "九。同時也是「成熟、煮熟」的意思。",
+          "segments": [{ "text": "Chín", "meaning": "九", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Chín giờ tối.",
+          "translation": "晚上九點。",
+          "segments": [
+            { "text": "Chín", "meaning": "九", "tail": " " },
+            { "text": "giờ", "meaning": "點", "tail": " " },
+            { "text": "tối", "meaning": "晚", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "發音像中文的「進」。",
+      "image_file": "nine.png"
+    },
+    {
+      "id": "num-10",
+      "term_zh": "10",
+      "related_terms": [
+        {
+          "term_target": "Mười",
+          "pronunciation": ["/mɨəj˨˩/"],
+          "specific_note": "十。",
+          "segments": [{ "text": "Mười", "meaning": "十", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mười điểm!",
+          "translation": "十分！（滿分、太棒了）",
+          "segments": [
+            { "text": "Mười", "meaning": "十", "tail": " " },
+            { "text": "điểm", "meaning": "分", "tail": "!" }
+          ]
+        }
+      ],
+      "usage_note": "發音像中文的「每」（玄聲）。",
+      "image_file": "ten.png"
+    },
+    {
+      "id": "num-11",
+      "term_zh": "11",
+      "related_terms": [
+        {
+          "term_target": "Mười một",
+          "pronunciation": ["/mɨəj˨˩ mot˨˩/"],
+          "specific_note": "十一。",
+          "segments": [
+            { "text": "Mười", "meaning": "十", "tail": " " },
+            { "text": "một", "meaning": "一", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mười một giờ.",
+          "translation": "十一點。",
+          "segments": [
+            { "text": "Mười một", "meaning": "十一", "tail": " " },
+            { "text": "giờ", "meaning": "點", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "11 到 19 的邏輯跟中文一樣：『十 + 個位數』。",
+      "image_file": "eleven.png"
+    },
+    {
+      "id": "num-12",
+      "term_zh": "12",
+      "related_terms": [
+        {
+          "term_target": "Mười hai",
+          "pronunciation": ["/mɨəj˨˩ haːj˧˧/"],
+          "specific_note": "十二。",
+          "segments": [
+            { "text": "Mười", "meaning": "十", "tail": " " },
+            { "text": "hai", "meaning": "二", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mười hai tháng.",
+          "translation": "十二個月。",
+          "segments": [
+            { "text": "Mười hai", "meaning": "十二", "tail": " " },
+            { "text": "tháng", "meaning": "月", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "十二個月即一年。",
+      "image_file": "twelve.png"
+    },
+    {
+      "id": "num-15",
+      "term_zh": "15",
+      "related_terms": [
+        {
+          "term_target": "Mười lăm",
+          "pronunciation": ["/mɨəj˨˩ lăm˧˧/"],
+          "specific_note": "十五（注意 5 變音為 lăm）。",
+          "segments": [
+            { "text": "Mười", "meaning": "十", "tail": " " },
+            { "text": "lăm", "meaning": "五(變音)", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mười lăm phút.",
+          "translation": "十五分鐘。",
+          "segments": [
+            { "text": "Mười lăm", "meaning": "十五", "tail": " " },
+            { "text": "phút", "meaning": "分鐘", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "這是新手最常唸錯的地方，不要唸成 Mười năm 喔！",
+      "image_file": "fifteen.png"
+    },
+    {
+      "id": "num-20",
+      "term_zh": "20",
+      "related_terms": [
+        {
+          "term_target": "Hai mươi",
+          "pronunciation": ["/haːj˧˧ mɨəj˧˧/"],
+          "specific_note": "二十。",
+          "segments": [
+            { "text": "Hai", "meaning": "二", "tail": " " },
+            { "text": "mươi", "meaning": "十(十位數專用)", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hai mươi tuổi.",
+          "translation": "二十歲。",
+          "segments": [
+            { "text": "Hai mươi", "meaning": "二十", "tail": " " },
+            { "text": "tuổi", "meaning": "歲", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "當 10 在十位數時，發音由 mười 變為平聲的 mươi。",
+      "image_file": "twenty.png"
+    },
+    {
+      "id": "num-50",
+      "term_zh": "50",
+      "related_terms": [
+        {
+          "term_target": "Năm mươi",
+          "pronunciation": ["/năm˧˧ mɨəj˧˧/"],
+          "specific_note": "五十。",
+          "segments": [
+            { "text": "Năm", "meaning": "五", "tail": " " },
+            { "text": "mươi", "meaning": "十", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Năm mươi phần trăm.",
+          "translation": "百分之五十（五成）。",
+          "segments": [
+            { "text": "Năm mươi", "meaning": "五十", "tail": " " },
+            { "text": "phần trăm", "meaning": "百分比", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "這裡的 5 在開頭，所以唸 năm 而不是 lăm。",
+      "image_file": "fifty.png"
+    },
+    {
+      "id": "num-100",
+      "term_zh": "100",
+      "related_terms": [
+        {
+          "term_target": "Một trăm",
+          "pronunciation": ["/mot˨˩ cam˧˧/"],
+          "specific_note": "一百。",
+          "segments": [
+            { "text": "Một", "meaning": "一", "tail": " " },
+            { "text": "trăm", "meaning": "百", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Một trăm phần trăm!",
+          "translation": "百分之百！（越南乾杯口號：乾啦！）",
+          "segments": [
+            { "text": "Một trăm", "meaning": "一百", "tail": " " },
+            { "text": "phần trăm", "meaning": "百分之百", "tail": "!" }
+          ]
+        }
+      ],
+      "usage_note": "越南乾杯時喊這句最有氣氛。",
+      "image_file": "hundred.png"
+    },
+    {
+      "id": "num-1000",
+      "term_zh": "1000",
+      "related_terms": [
+        {
+          "term_target": "Nghìn",
+          "pronunciation": ["/ŋiɲ˨˩/"],
+          "specific_note": "千（北越常用）。",
+          "segments": [{ "text": "Nghìn", "meaning": "千", "tail": "" }]
+        },
+        {
+          "term_target": "Ngàn",
+          "pronunciation": ["/ŋaːn˨˩/"],
+          "specific_note": "千（南越常用）。",
+          "segments": [{ "text": "Ngàn", "meaning": "千", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Năm ngàn đồng.",
+          "translation": "五千越南盾。",
+          "segments": [
+            { "text": "Năm", "meaning": "五", "tail": " " },
+            { "text": "ngàn", "meaning": "千", "tail": " " },
+            { "text": "đồng", "meaning": "盾(貨幣)", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "越南盾面額大，報價通常以「千 (K)」為單位。",
+      "image_file": "thousand.png"
+    },
+    {
+      "id": "num-10000",
+      "term_zh": "10000",
+      "related_terms": [
+        {
+          "term_target": "Mười ngàn",
+          "pronunciation": ["/mɨəj˨˩ ŋaːn˨˩/"],
+          "specific_note": "一萬（直譯為：十千）。",
+          "segments": [
+            { "text": "Mười", "meaning": "十", "tail": " " },
+            { "text": "ngàn", "meaning": "千", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mười ngàn một cái.",
+          "translation": "一萬塊（十千）一個。",
+          "segments": [
+            { "text": "Mười ngàn", "meaning": "一萬", "tail": " " },
+            { "text": "một cái", "meaning": "一個", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "越南語沒有專門的『萬』，是以千為進位，所以一萬要說『十千』。",
+      "image_file": "ten_thousand.png"
+    }
+  ]
+},
+{
+  "id": "grammar_vn",
+  "name": "基礎句型與語法",
+  "items": [
+    {
+      "id": "g-01",
+      "term_zh": "我是... / 我覺得... (狀態)",
+      "related_terms": [
+        {
+          "term_target": "Tôi là... / Em... (adjective)",
+          "pronunciation": ["/toːj˧˧ laː˨˩/", "/ɛm˧˧/"],
+          "specific_note": "注意：越南語形容詞前不需要加「是 (là)」。",
+          "segments": [
+            { "text": "Tôi", "meaning": "我", "tail": " " },
+            { "text": "là", "meaning": "是(接名詞)", "tail": " " },
+            { "text": "...", "meaning": "...", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em đói quá.",
+          "translation": "我好餓喔。",
+          "segments": [
+            { "text": "Em", "meaning": "我(弟妹)", "tail": " " },
+            { "text": "đói", "meaning": "餓", "tail": " " },
+            { "text": "quá", "meaning": "太/真", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Tôi là người Đài Loan.",
+          "translation": "我是台灣人。",
+          "segments": [
+            { "text": "Tôi", "meaning": "我", "tail": " " },
+            { "text": "là", "meaning": "是", "tail": " " },
+            { "text": "người", "meaning": "人", "tail": " " },
+            { "text": "Đài Loan", "meaning": "台灣", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Em mệt lắm.",
+          "translation": "我很累。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "mệt", "meaning": "累", "tail": " " },
+            { "text": "lắm", "meaning": "非常", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "只有『我是(名詞)』才要加 là。形容心境或身體狀況直接說『我+形容詞』就好。",
+      "image_file": "i_am.png"
+    },
+    {
+      "id": "g-02",
+      "term_zh": "我的名字叫～",
+      "related_terms": [
+        {
+          "term_target": "Tên em là ～",
+          "pronunciation": ["/ten˧˧ ɛm˧˧ laː˨˩/"],
+          "specific_note": "自我介紹最常用的句型。",
+          "segments": [
+            { "text": "Tên", "meaning": "名字", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "là", "meaning": "是", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Tên em là Lan.",
+          "translation": "我的名字叫蘭。",
+          "segments": [
+            { "text": "Tên em", "meaning": "我的名字", "tail": " " },
+            { "text": "là", "meaning": "是", "tail": " " },
+            { "text": "Lan", "meaning": "蘭(人名)", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Em tên là Hùng, rất vui được gặp anh.",
+          "translation": "我名字叫雄，很高興見到你(哥)。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "tên là", "meaning": "名叫", "tail": " " },
+            { "text": "Hùng", "meaning": "雄", "tail": ", " },
+            { "text": "rất vui", "meaning": "很高興", "tail": " " },
+            { "text": "được gặp", "meaning": "得以遇見", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "自我介紹也可以簡化成『Em là + 名字』。",
+      "image_file": "my_name_is.png"
+    },
+    {
+      "id": "g-03",
+      "term_zh": "我做～ (習慣)",
+      "related_terms": [
+        {
+          "term_target": "Em (verb)",
+          "pronunciation": ["/ɛm˧˧/"],
+          "specific_note": "一般現在式。",
+          "segments": [{ "text": "Em", "meaning": "我", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em làm việc ở đây.",
+          "translation": "我在這裡工作。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "làm việc", "meaning": "工作", "tail": " " },
+            { "text": "ở đây", "meaning": "在這裡", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Sáng nào em cũng uống cà phê.",
+          "translation": "每天早上我都會喝咖啡。",
+          "segments": [
+            { "text": "Sáng nào", "meaning": "每個早上", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "cũng", "meaning": "也/都", "tail": " " },
+            { "text": "uống", "meaning": "喝", "tail": " " },
+            { "text": "cà phê", "meaning": "咖啡", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "直接用『主詞 + 動詞』即可表達習慣。",
+      "image_file": "i_do.png"
+    },
+    {
+      "id": "g-04",
+      "term_zh": "我正在做～",
+      "related_terms": [
+        {
+          "term_target": "Em đang ～",
+          "pronunciation": ["/ɛm˧˧ ɗaŋ˧˧/"],
+          "specific_note": "正在進行的動作。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "đang", "meaning": "正在", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em đang ăn cơm.",
+          "translation": "我正在吃飯。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "đang", "meaning": "正在", "tail": " " },
+            { "text": "ăn cơm", "meaning": "吃飯", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Đợi chút, anh đang lái xe.",
+          "translation": "等一下，我（哥）正在開車。",
+          "segments": [
+            { "text": "Đợi chút", "meaning": "等一下", "tail": ", " },
+            { "text": "anh", "meaning": "哥(我)", "tail": " " },
+            { "text": "đang", "meaning": "正在", "tail": " " },
+            { "text": "lái xe", "meaning": "開車", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "『Đang』直接放在動詞前面即可。",
+      "image_file": "ing.png"
+    },
+    {
+      "id": "g-05",
+      "term_zh": "我能夠 / 會～",
+      "related_terms": [
+        {
+          "term_target": "Em biết... / ...được",
+          "pronunciation": ["/ɓiət˧˥/", "/ɗɨəʔ˨˩/"],
+          "specific_note": "技能用 biết，許可或結果用 được。",
+          "segments": [{ "text": "biết", "meaning": "知道/會", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em biết nói tiếng Việt một chút.",
+          "translation": "我會說一點點越南語。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "biết", "meaning": "會", "tail": " " },
+            { "text": "nói", "meaning": "說", "tail": " " },
+            { "text": "tiếng Việt", "meaning": "越南語", "tail": " " },
+            { "text": "một chút", "meaning": "一點點", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Cái này ăn được không?",
+          "translation": "這個能吃嗎？",
+          "segments": [
+            { "text": "Cái này", "meaning": "這個", "tail": " " },
+            { "text": "ăn", "meaning": "吃", "tail": " " },
+            { "text": "được", "meaning": "能/可以", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "表達「可以」常用『動詞 + được』放在句尾。",
+      "image_file": "can.png"
+    },
+    {
+      "id": "g-06",
+      "term_zh": "我喜歡做～",
+      "related_terms": [
+        {
+          "term_target": "Em thích ～",
+          "pronunciation": ["/ɛm˧˧ tʰik˧˥/"],
+          "specific_note": "表達喜好。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "thích", "meaning": "喜歡", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em thích đi du lịch.",
+          "translation": "我喜歡去旅行。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "thích", "meaning": "喜歡", "tail": " " },
+            { "text": "đi du lịch", "meaning": "去旅遊", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Anh thích uống bia không?",
+          "translation": "你（哥）喜歡喝啤酒嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "thích", "meaning": "喜歡", "tail": " " },
+            { "text": "uống bia", "meaning": "喝啤酒", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "喜歡做某事，直接在 thích 後面加動詞，不用像英文加 ing。",
+      "image_file": "like_ing.png"
+    },
+    {
+      "id": "g-07",
+      "term_zh": "我曾經～ (過去狀態)",
+      "related_terms": [
+        {
+          "term_target": "Em đã từng là ～",
+          "pronunciation": ["/ɗa˦ˀ˥ tɨŋ˨˩ laː˨˩/"],
+          "specific_note": "強調過去的經驗。",
+          "segments": [
+            { "text": "đã từng", "meaning": "曾經", "tail": " " },
+            { "text": "là", "meaning": "是", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em đã từng là sinh viên ở đây.",
+          "translation": "我以前曾在這邊當學生。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "đã từng là", "meaning": "曾經是", "tail": " " },
+            { "text": "sinh viên", "meaning": "學生", "tail": " " },
+            { "text": "ở đây", "meaning": "在這裡", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "越南語主要靠『Đã』表示過去發生過的事。",
+      "image_file": "i_was.png"
+    },
+    {
+      "id": "g-08",
+      "term_zh": "我做過～ (過去動作)",
+      "related_terms": [
+        {
+          "term_target": "Em đã (verb)",
+          "pronunciation": ["/ɗa˦ˀ˥/"],
+          "specific_note": "發生過的動作。",
+          "segments": [{ "text": "đã", "meaning": "已經(過去式助詞)", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Hôm qua em đã xem phim đó.",
+          "translation": "昨天我看了那部電影。",
+          "segments": [
+            { "text": "Hôm qua", "meaning": "昨天", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "đã", "meaning": "已經/做了", "tail": " " },
+            { "text": "xem", "meaning": "看", "tail": " " },
+            { "text": "phim đó", "meaning": "那電影", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "口語中如果已經有『昨天』，有時會省略 Đã。",
+      "image_file": "i_did.png"
+    },
+    {
+      "id": "g-09",
+      "term_zh": "我已做過～ (完成)",
+      "related_terms": [
+        {
+          "term_target": "(verb) rồi",
+          "pronunciation": ["/zoj˨˩/"],
+          "specific_note": "放在句尾表示「了、已經」。",
+          "segments": [{ "text": "rồi", "meaning": "了/已經", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em làm xong rồi.",
+          "translation": "我已經做完了。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "làm xong", "meaning": "做完", "tail": " " },
+            { "text": "rồi", "meaning": "了", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Anh ăn rồi.",
+          "translation": "我（哥）吃過了。",
+          "segments": [
+            { "text": "Anh", "meaning": "哥(我)", "tail": " " },
+            { "text": "ăn", "meaning": "吃", "tail": " " },
+            { "text": "rồi", "meaning": "了", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "句尾的『Rồi』是越南語最靈魂的字，表示動作告一段落。",
+      "image_file": "i_have_done.png"
+    },
+    {
+      "id": "g-10",
+      "term_zh": "我曾去過～",
+      "related_terms": [
+        {
+          "term_target": "Em đã từng đi ～",
+          "pronunciation": ["/ɗa˦ˀ˥ tɨŋ˨˩ ɗi˧˧/"],
+          "specific_note": "強調人生經驗。",
+          "segments": [
+            { "text": "đã từng", "meaning": "曾經", "tail": " " },
+            { "text": "đi", "meaning": "去", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh đã từng đi Đà Lạt chưa?",
+          "translation": "你（哥）去過大叻了嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đã từng", "meaning": "曾經", "tail": " " },
+            { "text": "đi", "meaning": "去", "tail": " " },
+            { "text": "Đà Lạt", "meaning": "大叻(地名)", "tail": " " },
+            { "text": "chưa", "meaning": "了嗎/還沒", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "問別人有沒有經驗，常用句型是『已經曾經...了沒？(đã từng...chưa?)』。",
+      "image_file": "have_been_to.png"
+    },
+    {
+      "id": "g-11",
+      "term_zh": "我打算 / 將會～",
+      "related_terms": [
+        {
+          "term_target": "Em sẽ ～",
+          "pronunciation": ["/sɛ˦ˀ˥/"],
+          "specific_note": "未來式。",
+          "segments": [{ "text": "sẽ", "meaning": "將會", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mai em sẽ gọi cho anh.",
+          "translation": "明天我會打電話給你（哥）。",
+          "segments": [
+            { "text": "Mai", "meaning": "明天", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "sẽ", "meaning": "將會", "tail": " " },
+            { "text": "gọi", "meaning": "打電話", "tail": " " },
+            { "text": "cho", "meaning": "給", "tail": " " },
+            { "text": "anh", "meaning": "哥(你)", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "口語中如果已經有『等一下』或『明天』，sẽ 有時會被省略。",
+      "image_file": "i_will.png"
+    },
+    {
+      "id": "g-12",
+      "term_zh": "你是...嗎？ (狀態)",
+      "related_terms": [
+        {
+          "term_target": "Anh có... không?",
+          "pronunciation": ["/kɔ˧˥/ ... /xoŋ˧˧/"],
+          "specific_note": "最通用的疑問句型。",
+          "segments": [
+            { "text": "có", "meaning": "是否", "tail": " " },
+            { "text": "...", "meaning": "...", "tail": " " },
+            { "text": "không", "meaning": "嗎/不", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh có mệt không?",
+          "translation": "你（哥）累嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "có", "meaning": "有/是否", "tail": " " },
+            { "text": "mệt", "meaning": "累", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        },
+        {
+          "sentence": "Món này có cay không?",
+          "translation": "這道菜辣嗎？",
+          "segments": [
+            { "text": "Món này", "meaning": "這道菜", "tail": " " },
+            { "text": "có", "meaning": "是否", "tail": " " },
+            { "text": "cay", "meaning": "辣", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "問狀態或形容詞，固定套用『Có + Adj + Không?』。",
+      "image_file": "are_you.png"
+    },
+    {
+      "id": "g-13",
+      "term_zh": "你在做...嗎？",
+      "related_terms": [
+        {
+          "term_target": "Anh (verb) không?",
+          "pronunciation": ["/xoŋ˧˧/"],
+          "specific_note": "詢問意願或正在進行的動作。",
+          "segments": [{ "text": "không", "meaning": "嗎", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh uống cà phê không?",
+          "translation": "你（哥）要喝咖啡嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "uống", "meaning": "喝", "tail": " " },
+            { "text": "cà phê", "meaning": "咖啡", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        },
+        {
+          "sentence": "Anh có hiểu không?",
+          "translation": "你懂嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "có", "meaning": "是否", "tail": " " },
+            { "text": "hiểu", "meaning": "明白", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "詢問對方意願（要不要...）時，直接在動詞後加 không。",
+      "image_file": "do_you.png"
+    },
+    {
+      "id": "g-14",
+      "term_zh": "你曾經...嗎？",
+      "related_terms": [
+        {
+          "term_target": "Anh đã từng... chưa?",
+          "pronunciation": ["/ɗa˦ˀ˥ tɨŋ˨˩/ ... /cɨə˧˧/"],
+          "specific_note": "問經驗（了嗎？/過了嗎？）",
+          "segments": [
+            { "text": "đã từng", "meaning": "曾經", "tail": " " },
+            { "text": "...", "meaning": "...", "tail": " " },
+            { "text": "chưa", "meaning": "沒/了嗎", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh đã từng ăn phở chưa?",
+          "translation": "你（哥）吃過河粉了嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đã từng", "meaning": "曾經", "tail": " " },
+            { "text": "ăn", "meaning": "吃", "tail": " " },
+            { "text": "phở", "meaning": "河粉", "tail": " " },
+            { "text": "chưa", "meaning": "了嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "這是越南人最愛問外國人的問題格式。",
+      "image_file": "have_you_ever.png"
+    },
+    {
+      "id": "g-15",
+      "term_zh": "你何時做（某事）？",
+      "related_terms": [
+        {
+          "term_target": "Khi nào anh (verb)?",
+          "pronunciation": ["/xi˧˧ naːw˨˩/"],
+          "specific_note": "詢問未來的時間點。",
+          "segments": [
+            { "text": "Khi nào", "meaning": "何時", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Khi nào anh đi làm?",
+          "translation": "你什麼時候去上班？",
+          "segments": [
+            { "text": "Khi nào", "meaning": "何時", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đi làm", "meaning": "去上班", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "Khi nào 放在句首通常是指「未來」的時間。",
+      "image_file": "when_do_you.png"
+    },
+    {
+      "id": "g-16",
+      "term_zh": "你什麼時候去（某地）？",
+      "related_terms": [
+        {
+          "term_target": "Mấy giờ anh đi ～ ?",
+          "pronunciation": ["/məj˧˥ zəː˨˩/"],
+          "specific_note": "詢問具體幾點鐘。",
+          "segments": [
+            { "text": "Mấy giờ", "meaning": "幾點", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đi", "meaning": "去", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Mấy giờ anh đi sân bay?",
+          "translation": "你幾點去機場？",
+          "segments": [
+            { "text": "Mấy giờ", "meaning": "幾點", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đi", "meaning": "去", "tail": " " },
+            { "text": "sân bay", "meaning": "機場", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "約定具體時間時，用 Mấy giờ 會比 Khi nào 更明確。",
+      "image_file": "when_go_to.png"
+    },
+    {
+      "id": "g-17",
+      "term_zh": "你在哪裡做（某事）？",
+      "related_terms": [
+        {
+          "term_target": "Anh (verb) ở đâu?",
+          "pronunciation": ["/əː˧˩ ɗəw˧˧/"],
+          "specific_note": "詢問地點，置於動詞後。",
+          "segments": [
+            { "text": "ở đâu", "meaning": "在哪裡", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh sống ở đâu?",
+          "translation": "你（哥）住在哪裡？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "sống", "meaning": "生活/居住", "tail": " " },
+            { "text": "ở đâu", "meaning": "在哪裡", "tail": "?" }
+          ]
+        },
+        {
+          "sentence": "Anh làm việc ở đâu?",
+          "translation": "你在哪裡工作？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "làm việc", "meaning": "工作", "tail": " " },
+            { "text": "ở đâu", "meaning": "在哪裡", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "詢問地點時，要把『在哪裡』放在動詞後面喔！",
+      "image_file": "where_do_you.png"
+    },
+    {
+      "id": "g-18",
+      "term_zh": "你如何做（某事）？",
+      "related_terms": [
+        {
+          "term_target": "Anh (verb) thế nào?",
+          "pronunciation": ["/tʰe˧˥ naːw˨˩/"],
+          "specific_note": "詢問方法或感受。",
+          "segments": [
+            { "text": "thế nào", "meaning": "如何/怎樣", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh thấy món này thế nào?",
+          "translation": "你覺得這道菜怎麼樣？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "thấy", "meaning": "覺得/看見", "tail": " " },
+            { "text": "món này", "meaning": "這菜", "tail": " " },
+            { "text": "thế nào", "meaning": "如何", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "問別人意見時，這句話非常道地。",
+      "image_file": "how_do_you.png"
+    },
+    {
+      "id": "g-19",
+      "term_zh": "你怎麼去（某地）？",
+      "related_terms": [
+        {
+          "term_target": "Anh đi ～ bằng gì?",
+          "pronunciation": ["/ɓaŋ˨˩ zi˨˩/"],
+          "specific_note": "詢問交通工具。",
+          "segments": [
+            { "text": "bằng gì", "meaning": "用什麼/搭什麼", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh đi làm bằng gì?",
+          "translation": "你怎麼去上班？（搭什麼去）",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đi làm", "meaning": "去上班", "tail": " " },
+            { "text": "bằng gì", "meaning": "搭什麼/用什麼", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "越南人常問這句，你可以回答『Đi bằng xe máy』（騎機車）。",
+      "image_file": "how_go_to.png"
+    },
+    {
+      "id": "g-20",
+      "term_zh": "我不是～",
+      "related_terms": [
+        {
+          "term_target": "Em không phải là ～",
+          "pronunciation": ["/ɛm˧˧ xoŋ˧˧ faːj˧˩ laː˨˩/"],
+          "specific_note": "否定身分或事實。",
+          "segments": [
+            { "text": "không phải là", "meaning": "不是", "tail": "" }
+          ]
+        },
+        {
+          "term_target": "Em không ～ (adjective)",
+          "pronunciation": ["/ɛm˧˧ xoŋ˧˧/"],
+          "specific_note": "否定狀態（我不...）。",
+          "segments": [
+            { "text": "không", "meaning": "不", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em không phải là người Nhật.",
+          "translation": "我不是日本人。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không phải là", "meaning": "不是", "tail": " " },
+            { "text": "người Nhật", "meaning": "日本人", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Em không mệt.",
+          "translation": "我不累。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không", "meaning": "不", "tail": " " },
+            { "text": "mệt", "meaning": "累", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "否定身分要用『không phải là』，否定累、餓、熱等形容詞只要用『không』就好。",
+      "image_file": "i_am_not.png"
+    },
+    {
+      "id": "g-21",
+      "term_zh": "我不做～",
+      "related_terms": [
+        {
+          "term_target": "Em không (verb)",
+          "pronunciation": ["/ɛm˧˧ xoŋ˧˧/"],
+          "specific_note": "否定動作或意願。",
+          "segments": [{ "text": "không", "meaning": "不", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em không ăn cay.",
+          "translation": "我不吃辣。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không", "meaning": "不", "tail": " " },
+            { "text": "ăn cay", "meaning": "吃辣", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Em không biết.",
+          "translation": "我不知道。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không", "meaning": "不", "tail": " " },
+            { "text": "biết", "meaning": "知道", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "『我不懂』是 Em không hiểu。",
+      "image_file": "i_dont.png"
+    },
+    {
+      "id": "g-22",
+      "term_zh": "我不能～",
+      "related_terms": [
+        {
+          "term_target": "Em không ... được",
+          "pronunciation": ["/xoŋ˧˧/ ... /ɗɨəʔ˨˩/"],
+          "specific_note": "表示無法完成某事。",
+          "segments": [
+            { "text": "không", "meaning": "不", "tail": " ... " },
+            { "text": "được", "meaning": "得/能", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em không đi được.",
+          "translation": "我不能去（沒辦法去）。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không", "meaning": "不", "tail": " " },
+            { "text": "đi", "meaning": "去", "tail": " " },
+            { "text": "được", "meaning": "能", "tail": "." }
+          ]
+        },
+        {
+          "sentence": "Em không nghe được.",
+          "translation": "我聽不到（聽不見）。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không", "meaning": "不", "tail": " " },
+            { "text": "nghe", "meaning": "聽", "tail": " " },
+            { "text": "được", "meaning": "能", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "否定能力時，通常在動詞前後加上 không...được。",
+      "image_file": "i_cant.png"
+    },
+    {
+      "id": "g-23",
+      "term_zh": "我未曾～",
+      "related_terms": [
+        {
+          "term_target": "Em chưa bao giờ ～",
+          "pronunciation": ["/ɛm˧˧ cɨə˧˧ ɓaːw˧˧ zəː˨˩/"],
+          "specific_note": "表示從來沒有過的經驗。",
+          "segments": [
+            { "text": "chưa bao giờ", "meaning": "從未", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em chưa bao giờ ăn món này.",
+          "translation": "我從來沒吃過這道菜。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "chưa bao giờ", "meaning": "從未", "tail": " " },
+            { "text": "ăn", "meaning": "吃", "tail": " " },
+            { "text": "món này", "meaning": "這道菜", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "比起單說『未(chưa)』，『chưa bao giờ』語氣更強烈。",
+      "image_file": "i_have_never.png"
+    },
+    {
+      "id": "g-24",
+      "term_zh": "我不必～",
+      "related_terms": [
+        {
+          "term_target": "Em không cần phải ～",
+          "pronunciation": ["/ɛm˧˧ xoŋ˧˧ kən˨˩ faːj˧˩/"],
+          "specific_note": "沒有義務或需要。",
+          "segments": [
+            { "text": "không cần phải", "meaning": "不必/不需要", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh không cần phải trả tiền.",
+          "translation": "你（哥）不必付錢（我請客）。",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "không cần phải", "meaning": "不必", "tail": " " },
+            { "text": "trả tiền", "meaning": "付錢", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "不想麻煩別人時，可以客氣地說這句。",
+      "image_file": "i_dont_have_to.png"
+    },
+    {
+      "id": "g-25",
+      "term_zh": "如果～的話，就～",
+      "related_terms": [
+        {
+          "term_target": "Nếu... thì...",
+          "pronunciation": ["/nɛw˧˥/ ... /tʰi˨˩/"],
+          "specific_note": "假設句型。",
+          "segments": [
+            { "text": "Nếu", "meaning": "如果", "tail": " ... " },
+            { "text": "thì", "meaning": "就", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Nếu anh thích thì cứ lấy đi.",
+          "translation": "如果你（哥）喜歡的話，就拿去吧。",
+          "segments": [
+            { "text": "Nếu", "meaning": "如果", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "thích", "meaning": "喜歡", "tail": " " },
+            { "text": "thì", "meaning": "就", "tail": " " },
+            { "text": "cứ lấy đi", "meaning": "儘管拿去吧", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "如果省略 Nếu，單用 Thì 也可以表達「那就...」。",
+      "image_file": "if.png"
+    },
+    {
+      "id": "g-26",
+      "term_zh": "當～時，就～",
+      "related_terms": [
+        {
+          "term_target": "Khi... thì...",
+          "pronunciation": ["/xi˧˧/ ... /tʰi˨˩/"],
+          "specific_note": "時間點的聯結。",
+          "segments": [
+            { "text": "Khi", "meaning": "當...時", "tail": " ... " },
+            { "text": "thì", "meaning": "就", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Khi nào đến thì gọi em.",
+          "translation": "什麼時候到的話（當你到時），就打給我。",
+          "segments": [
+            { "text": "Khi nào", "meaning": "什麼時候", "tail": " " },
+            { "text": "đến", "meaning": "到", "tail": " " },
+            { "text": "thì", "meaning": "就", "tail": " " },
+            { "text": "gọi", "meaning": "打電話給", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "口語中常把 Khi 放在句首引導時間。",
+      "image_file": "when_condition.png"
+    },
+    {
+      "id": "g-27",
+      "term_zh": "請你～",
+      "related_terms": [
+        {
+          "term_target": "Anh... giúp em được không?",
+          "pronunciation": ["/zṵp ɛm ɗɨəʔ˨˩ xoŋ˧˧/"],
+          "specific_note": "委婉的請求方式。",
+          "segments": [
+            { "text": "giúp", "meaning": "幫", "tail": " " },
+            { "text": "được không", "meaning": "可以嗎", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Anh chụp ảnh giúp em được không?",
+          "translation": "你能幫我拍張照嗎？",
+          "segments": [
+            { "text": "Anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "chụp ảnh", "meaning": "拍照", "tail": " " },
+            { "text": "giúp em", "meaning": "幫我", "tail": " " },
+            { "text": "được không", "meaning": "可以嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "在越南，請求別人幫忙，句尾加個『được không?』會更有禮貌。",
+      "image_file": "can_you.png"
+    },
+    {
+      "id": "g-28",
+      "term_zh": "我們來做～吧！",
+      "related_terms": [
+        {
+          "term_target": "... đi!",
+          "pronunciation": ["/ɗi˧˧/"],
+          "specific_note": "放在句尾表示提議或命令。",
+          "segments": [{ "text": "đi", "meaning": "走/吧", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Đi ăn đi!",
+          "translation": "去吃飯吧！",
+          "segments": [
+            { "text": "Đi ăn", "meaning": "去吃", "tail": " " },
+            { "text": "đi", "meaning": "吧", "tail": "!" }
+          ]
+        },
+        {
+          "sentence": "Chúng mình đi uống cà phê đi!",
+          "translation": "我們去喝咖啡吧！",
+          "segments": [
+            { "text": "Chúng mình", "meaning": "我們", "tail": " " },
+            { "text": "đi uống", "meaning": "去喝", "tail": " " },
+            { "text": "cà phê", "meaning": "咖啡", "tail": " " },
+            { "text": "đi", "meaning": "吧", "tail": "!" }
+          ]
+        }
+      ],
+      "usage_note": "雖然『Đi』是走的意思，但在句尾它是最強大的揪團助詞。",
+      "image_file": "lets.png"
+    },
+    {
+      "id": "g-29",
+      "term_zh": "我認為～",
+      "related_terms": [
+        {
+          "term_target": "Em nghĩ là ～",
+          "pronunciation": ["/ɛm˧˧ ŋi˦ˀ˥ laː˨˩/"],
+          "specific_note": "表達主觀想法。",
+          "segments": [
+            { "text": "nghĩ", "meaning": "想/認為", "tail": " " },
+            { "text": "là", "meaning": "是", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em nghĩ là anh đúng rồi.",
+          "translation": "我覺得你（哥）是對的。",
+          "segments": [
+            { "text": "Em nghĩ là", "meaning": "我認為是", "tail": " " },
+            { "text": "anh", "meaning": "你(哥)", "tail": " " },
+            { "text": "đúng rồi", "meaning": "對了", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "表達個人意見時的起手式。",
+      "image_file": "i_think.png"
+    },
+    {
+      "id": "g-30",
+      "term_zh": "我想做～",
+      "related_terms": [
+        {
+          "term_target": "Em muốn ～",
+          "pronunciation": ["/ɛm˧˧ muən˧˥/"],
+          "specific_note": "表達願望。",
+          "segments": [{ "text": "muốn", "meaning": "想要", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em muốn mua cái này.",
+          "translation": "我想買這個。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "muốn", "meaning": "想", "tail": " " },
+            { "text": "mua", "meaning": "買", "tail": " " },
+            { "text": "cái này", "meaning": "這個", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "買東西、點餐時最直接的說法。",
+      "image_file": "want_to.png"
+    },
+    {
+      "id": "g-31",
+      "term_zh": "我必須做～",
+      "related_terms": [
+        {
+          "term_target": "Em phải ～",
+          "pronunciation": ["/ɛm˧˧ faːj˧˩/"],
+          "specific_note": "義務或必然性。",
+          "segments": [{ "text": "phải", "meaning": "必須", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Bây giờ em phải đi rồi.",
+          "translation": "我現在必須走了。",
+          "segments": [
+            { "text": "Bây giờ", "meaning": "現在", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "phải", "meaning": "必須", "tail": " " },
+            { "text": "đi", "meaning": "走", "tail": " " },
+            { "text": "rồi", "meaning": "了", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "要趕場或回家時的常用藉口。",
+      "image_file": "i_have_to.png"
+    },
+    {
+      "id": "g-32",
+      "term_zh": "做某事是...的",
+      "related_terms": [
+        {
+          "term_target": "(Verb) thật là (adj)",
+          "pronunciation": ["/tʰət˨˩ laː˨˩/"],
+          "specific_note": "描述某種行為的性質。",
+          "segments": [{ "text": "thật là", "meaning": "真是/實在是", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Gặp anh thật là vui.",
+          "translation": "見到你（哥）真開心。",
+          "segments": [
+            { "text": "Gặp", "meaning": "見面", "tail": " " },
+            { "text": "anh", "meaning": "哥哥(你)", "tail": " " },
+            { "text": "thật là", "meaning": "真是", "tail": " " },
+            { "text": "vui", "meaning": "開心", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "這比英文的 It is... 結構更直接，把重點動作放在最前面。",
+      "image_file": "it_is_to.png"
+    },
+    {
+      "id": "g-33",
+      "term_zh": "你可以幫我…嗎？",
+      "related_terms": [
+        {
+          "term_target": "Giúp em ... với",
+          "pronunciation": ["/zup˧˥ ɛm/ ... /vəj˧˥/"],
+          "specific_note": "求助時最道地的說法。",
+          "segments": [
+            { "text": "Giúp", "meaning": "幫", "tail": " " },
+            { "text": "với", "meaning": "吧/伴隨", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Giúp em tìm ví với!",
+          "translation": "幫我找一下錢包！",
+          "segments": [
+            { "text": "Giúp", "meaning": "幫助", "tail": " " },
+            { "text": "em", "meaning": "我", "tail": " " },
+            { "text": "tìm", "meaning": "找", "tail": " " },
+            { "text": "ví", "meaning": "錢包", "tail": " " },
+            { "text": "với", "meaning": "吧", "tail": "!" }
+          ]
+        }
+      ],
+      "usage_note": "句尾加個『với』，拜託別人的語氣會更誠懇。",
+      "image_file": "can_you_help.png"
+    },
+    {
+      "id": "g-34",
+      "term_zh": "我可以…嗎？",
+      "related_terms": [
+        {
+          "term_target": "Em ... được không?",
+          "pronunciation": ["/ɗɨəʔ˨˩ xoŋ˧˧/"],
+          "specific_note": "請求許可。",
+          "segments": [
+            { "text": "được không", "meaning": "可以嗎", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em ngồi đây được không?",
+          "translation": "我可以坐這裡嗎？",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "ngồi", "meaning": "坐", "tail": " " },
+            { "text": "đây", "meaning": "這裡", "tail": " " },
+            { "text": "được không", "meaning": "可以嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "不管是問路、併桌或借東西，最後都加這句就對了。",
+      "image_file": "can_i.png"
+    },
+    {
+      "id": "g-35",
+      "term_zh": "我不喜歡…",
+      "related_terms": [
+        {
+          "term_target": "Em không thích ...",
+          "pronunciation": ["/xoŋ˧˧ tʰik˧˥/"],
+          "specific_note": "表達反感。",
+          "segments": [{ "text": "không thích", "meaning": "不喜歡", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em không thích chờ lâu.",
+          "translation": "我不喜歡等很久。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "không thích", "meaning": "不喜歡", "tail": " " },
+            { "text": "chờ", "meaning": "等", "tail": " " },
+            { "text": "lâu", "meaning": "久", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "拒絕推銷或邀約時很乾脆的說法。",
+      "image_file": "i_dont_like.png"
+    },
+    {
+      "id": "g-36",
+      "term_zh": "我比較喜歡…",
+      "related_terms": [
+        {
+          "term_target": "Em thích ... hơn",
+          "pronunciation": ["/tʰik˧˥/ ... /həːn˧˧/"],
+          "specific_note": "比較之後的偏好。",
+          "segments": [
+            { "text": "thích", "meaning": "喜歡", "tail": " ... " },
+            { "text": "hơn", "meaning": "更/勝過", "tail": "" }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Em thích uống trà hơn.",
+          "translation": "我比較喜歡喝茶（相對於咖啡）。",
+          "segments": [
+            { "text": "Em", "meaning": "我", "tail": " " },
+            { "text": "thích", "meaning": "喜歡", "tail": " " },
+            { "text": "uống trà", "meaning": "喝茶", "tail": " " },
+            { "text": "hơn", "meaning": "更", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "把 Hơn 放在最後面，就是「比較喜歡」的意思。",
+      "image_file": "prefer.png"
+    },
+    {
+      "id": "g-37",
+      "term_zh": "A 比 B 更…",
+      "related_terms": [
+        {
+          "term_target": "A (adj) hơn B",
+          "pronunciation": ["/həːn˧˧/"],
+          "specific_note": "基礎比較句型。",
+          "segments": [{ "text": "hơn", "meaning": "更", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Cái này đắt hơn cái kia.",
+          "translation": "這個比那個貴。",
+          "segments": [
+            { "text": "Cái này", "meaning": "這個", "tail": " " },
+            { "text": "đắt", "meaning": "貴", "tail": " " },
+            { "text": "hơn", "meaning": "更", "tail": " " },
+            { "text": "cái kia", "meaning": "那個", "tail": "." }
+          ]
+        }
+      ],
+      "usage_note": "不需要加英文的 more，直接在形容詞後加 Hơn 就好。",
+      "image_file": "more_than.png"
+    },
+    {
+      "id": "g-38",
+      "term_zh": "有…（存在）",
+      "related_terms": [
+        {
+          "term_target": "Có ～",
+          "pronunciation": ["/kɔ˧˥/"],
+          "specific_note": "不分單複數，代表「有某物」。",
+          "segments": [{ "text": "Có", "meaning": "有", "tail": "" }]
+        }
+      ],
+      "examples": [
+        {
+          "sentence": "Ở đây có WiFi không?",
+          "translation": "這裡有 WiFi 嗎？",
+          "segments": [
+            { "text": "Ở đây", "meaning": "這裡", "tail": " " },
+            { "text": "có", "meaning": "有", "tail": " " },
+            { "text": "WiFi", "meaning": "WiFi", "tail": " " },
+            { "text": "không", "meaning": "嗎", "tail": "?" }
+          ]
+        }
+      ],
+      "usage_note": "問路、找廁所、找東西，開頭通通可以用 Có。",
+      "image_file": "there_is.png"
+    }
+  ]
+},
   ],
 };
