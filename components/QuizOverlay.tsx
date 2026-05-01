@@ -11,9 +11,10 @@ interface QuizOverlayProps {
   onClose: () => void;
   onRecordAttempt: (itemId: string, quality: number) => void;
   onRestart: (questions: QuizQuestion[]) => void;
+  onViewStats: () => void;
 }
 
-const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progressData, onClose, onRecordAttempt, onRestart }) => {
+const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progressData, onClose, onRecordAttempt, onRestart, onViewStats }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [sessionResults, setSessionResults] = useState<{ question: QuizQuestion; isCorrect: boolean }[]>([]);
@@ -88,7 +89,7 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
       if (navigator.vibrate) navigator.vibrate([50, 100, 50]);
       setShake(true);
       setTimeout(() => setShake(false), 500);
-      
+
       if (currentQ.correctOption) {
         speak(currentQ.correctOption);
       }
@@ -266,7 +267,7 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
           {/* Hero Section */}
           <div className="bg-emerald-500 text-white pt-12 pb-8 px-6 rounded-b-[40px] shadow-sm mb-6 flex flex-col items-center">
             <h2 className="text-3xl font-bold mb-6 text-center leading-tight">
-              太棒了！<br />旅行準備度提升 ✈️
+              太棒了！<br />語言生存力提升 ✈️
             </h2>
 
             <div className="relative w-40 h-40 flex items-center justify-center mb-4">
@@ -322,7 +323,7 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
                 } else if (interval >= 1) {
                   StatusIcon = <span className="text-xl">🟡</span>;
                   statusBg = 'bg-yellow-50 border-yellow-200';
-                  statusText = '🎒 還行';
+                  statusText = '還行';
                 } else {
                   StatusIcon = <span className="text-xl">🔴</span>;
                   statusBg = 'bg-red-50 border-red-200';
@@ -349,28 +350,36 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
         </div>
 
         {/* Bottom Action Bar */}
-        <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 p-4 pb-6 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] z-10 flex gap-3">
+        <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 p-4 pb-6 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] z-10 flex flex-col gap-3">
+          <div className="flex gap-3">
+            <button
+              onClick={onClose}
+              className="flex-[1] py-4 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 active:scale-95 transition-all whitespace-nowrap"
+            >
+              返回主頁
+            </button>
+            {mistakes.length > 0 ? (
+              <button
+                onClick={() => onRestart(mistakes)}
+                className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
+              >
+                馬上複習錯題 ({mistakes.length})
+              </button>
+            ) : (
+              <button
+                onClick={() => onRestart(questions)}
+                className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
+              >
+                重新測驗
+              </button>
+            )}
+          </div>
           <button
-            onClick={onClose}
-            className="flex-[1] py-4 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 active:scale-95 transition-all whitespace-nowrap"
+            onClick={onViewStats}
+            className="w-full py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-100 active:scale-95 transition-all border border-blue-200/50"
           >
-            返回主頁
+            查看完整數據
           </button>
-          {mistakes.length > 0 ? (
-            <button
-              onClick={() => onRestart(mistakes)}
-              className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
-            >
-              馬上複習錯題 ({mistakes.length})
-            </button>
-          ) : (
-            <button
-              onClick={() => onRestart(questions)}
-              className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
-            >
-              重新測驗
-            </button>
-          )}
         </div>
       </div>
     );

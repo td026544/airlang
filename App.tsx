@@ -4,9 +4,10 @@ import { Category, LearningItem, QuizQuestion } from './types';
 import CategoryNav from './components/CategoryNav';
 import LearningCard from './components/LearningCard';
 import QuizOverlay from './components/QuizOverlay';
+import StatsOverlay from './components/StatsOverlay';
 import { useProgress } from './hooks/useProgress';
 import { generateQuiz } from './services/quizService';
-import { Languages, BookOpen, ChevronDown, Check, PlayCircle } from 'lucide-react';
+import { Languages, BookOpen, ChevronDown, Check, PlayCircle, Menu, Activity } from 'lucide-react';
 
 const App: React.FC = () => {
   // 1. 初始化語言 (維持不變)
@@ -29,6 +30,10 @@ const App: React.FC = () => {
     const saved = localStorage.getItem('bookmarked_items');
     return saved ? JSON.parse(saved) : [];
   });
+
+  const [isStatsOpen, setIsStatsOpen] = useState(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   const { progressData, recordAttempt } = useProgress();
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[] | null>(null);
@@ -145,6 +150,9 @@ const App: React.FC = () => {
       }
       if (rateMenuRef.current && !rateMenuRef.current.contains(event.target as Node)) {
         setIsRateMenuOpen(false);
+      }
+      if (hamburgerRef.current && !hamburgerRef.current.contains(event.target as Node)) {
+        setIsHamburgerOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -312,6 +320,32 @@ const App: React.FC = () => {
                      <span>1.0x</span>
                      <span>2.0x</span>
                    </div>
+                 </div>
+              )}
+            </div>
+
+            <div className="relative" ref={hamburgerRef}>
+              <button
+                onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
+                className="flex items-center justify-center p-2 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-200 border border-gray-200 hover:border-gray-300 active:scale-95"
+              >
+                <Menu size={20} />
+              </button>
+
+              {isHamburgerOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden animate-in fade-in zoom-in-95 duration-100 origin-top-right z-50">
+                  <div className="py-1">
+                    <button
+                      onClick={() => {
+                        setIsHamburgerOpen(false);
+                        setIsStatsOpen(true);
+                      }}
+                      className="w-full text-left px-4 py-3 text-sm flex items-center gap-3 hover:bg-gray-50 transition-colors text-gray-700"
+                    >
+                      <Activity size={18} className="text-emerald-500" />
+                      <span className="font-medium">查看完整數據</span>
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -397,6 +431,18 @@ const App: React.FC = () => {
             setQuizQuestions(questions);
             setQuizKey(prev => prev + 1);
           }}
+          onViewStats={() => {
+            setQuizQuestions(null);
+            setIsStatsOpen(true);
+          }}
+        />
+      )}
+
+      {isStatsOpen && (
+        <StatsOverlay
+          progressData={progressData}
+          categories={appData.categories}
+          onClose={() => setIsStatsOpen(false)}
         />
       )}
     </div>
