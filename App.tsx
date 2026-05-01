@@ -1,8 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { datasets, LANGUAGE_OPTIONS } from './data';
+import { Category, LearningItem, QuizQuestion } from './types';
 import CategoryNav from './components/CategoryNav';
 import LearningCard from './components/LearningCard';
-import { Languages, BookOpen, ChevronDown, Check } from 'lucide-react';
+import QuizOverlay from './components/QuizOverlay';
+import { useProgress } from './hooks/useProgress';
+import { generateQuiz } from './services/quizService';
+import { Languages, BookOpen, ChevronDown, Check, PlayCircle } from 'lucide-react';
 
 const App: React.FC = () => {
   // 1. 初始化語言 (維持不變)
@@ -21,18 +25,69 @@ const App: React.FC = () => {
   const [isRateMenuOpen, setIsRateMenuOpen] = useState(false);
   const rateMenuRef = useRef<HTMLDivElement>(null);
 
+  const [bookmarkedIds, setBookmarkedIds] = useState<string[]>(() => {
+    const saved = localStorage.getItem('bookmarked_items');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const { progressData, recordAttempt } = useProgress();
+  const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[] | null>(null);
+
+  const handleStartQuiz = (categoryItems: LearningItem[]) => {
+    const questions = generateQuiz(categoryItems, progressData, 10);
+    setQuizQuestions(questions);
+  };
+
+  const toggleBookmark = (id: string) => {
+    setBookmarkedIds((prev) => {
+      const isBookmarked = prev.includes(id);
+      const newBookmarks = isBookmarked ? prev.filter((x) => x !== id) : [...prev, id];
+      localStorage.setItem('bookmarked_items', JSON.stringify(newBookmarks));
+      return newBookmarks;
+    });
+  };
+
   const [activeCategoryId, setActiveCategoryId] = useState<string>('');
   const isManualScrolling = useRef(false);
 
   const appData = datasets[langCode];
   const currentLangOption = LANGUAGE_OPTIONS.find(opt => opt.code === langCode) || LANGUAGE_OPTIONS[0];
 
+  const displayCategories = React.useMemo(() => {
+    const baseCategories = appData.categories;
+    const allItems = baseCategories.flatMap(c => c.items);
+    
+    // We only show bookmarked items that exist in the current language
+    const bookmarkedItems = bookmarkedIds
+      .map(id => allItems.find(item => (item.id || item.term_zh) === id))
+      .filter((item): item is LearningItem => item !== undefined);
+      
+    if (bookmarkedItems.length === 0) return baseCategories;
+
+    const favoritesCategory: Category = {
+      id: 'favorites',
+      name: '收藏',
+      items: bookmarkedItems
+    };
+
+    const newCategories = [...baseCategories];
+    const phrasesIndex = newCategories.findIndex(c => c.name.includes('常用句') || c.name.includes('Phrases'));
+    
+    if (phrasesIndex !== -1) {
+      newCategories.splice(phrasesIndex, 0, favoritesCategory);
+    } else {
+      newCategories.unshift(favoritesCategory);
+    }
+    
+    return newCategories;
+  }, [appData, bookmarkedIds]);
+
   // 初始化 activeCategoryId (僅用於顯示目前在哪個分類，不影響滾動恢復)
   useEffect(() => {
-    if (appData.categories.length > 0) {
-      setActiveCategoryId(appData.categories[0].id);
+    if (displayCategories.length > 0) {
+      setActiveCategoryId(displayCategories[0].id);
     }
-  }, [appData]);
+  }, [displayCategories]);
 
   // --- 修改重點 1：精確恢復上次的滾動像素位置 ---
   useEffect(() => {
@@ -100,18 +155,18 @@ const App: React.FC = () => {
       if (isManualScrolling.current) return;
 
       const headerOffset = 180; 
-      let currentSectionId = appData.categories[0].id;
+      let currentSectionId = displayCategories[0]?.id || '';
 
       const scrolledToBottom = 
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
 
-      if (scrolledToBottom) {
-        const lastCategory = appData.categories[appData.categories.length - 1];
+      if (scrolledToBottom && displayCategories.length > 0) {
+        const lastCategory = displayCategories[displayCategories.length - 1];
         setActiveCategoryId(lastCategory.id);
         return;
       }
 
-      for (const cat of appData.categories) {
+      for (const cat of displayCategories) {
         const element = document.getElementById(cat.id);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -128,7 +183,7 @@ const App: React.FC = () => {
     // 注意：這裡移除了初始執行，避免覆蓋掉我們的 scrollTo 邏輯
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [appData]);
+  }, [displayCategories]);
 
 
   const handleScrollToCategory = (id: string) => {
@@ -267,7 +322,7 @@ const App: React.FC = () => {
 
         <div className="max-w-3xl mx-auto px-4 pb-3">
            <CategoryNav 
-             categories={appData.categories}
+             categories={displayCategories}
              activeCategoryId={activeCategoryId}
              onSelectCategory={handleScrollToCategory}
            />
@@ -276,7 +331,7 @@ const App: React.FC = () => {
 
       <main className="max-w-3xl mx-auto px-4 pb-20 pt-6">
         <div className="flex flex-col gap-12">
-          {appData.categories.map((category) => (
+          {displayCategories.map((category) => (
             <section key={category.id} id={category.id} className="scroll-mt-40">
               <div className="flex items-center gap-3 mb-6 pl-1 border-l-4 border-emerald-500 py-1">
                 <h2 className="text-2xl font-bold text-gray-800">
@@ -285,17 +340,32 @@ const App: React.FC = () => {
                 <span className="text-xs font-semibold bg-gray-200 text-gray-600 px-2 py-1 rounded-full">
                   {category.items.length}
                 </span>
+                {category.items.length > 0 && (
+                  <button 
+                    onClick={() => handleStartQuiz(category.items)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-700 text-sm font-bold rounded-lg transition-colors ml-auto active:scale-95"
+                    title="開始測驗"
+                  >
+                    <PlayCircle size={16} />
+                    <span>測驗</span>
+                  </button>
+                )}
               </div>
 
               <div className="flex flex-col gap-3">
-                {category.items.map((item) => (
-                  <LearningCard 
-                    key={item.id} 
-                    item={item} 
-                    language={appData.meta.target_language} 
-                    playbackRate={playbackRate}
-                  />
-                ))}
+                {category.items.map((item) => {
+                  const itemId = item.id || item.term_zh;
+                  return (
+                    <LearningCard 
+                      key={itemId} 
+                      item={item as any} 
+                      language={appData.meta.target_language} 
+                      playbackRate={playbackRate}
+                      isBookmarked={bookmarkedIds.includes(itemId)}
+                      onToggleBookmark={toggleBookmark}
+                    />
+                  );
+                })}
               </div>
             </section>
           ))}
@@ -312,6 +382,15 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {quizQuestions && (
+        <QuizOverlay 
+          questions={quizQuestions}
+          language={appData.meta.target_language}
+          onClose={() => setQuizQuestions(null)}
+          onRecordAttempt={recordAttempt}
+        />
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SpeechButton from './SpeechButton';
-import { Info, CornerDownRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { Info, CornerDownRight, ChevronDown, ChevronUp, Bookmark } from 'lucide-react';
 
 // --- Interface 定義 ---
 interface Segment {
@@ -32,6 +32,8 @@ interface LearningCardProps {
   item: ExtendedLearningItem;
   language: string;
   playbackRate?: number;
+  isBookmarked?: boolean;
+  onToggleBookmark?: (id: string) => void;
 }
 
 // 定義彈窗的狀態介面
@@ -174,7 +176,13 @@ const WordPopover: React.FC<{
 };
 
 // --- Main Component ---
-const LearningCard: React.FC<LearningCardProps> = ({ item, language, playbackRate = 1.0 }) => {
+const LearningCard: React.FC<LearningCardProps> = ({ 
+  item, 
+  language, 
+  playbackRate = 1.0,
+  isBookmarked = false,
+  onToggleBookmark
+}) => {
   const [showNote, setShowNote] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -242,17 +250,27 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language, playbackRat
           <div className="flex-1 flex flex-col justify-between min-w-0 z-10">
             <div>
               <div className="mb-2 pb-2 border-b border-gray-100 flex justify-between items-start">
-                <h4 className="text-lg font-bold text-gray-800 leading-snug pt-0.5">
+                <h4 className="text-lg font-bold text-gray-800 leading-snug pt-0.5 pr-2">
                   {item.term_zh}
                 </h4>
-                {item.usage_note && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setShowNote(!showNote); }}
-                    className={`p-1 rounded-full transition-all duration-200 shrink-0 ml-1 ${showNote ? 'text-orange-500 bg-orange-50' : 'text-gray-300 hover:text-orange-500 hover:bg-gray-50'}`}
-                  >
-                    <Info size={18} />
-                  </button>
-                )}
+                <div className="flex gap-1 shrink-0">
+                  {item.usage_note && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setShowNote(!showNote); }}
+                      className={`p-1 rounded-full transition-all duration-200 ${showNote ? 'text-orange-500 bg-orange-50' : 'text-gray-300 hover:text-orange-500 hover:bg-gray-50'}`}
+                    >
+                      <Info size={18} />
+                    </button>
+                  )}
+                  {onToggleBookmark && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onToggleBookmark(item.id || item.term_zh); }}
+                      className={`p-1 rounded-full transition-all duration-200 ${isBookmarked ? 'text-amber-500 bg-amber-50' : 'text-gray-300 hover:text-amber-500 hover:bg-gray-50'}`}
+                    >
+                      <Bookmark size={18} fill={isBookmarked ? "currentColor" : "none"} />
+                    </button>
+                  )}
+                </div>
               </div>
 
               {showNote && item.usage_note && (

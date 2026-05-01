@@ -39,3 +39,29 @@ export interface AppData {
   };
   categories: Category[];
 }
+
+export interface UserProgress {
+  item_id: string;
+  proficiency_level: number; // 0 to 5 for SM-2
+  easiness_factor: number; // SM-2 Easiness Factor (default 2.5)
+  interval: number; // Days until next review
+  next_review_date: string; // ISO String
+  correct_count: number;
+  wrong_count: number;
+}
+
+export type QuizMode = 'A' | 'B' | 'C'; // A: Flashcard, B: Multiple Choice, C: Fill in the blank
+
+export interface QuizQuestion {
+  id: string;
+  item: LearningItem;
+  mode: QuizMode;
+  // For Mode B:
+  questionText?: string;
+  options?: string[]; // Distractors + correct answer
+  correctOption?: string;
+  // For Mode C:
+  prompt?: string;
+  sentenceWithBlank?: string;
+  correctAnswer?: string;
+}
