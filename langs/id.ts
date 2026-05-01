@@ -31015,6 +31015,5 @@ export const indonesianData: AppData = {
     }
   ]
 }
-
   ],
 };

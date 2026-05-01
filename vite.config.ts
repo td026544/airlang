@@ -42,7 +42,7 @@ export default defineConfig({
       workbox: {
         // 確保 WebP 被快取 (這部分您原本寫得很好，不用動)
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}'], 
-        
+        maximumFileSizeToCacheInBytes: 4000000, // 4MB (原本預設是 2MB)
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.destination === 'image',

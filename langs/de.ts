@@ -16221,6 +16221,7 @@ export const germanData: AppData = {
       "usage_note": "極度重要的德文萬用句型！等同於英文的 There is / There are，不過在德文完全不用管後面的東西是單數還複數，統統用 Es gibt 就可以！",
       "image_file": "there_is.png"
     }
+    
   ]
 }
     //     {
