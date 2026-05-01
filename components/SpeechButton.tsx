@@ -6,13 +6,15 @@ interface SpeechButtonProps {
   lang?: string;
   className?: string;
   size?: number;
+  rate?: number;
 }
 
 const SpeechButton: React.FC<SpeechButtonProps> = ({ 
   text, 
   lang = 'vi-VN', 
   className = '',
-  size = 20
+  size = 20,
+  rate = 1.0
 }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isSupported, setIsSupported] = useState(true);
@@ -48,7 +50,7 @@ const handleSpeak = (e: React.MouseEvent) => {
 
   const utterance = new SpeechSynthesisUtterance(textToSpeak);
   utterance.lang = lang; 
-  utterance.rate = 1.0;
+  utterance.rate = rate;
 
   const voices = window.speechSynthesis.getVoices();
   let nativeVoice = null;

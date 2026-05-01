@@ -14,6 +14,13 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   
+  const [playbackRate, setPlaybackRate] = useState<number>(() => {
+    const savedRate = localStorage.getItem('playback_rate');
+    return savedRate ? parseFloat(savedRate) : 1.0;
+  });
+  const [isRateMenuOpen, setIsRateMenuOpen] = useState(false);
+  const rateMenuRef = useRef<HTMLDivElement>(null);
+
   const [activeCategoryId, setActiveCategoryId] = useState<string>('');
   const isManualScrolling = useRef(false);
 
@@ -78,6 +85,9 @@ const App: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
+      }
+      if (rateMenuRef.current && !rateMenuRef.current.contains(event.target as Node)) {
+        setIsRateMenuOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -158,6 +168,12 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newRate = parseFloat(e.target.value);
+    setPlaybackRate(newRate);
+    localStorage.setItem('playback_rate', newRate.toString());
+  };
+
   return (
     <div className="min-h-screen bg-[#F9FAFB] font-sans text-[#1F2937]">
       <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 pt-4 sticky top-0 z-50 transition-all duration-300">
@@ -210,6 +226,39 @@ const App: React.FC = () => {
               )}
             </div>
 
+            <div className="relative" ref={rateMenuRef}>
+              <button
+                onClick={() => setIsRateMenuOpen(!isRateMenuOpen)}
+                className="flex items-center gap-1 px-3 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg text-sm font-bold transition-all duration-200 border border-gray-200 hover:border-gray-300 active:scale-95"
+                title="調整語速"
+              >
+                <span>{playbackRate.toFixed(1)}x</span>
+              </button>
+              
+              {isRateMenuOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-50 animate-in fade-in zoom-in-95 duration-100 origin-top-right">
+                   <div className="flex justify-between items-center mb-3">
+                     <span className="text-sm font-semibold text-gray-700">語速</span>
+                     <span className="text-emerald-600 font-bold">{playbackRate.toFixed(1)}x</span>
+                   </div>
+                   <input
+                     type="range"
+                     min="0.5"
+                     max="2.0"
+                     step="0.1"
+                     value={playbackRate}
+                     onChange={handleRateChange}
+                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                   />
+                   <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
+                     <span>0.5x</span>
+                     <span>1.0x</span>
+                     <span>2.0x</span>
+                   </div>
+                </div>
+              )}
+            </div>
+
             <button className="text-emerald-600 bg-emerald-50 p-2 rounded-full hover:bg-emerald-100 transition-colors hidden sm:block">
               <BookOpen size={20} />
             </button>
@@ -244,6 +293,7 @@ const App: React.FC = () => {
                     key={item.id} 
                     item={item} 
                     language={appData.meta.target_language} 
+                    playbackRate={playbackRate}
                   />
                 ))}
               </div>

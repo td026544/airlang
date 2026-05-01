@@ -31,6 +31,7 @@ interface ExtendedLearningItem {
 interface LearningCardProps {
   item: ExtendedLearningItem;
   language: string;
+  playbackRate?: number;
 }
 
 // 定義彈窗的狀態介面
@@ -121,8 +122,9 @@ const SegmentedText: React.FC<{
 const WordPopover: React.FC<{ 
   state: PopoverState; 
   language: string;
+  playbackRate?: number;
   onClose: () => void 
-}> = ({ state, language, onClose }) => {
+}> = ({ state, language, playbackRate = 1.0, onClose }) => {
   if (!state.visible || !state.targetRect) return null;
 
   const top = state.targetRect.bottom + 10;
@@ -159,6 +161,7 @@ const WordPopover: React.FC<{
               lang={language} 
               size={16} 
               className="text-gray-300 hover:text-white"
+              rate={playbackRate}
             />
           </div>
           <div className="text-sm font-medium leading-snug text-gray-100">
@@ -171,7 +174,7 @@ const WordPopover: React.FC<{
 };
 
 // --- Main Component ---
-const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
+const LearningCard: React.FC<LearningCardProps> = ({ item, language, playbackRate = 1.0 }) => {
   const [showNote, setShowNote] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -280,6 +283,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
                           text={fullReading}
                           lang={language}
                           size={20}
+                          rate={playbackRate}
                         />
                       </div>
 
@@ -319,6 +323,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
                             lang={language}
                             size={16}
                             className="shrink-0 opacity-70 hover:opacity-100 text-gray-400 hover:text-emerald-500"
+                            rate={playbackRate}
                           />
                         </div>
                         <p className="text-xs text-gray-400 mt-1 pl-0.5">
@@ -363,6 +368,7 @@ const LearningCard: React.FC<LearningCardProps> = ({ item, language }) => {
       <WordPopover 
         state={popover} 
         language={language}
+        playbackRate={playbackRate}
         onClose={() => setPopover(prev => ({ ...prev, visible: false }))} 
       />
     </>
