@@ -32,10 +32,12 @@ const App: React.FC = () => {
 
   const { progressData, recordAttempt } = useProgress();
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[] | null>(null);
+  const [quizKey, setQuizKey] = useState<number>(0);
 
   const handleStartQuiz = (categoryItems: LearningItem[]) => {
     const questions = generateQuiz(categoryItems, progressData, 10);
     setQuizQuestions(questions);
+    setQuizKey(prev => prev + 1);
   };
 
   const toggleBookmark = (id: string) => {
@@ -385,10 +387,16 @@ const App: React.FC = () => {
 
       {quizQuestions && (
         <QuizOverlay 
+          key={quizKey}
           questions={quizQuestions}
           language={appData.meta.target_language}
+          progressData={progressData}
           onClose={() => setQuizQuestions(null)}
           onRecordAttempt={recordAttempt}
+          onRestart={(questions) => {
+            setQuizQuestions(questions);
+            setQuizKey(prev => prev + 1);
+          }}
         />
       )}
     </div>

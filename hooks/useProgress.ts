@@ -61,17 +61,17 @@ export const useProgress = () => {
       if (quality >= 3) {
         // Correct response
         if (repetitions === 0) {
-          interval = 1;
+          interval = 0.5; // 12 hours
         } else if (repetitions === 1) {
-          interval = 6;
+          interval = 1;
         } else {
-          interval = Math.round(interval * ef);
+          interval = interval * ef;
         }
         repetitions += 1;
       } else {
         // Incorrect response
         repetitions = 0;
-        interval = 1;
+        interval = 0;
       }
 
       ef = ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
@@ -79,8 +79,14 @@ export const useProgress = () => {
         ef = 1.3;
       }
 
+      // Max Interval Ceiling: Never exceed 7 days for travel-optimized prep
+      if (interval > 7) {
+        interval = 7;
+      }
+
       const nextDate = new Date();
-      nextDate.setDate(nextDate.getDate() + interval);
+      // Using setHours to safely support decimal intervals (e.g., 0.5 = 12 hours)
+      nextDate.setHours(nextDate.getHours() + interval * 24);
 
       const newData = { ...prev };
       newData[itemId] = {
