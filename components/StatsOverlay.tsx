@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { X, Trophy, Activity, AlertTriangle, BookOpen } from 'lucide-react';
+import { X, Trophy, Activity, AlertTriangle, BookOpen, CheckCircle2, TrendingUp, AlertCircle } from 'lucide-react';
 import { Category, UserProgress, LearningItem } from '../types';
 
 interface StatsOverlayProps {
@@ -87,21 +87,23 @@ const StatsOverlay: React.FC<StatsOverlayProps> = ({ progressData, categories, o
         {/* Readiness Breakdown */}
         <h3 className="text-lg font-bold text-gray-800 mb-4 px-1">狀態分佈</h3>
         <div className="flex gap-3 mb-8">
-          <div className="flex-1 bg-green-50 border border-green-200 rounded-xl p-4 flex flex-col items-center">
-            <span className="text-2xl mb-1">🟢</span>
-            <span className="font-bold text-green-700 text-xl">{greenItems.length}</span>
-            <span className="text-[10px] font-bold text-green-600/70 mt-1 uppercase">完美</span>
+          <div className="flex-1 bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 flex flex-col items-center shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-emerald-100 rounded-bl-[20px] -mr-2 -mt-2"></div>
+            <CheckCircle2 className="w-7 h-7 text-emerald-500 mb-2 z-10" strokeWidth={2.5} />
+            <span className="font-black text-emerald-700 text-2xl z-10">{greenItems.length}</span>
+            <span className="text-[11px] font-bold text-emerald-600 mt-1 tracking-wider">已掌握</span>
           </div>
-          <div className="flex-1 bg-yellow-50 border border-yellow-200 rounded-xl p-4 flex flex-col items-center">
-            <span className="text-2xl mb-1">🟡</span>
-            <span className="font-bold text-yellow-700 text-xl">{yellowItems.length}</span>
-            <span className="text-[10px] font-bold text-yellow-600/70 mt-1 uppercase">還行</span>
+          <div className="flex-1 bg-amber-50/70 border border-amber-100 rounded-2xl p-4 flex flex-col items-center shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-amber-100 rounded-bl-[20px] -mr-2 -mt-2"></div>
+            <TrendingUp className="w-7 h-7 text-amber-500 mb-2 z-10" strokeWidth={2.5} />
+            <span className="font-black text-amber-700 text-2xl z-10">{yellowItems.length}</span>
+            <span className="text-[11px] font-bold text-amber-600 mt-1 tracking-wider">練習中</span>
           </div>
-          <div className="flex-1 bg-red-50 border border-red-200 rounded-xl p-4 flex flex-col items-center relative overflow-hidden">
-            {redItems.length > 0 && <div className="absolute top-0 right-0 w-2 h-full bg-red-400" />}
-            <span className="text-2xl mb-1">🔴</span>
-            <span className="font-bold text-red-700 text-xl">{redItems.length}</span>
-            <span className="text-[10px] font-bold text-red-600/70 mt-1 uppercase">生疏</span>
+          <div className="flex-1 bg-rose-50/70 border border-rose-100 rounded-2xl p-4 flex flex-col items-center shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-rose-100 rounded-bl-[20px] -mr-2 -mt-2"></div>
+            <AlertCircle className="w-7 h-7 text-rose-500 mb-2 z-10" strokeWidth={2.5} />
+            <span className="font-black text-rose-700 text-2xl z-10">{redItems.length}</span>
+            <span className="text-[11px] font-bold text-rose-600 mt-1 tracking-wider">需急救</span>
           </div>
         </div>
 
@@ -119,17 +121,17 @@ const StatsOverlay: React.FC<StatsOverlayProps> = ({ progressData, categories, o
               let statusText = '';
               
               if (entry.status === 'green') {
-                StatusIcon = <span className="text-xl">🟢</span>;
-                statusBg = 'bg-white border-green-200';
-                statusText = '✅ 完美';
+                StatusIcon = <CheckCircle2 className="w-5 h-5 text-emerald-500" strokeWidth={2.5} />;
+                statusBg = 'bg-emerald-50/30 border-emerald-100';
+                statusText = '已掌握';
               } else if (entry.status === 'yellow') {
-                StatusIcon = <span className="text-xl">🟡</span>;
-                statusBg = 'bg-white border-yellow-200';
-                statusText = '🎒 還行';
+                StatusIcon = <TrendingUp className="w-5 h-5 text-amber-500" strokeWidth={2.5} />;
+                statusBg = 'bg-amber-50/30 border-amber-100';
+                statusText = '練習中';
               } else {
-                StatusIcon = <span className="text-xl">🔴</span>;
-                statusBg = 'bg-red-50 border-red-200';
-                statusText = '🚨 落地前必看';
+                StatusIcon = <AlertCircle className="w-5 h-5 text-rose-500" strokeWidth={2.5} />;
+                statusBg = 'bg-rose-50/50 border-rose-200';
+                statusText = '需急救';
               }
 
               return (
@@ -139,9 +141,9 @@ const StatsOverlay: React.FC<StatsOverlayProps> = ({ progressData, categories, o
                     <div className="text-gray-500 text-sm truncate">{entry.item.related_terms[0]?.term_target || ''}</div>
                   </div>
                   <div className="flex flex-col items-end shrink-0">
-                    <div className="flex items-center gap-1 font-bold text-gray-700 bg-white/50 px-2 py-1 rounded-md">
+                    <div className="flex items-center gap-1.5 font-bold text-gray-700 bg-white/80 border border-gray-100/50 px-2.5 py-1.5 rounded-lg shadow-sm">
                       {StatusIcon}
-                      <span className="text-xs sm:text-sm whitespace-nowrap">{statusText}</span>
+                      <span className="text-xs sm:text-sm whitespace-nowrap tracking-wide">{statusText}</span>
                     </div>
                   </div>
                 </div>

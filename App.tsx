@@ -37,9 +37,11 @@ const App: React.FC = () => {
 
   const { progressData, recordAttempt } = useProgress();
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[] | null>(null);
+  const [currentQuizCategoryItems, setCurrentQuizCategoryItems] = useState<LearningItem[] | null>(null);
   const [quizKey, setQuizKey] = useState<number>(0);
 
   const handleStartQuiz = (categoryItems: LearningItem[]) => {
+    setCurrentQuizCategoryItems(categoryItems);
     const questions = generateQuiz(categoryItems, progressData, 10);
     setQuizQuestions(questions);
     setQuizKey(prev => prev + 1);
@@ -434,6 +436,13 @@ const App: React.FC = () => {
           onViewStats={() => {
             setQuizQuestions(null);
             setIsStatsOpen(true);
+          }}
+          onNextRound={() => {
+            if (currentQuizCategoryItems) {
+              const questions = generateQuiz(currentQuizCategoryItems, progressData, 10);
+              setQuizQuestions(questions);
+              setQuizKey(prev => prev + 1);
+            }
           }}
         />
       )}

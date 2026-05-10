@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, CheckCircle, XCircle } from 'lucide-react';
+import { X, CheckCircle, XCircle, CheckCircle2, TrendingUp, AlertCircle } from 'lucide-react';
 import { QuizQuestion, UserProgress } from '../types';
 import LearningCard from './LearningCard';
 import SpeechButton from './SpeechButton';
@@ -12,9 +12,10 @@ interface QuizOverlayProps {
   onRecordAttempt: (itemId: string, quality: number) => void;
   onRestart: (questions: QuizQuestion[]) => void;
   onViewStats: () => void;
+  onNextRound?: () => void;
 }
 
-const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progressData, onClose, onRecordAttempt, onRestart, onViewStats }) => {
+const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progressData, onClose, onRecordAttempt, onRestart, onViewStats, onNextRound }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [sessionResults, setSessionResults] = useState<{ question: QuizQuestion; isCorrect: boolean }[]>([]);
@@ -305,7 +306,7 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
 
           {/* Readiness List */}
           <div className="px-4 max-w-md mx-auto w-full">
-            <h3 className="text-lg font-bold text-gray-800 mb-4 px-2">熟悉度燈號 🚦</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-4 px-2">學習狀態診斷 📋</h3>
             <div className="flex flex-col gap-3">
               {sessionResults.map((result, idx) => {
                 const itemId = result.question.item.id || result.question.item.term_zh;
@@ -317,17 +318,17 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
                 let statusText = '';
 
                 if (interval > 3) {
-                  StatusIcon = <span className="text-xl">🟢</span>;
-                  statusBg = 'bg-green-50 border-green-200';
-                  statusText = '✅ 完美';
+                  StatusIcon = <CheckCircle2 className="w-5 h-5 text-emerald-500" strokeWidth={2.5} />;
+                  statusBg = 'bg-emerald-50/30 border-emerald-100';
+                  statusText = '已掌握';
                 } else if (interval >= 0.5) {
-                  StatusIcon = <span className="text-xl">🟡</span>;
-                  statusBg = 'bg-yellow-50 border-yellow-200';
-                  statusText = '還行';
+                  StatusIcon = <TrendingUp className="w-5 h-5 text-amber-500" strokeWidth={2.5} />;
+                  statusBg = 'bg-amber-50/30 border-amber-100';
+                  statusText = '練習中';
                 } else {
-                  StatusIcon = <span className="text-xl">🔴</span>;
-                  statusBg = 'bg-red-50 border-red-200';
-                  statusText = '🚨 落地前必看';
+                  StatusIcon = <AlertCircle className="w-5 h-5 text-rose-500" strokeWidth={2.5} />;
+                  statusBg = 'bg-rose-50/50 border-rose-200';
+                  statusText = '需急救';
                 }
 
                 return (
@@ -337,9 +338,9 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
                       <div className="text-gray-500 text-sm truncate">{result.question.item.related_terms[0]?.term_target || ''}</div>
                     </div>
                     <div className="flex flex-col items-end shrink-0">
-                      <div className="flex items-center gap-1 font-bold text-gray-700 bg-white/50 px-2 py-1 rounded-md">
+                      <div className="flex items-center gap-1.5 font-bold text-gray-700 bg-white/80 border border-gray-100/50 px-2.5 py-1.5 rounded-lg shadow-sm">
                         {StatusIcon}
-                        <span className="text-sm whitespace-nowrap">{statusText}</span>
+                        <span className="text-xs sm:text-sm whitespace-nowrap tracking-wide">{statusText}</span>
                       </div>
                     </div>
                   </div>
@@ -351,29 +352,30 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
 
         {/* Bottom Action Bar */}
         <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 p-4 pb-6 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] z-10 flex flex-col gap-3">
-          <div className="flex gap-3">
+          <div className="grid grid-cols-2 gap-3">
             <button
               onClick={onClose}
-              className="flex-[1] py-4 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 active:scale-95 transition-all whitespace-nowrap"
+              className="py-3.5 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 active:scale-95 transition-all whitespace-nowrap"
             >
               返回主頁
             </button>
-            {mistakes.length > 0 ? (
-              <button
-                onClick={() => onRestart(mistakes)}
-                className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
-              >
-                馬上複習錯題 ({mistakes.length})
-              </button>
-            ) : (
-              <button
-                onClick={() => onRestart(questions)}
-                className="flex-[2] py-4 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
-              >
-                重新測驗
-              </button>
-            )}
+            <button
+              onClick={onNextRound || (() => onRestart(questions))}
+              className="py-3.5 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 active:scale-95 transition-all whitespace-nowrap"
+            >
+              再來一局
+            </button>
           </div>
+          
+          {mistakes.length > 0 && (
+            <button
+              onClick={() => onRestart(mistakes)}
+              className="w-full py-3.5 bg-rose-50 text-rose-600 font-bold rounded-xl border border-rose-200 hover:bg-rose-100 active:scale-95 transition-all"
+            >
+              馬上複習錯題 ({mistakes.length})
+            </button>
+          )}
+
           <button
             onClick={onViewStats}
             className="w-full py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-100 active:scale-95 transition-all border border-blue-200/50"
