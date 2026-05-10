@@ -320,7 +320,7 @@ const QuizOverlay: React.FC<QuizOverlayProps> = ({ questions, language, progress
                   StatusIcon = <span className="text-xl">🟢</span>;
                   statusBg = 'bg-green-50 border-green-200';
                   statusText = '✅ 完美';
-                } else if (interval >= 1) {
+                } else if (interval >= 0.5) {
                   StatusIcon = <span className="text-xl">🟡</span>;
                   statusBg = 'bg-yellow-50 border-yellow-200';
                   statusText = '還行';

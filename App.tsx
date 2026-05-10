@@ -7,7 +7,7 @@ import QuizOverlay from './components/QuizOverlay';
 import StatsOverlay from './components/StatsOverlay';
 import { useProgress } from './hooks/useProgress';
 import { generateQuiz } from './services/quizService';
-import { Languages, BookOpen, ChevronDown, Check, PlayCircle, Menu, Activity } from 'lucide-react';
+import { Plane, BookOpen, ChevronDown, Check, PlayCircle, Menu, Activity } from 'lucide-react';
 
 const App: React.FC = () => {
   // 1. 初始化語言 (維持不變)
@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  
+
   const [playbackRate, setPlaybackRate] = useState<number>(() => {
     const savedRate = localStorage.getItem('playback_rate');
     return savedRate ? parseFloat(savedRate) : 1.0;
@@ -63,12 +63,12 @@ const App: React.FC = () => {
   const displayCategories = React.useMemo(() => {
     const baseCategories = appData.categories;
     const allItems = baseCategories.flatMap(c => c.items);
-    
+
     // We only show bookmarked items that exist in the current language
     const bookmarkedItems = bookmarkedIds
       .map(id => allItems.find(item => (item.id || item.term_zh) === id))
       .filter((item): item is LearningItem => item !== undefined);
-      
+
     if (bookmarkedItems.length === 0) return baseCategories;
 
     const favoritesCategory: Category = {
@@ -79,13 +79,13 @@ const App: React.FC = () => {
 
     const newCategories = [...baseCategories];
     const phrasesIndex = newCategories.findIndex(c => c.name.includes('常用句') || c.name.includes('Phrases'));
-    
+
     if (phrasesIndex !== -1) {
       newCategories.splice(phrasesIndex, 0, favoritesCategory);
     } else {
       newCategories.unshift(favoritesCategory);
     }
-    
+
     return newCategories;
   }, [appData, bookmarkedIds]);
 
@@ -105,10 +105,10 @@ const App: React.FC = () => {
 
     // B. 讀取上次的位置
     const savedScrollPos = localStorage.getItem('scrollY_pos');
-    
+
     if (savedScrollPos) {
       const pos = parseInt(savedScrollPos, 10);
-      
+
       // C. 延遲滾動：給手機一點時間渲染 DOM
       setTimeout(() => {
         window.scrollTo({
@@ -127,7 +127,7 @@ const App: React.FC = () => {
     const handleScrollSave = () => {
       // 清除上一次的計時器，避免頻繁寫入
       clearTimeout(timeoutId);
-      
+
       // 當使用者「停止滾動」100ms 後，才寫入 localStorage
       // 這對手機效能非常重要
       timeoutId = window.setTimeout(() => {
@@ -164,10 +164,10 @@ const App: React.FC = () => {
     const handleScroll = () => {
       if (isManualScrolling.current) return;
 
-      const headerOffset = 180; 
+      const headerOffset = 180;
       let currentSectionId = displayCategories[0]?.id || '';
 
-      const scrolledToBottom = 
+      const scrolledToBottom =
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
 
       if (scrolledToBottom && displayCategories.length > 0) {
@@ -191,7 +191,7 @@ const App: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     // 注意：這裡移除了初始執行，避免覆蓋掉我們的 scrollTo 邏輯
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, [displayCategories]);
 
@@ -217,18 +217,18 @@ const App: React.FC = () => {
 
       setTimeout(() => {
         isManualScrolling.current = false;
-      }, 800); 
+      }, 800);
     }
   };
 
   const handleLanguageSelect = (code: string) => {
     setLangCode(code);
     localStorage.setItem('app_language', code);
-    
+
     // --- 切換語言時的重要邏輯 ---
     // 切換語言通常內容長度不同，應該回到最上面，而不是停在幾千像素的位置
-    localStorage.setItem('scrollY_pos', '0'); 
-    
+    localStorage.setItem('scrollY_pos', '0');
+
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -245,21 +245,21 @@ const App: React.FC = () => {
         <div className="max-w-3xl mx-auto px-4 flex items-center justify-between mb-2">
           <div className="flex items-center gap-3">
             <div className="bg-emerald-500 p-2 rounded-xl text-white shadow-lg shadow-emerald-200">
-              <Languages size={24} />
+              <Plane size={24} />
             </div>
             <div>
               <h1 className="text-xl font-bold text-[#1F2937] tracking-tight">
-                {appData.meta.name || 'Quick Learn'}
+                {appData.meta.name || '外語急救包'}
               </h1>
-              <p className="text-xs text-gray-500 font-medium flex items-center gap-1">
+              {/* <p className="text-xs text-gray-500 font-medium flex items-center gap-1">
                 {appData.meta.source_language} ➔ {appData.meta.target_language}
-              </p>
+              </p> */}
             </div>
           </div>
-          
+
           <div className="flex gap-2 items-center">
             <div className="relative" ref={menuRef}>
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="flex items-center gap-2 px-3 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg text-sm font-semibold transition-all duration-200 border border-gray-200 hover:border-gray-300 active:scale-95"
               >
@@ -299,28 +299,28 @@ const App: React.FC = () => {
               >
                 <span>{playbackRate.toFixed(1)}x</span>
               </button>
-              
+
               {isRateMenuOpen && (
                 <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-50 animate-in fade-in zoom-in-95 duration-100 origin-top-right">
-                   <div className="flex justify-between items-center mb-3">
-                     <span className="text-sm font-semibold text-gray-700">語速</span>
-                     <span className="text-emerald-600 font-bold">{playbackRate.toFixed(1)}x</span>
-                   </div>
-                   <input
-                     type="range"
-                     min="0.5"
-                     max="2.0"
-                     step="0.1"
-                     value={playbackRate}
-                     onChange={handleRateChange}
-                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
-                   />
-                   <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
-                     <span>0.5x</span>
-                     <span>1.0x</span>
-                     <span>2.0x</span>
-                   </div>
-                 </div>
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm font-semibold text-gray-700">語速</span>
+                    <span className="text-emerald-600 font-bold">{playbackRate.toFixed(1)}x</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0.5"
+                    max="2.0"
+                    step="0.1"
+                    value={playbackRate}
+                    onChange={handleRateChange}
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                  />
+                  <div className="flex justify-between mt-2 text-xs text-gray-400 font-medium">
+                    <span>0.5x</span>
+                    <span>1.0x</span>
+                    <span>2.0x</span>
+                  </div>
+                </div>
               )}
             </div>
 
@@ -357,11 +357,11 @@ const App: React.FC = () => {
         </div>
 
         <div className="max-w-3xl mx-auto px-4 pb-3">
-           <CategoryNav 
-             categories={displayCategories}
-             activeCategoryId={activeCategoryId}
-             onSelectCategory={handleScrollToCategory}
-           />
+          <CategoryNav
+            categories={displayCategories}
+            activeCategoryId={activeCategoryId}
+            onSelectCategory={handleScrollToCategory}
+          />
         </div>
       </header>
 
@@ -377,7 +377,7 @@ const App: React.FC = () => {
                   {category.items.length}
                 </span>
                 {category.items.length > 0 && (
-                  <button 
+                  <button
                     onClick={() => handleStartQuiz(category.items)}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-700 text-sm font-bold rounded-lg transition-colors ml-auto active:scale-95"
                     title="開始測驗"
@@ -392,10 +392,10 @@ const App: React.FC = () => {
                 {category.items.map((item) => {
                   const itemId = item.id || item.term_zh;
                   return (
-                    <LearningCard 
-                      key={itemId} 
-                      item={item as any} 
-                      language={appData.meta.target_language} 
+                    <LearningCard
+                      key={itemId}
+                      item={item as any}
+                      language={appData.meta.target_language}
                       playbackRate={playbackRate}
                       isBookmarked={bookmarkedIds.includes(itemId)}
                       onToggleBookmark={toggleBookmark}
@@ -420,7 +420,7 @@ const App: React.FC = () => {
       </footer>
 
       {quizQuestions && (
-        <QuizOverlay 
+        <QuizOverlay
           key={quizKey}
           questions={quizQuestions}
           language={appData.meta.target_language}

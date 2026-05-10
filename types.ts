@@ -1,12 +1,20 @@
+export interface Segment {
+  text: string;
+  meaning: string;
+  tail: string;
+}
+
 export interface Example {
   sentence: string;
   translation: string;
+  segments?: Segment[];
 }
 
 export interface RelatedTerm {
   term_target: string; // 單字保留在這裡面
   pronunciation: string[];
   specific_note?: string;
+  segments?: Segment[];
 }
 
 export interface LearningItem {

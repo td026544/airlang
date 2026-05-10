@@ -22,7 +22,7 @@ const StatsOverlay: React.FC<StatsOverlayProps> = ({ progressData, categories, o
       if (p) {
         let status: 'green' | 'yellow' | 'red' = 'red';
         if (p.interval > 3) status = 'green';
-        else if (p.interval >= 1) status = 'yellow';
+        else if (p.interval >= 0.5) status = 'yellow';
 
         const entry = { item, status, interval: p.interval };
         reviewed.push(entry);
